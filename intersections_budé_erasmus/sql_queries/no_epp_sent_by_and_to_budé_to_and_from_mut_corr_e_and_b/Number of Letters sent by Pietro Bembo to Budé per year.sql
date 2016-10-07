@@ -1,0 +1,1 @@
+SELECT send_date_year1, COUNT(*) AS 'Number of letters sent by Pietro Bembo to Budé per year' FROM budé_cdb_v1.letters WHERE sender_id = 'bembo_pietro_viaf_54144140' GROUP BY send_date_year1 ORDER BY send_date_year1 ASC

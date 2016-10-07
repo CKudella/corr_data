@@ -1,0 +1,1 @@
+SELECT COUNT(DISTINCT recipient_id) AS 'Total Number of individual Correspondents that have received letters by Erasmus' FROM letters, correspondents WHERE sender_id = 'erasmus_desiderius_viaf_95982394' AND recipient_id != 'unnamed_person_viaf_unknown' AND correspondents.type = 'individual'

@@ -1,0 +1,1 @@
+SELECT send_date_year1, COUNT(*) AS 'Number of letters sent by Juan Luis Vives to Budé per year' FROM budé_cdb_v1.letters WHERE sender_id = 'vives_juan_luis_viaf_71399403' GROUP BY send_date_year1 ORDER BY send_date_year1 ASC

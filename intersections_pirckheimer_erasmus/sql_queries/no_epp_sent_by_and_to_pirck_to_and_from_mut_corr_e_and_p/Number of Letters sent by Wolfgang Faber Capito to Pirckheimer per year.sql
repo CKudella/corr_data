@@ -1,0 +1,1 @@
+SELECT send_date_year1, COUNT(*) AS 'Number of Letters sent by Wolfgang Faber Capito to Pirckheimer per year' from letters WHERE sender_id = 'capito_wolfgang_viaf_61578502' GROUP BY send_date_year1 ORDER BY send_date_year1 ASC

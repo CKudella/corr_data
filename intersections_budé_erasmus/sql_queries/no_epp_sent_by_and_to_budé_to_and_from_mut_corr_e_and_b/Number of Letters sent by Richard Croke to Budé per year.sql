@@ -1,0 +1,1 @@
+SELECT send_date_year1, COUNT(*) AS 'Number of letters sent by Richard Croke to Budé per year' FROM budé_cdb_v1.letters WHERE sender_id = 'croke_richard_viaf_67250364' GROUP BY send_date_year1 ORDER BY send_date_year1 ASC

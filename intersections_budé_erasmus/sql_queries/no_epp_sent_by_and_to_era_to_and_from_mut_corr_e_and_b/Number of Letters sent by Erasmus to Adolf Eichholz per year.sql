@@ -1,0 +1,1 @@
+SELECT send_date_year1, COUNT(*) AS 'Number of letters sent by Erasmus to Adolf Eichholz per year' FROM era_cdb_v3.letters WHERE recipient_id = 'eichholz_adolf_viaf_unknown' GROUP BY send_date_year1 ORDER BY send_date_year1 ASC

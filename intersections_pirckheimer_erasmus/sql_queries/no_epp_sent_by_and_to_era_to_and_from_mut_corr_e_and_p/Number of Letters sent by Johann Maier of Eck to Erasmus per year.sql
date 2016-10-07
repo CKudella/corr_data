@@ -1,0 +1,1 @@
+SELECT send_date_year1, COUNT(*) AS 'Number of letters sent by Johann Maier of Eck to Erasmus per year' FROM era_cdb_v3.letters WHERE sender_id = 'eck_johann_viaf_100185986' GROUP BY send_date_year1 ORDER BY send_date_year1 ASC

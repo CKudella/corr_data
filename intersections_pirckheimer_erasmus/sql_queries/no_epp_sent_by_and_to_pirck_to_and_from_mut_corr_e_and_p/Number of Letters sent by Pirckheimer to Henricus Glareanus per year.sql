@@ -1,0 +1,1 @@
+SELECT send_date_year1, COUNT(*) AS 'Number of Letters sent by Pirckheimer to Henricus Glareanus per year' from letters WHERE recipient_id = 'glareanus_henricus_viaf_73950690' GROUP BY send_date_year1 ORDER BY send_date_year1 ASC

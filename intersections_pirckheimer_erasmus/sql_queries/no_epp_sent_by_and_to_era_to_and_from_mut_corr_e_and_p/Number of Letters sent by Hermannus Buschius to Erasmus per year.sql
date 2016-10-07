@@ -1,0 +1,1 @@
+SELECT send_date_year1, COUNT(*) AS 'Number of letters sent by Hermannus Buschius to Erasmus per year' FROM era_cdb_v3.letters WHERE sender_id = 'busche_hermann_von_dem_viaf_27087291' GROUP BY send_date_year1 ORDER BY send_date_year1 ASC

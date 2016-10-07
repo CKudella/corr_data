@@ -1,0 +1,1 @@
+SELECT DISTINCT locations.locations_modern_state AS 'Modern State', COUNT(*) AS 'Number of Letters Budé sent to this Modern State' FROM letters, locations WHERE locations.locations_id = letters.target_loc_id AND letters_id NOT LIKE '%ck2' AND sender_id = 'budé_guillaume_viaf_105878228' GROUP BY locations_modern_state ORDER BY COUNT(*) DESC

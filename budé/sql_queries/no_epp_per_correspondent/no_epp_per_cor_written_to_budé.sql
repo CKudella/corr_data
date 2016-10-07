@@ -1,0 +1,1 @@
+SELECT DISTINCT letters.sender_id, COUNT(*) AS NoLettersSentToBudé, correspondents.name_in_edition FROM letters, correspondents WHERE letters.sender_id = correspondents.correspondents_id AND recipient_id = 'budé_guillaume_viaf_105878228' GROUP BY sender_id ORDER BY NoLettersSentToBudé DESC

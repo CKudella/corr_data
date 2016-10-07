@@ -1,0 +1,1 @@
+SELECT send_date_year1, COUNT(*) AS 'Number of Letters sent by Fridericus Nausea to Pirckheimer per year' from letters WHERE sender_id = 'nausea_friedrich_viaf_248203874' GROUP BY send_date_year1 ORDER BY send_date_year1 ASC

@@ -1,0 +1,1 @@
+SELECT send_date_year1, COUNT(*) AS 'Number of letters sent by Erasmus to Pietro Bembo per year' FROM era_cdb_v3.letters WHERE recipient_id = 'bembo_pietro_viaf_54144140' GROUP BY send_date_year1 ORDER BY send_date_year1 ASC

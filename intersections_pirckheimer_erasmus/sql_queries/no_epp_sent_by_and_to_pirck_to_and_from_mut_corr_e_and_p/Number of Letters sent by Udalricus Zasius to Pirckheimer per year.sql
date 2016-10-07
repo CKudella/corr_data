@@ -1,0 +1,1 @@
+SELECT send_date_year1, COUNT(*) AS 'Number of Letters sent by Udalricus Zasius to Pirckheimer per year' from letters WHERE sender_id = 'zasius_ulrich_viaf_61645489' GROUP BY send_date_year1 ORDER BY send_date_year1 ASC

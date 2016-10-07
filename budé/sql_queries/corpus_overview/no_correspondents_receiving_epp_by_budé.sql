@@ -1,0 +1,1 @@
+SELECT COUNT(DISTINCT recipient_id) AS 'Total Number of Correspondents that have received letters by Budé' FROM letters WHERE sender_id = 'budé_guillaume_viaf_105878228' AND recipient_id != 'unnamed_person_viaf_unknown'

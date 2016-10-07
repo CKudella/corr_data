@@ -1,0 +1,1 @@
+SELECT send_date_year1, COUNT(*) AS 'Number of letters sent by Budé to Louis Ruzé per year' FROM budé_cdb_v1.letters WHERE recipient_id = 'ruzé_louis_viaf_306487693' GROUP BY send_date_year1 ORDER BY send_date_year1 ASC

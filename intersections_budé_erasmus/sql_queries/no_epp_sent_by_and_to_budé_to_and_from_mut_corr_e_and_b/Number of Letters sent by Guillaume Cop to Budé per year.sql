@@ -1,0 +1,1 @@
+SELECT send_date_year1, COUNT(*) AS 'Number of letters sent by Guillaume Cop to Budé per year' FROM budé_cdb_v1.letters WHERE sender_id = 'copus_guilielmus_viaf_22249056' GROUP BY send_date_year1 ORDER BY send_date_year1 ASC

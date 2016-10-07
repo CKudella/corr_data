@@ -1,0 +1,1 @@
+SELECT COUNT(*) AS 'Number of Letters in DB from ALLEN' from letters WHERE letters.letter_no_in_edition LIKE '%[ALLEN]%' and letters_id NOT LIKE '%ck2'

@@ -1,0 +1,1 @@
+SELECT COUNT(*) AS 'Total Number of letters sent by Erasmus' FROM letters WHERE letters_id NOT LIKE '%ck2'AND sender_id = 'erasmus_desiderius_viaf_95982394'

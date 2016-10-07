@@ -1,0 +1,1 @@
+SELECT send_date_year1, COUNT(*) AS 'Number of Letters sent by Pirckheimer to Joachim Camerarius per year' from letters WHERE recipient_id = 'camerarius_joachim_viaf_2495607' GROUP BY send_date_year1 ORDER BY send_date_year1 ASC

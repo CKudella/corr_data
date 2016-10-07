@@ -1,0 +1,1 @@
+SELECT send_date_year1, COUNT(*) AS 'Number of letters sent by Konrad von Thüngen to Erasmus per year' FROM era_cdb_v3.letters WHERE sender_id = 'thüngen_konrad_ii_von_viaf_26411713' GROUP BY send_date_year1 ORDER BY send_date_year1 ASC

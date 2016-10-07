@@ -1,0 +1,866 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://www.gexf.net/1.2draft" version="1.2" xmlns:viz="http://www.gexf.net/1.2draft/viz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd">
+  <meta lastmodifieddate="2016-10-07">
+    <creator>Gephi 0.8.1</creator>
+    <description></description>
+  </meta>
+  <graph defaultedgetype="directed" mode="static">
+    <attributes class="node" mode="static">
+      <attribute id="geonames_id" title="geonames_id" type="string"></attribute>
+      <attribute id="locations_name_modern" title="locations_name_modern" type="string"></attribute>
+      <attribute id="locations_name_in_edition" title="locations_name_in_edition" type="string"></attribute>
+      <attribute id="locations_modern_state" title="locations_modern_state" type="string"></attribute>
+      <attribute id="locations_modern_province" title="locations_modern_province" type="string"></attribute>
+      <attribute id="locations_lat" title="locations_lat" type="double"></attribute>
+      <attribute id="locations_lng" title="locations_lng" type="double"></attribute>
+      <attribute id="locations_ll_combined" title="locations_ll_combined" type="string"></attribute>
+      <attribute id="locations_further_annotation" title="locations_further_annotation" type="string"></attribute>
+    </attributes>
+    <attributes class="edge" mode="static">
+      <attribute id="letter_no_in_edition" title="letter_no_in_edition" type="string"></attribute>
+      <attribute id="sender_id" title="sender_id" type="string"></attribute>
+      <attribute id="sender_as_marked" title="sender_as_marked" type="string"></attribute>
+      <attribute id="sender_inferred" title="sender_inferred" type="string"></attribute>
+      <attribute id="sender_uncertain" title="sender_uncertain" type="string"></attribute>
+      <attribute id="recipient_id" title="recipient_id" type="string"></attribute>
+      <attribute id="recipient_as_marked" title="recipient_as_marked" type="string"></attribute>
+      <attribute id="recipient_inferred" title="recipient_inferred" type="string"></attribute>
+      <attribute id="recipient_uncertain" title="recipient_uncertain" type="string"></attribute>
+      <attribute id="send_date_year1" title="send_date_year1" type="string"></attribute>
+      <attribute id="send_date_month1" title="send_date_month1" type="string"></attribute>
+      <attribute id="send_date_day1" title="send_date_day1" type="string"></attribute>
+      <attribute id="send_date_computable1" title="send_date_computable1" type="string"></attribute>
+      <attribute id="send_date_has_range" title="send_date_has_range" type="string"></attribute>
+      <attribute id="send_date_year2" title="send_date_year2" type="string"></attribute>
+      <attribute id="send_date_month2" title="send_date_month2" type="string"></attribute>
+      <attribute id="send_date_day2" title="send_date_day2" type="string"></attribute>
+      <attribute id="send_date_computable2" title="send_date_computable2" type="string"></attribute>
+      <attribute id="send_date_as_marked" title="send_date_as_marked" type="string"></attribute>
+      <attribute id="send_date_inferred" title="send_date_inferred" type="string"></attribute>
+      <attribute id="send_date_approx" title="send_date_approx" type="string"></attribute>
+      <attribute id="send_date_uncertain" title="send_date_uncertain" type="string"></attribute>
+      <attribute id="source_loc_as_marked" title="source_loc_as_marked" type="string"></attribute>
+      <attribute id="source_loc_inferred" title="source_loc_inferred" type="string"></attribute>
+      <attribute id="source_loc_uncertain" title="source_loc_uncertain" type="string"></attribute>
+      <attribute id="target_loc_as_marked" title="target_loc_as_marked" type="string"></attribute>
+      <attribute id="target_loc_inferred" title="target_loc_inferred" type="string"></attribute>
+      <attribute id="target_loc_uncertain" title="target_loc_uncertain" type="string"></attribute>
+      <attribute id="letter_language" title="letter_language" type="string"></attribute>
+      <attribute id="letter_type_genus" title="letter_type_genus" type="string"></attribute>
+      <attribute id="letter_type_x_to_x" title="letter_type_x_to_x" type="string"></attribute>
+      <attribute id="further_annotation" title="further_annotation" type="string"></attribute>
+    </attributes>
+    <nodes>
+      <node id="anderlecht_BE_gid_2803201" label="Anderlecht">
+        <attvalues>
+          <attvalue for="geonames_id" value="2803201"></attvalue>
+          <attvalue for="locations_name_modern" value="Anderlecht"></attvalue>
+          <attvalue for="locations_name_in_edition" value="Anderlecht"></attvalue>
+          <attvalue for="locations_modern_state" value="Belgium"></attvalue>
+          <attvalue for="locations_modern_province" value="Brussels Capital"></attvalue>
+          <attvalue for="locations_lat" value="50.83619"></attvalue>
+          <attvalue for="locations_lng" value="4.31454"></attvalue>
+          <attvalue for="locations_ll_combined" value="50.83619, 4.31454"></attvalue>
+          <attvalue for="locations_further_annotation" value="NULL"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-19.634165" y="82.39551" z="0.0"></viz:position>
+        <viz:color r="153" g="153" b="153"></viz:color>
+      </node>
+      <node id="antwerpen_BE_gid_2803138" label="Antwerpen">
+        <attvalues>
+          <attvalue for="geonames_id" value="2803138"></attvalue>
+          <attvalue for="locations_name_modern" value="Antwerpen"></attvalue>
+          <attvalue for="locations_name_in_edition" value="Antwerpen"></attvalue>
+          <attvalue for="locations_modern_state" value="Belgium"></attvalue>
+          <attvalue for="locations_modern_province" value="Flemish"></attvalue>
+          <attvalue for="locations_lat" value="51.21989"></attvalue>
+          <attvalue for="locations_lng" value="4.40346"></attvalue>
+          <attvalue for="locations_ll_combined" value="51.21989, 4.40346"></attvalue>
+          <attvalue for="locations_further_annotation" value="NULL"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-18.082218" y="93.04346" z="0.0"></viz:position>
+        <viz:color r="255" g="74" b="70"></viz:color>
+      </node>
+      <node id="basel_CH_gid_2661604" label="Basel">
+        <attvalues>
+          <attvalue for="geonames_id" value="2661604"></attvalue>
+          <attvalue for="locations_name_modern" value="Basel"></attvalue>
+          <attvalue for="locations_name_in_edition" value="Basel"></attvalue>
+          <attvalue for="locations_modern_state" value="Switzerland"></attvalue>
+          <attvalue for="locations_modern_province" value="Basel-City"></attvalue>
+          <attvalue for="locations_lat" value="47.5584"></attvalue>
+          <attvalue for="locations_lng" value="7.57327"></attvalue>
+          <attvalue for="locations_ll_combined" value="47.5584, 7.57327"></attvalue>
+          <attvalue for="locations_further_annotation" value="NULL"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="37.241405" y="-5.1956177" z="0.0"></viz:position>
+        <viz:color r="255" g="74" b="70"></viz:color>
+      </node>
+      <node id="blois_FR_gid_3032213" label="Blois">
+        <attvalues>
+          <attvalue for="geonames_id" value="3032213"></attvalue>
+          <attvalue for="locations_name_modern" value="Blois"></attvalue>
+          <attvalue for="locations_name_in_edition" value="Blois"></attvalue>
+          <attvalue for="locations_modern_state" value="France"></attvalue>
+          <attvalue for="locations_modern_province" value="Centre"></attvalue>
+          <attvalue for="locations_lat" value="47.58333"></attvalue>
+          <attvalue for="locations_lng" value="1.33333"></attvalue>
+          <attvalue for="locations_ll_combined" value="47.58333, 1.33333"></attvalue>
+          <attvalue for="locations_further_annotation" value="NULL"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-71.66609" y="-4.550659" z="0.0"></viz:position>
+        <viz:color r="255" g="74" b="70"></viz:color>
+      </node>
+      <node id="bonnefont_FR_gid_3031759" label="Bonnefont">
+        <attvalues>
+          <attvalue for="geonames_id" value="3031759"></attvalue>
+          <attvalue for="locations_name_modern" value="Bonnefont"></attvalue>
+          <attvalue for="locations_name_in_edition" value="Bonnefont"></attvalue>
+          <attvalue for="locations_modern_state" value="France"></attvalue>
+          <attvalue for="locations_modern_province" value="Languedoc-Roussillon-Midi-Pyrénées"></attvalue>
+          <attvalue for="locations_lat" value="43.24983"></attvalue>
+          <attvalue for="locations_lng" value="0.34476"></attvalue>
+          <attvalue for="locations_ll_combined" value="43.24983, 0.34476"></attvalue>
+          <attvalue for="locations_further_annotation" value="NULL"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-88.9199" y="-112.37799" z="0.0"></viz:position>
+        <viz:color r="255" g="74" b="70"></viz:color>
+      </node>
+      <node id="brugge_BE_gid_2800931" label="Bruges">
+        <attvalues>
+          <attvalue for="geonames_id" value="2800931"></attvalue>
+          <attvalue for="locations_name_modern" value="Brugge"></attvalue>
+          <attvalue for="locations_name_in_edition" value="Bruges"></attvalue>
+          <attvalue for="locations_modern_state" value="Belgium"></attvalue>
+          <attvalue for="locations_modern_province" value="Flemish"></attvalue>
+          <attvalue for="locations_lat" value="51.20892"></attvalue>
+          <attvalue for="locations_lng" value="3.22424"></attvalue>
+          <attvalue for="locations_ll_combined" value="51.20892, 3.22424"></attvalue>
+          <attvalue for="locations_further_annotation" value="NULL"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-38.66349" y="92.73779" z="0.0"></viz:position>
+        <viz:color r="255" g="74" b="70"></viz:color>
+      </node>
+      <node id="brussels_BE_gid_2800866" label="Brussels">
+        <attvalues>
+          <attvalue for="geonames_id" value="2800866"></attvalue>
+          <attvalue for="locations_name_modern" value="Brussels"></attvalue>
+          <attvalue for="locations_name_in_edition" value="Brussels"></attvalue>
+          <attvalue for="locations_modern_state" value="Belgium"></attvalue>
+          <attvalue for="locations_modern_province" value="Brussels Capital"></attvalue>
+          <attvalue for="locations_lat" value="50.85045"></attvalue>
+          <attvalue for="locations_lng" value="4.34878"></attvalue>
+          <attvalue for="locations_ll_combined" value="50.85045, 4.34878"></attvalue>
+          <attvalue for="locations_further_annotation" value="NULL"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-19.036564" y="82.78967" z="0.0"></viz:position>
+        <viz:color r="255" g="74" b="70"></viz:color>
+      </node>
+      <node id="calais_FR_gid_3029162" label="Calais">
+        <attvalues>
+          <attvalue for="geonames_id" value="3029162"></attvalue>
+          <attvalue for="locations_name_modern" value="Calais"></attvalue>
+          <attvalue for="locations_name_in_edition" value="Calais"></attvalue>
+          <attvalue for="locations_modern_state" value="France"></attvalue>
+          <attvalue for="locations_modern_province" value="Hauts-de-France"></attvalue>
+          <attvalue for="locations_lat" value="50.95194"></attvalue>
+          <attvalue for="locations_lng" value="1.85635"></attvalue>
+          <attvalue for="locations_ll_combined" value="50.95194, 1.85635"></attvalue>
+          <attvalue for="locations_further_annotation" value="NULL"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-62.537674" y="85.59839" z="0.0"></viz:position>
+        <viz:color r="255" g="74" b="70"></viz:color>
+      </node>
+      <node id="chíos_GR_gid_259973" label="Chios">
+        <attvalues>
+          <attvalue for="geonames_id" value="259973"></attvalue>
+          <attvalue for="locations_name_modern" value="Chíos"></attvalue>
+          <attvalue for="locations_name_in_edition" value="Chios"></attvalue>
+          <attvalue for="locations_modern_state" value="Greece"></attvalue>
+          <attvalue for="locations_modern_province" value="North Aegean"></attvalue>
+          <attvalue for="locations_lat" value="38.36778"></attvalue>
+          <attvalue for="locations_lng" value="26.13583"></attvalue>
+          <attvalue for="locations_ll_combined" value="38.36778, 26.13583"></attvalue>
+          <attvalue for="locations_further_annotation" value="NULL"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="361.2192" y="-225.03851" z="0.0"></viz:position>
+        <viz:color r="255" g="74" b="70"></viz:color>
+      </node>
+      <node id="fontenay_le_comte_FR_gid_3017921" label="Fontenay-le-Comte">
+        <attvalues>
+          <attvalue for="geonames_id" value="3017921"></attvalue>
+          <attvalue for="locations_name_modern" value="Fontenay"></attvalue>
+          <attvalue for="locations_name_in_edition" value="Fontenay-le-Comte"></attvalue>
+          <attvalue for="locations_modern_state" value="France"></attvalue>
+          <attvalue for="locations_modern_province" value="Pays de la Loire"></attvalue>
+          <attvalue for="locations_lat" value="46.46667"></attvalue>
+          <attvalue for="locations_lng" value="-0.81667"></attvalue>
+          <attvalue for="locations_ll_combined" value="46.46667, -0.81667"></attvalue>
+          <attvalue for="locations_further_annotation" value="NULL"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-109.190674" y="-33.142456" z="0.0"></viz:position>
+        <viz:color r="255" g="74" b="70"></viz:color>
+      </node>
+      <node id="leuven_BE_gid_2792482" label="Louvain">
+        <attvalues>
+          <attvalue for="geonames_id" value="2792482"></attvalue>
+          <attvalue for="locations_name_modern" value="Leuven"></attvalue>
+          <attvalue for="locations_name_in_edition" value="Louvain"></attvalue>
+          <attvalue for="locations_modern_state" value="Belgium"></attvalue>
+          <attvalue for="locations_modern_province" value="Flemish"></attvalue>
+          <attvalue for="locations_lat" value="50.87959"></attvalue>
+          <attvalue for="locations_lng" value="4.70093"></attvalue>
+          <attvalue for="locations_ll_combined" value="50.87959, 4.70093"></attvalue>
+          <attvalue for="locations_further_annotation" value="NULL"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-12.890388" y="83.59558" z="0.0"></viz:position>
+        <viz:color r="255" g="74" b="70"></viz:color>
+      </node>
+      <node id="marly_la_ville_FR_gid_2995653" label="Marly">
+        <attvalues>
+          <attvalue for="geonames_id" value="2995653"></attvalue>
+          <attvalue for="locations_name_modern" value="Marly-la-Ville"></attvalue>
+          <attvalue for="locations_name_in_edition" value="Marly"></attvalue>
+          <attvalue for="locations_modern_state" value="France"></attvalue>
+          <attvalue for="locations_modern_province" value="Île-de-France"></attvalue>
+          <attvalue for="locations_lat" value="49.08201"></attvalue>
+          <attvalue for="locations_lng" value="2.50347"></attvalue>
+          <attvalue for="locations_ll_combined" value="49.08201, 2.50347"></attvalue>
+          <attvalue for="locations_further_annotation" value="NULL"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-51.243298" y="34.798523" z="0.0"></viz:position>
+        <viz:color r="255" g="74" b="70"></viz:color>
+      </node>
+      <node id="mechelen_BE_gid_2791537" label="Mechelen">
+        <attvalues>
+          <attvalue for="geonames_id" value="2791537"></attvalue>
+          <attvalue for="locations_name_modern" value="Mechelen"></attvalue>
+          <attvalue for="locations_name_in_edition" value="Mechelen"></attvalue>
+          <attvalue for="locations_modern_state" value="Belgium"></attvalue>
+          <attvalue for="locations_modern_province" value="Flemish"></attvalue>
+          <attvalue for="locations_lat" value="51.02574"></attvalue>
+          <attvalue for="locations_lng" value="4.47762"></attvalue>
+          <attvalue for="locations_ll_combined" value="51.02574, 4.47762"></attvalue>
+          <attvalue for="locations_further_annotation" value="NULL"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-16.787882" y="87.64465" z="0.0"></viz:position>
+        <viz:color r="255" g="74" b="70"></viz:color>
+      </node>
+      <node id="milano_IT_gid_3173435" label="Milan">
+        <attvalues>
+          <attvalue for="geonames_id" value="3173435"></attvalue>
+          <attvalue for="locations_name_modern" value="Milano"></attvalue>
+          <attvalue for="locations_name_in_edition" value="Milan"></attvalue>
+          <attvalue for="locations_modern_state" value="Italy"></attvalue>
+          <attvalue for="locations_modern_province" value="Lombardy"></attvalue>
+          <attvalue for="locations_lat" value="45.46427"></attvalue>
+          <attvalue for="locations_lng" value="9.18951"></attvalue>
+          <attvalue for="locations_ll_combined" value="45.46427, 9.18951"></attvalue>
+          <attvalue for="locations_further_annotation" value="NULL"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="65.45011" y="-58.31305" z="0.0"></viz:position>
+        <viz:color r="255" g="74" b="70"></viz:color>
+      </node>
+      <node id="padova_IT_gid_3171728" label="Padua">
+        <attvalues>
+          <attvalue for="geonames_id" value="3171728"></attvalue>
+          <attvalue for="locations_name_modern" value="Padova"></attvalue>
+          <attvalue for="locations_name_in_edition" value="Padua"></attvalue>
+          <attvalue for="locations_modern_state" value="Italy"></attvalue>
+          <attvalue for="locations_modern_province" value="Veneto"></attvalue>
+          <attvalue for="locations_lat" value="45.40797"></attvalue>
+          <attvalue for="locations_lng" value="11.88586"></attvalue>
+          <attvalue for="locations_ll_combined" value="45.40797, 11.88586"></attvalue>
+          <attvalue for="locations_further_annotation" value="NULL"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="112.5103" y="-59.71338" z="0.0"></viz:position>
+        <viz:color r="255" g="74" b="70"></viz:color>
+      </node>
+      <node id="paris_FR_gid_2988507" label="Paris">
+        <attvalues>
+          <attvalue for="geonames_id" value="2988507"></attvalue>
+          <attvalue for="locations_name_modern" value="Paris"></attvalue>
+          <attvalue for="locations_name_in_edition" value="Paris"></attvalue>
+          <attvalue for="locations_modern_state" value="France"></attvalue>
+          <attvalue for="locations_modern_province" value="Île-de-France"></attvalue>
+          <attvalue for="locations_lat" value="48.85341"></attvalue>
+          <attvalue for="locations_lng" value="2.3488"></attvalue>
+          <attvalue for="locations_ll_combined" value="48.85341, 2.3488"></attvalue>
+          <attvalue for="locations_further_annotation" value="NULL"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-53.9428" y="28.720947" z="0.0"></viz:position>
+        <viz:color r="255" g="74" b="70"></viz:color>
+      </node>
+      <node id="romorantin_lanthenay_FR_gid_2982967" label="Romorantin">
+        <attvalues>
+          <attvalue for="geonames_id" value="2982967"></attvalue>
+          <attvalue for="locations_name_modern" value="Romorantin-Lanthenay"></attvalue>
+          <attvalue for="locations_name_in_edition" value="Romorantin"></attvalue>
+          <attvalue for="locations_modern_state" value="France"></attvalue>
+          <attvalue for="locations_modern_province" value="Centre"></attvalue>
+          <attvalue for="locations_lat" value="47.36667"></attvalue>
+          <attvalue for="locations_lng" value="1.75"></attvalue>
+          <attvalue for="locations_ll_combined" value="47.36667, 1.75"></attvalue>
+          <attvalue for="locations_further_annotation" value="NULL"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-64.39383" y="-10.145264" z="0.0"></viz:position>
+        <viz:color r="255" g="74" b="70"></viz:color>
+      </node>
+      <node id="toulouse_FR_gid_2972315" label="Toulouse">
+        <attvalues>
+          <attvalue for="geonames_id" value="2972315"></attvalue>
+          <attvalue for="locations_name_modern" value="Toulouse"></attvalue>
+          <attvalue for="locations_name_in_edition" value="Toulouse"></attvalue>
+          <attvalue for="locations_modern_state" value="France"></attvalue>
+          <attvalue for="locations_modern_province" value="Languedoc-Roussillon-Midi-Pyrénées"></attvalue>
+          <attvalue for="locations_lat" value="43.60426"></attvalue>
+          <attvalue for="locations_lng" value="1.44367"></attvalue>
+          <attvalue for="locations_ll_combined" value="43.60426, 1.44367"></attvalue>
+          <attvalue for="locations_further_annotation" value="NULL"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-69.740295" y="-103.86029" z="0.0"></viz:position>
+        <viz:color r="255" g="74" b="70"></viz:color>
+      </node>
+      <node id="venice_IT_gid_3164603" label="Venice">
+        <attvalues>
+          <attvalue for="geonames_id" value="3164603"></attvalue>
+          <attvalue for="locations_name_modern" value="Venice"></attvalue>
+          <attvalue for="locations_name_in_edition" value="Venice"></attvalue>
+          <attvalue for="locations_modern_state" value="Italy"></attvalue>
+          <attvalue for="locations_modern_province" value="Veneto"></attvalue>
+          <attvalue for="locations_lat" value="45.43713"></attvalue>
+          <attvalue for="locations_lng" value="12.33265"></attvalue>
+          <attvalue for="locations_ll_combined" value="45.43713, 12.33265"></attvalue>
+          <attvalue for="locations_further_annotation" value="NULL"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="120.30826" y="-58.98828" z="0.0"></viz:position>
+        <viz:color r="255" g="74" b="70"></viz:color>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="era_cwealien_571" source="antwerpen_BE_gid_2803138" target="paris_FR_gid_2988507" label="Letter From Cuthbert Tunstall to Guillaume Budé [CWE]" weight="6.0">
+        <attvalues>
+          <attvalue for="letter_no_in_edition" value="571 [CWE] // 571 [ALLEN]"></attvalue>
+          <attvalue for="sender_id" value="tunstall_cuthbert_viaf_22160214"></attvalue>
+          <attvalue for="sender_as_marked" value="Cuthbert Tunstall [CWE]"></attvalue>
+          <attvalue for="sender_inferred" value="0"></attvalue>
+          <attvalue for="sender_uncertain" value="0"></attvalue>
+          <attvalue for="recipient_id" value="budé_guillaume_viaf_105878228"></attvalue>
+          <attvalue for="recipient_as_marked" value="Guillaume Budé [CWE]"></attvalue>
+          <attvalue for="recipient_inferred" value="0"></attvalue>
+          <attvalue for="recipient_uncertain" value="0"></attvalue>
+          <attvalue for="send_date_year1" value="1517"></attvalue>
+          <attvalue for="send_date_month1" value="04"></attvalue>
+          <attvalue for="send_date_day1" value="NULL"></attvalue>
+          <attvalue for="send_date_computable1" value="1517-04-01"></attvalue>
+          <attvalue for="send_date_has_range" value="1"></attvalue>
+          <attvalue for="send_date_year2" value="1517"></attvalue>
+          <attvalue for="send_date_month2" value="04"></attvalue>
+          <attvalue for="send_date_day2" value="NULL"></attvalue>
+          <attvalue for="send_date_computable2" value="1517-04-21"></attvalue>
+          <attvalue for="send_date_as_marked" value="[April 1517]"></attvalue>
+          <attvalue for="send_date_inferred" value="1"></attvalue>
+          <attvalue for="send_date_approx" value="0"></attvalue>
+          <attvalue for="send_date_uncertain" value="0"></attvalue>
+          <attvalue for="source_loc_as_marked" value="[Antwerp]"></attvalue>
+          <attvalue for="source_loc_inferred" value="1"></attvalue>
+          <attvalue for="source_loc_uncertain" value="0"></attvalue>
+          <attvalue for="target_loc_as_marked" value="[Paris]"></attvalue>
+          <attvalue for="target_loc_inferred" value="1"></attvalue>
+          <attvalue for="target_loc_uncertain" value="0"></attvalue>
+          <attvalue for="letter_language" value="latin"></attvalue>
+          <attvalue for="letter_type_genus" value="familiar letter"></attvalue>
+          <attvalue for="letter_type_x_to_x" value="letter_1_to_1"></attvalue>
+          <attvalue for="further_annotation" value="alien letter // as the beginning of the time range, a date closer to the middle of April might be more appropriate, cf. CWE IV, p. 325 : CK"></attvalue>
+        </attvalues>
+      </edge>
+      <edge id="era_cwe_1601" source="basel_CH_gid_2661604" target="paris_FR_gid_2988507" label="1601 To Guillaume Bude Basel, 25 August 1525 [CWE]" weight="4.0">
+        <attvalues>
+          <attvalue for="letter_no_in_edition" value="1601 [CWE] // 1601 [ALLEN]"></attvalue>
+          <attvalue for="sender_id" value="erasmus_desiderius_viaf_95982394"></attvalue>
+          <attvalue for="sender_as_marked" value="Erasmus of Rotterdam [CWE]"></attvalue>
+          <attvalue for="sender_inferred" value="0"></attvalue>
+          <attvalue for="sender_uncertain" value="0"></attvalue>
+          <attvalue for="recipient_id" value="budé_guillaume_viaf_105878228"></attvalue>
+          <attvalue for="recipient_as_marked" value="Guillaume Budé [CWE]"></attvalue>
+          <attvalue for="recipient_inferred" value="0"></attvalue>
+          <attvalue for="recipient_uncertain" value="0"></attvalue>
+          <attvalue for="send_date_year1" value="1525"></attvalue>
+          <attvalue for="send_date_month1" value="08"></attvalue>
+          <attvalue for="send_date_day1" value="25"></attvalue>
+          <attvalue for="send_date_computable1" value="1525-08-25"></attvalue>
+          <attvalue for="send_date_has_range" value="0"></attvalue>
+          <attvalue for="send_date_year2" value="1525"></attvalue>
+          <attvalue for="send_date_month2" value="08"></attvalue>
+          <attvalue for="send_date_day2" value="25"></attvalue>
+          <attvalue for="send_date_computable2" value="1525-08-25"></attvalue>
+          <attvalue for="send_date_as_marked" value="25 August 1525 [CWE]"></attvalue>
+          <attvalue for="send_date_inferred" value="0"></attvalue>
+          <attvalue for="send_date_approx" value="0"></attvalue>
+          <attvalue for="send_date_uncertain" value="0"></attvalue>
+          <attvalue for="source_loc_as_marked" value="Basel [CWE]"></attvalue>
+          <attvalue for="source_loc_inferred" value="0"></attvalue>
+          <attvalue for="source_loc_uncertain" value="0"></attvalue>
+          <attvalue for="target_loc_as_marked" value="[Paris]"></attvalue>
+          <attvalue for="target_loc_inferred" value="1"></attvalue>
+          <attvalue for="target_loc_uncertain" value="0"></attvalue>
+          <attvalue for="letter_language" value="latin"></attvalue>
+          <attvalue for="letter_type_genus" value="familiar letter"></attvalue>
+          <attvalue for="letter_type_x_to_x" value="letter_1_to_1"></attvalue>
+          <attvalue for="further_annotation" value="NULL"></attvalue>
+        </attvalues>
+      </edge>
+      <edge id="gbudé_tournoy_8" source="brugge_BE_gid_2800931" target="paris_FR_gid_2988507" label="Vives a Budé &lt;Bruges, novembre/décembre 1529&gt;" weight="2.0">
+        <attvalues>
+          <attvalue for="letter_no_in_edition" value="8 [Tournoy]"></attvalue>
+          <attvalue for="sender_id" value="vives_juan_luis_viaf_71399403"></attvalue>
+          <attvalue for="sender_as_marked" value="Vives"></attvalue>
+          <attvalue for="sender_inferred" value="0"></attvalue>
+          <attvalue for="sender_uncertain" value="0"></attvalue>
+          <attvalue for="recipient_id" value="budé_guillaume_viaf_105878228"></attvalue>
+          <attvalue for="recipient_as_marked" value="Budé"></attvalue>
+          <attvalue for="recipient_inferred" value="0"></attvalue>
+          <attvalue for="recipient_uncertain" value="0"></attvalue>
+          <attvalue for="send_date_year1" value="1529"></attvalue>
+          <attvalue for="send_date_month1" value="11"></attvalue>
+          <attvalue for="send_date_day1" value="NULL"></attvalue>
+          <attvalue for="send_date_computable1" value="1529-11-01"></attvalue>
+          <attvalue for="send_date_has_range" value="1"></attvalue>
+          <attvalue for="send_date_year2" value="1529"></attvalue>
+          <attvalue for="send_date_month2" value="12"></attvalue>
+          <attvalue for="send_date_day2" value="NULL"></attvalue>
+          <attvalue for="send_date_computable2" value="1529-12-31"></attvalue>
+          <attvalue for="send_date_as_marked" value="&lt;novembre/décembre 1529&gt;"></attvalue>
+          <attvalue for="send_date_inferred" value="1"></attvalue>
+          <attvalue for="send_date_approx" value="0"></attvalue>
+          <attvalue for="send_date_uncertain" value="0"></attvalue>
+          <attvalue for="source_loc_as_marked" value="&lt;Bruges&gt;"></attvalue>
+          <attvalue for="source_loc_inferred" value="1"></attvalue>
+          <attvalue for="source_loc_uncertain" value="0"></attvalue>
+          <attvalue for="target_loc_as_marked" value="[Paris]"></attvalue>
+          <attvalue for="target_loc_inferred" value="1"></attvalue>
+          <attvalue for="target_loc_uncertain" value="0"></attvalue>
+          <attvalue for="letter_language" value="latin"></attvalue>
+          <attvalue for="letter_type_genus" value="familiar letter"></attvalue>
+          <attvalue for="letter_type_x_to_x" value="letter_1_to_1"></attvalue>
+          <attvalue for="further_annotation" value="NULL"></attvalue>
+        </attvalues>
+      </edge>
+      <edge id="era_cwe_480" source="brussels_BE_gid_2800866" target="paris_FR_gid_2988507" label="480 To Guillaume Budé Brussels, 28 October 1516 [CWE]">
+        <attvalues>
+          <attvalue for="letter_no_in_edition" value="480 [CWE] // 480 [ALLEN]"></attvalue>
+          <attvalue for="sender_id" value="erasmus_desiderius_viaf_95982394"></attvalue>
+          <attvalue for="sender_as_marked" value="Erasmus of Rotterdam [CWE]"></attvalue>
+          <attvalue for="sender_inferred" value="0"></attvalue>
+          <attvalue for="sender_uncertain" value="0"></attvalue>
+          <attvalue for="recipient_id" value="budé_guillaume_viaf_105878228"></attvalue>
+          <attvalue for="recipient_as_marked" value="Guillaume Budé [CWE]"></attvalue>
+          <attvalue for="recipient_inferred" value="0"></attvalue>
+          <attvalue for="recipient_uncertain" value="0"></attvalue>
+          <attvalue for="send_date_year1" value="1516"></attvalue>
+          <attvalue for="send_date_month1" value="10"></attvalue>
+          <attvalue for="send_date_day1" value="28"></attvalue>
+          <attvalue for="send_date_computable1" value="1516-10-28"></attvalue>
+          <attvalue for="send_date_has_range" value="0"></attvalue>
+          <attvalue for="send_date_year2" value="1516"></attvalue>
+          <attvalue for="send_date_month2" value="10"></attvalue>
+          <attvalue for="send_date_day2" value="28"></attvalue>
+          <attvalue for="send_date_computable2" value="1516-10-28"></attvalue>
+          <attvalue for="send_date_as_marked" value="28 October 1516 [CWE]"></attvalue>
+          <attvalue for="send_date_inferred" value="0"></attvalue>
+          <attvalue for="send_date_approx" value="0"></attvalue>
+          <attvalue for="send_date_uncertain" value="0"></attvalue>
+          <attvalue for="source_loc_as_marked" value="Brussels [CWE]"></attvalue>
+          <attvalue for="source_loc_inferred" value="0"></attvalue>
+          <attvalue for="source_loc_uncertain" value="0"></attvalue>
+          <attvalue for="target_loc_as_marked" value="[Paris]"></attvalue>
+          <attvalue for="target_loc_inferred" value="1"></attvalue>
+          <attvalue for="target_loc_uncertain" value="0"></attvalue>
+          <attvalue for="letter_language" value="latin"></attvalue>
+          <attvalue for="letter_type_genus" value="familiar letter"></attvalue>
+          <attvalue for="letter_type_x_to_x" value="letter_1_to_1"></attvalue>
+          <attvalue for="further_annotation" value="NULL"></attvalue>
+        </attvalues>
+      </edge>
+      <edge id="gbudé_lg_18" source="chíos_GR_gid_259973" target="paris_FR_gid_2988507" label="Ep 18 Laestarchos à Budé. Chios, 15 octobre 1539 [Budé lettres grecques]">
+        <attvalues>
+          <attvalue for="letter_no_in_edition" value="19 [Budé lettres grecques]"></attvalue>
+          <attvalue for="sender_id" value="laestarchos_hermodore_viaf_unknown"></attvalue>
+          <attvalue for="sender_as_marked" value="Hermodore Laestarchos [Budé lettres grecques]"></attvalue>
+          <attvalue for="sender_inferred" value="0"></attvalue>
+          <attvalue for="sender_uncertain" value="0"></attvalue>
+          <attvalue for="recipient_id" value="budé_guillaume_viaf_105878228"></attvalue>
+          <attvalue for="recipient_as_marked" value="Guillaume Budé [Budé lettres grecques]"></attvalue>
+          <attvalue for="recipient_inferred" value="0"></attvalue>
+          <attvalue for="recipient_uncertain" value="0"></attvalue>
+          <attvalue for="send_date_year1" value="1539"></attvalue>
+          <attvalue for="send_date_month1" value="10"></attvalue>
+          <attvalue for="send_date_day1" value="15"></attvalue>
+          <attvalue for="send_date_computable1" value="1539-10-15"></attvalue>
+          <attvalue for="send_date_has_range" value="0"></attvalue>
+          <attvalue for="send_date_year2" value="1539"></attvalue>
+          <attvalue for="send_date_month2" value="10"></attvalue>
+          <attvalue for="send_date_day2" value="15"></attvalue>
+          <attvalue for="send_date_computable2" value="1539-10-15"></attvalue>
+          <attvalue for="send_date_as_marked" value="15 octobre 1539"></attvalue>
+          <attvalue for="send_date_inferred" value="0"></attvalue>
+          <attvalue for="send_date_approx" value="0"></attvalue>
+          <attvalue for="send_date_uncertain" value="0"></attvalue>
+          <attvalue for="source_loc_as_marked" value="Chios"></attvalue>
+          <attvalue for="source_loc_inferred" value="0"></attvalue>
+          <attvalue for="source_loc_uncertain" value="0"></attvalue>
+          <attvalue for="target_loc_as_marked" value="[Paris]"></attvalue>
+          <attvalue for="target_loc_inferred" value="1"></attvalue>
+          <attvalue for="target_loc_uncertain" value="0"></attvalue>
+          <attvalue for="letter_language" value="greek"></attvalue>
+          <attvalue for="letter_type_genus" value="familiar letter"></attvalue>
+          <attvalue for="letter_type_x_to_x" value="letter_1_to_1"></attvalue>
+          <attvalue for="further_annotation" value="NULL"></attvalue>
+        </attvalues>
+      </edge>
+      <edge id="gbudé_lg_66" source="fontenay_le_comte_FR_gid_3017921" target="romorantin_lanthenay_FR_gid_2982967" label="Ep 66 Rabelais à Budé. Fontenay, 4 mars [1521] [Budé lettres grecques]">
+        <attvalues>
+          <attvalue for="letter_no_in_edition" value="66 [Budé lettre grecques]"></attvalue>
+          <attvalue for="sender_id" value="rabelais_françois_viaf_24606939"></attvalue>
+          <attvalue for="sender_as_marked" value="François Rabelais [Budé lettres grecques]"></attvalue>
+          <attvalue for="sender_inferred" value="0"></attvalue>
+          <attvalue for="sender_uncertain" value="0"></attvalue>
+          <attvalue for="recipient_id" value="budé_guillaume_viaf_105878228"></attvalue>
+          <attvalue for="recipient_as_marked" value="Guillaume Budé [Budé lettres grecques]"></attvalue>
+          <attvalue for="recipient_inferred" value="0"></attvalue>
+          <attvalue for="recipient_uncertain" value="0"></attvalue>
+          <attvalue for="send_date_year1" value="1521"></attvalue>
+          <attvalue for="send_date_month1" value="03"></attvalue>
+          <attvalue for="send_date_day1" value="04"></attvalue>
+          <attvalue for="send_date_computable1" value="1521-03-04"></attvalue>
+          <attvalue for="send_date_has_range" value="0"></attvalue>
+          <attvalue for="send_date_year2" value="1521"></attvalue>
+          <attvalue for="send_date_month2" value="03"></attvalue>
+          <attvalue for="send_date_day2" value="04"></attvalue>
+          <attvalue for="send_date_computable2" value="1521-03-04"></attvalue>
+          <attvalue for="send_date_as_marked" value="4 mars [1521]"></attvalue>
+          <attvalue for="send_date_inferred" value="1"></attvalue>
+          <attvalue for="send_date_approx" value="0"></attvalue>
+          <attvalue for="send_date_uncertain" value="0"></attvalue>
+          <attvalue for="source_loc_as_marked" value="Fontenay"></attvalue>
+          <attvalue for="source_loc_inferred" value="0"></attvalue>
+          <attvalue for="source_loc_uncertain" value="0"></attvalue>
+          <attvalue for="target_loc_as_marked" value="[Romorantin Lanthenay]"></attvalue>
+          <attvalue for="target_loc_inferred" value="1"></attvalue>
+          <attvalue for="target_loc_uncertain" value="0"></attvalue>
+          <attvalue for="letter_language" value="greek"></attvalue>
+          <attvalue for="letter_type_genus" value="familiar letter"></attvalue>
+          <attvalue for="letter_type_x_to_x" value="letter_1_to_1"></attvalue>
+          <attvalue for="further_annotation" value="NULL"></attvalue>
+        </attvalues>
+      </edge>
+      <edge id="era_cwe_1066" source="leuven_BE_gid_2792482" target="marly_la_ville_FR_gid_2995653" label="1066 To Guillaume Budé Louvain, 17 February 1520 [CWE]">
+        <attvalues>
+          <attvalue for="letter_no_in_edition" value="1066 [CWE] // 1066 [ALLEN]"></attvalue>
+          <attvalue for="sender_id" value="erasmus_desiderius_viaf_95982394"></attvalue>
+          <attvalue for="sender_as_marked" value="Erasmus of Rotterdam [CWE]"></attvalue>
+          <attvalue for="sender_inferred" value="0"></attvalue>
+          <attvalue for="sender_uncertain" value="0"></attvalue>
+          <attvalue for="recipient_id" value="budé_guillaume_viaf_105878228"></attvalue>
+          <attvalue for="recipient_as_marked" value="Guillaume Budé [CWE]"></attvalue>
+          <attvalue for="recipient_inferred" value="0"></attvalue>
+          <attvalue for="recipient_uncertain" value="0"></attvalue>
+          <attvalue for="send_date_year1" value="1520"></attvalue>
+          <attvalue for="send_date_month1" value="02"></attvalue>
+          <attvalue for="send_date_day1" value="17"></attvalue>
+          <attvalue for="send_date_computable1" value="1520-02-17"></attvalue>
+          <attvalue for="send_date_has_range" value="0"></attvalue>
+          <attvalue for="send_date_year2" value="1520"></attvalue>
+          <attvalue for="send_date_month2" value="02"></attvalue>
+          <attvalue for="send_date_day2" value="17"></attvalue>
+          <attvalue for="send_date_computable2" value="1520-02-17"></attvalue>
+          <attvalue for="send_date_as_marked" value="17 February 1520 [CWE]"></attvalue>
+          <attvalue for="send_date_inferred" value="0"></attvalue>
+          <attvalue for="send_date_approx" value="0"></attvalue>
+          <attvalue for="send_date_uncertain" value="0"></attvalue>
+          <attvalue for="source_loc_as_marked" value="Louvain [CWE]"></attvalue>
+          <attvalue for="source_loc_inferred" value="0"></attvalue>
+          <attvalue for="source_loc_uncertain" value="0"></attvalue>
+          <attvalue for="target_loc_as_marked" value="[Marly-la-Ville]"></attvalue>
+          <attvalue for="target_loc_inferred" value="1"></attvalue>
+          <attvalue for="target_loc_uncertain" value="0"></attvalue>
+          <attvalue for="letter_language" value="latin"></attvalue>
+          <attvalue for="letter_type_genus" value="familiar letter"></attvalue>
+          <attvalue for="letter_type_x_to_x" value="letter_1_to_1"></attvalue>
+          <attvalue for="further_annotation" value="NULL"></attvalue>
+        </attvalues>
+      </edge>
+      <edge id="era_cwe_689" source="leuven_BE_gid_2792482" target="paris_FR_gid_2988507" label="689 To Guillaume Budé Louvain, 26 October [1517] [CWE]" weight="8.0">
+        <attvalues>
+          <attvalue for="letter_no_in_edition" value="689 [CWE] // 689 [ALLEN]"></attvalue>
+          <attvalue for="sender_id" value="erasmus_desiderius_viaf_95982394"></attvalue>
+          <attvalue for="sender_as_marked" value="Erasmus of Rotterdam [CWE]"></attvalue>
+          <attvalue for="sender_inferred" value="0"></attvalue>
+          <attvalue for="sender_uncertain" value="0"></attvalue>
+          <attvalue for="recipient_id" value="budé_guillaume_viaf_105878228"></attvalue>
+          <attvalue for="recipient_as_marked" value="Guillaume Budé [CWE]"></attvalue>
+          <attvalue for="recipient_inferred" value="0"></attvalue>
+          <attvalue for="recipient_uncertain" value="0"></attvalue>
+          <attvalue for="send_date_year1" value="1517"></attvalue>
+          <attvalue for="send_date_month1" value="10"></attvalue>
+          <attvalue for="send_date_day1" value="26"></attvalue>
+          <attvalue for="send_date_computable1" value="1517-10-26"></attvalue>
+          <attvalue for="send_date_has_range" value="0"></attvalue>
+          <attvalue for="send_date_year2" value="1517"></attvalue>
+          <attvalue for="send_date_month2" value="10"></attvalue>
+          <attvalue for="send_date_day2" value="26"></attvalue>
+          <attvalue for="send_date_computable2" value="1517-10-26"></attvalue>
+          <attvalue for="send_date_as_marked" value="26 October [1517] [CWE]"></attvalue>
+          <attvalue for="send_date_inferred" value="1"></attvalue>
+          <attvalue for="send_date_approx" value="0"></attvalue>
+          <attvalue for="send_date_uncertain" value="0"></attvalue>
+          <attvalue for="source_loc_as_marked" value="Louvain [CWE]"></attvalue>
+          <attvalue for="source_loc_inferred" value="0"></attvalue>
+          <attvalue for="source_loc_uncertain" value="0"></attvalue>
+          <attvalue for="target_loc_as_marked" value="[Paris]"></attvalue>
+          <attvalue for="target_loc_inferred" value="1"></attvalue>
+          <attvalue for="target_loc_uncertain" value="0"></attvalue>
+          <attvalue for="letter_language" value="latin"></attvalue>
+          <attvalue for="letter_type_genus" value="familiar letter"></attvalue>
+          <attvalue for="letter_type_x_to_x" value="letter_1_to_1"></attvalue>
+          <attvalue for="further_annotation" value="NULL"></attvalue>
+        </attvalues>
+      </edge>
+      <edge id="era_cwe_1184" source="leuven_BE_gid_2792482" target="romorantin_lanthenay_FR_gid_2982967" label="1184 To Guillaume Budé Louvain, 16 February 1521 [CWE]">
+        <attvalues>
+          <attvalue for="letter_no_in_edition" value="1184 [CWE] // 1184 [ALLEN]"></attvalue>
+          <attvalue for="sender_id" value="erasmus_desiderius_viaf_95982394"></attvalue>
+          <attvalue for="sender_as_marked" value="Erasmus of Rotterdam [CWE]"></attvalue>
+          <attvalue for="sender_inferred" value="0"></attvalue>
+          <attvalue for="sender_uncertain" value="0"></attvalue>
+          <attvalue for="recipient_id" value="budé_guillaume_viaf_105878228"></attvalue>
+          <attvalue for="recipient_as_marked" value="Guillaume Budé [CWE]"></attvalue>
+          <attvalue for="recipient_inferred" value="0"></attvalue>
+          <attvalue for="recipient_uncertain" value="0"></attvalue>
+          <attvalue for="send_date_year1" value="1521"></attvalue>
+          <attvalue for="send_date_month1" value="02"></attvalue>
+          <attvalue for="send_date_day1" value="16"></attvalue>
+          <attvalue for="send_date_computable1" value="1521-02-16"></attvalue>
+          <attvalue for="send_date_has_range" value="0"></attvalue>
+          <attvalue for="send_date_year2" value="1521"></attvalue>
+          <attvalue for="send_date_month2" value="02"></attvalue>
+          <attvalue for="send_date_day2" value="16"></attvalue>
+          <attvalue for="send_date_computable2" value="1521-02-16"></attvalue>
+          <attvalue for="send_date_as_marked" value="16 February 1521 [CWE]"></attvalue>
+          <attvalue for="send_date_inferred" value="0"></attvalue>
+          <attvalue for="send_date_approx" value="0"></attvalue>
+          <attvalue for="send_date_uncertain" value="0"></attvalue>
+          <attvalue for="source_loc_as_marked" value="Louvain [CWE]"></attvalue>
+          <attvalue for="source_loc_inferred" value="0"></attvalue>
+          <attvalue for="source_loc_uncertain" value="0"></attvalue>
+          <attvalue for="target_loc_as_marked" value="[Romorantin Lanthenay]"></attvalue>
+          <attvalue for="target_loc_inferred" value="1"></attvalue>
+          <attvalue for="target_loc_uncertain" value="0"></attvalue>
+          <attvalue for="letter_language" value="latin"></attvalue>
+          <attvalue for="letter_type_genus" value="familiar letter"></attvalue>
+          <attvalue for="letter_type_x_to_x" value="letter_1_to_1"></attvalue>
+          <attvalue for="further_annotation" value="NULL"></attvalue>
+        </attvalues>
+      </edge>
+      <edge id="era_cwe_930" source="mechelen_BE_gid_2791537" target="paris_FR_gid_2988507" label="930 To Guillaume Budé Mechelen, 21 March 1519 [CWE]">
+        <attvalues>
+          <attvalue for="letter_no_in_edition" value="930 [CWE] // 930 [ALLEN]"></attvalue>
+          <attvalue for="sender_id" value="erasmus_desiderius_viaf_95982394"></attvalue>
+          <attvalue for="sender_as_marked" value="Erasmus of Rotterdam [CWE]"></attvalue>
+          <attvalue for="sender_inferred" value="0"></attvalue>
+          <attvalue for="sender_uncertain" value="0"></attvalue>
+          <attvalue for="recipient_id" value="budé_guillaume_viaf_105878228"></attvalue>
+          <attvalue for="recipient_as_marked" value="Guillaume Budé [CWE]"></attvalue>
+          <attvalue for="recipient_inferred" value="0"></attvalue>
+          <attvalue for="recipient_uncertain" value="0"></attvalue>
+          <attvalue for="send_date_year1" value="1519"></attvalue>
+          <attvalue for="send_date_month1" value="03"></attvalue>
+          <attvalue for="send_date_day1" value="21"></attvalue>
+          <attvalue for="send_date_computable1" value="1519-03-21"></attvalue>
+          <attvalue for="send_date_has_range" value="0"></attvalue>
+          <attvalue for="send_date_year2" value="1519"></attvalue>
+          <attvalue for="send_date_month2" value="03"></attvalue>
+          <attvalue for="send_date_day2" value="21"></attvalue>
+          <attvalue for="send_date_computable2" value="1519-03-21"></attvalue>
+          <attvalue for="send_date_as_marked" value="21 March 1519 [CWE]"></attvalue>
+          <attvalue for="send_date_inferred" value="0"></attvalue>
+          <attvalue for="send_date_approx" value="0"></attvalue>
+          <attvalue for="send_date_uncertain" value="0"></attvalue>
+          <attvalue for="source_loc_as_marked" value="Mechelen [CWE]"></attvalue>
+          <attvalue for="source_loc_inferred" value="0"></attvalue>
+          <attvalue for="source_loc_uncertain" value="0"></attvalue>
+          <attvalue for="target_loc_as_marked" value="[Paris]"></attvalue>
+          <attvalue for="target_loc_inferred" value="1"></attvalue>
+          <attvalue for="target_loc_uncertain" value="0"></attvalue>
+          <attvalue for="letter_language" value="latin"></attvalue>
+          <attvalue for="letter_type_genus" value="familiar letter"></attvalue>
+          <attvalue for="letter_type_x_to_x" value="letter_1_to_1"></attvalue>
+          <attvalue for="further_annotation" value="NULL"></attvalue>
+        </attvalues>
+      </edge>
+      <edge id="gbudé_lg_25" source="milano_IT_gid_3173435" target="paris_FR_gid_2988507" label="Ep 25 Lascaris à Budé. Milan, 13 janvier [1510] [Budé lettres grecques]">
+        <attvalues>
+          <attvalue for="letter_no_in_edition" value="25 [Budé lettre grecques]"></attvalue>
+          <attvalue for="sender_id" value="lascaris_janus_viaf_32142389"></attvalue>
+          <attvalue for="sender_as_marked" value="Jean Lascaris [Budé lettres grecques]"></attvalue>
+          <attvalue for="sender_inferred" value="0"></attvalue>
+          <attvalue for="sender_uncertain" value="0"></attvalue>
+          <attvalue for="recipient_id" value="budé_guillaume_viaf_105878228"></attvalue>
+          <attvalue for="recipient_as_marked" value="Guillaume Budé [Budé lettres grecques]"></attvalue>
+          <attvalue for="recipient_inferred" value="0"></attvalue>
+          <attvalue for="recipient_uncertain" value="0"></attvalue>
+          <attvalue for="send_date_year1" value="1510"></attvalue>
+          <attvalue for="send_date_month1" value="01"></attvalue>
+          <attvalue for="send_date_day1" value="13"></attvalue>
+          <attvalue for="send_date_computable1" value="1510-01-13"></attvalue>
+          <attvalue for="send_date_has_range" value="0"></attvalue>
+          <attvalue for="send_date_year2" value="1510"></attvalue>
+          <attvalue for="send_date_month2" value="01"></attvalue>
+          <attvalue for="send_date_day2" value="13"></attvalue>
+          <attvalue for="send_date_computable2" value="1510-01-13"></attvalue>
+          <attvalue for="send_date_as_marked" value="13 janvier [1510]"></attvalue>
+          <attvalue for="send_date_inferred" value="1"></attvalue>
+          <attvalue for="send_date_approx" value="0"></attvalue>
+          <attvalue for="send_date_uncertain" value="0"></attvalue>
+          <attvalue for="source_loc_as_marked" value="Milan"></attvalue>
+          <attvalue for="source_loc_inferred" value="0"></attvalue>
+          <attvalue for="source_loc_uncertain" value="0"></attvalue>
+          <attvalue for="target_loc_as_marked" value="[Paris]"></attvalue>
+          <attvalue for="target_loc_inferred" value="1"></attvalue>
+          <attvalue for="target_loc_uncertain" value="0"></attvalue>
+          <attvalue for="letter_language" value="greek"></attvalue>
+          <attvalue for="letter_type_genus" value="familiar letter"></attvalue>
+          <attvalue for="letter_type_x_to_x" value="letter_1_to_1"></attvalue>
+          <attvalue for="further_annotation" value="NULL"></attvalue>
+        </attvalues>
+      </edge>
+      <edge id="gbudé_lg_44" source="padova_IT_gid_3171728" target="romorantin_lanthenay_FR_gid_2982967" label="Ep 44 Longueil à Budé. Padoue, 25 janvier [1521] [Budé lettres grecques]">
+        <attvalues>
+          <attvalue for="letter_no_in_edition" value="44 [Budé lettre grecques]"></attvalue>
+          <attvalue for="sender_id" value="longolius_christopherus_viaf_12405190"></attvalue>
+          <attvalue for="sender_as_marked" value="Christophe de Longueil [Budé lettres grecques]"></attvalue>
+          <attvalue for="sender_inferred" value="0"></attvalue>
+          <attvalue for="sender_uncertain" value="0"></attvalue>
+          <attvalue for="recipient_id" value="budé_guillaume_viaf_105878228"></attvalue>
+          <attvalue for="recipient_as_marked" value="Guillaume Budé [Budé lettres grecques]"></attvalue>
+          <attvalue for="recipient_inferred" value="0"></attvalue>
+          <attvalue for="recipient_uncertain" value="0"></attvalue>
+          <attvalue for="send_date_year1" value="1521"></attvalue>
+          <attvalue for="send_date_month1" value="01"></attvalue>
+          <attvalue for="send_date_day1" value="25"></attvalue>
+          <attvalue for="send_date_computable1" value="1521-01-25"></attvalue>
+          <attvalue for="send_date_has_range" value="0"></attvalue>
+          <attvalue for="send_date_year2" value="1521"></attvalue>
+          <attvalue for="send_date_month2" value="01"></attvalue>
+          <attvalue for="send_date_day2" value="25"></attvalue>
+          <attvalue for="send_date_computable2" value="1521-01-25"></attvalue>
+          <attvalue for="send_date_as_marked" value="25 janvier [1521]"></attvalue>
+          <attvalue for="send_date_inferred" value="1"></attvalue>
+          <attvalue for="send_date_approx" value="0"></attvalue>
+          <attvalue for="send_date_uncertain" value="0"></attvalue>
+          <attvalue for="source_loc_as_marked" value="Padoue"></attvalue>
+          <attvalue for="source_loc_inferred" value="0"></attvalue>
+          <attvalue for="source_loc_uncertain" value="0"></attvalue>
+          <attvalue for="target_loc_as_marked" value="[Romorantin Lanthenay]"></attvalue>
+          <attvalue for="target_loc_inferred" value="1"></attvalue>
+          <attvalue for="target_loc_uncertain" value="0"></attvalue>
+          <attvalue for="letter_language" value="greek"></attvalue>
+          <attvalue for="letter_type_genus" value="familiar letter"></attvalue>
+          <attvalue for="letter_type_x_to_x" value="letter_1_to_1"></attvalue>
+          <attvalue for="further_annotation" value="NULL"></attvalue>
+        </attvalues>
+      </edge>
+      <edge id="gbudé_lg_7" source="paris_FR_gid_2988507" target="blois_FR_gid_3032213" label="Ep 7 De Brie à Budé. Paris, 20 décembre 1520 [Budé lettres grecques]">
+        <attvalues>
+          <attvalue for="letter_no_in_edition" value="7 [Budé lettres grecques]"></attvalue>
+          <attvalue for="sender_id" value="brie_germain_de_viaf_227062191"></attvalue>
+          <attvalue for="sender_as_marked" value="Germain de Brie [Budé lettres grecques]"></attvalue>
+          <attvalue for="sender_inferred" value="0"></attvalue>
+          <attvalue for="sender_uncertain" value="0"></attvalue>
+          <attvalue for="recipient_id" value="budé_guillaume_viaf_105878228"></attvalue>
+          <attvalue for="recipient_as_marked" value="Guillaume Budé [Budé lettres grecques]"></attvalue>
+          <attvalue for="recipient_inferred" value="0"></attvalue>
+          <attvalue for="recipient_uncertain" value="0"></attvalue>
+          <attvalue for="send_date_year1" value="1520"></attvalue>
+          <attvalue for="send_date_month1" value="12"></attvalue>
+          <attvalue for="send_date_day1" value="20"></attvalue>
+          <attvalue for="send_date_computable1" value="1520-12-20"></attvalue>
+          <attvalue for="send_date_has_range" value="0"></attvalue>
+          <attvalue for="send_date_year2" value="1520"></attvalue>
+          <attvalue for="send_date_month2" value="12"></attvalue>
+          <attvalue for="send_date_day2" value="20"></attvalue>
+          <attvalue for="send_date_computable2" value="1520-12-20"></attvalue>
+          <attvalue for="send_date_as_marked" value="20 décembre 1520"></attvalue>
+          <attvalue for="send_date_inferred" value="0"></attvalue>
+          <attvalue for="send_date_approx" value="0"></attvalue>
+          <attvalue for="send_date_uncertain" value="0"></attvalue>
+          <attvalue for="source_loc_as_marked" value="Paris"></attvalue>
+          <attvalue for="source_loc_inferred" value="0"></attvalue>
+          <attvalue for="source_loc_uncertain" value="0"></attvalue>
+          <attvalue for="target_loc_as_marked" value="[Blois]"></attvalue>
+          <attvalue for="target_loc_inferred" value="1"></attvalue>
+          <attvalue for="target_loc_uncertain" value="0"></attvalue>
+          <attvalue for="letter_language" value="greek"></attvalue>
+          <attvalue for="letter_type_genus" value="familiar letter"></attvalue>
+          <attvalue for="letter_type_x_to_x" value="letter_1_to_1"></attvalue>
+          <attvalue for="further_annotation" value="NULL"></attvalue>
+        </attvalues>
+      </edge>
+      <edge id="gbudé_lg_9" source="paris_FR_gid_2988507" target="romorantin_lanthenay_FR_gid_2982967" label="Ep 9 De Brie à Budé. Paris, 31 janvier 1521 [Budé lettres grecques]">
+        <attvalues>
+          <attvalue for="letter_no_in_edition" value="9 [Budé lettres grecques]"></attvalue>
+          <attvalue for="sender_id" value="brie_germain_de_viaf_227062191"></attvalue>
+          <attvalue for="sender_as_marked" value="Germain de Brie [Budé lettres grecques]"></attvalue>
+          <attvalue for="sender_inferred" value="0"></attvalue>
+          <attvalue for="sender_uncertain" value="0"></attvalue>
+          <attvalue for="recipient_id" value="budé_guillaume_viaf_105878228"></attvalue>
+          <attvalue for="recipient_as_marked" value="Guillaume Budé [Budé lettres grecques]"></attvalue>
+          <attvalue for="recipient_inferred" value="0"></attvalue>
+          <attvalue for="recipient_uncertain" value="0"></attvalue>
+          <attvalue for="send_date_year1" value="1521"></attvalue>
+          <attvalue for="send_date_month1" value="01"></attvalue>
+          <attvalue for="send_date_day1" value="31"></attvalue>
+          <attvalue for="send_date_computable1" value="1521-01-31"></attvalue>
+          <attvalue for="send_date_has_range" value="0"></attvalue>
+          <attvalue for="send_date_year2" value="1521"></attvalue>
+          <attvalue for="send_date_month2" value="01"></attvalue>
+          <attvalue for="send_date_day2" value="31"></attvalue>
+          <attvalue for="send_date_computable2" value="1521-01-31"></attvalue>
+          <attvalue for="send_date_as_marked" value="31 janvier 1521"></attvalue>
+          <attvalue for="send_date_inferred" value="0"></attvalue>
+          <attvalue for="send_date_approx" value="0"></attvalue>
+          <attvalue for="send_date_uncertain" value="0"></attvalue>
+          <attvalue for="source_loc_as_marked" value="Paris"></attvalue>
+          <attvalue for="source_loc_inferred" value="0"></attvalue>
+          <attvalue for="source_loc_uncertain" value="0"></attvalue>
+          <attvalue for="target_loc_as_marked" value="[Romorantin Lanthenay]"></attvalue>
+          <attvalue for="target_loc_inferred" value="1"></attvalue>
+          <attvalue for="target_loc_uncertain" value="0"></attvalue>
+          <attvalue for="letter_language" value="greek"></attvalue>
+          <attvalue for="letter_type_genus" value="familiar letter"></attvalue>
+          <attvalue for="letter_type_x_to_x" value="letter_1_to_1"></attvalue>
+          <attvalue for="further_annotation" value="NULL"></attvalue>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>

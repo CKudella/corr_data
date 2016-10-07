@@ -1,0 +1,1 @@
+SELECT COUNT(DISTINCT sender_id) AS 'Total Number of Correspondents that have written to Erasmus' FROM letters WHERE recipient_id = 'erasmus_desiderius_viaf_95982394'

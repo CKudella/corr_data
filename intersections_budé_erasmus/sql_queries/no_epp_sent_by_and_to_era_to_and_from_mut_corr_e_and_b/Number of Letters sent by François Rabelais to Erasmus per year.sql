@@ -1,0 +1,1 @@
+SELECT send_date_year1, COUNT(*) AS 'Number of letters sent by François Rabelais to Erasmus per year' FROM era_cdb_v3.letters WHERE sender_id = 'rabelais_françois_viaf_24606939' GROUP BY send_date_year1 ORDER BY send_date_year1 ASC
