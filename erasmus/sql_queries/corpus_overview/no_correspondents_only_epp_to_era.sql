@@ -1,1 +1,1 @@
-SELECT COUNT(DISTINCT name_in_edition) AS 'Total Number of Correspondents who wrote to Erasmus but did not receive letters by Erasmus' FROM correspondents WHERE correspondents.correspondents_id NOT IN (SELECT DISTINCT recipient_id FROM letters)
+SELECT COUNT(DISTINCT name_in_edition) AS 'Total number of correspondents who wrote letters to Erasmus but did not receive any letters from him' FROM correspondents WHERE correspondents.correspondents_id NOT IN (SELECT DISTINCT recipient_id FROM letters)

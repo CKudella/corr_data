@@ -1,0 +1,1 @@
+SELECT COUNT(*) AS 'Total number of letters in DB that are not part of the ALLEN edition exluding splits' from letters WHERE letters.letter_no_in_edition NOT LIKE '%[ALLEN]%' and letters_id NOT LIKE '%ck2'
