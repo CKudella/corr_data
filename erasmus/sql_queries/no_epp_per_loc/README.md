@@ -19,3 +19,9 @@ This query calculates the number of letters written to Erasmus from the individu
 
 ## no_epp_per_loc_written_by_era_at_with_geocoordinates.sql
 This query calculates the number of letters written by Erasmus at the individual locations.
+
+## avg_no_epp_per_corr_loc_written_by_era_to.sql
+This query calculates the average number of letters written to each correspondents by Erasmus per location.
+
+## avg_no_epp_per_corr_loc_written_to_era.sql
+This query calculates the average number of letters written by each correspondents to Erasmus per location.
