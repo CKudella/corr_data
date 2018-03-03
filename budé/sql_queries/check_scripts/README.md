@@ -5,7 +5,7 @@ date: 2018-03-03
 ---
 ## Scripts that check the <span style="color:#f36949">letters</span> table
 
-### check_for_alien_letters_in_era_corpus.sql
+### check_for_alien_letters_in_budé_corpus.sql
 This script checks the letters table for letters that were neither written nor received by Erasmus.
 
 ### check_for_faulty_senddate_ranges.sql
