@@ -1,7 +1,7 @@
 ---
 title: Details on the scripts contained in /corpus_overview
 author: Christoph Kudella
-date: 2018-03-02
+date: 2018-03-03
 ---
 ## Queries that calculate the number of letters in the letters table according to various criteria
 
@@ -88,3 +88,9 @@ This query returns the total number correspondents (type: individual) that have 
 
 ### no_correspondents_writing_epp_to_era.sql
 This query returns the total number of correspondents who have both written letters to Erasmus and received letters from him.
+
+### no_locs_corr_write_epp_from.sql
+This query calculates the number of locations the individual correspondents wrote letters from.
+
+### no_locs_corr_receives_epp_at.sql
+This query calculates the number of locations the individual correspondents received letters at.
