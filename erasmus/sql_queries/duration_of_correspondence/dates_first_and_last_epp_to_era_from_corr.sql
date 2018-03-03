@@ -1,0 +1,1 @@
+SELECT DISTINCT sender_id, MIN(send_date_computable1) AS 'First Letter to Erasmus', MAX(send_date_computable1) AS 'Last Letter to Erasmus' FROM letters WHERE recipient_id = 'erasmus_desiderius_viaf_95982394' GROUP BY sender_id
