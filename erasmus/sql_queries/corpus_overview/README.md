@@ -86,7 +86,7 @@ This query returns the total number of correspondents who have written to Erasmu
 ### no_correspondents_writing_to_epp_to_era_only_individuals.sql
 This query returns the total number correspondents (type: individual) that have written to Erasmus
 
-### no_correspondents_writing_epp_to_era.sql
+### no_corrrespondents_reciproc_epp.sql
 This query returns the total number of correspondents who have both written letters to Erasmus and received letters from him.
 
 ### no_locs_corr_write_epp_from.sql
