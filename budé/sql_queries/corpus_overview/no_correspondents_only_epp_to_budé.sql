@@ -1,1 +1,1 @@
-SELECT COUNT(DISTINCT name_in_edition) AS 'Total Number of Correspondents who wrote to Budé but did not receive letters by Budé' FROM correspondents WHERE correspondents.correspondents_id NOT IN (SELECT DISTINCT recipient_id FROM letters)
+SELECT COUNT(DISTINCT name_in_edition) AS 'Total number of correspondents who wrote to Budé but did not receive any letters by him' FROM correspondents WHERE correspondents.correspondents_id NOT IN (SELECT DISTINCT recipient_id FROM letters)
