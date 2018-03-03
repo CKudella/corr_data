@@ -1,0 +1,1 @@
+SELECT locations_id FROM locations WHERE locations_id NOT IN (SELECT DISTINCT source_loc_id FROM letters) AND locations_id NOT IN (SELECT DISTINCT target_loc_id FROM letters) AND locations_id NOT IN (SELECT DISTINCT pob_loc_id FROM correspondents) AND locations_id NOT IN (SELECT DISTINCT pod_loc_id FROM correspondents) GROUP BY locations_id

@@ -1,0 +1,1 @@
+SELECT * FROM letters WHERE sender_id <> 'erasmus_desiderius_viaf_95982394' AND recipient_id <> 'erasmus_desiderius_viaf_95982394'
