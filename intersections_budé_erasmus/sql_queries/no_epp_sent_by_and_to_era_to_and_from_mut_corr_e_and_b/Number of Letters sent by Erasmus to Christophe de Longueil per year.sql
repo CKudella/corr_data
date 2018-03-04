@@ -1,1 +1,0 @@
-SELECT send_date_year1, COUNT(*) AS 'Number of letters sent by Erasmus to Christophe de Longueil per year' FROM era_cdb_v3.letters WHERE recipient_id = 'longolius_christopherus_viaf_12405190' GROUP BY send_date_year1 ORDER BY send_date_year1 ASC

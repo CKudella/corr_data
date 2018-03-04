@@ -1,1 +1,0 @@
-SELECT send_date_year1, COUNT(*) AS 'Number of letters sent by Erasmus to Thomas Linacre per year' FROM era_cdb_v3.letters WHERE recipient_id = 'linacre_thomas_viaf_59233331' GROUP BY send_date_year1 ORDER BY send_date_year1 ASC

@@ -1,1 +1,0 @@
-SELECT send_date_year1, COUNT(*) AS 'Number of letters sent by Georges d'Armagnac' to Erasmus per year' FROM era_cdb_v3.letters WHERE sender_id = 'armagnac_georges_de_viaf_59219003' GROUP BY send_date_year1 ORDER BY send_date_year1 ASC

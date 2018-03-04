@@ -1,1 +1,0 @@
-SELECT send_date_year1, COUNT(*) AS 'Number of letters sent by Janus Lascaris to Budé per year' FROM budé_cdb_v1.letters WHERE sender_id = 'lascaris_janus_viaf_32142389' GROUP BY send_date_year1 ORDER BY send_date_year1 ASC

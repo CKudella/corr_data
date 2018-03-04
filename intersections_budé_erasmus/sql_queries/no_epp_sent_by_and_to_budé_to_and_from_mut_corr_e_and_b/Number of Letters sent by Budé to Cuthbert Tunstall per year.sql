@@ -1,1 +1,0 @@
-SELECT send_date_year1, COUNT(*) AS 'Number of letters sent by Budé to Cuthbert Tunstall per year' FROM budé_cdb_v1.letters WHERE recipient_id = 'tunstall_cuthbert_viaf_22160214' GROUP BY send_date_year1 ORDER BY send_date_year1 ASC

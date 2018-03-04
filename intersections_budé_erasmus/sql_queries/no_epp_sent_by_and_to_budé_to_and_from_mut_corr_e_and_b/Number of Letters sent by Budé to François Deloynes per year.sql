@@ -1,1 +1,0 @@
-SELECT send_date_year1, COUNT(*) AS 'Number of letters sent by Budé to Francois Deloynes per year' FROM budé_cdb_v1.letters WHERE recipient_id = 'deloynes_françois_viaf_212150646' GROUP BY send_date_year1 ORDER BY send_date_year1 ASC

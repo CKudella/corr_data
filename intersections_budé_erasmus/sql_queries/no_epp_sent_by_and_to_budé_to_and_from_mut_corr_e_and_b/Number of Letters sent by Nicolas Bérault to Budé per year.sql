@@ -1,1 +1,0 @@
-SELECT send_date_year1, COUNT(*) AS 'Number of letters sent by Nicolas Bérault to Budé per year' FROM budé_cdb_v1.letters WHERE sender_id = 'béraud_nicolas_viaf_9955323' GROUP BY send_date_year1 ORDER BY send_date_year1 ASC

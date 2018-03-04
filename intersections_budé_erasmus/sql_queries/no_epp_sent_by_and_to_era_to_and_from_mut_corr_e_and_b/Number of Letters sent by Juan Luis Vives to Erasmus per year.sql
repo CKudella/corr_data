@@ -1,1 +1,0 @@
-SELECT send_date_year1, COUNT(*) AS 'Number of letters sent by Juan Luis Vives to Erasmus per year' FROM era_cdb_v3.letters WHERE sender_id = 'vives_juan_luis_viaf_71399403' GROUP BY send_date_year1 ORDER BY send_date_year1 ASC

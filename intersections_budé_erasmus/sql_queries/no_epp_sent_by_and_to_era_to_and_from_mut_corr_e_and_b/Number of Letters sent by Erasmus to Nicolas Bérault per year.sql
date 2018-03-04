@@ -1,1 +1,0 @@
-SELECT send_date_year1, COUNT(*) AS 'Number of letters sent by Erasmus to Nicolas Bérault per year' FROM era_cdb_v3.letters WHERE recipient_id = 'béraud_nicolas_viaf_9955323' GROUP BY send_date_year1 ORDER BY send_date_year1 ASC

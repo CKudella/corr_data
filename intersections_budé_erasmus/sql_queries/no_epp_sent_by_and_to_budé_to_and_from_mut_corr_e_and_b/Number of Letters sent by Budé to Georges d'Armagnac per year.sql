@@ -1,1 +1,0 @@
-SELECT send_date_year1, COUNT(*) AS 'Number of letters sent by Budé to Georges d'Armagnac per year' FROM budé_cdb_v1.letters WHERE recipient_id = 'armagnac_georges_de_viaf_59219003' GROUP BY send_date_year1 ORDER BY send_date_year1 ASC
