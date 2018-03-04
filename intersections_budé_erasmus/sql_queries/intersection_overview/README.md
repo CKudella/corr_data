@@ -4,6 +4,8 @@ author: Christoph Kudella
 date: 2018-03-04
 ---
 
+** This Readme is still missing information on newly added scripts**
+
 | File     | Description     |
 | :------------- | :------------- |
 | no_mut_corr_era_budé.sql       | This script calculates the number of mutual correspondents of Erasmus and Budé.   |

@@ -1,1 +1,12 @@
-Select E.correspondents_id AS 'Id', E.name_in_edition AS 'Name in the sources for the Erasmus dataset', B.name_in_edition AS 'Name in sources for the Budé dataset' from budé_cdb_v1.correspondents AS B, era_cdb_v3.correspondents AS E WHERE B.correspondents_id = E.correspondents_id AND B.correspondents_id NOT IN ('unnamed_person_viaf_not_applicable', 'erasmus_desiderius_viaf_95982394', 'budé_guillaume_viaf_105878228') AND E.correspondents_id NOT IN ('unnamed_person_viaf_not_applicable', 'erasmus_desiderius_viaf_95982394', 'budé_guillaume_viaf_105878228')
+SELECT E.correspondents_id AS 'Id',
+       E.name_in_edition AS 'Name in the sources for the Erasmus dataset',
+       B.name_in_edition AS 'Name in sources for the Budé dataset'
+FROM budé_cdb_v1.correspondents AS B,
+     era_cdb_v3.correspondents AS E
+WHERE B.correspondents_id = E.correspondents_id
+  AND B.correspondents_id NOT IN ('unnamed_person_viaf_not_applicable',
+                                  'erasmus_desiderius_viaf_95982394',
+                                  'budé_guillaume_viaf_105878228')
+  AND E.correspondents_id NOT IN ('unnamed_person_viaf_not_applicable',
+                                  'erasmus_desiderius_viaf_95982394',
+                                  'budé_guillaume_viaf_105878228')
