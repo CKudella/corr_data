@@ -6,7 +6,7 @@ date: 2018-03-03
 The subfolders in this folder contain SQL-scripts to create nodes- and edges-files intended to be used in Gephi with the GeoLayout Plugin.
 
 ## nodes_edges_for_epp_sent_by_budé
-This folder contains the aforementiones scripts to create a GeoLayout in Gephi for the letters sent by Budé.
+This folder contains the aforementioned scripts to create a GeoLayout in Gephi for the letters sent by Budé.
 
 ## nodes_egdes_for_epp_sent_to_budé
-This folder contains the aforementiones scripts to create a GeoLayout in Gephi for the letters sent to Budé.
+This folder contains the aforementioned scripts to create a GeoLayout in Gephi for the letters sent to Budé.
