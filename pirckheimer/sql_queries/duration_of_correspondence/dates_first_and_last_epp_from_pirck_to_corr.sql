@@ -1,1 +1,6 @@
-SELECT DISTINCT recipient_id, MIN(send_date_computable1) AS 'First Letter From Pirckheimer', MAX(send_date_computable1) AS 'Last Letter From Pirckheimer' FROM letters WHERE sender_id = 'pirckheimer_willibald_viaf_27173507' GROUP BY recipient_id
+SELECT DISTINCT recipient_id,
+                MIN(send_date_computable1) AS 'First Letter From Pirckheimer',
+                MAX(send_date_computable1) AS 'Last Letter From Pirckheimer'
+FROM letters
+WHERE sender_id = 'pirckheimer_willibald_viaf_27173507'
+GROUP BY recipient_id
