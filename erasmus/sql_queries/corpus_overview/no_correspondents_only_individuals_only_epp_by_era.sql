@@ -1,1 +1,7 @@
-SELECT COUNT(DISTINCT name_in_edition) AS 'Total number of correspondents (type: individuals) who received letters from Erasmus but did not write to him' FROM era_cdb_v3.correspondents WHERE correspondents.correspondents_id NOT IN (SELECT DISTINCT sender_id FROM letters WHERE sender_id != 'erasmus_desiderius_viaf_95982394') AND correspondents.type = 'individual'
+SELECT COUNT(DISTINCT name_in_edition) AS 'Total number of correspondents (type: individuals) who received letters from Erasmus but did not write to him'
+FROM era_cdb_v3.correspondents
+WHERE correspondents.correspondents_id NOT IN
+    (SELECT DISTINCT sender_id
+     FROM letters
+     WHERE sender_id != 'erasmus_desiderius_viaf_95982394')
+  AND correspondents.type = 'individual'
