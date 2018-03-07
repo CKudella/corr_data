@@ -1,1 +1,9 @@
-SELECT locations_name_modern AS 'Location Name Modern', locations_lat AS Latitude, locations_lng AS Longitude, COUNT(DISTINCT sender_id) AS 'Number of Correspondents who wrote from this location TO Pirckheimer' FROM letters JOIN locations ON locations.locations_id = letters.source_loc_id WHERE sender_id != 'pirckheimer_willibald_viaf_27173507' GROUP BY source_loc_id ORDER BY COUNT(DISTINCT sender_id) DESC
+SELECT locations_name_modern AS 'Location Name Modern',
+       locations_lat AS Latitude,
+       locations_lng AS Longitude,
+       COUNT(DISTINCT sender_id) AS 'Number of correspondents who wrote from this location letters to Pirckheimer'
+FROM letters
+JOIN locations ON locations.locations_id = letters.source_loc_id
+WHERE sender_id != 'pirckheimer_willibald_viaf_27173507'
+GROUP BY source_loc_id
+ORDER BY COUNT(DISTINCT sender_id) DESC
