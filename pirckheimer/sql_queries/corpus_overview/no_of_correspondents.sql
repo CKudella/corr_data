@@ -1,1 +1,4 @@
-SELECT COUNT(*) AS 'Total number of correspondents of Pirckheimer' FROM correspondents WHERE correspondents_id NOT IN ('pirckheimer_willibald_viaf_27173507','unnamed_person_viaf_unknown')
+SELECT COUNT(*) AS 'Total number of correspondents of Pirckheimer'
+FROM correspondents
+WHERE correspondents_id NOT IN ('pirckheimer_willibald_viaf_27173507',
+                                'unnamed_person_viaf_unknown')

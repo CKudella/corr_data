@@ -1,1 +1,5 @@
-SELECT COUNT(*) AS 'Number of correspondents who wrote letters to Pirckheimer but did not receive any from him' FROM correspondents WHERE correspondents.correspondents_id NOT IN (SELECT DISTINCT recipient_id FROM letters)
+SELECT COUNT(*) AS 'Number of correspondents who wrote letters to Pirckheimer but did not receive any from him'
+FROM correspondents
+WHERE correspondents.correspondents_id NOT IN
+    (SELECT DISTINCT recipient_id
+     FROM letters)

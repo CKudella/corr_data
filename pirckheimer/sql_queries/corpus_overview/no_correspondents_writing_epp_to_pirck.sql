@@ -1,1 +1,3 @@
-SELECT COUNT(DISTINCT sender_id) AS 'Total number of correspondents who have written letters to Pirckheimer' FROM letters WHERE recipient_id = 'pirckheimer_willibald_viaf_27173507'
+SELECT COUNT(DISTINCT sender_id) AS 'Total number of correspondents who have written letters to Pirckheimer'
+FROM letters
+WHERE recipient_id = 'pirckheimer_willibald_viaf_27173507'
