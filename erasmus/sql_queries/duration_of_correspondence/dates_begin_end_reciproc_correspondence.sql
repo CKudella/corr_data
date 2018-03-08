@@ -1,6 +1,6 @@
-SELECT x.recipient_id AS Correspondent,
-       LEAST(x.FLFE,x.LLFE,y.FLTE,y.LLTE) AS 'Start of correspondence',
-       GREATEST(x.FLFE,x.LLFE,y.FLTE,y.LLTE) AS 'End of correspondence'
+SELECT X.recipient_id AS Correspondent,
+       LEAST(X.FLFE,X.LLFE,Y.FLTE,Y.LLTE) AS 'Start of correspondence',
+       GREATEST(X.FLFE,X.LLFE,Y.FLTE,Y.LLTE) AS 'End of correspondence'
 FROM
   (SELECT DISTINCT recipient_id,
                    MIN(send_date_computable1) AS FLFE,

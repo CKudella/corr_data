@@ -1,8 +1,8 @@
-SELECT y.locations_name_modern AS 'Location Name',
-       x.locations_lat AS 'Latitude',
-       x.locations_lng AS 'Longitude',
-       x.count AS 'Number of correspondents Erasmus writes to',
-       y.count AS 'Number of letters written by Erasmus',
+SELECT Y.locations_name_modern AS 'Location Name',
+       X.locations_lat AS 'Latitude',
+       X.locations_lng AS 'Longitude',
+       X.count AS 'Number of correspondents Erasmus writes to',
+       Y.count AS 'Number of letters written by Erasmus',
        Y.COUNT/X.COUNT AS 'Average Number of Letters'
 FROM
   (SELECT locations_name_modern,
