@@ -3,7 +3,13 @@ SELECT X.ModernState AS 'Modern State',
        B.NoCorrWritingToEra AS 'Number of correspondents who wrote letters to Erasmus'
 FROM
   (SELECT DISTINCT locations.locations_modern_state AS ModernState
-   FROM locations WHERE locations.locations_id IN (SELECT DISTINCT source_loc_id from letters) OR locations.locations_id IN (SELECT DISTINCT target_loc_id from letters)) AS X
+   FROM locations
+   WHERE locations.locations_id IN
+       (SELECT DISTINCT source_loc_id
+        FROM letters)
+     OR locations.locations_id IN
+       (SELECT DISTINCT target_loc_id
+        FROM letters)) AS X
 LEFT OUTER JOIN
   (SELECT DISTINCT locations.locations_modern_state AS ModernState,
                    COUNT(DISTINCT recipient_id) AS NoCorrReceivingFromEra
