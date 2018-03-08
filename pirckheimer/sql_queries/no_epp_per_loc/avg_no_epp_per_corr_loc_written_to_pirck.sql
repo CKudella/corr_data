@@ -1,8 +1,8 @@
-SELECT y.locations_name_modern AS 'Location Name',
-       x.locations_lat AS 'Latitude',
-       x.locations_lng AS 'Longitude',
-       x.count AS 'Number of correspondents Pirckheimer writes to',
-       y.count AS 'Number of letters written by Pirckheimer',
+SELECT Y.locations_name_modern AS 'Location Name',
+       X.locations_lat AS 'Latitude',
+       X.locations_lng AS 'Longitude',
+       X.count AS 'Number of correspondents Pirckheimer writes to',
+       Y.count AS 'Number of letters written by Pirckheimer',
        Y.COUNT/X.COUNT AS 'Average Number of Letters'
 FROM
   (SELECT locations_name_modern,
@@ -10,7 +10,7 @@ FROM
           locations_lng,
           COUNT(DISTINCT recipient_id) AS COUNT
    FROM letters
-   JOIN wpirck_cdb_v1.locations ON locations.locations_id = letters.target_loc_id
+   JOIN locations ON locations.locations_id = letters.target_loc_id
    WHERE sender_id = 'pirckheimer_willibald_viaf_27173507'
    GROUP BY target_loc_id
    ORDER BY COUNT DESC) AS X
