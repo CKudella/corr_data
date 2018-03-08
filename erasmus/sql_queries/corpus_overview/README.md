@@ -12,6 +12,7 @@ date: 2018-03-03
 | no_epp_in_db_sent_to_era_excl_splits.sql | This query calculates the total number of letters sent to Erasmus in the letters table, but excludes splits that have been manually conducted. |
 | no_epp_in_db_from_allen_excl_splits.sql | This query calculates the total number of letters from the ALLEN edition contained in the letters table , but excludes splits that have been manually conducted. |
 | no_epp_in_db_not_from_allen_excl_splits.sql | This query calculates the total number of letters contained in the letters table that are not part of the ALLEN edition , but excludes splits that have been manually conducted. |
+| comp_no_epp_from_to_era_and_percentage.sql | This query calculates both the total number of letters sent by Erasmus and written to Erasmus in the letters table as well as the respective percentage of these letters of the total number of letters in the dataset. |
 
 ### Queries that calculate the number of locations from/to which letters have been sent according to various criteria
 
