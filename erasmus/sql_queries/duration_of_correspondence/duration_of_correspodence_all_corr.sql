@@ -1,7 +1,7 @@
 SELECT C.correspondents_id,
        C.name_in_edition,
-       LEAST(IFNULL(x.FLFE, y.FLTE), IFNULL(y.FLTE, x.FLFE)) AS 'Beginning of correspondence with Erasmus',
-       GREATEST(IFNULL(x.LLFE, y.LLTE), IFNULL(y.LLTE, x.LLFE)) AS 'End of the correspondence with Erasmus'
+       LEAST(IFNULL(X.FLFE, Y.FLTE), IFNULL(Y.FLTE, X.FLFE)) AS 'Beginning of correspondence with Erasmus',
+       GREATEST(IFNULL(X.LLFE, Y.LLTE), IFNULL(Y.LLTE, X.LLFE)) AS 'End of the correspondence with Erasmus'
 FROM
   (SELECT DISTINCT CA.correspondents_id,
                    CA.name_in_edition
