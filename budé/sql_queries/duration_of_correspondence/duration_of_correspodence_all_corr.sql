@@ -20,3 +20,4 @@ LEFT OUTER JOIN
    FROM budé_cdb_v1.letters AS YA
    WHERE YA.recipient_id = 'budé_guillaume_viaf_105878228'
    GROUP BY YA.sender_id) AS Y ON C.correspondents_id = Y.sender_id
+WHERE correspondents_id != 'budé_guillaume_viaf_105878228'

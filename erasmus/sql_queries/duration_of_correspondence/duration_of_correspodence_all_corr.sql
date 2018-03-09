@@ -20,3 +20,4 @@ LEFT OUTER JOIN
    FROM era_cdb_v3.letters AS YA
    WHERE YA.recipient_id = 'erasmus_desiderius_viaf_95982394'
    GROUP BY YA.sender_id) AS Y ON C.correspondents_id = Y.sender_id
+WHERE correspondents_id != 'erasmus_desiderius_viaf_95982394'

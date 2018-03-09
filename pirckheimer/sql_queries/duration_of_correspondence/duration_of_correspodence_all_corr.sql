@@ -20,3 +20,4 @@ LEFT OUTER JOIN
    FROM wpirck_cdb_v1.letters AS YA
    WHERE YA.recipient_id = 'pirckheimer_willibald_viaf_27173507'
    GROUP BY YA.sender_id) AS Y ON C.correspondents_id = Y.sender_id
+WHERE correspondents_id != 'pirckheimer_willibald_viaf_27173507'
