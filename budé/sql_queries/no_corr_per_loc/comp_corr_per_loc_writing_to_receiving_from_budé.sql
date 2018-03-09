@@ -32,3 +32,5 @@ LEFT OUTER JOIN
    WHERE YA.sender_id = 'budé_guillaume_viaf_105878228'
    GROUP BY YA.target_loc_id
    ORDER BY COUNT(DISTINCT recipient_id) DESC) AS Y ON Y.locations_id = Z.locations_id
+WHERE NoCorrToBudé IS NOT NULL
+  OR NoCorrFromBudé IS NOT NULL

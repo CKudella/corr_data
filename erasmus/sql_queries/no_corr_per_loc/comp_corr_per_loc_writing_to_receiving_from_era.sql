@@ -32,3 +32,5 @@ LEFT OUTER JOIN
    WHERE YA.sender_id = 'erasmus_desiderius_viaf_95982394'
    GROUP BY YA.target_loc_id
    ORDER BY COUNT(DISTINCT recipient_id) DESC) AS Y ON Y.locations_id = Z.locations_id
+WHERE NoCorrToEra IS NOT NULL
+  OR NoCorrFromEra IS NOT NULL

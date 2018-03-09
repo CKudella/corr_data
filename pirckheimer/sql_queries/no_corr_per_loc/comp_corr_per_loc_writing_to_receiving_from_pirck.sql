@@ -32,3 +32,5 @@ LEFT OUTER JOIN
    WHERE YA.sender_id = 'pirckheimer_willibald_viaf_27173507'
    GROUP BY YA.target_loc_id
    ORDER BY COUNT(DISTINCT recipient_id) DESC) AS Y ON Y.locations_id = Z.locations_id
+WHERE NoCorrToPirck IS NOT NULL
+  OR NoCorrFromPirck IS NOT NULL
