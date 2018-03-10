@@ -1,6 +1,0 @@
-SELECT DISTINCT sender_id,
-                MIN(send_date_computable1) AS 'First Letter to Budé',
-                MAX(send_date_computable1) AS 'Last Letter to Budé'
-FROM letters
-WHERE recipient_id = 'budé_guillaume_viaf_105878228'
-GROUP BY sender_id
