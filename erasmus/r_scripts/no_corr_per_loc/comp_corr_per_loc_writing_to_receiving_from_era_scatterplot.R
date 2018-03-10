@@ -20,6 +20,7 @@ data$sumcorr <- data$NoCorrToEra + data$NoCorrFromEra
 # apply melt for wide to long
 data_long <- melt(data, id.vars= c("locations_id","Location.Name.Modern","Latitude","Longitude","sumcorr"))
 
+# create scatterplot
 plot <- ggplot(data_long, aes(x = reorder(Location.Name.Modern, -sumcorr), y = value, colour = variable)) +
   geom_point() +
   labs(x="Location",y="Number of correspondents") +
