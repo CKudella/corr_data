@@ -14,22 +14,12 @@ data<-read.csv("no_corr_per_modern_state/comp_no_corr_per_ms_writing_to_receivin
 data$Number.of.correspondents.who.received.letters.from.Erasmus <- as.numeric(as.character(data$Number.of.correspondents.who.received.letters.from.Erasmus))
 data$Number.of.correspondents.who.wrote.letters.to.Erasmus <- as.numeric(as.character(data$Number.of.correspondents.who.wrote.letters.to.Erasmus))
 
-# calculate sum of correspondents
-data$sumcorr<-data$Number.of.correspondents.who.received.letters.from.Erasmus + data$Number.of.correspondents.who.wrote.letters.to.Erasmus
-
-# sort by sum of correspondents
-data[order(-data$sumcorr),]
-
-# remove sumcorr colum
-data<-subset(data, select = -sumcorr)
-
 # apply melt for wide to long
 data_long <- melt(data, id.vars= c("Modern.State"))
 
 # create linechart
 plot <- ggplot(data_long,aes(x= reorder(Modern.State,-value),y=value, fill=variable)) + 
-  geom_bar(position = "fill", stat = "identity") + 
-  scale_y_continuous(labels = percent_format()) + 
+  geom_bar(position = "dodge", stat = "identity") + 
   labs(x="Modern State",y="Number of correspondents") + 
   theme_bw() + 
   theme(axis.text.x = element_text(angle = 90, vjust = 0.35)) + 
