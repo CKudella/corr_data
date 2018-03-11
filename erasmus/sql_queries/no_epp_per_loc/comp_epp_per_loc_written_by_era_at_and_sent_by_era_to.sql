@@ -7,7 +7,7 @@ FROM
   (SELECT XB.locations_name_modern AS LocationName,
           XB.locations_lat AS 'Latitude',
           XB.locations_lng AS 'Longitude',
-          COUNT(XA.source_loc_id) AS NoLettersWrittenTOErasmus
+          COUNT(XA.source_loc_id) AS NoLettersWrittenByErasmusTO
    FROM letters AS XA
    JOIN locations AS XB ON XB.locations_id = XA.source_loc_id
    WHERE XA.letters_id NOT LIKE '%ck2'
@@ -18,7 +18,7 @@ INNER JOIN
   (SELECT YB.locations_name_modern AS LocationName,
           YB.locations_lat AS 'Latitude',
           YB.locations_lng AS 'Longitude',
-          COUNT(YA.source_loc_id) AS NoLettersWrittenBYErasmusAt
+          COUNT(YA.source_loc_id) AS NoLettersWrittenBYErasmusAT
    FROM letters AS YA
    JOIN locations AS YB ON YB.locations_id = YA.source_loc_id
    WHERE YA.letters_id NOT LIKE '%ck2'
