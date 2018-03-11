@@ -1,7 +1,7 @@
 SELECT locations.locations_name_modern AS 'Location Name',
        locations.locations_lat AS 'Latitude',
        locations.locations_lng AS 'Longitude',
-       COUNT(letters.source_loc_id) AS 'Number of Letters sent from this location BY Erasmus'
+       COUNT(letters.source_loc_id) AS 'Number of letters sent from this location from Erasmus'
 FROM letters
 JOIN locations ON locations.locations_id = letters.source_loc_id
 WHERE letters_id NOT LIKE '%ck2'
