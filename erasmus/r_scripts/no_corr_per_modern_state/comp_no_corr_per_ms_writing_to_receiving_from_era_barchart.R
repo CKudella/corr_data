@@ -1,13 +1,11 @@
 require(readr)
 require(reshape2)
 require(ggplot2)
-require(scales)
 library(readr)
 library(reshape2)
 library(ggplot2)
-library(scales)
 
-# # read data
+# read data
 data<-read.csv("no_corr_per_modern_state/comp_no_corr_per_ms_writing_to_receiving_from_era.csv", fileEncoding="UTF-8", na.strings=c("NULL"), colClasses=c("Number.of.correspondents.who.received.letters.from.Erasmus"="character","Number.of.correspondents.who.wrote.letters.to.Erasmus"="character"))
 
 # set number columns to numeric
