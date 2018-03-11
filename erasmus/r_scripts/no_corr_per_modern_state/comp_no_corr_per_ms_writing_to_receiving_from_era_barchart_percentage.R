@@ -1,25 +1,37 @@
+require(readr)
+require(reshape2)
+require(ggplot2)
+require(scales)
+library(readr)
 library(reshape2)
 library(ggplot2)
-library(readr)
 library(scales)
 
-# Daten aus CSV laden und als Dataframe 'daten' zur Verfügung stellen
-daten<-read.csv("data/comp_no_corr_per_modern_state.csv")
+# # read data
+data<-read.csv("no_corr_per_modern_state/comp_no_corr_per_ms_writing_to_receiving_from_era.csv", fileEncoding="UTF-8", na.strings=c("NULL"), colClasses=c("Number.of.correspondents.who.received.letters.from.Erasmus"="character","Number.of.correspondents.who.wrote.letters.to.Erasmus"="character"))
 
-# Summe bilden
-daten$Summe<-daten$Number.of.Correspondents.who.received.letters.BY.Erasmus + daten$Number.of.Correspondents.who.wrote.letters.TO.Erasmus
+# set number columns to numeric
+data$Number.of.correspondents.who.received.letters.from.Erasmus <- as.numeric(as.character(data$Number.of.correspondents.who.received.letters.from.Erasmus))
+data$Number.of.correspondents.who.wrote.letters.to.Erasmus <- as.numeric(as.character(data$Number.of.correspondents.who.wrote.letters.to.Erasmus))
 
-# Nach Summe sortieren
-daten[order(-daten$Summe),]
+# calculate sum of correspondents
+data$sumcorr<-data$Number.of.correspondents.who.received.letters.from.Erasmus + data$Number.of.correspondents.who.wrote.letters.to.Erasmus
 
-#Summen Spalte entfernen
-daten<-subset(daten, select = -Summe)
+# sort by sum of correspondents
+data[order(-data$sumcorr),]
 
-# Melt für Umwandlung von Wide zu Long
-daten2 <- melt(daten, id.vars= c("Modern.State"))
+# remove sumcorr colum
+data<-subset(data, select = -sumcorr)
 
-# Linechart
-plot <- ggplot(daten2,aes(x= reorder(Modern.State,-value),y=value, fill=variable)) + geom_bar(position = "fill", stat = "identity") + scale_y_continuous(labels = percent_format()) + labs(x="Modern State",y="Number of correspondents")
+# apply melt for wide to long
+data_long <- melt(data, id.vars= c("Modern.State"))
 
-# X-Achsen Labels um 90 Grad rotieren, Legende unter die Chart, Greyscale Fills festlegen, Labels für die Legende setzen
-plot + theme_bw() + theme_classic() + theme(axis.text.x = element_text(angle = 90, vjust = 0.35)) + theme(legend.position="bottom") + scale_fill_grey(labels = c("Correspondents Erasmus writes to", "Correspondents writing to Erasmus")) 
+# create linechart
+plot <- ggplot(data_long,aes(x= reorder(Modern.State,-value),y=value, fill=variable)) + 
+  geom_bar(position = "fill", stat = "identity") + 
+  scale_y_continuous(labels = percent_format()) + 
+  labs(x="Modern State",y="Number of correspondents") + 
+  theme_bw() + 
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.35)) + 
+  theme(legend.position="bottom")
+plot
