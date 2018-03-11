@@ -1,8 +1,8 @@
 SELECT X.LocationName,
        X.Latitude,
        X.Longitude,
-       X.NoLettersWrittenTOErasmus,
-       Y.NoLettersWrittenBYErasmusAT
+       X.NoLettersWrittenByErasmusTO,
+       Y.NoLettersWrittenByErasmusAT
 FROM
   (SELECT XB.locations_name_modern AS LocationName,
           XB.locations_lat AS 'Latitude',
@@ -18,7 +18,7 @@ INNER JOIN
   (SELECT YB.locations_name_modern AS LocationName,
           YB.locations_lat AS 'Latitude',
           YB.locations_lng AS 'Longitude',
-          COUNT(YA.source_loc_id) AS NoLettersWrittenBYErasmusAT
+          COUNT(YA.source_loc_id) AS NoLettersWrittenByErasmusAT
    FROM letters AS YA
    JOIN locations AS YB ON YB.locations_id = YA.source_loc_id
    WHERE YA.letters_id NOT LIKE '%ck2'
