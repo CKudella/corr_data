@@ -2,6 +2,10 @@ library(reshape2)
 library(ggplot2)
 library(readr)
 
+# set working directory
+getwd()
+setwd("../query_results/")
+
 # Daten aus CSV laden und als Dataframe 'daten' zur Verfügung stellen
 daten<-read.csv("data/comp_date_inferred_noninferred_per_year.csv")
 head(daten)

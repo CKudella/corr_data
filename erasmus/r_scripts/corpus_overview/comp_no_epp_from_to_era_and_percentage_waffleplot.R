@@ -1,7 +1,11 @@
+require(ggplot2)
+require(waffle)
 library(ggplot2)
 library(waffle)
 
-# this is meant as a replacement for figure 16 in the defended thesis version
+# set working directory
+getwd()
+setwd("../query_results/")
 
 parts <- c('Ammount of letters sent to Erasmus'=1140, 'Ammount of letters sent by Erasmus'=1958)
 

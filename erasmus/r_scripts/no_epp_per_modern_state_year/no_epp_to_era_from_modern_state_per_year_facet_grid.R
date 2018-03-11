@@ -5,6 +5,10 @@ library(readr)
 library(reshape2)
 library(ggplot2)
 
+# set working directory
+getwd()
+setwd("../query_results/")
+
 # read data
 data<-read.csv("no_epp_per_modern_state_year/no_epp_to_era_from_modern_state_per_year.csv", fileEncoding="UTF-8", na.strings=c("NULL"))
 

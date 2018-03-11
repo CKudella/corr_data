@@ -7,6 +7,10 @@ library(dplyr)
 library(reshape2)
 library(ggplot2)
 
+# set working directory
+getwd()
+setwd("../query_results/")
+
 # read data
 data<-read.csv("no_corr_per_loc/comp_corr_per_loc_writing_to_receiving_from_era.csv", fileEncoding="UTF-8", na.strings=c("NULL"), colClasses=c("NoCorrToEra"="character","NoCorrFromEra"="character"))
 

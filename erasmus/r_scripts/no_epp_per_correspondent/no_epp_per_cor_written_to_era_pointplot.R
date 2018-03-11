@@ -3,6 +3,10 @@ require(ggplot2)
 library(readr)
 library(ggplot2)
 
+# set working directory
+getwd()
+setwd("../query_results/")
+
 # read data
 data<-read.csv("no_epp_per_correspondent/no_epp_per_cor_written_to_era.csv", fileEncoding="UTF-8", na.strings=c("NULL"))
 

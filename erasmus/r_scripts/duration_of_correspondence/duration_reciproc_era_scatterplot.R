@@ -1,5 +1,8 @@
+require(readr)
+require(timelineS)
 library(readr)
 library(timelineS)
+
 # set working directory
 getwd()
 setwd("../query_results/")
