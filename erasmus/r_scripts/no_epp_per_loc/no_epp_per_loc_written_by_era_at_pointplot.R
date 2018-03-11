@@ -1,10 +1,16 @@
-library(ggplot2)
+require(readr)
+require(ggplot2)
 library(readr)
-# Daten aus CSV laden und als Dataframe 'daten' zur Verfügung stellen
-daten<-read.csv("data/no_epp_sent_from_locations_by_era.csv")
+library(ggplot2)
 
-# Pointplot aus dem Datenframe erstellen und x-Achse nach den Werten aus y.Achse sortieren, Barlabels hinzufügen, Achsenlabels umbenenenen
-plot <- ggplot(data=daten, aes(x= reorder(Location.Name, -Number.of.Letters.sent.from.this.location.BY.Erasmus), y=Number.of.Letters.sent.from.this.location.BY.Erasmus, label=Location.Name)) + geom_point(stat = "identity") + labs(x="Modern Location",y="Number of letters sent") + geom_text(check_overlap = TRUE, aes(label=ifelse(Number.of.Letters.sent.from.this.location.BY.Erasmus>70,as.character(Location.Name),'')),hjust= -0.1,vjust=0) 
+# read data
+data<-read.csv("no_epp_per_loc/no_epp_per_loc_written_by_era_at_with_geocoordiantes.csv", fileEncoding="UTF-8", na.strings=c("NULL"))
 
-# X-Achsen Labels rotieren
-plot + theme_bw() + theme(axis.title.x=element_text(), axis.text.x=element_blank(), axis.ticks.x=element_blank())
+# create scatterplot
+plot <- ggplot(data=data, aes(x= reorder(Location.Name, -Number.of.letters.sent.from.this.location.from.Erasmus), y=Number.of.letters.sent.from.this.location.from.Erasmus, label=Location.Name)) + 
+  geom_point(stat = "identity") + 
+  labs(x="Locations",y="Number of letters sent from this location from Erasmus") + 
+  geom_text(check_overlap = TRUE, aes(label=ifelse(Number.of.letters.sent.from.this.location.from.Erasmus>400,as.character(Location.Name),'')),hjust=-0.1,vjust=0) +
+  theme_bw() +
+  theme(axis.title.x=element_text(), axis.text.x=element_blank(), axis.ticks.x=element_blank())
+plot
