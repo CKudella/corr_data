@@ -1,14 +1,16 @@
-library(ggplot2)
+require(readr)
+require(ggplot2)
 library(readr)
-# Daten aus CSV laden und als Dataframe 'daten' zur Verfügung stellen
-daten<-read.csv("data/no_epp_per_modern_state_sent_to_era.csv")
+library(ggplot2)
 
-# Dataframe nach Spalte 'Number.of.Letters.sent.from.this.Modern.State.to.Erasmus'sortieren
-daten[order(daten$Number.of.Letters.sent.from.this.Modern.State.to.Erasmus)]
+# read data
+data<-read.csv("no_epp_per_modern_state/no_epp_per_modern_state_sent_to_era.csv", fileEncoding="UTF-8", na.strings=c("NULL"))
 
-
-# Barchart aus dem Datenframe erstellen und x-Achse nach den Werten aus y.Achse sortieren, Barlabels hinzufügen, Achsenlabels umbenenenen
-plot <- ggplot(data=daten, aes(x= reorder(Modern.State, -Number.of.Letters.sent.from.this.Modern.State.to.Erasmus), y=Number.of.Letters.sent.from.this.Modern.State.to.Erasmus)) + geom_bar(stat = "identity") + geom_text(aes(label=Number.of.Letters.sent.from.this.Modern.State.to.Erasmus), vjust=-0.5, color='black') + labs(x="Modern State",y="Number of letters sent to Erasmus") 
-
-# X-Achsen Labels rotieren
-plot + theme_bw() + theme(axis.text.x = element_text(angle = 90, vjust = 0.35))
+# create barchart
+plot <- ggplot(data, aes(x= reorder(Modern.State, -Number.of.letters.sent.from.this.modern.state.to.Erasmus),y=Number.of.letters.sent.from.this.modern.state.to.Erasmus)) + 
+  geom_bar(stat = "identity") +
+  geom_text(aes(label=Number.of.letters.sent.from.this.modern.state.to.Erasmus), vjust=-0.5, color='black') +
+  labs(x="Modern State",y="Number of letters sent from this modern state to Erasmus") +
+  theme_bw() + 
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.35))
+plot

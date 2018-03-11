@@ -1,5 +1,7 @@
-library(ggplot2)
+require(readr)
+require(ggplot2)
 library(readr)
+library(ggplot2)
 
 # read data
 data<-read.csv("no_epp_per_modern_state/no_epp_per_modern_state_sent_from_era_to.csv", fileEncoding="UTF-8", na.strings=c("NULL"))
