@@ -8,6 +8,9 @@ This folder contains scripts that calculate the number of letters per year accor
 | File | Description |
 | :------------- | :------------- |
 | comp_no_epp_per_year_sent_by_to_era.sql | This query calculates both the number of letters sent from Erasmus per year and the inverse. |
+| comp_no_epp_per_year_inferred_noninferred.sql | This query calculates both the number of letters with an inferred send date per year and the number of of letters with an non-inferred send date per year. |
+| comp_no_epp_per_year_inferred_noninferred_sent_from_era.sql | This query calculates both the number of letters sent from Erasmus with an inferred send date per year and the number of of letters with an non-inferred send date per year. |
+| comp_no_epp_per_year_inferred_noninferred_sent_to_era.sql | This query calculates both the number of letters sent to Erasmus with an inferred send date per year and the number of of letters with an non-inferred send date per year. |
 | no_epp_per_day_sent_by_era.sql | This query calculates the number of letters sent from Erasmus per day. |
 | no_epp_per_day_sent_to_era.sql | This query calculates the number of letters sent to Erasmus per day. |
 | no_epp_per_year_send_date_year1.sql | This script calculates the number of letters per year in the letters table, excluding manually executed splits. Note that this script relies on the earliest year of sending (i.e. the 'send_date_year1' column). |
