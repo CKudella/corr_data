@@ -12,7 +12,6 @@ setwd("../query_results/")
 # read data
 data<-read.csv("no_epp_per_year/comp_no_epp_per_year_inferred_noninferred.csv", fileEncoding="UTF-8", na.strings=c("NULL"))
 
-
 # apply melt for wide to long
 data_long <- melt(data, id.vars= c("Year"))
 
