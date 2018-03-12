@@ -23,3 +23,13 @@ plot <- ggplot(data=data, aes(x=send_date_year1,y=Number.of.letters.Erasmus.sent
   theme(strip.text.y = element_text(angle = 0, hjust = 1)) + 
   theme(legend.position="bottom")
 plot
+
+# change working directory
+getwd()
+setwd("../r_plots/")
+
+# save plot in multiple formats
+ggsave("no_epp_from_era_to_modern_state_per_year_facet_grid.pdf", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("no_epp_from_era_to_modern_state_per_year_facet_grid.png", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("no_epp_from_era_to_modern_state_per_year_facet_grid.eps", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("no_epp_from_era_to_modern_state_per_year_facet_grid.svg", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)

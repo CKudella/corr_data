@@ -18,3 +18,13 @@ plot <- ggplot(data=data, aes(x= reorder(Location.Name.Modern, -Number.of.corres
   theme_bw() +
   theme(axis.title.x=element_text(), axis.text.x=element_blank(), axis.ticks.x=element_blank())
 plot
+
+# change working directory
+getwd()
+setwd("../r_plots/")
+
+# save plot in multiple formats
+ggsave("no_corr_per_loc_writing_to_era_pointplot.pdf", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("no_corr_per_loc_writing_to_era_pointplot.png", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("no_corr_per_loc_writing_to_era_pointplot.eps", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("no_corr_per_loc_writing_to_era_pointplot.svg", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)

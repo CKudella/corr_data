@@ -15,3 +15,13 @@ data$duration <- durCalc(data, start="Beginning.of.correspondence.with.Erasmus",
 
 #durPlot (scatter) for duration of correspondence in correlation to the beginning of the correspondence
 durPlot(df=data, start="Beginning.of.correspondence.with.Erasmus", end="End.of.the.correspondence.with.Erasmus", plot_type="scatter", timeunit = "years")
+
+# change working directory
+getwd()
+setwd("../r_plots/")
+
+# save plot in multiple formats
+ggsave("duration_of_correspodence_all_corr_scatterplot.pdf", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("duration_of_correspodence_all_corr_scatterplot.png", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("duration_of_correspodence_all_corr_scatterplot.eps", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("duration_of_correspodence_all_corr_scatterplot.svg", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)

@@ -27,3 +27,14 @@ plot <- ggplot(data=data_long, aes(x=Year,y=value, colour=variable)) +
   theme(strip.text.y = element_text(angle = 0, hjust = 1)) +
   theme(legend.position="bottom")
 plot
+
+# change working directory
+getwd()
+setwd("../r_plots/")
+
+# save plot in multiple formats
+ggsave("comp_no_epp_from_era_to_ms_and_from_ms_to_era_per_year_facet_grid.pdf", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("comp_no_epp_from_era_to_ms_and_from_ms_to_era_per_year_facet_grid.png", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("comp_no_epp_from_era_to_ms_and_from_ms_to_era_per_year_facet_grid.eps", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("comp_no_epp_from_era_to_ms_and_from_ms_to_era_per_year_facet_grid.svg", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
+

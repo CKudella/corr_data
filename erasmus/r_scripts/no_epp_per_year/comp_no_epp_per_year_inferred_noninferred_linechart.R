@@ -26,3 +26,13 @@ plot <- ggplot(data=data_long, aes(x= Year, y=value, colour=variable)) +
   theme(legend.position="bottom") +
   scale_color_grey(labels = c("Number of letters with inferred send data", "Number of letters with non-inferred send data"))
 plot
+
+# change working directory
+getwd()
+setwd("../r_plots/")
+
+# save plot in multiple formats
+ggsave("comp_no_epp_per_year_inferred_noninferred_linechart.pdf", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("comp_no_epp_per_year_inferred_noninferred_linechart.png", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("comp_no_epp_per_year_inferred_noninferred_linechart.eps", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("comp_no_epp_per_year_inferred_noninferred_linechart.svg", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)

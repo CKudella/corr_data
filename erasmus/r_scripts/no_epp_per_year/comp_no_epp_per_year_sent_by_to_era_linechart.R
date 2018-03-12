@@ -26,3 +26,13 @@ plot <- ggplot(data=data_long, aes(x= send_date_year1, y=value, colour=variable)
   theme(legend.position="bottom") +
   scale_color_grey(labels = c("Letters written by Erasmus", "Letters written to Erasmus"))
 plot
+
+# change working directory
+getwd()
+setwd("../r_plots/")
+
+# save plot in multiple formats
+ggsave("comp_no_epp_per_year_sent_by_to_era_linechart.pdf", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("comp_no_epp_per_year_sent_by_to_era_linechart.png", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("comp_no_epp_per_year_sent_by_to_era_linechart.eps", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("comp_no_epp_per_year_sent_by_to_era_linechart.svg", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)

@@ -19,3 +19,13 @@ plot <- ggplot(data=data, aes(x=NoLettersWrittenByErasmusTO, y=NoLettersWrittenB
 labs(x="NoLettersWrittenByErasmusTO",y="NoLettersWrittenBYErasmusAT") + 
   theme_bw()
 plot
+
+# change working directory
+getwd()
+setwd("../r_plots/")
+
+# save plot in multiple formats
+ggsave("comp_no_epp_per_loc_written_by_era_at_and_sent_by_era_to_log_scatterplot.pdf", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("comp_no_epp_per_loc_written_by_era_at_and_sent_by_era_to_log_scatterplot.png", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("comp_no_epp_per_loc_written_by_era_at_and_sent_by_era_to_log_scatterplot.eps", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("comp_no_epp_per_loc_written_by_era_at_and_sent_by_era_to_log_scatterplot.svg", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)

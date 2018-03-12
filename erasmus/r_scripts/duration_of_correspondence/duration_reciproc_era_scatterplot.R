@@ -15,3 +15,13 @@ data$duration <- durCalc(data, start="Start.of.correspondence", end="End.of.corr
 
 #durPlot Plot Duration of Correspondence
 durPlot(df=data, start="Start.of.correspondence", end="End.of.correspondence", plot_type="scatter", timeunit = "years")
+
+# change working directory
+getwd()
+setwd("../r_plots/")
+
+# save plot in multiple formats
+ggsave("duration_reciproc_era_scatterplot.pdf", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("duration_reciproc_era_scatterplot.png", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("duration_reciproc_era_scatterplot.eps", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("duration_reciproc_era_scatterplot.svg", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)

@@ -27,3 +27,13 @@ plot <- ggplot(data_long,aes(x=Year,y=value, fill=variable)) +
   theme(legend.position="bottom") +
   scale_fill_grey(labels = c("Letters written to Erasmus with inferred send date", "Letters written to Erasmus with non-inferred send date"))
 plot
+
+# change working directory
+getwd()
+setwd("../r_plots/")
+
+# save plot in multiple formats
+ggsave("comp_no_epp_per_year_inferred_noninferred_sent_to_era_barchart_percentage.pdf", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("comp_no_epp_per_year_inferred_noninferred_sent_to_era_barchart_percentage.png", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("comp_no_epp_per_year_inferred_noninferred_sent_to_era_barchart_percentage.eps", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("comp_no_epp_per_year_inferred_noninferred_sent_to_era_barchart_percentage.svg", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
