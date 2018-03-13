@@ -11,10 +11,10 @@ setwd("../query_results/")
 data<-read.csv("no_corr_per_loc/comp_corr_per_loc_writing_to_receiving_from_era.csv", fileEncoding="UTF-8", na.strings=c("NULL"))
 
 # create scatterplot
-plot <- ggplot(data=data, aes(x=NoCorrToEra, y=NoCorrFromEra, label=Location.Name.Modern)) + 
+plot <- ggplot(data=data, aes(x=NoCorrFromEra, y=NoCorrToEra, label=Location.Name.Modern)) + 
   geom_point(stat = "identity") +
   geom_smooth(method = lm) +
-  labs(x="Number of correspondents writing letters to Erasmus",y="Number of Correspondents receiving letters from Erasmus") + 
+  labs(x="Number of correspondents receiving letters from Erasmus",y="Number of Correspondents writing letters to Erasmus") + 
   theme_bw()
 plot
 
