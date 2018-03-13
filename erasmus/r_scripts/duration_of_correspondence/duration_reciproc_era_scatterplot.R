@@ -14,7 +14,7 @@ data<-read.csv("duration_of_correspondence/dates_begin_end_reciproc_corresponden
 data$duration <- durCalc(data, start="Start.of.correspondence", end="End.of.correspondence", timeunit="years")
 
 #durPlot Plot Duration of Correspondence
-durPlot(df=data, start="Start.of.correspondence", end="End.of.correspondence", plot_type="scatter", timeunit = "years")
+durPlot(df=data, start="Start.of.correspondence", end="End.of.correspondence", plot_type="scatter", timeunit = "years", point_size = 1)
 
 # change working directory
 getwd()
