@@ -8,7 +8,7 @@ getwd()
 setwd("../query_results/")
 
 # read data
-data<-read.csv("no_epp_per_loc/no_epp_per_loc_sent_to_era_with_geocoordinates.csv", fileEncoding="UTF-8", na.strings=c("NULL"))
+data<-read.csv("no_epp_per_loc/no_epp_per_loc_sent_to_era.csv", fileEncoding="UTF-8", na.strings=c("NULL"))
 
 # create scatterplot
 plot <- ggplot(data=data, aes(x= reorder(Location.Name, -Number.of.letters.sent.from.this.location.to.Erasmus), y=Number.of.letters.sent.from.this.location.to.Erasmus, label=Location.Name)) + 
