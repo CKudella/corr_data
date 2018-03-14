@@ -3,7 +3,7 @@ SELECT Y.locations_name_modern AS 'Location Name',
        X.locations_lng AS 'Longitude',
        X.count AS 'Number of correspondents Erasmus writes to',
        Y.count AS 'Number of letters written by Erasmus',
-       Y.COUNT/X.COUNT AS 'Average Number of Letters'
+       Y.COUNT/X.COUNT AS 'Average Number of letters per correspondent'
 FROM
   (SELECT locations_name_modern,
           locations_lat,
@@ -11,7 +11,9 @@ FROM
           COUNT(DISTINCT recipient_id) AS COUNT
    FROM letters
    JOIN era_cdb_v3.locations ON locations.locations_id = letters.target_loc_id
-   WHERE sender_id = 'erasmus_desiderius_viaf_95982394'
+   WHERE letters_id NOT LIKE '%ck2'
+     AND sender_id = 'erasmus_desiderius_viaf_95982394'
+     AND target_loc_id NOT LIKE 'unknown%'
    GROUP BY target_loc_id
    ORDER BY COUNT DESC) AS X
 INNER JOIN
@@ -21,5 +23,6 @@ INNER JOIN
    JOIN locations ON locations.locations_id = letters.target_loc_id
    WHERE letters_id NOT LIKE '%ck2'
      AND sender_id = 'erasmus_desiderius_viaf_95982394'
+     AND target_loc_id NOT LIKE 'unknown%'
    GROUP BY target_loc_id
    ORDER BY COUNT DESC) AS Y ON X.locations_name_modern = Y.locations_name_modern
