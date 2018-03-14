@@ -15,7 +15,7 @@ plot <- ggplot(data, aes(x= ' ', y = Average.Number.of.Letters.written.by.Erasmu
   geom_boxplot(outlier.size=2, notch = FALSE) +
   theme_bw() +
   theme(axis.title.x=element_blank()) +
-  labs(y = "Average Number of letters sent by Erasmus per year")
+  labs(y = "Average Number of letters sent from location by Erasmus per year")
 plot
 
 # change working directory
