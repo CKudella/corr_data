@@ -1,7 +1,9 @@
 require(readr)
 require(ggplot2)
+require(ggrepel)
 library(readr)
 library(ggplot2)
+library(ggrepel)
 
 # set working directory
 getwd()
@@ -13,6 +15,7 @@ data<-read.csv("no_epp_per_loc/avg_no_epp_per_loc_year_written_by_era_to.csv", f
 # create potblox
 plot <- ggplot(data, aes(x= ' ', y = Average.Number.of.Letters.written.by.Erasmus.to.this.location.per.year)) +
   geom_boxplot(outlier.size=2, notch = FALSE) +
+  geom_text_repel(label=ifelse(data$Average.Number.of.Letters.written.by.Erasmus.to.this.location.per.year>3,as.character(data$Location.Name),'')) +
   theme_bw() +
   theme(axis.title.x=element_blank()) +
   labs(y = "Average Number of letters sent by Erasmus to location per year")
