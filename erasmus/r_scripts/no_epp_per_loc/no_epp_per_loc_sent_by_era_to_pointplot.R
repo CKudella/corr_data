@@ -13,8 +13,8 @@ data<-read.csv("no_epp_per_loc/no_epp_per_loc_sent_by_era_to.csv", fileEncoding=
 # create scatterplot
 plot <- ggplot(data=data, aes(x= reorder(Location.Name, -Number.of.letters.sent.to.this.location.from.Erasmus), y=Number.of.letters.sent.to.this.location.from.Erasmus, label=Location.Name)) + 
   geom_point(stat = "identity") + 
-  labs(x="Locations",y="Number of letters sent to this location from Erasmus") + 
-  geom_text(check_overlap = TRUE, aes(label=ifelse(Number.of.letters.sent.to.this.location.from.Erasmus>50,as.character(Location.Name),'')),hjust=-0.1,vjust=0) +
+  scale_y_continuous(trans = 'sqrt') +
+  labs(x="Locations",y="Number of letters sent to this location from Erasmus") +
   theme_bw() +
   theme(axis.title.x=element_text(), axis.text.x=element_blank(), axis.ticks.x=element_blank())
 plot
