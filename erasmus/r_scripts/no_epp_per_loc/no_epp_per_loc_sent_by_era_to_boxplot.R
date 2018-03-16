@@ -12,9 +12,10 @@ setwd("../query_results/")
 # read data and define data type for date columns
 data<-read.csv("no_epp_per_loc/no_epp_per_loc_sent_by_era_to.csv", fileEncoding="UTF-8")
 
-# create potblox
+# create boxplot (with log10 trans)
 plot <- ggplot(data, aes(x= ' ', y = Number.of.letters.sent.to.this.location.from.Erasmus)) +
   geom_boxplot(outlier.size=2, notch = FALSE) +
+  coord_trans(y = "log10") +
   geom_text_repel(label=ifelse(data$Number.of.letters.sent.to.this.location.from.Erasmus>13.5,as.character(data$Location.Name),'')) +
   theme_bw() +
   theme(axis.title.x=element_blank()) +
