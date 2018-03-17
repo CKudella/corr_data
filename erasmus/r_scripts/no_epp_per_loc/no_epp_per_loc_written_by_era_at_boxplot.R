@@ -1,7 +1,9 @@
 require(readr)
 require(ggplot2)
+require(ggrepel)
 library(readr)
 library(ggplot2)
+library(ggrepel)
 
 # set working directory
 getwd()
@@ -13,7 +15,7 @@ data<-read.csv("no_epp_per_loc/no_epp_per_loc_written_by_era_at.csv", fileEncodi
 # create potblox
 plot <- ggplot(data, aes(x= ' ', y = Number.of.letters.sent.from.this.location.from.Erasmus)) +
   geom_boxplot(outlier.size=2, notch = FALSE, show.legend = TRUE) +
-  geom_text(check_overlap = TRUE, aes(label=ifelse(Number.of.letters.sent.from.this.location.from.Erasmus>=68.5,as.character(Location.Name),'')),hjust=-0.1,vjust=0) +
+  geom_text_repel(label=ifelse(data$Number.of.letters.sent.from.this.location.from.Erasmus>67,as.character(data$Location.Name),'')) +
   theme_bw() +
   theme(axis.title.x=element_blank()) +
   labs(y = "Number of letters sent from this location by Erasmus")
