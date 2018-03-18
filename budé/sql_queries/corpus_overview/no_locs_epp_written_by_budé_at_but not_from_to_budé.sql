@@ -1,5 +1,5 @@
 SELECT COUNT(locations.locations_name_modern) AS 'Number of locations from which Budé sent letters but did not receive any from'
-FROM locations
+FROM budé_cdb_v1.locations
 WHERE locations.locations_id IN
     (SELECT DISTINCT source_loc_id
      FROM letters

@@ -1,4 +1,4 @@
-SELECT COUNT(locations.locations_name_modern) AS 'Number of locations from where Budé has both written and received letters from'
+SELECT locations.locations_name_modern AS 'Names of the locations from which Budé has both sent letters and received letters from'
 FROM budé_cdb_v1.locations
 WHERE locations.locations_id IN
     (SELECT DISTINCT source_loc_id

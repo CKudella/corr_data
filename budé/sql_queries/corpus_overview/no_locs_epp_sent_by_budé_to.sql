@@ -1,5 +1,5 @@
 SELECT COUNT(locations.locations_id) AS 'Number of locations to which letters have been sent by Budé'
-FROM locations
+FROM budé_cdb_v1.locations
 WHERE locations.locations_id IN
     (SELECT DISTINCT target_loc_id
      FROM letters
