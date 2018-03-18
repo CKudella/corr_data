@@ -10,7 +10,7 @@ setwd("../query_results/")
 # read data
 data<-read.csv("no_epp_per_correspondent/no_epp_per_cor_written_to_era.csv", fileEncoding="UTF-8", na.strings=c("NULL"))
 
-# create poinplot
+# create pointplot
 plot <- ggplot(data=data, aes(x= reorder(sender_id, -Number.of.letters.sent.to.Erasmus.from.this.correspondent), y=Number.of.letters.sent.to.Erasmus.from.this.correspondent, label=sender_id)) +
   geom_point(stat = "identity") +
   labs(x="Correspondents",y="Number of letters written to Erasmus") +
