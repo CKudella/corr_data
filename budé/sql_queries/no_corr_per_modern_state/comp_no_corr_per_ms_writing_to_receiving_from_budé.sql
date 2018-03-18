@@ -3,18 +3,18 @@ SELECT X.ModernState AS 'Modern State',
        B.NoCorrWritingToBudé AS 'Number of correspondents who wrote letters to Budé'
 FROM
   (SELECT DISTINCT locations.locations_modern_state AS ModernState
-   FROM locations
+   FROM budé_cdb_v1.locations
    WHERE locations.locations_id IN
        (SELECT DISTINCT source_loc_id
-        FROM letters)
+        FROM budé_cdb_v1.letters)
      OR locations.locations_id IN
        (SELECT DISTINCT target_loc_id
-        FROM letters)) AS X
+        FROM budé_cdb_v1.letters)) AS X
 LEFT OUTER JOIN
   (SELECT DISTINCT locations.locations_modern_state AS ModernState,
                    COUNT(DISTINCT recipient_id) AS NoCorrReceivingFromBudé
-   FROM letters,
-        locations
+   FROM budé_cdb_v1.letters,
+        budé_cdb_v1.locations
    WHERE locations.locations_id = letters.target_loc_id
      AND sender_id LIKE 'budé_guillaume_viaf_105878228'
    GROUP BY locations_modern_state
@@ -22,8 +22,8 @@ LEFT OUTER JOIN
 LEFT OUTER JOIN
   (SELECT DISTINCT locations.locations_modern_state AS ModernState,
                    COUNT(DISTINCT sender_id) AS NoCorrWritingToBudé
-   FROM letters,
-        locations
+   FROM budé_cdb_v1.letters,
+        budé_cdb_v1.locations
    WHERE locations.locations_id = letters.source_loc_id
      AND recipient_id LIKE 'budé_guillaume_viaf_105878228'
    GROUP BY locations_modern_state
