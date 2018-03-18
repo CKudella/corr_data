@@ -12,14 +12,13 @@ setwd("../query_results/")
 # read data
 data<-read.csv("no_epp_per_loc/no_epp_per_loc_sent_to_era.csv", fileEncoding="UTF-8")
 
-# create boxplot (with log10 trans)
+# create boxplot
 plot <- ggplot(data, aes(x= ' ', y = Number.of.letters.sent.from.this.location.to.Erasmus)) +
   geom_boxplot(outlier.size=2, notch = FALSE) +
-  coord_trans(y = "log10") +
   geom_text_repel(label=ifelse(data$Number.of.letters.sent.from.this.location.to.Erasmus>8.5,as.character(data$Location.Name),'')) +
   theme_bw() +
   theme(axis.title.x=element_blank()) +
-  labs(y = "Number of letters sent from the individual location to Erasmus")
+  labs(y = "Number of letters sent from this location to Erasmus")
 plot
 
 # change working directory

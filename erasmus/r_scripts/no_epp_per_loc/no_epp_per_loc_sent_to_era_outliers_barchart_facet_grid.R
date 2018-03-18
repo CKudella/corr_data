@@ -1,8 +1,6 @@
 require(readr)
-require(reshape2)
 require(ggplot2)
 library(readr)
-library(reshape2)
 library(ggplot2)
 
 # set working directory
@@ -15,7 +13,7 @@ data<-read.csv("no_epp_per_loc/no_epp_per_loc_sent_to_era_outliers.csv", fileEnc
 # create barchart with facet grid
 plot <- ggplot(data=data, aes(x=YEAR,y=COUNT)) +
   geom_bar(stat = "identity") +
-  labs(x="Year",y="Number of letters sent to Erasmus from this location") +
+  labs(x="Year",y="Number of letters sent from this location to Erasmus per year") +
   scale_x_continuous(breaks = c(1484:1536)) +
   facet_grid(locations_name_modern ~ ., space = "free" )+
   theme_bw() +

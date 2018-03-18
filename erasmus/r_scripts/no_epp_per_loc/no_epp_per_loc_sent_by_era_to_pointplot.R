@@ -14,7 +14,7 @@ data<-read.csv("no_epp_per_loc/no_epp_per_loc_sent_by_era_to.csv", fileEncoding=
 plot <- ggplot(data=data, aes(x= reorder(Location.Name, -Number.of.letters.sent.to.this.location.from.Erasmus), y=Number.of.letters.sent.to.this.location.from.Erasmus, label=Location.Name)) +
   geom_point(stat = "identity") +
   scale_y_continuous(trans = 'sqrt') +
-  labs(x="Locations",y="Number of letters sent to this location from Erasmus") +
+  labs(x="Locations",y="Number of letters sent from Erasmus to this location") +
   theme_bw() +
   theme(axis.title.x=element_text(), axis.text.x=element_blank(), axis.ticks.x=element_blank())
 plot
