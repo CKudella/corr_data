@@ -3,7 +3,7 @@ SELECT Y.locations_name_modern AS 'Location Name',
        X.locations_lng AS 'Longitude',
        X.count AS 'Number of years Budé writes letters from this location',
        Y.count AS 'Number of letters written by Budé from this location',
-       Y.COUNT/X.COUNT AS 'Average Number of letters written by Budé from this location per year'
+       Y.COUNT/X.COUNT AS 'Average number of letters written by Budé from this location per year'
 FROM
   (SELECT locations_name_modern,
           locations_lat,
