@@ -1,9 +1,7 @@
 require(readr)
-require(reshape2)
 require(lubridate)
 require(ggplot2)
 library(readr)
-library(reshape2)
 library(lubridate)
 library(ggplot2)
 
@@ -23,7 +21,7 @@ data$mday <- mday(data$send_date_computable1)
 data$month <-month(data$send_date_computable1)
 data$year <- year(data$send_date_computable1)
 
-# Plot Facet Grid
+# create barchart with facet grid
 plot <- ggplot(data=data, aes(x=mday,y=NoEppSentToEra)) +
   geom_bar(stat = "identity") +
   labs(x="Day",y="Number of letters sent to Erasmus") +
