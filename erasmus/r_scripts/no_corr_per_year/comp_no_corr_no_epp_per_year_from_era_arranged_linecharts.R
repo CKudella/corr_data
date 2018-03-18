@@ -14,7 +14,7 @@ setwd("../query_results/")
 # read data
 data<-read.csv("no_corr_per_year/comp_no_corr_no_epp_per_year_from_era.csv", fileEncoding="UTF-8", na.strings=c("NULL"))
 
-# create linechart for numver of correspondents
+# create linechart for number of correspondents
 plot <- ggplot(data=data, aes(x= Year, y=Number.of.correspondents.receiving.letters.from.Erasmus.this.year)) +
   geom_line(stat = "identity", size=0.9) +
   geom_point(shape=1) + labs(x="Year",y="Number of correspondents") +
@@ -37,7 +37,7 @@ plot2 <- ggplot(data=data, aes(x= Year, y=Number.of.letters.sent.from.Erasmus.th
 plot2
 
 # arrange plots
-ggarrange(plot, plot2, 
+ggarrange(plot, plot2,
           ncol = 1, nrow = 2)
 
 # change working directory
