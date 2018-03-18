@@ -10,7 +10,6 @@ setwd("../query_results/")
 # read data
 data<-read.csv("no_corr_per_year/new_corr_per_year_receiving_from_era.csv", fileEncoding="UTF-8", na.strings=c("NULL"))
 
-
 # create barchart
 plot <- ggplot(data = data, aes(x= YEAR, y=NewCorrReceivingFromEra)) +
   geom_bar(stat = "identity") +
