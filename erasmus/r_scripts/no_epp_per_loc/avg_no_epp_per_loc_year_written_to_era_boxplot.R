@@ -9,16 +9,16 @@ library(ggrepel)
 getwd()
 setwd("../query_results/")
 
-# read data and define data type for date columns
+# read data
 data<-read.csv("no_epp_per_loc/avg_no_epp_per_loc_year_written_to_era.csv", fileEncoding="UTF-8")
 
-# create potblox
+# create boxplot
 plot <- ggplot(data, aes(x= ' ', y = Average.Number.of.Letters.written.from.this.location.to.Erasmus.per.year)) +
   geom_boxplot(outlier.size=2, notch = FALSE) +
   geom_text_repel(label=ifelse(data$Average.Number.of.Letters.written.from.this.location.to.Erasmus.per.year>2.5825,as.character(data$Location.Name),'')) +
   theme_bw() +
   theme(axis.title.x=element_blank()) +
-  labs(y = "Average Number of letters sent to Erasmus from location per year")
+  labs(y = "Average number of letters sent to Erasmus from this location per year")
 plot
 
 # change working directory

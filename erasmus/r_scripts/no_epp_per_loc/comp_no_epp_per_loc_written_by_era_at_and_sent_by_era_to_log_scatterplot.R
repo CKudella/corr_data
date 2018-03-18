@@ -11,12 +11,12 @@ setwd("../query_results/")
 data<-read.csv("no_epp_per_loc/comp_epp_per_loc_written_by_era_at_and_sent_by_era_to.csv", fileEncoding="UTF-8", na.strings=c("NULL"))
 
 # create scatterplot
-plot <- ggplot(data=data, aes(x=NoLettersWrittenByErasmusTO, y=NoLettersWrittenByErasmusAT, label=LocationName)) + 
+plot <- ggplot(data=data, aes(x=NoLettersWrittenByErasmusTO, y=NoLettersWrittenByErasmusAT, label=LocationName)) +
   geom_point(stat = "identity") +
   geom_smooth(method = lm) +
   scale_x_continuous(trans='log2') +
   scale_y_continuous(trans='log2')
-labs(x="NoLettersWrittenByErasmusTO",y="NoLettersWrittenBYErasmusAT") + 
+labs(x="Number of letters sent from Erasmus to this location",y="Number of letters written by Erasmus at this location") + 
   theme_bw()
 plot
 

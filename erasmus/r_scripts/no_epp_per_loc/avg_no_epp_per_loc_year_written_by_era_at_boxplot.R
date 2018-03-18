@@ -7,16 +7,16 @@ library(ggplot2)
 getwd()
 setwd("../query_results/")
 
-# read data and define data type for date columns
+# read data
 data<-read.csv("no_epp_per_loc/avg_no_epp_per_loc_year_written_by_era_at.csv", fileEncoding="UTF-8")
 
-# create potblox
+# create boxplot
 plot <- ggplot(data, aes(x= ' ', y = Average.Number.of.Letters.written.by.Erasmus.from.this.location.per.year)) +
   geom_boxplot(outlier.size=2, notch = FALSE) +
   geom_text(check_overlap = TRUE, aes(label=ifelse(Average.Number.of.Letters.written.by.Erasmus.from.this.location.per.year>=14.25,as.character(Location.Name),'')),hjust=-0.1,vjust=0) +
   theme_bw() +
   theme(axis.title.x=element_blank()) +
-  labs(y = "Average Number of letters sent from location by Erasmus per year")
+  labs(y = "Average number of letters sent from this location by Erasmus per year")
 plot
 
 # change working directory

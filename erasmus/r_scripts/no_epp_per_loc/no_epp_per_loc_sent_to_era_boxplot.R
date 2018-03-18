@@ -9,7 +9,7 @@ library(ggrepel)
 getwd()
 setwd("../query_results/")
 
-# read data and define data type for date columns
+# read data
 data<-read.csv("no_epp_per_loc/no_epp_per_loc_sent_to_era.csv", fileEncoding="UTF-8")
 
 # create boxplot (with log10 trans)

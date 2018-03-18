@@ -9,7 +9,7 @@ library(ggrepel)
 getwd()
 setwd("../query_results/")
 
-# read data and define data type for date columns
+# read data
 data<-read.csv("no_epp_per_loc/no_epp_per_loc_sent_by_era_to.csv", fileEncoding="UTF-8")
 
 # create boxplot (with log10 trans)
@@ -31,5 +31,3 @@ ggsave("no_epp_per_loc_sent_by_era_to_boxplot.pdf", plot = last_plot(), scale = 
 ggsave("no_epp_per_loc_sent_by_era_to_boxplot.png", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
 ggsave("no_epp_per_loc_sent_by_era_to_boxplot.eps", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
 ggsave("no_epp_per_loc_sent_by_era_to_boxplot.svg", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
-
-

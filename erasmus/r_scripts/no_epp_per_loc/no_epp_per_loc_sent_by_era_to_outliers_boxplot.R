@@ -17,7 +17,7 @@ data<-read.csv("no_epp_per_loc/no_epp_per_loc_sent_by_era_to_outliers.csv", file
 # callculate median for label
 data_meds <- ddply(data, .(locations_name_modern), summarise, med = median(COUNT))
 
-# plot facet grid
+# create boxplot with facet grid
 plot <- ggplot(data, aes(x = locations_name_modern, y = COUNT)) +
   geom_boxplot(notch = FALSE) +
   geom_text(data = data_meds, aes(x = locations_name_modern, y = med, label = med), size = 3, vjust = -0.5) +

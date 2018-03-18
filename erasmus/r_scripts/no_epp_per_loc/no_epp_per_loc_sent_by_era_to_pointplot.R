@@ -10,9 +10,9 @@ setwd("../query_results/")
 # read data
 data<-read.csv("no_epp_per_loc/no_epp_per_loc_sent_by_era_to.csv", fileEncoding="UTF-8", na.strings=c("NULL"))
 
-# create scatterplot
-plot <- ggplot(data=data, aes(x= reorder(Location.Name, -Number.of.letters.sent.to.this.location.from.Erasmus), y=Number.of.letters.sent.to.this.location.from.Erasmus, label=Location.Name)) + 
-  geom_point(stat = "identity") + 
+# create pointplot
+plot <- ggplot(data=data, aes(x= reorder(Location.Name, -Number.of.letters.sent.to.this.location.from.Erasmus), y=Number.of.letters.sent.to.this.location.from.Erasmus, label=Location.Name)) +
+  geom_point(stat = "identity") +
   scale_y_continuous(trans = 'sqrt') +
   labs(x="Locations",y="Number of letters sent to this location from Erasmus") +
   theme_bw() +

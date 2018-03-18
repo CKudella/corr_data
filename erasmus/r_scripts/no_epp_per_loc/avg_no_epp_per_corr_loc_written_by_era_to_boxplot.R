@@ -9,7 +9,7 @@ library(ggrepel)
 getwd()
 setwd("../query_results/")
 
-# read data and define data type for date columns
+# read data
 data<-read.csv("no_epp_per_loc/avg_no_epp_per_corr_loc_written_by_era_to.csv", fileEncoding="UTF-8")
 
 # create boxplot
@@ -18,7 +18,7 @@ plot <- ggplot(data, aes(x= ' ', y = Average.Number.of.letters.per.correspondent
   geom_text_repel(label=ifelse(data$Average.Number.of.letters.per.correspondent>5,as.character(data$Location.Name),'')) +
   theme_bw() +
   theme(axis.title.x=element_blank()) +
-  labs(y = "Average number of letters per correspondent receiving from Erasmus")
+  labs(y = "Average number of letters sent from Erasmus to this location per correspondent")
 plot
 
 # change working directory
