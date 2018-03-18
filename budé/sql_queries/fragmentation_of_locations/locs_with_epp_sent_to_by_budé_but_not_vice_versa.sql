@@ -6,11 +6,11 @@ SELECT DISTINCT A.target_loc_id,
                 SourceLoc.locations_name_modern AS SourceNameModern,
                 SourceLoc.locations_lat AS SourceLAT,
                 SourceLoc.locations_lng AS SourceLNG
-FROM letters AS A
-LEFT JOIN locations AS SourceLoc ON SourceLoc.locations_id = A.source_loc_id
-LEFT JOIN locations AS TargetLoc ON TargetLoc.locations_id = A.target_loc_id
+FROM budé_cdb_v1.letters AS A
+LEFT JOIN budé_cdb_v1.locations AS SourceLoc ON SourceLoc.locations_id = A.source_loc_id
+LEFT JOIN budé_cdb_v1.locations AS TargetLoc ON TargetLoc.locations_id = A.target_loc_id
 WHERE A.sender_id = 'budé_guillaume_viaf_105878228'
   AND A.target_loc_id NOT IN
     (SELECT DISTINCT B.source_loc_id
-     FROM letters AS B
+     FROM budé_cdb_v1.letters AS B
      WHERE B.sender_id != 'budé_guillaume_viaf_105878228')
