@@ -1,9 +1,10 @@
 SELECT locations_name_modern AS 'Location Name Modern',
        locations_lat AS Latitude,
        locations_lng AS Longitude,
-       COUNT(DISTINCT sender_id) AS 'Number of Correspondents who wrote letters from this location (excl. Erasmus)'
+       COUNT(DISTINCT sender_id) AS 'Number of correspondents who wrote letters from this location (excl. Erasmus)'
 FROM letters
 JOIN era_cdb_v3.locations ON locations.locations_id = letters.source_loc_id
 WHERE sender_id != 'erasmus_desiderius_viaf_95982394'
+  AND source_loc_id NOT LIKE 'unknown%'
 GROUP BY source_loc_id
 ORDER BY COUNT(DISTINCT sender_id) DESC

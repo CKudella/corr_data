@@ -5,5 +5,6 @@ SELECT locations_name_modern AS 'Location Name Modern',
 FROM letters
 JOIN era_cdb_v3.locations ON locations.locations_id = letters.source_loc_id
 WHERE recipient_id = 'erasmus_desiderius_viaf_95982394'
+  AND source_loc_id NOT LIKE 'unknown%'
 GROUP BY source_loc_id
 ORDER BY COUNT(DISTINCT sender_id) DESC

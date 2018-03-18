@@ -22,6 +22,7 @@ LEFT OUTER JOIN
    FROM letters AS XA
    JOIN locations AS XB ON XB.locations_id = XA.source_loc_id
    WHERE XA.sender_id != 'erasmus_desiderius_viaf_95982394'
+     AND XA.source_loc_id NOT LIKE 'unknown%'
    GROUP BY XA.source_loc_id
    ORDER BY COUNT(DISTINCT sender_id) DESC) AS X ON X.locations_id = Z.locations_id
 LEFT OUTER JOIN
@@ -30,6 +31,7 @@ LEFT OUTER JOIN
    FROM letters AS YA
    JOIN locations AS YB ON YB.locations_id = YA.target_loc_id
    WHERE YA.sender_id = 'erasmus_desiderius_viaf_95982394'
+     AND YA.target_loc_id NOT LIKE 'unknown%'
    GROUP BY YA.target_loc_id
    ORDER BY COUNT(DISTINCT recipient_id) DESC) AS Y ON Y.locations_id = Z.locations_id
 WHERE NoCorrToEra IS NOT NULL
