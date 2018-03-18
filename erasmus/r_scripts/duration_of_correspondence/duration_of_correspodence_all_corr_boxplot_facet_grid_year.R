@@ -25,6 +25,8 @@ data$start_year <-as.factor(data$start_year)
 plot <- ggplot(data, aes(x= ' ', y = duration_in_years)) +
   geom_boxplot(notch = FALSE) +
   theme_bw() +
+  theme(axis.title.x=element_blank()) +
+  labs(y = "Duration of correspondence in years") +
   facet_grid (. ~ start_year)
 plot
 
