@@ -19,12 +19,12 @@ data$Number.of.correspondents.who.wrote.letters.to.Erasmus <- as.numeric(as.char
 # apply melt for wide to long
 data_long <- melt(data, id.vars= c("Modern.State"))
 
-# create linechart
-plot <- ggplot(data_long,aes(x= reorder(Modern.State,-value),y=value, fill=variable)) + 
-  geom_bar(position = "dodge", stat = "identity") + 
-  labs(x="Modern State",y="Number of correspondents") + 
-  theme_bw() + 
-  theme(axis.text.x = element_text(angle = 90, vjust = 0.35)) + 
+# create barchart
+plot <- ggplot(data_long,aes(x= reorder(Modern.State,-value),y=value, fill=variable)) +
+  geom_bar(position = "dodge", stat = "identity") +
+  labs(x="Modern State",y="Number of correspondents") +
+  theme_bw() +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.35)) +
   theme(legend.position="bottom")
 plot
 
