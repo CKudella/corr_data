@@ -3,8 +3,8 @@ SELECT Z.ModernState,
        C.NoEppToBudé AS 'Number of letters sent from this modern state to Budé'
 FROM (
         (SELECT DISTINCT XB.locations_modern_state AS ModernState
-         FROM letters AS XA,
-              locations AS XB
+         FROM budé_cdb_v1.letters AS XA,
+              budé_cdb_v1.locations AS XB
          WHERE XB.locations_id = XA.target_loc_id
            AND XA.letters_id NOT LIKE '%ck2'
            AND XA.sender_id = 'budé_guillaume_viaf_105878228'
@@ -12,8 +12,8 @@ FROM (
          ORDER BY COUNT(*) DESC)
       UNION
         (SELECT DISTINCT YB.locations_modern_state AS ModernState
-         FROM letters AS YA,
-              locations AS YB
+         FROM budé_cdb_v1.letters AS YA,
+              budé_cdb_v1.locations AS YB
          WHERE YB.locations_id = YA.source_loc_id
            AND YA.letters_id NOT LIKE '%ck2'
            AND YA.recipient_id = 'budé_guillaume_viaf_105878228'
@@ -22,8 +22,8 @@ FROM (
 LEFT OUTER JOIN
   (SELECT DISTINCT locations.locations_modern_state AS ModernState,
                    COUNT(*) AS NoEppFromBudé
-   FROM letters,
-        locations
+   FROM budé_cdb_v1.letters,
+        budé_cdb_v1.locations
    WHERE locations.locations_id = letters.target_loc_id
      AND letters_id NOT LIKE '%ck2'
      AND sender_id = 'budé_guillaume_viaf_105878228'
@@ -32,8 +32,8 @@ LEFT OUTER JOIN
 LEFT OUTER JOIN
   (SELECT DISTINCT locations.locations_modern_state AS ModernState,
                    COUNT(*) AS NoEppToBudé
-   FROM letters,
-        locations
+   FROM budé_cdb_v1.letters,
+        budé_cdb_v1.locations
    WHERE locations.locations_id = letters.source_loc_id
      AND letters_id NOT LIKE '%ck2'
      AND recipient_id = 'budé_guillaume_viaf_105878228'
