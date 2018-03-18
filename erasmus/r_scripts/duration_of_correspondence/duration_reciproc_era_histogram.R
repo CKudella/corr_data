@@ -13,7 +13,7 @@ data<-read.csv("duration_of_correspondence/dates_begin_end_reciproc_corresponden
 # calculate duration of correspondence
 data$duration <- durCalc(data, start="Start.of.correspondence", end="End.of.correspondence", timeunit="years")
 
-#durPlot Plot Duration of Correspondence
+#durPlot (histogram) for duration of correspondence in correlation to the beginning of the correspondence
 durPlot(df=data, start="Start.of.correspondence", end="End.of.correspondence", plot_type="histogram", timeunit = "years")
 
 # change working directory

@@ -21,7 +21,7 @@ data$start_year <- year(data$Start.of.correspondence)
 # set start_year as factor
 data$start_year <-as.factor(data$start_year)
 
-# create potblox with facet grid for years
+# create boxplot with facet grid for years
 plot <- ggplot(data, aes(x= ' ', y = duration_in_years)) +
   geom_boxplot(outlier.size=2, notch = FALSE) +
   theme_bw() +
