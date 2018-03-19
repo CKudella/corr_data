@@ -1,6 +1,6 @@
 require(readr)
 require(lubridate)
-library(require)
+require(ggplot)
 library(readr)
 library(lubridate)
 library(ggplot2)
@@ -10,13 +10,13 @@ getwd()
 setwd("../query_results/")
 
 # read data and define data type for date columns
-data<-read.csv("duration_of_correspondence/duration_of_correspodence_all_corr.csv", fileEncoding="UTF-8", colClasses=c("Beginning.of.correspondence.with.Erasmus"="Date","End.of.the.correspondence.with.Erasmus"="Date"))
+data<-read.csv("duration_of_correspondence/duration_of_correspodence_all_corr.csv", fileEncoding="UTF-8", colClasses=c("Beginning.of.correspondence.with.Budé"="Date","End.of.the.correspondence.with.Budé"="Date"))
 
 # calculate duration using lubridate
-data$duration_in_years <- interval(data$Beginning.of.correspondence.with.Erasmus, data$End.of.the.correspondence.with.Erasmus) / years(1)
+data$duration_in_years <- interval(data$Beginning.of.correspondence.with.Budé, data$End.of.the.correspondence.with.Budé) / years(1)
 
 # extract start_year
-data$start_year <- year(data$Beginning.of.correspondence.with.Erasmus)
+data$start_year <- year(data$Beginning.of.correspondence.with.Budé)
 
 # set start_year as factor
 data$start_year <-as.factor(data$start_year)
