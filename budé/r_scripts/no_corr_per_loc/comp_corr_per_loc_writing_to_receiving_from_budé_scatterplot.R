@@ -15,8 +15,8 @@ data<-read.csv("no_corr_per_loc/comp_corr_per_loc_writing_to_receiving_from_bud�
 # create scatterplot
 plot <- ggplot(data=data, aes(x=NoCorrFromBudé, y=NoCorrToBudé, label=Location.Name.Modern)) + 
   geom_point(stat = "identity") +
-  geom_text_repel(label=ifelse(data$NoCorrToBudé>3.5,as.character(data$Location.Name.Modern),''), colour = data$NoCorrToBudé) +
-  geom_text_repel(label=ifelse(data$NoCorrFromBudé>3.5,as.character(data$Location.Name.Modern),''), colour = data$NoCorrFromBudé) +
+  geom_text_repel(label=ifelse(data$NoCorrToBudé>3.5,as.character(data$Location.Name.Modern),'')) +
+  geom_text_repel(label=ifelse(data$NoCorrFromBudé>3.5,as.character(data$Location.Name.Modern),'')) +
   labs(x="Number of correspondents receiving letters from Budé",y="Number of Correspondents writing letters to Budé") + 
   theme_bw()
 plot
@@ -26,7 +26,7 @@ getwd()
 setwd("../r_plots/")
 
 # save plot in multiple formats
-ggsave("comp_corr_per_loc_writing_to_receiving_from_era_scatterplot.pdf", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
-ggsave("comp_corr_per_loc_writing_to_receiving_from_era_scatterplot.png", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
-ggsave("comp_corr_per_loc_writing_to_receiving_from_era_scatterplot.eps", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
-ggsave("comp_corr_per_loc_writing_to_receiving_from_era_scatterplot.svg", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("comp_corr_per_loc_writing_to_receiving_from_budé_scatterplot.pdf", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("comp_corr_per_loc_writing_to_receiving_from_budé_scatterplot.png", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("comp_corr_per_loc_writing_to_receiving_from_budé_scatterplot.eps", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("comp_corr_per_loc_writing_to_receiving_from_budé_scatterplot.svg", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
