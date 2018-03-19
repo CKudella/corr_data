@@ -15,8 +15,8 @@ plot <- ggplot(data=data, aes(x= send_date_year1,y=Total.number.of.letters.sent.
   geom_bar(stat = "identity") +
   geom_text(aes(label=Total.number.of.letters.sent.this.year), vjust=-0.5, color='black', size = 2.5) +
   labs(x="Year",y="Number of letters") +
-  scale_x_continuous(breaks = c(1484:1536)) +
-  scale_y_continuous(breaks = seq(0,240,10)) +
+  scale_x_continuous(breaks = c(1484:1540)) +
+  scale_y_continuous(breaks = seq(0,50,5)) +
   theme_bw() +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.35))
 plot
