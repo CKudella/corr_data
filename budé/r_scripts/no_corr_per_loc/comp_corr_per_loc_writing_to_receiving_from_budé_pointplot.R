@@ -1,6 +1,8 @@
 require(readr)
+require(reshape2)
 require(ggplot2)
 library(readr)
+library(reshape2)
 library(ggplot2)
 
 # set working directory
@@ -8,14 +10,14 @@ getwd()
 setwd("../query_results/")
 
 # read data
-data<-read.csv("no_corr_per_loc/comp_corr_per_loc_writing_to_receiving_from_era.csv", fileEncoding="UTF-8", na.strings=c("NULL"), colClasses=c("NoCorrToEra"="character","NoCorrFromEra"="character"))
+data<-read.csv("no_corr_per_loc/comp_corr_per_loc_writing_to_receiving_from_budé.csv", fileEncoding="UTF-8", na.strings=c("NULL"), colClasses=c("NoCorrToBudé"="character","NoCorrFromBudé"="character"))
 
 # set number columns to numeric
-data$NoCorrToEra <- as.numeric(as.character(data$NoCorrToEra))
-data$NoCorrFromEra <- as.numeric(as.character(data$NoCorrFromEra))
+data$NoCorrToBudé <- as.numeric(as.character(data$NoCorrToBudé))
+data$NoCorrFromBudé <- as.numeric(as.character(data$NoCorrFromBudé))
 
 # sum up number of correspondents
-data$sumcorr <- data$NoCorrToEra + data$NoCorrFromEra
+data$sumcorr <- data$NoCorrToBudé + data$NoCorrFromBudé
 
 # apply melt for wide to long
 data_long <- melt(data, id.vars= c("locations_id","Location.Name.Modern","Latitude","Longitude","sumcorr"))
@@ -34,7 +36,7 @@ getwd()
 setwd("../r_plots/")
 
 # save plot in multiple formats
-ggsave("comp_corr_per_loc_writing_to_receiving_from_era_pointplot.pdf", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
-ggsave("comp_corr_per_loc_writing_to_receiving_from_era_pointplot.png", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
-ggsave("comp_corr_per_loc_writing_to_receiving_from_era_pointplot.eps", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
-ggsave("comp_corr_per_loc_writing_to_receiving_from_era_pointplot.svg", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("comp_corr_per_loc_writing_to_receiving_from_budé_pointplot.pdf", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("comp_corr_per_loc_writing_to_receiving_from_budé_pointplot.png", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("comp_corr_per_loc_writing_to_receiving_from_budé_pointplot.eps", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("comp_corr_per_loc_writing_to_receiving_from_budé_pointplot.svg", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)

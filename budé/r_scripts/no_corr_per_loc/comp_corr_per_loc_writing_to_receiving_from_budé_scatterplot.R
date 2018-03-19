@@ -10,14 +10,14 @@ getwd()
 setwd("../query_results/")
 
 # read data
-data<-read.csv("no_corr_per_loc/comp_corr_per_loc_writing_to_receiving_from_era.csv", fileEncoding="UTF-8", na.strings=c("NULL"))
+data<-read.csv("no_corr_per_loc/comp_corr_per_loc_writing_to_receiving_from_budé.csv", fileEncoding="UTF-8", na.strings=c("NULL"))
 
 # create scatterplot
-plot <- ggplot(data=data, aes(x=NoCorrFromEra, y=NoCorrToEra, label=Location.Name.Modern)) + 
+plot <- ggplot(data=data, aes(x=NoCorrFromBudé, y=NoCorrToBudé, label=Location.Name.Modern)) + 
   geom_point(stat = "identity") +
-  geom_text_repel(label=ifelse(data$NoCorrToEra>6,as.character(data$Location.Name.Modern),''), colour = NoCorrToEra) +
-  geom_text_repel(label=ifelse(data$NoCorrFromEra>6,as.character(data$Location.Name.Modern),''), colour = NoCorrToEra) +
-  labs(x="Number of correspondents receiving letters from Erasmus",y="Number of Correspondents writing letters to Erasmus") + 
+  geom_text_repel(label=ifelse(data$NoCorrToBudé>3.5,as.character(data$Location.Name.Modern),''), colour = data$NoCorrToBudé) +
+  geom_text_repel(label=ifelse(data$NoCorrFromBudé>3.5,as.character(data$Location.Name.Modern),''), colour = data$NoCorrFromBudé) +
+  labs(x="Number of correspondents receiving letters from Budé",y="Number of Correspondents writing letters to Budé") + 
   theme_bw()
 plot
 
