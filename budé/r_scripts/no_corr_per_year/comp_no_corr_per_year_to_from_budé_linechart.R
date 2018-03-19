@@ -10,7 +10,7 @@ getwd()
 setwd("../query_results/")
 
 # read data
-data<-read.csv("no_corr_per_year/comp_no_corr_per_year_to_from_era.csv", fileEncoding="UTF-8", na.strings=c("NULL"))
+data<-read.csv("no_corr_per_year/comp_no_corr_per_year_to_from_budé.csv", fileEncoding="UTF-8", na.strings=c("NULL"))
 
 # apply melt for wide to long
 data_long <- melt(data, id.vars= c("Year"))
@@ -19,12 +19,12 @@ data_long <- melt(data, id.vars= c("Year"))
 plot <- ggplot(data=data_long, aes(x= Year, y=value, colour=variable)) +
   geom_line(stat = "identity", size=0.9) +
   geom_point(shape=1) + labs(x="Year",y="Number of correspondents") +
-  scale_x_continuous(breaks = c(1484:1536)) +
-  scale_y_continuous(breaks = seq(0,170,10)) +
+  scale_x_continuous(breaks = c(1484:1540)) +
+  scale_y_continuous(breaks = seq(0,30,5)) +
   theme_bw() +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.35)) +
   theme(legend.position="bottom") +
-  scale_color_grey(labels = c("Number of correspondents Erasmus writes to", "Number of correspondents writing to Erasmus"))
+  scale_color_grey(labels = c("Number of correspondents Budé writes to", "Number of correspondents writing to Budé"))
 plot
 
 # change working directory
@@ -32,7 +32,7 @@ getwd()
 setwd("../r_plots/")
 
 # save plot in multiple formats
-ggsave("comp_no_corr_per_year_to_from_era_linechart.pdf", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
-ggsave("comp_no_corr_per_year_to_from_era_linechart.png", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
-ggsave("comp_no_corr_per_year_to_from_era_linechart.eps", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
-ggsave("comp_no_corr_per_year_to_from_era_linechart.svg", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("comp_no_corr_per_year_to_from_budé_linechart.pdf", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("comp_no_corr_per_year_to_from_budé_linechart.png", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("comp_no_corr_per_year_to_from_budé_linechart.eps", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("comp_no_corr_per_year_to_from_budé_linechart.svg", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
