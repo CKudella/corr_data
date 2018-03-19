@@ -10,15 +10,15 @@ getwd()
 setwd("../query_results/")
 
 # read data
-data<-read.csv("no_epp_per_loc/avg_no_epp_per_loc_year_written_by_era_to.csv", fileEncoding="UTF-8")
+data<-read.csv("no_epp_per_loc/avg_no_epp_per_loc_year_written_by_budé_to.csv", fileEncoding="UTF-8")
 
 # create boxplot
-plot <- ggplot(data, aes(x= ' ', y = Average.Number.of.Letters.written.by.Erasmus.to.this.location.per.year)) +
+plot <- ggplot(data, aes(x= ' ', y = Average.number.of.letters.written.by.Budé.to.this.location.per.year)) +
   geom_boxplot(outlier.size=2, notch = FALSE) +
-  geom_text_repel(label=ifelse(data$Average.Number.of.Letters.written.by.Erasmus.to.this.location.per.year>3,as.character(data$Location.Name),'')) +
+  geom_text_repel(label=ifelse(data$Average.number.of.letters.written.by.Budé.to.this.location.per.year>1.8325,as.character(data$Location.Name),'')) +
   theme_bw() +
   theme(axis.title.x=element_blank()) +
-  labs(y = "Average number of letters sent from Erasmus to this location per year")
+  labs(y = "Average number of letters sent from Budé to this location per year")
 plot
 
 # change working directory
@@ -26,7 +26,7 @@ getwd()
 setwd("../r_plots/")
 
 # save plot in multiple formats
-ggsave("avg_no_epp_per_loc_year_written_by_era_to_boxplot.pdf", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
-ggsave("avg_no_epp_per_loc_year_written_by_era_to_boxplot.png", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
-ggsave("avg_no_epp_per_loc_year_written_by_era_to_boxplot.eps", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
-ggsave("avg_no_epp_per_loc_year_written_by_era_to_boxplot.svg", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("avg_no_epp_per_loc_year_written_by_budé_to_boxplot.pdf", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("avg_no_epp_per_loc_year_written_by_budé_to_boxplot.png", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("avg_no_epp_per_loc_year_written_by_budé_to_boxplot.eps", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("avg_no_epp_per_loc_year_written_by_budé_to_boxplot.svg", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
