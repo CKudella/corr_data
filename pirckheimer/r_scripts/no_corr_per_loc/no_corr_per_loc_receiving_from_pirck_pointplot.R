@@ -11,7 +11,7 @@ setwd("../query_results/")
 data<-read.csv("no_corr_per_loc/no_corr_per_loc_receiving_from_pirck_with_geocoordinates.csv", fileEncoding="UTF-8", na.strings=c("NULL"))
 
 # create pointplot
-plot <- ggplot(data=data, aes(x= reorder(Location.Name.Modern, -Number.of.correspondents.who.received.at.this.location.letters.from.Pirckheimer), y=Number.of.correspondents.who.received.at.this.location.letters.from.Pirckheimer, label=Location.Name.Modern)) + 
+plot <- ggplot(data=data, aes(x= reorder(Location.Name.Modern, -Number.of.correspondents.who.received.at.this.Location.letters.from.Pirckheimer), y=Number.of.correspondents.who.received.at.this.Location.letters.from.Pirckheimer, label=Location.Name.Modern)) + 
     geom_point(stat = "identity") +
     labs(x="Locations",y="Number of correspondents receiving letters from Pirckheimer") +
     theme_bw() +

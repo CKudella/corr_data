@@ -25,7 +25,7 @@ plot
 # create boxplot
 plot2 <- ggplot(data, aes(x= ' ', y = Number.of.correspondents.who.wrote.from.this.location.letters.to.Pirckheimer)) +
   geom_boxplot(outlier.size=2, notch = FALSE) +
-  geom_text_repel(label=ifelse(data$Number.of.correspondents.who.wrote.from.this.location.letters.to.Pirckheimer>6,as.character(data$Location.Name.Modern),'')) +
+  geom_text_repel(label=ifelse(data$Number.of.correspondents.who.wrote.from.this.location.letters.to.Pirckheimer>3.5,as.character(data$Location.Name.Modern),'')) +
   theme_bw() +
   theme(axis.title.x=element_blank()) +
   labs(y = "Number of correspondents writing letters to Pirckheimer")
