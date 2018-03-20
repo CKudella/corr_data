@@ -25,7 +25,9 @@ plot <- ggplot(data_long,aes(x= reorder(Modern.State,-value),y=value, fill=varia
   labs(x="Modern State",y="Number of correspondents") +
   theme_bw() +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.35)) +
-  theme(legend.position="bottom")
+  theme(legend.position="bottom") +
+  theme(legend.title=element_blank()) +
+  scale_fill_grey(labels = c("Number of correspondents Pirckheimer wrote letters to", "Number of correspondents who wrote letters to Pirckheimer"))
 plot
 
 # change working directory
