@@ -1,13 +1,9 @@
 SELECT locations_id AS 'Id',
-       geonames_id,
        locations_name_modern,
-       locations_name_in_edition,
        locations_modern_state,
        locations_modern_province,
        locations_lat,
-       locations_lng,
-       locations_ll_combined,
-       locations_further_annotation
+       locations_lng
 FROM locations
 WHERE locations_id IN
     (SELECT DISTINCT source_loc_id
