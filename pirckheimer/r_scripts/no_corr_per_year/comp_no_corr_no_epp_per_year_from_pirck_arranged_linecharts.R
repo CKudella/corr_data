@@ -19,7 +19,7 @@ plot <- ggplot(data=data, aes(x= Year, y=Number.of.correspondents.receiving.lett
   geom_line(stat = "identity", size=0.9) +
   geom_point(shape=1) + labs(x="Year",y="Number of correspondents") +
   scale_x_continuous(breaks = c(1484:1536)) +
-  scale_y_continuous(breaks = seq(0,70,10)) +
+  scale_y_continuous(breaks = seq(0,30,5)) +
   theme_bw() +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.35)) +
   theme(legend.position="bottom")
@@ -30,7 +30,7 @@ plot2 <- ggplot(data=data, aes(x= Year, y=Number.of.letters.sent.from.Pirckheime
   geom_line(stat = "identity", size=0.9) +
   geom_point(shape=1) + labs(x="Year",y="Number of letters") +
   scale_x_continuous(breaks = c(1484:1536)) +
-  scale_y_continuous(breaks = seq(0,100,10)) +
+  scale_y_continuous(breaks = seq(0,30,5)) +
   theme_bw() +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.35)) +
   theme(legend.position="bottom")
