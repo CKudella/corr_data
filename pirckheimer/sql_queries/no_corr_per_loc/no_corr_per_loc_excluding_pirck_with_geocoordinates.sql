@@ -5,5 +5,6 @@ SELECT locations_name_modern AS 'Location Name Modern',
 FROM letters
 JOIN locations ON locations.locations_id = letters.source_loc_id
 WHERE sender_id != 'pirckheimer_willibald_viaf_27173507'
+  AND source_loc_id NOT LIKE 'unknown%'
 GROUP BY source_loc_id
 ORDER BY COUNT(DISTINCT sender_id) DESC

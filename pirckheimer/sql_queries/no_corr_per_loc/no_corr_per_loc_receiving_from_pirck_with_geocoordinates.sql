@@ -5,5 +5,6 @@ SELECT locations_name_modern AS 'Location Name Modern',
 FROM letters
 JOIN wpirck_cdb_v1.locations ON locations.locations_id = letters.target_loc_id
 WHERE sender_id = 'pirckheimer_willibald_viaf_27173507'
+  AND target_loc_id NOT LIKE 'unknown%'
 GROUP BY target_loc_id
 ORDER BY COUNT(DISTINCT recipient_id) DESC
