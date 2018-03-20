@@ -13,9 +13,9 @@ setwd("../query_results/")
 data<-read.csv("no_epp_per_loc/avg_no_epp_per_corr_loc_written_by_pirck_to.csv", fileEncoding="UTF-8")
 
 # create boxplot
-plot <- ggplot(data, aes(x= ' ', y = Average.Number.of.letters.per.correspondent)) +
+plot <- ggplot(data, aes(x= ' ', y = Average.Number.of.Letters)) +
   geom_boxplot(outlier.size=2, notch = FALSE) +
-  geom_text_repel(label=ifelse(data$Average.Number.of.letters.per.correspondent>5,as.character(data$Location.Name),'')) +
+  geom_text_repel(label=ifelse(data$Average.Number.of.Letters>4.3325,as.character(data$Location.Name),'')) +
   theme_bw() +
   theme(axis.title.x=element_blank()) +
   labs(y = "Average number of letters sent from Pirckheimer to this location per correspondent")

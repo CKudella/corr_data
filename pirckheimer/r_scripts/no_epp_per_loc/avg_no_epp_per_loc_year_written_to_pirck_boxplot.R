@@ -13,9 +13,9 @@ setwd("../query_results/")
 data<-read.csv("no_epp_per_loc/avg_no_epp_per_loc_year_written_to_pirck.csv", fileEncoding="UTF-8")
 
 # create boxplot
-plot <- ggplot(data, aes(x= ' ', y = Average.Number.of.Letters.written.from.this.location.to.Pirckheimer.per.year)) +
+plot <- ggplot(data, aes(x= ' ', y = Average.number.of.letters.written.from.this.location.to.Pirckheimer.per.year)) +
   geom_boxplot(outlier.size=2, notch = FALSE) +
-  geom_text_repel(label=ifelse(data$Average.Number.of.Letters.written.from.this.location.to.Pirckheimer.per.year>2.5825,as.character(data$Location.Name),'')) +
+  geom_text_repel(label=ifelse(data$Average.number.of.letters.written.from.this.location.to.Pirckheimer.per.year>3.5,as.character(data$Location.Name),'')) +
   theme_bw() +
   theme(axis.title.x=element_blank()) +
   labs(y = "Average number of letters sent to Pirckheimer from this location per year")

@@ -15,7 +15,7 @@ data<-read.csv("no_epp_per_loc/no_epp_per_loc_sent_by_pirck_to.csv", fileEncodin
 # create boxplot
 plot <- ggplot(data, aes(x= ' ', y = Number.of.letters.sent.to.this.location.from.Pirckheimer)) +
   geom_boxplot(outlier.size=2, notch = FALSE) +
-  geom_text_repel(label=ifelse(data$Number.of.letters.sent.to.this.location.from.Pirckheimer>13.5,as.character(data$Location.Name),'')) +
+  geom_text_repel(label=ifelse(data$Number.of.letters.sent.to.this.location.from.Pirckheimer>11,as.character(data$Location.Name),'')) +
   theme_bw() +
   theme(axis.title.x=element_blank()) +
   labs(y = "Number of letters sent from Pirckheimer to this location")

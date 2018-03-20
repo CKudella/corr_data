@@ -13,7 +13,6 @@ data<-read.csv("no_epp_per_loc/no_epp_per_loc_sent_to_pirck.csv", fileEncoding="
 # create pointplot
 plot <- ggplot(data=data, aes(x= reorder(Location.Name, -Number.of.letters.sent.from.this.location.to.Pirckheimer), y=Number.of.letters.sent.from.this.location.to.Pirckheimer, label=Location.Name)) +
   geom_point(stat = "identity") +
-  scale_y_continuous(trans = 'sqrt') +
   labs(x="Locations",y="Number of letters sent from this location to Pirckheimer") +
   theme_bw() +
   theme(axis.title.x=element_text(), axis.text.x=element_blank(), axis.ticks.x=element_blank())
