@@ -8,13 +8,13 @@ getwd()
 setwd("../query_results/")
 
 # read data and define data type for date columns
-data<-read.csv("duration_of_correspondence/dates_begin_end_reciproc_correspondence.csv", fileEncoding="UTF-8", colClasses=c("Start.of.correspondence"="Date","End.of.correspondence"="Date"))
+data<-read.csv("duration_of_correspondence/duration_reciproc_pirck.csv", fileEncoding="UTF-8", colClasses=c("Start.of.Correspondence"="Date","End.of.Correspondence"="Date"))
 
 # calculate duration of correspondence
-data$duration <- durCalc(data, start="Start.of.correspondence", end="End.of.correspondence", timeunit="years")
+data$duration <- durCalc(data, start="Start.of.Correspondence", end="End.of.Correspondence", timeunit="years")
 
 #durPlot (scatterplot) for duration of correspondence in correlation to the beginning of the correspondence
-durPlot(df=data, start="Start.of.correspondence", end="End.of.correspondence", plot_type="scatter", timeunit = "years", point_size = 1)
+durPlot(df=data, start="Start.of.Correspondence", end="End.of.Correspondence", plot_type="scatter", timeunit = "years", point_size = 1)
 
 # change working directory
 getwd()

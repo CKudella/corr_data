@@ -10,13 +10,13 @@ getwd()
 setwd("../query_results/")
 
 # read data and define data type for date columns
-data<-read.csv("duration_of_correspondence/dates_begin_end_reciproc_correspondence.csv", fileEncoding="UTF-8", colClasses=c("Start.of.correspondence"="Date","End.of.correspondence"="Date"))
+data<-read.csv("duration_of_correspondence/duration_reciproc_pirck.csv", fileEncoding="UTF-8", colClasses=c("Start.of.Correspondence"="Date","End.of.Correspondence"="Date"))
 
 # calculate duration using lubridate
-data$duration_in_years <- interval(data$Start.of.correspondence, data$End.of.correspondence) / years(1)
+data$duration_in_years <- interval(data$Start.of.Correspondence, data$End.of.Correspondence) / years(1)
 
 # extract start_year
-data$start_year <- year(data$Start.of.correspondence)
+data$start_year <- year(data$Start.of.Correspondence)
 
 # set start_year as factor
 data$start_year <-as.factor(data$start_year)
