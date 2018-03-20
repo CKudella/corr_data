@@ -12,6 +12,7 @@ FROM
    JOIN locations AS XB ON XB.locations_id = XA.source_loc_id
    WHERE XA.letters_id NOT REGEXP '[0-7]ck2|ck3|ck4|ck5|ck6|ck7|ck8]'
      AND XA.recipient_id = 'pirckheimer_willibald_viaf_27173507'
+     AND XA.source_loc_id NOT LIKE 'unknown%'
    GROUP BY XA.source_loc_id
    ORDER BY COUNT(XA.source_loc_id) DESC) AS X
 INNER JOIN
@@ -23,5 +24,6 @@ INNER JOIN
    JOIN locations AS YB ON YB.locations_id = YA.source_loc_id
    WHERE YA.letters_id NOT REGEXP '[0-7]ck2|ck3|ck4|ck5|ck6|ck7|ck8]'
      AND YA.sender_id = 'pirckheimer_willibald_viaf_27173507'
+     AND YA.source_loc_id NOT LIKE 'unknown%'
    GROUP BY YA.source_loc_id
    ORDER BY COUNT(YA.source_loc_id) DESC) AS Y ON Y.LocationName = X.LocationName
