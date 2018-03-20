@@ -21,7 +21,9 @@ plot <- ggplot(data_long,aes(x= reorder(ModernState,-value),y=value, fill=variab
   labs(x="Modern State",y="Number of correspondents") + 
   theme_bw() + 
   theme(axis.text.x = element_text(angle = 90, vjust = 0.35)) + 
-  theme(legend.position="bottom")
+  theme(legend.position="bottom") +
+  theme(legend.title=element_blank()) +
+  scale_fill_grey(labels = c("Number of letters Pirckheimer sent to this modern state", "Number of letter sent from this modern state to Pirckheimer"))
 plot
 
 # change working directory
