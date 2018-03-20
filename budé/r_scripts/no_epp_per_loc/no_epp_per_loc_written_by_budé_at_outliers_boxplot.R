@@ -19,7 +19,7 @@ data_meds <- ddply(data, .(locations_name_modern), summarise, med = median(COUNT
 plot <- ggplot(data, aes(x = locations_name_modern, y = COUNT)) +
   geom_boxplot(notch = FALSE) +
   geom_text(data = data_meds, aes(x = locations_name_modern, y = med, label = med), size = 3, vjust = -0.5) +
-  labs(x="Outlier Location", y =" Number of letters sent from this location by Erasmus per year") +
+  labs(x="Outlier Location", y =" Number of letters sent from this location by Budé per year") +
   theme_bw()
 plot
 
