@@ -1,4 +1,4 @@
-SELECT COUNT(DISTINCT recipient_id) AS 'Total number of correspondents (type: individual) who have received letters from Erasmus'
+SELECT COUNT(DISTINCT recipient_id) AS 'Total number of correspondents (type: individual) Erasmus has written letters to'
 FROM era_cdb_v3.letters,
      era_cdb_v3.correspondents
 WHERE sender_id = 'erasmus_desiderius_viaf_95982394'
