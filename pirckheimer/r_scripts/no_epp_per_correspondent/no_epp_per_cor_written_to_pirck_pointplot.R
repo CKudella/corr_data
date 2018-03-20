@@ -11,7 +11,7 @@ setwd("../query_results/")
 data<-read.csv("no_epp_per_correspondent/no_epp_per_cor_written_to_pirck.csv", fileEncoding="UTF-8", na.strings=c("NULL"))
 
 # create pointplot
-plot <- ggplot(data=data, aes(x= reorder(sender_id, -Number.of.letters.sent.to.Pirckheimer.from.this.correspondent), y=Number.of.letters.sent.to.Pirckheimer.from.this.correspondent, label=sender_id)) +
+plot <- ggplot(data=data, aes(x= reorder(sender_id, -Number.of.letters.sent.to.Pirckheimer), y=Number.of.letters.sent.to.Pirckheimer, label=sender_id)) +
   geom_point(stat = "identity") +
   labs(x="Correspondents",y="Number of letters written to Pirckheimer") +
   theme_bw() +
