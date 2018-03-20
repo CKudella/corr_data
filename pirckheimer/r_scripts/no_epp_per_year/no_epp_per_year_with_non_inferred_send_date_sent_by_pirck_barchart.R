@@ -16,7 +16,7 @@ plot <- ggplot(data=data, aes(x=Year,y=Number.of.letters.with.non.inferred.send.
   geom_text(aes(label=Number.of.letters.with.non.inferred.send.date.sent.by.Pirckheimer.this.year), vjust=-0.5, color='black', size = 2.5) +
   labs(x="Year",y="Number of letters") +
   scale_x_continuous(breaks = c(1484:1536)) +
-  scale_y_continuous(breaks = seq(0,240,10)) +
+  scale_y_continuous(breaks = seq(0,30,5)) +
   theme_bw() +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.35))
 plot

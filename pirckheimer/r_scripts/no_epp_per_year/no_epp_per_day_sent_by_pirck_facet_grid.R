@@ -25,7 +25,7 @@ data$year <- year(data$send_date_computable1)
 plot <- ggplot(data=data, aes(x=mday,y=NoEppSentFromPirck)) +
   geom_bar(stat = "identity") +
   labs(x="Day",y="Number of letters sent from Pirckheimer") +
-  scale_y_continuous(breaks = seq(0,14,2)) +
+  scale_y_continuous(breaks = seq(0,7,1)) +
   facet_grid(year ~ month) +
   theme_bw() +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.35)) +
