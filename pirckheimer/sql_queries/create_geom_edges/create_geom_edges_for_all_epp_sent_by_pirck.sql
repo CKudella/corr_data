@@ -13,5 +13,6 @@ FROM wpirck_cdb_v1.letters
 LEFT JOIN wpirck_cdb_v1.locations AS SourceLoc ON SourceLoc.locations_id = letters.source_loc_id
 LEFT JOIN wpirck_cdb_v1.locations AS TargetLoc ON TargetLoc.locations_id = letters.target_loc_id
 WHERE sender_id = 'pirckheimer_willibald_viaf_27173507'
+  AND letters_id NOT REGEXP '[0-7]ck2|ck3|ck4|ck5|ck6|ck7|ck8]'
   AND source_loc_id NOT LIKE 'unknown%'
   AND target_loc_id NOT LIKE 'unknown%'
