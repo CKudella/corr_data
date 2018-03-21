@@ -1,1 +1,1 @@
-SELECT send_date_year1, COUNT(*) AS 'Number of Letters sent by Giambattista Egnazio to Pirckheimer per year' from letters WHERE sender_id = 'egnazio_giovanni_battista_viaf_100187526' GROUP BY send_date_year1 ORDER BY send_date_year1 ASC
+SELECT send_date_year1, COUNT(*) AS 'Number of Letters sent by Giambattista Egnazio to Pirckheimer per year' from wpirck_cdb_v1.letters WHERE sender_id = 'egnazio_giovanni_battista_viaf_100187526' GROUP BY send_date_year1 ORDER BY send_date_year1 ASC

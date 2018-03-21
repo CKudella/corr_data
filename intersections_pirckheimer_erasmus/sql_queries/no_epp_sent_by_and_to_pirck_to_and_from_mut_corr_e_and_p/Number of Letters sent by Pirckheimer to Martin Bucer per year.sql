@@ -1,1 +1,1 @@
-SELECT send_date_year1, COUNT(*) AS 'Number of Letters sent by Pirckheimer to Martin Bucer per year' from letters WHERE recipient_id = 'bucer_martin_viaf_2478527' GROUP BY send_date_year1 ORDER BY send_date_year1 ASC
+SELECT send_date_year1, COUNT(*) AS 'Number of Letters sent by Pirckheimer to Martin Bucer per year' from wpirck_cdb_v1.letters WHERE recipient_id = 'bucer_martin_viaf_2478527' GROUP BY send_date_year1 ORDER BY send_date_year1 ASC

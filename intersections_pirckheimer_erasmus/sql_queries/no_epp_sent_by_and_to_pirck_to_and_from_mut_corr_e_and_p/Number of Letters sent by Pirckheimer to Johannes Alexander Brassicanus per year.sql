@@ -1,1 +1,1 @@
-SELECT send_date_year1, COUNT(*) AS 'Number of Letters sent by Pirckheimer to Johannes Alexander Brassicanus per year' from letters WHERE recipient_id = 'brassicanus_joannes_alexander_viaf_9899294' GROUP BY send_date_year1 ORDER BY send_date_year1 ASC
+SELECT send_date_year1, COUNT(*) AS 'Number of Letters sent by Pirckheimer to Johannes Alexander Brassicanus per year' from wpirck_cdb_v1.letters WHERE recipient_id = 'brassicanus_joannes_alexander_viaf_9899294' GROUP BY send_date_year1 ORDER BY send_date_year1 ASC

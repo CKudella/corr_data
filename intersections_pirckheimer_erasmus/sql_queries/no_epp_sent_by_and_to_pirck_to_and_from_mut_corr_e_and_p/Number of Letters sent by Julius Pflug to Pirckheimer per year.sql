@@ -1,1 +1,1 @@
-SELECT send_date_year1, COUNT(*) AS 'Number of Letters sent by Julius Pflug to Pirckheimer per year' from letters WHERE sender_id = 'pflug_julius_von_viaf_3265533' GROUP BY send_date_year1 ORDER BY send_date_year1 ASC
+SELECT send_date_year1, COUNT(*) AS 'Number of Letters sent by Julius Pflug to Pirckheimer per year' from wpirck_cdb_v1.letters WHERE sender_id = 'pflug_julius_von_viaf_3265533' GROUP BY send_date_year1 ORDER BY send_date_year1 ASC
