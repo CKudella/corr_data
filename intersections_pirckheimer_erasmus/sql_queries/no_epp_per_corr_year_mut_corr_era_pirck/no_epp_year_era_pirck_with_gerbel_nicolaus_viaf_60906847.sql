@@ -1,14 +1,17 @@
-﻿SELECT TE.Year,
+
+SELECT TE.Year,
        EtX.EPPEtX,
        XtE.EPPXtE,
        PtX.EPPPtX,
        XtP.EPPXtP
 FROM
-(SELECT DISTINCT A.send_date_year1 AS Year FROM
-(SELECT DISTINCT send_date_year1 from era_cdb_v3.letters
-UNION ALL
-SELECT DISTINCT send_date_year1 from wpirck_cdb_v1.letters
-ORDER BY send_date_year1) AS A) AS TE
+  (SELECT DISTINCT A.send_date_year1 AS Year
+   FROM
+     (SELECT DISTINCT send_date_year1
+      FROM era_cdb_v3.letters
+      UNION ALL SELECT DISTINCT send_date_year1
+      FROM wpirck_cdb_v1.letters
+      ORDER BY send_date_year1) AS A) AS TE
 LEFT JOIN
   (SELECT send_date_year1,
           COUNT(*) AS EPPEtX
@@ -34,8 +37,7 @@ LEFT JOIN
   (SELECT send_date_year1,
           COUNT(*) AS EPPXtP
    FROM wpirck_cdb_v1.letters
-   WHERE sender_id = 'null'
+   WHERE sender_id = 'gerbel_nicolaus_viaf_60906847'
      AND recipient_id = 'pirckheimer_willibald_viaf_27173507'
    GROUP BY send_date_year1) AS XtP ON XtP.send_date_year1 = TE.Year
 ORDER BY TE.Year ASC
-
