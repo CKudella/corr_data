@@ -15,7 +15,7 @@ WHERE letters_id NOT REGEXP '[0-7]ck2|ck3|ck4|ck5|ck6|ck7|ck8]'
                era_cdb_v3.correspondents AS E
           WHERE P.correspondents_id = E.correspondents_id
             AND P.correspondents_id NOT LIKE 'unnamed_person_viaf_not_applicable'
-            AND E.correspondents_id NOT IN NOT LIKE 'unnamed_person_viaf_not_applicable'
+            AND E.correspondents_id NOT LIKE 'unnamed_person_viaf_not_applicable'
 ))
 GROUP BY target_loc_id
 ORDER BY COUNT(letters.target_loc_id) DESC
