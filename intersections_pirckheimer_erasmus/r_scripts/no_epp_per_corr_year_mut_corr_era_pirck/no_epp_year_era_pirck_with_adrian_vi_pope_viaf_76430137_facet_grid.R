@@ -1,4 +1,4 @@
-require(readr)
+﻿require(readr)
 require(reshape2)
 require(ggplot2)
 library(readr)
@@ -13,7 +13,7 @@ setwd("../query_results/")
 data<-read.csv("no_epp_per_corr_year_mut_corr_era_pirck/no_epp_year_era_pirck_with_adrian_vi_pope_viaf_76430137.csv", fileEncoding="UTF-8", na.strings=c("NULL"))
 
 # set R plot specific labels
-labels <- c(EPPEtX = "Erasmus to Pope Adrian VI", EPPXtE = "Pope Adrian VI to Erasmus", EPPPtX = "Pirckheimer to Pope Adrian VI", EPPXtP = "Pope Adrian VI to Pirckheimer")
+labels <- c(EPPEtX = "Erasmus to Pope ADRIAN VI ", EPPXtE = "Pope ADRIAN VI  to Erasmus", EPPPtX = "Pirckheimer to Pope ADRIAN VI ", EPPXtP = "Pope ADRIAN VI  to Pirckheimer")
 
 # Melt (Wide to Long)
 data_long <- melt(data, id.vars= c("Year"))
@@ -40,3 +40,4 @@ ggsave("no_epp_year_era_pirck_with_adrian_vi_pope_viaf_76430137_facet_grid.pdf",
 ggsave("no_epp_year_era_pirck_with_adrian_vi_pope_viaf_76430137_facet_grid.png", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
 ggsave("no_epp_year_era_pirck_with_adrian_vi_pope_viaf_76430137_facet_grid.eps", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
 ggsave("no_epp_year_era_pirck_with_adrian_vi_pope_viaf_76430137_facet_grid.svg", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
+
