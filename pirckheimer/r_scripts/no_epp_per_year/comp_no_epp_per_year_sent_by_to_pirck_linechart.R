@@ -24,6 +24,7 @@ plot <- ggplot(data=data_long, aes(x= send_date_year1, y=value, colour=variable)
   theme_bw() +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.35)) +
   theme(legend.position="bottom") +
+  theme(legend.title=element_blank()) +
   scale_color_grey(labels = c("Letters sent from Pirckheimer", "Letters sent to Pirckheimer"))
 plot
 

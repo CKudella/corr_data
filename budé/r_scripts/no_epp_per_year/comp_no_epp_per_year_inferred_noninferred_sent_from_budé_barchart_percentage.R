@@ -25,6 +25,7 @@ plot <- ggplot(data_long,aes(x=Year,y=value, fill=variable)) +
   theme_bw() +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.35)) +
   theme(legend.position="bottom") +
+  theme(legend.title=element_blank()) +
   scale_fill_grey(labels = c("Letters sent from Budé with inferred send date", "Letters sent from Budé with non-inferred send date"))
 plot
 
