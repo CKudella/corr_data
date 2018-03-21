@@ -1,1 +1,0 @@
-SELECT send_date_year1, COUNT(*) AS 'Number of Letters sent by Pirckheimer to Ruprecht von Mosham per year' from wpirck_cdb_v1.letters WHERE recipient_id = 'mosham_ruprecht_von_viaf_20551741' GROUP BY send_date_year1 ORDER BY send_date_year1 ASC

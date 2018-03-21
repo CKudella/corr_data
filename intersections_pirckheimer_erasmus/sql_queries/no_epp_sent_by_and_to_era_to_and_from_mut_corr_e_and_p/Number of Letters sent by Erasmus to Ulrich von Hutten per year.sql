@@ -1,1 +1,0 @@
-SELECT send_date_year1, COUNT(*) AS 'Number of letters sent by Erasmus to Ulrich von Hutten per year' FROM era_cdb_v3.letters WHERE recipient_id = 'hutten_ulrich_von_viaf_95193756' GROUP BY send_date_year1 ORDER BY send_date_year1 ASC

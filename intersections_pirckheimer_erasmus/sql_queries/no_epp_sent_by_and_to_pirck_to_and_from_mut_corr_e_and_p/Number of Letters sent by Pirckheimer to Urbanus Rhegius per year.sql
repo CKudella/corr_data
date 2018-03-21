@@ -1,1 +1,0 @@
-SELECT send_date_year1, COUNT(*) AS 'Number of Letters sent by Pirckheimer to Urbanus Rhegius per year' from wpirck_cdb_v1.letters WHERE recipient_id = 'rhegius_urbanus_viaf_17232588' GROUP BY send_date_year1 ORDER BY send_date_year1 ASC

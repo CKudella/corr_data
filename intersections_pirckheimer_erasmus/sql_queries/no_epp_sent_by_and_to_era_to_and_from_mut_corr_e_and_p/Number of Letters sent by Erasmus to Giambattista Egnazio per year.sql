@@ -1,1 +1,0 @@
-SELECT send_date_year1, COUNT(*) AS 'Number of letters sent by Erasmus to Giambattista Egnazio per year' FROM era_cdb_v3.letters WHERE recipient_id = 'egnazio_giovanni_battista_viaf_100187526' GROUP BY send_date_year1 ORDER BY send_date_year1 ASC

@@ -1,1 +1,0 @@
-SELECT send_date_year1, COUNT(*) AS 'Number of Letters sent by Johann Lotzer to Pirckheimer per year' from wpirck_cdb_v1.letters WHERE sender_id = 'lotzer_johann_(1)_viaf_37256989' GROUP BY send_date_year1 ORDER BY send_date_year1 ASC

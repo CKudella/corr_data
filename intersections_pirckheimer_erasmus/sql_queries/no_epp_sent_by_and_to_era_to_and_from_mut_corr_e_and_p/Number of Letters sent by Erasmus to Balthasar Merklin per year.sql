@@ -1,1 +1,0 @@
-SELECT send_date_year1, COUNT(*) AS 'Number of letters sent by Erasmus to Balthasar Merklin per year' FROM era_cdb_v3.letters WHERE recipient_id = 'balthasar_konstanz_bischof_viaf_42723378' GROUP BY send_date_year1 ORDER BY send_date_year1 ASC

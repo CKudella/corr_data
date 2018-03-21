@@ -1,1 +1,0 @@
-SELECT send_date_year1, COUNT(*) AS 'Number of Letters sent by Christoph Hegendorf to Pirckheimer per year' from wpirck_cdb_v1.letters WHERE sender_id = 'hegendorph_christoph_viaf_54260943' GROUP BY send_date_year1 ORDER BY send_date_year1 ASC

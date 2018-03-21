@@ -1,1 +1,0 @@
-SELECT send_date_year1, COUNT(*) AS 'Number of Letters sent by Martin Luther to Pirckheimer per year' from wpirck_cdb_v1.letters WHERE sender_id = 'luther_martin_viaf_14773105' GROUP BY send_date_year1 ORDER BY send_date_year1 ASC

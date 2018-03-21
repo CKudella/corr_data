@@ -1,1 +1,0 @@
-SELECT send_date_year1, COUNT(*) AS 'Number of Letters sent by Pirckheimer to Nikolaus Basellius per year' from wpirck_cdb_v1.letters WHERE recipient_id = 'basellius_nikolaus_viaf_30349975' GROUP BY send_date_year1 ORDER BY send_date_year1 ASC

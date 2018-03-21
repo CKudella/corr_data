@@ -1,1 +1,0 @@
-SELECT send_date_year1, COUNT(*) AS 'Number of Letters sent by Ulrich von Hutten to Pirckheimer per year' from wpirck_cdb_v1.letters WHERE sender_id = 'hutten_ulrich_von_viaf_95193756' GROUP BY send_date_year1 ORDER BY send_date_year1 ASC

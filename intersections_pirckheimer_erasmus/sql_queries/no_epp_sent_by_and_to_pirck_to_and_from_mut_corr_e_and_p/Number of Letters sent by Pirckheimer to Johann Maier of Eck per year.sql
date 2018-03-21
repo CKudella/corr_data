@@ -1,1 +1,0 @@
-SELECT send_date_year1, COUNT(*) AS 'Number of Letters sent by Pirckheimer to Johann Maier of Eck per year' from wpirck_cdb_v1.letters WHERE recipient_id = 'eck_johann_viaf_100185986' GROUP BY send_date_year1 ORDER BY send_date_year1 ASC

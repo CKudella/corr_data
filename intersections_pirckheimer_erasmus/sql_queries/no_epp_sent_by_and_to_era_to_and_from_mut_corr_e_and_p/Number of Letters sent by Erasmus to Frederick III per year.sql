@@ -1,1 +1,0 @@
-SELECT send_date_year1, COUNT(*) AS 'Number of letters sent by Erasmus to Fredrick III, elector of Saxony per year' FROM era_cdb_v3.letters WHERE recipient_id = 'frederick_iii_elector_of_saxony_viaf_316392243' GROUP BY send_date_year1 ORDER BY send_date_year1 ASC

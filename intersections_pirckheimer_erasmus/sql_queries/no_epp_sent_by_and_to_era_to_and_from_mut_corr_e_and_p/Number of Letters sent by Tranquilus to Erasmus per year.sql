@@ -1,1 +1,0 @@
-SELECT send_date_year1, COUNT(*) AS 'Number of letters sent by Tranquilus to Erasmus per year' FROM era_cdb_v3.letters WHERE sender_id = 'andreis_franjo_trankvil_viaf_22294763' GROUP BY send_date_year1 ORDER BY send_date_year1 ASC

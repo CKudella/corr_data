@@ -1,1 +1,0 @@
-SELECT send_date_year1, COUNT(*) AS 'Number of Letters sent by Pirckheimer to Tranquillus per year' from wpirck_cdb_v1.letters WHERE recipient_id = 'andreis_franjo_trankvil_viaf_22294763' GROUP BY send_date_year1 ORDER BY send_date_year1 ASC

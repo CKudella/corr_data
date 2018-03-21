@@ -1,1 +1,0 @@
-SELECT send_date_year1, COUNT(*) AS 'Number of letters sent by Erasmus to Helius Eobanus Hessus per year' FROM era_cdb_v3.letters WHERE recipient_id = 'hessus_helius_eobanus_viaf_71412338' GROUP BY send_date_year1 ORDER BY send_date_year1 ASC

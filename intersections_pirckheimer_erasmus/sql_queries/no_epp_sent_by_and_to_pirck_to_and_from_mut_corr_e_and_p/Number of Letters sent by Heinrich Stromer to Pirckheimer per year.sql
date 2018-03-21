@@ -1,1 +1,0 @@
-SELECT send_date_year1, COUNT(*) AS 'Number of Letters sent by Heinrich Stromer to Pirckheimer per year' from wpirck_cdb_v1.letters WHERE sender_id = 'auerbach_heinrich_viaf_69872391' GROUP BY send_date_year1 ORDER BY send_date_year1 ASC

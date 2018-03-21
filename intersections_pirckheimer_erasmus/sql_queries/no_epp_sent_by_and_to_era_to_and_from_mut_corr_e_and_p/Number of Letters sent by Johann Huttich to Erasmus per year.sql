@@ -1,1 +1,0 @@
-SELECT send_date_year1, COUNT(*) AS 'Number of letters sent by Johann Huttich to Erasmus per year' FROM era_cdb_v3.letters WHERE sender_id = 'huttich_johann_viaf_5722622' GROUP BY send_date_year1 ORDER BY send_date_year1 ASC

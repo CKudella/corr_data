@@ -1,1 +1,0 @@
-SELECT send_date_year1, COUNT(*) AS 'Number of letters sent by Hermann von Neuenahr to Erasmus per year' FROM era_cdb_v3.letters WHERE sender_id = 'neuenar_hermann_graf_von_viaf_18164526' GROUP BY send_date_year1 ORDER BY send_date_year1 ASC

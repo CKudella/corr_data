@@ -1,1 +1,0 @@
-SELECT send_date_year1, COUNT(*) AS 'Number of letters sent by Erasmus to Jakob Spiegel per year' FROM era_cdb_v3.letters WHERE recipient_id = 'spiegel_jakob_viaf_24846746' GROUP BY send_date_year1 ORDER BY send_date_year1 ASC

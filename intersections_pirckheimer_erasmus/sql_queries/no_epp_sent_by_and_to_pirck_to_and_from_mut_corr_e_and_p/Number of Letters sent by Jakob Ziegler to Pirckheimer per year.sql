@@ -1,1 +1,0 @@
-SELECT send_date_year1, COUNT(*) AS 'Number of Letters sent by Jakob Ziegler to Pirckheimer per year' from wpirck_cdb_v1.letters WHERE sender_id = 'ziegler_jakob_viaf_15074694' GROUP BY send_date_year1 ORDER BY send_date_year1 ASC

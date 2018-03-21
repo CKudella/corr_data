@@ -1,1 +1,0 @@
-SELECT send_date_year1, COUNT(*) AS 'Number of Letters sent by Pope Leo X to Pirckheimer per year' from wpirck_cdb_v1.letters WHERE sender_id = 'leo_x_pope_viaf_316407579' GROUP BY send_date_year1 ORDER BY send_date_year1 ASC
