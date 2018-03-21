@@ -1,4 +1,4 @@
-SELECT DISTINCT BL.sender_id,
+SELECT DISTINCT PL.sender_id,
                 COUNT(*) AS 'Number of letters sent to Pirckheimer per mutual correspondent'
 FROM wpirck_cdb_v1.letters AS PL,
 
@@ -13,5 +13,5 @@ FROM wpirck_cdb_v1.letters AS PL,
           AND E.correspondents_id NOT LIKE 'unnamed_person_viaf_not_applicable')) AS MC
 WHERE PL.sender_id = MC.correspondents_id
   AND sender_id != 'pirckheimer_willibald_viaf_27173507'
-GROUP BY BL.sender_id
+GROUP BY PL.sender_id
 ORDER BY COUNT(*) DESC
