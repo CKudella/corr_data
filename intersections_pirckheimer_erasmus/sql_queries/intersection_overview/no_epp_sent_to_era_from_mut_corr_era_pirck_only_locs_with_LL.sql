@@ -11,7 +11,7 @@ WHERE L.recipient_id = 'erasmus_desiderius_viaf_95982394'
          (SELECT E.correspondents_id
           FROM era_cdb_v3.correspondents AS E,
                wpirck_cdb_v1.correspondents AS P
-          WHERE E.correspondents_id = correspondents_id
+          WHERE E.correspondents_id = P.correspondents_id
             AND E.correspondents_id NOT LIKE 'unnamed_person_viaf_not_applicable'
             AND P.correspondents_id NOT LIKE 'unnamed_person_viaf_not_applicable'))
   AND L.target_loc_id NOT LIKE 'unknown%'
