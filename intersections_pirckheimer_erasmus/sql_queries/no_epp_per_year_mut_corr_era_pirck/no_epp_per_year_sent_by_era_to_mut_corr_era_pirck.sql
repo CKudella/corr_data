@@ -5,10 +5,10 @@ WHERE letters_id NOT LIKE '%ck2'
   AND sender_id = 'erasmus_desiderius_viaf_95982394'
   AND recipient_id IN
     (SELECT E.correspondents_id
-     FROM wpirck_cdb_v1.correspondents AS B,
+     FROM wpirck_cdb_v1.correspondents AS P,
           era_cdb_v3.correspondents AS E
-     WHERE B.correspondents_id = E.correspondents_id
-       AND B.correspondents_id NOT IN ('unnamed_person_viaf_not_applicable',
+     WHERE correspondents_id = E.correspondents_id
+       AND correspondents_id NOT IN ('unnamed_person_viaf_not_applicable',
                                        'erasmus_desiderius_viaf_95982394',
                                        'pirckheimer_willibald_viaf_27173507')
        AND E.correspondents_id NOT IN ('unnamed_person_viaf_not_applicable',

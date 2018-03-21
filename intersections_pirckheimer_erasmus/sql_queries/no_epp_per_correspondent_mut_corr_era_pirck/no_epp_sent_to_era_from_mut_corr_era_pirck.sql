@@ -5,7 +5,7 @@ FROM era_cdb_v3.letters AS EL,
   (SELECT *
    FROM era_cdb_v3.correspondents AS X
    WHERE X.correspondents_id IN
-       (SELECT B.correspondents_id
+       (SELECT correspondents_id
         FROM wpirck_cdb_v1.correspondents AS P,
              era_cdb_v3.correspondents AS E
         WHERE P.correspondents_id = E.correspondents_id

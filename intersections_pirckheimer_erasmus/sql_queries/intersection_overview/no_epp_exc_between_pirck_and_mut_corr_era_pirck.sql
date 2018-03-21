@@ -9,7 +9,7 @@ WHERE L.sender_id IN
          (SELECT E.correspondents_id
           FROM era_cdb_v3.correspondents AS E,
                wpirck_cdb_v1.correspondents AS P
-          WHERE E.correspondents_id = B.correspondents_id
+          WHERE E.correspondents_id = correspondents_id
             AND E.correspondents_id NOT LIKE 'unnamed_person_viaf_not_applicable'
             AND P.correspondents_id NOT LIKE 'unnamed_person_viaf_not_applicable'))
   AND L.recipient_id IN
@@ -19,6 +19,6 @@ WHERE L.sender_id IN
          (SELECT E.correspondents_id
           FROM era_cdb_v3.correspondents AS E,
                wpirck_cdb_v1.correspondents AS P
-          WHERE E.correspondents_id = B.correspondents_id
+          WHERE E.correspondents_id = correspondents_id
             AND E.correspondents_id NOT LIKE 'unnamed_person_viaf_not_applicable'
             AND P.correspondents_id NOT LIKE 'unnamed_person_viaf_not_applicable'))
