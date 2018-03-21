@@ -3,7 +3,7 @@ FROM
   (SELECT *
    FROM budé_cdb_v1.letters) AS L
 WHERE L.recipient_id = 'budé_guillaume_viaf_105878228'
-  AND L. sender_id IN
+  AND L.sender_id IN
     (SELECT X.correspondents_id
      FROM budé_cdb_v1.correspondents AS X
      WHERE X.correspondents_id IN

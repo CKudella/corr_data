@@ -1,26 +1,26 @@
-SELECT COUNT(*) AS 'Total number of letters exchanged between Budé and mutual correspondents of his and and Erasmus (only letters with source and target locs with geocoordinate)'
+SELECT COUNT(*) AS 'Total number of letters exchanged between Pirckheimer and mutual correspondents of his and and Erasmus (only letters with source and target locs with geocoordinate)'
 FROM
   (SELECT *
-   FROM budé_cdb_v1.letters) AS L
+   FROM wpirck_cdb_v1.letters) AS L
 WHERE L.sender_id IN
     (SELECT X.correspondents_id
-     FROM budé_cdb_v1.correspondents AS X
+     FROM wpirck_cdb_v1.correspondents AS X
      WHERE X.correspondents_id IN
          (SELECT E.correspondents_id
           FROM era_cdb_v3.correspondents AS E,
-               budé_cdb_v1.correspondents AS B
+               wpirck_cdb_v1.correspondents AS P
           WHERE E.correspondents_id = B.correspondents_id
             AND E.correspondents_id NOT LIKE 'unnamed_person_viaf_not_applicable'
-            AND B.correspondents_id NOT LIKE 'unnamed_person_viaf_not_applicable'))
+            AND P.correspondents_id NOT LIKE 'unnamed_person_viaf_not_applicable'))
   AND L.source_loc_id NOT LIKE 'unknown%'
   AND L.recipient_id IN
     (SELECT X.correspondents_id
-     FROM budé_cdb_v1.correspondents AS X
+     FROM wpirck_cdb_v1.correspondents AS X
      WHERE X.correspondents_id IN
          (SELECT E.correspondents_id
           FROM era_cdb_v3.correspondents AS E,
-               budé_cdb_v1.correspondents AS B
+               wpirck_cdb_v1.correspondents AS P
           WHERE E.correspondents_id = B.correspondents_id
             AND E.correspondents_id NOT LIKE 'unnamed_person_viaf_not_applicable'
-            AND B.correspondents_id NOT LIKE 'unnamed_person_viaf_not_applicable'))
+            AND P.correspondents_id NOT LIKE 'unnamed_person_viaf_not_applicable'))
   AND L.target_loc_id NOT LIKE 'unknown%'
