@@ -11,9 +11,9 @@ WHERE locations.locations_id = letters.target_loc_id
      WHERE P.correspondents_id = E.correspondents_id
        AND P.correspondents_id NOT IN ('unnamed_person_viaf_not_applicable',
                                        'erasmus_desiderius_viaf_95982394',
-                                       'budé_guillaume_viaf_105878228')
+                                       'pirckheimer_willibald_viaf_27173507')
        AND E.correspondents_id NOT IN ('unnamed_person_viaf_not_applicable',
                                        'erasmus_desiderius_viaf_95982394',
-                                       'budé_guillaume_viaf_105878228'))
+                                       'pirckheimer_willibald_viaf_27173507'))
 GROUP BY locations_modern_state
 ORDER BY COUNT(DISTINCT recipient_id) DESC
