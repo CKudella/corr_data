@@ -15,7 +15,7 @@ WHERE letters_id NOT LIKE '%ck2'
                era_cdb_v3.correspondents AS E
           WHERE B.correspondents_id = E.correspondents_id
             AND B.correspondents_id NOT LIKE 'unnamed_person_viaf_not_applicable'
-            AND E.correspondents_id NOT IN NOT LIKE 'unnamed_person_viaf_not_applicable'
+            AND E.correspondents_id NOT LIKE 'unnamed_person_viaf_not_applicable'
 ))
 GROUP BY target_loc_id
 ORDER BY COUNT(letters.target_loc_id) DESC
