@@ -1,6 +1,6 @@
-SELECT DISTINCT EL.sender_id,
+SELECT DISTINCT EL.sender_id, EC.name_in_edition,
                 COUNT(*) AS 'Number of letters sent to Erasmus per mutual correspondent'
-FROM era_cdb_v3.letters AS EL,
+FROM era_cdb_v3.letters AS EL, era_cdb_v3.correspondents AS EC,
 
   (SELECT *
    FROM era_cdb_v3.correspondents AS X

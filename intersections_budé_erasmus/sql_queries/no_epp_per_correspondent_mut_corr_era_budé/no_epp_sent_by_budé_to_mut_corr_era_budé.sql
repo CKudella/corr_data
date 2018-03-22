@@ -1,6 +1,6 @@
-SELECT DISTINCT BL.recipient_id,
+SELECT DISTINCT BL.recipient_id, EC.name_in_edition,
                 COUNT(*) AS 'Number of letters sent by Budé per mutual correspondent'
-FROM budé_cdb_v1.letters AS BL,
+FROM budé_cdb_v1.letters AS BL, era_cdb_v3.correspondents AS EC,
 
   (SELECT *
    FROM era_cdb_v3.correspondents AS X
