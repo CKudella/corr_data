@@ -1,1 +1,40 @@
-SELECT locations_id AS 'Id', geonames_id, locations_name_modern, locations_name_in_edition, locations_modern_state, locations_modern_province, locations_lat, locations_lng, locations_ll_combined, locations_further_annotation FROM locations WHERE locations_id IN (SELECT DISTINCT source_loc_id FROM letters WHERE recipient_id = 'erasmus_desiderius_viaf_95982394' AND sender_id IN (Select E.correspondents_id from budé_cdb_v1.correspondents AS B, era_cdb_v3.correspondents AS E WHERE B.correspondents_id = E.correspondents_id AND B.correspondents_id NOT IN ('unnamed_person_viaf_not_applicable', 'erasmus_desiderius_viaf_95982394', 'budé_guillaume_viaf_105878228') AND E.correspondents_id NOT IN ('unnamed_person_viaf_not_applicable', 'erasmus_desiderius_viaf_95982394', 'budé_guillaume_viaf_105878228')) AND source_loc_id NOT LIKE 'unknown%') OR locations_id IN (SELECT DISTINCT target_loc_id FROM era_cdb_v3.letters WHERE recipient_id = 'erasmus_desiderius_viaf_95982394' AND sender_id IN (Select E.correspondents_id from budé_cdb_v1.correspondents AS B, era_cdb_v3.correspondents AS E WHERE B.correspondents_id = E.correspondents_id AND B.correspondents_id NOT IN ('unnamed_person_viaf_not_applicable', 'erasmus_desiderius_viaf_95982394', 'budé_guillaume_viaf_105878228') AND E.correspondents_id NOT IN ('unnamed_person_viaf_not_applicable', 'erasmus_desiderius_viaf_95982394', 'budé_guillaume_viaf_105878228')) AND target_loc_id NOT LIKE 'unknown%') GROUP BY locations_id
+SELECT locations_id AS 'Id',
+       locations_name_modern,
+       locations_modern_state,
+       locations_modern_province,
+       locations_lat,
+       locations_lng,
+FROM locations
+WHERE locations_id IN
+    (SELECT DISTINCT source_loc_id
+     FROM letters
+     WHERE recipient_id = 'erasmus_desiderius_viaf_95982394'
+       AND sender_id IN
+         (SELECT E.correspondents_id
+          FROM budé_cdb_v1.correspondents AS B,
+               era_cdb_v3.correspondents AS E
+          WHERE B.correspondents_id = E.correspondents_id
+            AND B.correspondents_id NOT IN ('unnamed_person_viaf_not_applicable',
+                                            'erasmus_desiderius_viaf_95982394',
+                                            'budé_guillaume_viaf_105878228')
+            AND E.correspondents_id NOT IN ('unnamed_person_viaf_not_applicable',
+                                            'erasmus_desiderius_viaf_95982394',
+                                            'budé_guillaume_viaf_105878228'))
+       AND source_loc_id NOT LIKE 'unknown%')
+  OR locations_id IN
+    (SELECT DISTINCT target_loc_id
+     FROM era_cdb_v3.letters
+     WHERE recipient_id = 'erasmus_desiderius_viaf_95982394'
+       AND sender_id IN
+         (SELECT E.correspondents_id
+          FROM budé_cdb_v1.correspondents AS B,
+               era_cdb_v3.correspondents AS E
+          WHERE B.correspondents_id = E.correspondents_id
+            AND B.correspondents_id NOT IN ('unnamed_person_viaf_not_applicable',
+                                            'erasmus_desiderius_viaf_95982394',
+                                            'budé_guillaume_viaf_105878228')
+            AND E.correspondents_id NOT IN ('unnamed_person_viaf_not_applicable',
+                                            'erasmus_desiderius_viaf_95982394',
+                                            'budé_guillaume_viaf_105878228'))
+       AND target_loc_id NOT LIKE 'unknown%')
+GROUP BY locations_id
