@@ -1,6 +1,6 @@
-SELECT DISTINCT PL.sender_id,
+SELECT DISTINCT PL.sender_id, EC.name_in_edition,
                 COUNT(*) AS 'Number of letters sent to Pirckheimer per mutual correspondent'
-FROM wpirck_cdb_v1.letters AS PL,
+FROM wpirck_cdb_v1.letters AS PL, era_cdb_v3.correspondents AS EC,
 
   (SELECT *
    FROM era_cdb_v3.correspondents AS X
@@ -11,7 +11,7 @@ FROM wpirck_cdb_v1.letters AS PL,
         WHERE P.correspondents_id = E.correspondents_id
           AND P.correspondents_id NOT LIKE 'unnamed_person_viaf_not_applicable'
           AND E.correspondents_id NOT LIKE 'unnamed_person_viaf_not_applicable')) AS MC
-WHERE PL.sender_id = MC.correspondents_id
+WHERE PL.sender_id = MC.correspondents_id AND EC.correspondents_id = PL.sender_id
   AND sender_id != 'pirckheimer_willibald_viaf_27173507'
 GROUP BY PL.sender_id
 ORDER BY COUNT(*) DESC
