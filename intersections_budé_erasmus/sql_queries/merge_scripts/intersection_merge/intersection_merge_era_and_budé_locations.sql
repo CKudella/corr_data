@@ -8,7 +8,7 @@ FROM
       WHERE B.locations_id NOT IN
           (SELECT E.locations_id
            FROM era_cdb_v3.locations AS E))) AS LOC
-WHERE Loc.locations_id IN
+WHERE LOC.locations_id IN
     (SELECT DISTINCT source_loc_id
      FROM
        (SELECT *
@@ -37,7 +37,7 @@ WHERE Loc.locations_id IN
                WHERE B.correspondents_id = E.correspondents_id
                  AND B.correspondents_id NOT LIKE 'unnamed_person_viaf_not_applicable'
                  AND E.correspondents_id NOT LIKE 'unnamed_person_viaf_not_applicable')))
-  OR Loc.locations_id IN
+  OR LOC.locations_id IN
     (SELECT DISTINCT target_loc_id
      FROM
        (SELECT *
