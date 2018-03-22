@@ -15,15 +15,14 @@ WHERE locations_id IN
      FROM budé_cdb_v1.letters
      WHERE sender_id = 'budé_guillaume_viaf_105878228'
        AND recipient_id IN
-         (SELECT E.correspondents_id
-          FROM budé_cdb_v1.correspondents AS B,
-               era_cdb_v3.correspondents AS E
-          WHERE B.correspondents_id = E.correspondents_id
-            AND B.correspondents_id NOT IN ('unnamed_person_viaf_not_applicable',
-                                            'erasmus_desiderius_viaf_95982394',
-                                            'budé_guillaume_viaf_105878228')
-            AND E.correspondents_id NOT IN ('unnamed_person_viaf_not_applicable',
-                                            'erasmus_desiderius_viaf_95982394',
-                                            'budé_guillaume_viaf_105878228'))
+         (SELECT X.correspondents_id
+          FROM budé_cdb_v1.correspondents AS X
+          WHERE X.correspondents_id IN
+              (SELECT E.correspondents_id
+               FROM era_cdb_v3.correspondents AS E,
+                    budé_cdb_v1.correspondents AS B
+               WHERE E.correspondents_id = B.correspondents_id
+                 AND E.correspondents_id NOT LIKE 'unnamed_person_viaf_not_applicable'
+                 AND B.correspondents_id NOT LIKE 'unnamed_person_viaf_not_applicable'))
        AND target_loc_id NOT LIKE 'unknown%')
 GROUP BY locations_id
