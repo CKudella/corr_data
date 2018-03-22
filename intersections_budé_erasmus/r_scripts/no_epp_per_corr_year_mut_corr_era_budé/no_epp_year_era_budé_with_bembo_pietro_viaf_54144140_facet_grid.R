@@ -1,4 +1,4 @@
-﻿require(readr)
+require(readr)
 require(reshape2)
 require(ggplot2)
 library(readr)
@@ -22,7 +22,7 @@ data_long <- melt(data, id.vars= c("Year"))
 plot <- ggplot(data=data_long, aes(x= Year,y=value, factor = variable)) +
     geom_point(stat = "identity", size = 1.75) +
     labs(x="Year",y="Number of letters") +
-    scale_x_continuous(breaks = c(1484:1536)) +
+    scale_x_continuous(breaks = c(1484:1540)) +
     scale_y_continuous(breaks = seq(1,10,1)) +
     facet_grid(variable ~ ., labeller=labeller(variable = labels)) +
     theme_bw() +
