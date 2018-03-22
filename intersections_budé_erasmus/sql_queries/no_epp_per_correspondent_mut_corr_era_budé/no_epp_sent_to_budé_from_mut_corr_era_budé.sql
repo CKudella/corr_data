@@ -11,7 +11,7 @@ FROM budé_cdb_v1.letters AS BL, era_cdb_v3.correspondents AS EC,
         WHERE B.correspondents_id = E.correspondents_id
           AND B.correspondents_id NOT LIKE 'unnamed_person_viaf_not_applicable'
           AND E.correspondents_id NOT LIKE 'unnamed_person_viaf_not_applicable')) AS MC
-WHERE BL.sender_id = MC.correspondents_id
+WHERE BL.sender_id = MC.correspondents_id AND EC.correspondents_id = BL.sender_id
   AND sender_id != 'budé_guillaume_viaf_105878228'
 GROUP BY BL.sender_id
 ORDER BY COUNT(*) DESC
