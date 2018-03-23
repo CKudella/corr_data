@@ -11,11 +11,7 @@ WHERE letters_id NOT LIKE '%ck2'
          (SELECT P.correspondents_id
           FROM wpirck_cdb_v1.correspondents AS P,
                era_cdb_v3.correspondents AS E
-          WHERE P.correspondents_id = E.correspondents_id
-            AND P.correspondents_id NOT LIKE 'unnamed_person_viaf_not_applicable'
-            AND E.correspondents_id NOT IN ('unnamed_person_viaf_not_applicable',
-                                            'erasmus_desiderius_viaf_95982394',
-                                            'pirckheimer_willibald_viaf_27173507
-')))
+          WHERE P.correspondents_id = E.correspondents_id))
+  AND recipient_id != 'pirckheimer_willibald_viaf_27173507'
 GROUP BY locations_modern_state
 ORDER BY COUNT(letters.target_loc_id) DESC
