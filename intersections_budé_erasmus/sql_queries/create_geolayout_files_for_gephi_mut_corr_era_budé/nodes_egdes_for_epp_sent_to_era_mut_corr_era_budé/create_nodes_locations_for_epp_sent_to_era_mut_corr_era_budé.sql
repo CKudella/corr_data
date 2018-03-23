@@ -16,9 +16,7 @@ WHERE locations_id IN
               (SELECT E.correspondents_id
                FROM era_cdb_v3.correspondents AS E,
                     budé_cdb_v1.correspondents AS B
-               WHERE E.correspondents_id = B.correspondents_id
-                 AND E.correspondents_id NOT LIKE 'unnamed_person_viaf_not_applicable'
-                 AND B.correspondents_id NOT LIKE 'unnamed_person_viaf_not_applicable'))
+               WHERE E.correspondents_id = B.correspondents_id))
        AND source_loc_id NOT LIKE 'unknown%')
   OR locations_id IN
     (SELECT DISTINCT target_loc_id
@@ -30,8 +28,6 @@ WHERE locations_id IN
               (SELECT E.correspondents_id
                FROM era_cdb_v3.correspondents AS E,
                     budé_cdb_v1.correspondents AS B
-               WHERE E.correspondents_id = B.correspondents_id
-                 AND E.correspondents_id NOT LIKE 'unnamed_person_viaf_not_applicable'
-                 AND B.correspondents_id NOT LIKE 'unnamed_person_viaf_not_applicable'))
+               WHERE E.correspondents_id = B.correspondents_id))
        AND target_loc_id NOT LIKE 'unknown%')
 GROUP BY locations_id
