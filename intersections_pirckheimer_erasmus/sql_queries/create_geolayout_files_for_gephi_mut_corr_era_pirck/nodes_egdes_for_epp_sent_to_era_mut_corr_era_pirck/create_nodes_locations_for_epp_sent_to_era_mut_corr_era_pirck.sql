@@ -19,10 +19,10 @@ WHERE ELOC.locations_id IN
                WHERE E.correspondents_id = P.correspondents_id))
        AND ELETA.source_loc_id NOT LIKE 'unknown%')
   OR ELOC.locations_id IN
-    (SELECT DISTINCT ELETP.target_loc_id
+    (SELECT DISTINCT ELETB.target_loc_id
      FROM era_cdb_v3.letters AS ELETB
-     WHERE ELETP.recipient_id = 'erasmus_desiderius_viaf_95982394'
-      AND ELETP.sender_id IN
+     WHERE ELETB.recipient_id = 'erasmus_desiderius_viaf_95982394'
+      AND ELETB.sender_id IN
          (SELECT X.correspondents_id
           FROM wpirck_cdb_v1.correspondents AS X
           WHERE X.correspondents_id IN
@@ -30,5 +30,5 @@ WHERE ELOC.locations_id IN
                FROM era_cdb_v3.correspondents AS E,
                     wpirck_cdb_v1.correspondents AS P
                WHERE E.correspondents_id = P.correspondents_id))
-       AND ELETP.target_loc_id NOT LIKE 'unknown%')
+       AND ELETB.target_loc_id NOT LIKE 'unknown%')
 GROUP BY ELOC.locations_id
