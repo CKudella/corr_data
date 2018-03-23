@@ -8,7 +8,7 @@ getwd()
 setwd("../query_results/")
 
 # read data
-data<-read.csv("no_epp_per_modern_state_year_mut_corr_era_pirck/no_epp_from_pirckto_modern_state_per_year_mut_corr_era_pirck_excl_era.csv", fileEncoding="UTF-8", na.strings=c("NULL"))
+data<-read.csv("no_epp_per_modern_state_year_mut_corr_era_pirck/no_epp_from_pirck_to_modern_state_per_year_mut_corr_era_pirck_excl_era.csv", fileEncoding="UTF-8", na.strings=c("NULL"))
 
 # # create barchart with facet grid
 plot <- ggplot(data=data, aes(x=send_date_year1,y=Number.of.letters.Pirckheimer.sent.to.this.modern.state.this.year.to.mutual.correspondents.of.his.and.Erasmus..excl..Erasmus.)) +
@@ -27,7 +27,7 @@ getwd()
 setwd("../r_plots/")
 
 # save plot in multiple formats
-ggsave("no_epp_from_pirckto_modern_state_per_year_mut_corr_era_pirck_excl_era_facet_grid.pdf", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
-ggsave("no_epp_from_pirckto_modern_state_per_year_mut_corr_era_pirck_excl_era_facet_grid.png", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
-ggsave("no_epp_from_pirckto_modern_state_per_year_mut_corr_era_pirck_excl_era_facet_grid.eps", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
-ggsave("no_epp_from_pirckto_modern_state_per_year_mut_corr_era_pirck_excl_era_facet_grid.svg", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("no_epp_from_pirck_to_modern_state_per_year_mut_corr_era_pirck_excl_era_facet_grid.pdf", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("no_epp_from_pirck_to_modern_state_per_year_mut_corr_era_pirck_excl_era_facet_grid.png", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("no_epp_from_pirck_to_modern_state_per_year_mut_corr_era_pirck_excl_era_facet_grid.eps", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("no_epp_from_pirck_to_modern_state_per_year_mut_corr_era_pirck_excl_era_facet_grid.svg", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
