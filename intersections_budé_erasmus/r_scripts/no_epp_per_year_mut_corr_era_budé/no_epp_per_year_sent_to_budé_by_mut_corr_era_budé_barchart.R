@@ -14,6 +14,7 @@ data<-read.csv("no_epp_per_year_mut_corr_era_budé/no_epp_per_year_sent_to_budé
 plot <- ggplot(data=data, aes(x=send_date_year1,y= Total.number.of.letters.sent.to.Budé.this.year.to.mutual.correspondents.of.his.and.Erasmus..excl..Erasmus.)) +
   geom_bar(stat = "identity") +
   labs(x="Year",y="Number of letters sent to Budé from mutual correspondents") +
+  geom_text(aes(label=Total.number.of.letters.sent.to.Budé.this.year.to.mutual.correspondents.of.his.and.Erasmus..excl..Erasmus.), vjust=-0.5, color='black') +
   scale_x_continuous(breaks = c(1484:1540)) +
   scale_y_continuous(breaks = seq(0,20,1)) +
   theme_bw() +
