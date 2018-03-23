@@ -1,9 +1,9 @@
-SELECT source_loc_id AS 'Source',
-       target_loc_id AS 'Target'
-FROM budé_cdb_v1.letters
-WHERE sender_id = 'budé_guillaume_viaf_105878228'
-  AND letters_id NOT LIKE '%ck2'
-  AND recipient_id IN
+SELECT BLET.source_loc_id AS 'Source',
+       BLET.target_loc_id AS 'Target'
+FROM budé_cdb_v1.letters AS BLET
+WHERE BLET.sender_id = 'budé_guillaume_viaf_105878228'
+  AND BLET.letters_id NOT LIKE '%ck2'
+  AND BLET.recipient_id IN
     (SELECT X.correspondents_id
      FROM budé_cdb_v1.correspondents AS X
      WHERE X.correspondents_id IN
@@ -11,5 +11,5 @@ WHERE sender_id = 'budé_guillaume_viaf_105878228'
           FROM era_cdb_v3.correspondents AS E,
                budé_cdb_v1.correspondents AS B
           WHERE E.correspondents_id = B.correspondents_id))
-  AND source_loc_id NOT LIKE 'unknown%'
-  AND target_loc_id NOT LIKE 'unknown%'
+  AND BLET.source_loc_id NOT LIKE 'unknown%'
+  AND BLET.target_loc_id NOT LIKE 'unknown%'

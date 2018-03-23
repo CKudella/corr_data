@@ -1,15 +1,15 @@
-SELECT locations_id AS 'Id',
-       locations_name_modern,
-       locations_modern_state,
-       locations_modern_province,
-       locations_lat,
-       locations_lng,
-FROM era_cdb_v3.locations
-WHERE locations_id IN
-    (SELECT DISTINCT source_loc_id
-     FROM letters
-     WHERE recipient_id = 'erasmus_desiderius_viaf_95982394'
-       AND sender_id IN
+SELECT ELOC.locations_id AS 'Id',
+       ELOC.locations_name_modern,
+       ELOC.locations_modern_state,
+       ELOC.locations_modern_province,
+       ELOC.locations_lat,
+       ELOC.locations_lng
+FROM era_cdb_v3.locations AS ELOC
+WHERE ELOC.locations_id IN
+    (SELECT DISTINCT ELETA.source_loc_id
+     FROM era_cdb_v3.letters AS ELETA
+     WHERE ELETA.recipient_id = 'erasmus_desiderius_viaf_95982394'
+       AND ELETA.sender_id IN
          (SELECT X.correspondents_id
           FROM budé_cdb_v1.correspondents AS X
           WHERE X.correspondents_id IN
@@ -17,11 +17,12 @@ WHERE locations_id IN
                FROM era_cdb_v3.correspondents AS E,
                     budé_cdb_v1.correspondents AS B
                WHERE E.correspondents_id = B.correspondents_id))
-       AND source_loc_id NOT LIKE 'unknown%')
-  OR locations_id IN
-    (SELECT DISTINCT target_loc_id
-     FROM era_cdb_v3.letters
-     WHERE recipient_id = 'erasmus_desiderius_viaf_95982394'
+       AND ELETA.source_loc_id NOT LIKE 'unknown%')
+  OR ELOC.locations_id IN
+    (SELECT DISTINCT ELETB.target_loc_id
+     FROM era_cdb_v3.letters AS ELETB
+     WHERE ELETB.recipient_id = 'erasmus_desiderius_viaf_95982394'
+      AND ELETB.sender_id IN
          (SELECT X.correspondents_id
           FROM budé_cdb_v1.correspondents AS X
           WHERE X.correspondents_id IN
@@ -29,5 +30,5 @@ WHERE locations_id IN
                FROM era_cdb_v3.correspondents AS E,
                     budé_cdb_v1.correspondents AS B
                WHERE E.correspondents_id = B.correspondents_id))
-       AND target_loc_id NOT LIKE 'unknown%')
-GROUP BY locations_id
+       AND ELETB.target_loc_id NOT LIKE 'unknown%')
+GROUP BY ELOC.locations_id
