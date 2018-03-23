@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Erstellungszeit: 08. Mrz 2018 um 10:31
+-- Erstellungszeit: 23. Mrz 2018 um 10:42
 -- Server-Version: 5.6.38
 -- PHP-Version: 7.2.1
 
@@ -28,7 +28,6 @@ USE `wpirck_cdb_v1`;
 -- Tabellenstruktur für Tabelle `correspondents`
 --
 
-DROP TABLE IF EXISTS `correspondents`;
 CREATE TABLE `correspondents` (
   `correspondents_id` varchar(200) NOT NULL COMMENT 'This column carries the primary key for the table that is also being used as a foreign key for ‘sender_id’ and ‘recipient_id’ in the ‘letters’ table.',
   `type` varchar(45) DEFAULT NULL COMMENT 'This column classifies the correspondent by the following taxonomy: (1) individual (2) corporate body (3) group.',
@@ -354,7 +353,6 @@ INSERT INTO `correspondents` (`correspondents_id`, `type`, `gender`, `viaf_id`, 
 -- Tabellenstruktur für Tabelle `letters`
 --
 
-DROP TABLE IF EXISTS `letters`;
 CREATE TABLE `letters` (
   `letters_id` varchar(45) NOT NULL COMMENT 'This column carries the primary key for the table.',
   `letter_no_in_edition` varchar(200) DEFAULT NULL COMMENT 'This column carries the sequential alphanumerical identifier(s) of a letter in the edition(s) followed by an abbreviation of the edition the identifiers refers to.',
@@ -1803,7 +1801,6 @@ INSERT INTO `letters` (`letters_id`, `letter_no_in_edition`, `sender_id`, `sende
 -- Tabellenstruktur für Tabelle `locations`
 --
 
-DROP TABLE IF EXISTS `locations`;
 CREATE TABLE `locations` (
   `locations_id` varchar(90) NOT NULL COMMENT 'This column carries the primary key for the table that is also being used as a foreign key for ‘source_loc_id’ and target_loc_id’ in the ‘letters’ table as well as ‘pob_loc_id’ and ‘pod_loc_id’ in the ‘correspondents’ table. ',
   `geonames_id` varchar(90) DEFAULT NULL COMMENT 'This column carries the numeric Geonames ID. For locations for which no Geonames ID is available, the value should be set to “unknown”.',
@@ -2035,7 +2032,7 @@ INSERT INTO `locations` (`locations_id`, `geonames_id`, `locations_name_modern`,
 ('unknown_location_in_bavaria_DE_gid_unknown', 'unknown', 'Unknown Location in Bavaria', 'Aus Bayern', 'Germany', 'Bavaria', 0, 0, '', ''),
 ('unknown_location_in_germany_DE_gid_unknown', 'Unknown', 'Unknown Location in Germany', 'Unknown, in a prison in Brandenburg', 'Germany', 'Unknown', 0, 0, '', ''),
 ('unknown_location_in_italy_IT_gid_unknown', 'Unknown', 'Unknown Location in Italy', 'Unknown location in Italy // Unknown, in Italy', 'Italy', 'Unknown', 0, 0, '', ''),
-('unknown_location_XX_gid_unknown', 'Unknown', 'Unknown Location', 'Unknown', 's. l. // o. O.', 'Unknown', 0, 0, '', ''),
+('unknown_location_XX_gid_unknown', 'Unknown', 'Unknown Location', 'Unknown', 'Unknown', 'Unknown', 0, 0, '', ''),
 ('unknown_loction_in_friaul_IT_gid_unknown', 'unknown', 'Unknown Location in Friaul', 'Friaul', 'Italy', 'Friuli Venezia Giulia', 0, 0, '', ''),
 ('utrecht_NL_gid_2745912', '2745912', 'Utrecht', 'Utrecht', 'Netherlands', 'Utrecht', 52.09083, 5.12222, '52.09083, 5.12222', ''),
 ('valladolid_ES_gid_3106672', '3106672', 'Valladolid', 'Valladolid', 'Spain', 'Castille and León', 41.65518, -4.72372, '41.65518, -4.72372', ''),
