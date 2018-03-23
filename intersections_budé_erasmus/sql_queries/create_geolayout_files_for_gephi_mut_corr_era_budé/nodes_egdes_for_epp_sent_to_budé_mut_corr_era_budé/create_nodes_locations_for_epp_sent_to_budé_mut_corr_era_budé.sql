@@ -9,6 +9,14 @@ WHERE BLOC.locations_id IN
     (SELECT DISTINCT BLETA.source_loc_id
      FROM budé_cdb_v1.letters BLETA
      WHERE BLETA.recipient_id = 'budé_guillaume_viaf_105878228'
+       AND BLETA.sender_id IN
+         (SELECT X.correspondents_id
+          FROM budé_cdb_v1.correspondents AS X
+          WHERE X.correspondents_id IN
+              (SELECT E.correspondents_id
+               FROM era_cdb_v3.correspondents AS E,
+                    budé_cdb_v1.correspondents AS B
+               WHERE E.correspondents_id = B.correspondents_id))
        AND BLETA.source_loc_id NOT LIKE 'unknown%')
   OR BLOC.locations_id IN
     (SELECT DISTINCT BLETB.target_loc_id
