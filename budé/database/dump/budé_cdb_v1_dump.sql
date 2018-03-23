@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Erstellungszeit: 08. Mrz 2018 um 10:26
+-- Erstellungszeit: 23. Mrz 2018 um 09:30
 -- Server-Version: 5.6.38
 -- PHP-Version: 7.2.1
 
@@ -28,7 +28,6 @@ USE `budé_cdb_v1`;
 -- Tabellenstruktur für Tabelle `correspondents`
 --
 
-DROP TABLE IF EXISTS `correspondents`;
 CREATE TABLE `correspondents` (
   `correspondents_id` varchar(200) NOT NULL COMMENT 'This column carries the primary key for the table that is also being used as a foreign key for ‘sender_id’ and ‘recipient_id’ in the ‘letters’ table.',
   `type` varchar(45) DEFAULT NULL COMMENT 'This column classifies the correspondent by the following taxonomy: (1) individual (2) corporate body (3) group.',
@@ -140,7 +139,6 @@ INSERT INTO `correspondents` (`correspondents_id`, `type`, `gender`, `viaf_id`, 
 -- Tabellenstruktur für Tabelle `letters`
 --
 
-DROP TABLE IF EXISTS `letters`;
 CREATE TABLE `letters` (
   `letters_id` varchar(45) NOT NULL COMMENT 'This column carries the primary key for the table.',
   `letter_no_in_edition` varchar(200) DEFAULT NULL COMMENT 'This column carries the sequential alphanumerical identifier(s) of a letter in the edition(s) followed by an abbreviation of the edition the identifiers refers to.',
@@ -421,7 +419,6 @@ INSERT INTO `letters` (`letters_id`, `letter_no_in_edition`, `sender_id`, `sende
 -- Tabellenstruktur für Tabelle `locations`
 --
 
-DROP TABLE IF EXISTS `locations`;
 CREATE TABLE `locations` (
   `locations_id` varchar(90) NOT NULL COMMENT 'This column carries the primary key for the table that is also being used as a foreign key for ‘source_loc_id’ and target_loc_id’ in the ‘letters’ table as well as ‘pob_loc_id’ and ‘pod_loc_id’ in the ‘correspondents’ table. ',
   `geonames_id` varchar(90) DEFAULT NULL COMMENT 'This column carries the numeric Geonames ID. For locations for which no Geonames ID is available, the value should be set to “unknown”.',
@@ -516,7 +513,7 @@ INSERT INTO `locations` (`locations_id`, `geonames_id`, `locations_name_modern`,
 ('unknown_location_in_hampshire_GB_gid_unknown', 'Unknown', 'Unknown Location in Hampshire', 'prob. Hampshire, in/near Winchester', 'United Kingdom', 'England', 0, 0, '', 'Richard Pace was born in Hampshire near the city of Winchester'),
 ('unknown_location_in_italy_IT_gid_unknown', 'Unknown', 'Unknown Location in Italy', '[Unknown Location in Italy]', 'Italy', '', 0, 0, '', ''),
 ('unknown_location_picardie_FR_gid_unknown', '', 'Unknown Location in Picardie', '[Unknown Location in Picardie]', 'France', 'Hauts-de-France', 0, 0, '', ''),
-('unknown_location_XX_gid_unknown', '', 'Unknown', 'Unknown', '', '', 0, 0, '', ''),
+('unknown_location_XX_gid_unknown', '', 'Unknown', 'Unknown', 'Unknown', '', 0, 0, '', ''),
 ('valencia_ES_gid_2509954', '2509954', 'Valencia', 'Valencia', 'Spain', 'Valencia', 39.46975, -0.37739, '39.46975, -0.37739', ''),
 ('venice_IT_gid_3164603', '3164603', 'Venice', 'Venice', 'Italy', 'Veneto', 45.43713, 12.33265, '45.43713, 12.33265', ''),
 ('wendelstein_DE_gid_2811292', '2811292', 'Wendelstein', 'Wendelstein bei Schwabach/Mittelfranken', 'Germany', 'Bavaria', 49.3523, 11.15069, '49.3523, 11.15069', ''),
