@@ -2,6 +2,7 @@ SELECT source_loc_id AS 'Source',
        target_loc_id AS 'Target',
 FROM budé_cdb_v1.letters
 WHERE recipient_id = 'budé_guillaume_viaf_105878228'
+  AND letters_id NOT LIKE '%ck2'
   AND sender_id IN
     (SELECT X.correspondents_id
      FROM budé_cdb_v1.correspondents AS X
