@@ -4,7 +4,7 @@ SELECT locations_id AS 'Id',
        locations_modern_province,
        locations_lat,
        locations_lng
-FROM locations
+FROM budé_cdb_v1.locations
 WHERE locations_id IN
     (SELECT DISTINCT source_loc_id
      FROM letters
