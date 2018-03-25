@@ -1,5 +1,5 @@
 SELECT locations_id AS 'Id',
-       locations_name_modern,
+       locations_name_modern AS 'Label',
        locations_modern_state,
        locations_modern_province,
        locations_lat,
