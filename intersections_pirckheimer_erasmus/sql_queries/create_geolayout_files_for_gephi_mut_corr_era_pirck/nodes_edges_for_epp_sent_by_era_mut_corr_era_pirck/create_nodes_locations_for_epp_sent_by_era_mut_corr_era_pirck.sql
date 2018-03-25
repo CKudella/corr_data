@@ -1,5 +1,5 @@
 SELECT ELOC.locations_id AS 'Id',
-       ELOC.locations_name_modern,
+       ELOC.locations_name_modern AS 'Label',
        ELOC.locations_modern_state,
        ELOC.locations_modern_province,
        ELOC.locations_lat,
@@ -17,7 +17,9 @@ WHERE ELOC.locations_id IN
                FROM era_cdb_v3.correspondents AS E,
                     wpirck_cdb_v1.correspondents AS P
                WHERE E.correspondents_id = P.correspondents_id))
-       AND ELETA.source_loc_id NOT LIKE 'unknown%')
+       AND ELETA.letters_id NOT LIKE '%ck2'
+       AND ELETA.source_loc_id NOT LIKE 'unknown%'
+       AND ELETA.target_loc_id NOT LIKE 'unknown%')
   OR ELOC.locations_id IN
     (SELECT DISTINCT ELETB.target_loc_id
      FROM era_cdb_v3.letters AS ELETB
@@ -30,5 +32,7 @@ WHERE ELOC.locations_id IN
                FROM era_cdb_v3.correspondents AS E,
                     wpirck_cdb_v1.correspondents AS P
                WHERE E.correspondents_id = P.correspondents_id))
+       AND ELETB.letters_id NOT LIKE '%ck2'
+       AND ELETB.source_loc_id NOT LIKE 'unknown%'
        AND ELETB.target_loc_id NOT LIKE 'unknown%')
 GROUP BY ELOC.locations_id
