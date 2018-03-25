@@ -1,11 +1,36 @@
-SELECT *
+SELECT L.letters_id AS 'Id',
+       L.letter_no_in_edition,
+       L.sender_id AS 'Source',
+       L.sender_inferred,
+       L.sender_uncertain,
+       L.recipient_id AS 'Target',
+       L.recipient_inferred,
+       L.recipient_uncertain,
+       L.label AS 'Label',
+       L.send_date_year1,
+       L.send_date_computable1,
+       L.send_date_has_range,
+       L.send_date_year2,
+       L.send_date_computable2,
+       L.send_date_inferred,
+       L.send_date_approx,
+       L.send_date_uncertain,
+       L.source_loc_id,
+       L.source_loc_inferred,
+       L.source_loc_uncertain,
+       L.target_loc_id,
+       L.target_loc_inferred,
+       L.target_loc_uncertain,
+       L.letter_language,
+       L.letter_type_genus,
+       L.letter_type_x_to_x
 FROM
   (SELECT *
    FROM era_cdb_v3.letters
    UNION ALL
      (SELECT *
-      FROM wpirck_cdb_v1.letters
-      WHERE letters_id NOT LIKE '%_cwe_%')) AS L
+      FROM wpirck_cdb_v1.letters AS PL
+      WHERE PL.letters_id NOT LIKE '%_cwe_%')) AS L
 WHERE L.sender_id IN
     (SELECT X.correspondents_id
      FROM era_cdb_v3.correspondents AS X
