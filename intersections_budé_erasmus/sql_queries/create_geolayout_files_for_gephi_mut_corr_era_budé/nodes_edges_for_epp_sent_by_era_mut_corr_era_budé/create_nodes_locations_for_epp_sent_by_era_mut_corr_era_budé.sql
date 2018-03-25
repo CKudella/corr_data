@@ -1,5 +1,5 @@
 SELECT ELOC.locations_id AS 'Id',
-       ELOC.locations_name_modern,
+       ELOC.locations_name_modern AS 'Label',
        ELOC.locations_modern_state,
        ELOC.locations_modern_province,
        ELOC.locations_lat,

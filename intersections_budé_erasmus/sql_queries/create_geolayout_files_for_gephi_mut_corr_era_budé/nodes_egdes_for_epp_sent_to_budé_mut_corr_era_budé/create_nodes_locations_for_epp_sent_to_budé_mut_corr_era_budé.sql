@@ -1,5 +1,5 @@
 SELECT BLOC.locations_id AS 'Id',
-       BLOC.locations_name_modern,
+       BLOC.locations_name_modern AS 'Label',
        BLOC.locations_modern_state,
        BLOC.locations_modern_province,
        BLOC.locations_lat,
