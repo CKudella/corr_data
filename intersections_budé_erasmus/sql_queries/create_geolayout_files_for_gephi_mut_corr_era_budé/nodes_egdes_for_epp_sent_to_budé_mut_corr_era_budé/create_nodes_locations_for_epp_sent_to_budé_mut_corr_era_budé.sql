@@ -17,7 +17,9 @@ WHERE BLOC.locations_id IN
                FROM era_cdb_v3.correspondents AS E,
                     budé_cdb_v1.correspondents AS B
                WHERE E.correspondents_id = B.correspondents_id))
-       AND BLETA.source_loc_id NOT LIKE 'unknown%')
+       AND BLETA.letters_id NOT LIKE '%ck2'
+       AND BLETA.source_loc_id NOT LIKE 'unknown%'
+       AND BLETA.target_loc_id NOT LIKE 'unknown%')
   OR BLOC.locations_id IN
     (SELECT DISTINCT BLETB.target_loc_id
      FROM budé_cdb_v1.letters BLETB
@@ -30,5 +32,7 @@ WHERE BLOC.locations_id IN
                FROM era_cdb_v3.correspondents AS E,
                     budé_cdb_v1.correspondents AS B
                WHERE E.correspondents_id = B.correspondents_id))
+       AND BLETB.letters_id NOT LIKE '%ck2'
+       AND BLETB.source_loc_id NOT LIKE 'unknown%'
        AND BLETB.target_loc_id NOT LIKE 'unknown%')
 GROUP BY BLOC.locations_id
