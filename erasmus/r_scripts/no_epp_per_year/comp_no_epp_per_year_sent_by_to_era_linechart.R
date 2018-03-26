@@ -12,8 +12,20 @@ setwd("../query_results/")
 # read data
 data<-read.csv("no_epp_per_year/comp_no_epp_per_year_sent_by_to_era.csv", fileEncoding="UTF-8", na.strings=c("NULL"))
 
+# omit NA values
+data<-na.omit(data)
+
+# create data frame for years 1484-1536
+data2 <- data.frame(matrix(ncol = 1, nrow = 53))
+x <- c("send_date_year1")
+colnames(data2) <- x
+data2$send_date_year1 <- c(1484:1536)
+
+# merge dataframes
+data3 <- merge(x = data2, y = data, by = "send_date_year1", all.x = TRUE)
+
 # apply melt for wide to long
-data_long <- melt(data, id.vars= c("send_date_year1"))
+data_long <- melt(data3, id.vars= c("send_date_year1"))
 
 # create linechart
 plot <- ggplot(data=data_long, aes(x= send_date_year1, y=value, colour=variable)) +
