@@ -27,7 +27,8 @@ data_long <- melt(data3, id.vars= c("Year"))
 # create linechart
 plot <- ggplot(data=data_long, aes(x= Year, y=value, colour=variable)) +
   geom_line(stat = "identity", size=0.9) +
-  geom_point(shape=1) + labs(x="Year",y="Number of correspondents") +
+  geom_point(shape=1, fill="white", stroke=1.25) +
+  labs(x="Year",y="Number of correspondents") +
   scale_x_continuous(breaks = c(1484:1540)) +
   scale_y_continuous(breaks = seq(0,30,5)) +
   theme_bw() +
