@@ -29,7 +29,6 @@ plot <- ggplot(data=data_long, aes(x= send_date_year1, y=value, colour=variable)
   geom_line(stat = "identity", size=0.9) +
   geom_point(shape=1, fill="white", stroke=1.25) +
   labs(x="Year",y="Number of letters") +
-  scale_linetype_manual(values =c("solid","twodash")) +
   scale_x_continuous(breaks = c(1484:1536)) +
   scale_y_continuous(breaks = seq(0,160,10)) +
   theme_bw() +
