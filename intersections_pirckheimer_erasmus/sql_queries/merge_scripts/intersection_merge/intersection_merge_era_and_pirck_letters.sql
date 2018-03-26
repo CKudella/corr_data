@@ -30,7 +30,7 @@ FROM
    UNION ALL
      (SELECT *
       FROM wpirck_cdb_v1.letters AS PL
-      WHERE PL.letters_id NOT LIKE '%_cwe_%' AND PL.letters NOT LIKE '%_allen_%')) AS L
+      WHERE PL.letters_id NOT LIKE '%_cwe_%' AND PL.letters_id NOT LIKE '%_allen_%')) AS L
 WHERE L.sender_id IN
     (SELECT X.correspondents_id
      FROM era_cdb_v3.correspondents AS X
