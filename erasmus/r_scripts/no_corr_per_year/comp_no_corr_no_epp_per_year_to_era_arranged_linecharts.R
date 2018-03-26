@@ -26,7 +26,8 @@ data3 <- merge(x = data2, y = data, by = "Year", all.x = TRUE)
 # create linechart for number of correspondents
 plot <- ggplot(data=data3, aes(x= Year, y=Number.of.correspondents.writing.letters.to.Erasmus.this.year)) +
   geom_line(stat = "identity", size=0.9) +
-  geom_point(shape=1) + labs(x="Year",y="Number of correspondents") +
+  geom_point(shape=1, fill="white", stroke=1.25) +
+  labs(x="Year",y="Number of correspondents") +
   scale_x_continuous(breaks = c(1484:1536)) +
   scale_y_continuous(breaks = seq(0,70,10)) +
   theme_bw() +
@@ -37,7 +38,8 @@ plot
 # create linechart for number of letters
 plot2 <- ggplot(data=data3, aes(x= Year, y=Number.of.letters.sent.to.Erasmus.this.year)) +
   geom_line(stat = "identity", size=0.9) +
-  geom_point(shape=1) + labs(x="Year",y="Number of letters") +
+  geom_point(shape=1, fill="white", stroke=1.25) +
+  labs(x="Year",y="Number of letters") +
   scale_x_continuous(breaks = c(1484:1536)) +
   scale_y_continuous(breaks = seq(0,100,10)) +
   theme_bw() +
