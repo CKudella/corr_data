@@ -46,18 +46,6 @@ write.csv(letters1499, file = "merge_scripts/complete_merge/time_slice_1499_comp
 # write file for correspondents
 write.csv(corr1499, file = "merge_scripts/complete_merge/time_slice_1499_complete_merge_budé_and_era_correspondents.csv", fileEncoding="UTF-8", row.names=FALSE)
 #-------------------------------
-# subset letters for 1505
-letters1505 <- subset(allepp, send_date_year1 == 1505)
-
-# subset correspondents for 1505
-corr1505 <- subset(allcorr, allcorr$Id %in% letters1505$Source | allcorr$Id %in% letters1505$Target)
-
-# write file for letters
-write.csv(letters1505, file = "merge_scripts/complete_merge/time_slice_1505_complete_merge_budé_and_era_letters_corr_as_nodes.csv", fileEncoding="UTF-8", row.names=FALSE)
-
-# write file for correspondents
-write.csv(corr1505, file = "merge_scripts/complete_merge/time_slice_1505_complete_merge_budé_and_era_correspondents.csv", fileEncoding="UTF-8", row.names=FALSE)
-#-------------------------------
 # subset letters for 1506
 letters1506 <- subset(allepp, send_date_year1 == 1506)
 
