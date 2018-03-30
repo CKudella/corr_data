@@ -1,7 +1,7 @@
 SELECT COUNT(BL.locations_id) AS 'Number of locations to which letters have been written by both Pirckheimer and Erasmus'
 FROM wpirck_cdb_v1.locations AS PL
 WHERE PL.locations_id IN
-    (SELECT DISTINCT Blet.target_loc_id
+    (SELECT DISTINCT Plet.target_loc_id
      FROM wpirck_cdb_v1.letters AS PLet
      WHERE PLet.sender_id = 'pirckheimer_willibald_viaf_27173507'
        AND PLet.target_loc_id NOT LIKE 'unknown%'
