@@ -1,4 +1,4 @@
-SELECT COUNT(BL.locations_id) AS 'Number of locations to which letters have been written by both Pirckheimer and Erasmus'
+SELECT COUNT(PL.locations_id) AS 'Number of locations to which letters have been written by both Pirckheimer and Erasmus'
 FROM wpirck_cdb_v1.locations AS PL
 WHERE PL.locations_id IN
     (SELECT DISTINCT Plet.target_loc_id
