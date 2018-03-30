@@ -1,12 +1,12 @@
-SELECT COUNT(BL.locations_id) AS 'Number of locations to which letters have been written by both Budé and Erasmus'
-FROM budé_cdb_v1.locations AS BL
-WHERE BL.locations_id IN
+SELECT COUNT(BL.locations_id) AS 'Number of locations to which letters have been written by both Pirckheimer and Erasmus'
+FROM wpirck_cdb_v1.locations AS PL
+WHERE PL.locations_id IN
     (SELECT DISTINCT Blet.target_loc_id
-     FROM budé_cdb_v1.letters AS BLet
-     WHERE BLet.sender_id = 'budé_guillaume_viaf_105878228'
-       AND BLet.target_loc_id NOT LIKE 'unknown%'
-     GROUP BY Blet.target_loc_id)
-  AND BL.locations_id IN
+     FROM wpirck_cdb_v1.letters AS PLet
+     WHERE PLet.sender_id = 'pirckheimer_willibald_viaf_27173507'
+       AND PLet.target_loc_id NOT LIKE 'unknown%'
+     GROUP BY Plet.target_loc_id)
+  AND PL.locations_id IN
     (SELECT EL.locations_id
      FROM era_cdb_v3.locations AS EL
      WHERE EL.locations_id IN
