@@ -14,5 +14,6 @@ WHERE letters_id NOT REGEXP '[0-7]ck2|ck3|ck4|ck5|ck6|ck7|ck8]'
           FROM wpirck_cdb_v1.correspondents AS P,
                era_cdb_v3.correspondents AS E
           WHERE P.correspondents_id = E.correspondents_id))
+  AND target_loc_id NOT LIKE 'unknown%'
 GROUP BY target_loc_id
 ORDER BY COUNT(letters.target_loc_id) DESC
