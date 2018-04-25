@@ -1,9 +1,9 @@
 require(readr)
-require(dplyr)
+require(plyr)
 require(plyr)
 require(ggplot2)
 library(readr)
-library(dplyr)
+library(plyr)
 library(plyr)
 library(ggplot2)
 
