@@ -1,6 +1,6 @@
 require(readr)
 require(lubridate)
-library(require)
+require(ggplot2)
 library(readr)
 library(lubridate)
 library(ggplot2)
