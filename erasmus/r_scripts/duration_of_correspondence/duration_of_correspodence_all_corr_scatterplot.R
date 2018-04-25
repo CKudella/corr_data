@@ -10,6 +10,9 @@ setwd("../query_results/")
 # read data and define data type for date columns
 data<-read.csv("duration_of_correspondence/duration_of_correspodence_all_corr.csv", fileEncoding="UTF-8", colClasses=c("Beginning.of.correspondence.with.Erasmus"="Date","End.of.the.correspondence.with.Erasmus"="Date"))
 
+# subset to remove 0000-00-00 dates
+data <- subset(data, Beginning.of.correspondence.with.Erasmus!=0000-00-00)
+
 # calculate duration of correspondence
 data$duration <- durCalc(data, start="Beginning.of.correspondence.with.Erasmus", end="End.of.the.correspondence.with.Erasmus", timeunit="years")
 
