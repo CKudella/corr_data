@@ -1,7 +1,9 @@
 require(readr)
 require(timelineS)
+require(ggplot2)
 library(readr)
 library(timelineS)
+library(ggplot2)
 
 # set working directory
 getwd()
