@@ -1,4 +1,3 @@
-
 SELECT A.Year,
        B.NoCorrEppFromPirck AS 'Number of correspondents Pirckheimer writes to this year',
        C.NoCorrEppToPirck AS 'Number of correspondents writing letters to Pirckheimer this year'
