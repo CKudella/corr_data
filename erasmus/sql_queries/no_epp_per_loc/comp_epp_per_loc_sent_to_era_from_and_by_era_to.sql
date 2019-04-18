@@ -12,6 +12,7 @@ FROM (
          WHERE ZB.locations_id = ZA.target_loc_id
            AND ZA.letters_id NOT LIKE '%ck2'
            AND ZA.sender_id = 'erasmus_desiderius_viaf_95982394'
+           AND ZA.target_loc_id NOT LIKE 'unknown%'
          GROUP BY ZB.locations_name_modern
          ORDER BY ZB.locations_name_modern DESC)
       UNION
@@ -23,6 +24,7 @@ FROM (
          WHERE ZB.locations_id = ZA.source_loc_id
            AND ZA.letters_id NOT LIKE '%ck2'
            AND ZA.recipient_id = 'erasmus_desiderius_viaf_95982394'
+           AND ZA.source_loc_id NOT LIKE 'unknown%'
          GROUP BY ZB.locations_name_modern
          ORDER BY ZB.locations_name_modern DESC)) AS Z
 LEFT OUTER JOIN
