@@ -54,48 +54,11 @@
            >>
          ] setcolorspace } bind def
 /srgb { setcolor } bind def
-% begin encoding
-/WinAnsiEncoding [
- /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
- /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
- /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
- /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
- /space /exclam /quotedbl /numbersign /dollar /percent /ampersand /quoteright
- /parenleft /parenright /asterisk /plus /comma /minus /period /slash
- /zero /one /two /three /four /five /six /seven
- /eight /nine /colon /semicolon /less /equal /greater /question
- /at /A /B /C /D /E /F /G
- /H /I /J /K /L /M /N /O
- /P /Q /R /S /T /U /V /W
- /X /Y /Z /bracketleft /backslash /bracketright /asciicircum /underscore
- /grave /a /b /c /d /e /f /g
- /h /i /j /k /l /m /n /o
- /p /q /r /s /t /u /v /w
- /x /y /z /braceleft /bar /braceright /asciitilde /.notdef
- /Euro /.notdef /quotesinglbase /florin /quotedblbase /ellipsis /dagger /daggerdbl
- /circumflex /perthousand /Scaron /guilsinglleft /OE /.notdef /Zcaron /.notdef
- /.notdef /quoteleft /quoteright /quotedblleft /quotedblright /bullet /endash /emdash
- /tilde /trademark /scaron /guilsinglright /oe /.notdef /zcaron /Ydieresis
- /space /exclamdown /cent /sterling /currency /yen /brokenbar /section
- /dieresis /copyright /ordfeminine /guillemotleft /logicalnot /hyphen /registered /macron
- /degree /plusminus /twosuperior /threesuperior /acute /mu /paragraph /periodcentered
- /cedilla /onesuperior /ordmasculine /guillemotright /onequarter /onehalf /threequarters /questiondown
- /Agrave /Aacute /Acircumflex /Atilde /Adieresis /Aring /AE /Ccedilla
- /Egrave /Eacute /Ecircumflex /Edieresis /Igrave /Iacute /Icircumflex /Idieresis
- /Eth /Ntilde /Ograve /Oacute /Ocircumflex /Otilde /Odieresis /multiply
- /Oslash /Ugrave /Uacute /Ucircumflex /Udieresis /Yacute /Thorn /germandbls
- /agrave /aacute /acircumflex /atilde /adieresis /aring /ae /ccedilla
- /egrave /eacute /ecircumflex /edieresis /igrave /iacute /icircumflex /idieresis
- /eth /ntilde /ograve /oacute /ocircumflex /otilde /odieresis /divide
- /oslash /ugrave /uacute /ucircumflex /udieresis /yacute /thorn /ydieresis
-]
- def
-% end encoding
 %%IncludeResource: font Helvetica
 /Helvetica findfont
 dup length dict begin
   {1 index /FID ne {def} {pop pop} ifelse} forall
-  /Encoding WinAnsiEncoding def
+  /Encoding ISOLatin1Encoding def
   currentdict
   end
 /Font1 exch definefont pop
@@ -103,7 +66,7 @@ dup length dict begin
 /Helvetica-Bold findfont
 dup length dict begin
   {1 index /FID ne {def} {pop pop} ifelse} forall
-  /Encoding WinAnsiEncoding def
+  /Encoding ISOLatin1Encoding def
   currentdict
   end
 /Font2 exch definefont pop
@@ -111,7 +74,7 @@ dup length dict begin
 /Helvetica-Oblique findfont
 dup length dict begin
   {1 index /FID ne {def} {pop pop} ifelse} forall
-  /Encoding WinAnsiEncoding def
+  /Encoding ISOLatin1Encoding def
   currentdict
   end
 /Font3 exch definefont pop
@@ -119,7 +82,7 @@ dup length dict begin
 /Helvetica-BoldOblique findfont
 dup length dict begin
   {1 index /FID ne {def} {pop pop} ifelse} forall
-  /Encoding WinAnsiEncoding def
+  /Encoding ISOLatin1Encoding def
   currentdict
   end
 /Font4 exch definefont pop
@@ -258,131 +221,131 @@ np
 o
 /Font1 findfont 11 s
 0 0 0 srgb
-427.48 553.63 (Basel) .5 0 t
-437.95 444.30 (London) .5 0 t
-425.43 421.92 (P) 0 ta
+424.99 553.62 (Basel) .5 0 t
+437.95 444.25 (London) .5 0 t
+440.58 422.10 (P) 0 ta
 -0.440 (ar) tb
 0.165 (is) tb gr
-419.91 406.04 (Leuv) 0 ta
+419.91 405.66 (Leuv) 0 ta
 -0.275 (en) tb gr
-423.07 318.24 (Antw) 0 ta
+423.98 317.99 (Antw) 0 ta
 -0.110 (er) tb
 0.330 (pen) tb gr
-427.22 251.86 (Rome) .5 0 t
+425.50 250.62 (Rome) .5 0 t
+422.99 224.17 (A) 0 ta
+-0.330 (ugsb) tb
+-0.220 (urg) tb gr
+392.84 207.46 (Nür) 0 ta
+0.275 (nberg) tb gr
 1.07 setlinewidth
 [] 0 setdash
 1 setlinecap
 np
-426.87 232.76 m
-11.08 -13.32 l
+435.81 161.12 m
+2.14 -7.84 l
 o
-398.55 234.56 (A) 0 ta
--0.330 (ugsb) tb
--0.220 (urg) tb gr
-np
-463.30 217.52 m
--25.35 -13.83 l
-o
-450.92 219.32 (Nür) 0 ta
-0.275 (nberg) tb gr
-np
-425.29 205.75 m
-12.66 -52.47 l
-o
-405.57 207.55 (Kr) 0 ta
+417.43 162.92 (Kr) 0 ta
 -0.110 (ak) tb
 -0.220 (ó) tb
 -0.165 (w) tb gr
 np
-411.02 186.01 m
-26.93 -39.03 l
+429.51 181.95 m
+8.44 -34.97 l
 o
-386.58 187.81 (Freib) 0 ta
+386.87 178.90 (Freib) 0 ta
 -0.220 (urg) tb gr
 np
-453.11 174.88 m
--15.16 -27.90 l
+455.85 183.28 m
+-17.90 -36.30 l
 o
-435.14 176.68 (Br) 0 ta
+436.01 185.08 (Br) 0 ta
 0.165 (ussels) tb gr
 np
-424.41 157.76 m
-13.54 -20.23 l
+460.66 172.58 m
+-22.71 -35.05 l
 o
-409.55 159.56 (K) 0 ta
+462.24 169.38 (K) 0 ta
 -0.440 (öln) tb gr
 np
-495.24 164.24 m
--57.29 -29.86 l
+408.11 162.27 m
+29.84 -27.89 l
 o
-487.62 166.04 (P) 0 ta
+369.45 159.02 (P) 0 ta
 -0.440 (ado) tb
 -0.165 (v) tb
 -0.275 (a) tb gr
 np
-400.64 143.20 m
-37.31 -8.82 l
+435.23 144.53 m
+2.72 -10.15 l
 o
-376.32 145.00 (Greenwich) .5 0 t
-407.86 129.78 (Mechelen) .5 0 t
+407.14 143.10 (Greenwich) .5 0 t
 np
-474.23 148.95 m
--36.28 -24.02 l
+441.05 149.39 m
+-3.10 -21.31 l
 o
-441.65 150.75 (Ste) 0 ta
+466.69 146.87 (Mechelen) .5 0 t
+np
+441.35 132.56 m
+-3.40 -7.63 l
+o
+443.21 131.51 (Ste) 0 ta
 -0.220 (yn Monaster) tb
 0.330 (y) tb gr
 np
-485.20 131.77 m
--47.25 -16.29 l
+398.54 131.00 m
+39.41 -15.52 l
 o
-484.14 133.57 (Br) 0 ta
+361.19 127.47 (Br) 0 ta
 0.165 (ugge) tb gr
 np
-426.87 115.92 m
-11.08 -0.44 l
+462.04 120.04 m
+-24.09 -4.56 l
 o
-303.02 114.50 (T) 0 ta
+463.32 116.26 (T) 0 ta
 -1.320 (our) tb
 0.275 (nehem-sur-la-Hem) tb gr
-np
-455.14 116.15 m
--17.19 -6.97 l
-o
-442.41 117.95 (Str) 0 ta
+379.75 112.26 (Str) 0 ta
 -0.110 (asbourg) tb gr
-466.45 101.96 (Besançon) .5 0 t
-404.80 99.35 (Erfur) 0 ta
+np
+406.85 99.79 m
+31.10 -0.06 l
+o
+380.59 95.84 (Besançon) .5 0 t
+443.01 101.09 (Erfur) 0 ta
 0.440 (t) tb gr
 np
-484.07 64.94 m
--46.12 28.49 l
+424.89 67.73 m
+13.06 25.70 l
 o
-493.38 55.25 (Gent) .5 0 t
+411.16 62.70 (Gent) .5 0 t
 np
-492.86 91.72 m
--54.91 1.71 l
+469.84 89.83 m
+-31.89 3.60 l
 o
-524.15 86.80 (Saint-Omer) .5 0 t
+501.13 85.84 (Saint-Omer) .5 0 t
 np
-393.45 94.35 m
-44.50 -0.92 l
+391.71 82.88 m
+46.24 10.55 l
 o
-344.68 90.92 (Altenb) 0 ta
+342.94 78.71 (Altenb) 0 ta
 -0.220 (urg) tb gr
-398.71 82.73 (V) 0 ta
+np
+431.80 86.29 m
+6.15 7.14 l
+o
+396.81 79.80 (V) 0 ta
 -0.880 (enice) tb gr
 np
-415.79 74.31 m
-22.16 12.81 l
+445.02 76.73 m
+-7.07 10.39 l
 o
-389.34 64.61 (Oxf) 0 ta
+446.66 70.64 (Oxf) 0 ta
 -0.330 (ord) tb gr
 np
-455.58 80.80 m
--17.63 3.17 l
+440.17 60.76 m
+-2.22 23.21 l
 o
-442.27 71.10 (Monaster) 0 ta
+442.13 55.47 (Monaster) 0 ta
 0.330 (y Lopsen) tb gr
 0.2000 0.2000 0.2000 srgb
 38.98 16.87 797.94 575.25 r p1
