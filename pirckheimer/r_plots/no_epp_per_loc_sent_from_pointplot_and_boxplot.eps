@@ -54,48 +54,11 @@
            >>
          ] setcolorspace } bind def
 /srgb { setcolor } bind def
-% begin encoding
-/WinAnsiEncoding [
- /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
- /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
- /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
- /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
- /space /exclam /quotedbl /numbersign /dollar /percent /ampersand /quoteright
- /parenleft /parenright /asterisk /plus /comma /minus /period /slash
- /zero /one /two /three /four /five /six /seven
- /eight /nine /colon /semicolon /less /equal /greater /question
- /at /A /B /C /D /E /F /G
- /H /I /J /K /L /M /N /O
- /P /Q /R /S /T /U /V /W
- /X /Y /Z /bracketleft /backslash /bracketright /asciicircum /underscore
- /grave /a /b /c /d /e /f /g
- /h /i /j /k /l /m /n /o
- /p /q /r /s /t /u /v /w
- /x /y /z /braceleft /bar /braceright /asciitilde /.notdef
- /Euro /.notdef /quotesinglbase /florin /quotedblbase /ellipsis /dagger /daggerdbl
- /circumflex /perthousand /Scaron /guilsinglleft /OE /.notdef /Zcaron /.notdef
- /.notdef /quoteleft /quoteright /quotedblleft /quotedblright /bullet /endash /emdash
- /tilde /trademark /scaron /guilsinglright /oe /.notdef /zcaron /Ydieresis
- /space /exclamdown /cent /sterling /currency /yen /brokenbar /section
- /dieresis /copyright /ordfeminine /guillemotleft /logicalnot /hyphen /registered /macron
- /degree /plusminus /twosuperior /threesuperior /acute /mu /paragraph /periodcentered
- /cedilla /onesuperior /ordmasculine /guillemotright /onequarter /onehalf /threequarters /questiondown
- /Agrave /Aacute /Acircumflex /Atilde /Adieresis /Aring /AE /Ccedilla
- /Egrave /Eacute /Ecircumflex /Edieresis /Igrave /Iacute /Icircumflex /Idieresis
- /Eth /Ntilde /Ograve /Oacute /Ocircumflex /Otilde /Odieresis /multiply
- /Oslash /Ugrave /Uacute /Ucircumflex /Udieresis /Yacute /Thorn /germandbls
- /agrave /aacute /acircumflex /atilde /adieresis /aring /ae /ccedilla
- /egrave /eacute /ecircumflex /edieresis /igrave /iacute /icircumflex /idieresis
- /eth /ntilde /ograve /oacute /ocircumflex /otilde /odieresis /divide
- /oslash /ugrave /uacute /ucircumflex /udieresis /yacute /thorn /ydieresis
-]
- def
-% end encoding
 %%IncludeResource: font Helvetica
 /Helvetica findfont
 dup length dict begin
   {1 index /FID ne {def} {pop pop} ifelse} forall
-  /Encoding WinAnsiEncoding def
+  /Encoding ISOLatin1Encoding def
   currentdict
   end
 /Font1 exch definefont pop
@@ -103,7 +66,7 @@ dup length dict begin
 /Helvetica-Bold findfont
 dup length dict begin
   {1 index /FID ne {def} {pop pop} ifelse} forall
-  /Encoding WinAnsiEncoding def
+  /Encoding ISOLatin1Encoding def
   currentdict
   end
 /Font2 exch definefont pop
@@ -111,7 +74,7 @@ dup length dict begin
 /Helvetica-Oblique findfont
 dup length dict begin
   {1 index /FID ne {def} {pop pop} ifelse} forall
-  /Encoding WinAnsiEncoding def
+  /Encoding ISOLatin1Encoding def
   currentdict
   end
 /Font3 exch definefont pop
@@ -119,7 +82,7 @@ dup length dict begin
 /Helvetica-BoldOblique findfont
 dup length dict begin
   {1 index /FID ne {def} {pop pop} ifelse} forall
-  /Encoding WinAnsiEncoding def
+  /Encoding ISOLatin1Encoding def
   currentdict
   end
 /Font4 exch definefont pop
@@ -1067,97 +1030,81 @@ np
 o
 /Font1 findfont 11 s
 0 0 0 srgb
-630.95 570.14 (Nür) 0 ta
+619.93 553.32 (Nür) 0 ta
 0.275 (nberg) tb gr
-624.24 186.36 (A) 0 ta
+629.61 185.71 (A) 0 ta
 -0.330 (ugsb) tb
 -0.220 (urg) tb gr
-643.04 151.14 (Bamberg) .5 0 t
-654.06 136.03 (Bergen Ab) 0 ta
--0.110 (be) tb
--0.220 (y) tb gr
+639.81 150.46 (Bamberg) .5 0 t
 1.07 setlinewidth
 [] 0 setdash
 1 setlinecap
 np
-625.09 128.72 m
-23.46 -3.25 l
+667.56 147.97 m
+-19.01 -6.01 l
 o
-522.25 130.52 (Klar) 0 ta
+669.19 144.14 (Bergen Ab) 0 ta
+-0.110 (be) tb
+-0.220 (y) tb gr
+541.11 129.07 (Klar) 0 ta
 0.165 (issenkloster St. Klar) tb
 -0.110 (a) tb gr
+637.63 100.48 (Basel) .5 0 t
 np
-675.96 118.24 m
--27.41 -23.40 l
+656.89 90.81 m
+-8.34 -17.17 l
 o
-682.69 120.04 (Basel) .5 0 t
+676.11 88.00 (Leipzig) .5 0 t
+672.41 72.34 (Bologna) .5 0 t
 np
-641.17 70.83 m
-7.38 2.81 l
+697.99 75.34 m
+-49.44 -9.94 l
 o
-626.08 61.13 (Leipzig) .5 0 t
-np
-627.31 113.45 m
-21.24 -45.70 l
-o
-624.64 115.25 (Bologna) .5 0 t
-np
-667.35 101.97 m
--18.80 -36.57 l
-o
-651.97 103.77 (Herf) 0 ta
+699.62 71.43 (Herf) 0 ta
 -0.330 (ord) tb gr
 np
-607.84 98.25 m
-40.71 -34.03 l
+645.71 87.90 m
+2.84 -23.68 l
 o
-557.55 100.05 (Geisenf) 0 ta
+557.41 85.23 (Geisenf) 0 ta
 -0.330 (eld Ab) tb
 -0.110 (be) tb
 -0.220 (y) tb gr
-np
-637.26 75.52 m
-11.29 -11.30 l
-o
-614.70 77.32 (V) 0 ta
+652.43 55.17 (V) 0 ta
 -0.880 (enice) tb gr
 np
-674.64 86.33 m
--26.09 -28.00 l
+646.67 71.78 m
+1.88 -13.45 l
 o
-680.00 88.13 (Ingolstadt) .5 0 t
+621.02 69.87 (Ingolstadt) .5 0 t
 np
-669.12 69.66 m
--20.57 -12.51 l
+691.06 59.29 m
+-42.51 -2.14 l
 o
-656.27 71.46 (F) 0 ta
+692.69 55.34 (F) 0 ta
 -0.330 (eldkirch) tb gr
-np
-594.26 82.94 m
-54.29 -25.79 l
-o
-558.32 84.74 (Innsbr) 0 ta
+596.55 53.42 (Innsbr) 0 ta
 0.165 (uck) tb gr
 np
-662.63 50.88 m
--14.08 6.27 l
+657.36 44.74 m
+-8.81 12.41 l
 o
-675.53 41.18 (Eichstätt) .5 0 t
+680.26 39.73 (Eichstätt) .5 0 t
 np
-635.32 53.98 m
-13.23 2.00 l
+661.41 33.11 m
+-12.86 22.87 l
 o
-606.93 45.75 (Wittenberg) .5 0 t
+673.63 23.41 (Wittenberg) .5 0 t
 np
-714.56 84.09 m
--66.01 -28.11 l
+641.67 42.01 m
+6.88 13.97 l
 o
-728.06 85.89 (Vienna) .5 0 t
+622.75 36.71 (Vienna) .5 0 t
 np
-683.00 58.31 m
--34.45 -2.33 l
+591.13 52.28 m
+57.42 3.70 l
 o
-684.75 56.31 (Str) 0 ta
+535.59 48.33 (Str) 0 ta
 -0.110 (asbourg) tb gr
 0.2000 0.2000 0.2000 srgb
 460.18 16.87 376.74 575.25 r p1
