@@ -2,7 +2,7 @@ require(readr)
 require(dplyr)
 require(ggplot2)
 library(readr)
-library(dyplr)
+library(dplyr)
 library(ggplot2)
 
 # set working directory
