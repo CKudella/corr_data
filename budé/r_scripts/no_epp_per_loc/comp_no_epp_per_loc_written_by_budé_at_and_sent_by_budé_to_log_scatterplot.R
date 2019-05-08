@@ -11,10 +11,10 @@ setwd("../query_results/")
 data<-read.csv("no_epp_per_loc/comp_epp_per_loc_written_by_budé_at_and_sent_by_budé_to.csv", fileEncoding="UTF-8", na.strings=c("NULL"))
 
 # create scatterplot
-plot <- ggplot(data=data, aes(x=Number.of.letters.written.by.Budé.to.this.location, y=Number.of.letters.written.by.Budé.at.this.location, label=LocationName)) +
+plot <- ggplot(data=data, aes(x=NoLettersWrittenByBudéTO, y=NoLettersWrittenBYBudéAT, label=LocationName)) +
   geom_point(stat = "identity") +
   geom_smooth(method = lm) +
-  labs(x="Number of letters written by Budé to this location",y="Number of letters written by Budé at this location") + 
+  labs(x="Number of letters written by Budé to this location",y="Number of letters written by Budé at this location") +
   theme_bw()
 plot
 
