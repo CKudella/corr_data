@@ -5,7 +5,7 @@ WHERE PL.locations_id IN
      FROM wpirck_cdb_v1.letters AS PLet
      WHERE PLet.sender_id = 'pirckheimer_willibald_viaf_27173507'
        AND PLet.target_loc_id NOT LIKE 'unknown%'
-     GROUP BY Plet.target_loc_id)
+     GROUP BY PLet.target_loc_id)
   AND PL.locations_id IN
     (SELECT EL.locations_id
      FROM era_cdb_v3.locations AS EL
