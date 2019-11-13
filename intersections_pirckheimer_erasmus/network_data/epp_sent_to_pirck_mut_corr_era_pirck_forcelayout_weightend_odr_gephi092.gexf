@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gexf xmlns="http://www.gexf.net/1.3" version="1.3" xmlns:viz="http://www.gexf.net/1.3/viz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.3 http://www.gexf.net/1.3/gexf.xsd">
-  <meta lastmodifieddate="2018-03-25">
+  <meta lastmodifieddate="2019-11-13">
     <creator>Gephi 0.9</creator>
     <description></description>
   </meta>
@@ -10,6 +10,16 @@
       <attribute id="locations_modern_province" title="locations_modern_province" type="string"></attribute>
       <attribute id="locations_lat" title="locations_lat" type="double"></attribute>
       <attribute id="locations_lng" title="locations_lng" type="double"></attribute>
+      <attribute id="weighted indegree" title="Weighted In-Degree" type="double">
+        <default>0.0</default>
+      </attribute>
+      <attribute id="weighted outdegree" title="Weighted Out-Degree" type="double">
+        <default>0.0</default>
+      </attribute>
+      <attribute id="weighted degree" title="Weighted Degree" type="double">
+        <default>0.0</default>
+      </attribute>
+      <attribute id="colour" title="colour" type="string"></attribute>
     </attributes>
     <nodes>
       <node id="altenburg_DE_gid_2957773" label="Altenburg">
@@ -18,9 +28,14 @@
           <attvalue for="locations_modern_province" value="Thuringia"></attvalue>
           <attvalue for="locations_lat" value="50.98763"></attvalue>
           <attvalue for="locations_lng" value="12.43684"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="5.0"></attvalue>
+          <attvalue for="weighted degree" value="5.0"></attvalue>
+          <attvalue for="colour" value="#525252"></attvalue>
         </attvalues>
-        <viz:size value="40.0"></viz:size>
+        <viz:size value="11.363636"></viz:size>
         <viz:position x="389.79227" y="87.073105"></viz:position>
+        <viz:color r="82" g="82" b="82"></viz:color>
       </node>
       <node id="aschaffenburg_DE_gid_2955272" label="Aschaffenburg">
         <attvalues>
@@ -28,9 +43,14 @@
           <attvalue for="locations_modern_province" value="Bavaria"></attvalue>
           <attvalue for="locations_lat" value="49.97704"></attvalue>
           <attvalue for="locations_lng" value="9.15214"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
+          <attvalue for="colour" value="#525252"></attvalue>
         </attvalues>
-        <viz:size value="40.0"></viz:size>
+        <viz:size value="10.0"></viz:size>
         <viz:position x="409.31256" y="977.51434"></viz:position>
+        <viz:color r="82" g="82" b="82"></viz:color>
       </node>
       <node id="augsburg_DE_gid_2954172" label="Augsburg">
         <attvalues>
@@ -38,9 +58,14 @@
           <attvalue for="locations_modern_province" value="Bavaria"></attvalue>
           <attvalue for="locations_lat" value="48.37154"></attvalue>
           <attvalue for="locations_lng" value="10.89851"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="20.0"></attvalue>
+          <attvalue for="weighted degree" value="20.0"></attvalue>
+          <attvalue for="colour" value="#525252"></attvalue>
         </attvalues>
-        <viz:size value="40.0"></viz:size>
+        <viz:size value="16.477272"></viz:size>
         <viz:position x="-90.97117" y="301.35754"></viz:position>
+        <viz:color r="82" g="82" b="82"></viz:color>
       </node>
       <node id="bamberg_DE_gid_2952984" label="Bamberg">
         <attvalues>
@@ -48,9 +73,14 @@
           <attvalue for="locations_modern_province" value="Bavaria"></attvalue>
           <attvalue for="locations_lat" value="49.89873"></attvalue>
           <attvalue for="locations_lng" value="10.90067"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
+          <attvalue for="colour" value="#525252"></attvalue>
         </attvalues>
-        <viz:size value="40.0"></viz:size>
+        <viz:size value="10.0"></viz:size>
         <viz:position x="841.8526" y="-407.50937"></viz:position>
+        <viz:color r="82" g="82" b="82"></viz:color>
       </node>
       <node id="basel_CH_gid_2661604" label="Basel">
         <attvalues>
@@ -58,9 +88,14 @@
           <attvalue for="locations_modern_province" value="Basel-City"></attvalue>
           <attvalue for="locations_lat" value="47.5584"></attvalue>
           <attvalue for="locations_lng" value="7.57327"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="45.0"></attvalue>
+          <attvalue for="weighted degree" value="45.0"></attvalue>
+          <attvalue for="colour" value="#525252"></attvalue>
         </attvalues>
-        <viz:size value="40.0"></viz:size>
+        <viz:size value="25.0"></viz:size>
         <viz:position x="232.77435" y="-147.06877"></viz:position>
+        <viz:color r="82" g="82" b="82"></viz:color>
       </node>
       <node id="bologna_IT_gid_3181928" label="Bologna">
         <attvalues>
@@ -68,9 +103,14 @@
           <attvalue for="locations_modern_province" value="Emilia-Romagna"></attvalue>
           <attvalue for="locations_lat" value="44.49381"></attvalue>
           <attvalue for="locations_lng" value="11.33875"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="20.0"></attvalue>
+          <attvalue for="weighted degree" value="20.0"></attvalue>
+          <attvalue for="colour" value="#525252"></attvalue>
         </attvalues>
-        <viz:size value="40.0"></viz:size>
+        <viz:size value="16.477272"></viz:size>
         <viz:position x="-189.70413" y="-223.36227"></viz:position>
+        <viz:color r="82" g="82" b="82"></viz:color>
       </node>
       <node id="burgos_ES_gid_3127461" label="Burgos">
         <attvalues>
@@ -78,9 +118,14 @@
           <attvalue for="locations_modern_province" value="Castille and León"></attvalue>
           <attvalue for="locations_lat" value="42.35022"></attvalue>
           <attvalue for="locations_lng" value="-3.67527"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
+          <attvalue for="colour" value="#525252"></attvalue>
         </attvalues>
-        <viz:size value="40.0"></viz:size>
+        <viz:size value="10.0"></viz:size>
         <viz:position x="1012.1446" y="200.41557"></viz:position>
+        <viz:color r="82" g="82" b="82"></viz:color>
       </node>
       <node id="donauwörth_DE_gid_2936253" label="Donauwörth">
         <attvalues>
@@ -88,9 +133,14 @@
           <attvalue for="locations_modern_province" value="Bavaria"></attvalue>
           <attvalue for="locations_lat" value="48.71804"></attvalue>
           <attvalue for="locations_lng" value="10.7793"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
+          <attvalue for="colour" value="#525252"></attvalue>
         </attvalues>
-        <viz:size value="40.0"></viz:size>
+        <viz:size value="10.0"></viz:size>
         <viz:position x="769.6844" y="-719.9998"></viz:position>
+        <viz:color r="82" g="82" b="82"></viz:color>
       </node>
       <node id="dresden_DE_gid_2935022" label="Dresden">
         <attvalues>
@@ -98,9 +148,14 @@
           <attvalue for="locations_modern_province" value="Saxony"></attvalue>
           <attvalue for="locations_lat" value="51.05089"></attvalue>
           <attvalue for="locations_lng" value="13.73832"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="5.0"></attvalue>
+          <attvalue for="weighted degree" value="5.0"></attvalue>
+          <attvalue for="colour" value="#525252"></attvalue>
         </attvalues>
-        <viz:size value="40.0"></viz:size>
+        <viz:size value="11.363636"></viz:size>
         <viz:position x="-4.6216207" y="540.2573"></viz:position>
+        <viz:color r="82" g="82" b="82"></viz:color>
       </node>
       <node id="ebernburg_castle_DE_gid_unknown" label="Burg Ebernburg">
         <attvalues>
@@ -108,9 +163,14 @@
           <attvalue for="locations_modern_province" value="Rheinland-Pfalz"></attvalue>
           <attvalue for="locations_lat" value="49.807044"></attvalue>
           <attvalue for="locations_lng" value="7.838608"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
+          <attvalue for="colour" value="#525252"></attvalue>
         </attvalues>
-        <viz:size value="40.0"></viz:size>
+        <viz:size value="10.0"></viz:size>
         <viz:position x="459.41345" y="-807.5907"></viz:position>
+        <viz:color r="82" g="82" b="82"></viz:color>
       </node>
       <node id="eichstätt_DE_gid_2932069" label="Eichstätt">
         <attvalues>
@@ -118,9 +178,14 @@
           <attvalue for="locations_modern_province" value="Bavaria"></attvalue>
           <attvalue for="locations_lat" value="48.88854"></attvalue>
           <attvalue for="locations_lng" value="11.19675"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="4.0"></attvalue>
+          <attvalue for="weighted degree" value="4.0"></attvalue>
+          <attvalue for="colour" value="#525252"></attvalue>
         </attvalues>
-        <viz:size value="40.0"></viz:size>
+        <viz:size value="11.022727"></viz:size>
         <viz:position x="390.47574" y="-408.10037"></viz:position>
+        <viz:color r="82" g="82" b="82"></viz:color>
       </node>
       <node id="erfurt_DE_gid_2929670" label="Erfurt">
         <attvalues>
@@ -128,9 +193,14 @@
           <attvalue for="locations_modern_province" value="Thuringia"></attvalue>
           <attvalue for="locations_lat" value="50.9787"></attvalue>
           <attvalue for="locations_lng" value="11.03283"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="3.0"></attvalue>
+          <attvalue for="weighted degree" value="3.0"></attvalue>
+          <attvalue for="colour" value="#525252"></attvalue>
         </attvalues>
-        <viz:size value="40.0"></viz:size>
+        <viz:size value="10.681818"></viz:size>
         <viz:position x="-597.42035" y="190.52592"></viz:position>
+        <viz:color r="82" g="82" b="82"></viz:color>
       </node>
       <node id="ferrara_IT_gid_3177090" label="Ferrara">
         <attvalues>
@@ -138,9 +208,14 @@
           <attvalue for="locations_modern_province" value="Emilia-Romagna"></attvalue>
           <attvalue for="locations_lat" value="44.84346"></attvalue>
           <attvalue for="locations_lng" value="11.60868"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
+          <attvalue for="colour" value="#525252"></attvalue>
         </attvalues>
-        <viz:size value="40.0"></viz:size>
+        <viz:size value="10.0"></viz:size>
         <viz:position x="-244.56189" y="945.82294"></viz:position>
+        <viz:color r="82" g="82" b="82"></viz:color>
       </node>
       <node id="florence_IT_gid_3176959" label="Florence">
         <attvalues>
@@ -148,9 +223,14 @@
           <attvalue for="locations_modern_province" value="Tuscany"></attvalue>
           <attvalue for="locations_lat" value="43.77925"></attvalue>
           <attvalue for="locations_lng" value="11.24626"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
+          <attvalue for="colour" value="#525252"></attvalue>
         </attvalues>
-        <viz:size value="40.0"></viz:size>
+        <viz:size value="10.0"></viz:size>
         <viz:position x="201.1494" y="-1013.1947"></viz:position>
+        <viz:color r="82" g="82" b="82"></viz:color>
       </node>
       <node id="frankfurt_am_main_DE_gid_2925533" label="Frankfurt am Main">
         <attvalues>
@@ -158,9 +238,14 @@
           <attvalue for="locations_modern_province" value="Hesse"></attvalue>
           <attvalue for="locations_lat" value="50.11552"></attvalue>
           <attvalue for="locations_lng" value="8.68417"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="5.0"></attvalue>
+          <attvalue for="weighted degree" value="5.0"></attvalue>
+          <attvalue for="colour" value="#525252"></attvalue>
         </attvalues>
-        <viz:size value="40.0"></viz:size>
+        <viz:size value="11.363636"></viz:size>
         <viz:position x="123.05256" y="-400.3439"></viz:position>
+        <viz:color r="82" g="82" b="82"></viz:color>
       </node>
       <node id="freiburg_DE_gid_2925177" label="Freiburg">
         <attvalues>
@@ -168,9 +253,14 @@
           <attvalue for="locations_modern_province" value="Baden-Württemberg"></attvalue>
           <attvalue for="locations_lat" value="47.9959"></attvalue>
           <attvalue for="locations_lng" value="7.85222"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="9.0"></attvalue>
+          <attvalue for="weighted degree" value="9.0"></attvalue>
+          <attvalue for="colour" value="#525252"></attvalue>
         </attvalues>
-        <viz:size value="40.0"></viz:size>
+        <viz:size value="12.727273"></viz:size>
         <viz:position x="-371.34372" y="-24.192827"></viz:position>
+        <viz:color r="82" g="82" b="82"></viz:color>
       </node>
       <node id="georgenthal_DE_gid_2921261" label="Georgenthal">
         <attvalues>
@@ -178,9 +268,14 @@
           <attvalue for="locations_modern_province" value="Thuringia"></attvalue>
           <attvalue for="locations_lat" value="50.83205"></attvalue>
           <attvalue for="locations_lng" value="10.66266"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
+          <attvalue for="colour" value="#525252"></attvalue>
         </attvalues>
-        <viz:size value="40.0"></viz:size>
+        <viz:size value="10.0"></viz:size>
         <viz:position x="-730.41174" y="-547.5043"></viz:position>
+        <viz:color r="82" g="82" b="82"></viz:color>
       </node>
       <node id="ingolstadt_DE_gid_2895992" label="Ingolstadt">
         <attvalues>
@@ -188,9 +283,14 @@
           <attvalue for="locations_modern_province" value="Bavaria"></attvalue>
           <attvalue for="locations_lat" value="48.76508"></attvalue>
           <attvalue for="locations_lng" value="11.42372"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="8.0"></attvalue>
+          <attvalue for="weighted degree" value="8.0"></attvalue>
+          <attvalue for="colour" value="#525252"></attvalue>
         </attvalues>
-        <viz:size value="40.0"></viz:size>
+        <viz:size value="12.386364"></viz:size>
         <viz:position x="-331.09937" y="237.58376"></viz:position>
+        <viz:color r="82" g="82" b="82"></viz:color>
       </node>
       <node id="köln_DE_gid_2886242" label="Köln">
         <attvalues>
@@ -198,9 +298,14 @@
           <attvalue for="locations_modern_province" value="North Rhine-Westphalia"></attvalue>
           <attvalue for="locations_lat" value="50.93333"></attvalue>
           <attvalue for="locations_lng" value="6.95"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="3.0"></attvalue>
+          <attvalue for="weighted degree" value="3.0"></attvalue>
+          <attvalue for="colour" value="#525252"></attvalue>
         </attvalues>
-        <viz:size value="40.0"></viz:size>
+        <viz:size value="10.681818"></viz:size>
         <viz:position x="75.3154" y="-660.2973"></viz:position>
+        <viz:color r="82" g="82" b="82"></viz:color>
       </node>
       <node id="kornburg_DE_gid_2885443" label="Kornburg">
         <attvalues>
@@ -208,9 +313,14 @@
           <attvalue for="locations_modern_province" value="Bavaria"></attvalue>
           <attvalue for="locations_lat" value="49.35521"></attvalue>
           <attvalue for="locations_lng" value="11.09885"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
+          <attvalue for="colour" value="#525252"></attvalue>
         </attvalues>
-        <viz:size value="40.0"></viz:size>
+        <viz:size value="10.0"></viz:size>
         <viz:position x="851.1353" y="486.72946"></viz:position>
+        <viz:color r="82" g="82" b="82"></viz:color>
       </node>
       <node id="leipzig_DE_gid_2879139" label="Leipzig">
         <attvalues>
@@ -218,9 +328,14 @@
           <attvalue for="locations_modern_province" value="Saxony"></attvalue>
           <attvalue for="locations_lat" value="51.33962"></attvalue>
           <attvalue for="locations_lng" value="12.37129"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="11.0"></attvalue>
+          <attvalue for="weighted degree" value="11.0"></attvalue>
+          <attvalue for="colour" value="#525252"></attvalue>
         </attvalues>
-        <viz:size value="40.0"></viz:size>
+        <viz:size value="13.409091"></viz:size>
         <viz:position x="173.94376" y="315.48724"></viz:position>
+        <viz:color r="82" g="82" b="82"></viz:color>
       </node>
       <node id="leuven_BE_gid_2792482" label="Leuven">
         <attvalues>
@@ -228,9 +343,14 @@
           <attvalue for="locations_modern_province" value="Flemish"></attvalue>
           <attvalue for="locations_lat" value="50.87959"></attvalue>
           <attvalue for="locations_lng" value="4.70093"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="4.0"></attvalue>
+          <attvalue for="weighted degree" value="4.0"></attvalue>
+          <attvalue for="colour" value="#525252"></attvalue>
         </attvalues>
-        <viz:size value="40.0"></viz:size>
+        <viz:size value="11.022727"></viz:size>
         <viz:position x="524.20435" y="-164.70972"></viz:position>
+        <viz:color r="82" g="82" b="82"></viz:color>
       </node>
       <node id="mainz_st_viktorsberg_DE_gid_unknown" label="Mainz-St. Viktorsberg">
         <attvalues>
@@ -238,9 +358,14 @@
           <attvalue for="locations_modern_province" value="Rheinland-Pfalz"></attvalue>
           <attvalue for="locations_lat" value="49.98419"></attvalue>
           <attvalue for="locations_lng" value="8.2791"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="2.0"></attvalue>
+          <attvalue for="weighted degree" value="2.0"></attvalue>
+          <attvalue for="colour" value="#525252"></attvalue>
         </attvalues>
-        <viz:size value="40.0"></viz:size>
+        <viz:size value="10.340909"></viz:size>
         <viz:position x="-351.01276" y="567.7562"></viz:position>
+        <viz:color r="82" g="82" b="82"></viz:color>
       </node>
       <node id="milano_IT_gid_3173435" label="Milano">
         <attvalues>
@@ -248,9 +373,14 @@
           <attvalue for="locations_modern_province" value="Lombardy"></attvalue>
           <attvalue for="locations_lat" value="45.46427"></attvalue>
           <attvalue for="locations_lng" value="9.18951"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
+          <attvalue for="colour" value="#525252"></attvalue>
         </attvalues>
-        <viz:size value="40.0"></viz:size>
+        <viz:size value="10.0"></viz:size>
         <viz:position x="1006.83044" y="-131.9894"></viz:position>
+        <viz:color r="82" g="82" b="82"></viz:color>
       </node>
       <node id="nürnberg_DE_gid_2861650" label="Nürnberg">
         <attvalues>
@@ -258,9 +388,14 @@
           <attvalue for="locations_modern_province" value="Bavaria"></attvalue>
           <attvalue for="locations_lat" value="49.45421"></attvalue>
           <attvalue for="locations_lng" value="11.07752"></attvalue>
+          <attvalue for="weighted indegree" value="219.0"></attvalue>
+          <attvalue for="weighted outdegree" value="31.0"></attvalue>
+          <attvalue for="weighted degree" value="250.0"></attvalue>
+          <attvalue for="colour" value="#525252"></attvalue>
         </attvalues>
-        <viz:size value="40.0"></viz:size>
+        <viz:size value="20.227272"></viz:size>
         <viz:position x="8.099794" y="5.567073"></viz:position>
+        <viz:color r="82" g="82" b="82"></viz:color>
       </node>
       <node id="passau_DE_gid_2855328" label="Passau">
         <attvalues>
@@ -268,9 +403,14 @@
           <attvalue for="locations_modern_province" value="Bavaria"></attvalue>
           <attvalue for="locations_lat" value="48.5665"></attvalue>
           <attvalue for="locations_lng" value="13.43122"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
+          <attvalue for="colour" value="#525252"></attvalue>
         </attvalues>
-        <viz:size value="40.0"></viz:size>
+        <viz:size value="10.0"></viz:size>
         <viz:position x="-954.9586" y="356.16696"></viz:position>
+        <viz:color r="82" g="82" b="82"></viz:color>
       </node>
       <node id="pavia_IT_gid_3171366" label="Pavia">
         <attvalues>
@@ -278,9 +418,14 @@
           <attvalue for="locations_modern_province" value="Lombardy"></attvalue>
           <attvalue for="locations_lat" value="45.19205"></attvalue>
           <attvalue for="locations_lng" value="9.15917"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
+          <attvalue for="colour" value="#525252"></attvalue>
         </attvalues>
-        <viz:size value="40.0"></viz:size>
+        <viz:size value="10.0"></viz:size>
         <viz:position x="-654.7891" y="-871.13776"></viz:position>
+        <viz:color r="82" g="82" b="82"></viz:color>
       </node>
       <node id="rome_IT_gid_3169070" label="Rome">
         <attvalues>
@@ -288,9 +433,14 @@
           <attvalue for="locations_modern_province" value="Latium"></attvalue>
           <attvalue for="locations_lat" value="41.89193"></attvalue>
           <attvalue for="locations_lng" value="12.51133"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="2.0"></attvalue>
+          <attvalue for="weighted degree" value="2.0"></attvalue>
+          <attvalue for="colour" value="#525252"></attvalue>
         </attvalues>
-        <viz:size value="40.0"></viz:size>
+        <viz:size value="10.340909"></viz:size>
         <viz:position x="292.2268" y="637.9259"></viz:position>
+        <viz:color r="82" g="82" b="82"></viz:color>
       </node>
       <node id="sélestat_FR_gid_2975233" label="Sélestat">
         <attvalues>
@@ -298,9 +448,14 @@
           <attvalue for="locations_modern_province" value="Alsace-Champagne-Ardenne-Lorraine"></attvalue>
           <attvalue for="locations_lat" value="48.26667"></attvalue>
           <attvalue for="locations_lng" value="7.45"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
+          <attvalue for="colour" value="#525252"></attvalue>
         </attvalues>
-        <viz:size value="40.0"></viz:size>
+        <viz:size value="10.0"></viz:size>
         <viz:position x="-356.23822" y="-765.723"></viz:position>
+        <viz:color r="82" g="82" b="82"></viz:color>
       </node>
       <node id="strasbourg_FR_gid_2973783" label="Strasbourg">
         <attvalues>
@@ -308,9 +463,14 @@
           <attvalue for="locations_modern_province" value="Alsace-Champagne-Ardenne-Lorraine"></attvalue>
           <attvalue for="locations_lat" value="48.58342"></attvalue>
           <attvalue for="locations_lng" value="7.74296"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="5.0"></attvalue>
+          <attvalue for="weighted degree" value="5.0"></attvalue>
+          <attvalue for="colour" value="#525252"></attvalue>
         </attvalues>
-        <viz:size value="40.0"></viz:size>
+        <viz:size value="11.363636"></viz:size>
         <viz:position x="-426.65964" y="-313.0053"></viz:position>
+        <viz:color r="82" g="82" b="82"></viz:color>
       </node>
       <node id="stuttgart_DE_gid_2825297" label="Stuttgart">
         <attvalues>
@@ -318,9 +478,14 @@
           <attvalue for="locations_modern_province" value="Baden-Württemberg"></attvalue>
           <attvalue for="locations_lat" value="48.78232"></attvalue>
           <attvalue for="locations_lng" value="9.17702"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="6.0"></attvalue>
+          <attvalue for="weighted degree" value="6.0"></attvalue>
+          <attvalue for="colour" value="#525252"></attvalue>
         </attvalues>
-        <viz:size value="40.0"></viz:size>
+        <viz:size value="11.704546"></viz:size>
         <viz:position x="-141.09663" y="-465.8826"></viz:position>
+        <viz:color r="82" g="82" b="82"></viz:color>
       </node>
       <node id="toledo_ES_gid_2510409" label="Toledo">
         <attvalues>
@@ -328,9 +493,14 @@
           <attvalue for="locations_modern_province" value="Castille-La Mancha"></attvalue>
           <attvalue for="locations_lat" value="39.8581"></attvalue>
           <attvalue for="locations_lng" value="-4.02263"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
+          <attvalue for="colour" value="#525252"></attvalue>
         </attvalues>
-        <viz:size value="40.0"></viz:size>
+        <viz:size value="10.0"></viz:size>
         <viz:position x="-570.3582" y="881.9724"></viz:position>
+        <viz:color r="82" g="82" b="82"></viz:color>
       </node>
       <node id="torgau_DE_gid_2821807" label="Torgau">
         <attvalues>
@@ -338,9 +508,14 @@
           <attvalue for="locations_modern_province" value="Saxony"></attvalue>
           <attvalue for="locations_lat" value="51.56016"></attvalue>
           <attvalue for="locations_lng" value="12.99617"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
+          <attvalue for="colour" value="#525252"></attvalue>
         </attvalues>
-        <viz:size value="40.0"></viz:size>
+        <viz:size value="10.0"></viz:size>
         <viz:position x="-1007.10675" y="23.59624"></viz:position>
+        <viz:color r="82" g="82" b="82"></viz:color>
       </node>
       <node id="tübingen_DE_gid_2820860" label="Tübingen">
         <attvalues>
@@ -348,9 +523,14 @@
           <attvalue for="locations_modern_province" value="Baden-Württemberg"></attvalue>
           <attvalue for="locations_lat" value="48.52266"></attvalue>
           <attvalue for="locations_lng" value="9.05222"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
+          <attvalue for="colour" value="#525252"></attvalue>
         </attvalues>
-        <viz:size value="40.0"></viz:size>
+        <viz:size value="10.0"></viz:size>
         <viz:position x="666.07336" y="752.4487"></viz:position>
+        <viz:color r="82" g="82" b="82"></viz:color>
       </node>
       <node id="valladolid_ES_gid_3106672" label="Valladolid">
         <attvalues>
@@ -358,9 +538,14 @@
           <attvalue for="locations_modern_province" value="Castille and León"></attvalue>
           <attvalue for="locations_lat" value="41.65518"></attvalue>
           <attvalue for="locations_lng" value="-4.72372"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
+          <attvalue for="colour" value="#525252"></attvalue>
         </attvalues>
-        <viz:size value="40.0"></viz:size>
+        <viz:size value="10.0"></viz:size>
         <viz:position x="-985.8038" y="-330.82394"></viz:position>
+        <viz:color r="82" g="82" b="82"></viz:color>
       </node>
       <node id="venice_IT_gid_3164603" label="Venice">
         <attvalues>
@@ -368,9 +553,14 @@
           <attvalue for="locations_modern_province" value="Veneto"></attvalue>
           <attvalue for="locations_lat" value="45.43713"></attvalue>
           <attvalue for="locations_lng" value="12.33265"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="5.0"></attvalue>
+          <attvalue for="weighted degree" value="5.0"></attvalue>
+          <attvalue for="colour" value="#525252"></attvalue>
         </attvalues>
-        <viz:size value="40.0"></viz:size>
+        <viz:size value="11.363636"></viz:size>
         <viz:position x="427.76608" y="349.61713"></viz:position>
+        <viz:color r="82" g="82" b="82"></viz:color>
       </node>
       <node id="waischenfeld_DE_gid_2815297" label="Waischenfeld">
         <attvalues>
@@ -378,9 +568,14 @@
           <attvalue for="locations_modern_province" value="Bavaria"></attvalue>
           <attvalue for="locations_lat" value="49.84645"></attvalue>
           <attvalue for="locations_lng" value="11.3481"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="2.0"></attvalue>
+          <attvalue for="weighted degree" value="2.0"></attvalue>
+          <attvalue for="colour" value="#525252"></attvalue>
         </attvalues>
-        <viz:size value="40.0"></viz:size>
+        <viz:size value="10.340909"></viz:size>
         <viz:position x="-675.76685" y="-126.84249"></viz:position>
+        <viz:color r="82" g="82" b="82"></viz:color>
       </node>
       <node id="weinsberg_DE_gid_2812158" label="Weinsberg">
         <attvalues>
@@ -388,9 +583,14 @@
           <attvalue for="locations_modern_province" value="Baden-Württemberg"></attvalue>
           <attvalue for="locations_lat" value="49.15127"></attvalue>
           <attvalue for="locations_lng" value="9.28762"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
+          <attvalue for="colour" value="#525252"></attvalue>
         </attvalues>
-        <viz:size value="40.0"></viz:size>
+        <viz:size value="10.0"></viz:size>
         <viz:position x="73.835045" y="981.75775"></viz:position>
+        <viz:color r="82" g="82" b="82"></viz:color>
       </node>
       <node id="wittenberg_DE_gid_7303020" label="Wittenberg">
         <attvalues>
@@ -398,9 +598,14 @@
           <attvalue for="locations_modern_province" value="Saxony-Anhalt"></attvalue>
           <attvalue for="locations_lat" value="51.8661"></attvalue>
           <attvalue for="locations_lng" value="12.64973"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="4.0"></attvalue>
+          <attvalue for="weighted degree" value="4.0"></attvalue>
+          <attvalue for="colour" value="#525252"></attvalue>
         </attvalues>
-        <viz:size value="40.0"></viz:size>
+        <viz:size value="11.022727"></viz:size>
         <viz:position x="638.6086" y="110.76501"></viz:position>
+        <viz:color r="82" g="82" b="82"></viz:color>
       </node>
       <node id="würzburg_DE_gid_2805615" label="Würzburg">
         <attvalues>
@@ -408,9 +613,14 @@
           <attvalue for="locations_modern_province" value="Bavaria"></attvalue>
           <attvalue for="locations_lat" value="49.79391"></attvalue>
           <attvalue for="locations_lng" value="9.95121"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
+          <attvalue for="colour" value="#525252"></attvalue>
         </attvalues>
-        <viz:size value="40.0"></viz:size>
+        <viz:size value="10.0"></viz:size>
         <viz:position x="-147.39226" y="-1017.4771"></viz:position>
+        <viz:color r="82" g="82" b="82"></viz:color>
       </node>
       <node id="zürich_CH_gid_2657896" label="Zürich">
         <attvalues>
@@ -418,9 +628,14 @@
           <attvalue for="locations_modern_province" value="Zurich"></attvalue>
           <attvalue for="locations_lat" value="47.36667"></attvalue>
           <attvalue for="locations_lng" value="8.55"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
+          <attvalue for="colour" value="#525252"></attvalue>
         </attvalues>
-        <viz:size value="40.0"></viz:size>
+        <viz:size value="10.0"></viz:size>
         <viz:position x="-737.04675" y="597.1641"></viz:position>
+        <viz:color r="82" g="82" b="82"></viz:color>
       </node>
     </nodes>
     <edges>
