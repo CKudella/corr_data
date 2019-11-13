@@ -1,1621 +1,496 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gexf xmlns="http://www.gexf.net/1.3" version="1.3" xmlns:viz="http://www.gexf.net/1.3/viz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.3 http://www.gexf.net/1.3/gexf.xsd">
-  <meta lastmodifieddate="2018-03-29">
+  <meta lastmodifieddate="2019-11-13">
     <creator>Gephi 0.9</creator>
     <description></description>
   </meta>
   <graph defaultedgetype="directed" mode="static">
     <attributes class="node" mode="static">
-      <attribute id="type" title="type" type="string"></attribute>
-      <attribute id="gender" title="gender" type="string"></attribute>
-      <attribute id="pob_loc_id" title="pob_loc_id" type="string"></attribute>
-      <attribute id="pob_loc_annotation" title="pob_loc_annotation" type="string"></attribute>
-      <attribute id="dob_year1" title="dob_year1" type="string"></attribute>
-      <attribute id="dob_computable1" title="dob_computable1" type="string"></attribute>
-      <attribute id="dob_has_range" title="dob_has_range" type="integer"></attribute>
-      <attribute id="dob_year2" title="dob_year2" type="string"></attribute>
-      <attribute id="dob_computable2" title="dob_computable2" type="string"></attribute>
-      <attribute id="pod_loc_id" title="pod_loc_id" type="string"></attribute>
-      <attribute id="pod_loc_annotation" title="pod_loc_annotation" type="string"></attribute>
-      <attribute id="dod_year1" title="dod_year1" type="string"></attribute>
-      <attribute id="dod_computable1" title="dod_computable1" type="string"></attribute>
-      <attribute id="dod_has_range" title="dod_has_range" type="integer"></attribute>
-      <attribute id="dod_year2" title="dod_year2" type="string"></attribute>
-      <attribute id="colour" title="colour" type="string"></attribute>
-      <attribute id="weighted indegree" title="Gewichteter Eingangsgrad" type="double">
+      <attribute id="att1" title="Degree" type="float"></attribute>
+      <attribute id="att2" title="colour" type="string"></attribute>
+      <attribute id="att3" title="Weighted.Degree" type="float"></attribute>
+      <attribute id="weighted indegree" title="Weighted In-Degree" type="double">
         <default>0.0</default>
       </attribute>
-      <attribute id="weighted outdegree" title="Gewichteter Ausgangsgrad" type="double">
+      <attribute id="weighted outdegree" title="Weighted Out-Degree" type="double">
         <default>0.0</default>
       </attribute>
-      <attribute id="weighted degree" title="Gewichteter Grad" type="double">
+      <attribute id="weighted degree" title="Weighted Degree" type="double">
         <default>0.0</default>
       </attribute>
-    </attributes>
-    <attributes class="edge" mode="static">
-      <attribute id="letter_no_in_edition" title="letter_no_in_edition" type="string"></attribute>
-      <attribute id="sender_inferred" title="sender_inferred" type="integer"></attribute>
-      <attribute id="sender_uncertain" title="sender_uncertain" type="integer"></attribute>
-      <attribute id="recipient_inferred" title="recipient_inferred" type="integer"></attribute>
-      <attribute id="recipient_uncertain" title="recipient_uncertain" type="integer"></attribute>
-      <attribute id="send_date_year1" title="send_date_year1" type="integer"></attribute>
-      <attribute id="send_date_computable1" title="send_date_computable1" type="string"></attribute>
-      <attribute id="send_date_has_range" title="send_date_has_range" type="integer"></attribute>
-      <attribute id="send_date_year2" title="send_date_year2" type="integer"></attribute>
-      <attribute id="send_date_computable2" title="send_date_computable2" type="string"></attribute>
-      <attribute id="send_date_inferred" title="send_date_inferred" type="integer"></attribute>
-      <attribute id="send_date_approx" title="send_date_approx" type="integer"></attribute>
-      <attribute id="send_date_uncertain" title="send_date_uncertain" type="integer"></attribute>
-      <attribute id="source_loc_id" title="source_loc_id" type="string"></attribute>
-      <attribute id="source_loc_inferred" title="source_loc_inferred" type="integer"></attribute>
-      <attribute id="source_loc_uncertain" title="source_loc_uncertain" type="integer"></attribute>
-      <attribute id="target_loc_id" title="target_loc_id" type="string"></attribute>
-      <attribute id="target_loc_inferred" title="target_loc_inferred" type="integer"></attribute>
-      <attribute id="target_loc_uncertain" title="target_loc_uncertain" type="integer"></attribute>
-      <attribute id="letter_language" title="letter_language" type="string"></attribute>
-      <attribute id="letter_type_genus" title="letter_type_genus" type="string"></attribute>
-      <attribute id="letter_type_x_to_x" title="letter_type_x_to_x" type="string"></attribute>
     </attributes>
     <nodes>
-      <node id="cochlæus_johannes_viaf_121589726" label="Johannes COCHLAEUS">
+      <node id="1" label="Johannes COCHLAEUS">
         <attvalues>
-          <attvalue for="type" value="individual"></attvalue>
-          <attvalue for="gender" value="male"></attvalue>
-          <attvalue for="pob_loc_id" value="wendelstein_DE_gid_2811292"></attvalue>
-          <attvalue for="pob_loc_annotation" value="Wendelstein bei Schwabach/Mittelfranken"></attvalue>
-          <attvalue for="dob_year1" value="1479"></attvalue>
-          <attvalue for="dob_computable1" value="1479-01-01"></attvalue>
-          <attvalue for="dob_has_range" value="1"></attvalue>
-          <attvalue for="dob_year2" value="1479"></attvalue>
-          <attvalue for="dob_computable2" value="1479-12-31"></attvalue>
-          <attvalue for="pod_loc_id" value="wrocław_PL_gid_3081368"></attvalue>
-          <attvalue for="pod_loc_annotation" value="Breslau"></attvalue>
-          <attvalue for="dod_year1" value="1552"></attvalue>
-          <attvalue for="dod_computable1" value="1552-01-10"></attvalue>
-          <attvalue for="dod_has_range" value="0"></attvalue>
-          <attvalue for="dod_year2" value="1552"></attvalue>
-          <attvalue for="colour" value="#fdb863"></attvalue>
+          <attvalue for="att1" value="2.0"></attvalue>
+          <attvalue for="att2" value="#C3161F"></attvalue>
+          <attvalue for="att3" value="2.0"></attvalue>
           <attvalue for="weighted indegree" value="1.0"></attvalue>
           <attvalue for="weighted outdegree" value="1.0"></attvalue>
           <attvalue for="weighted degree" value="2.0"></attvalue>
         </attvalues>
-        <viz:size value="10.357142"></viz:size>
-        <viz:position x="196.20569" y="451.1906"></viz:position>
-        <viz:color r="253" g="184" b="99"></viz:color>
+        <viz:size value="10.535714"></viz:size>
+        <viz:position x="-235.00003" y="-21.552845"></viz:position>
+        <viz:color r="195" g="22" b="31"></viz:color>
       </node>
-      <node id="colet_john_viaf_34454805" label="John COLET">
+      <node id="2" label="John COLET">
         <attvalues>
-          <attvalue for="type" value="individual"></attvalue>
-          <attvalue for="gender" value="male"></attvalue>
-          <attvalue for="pob_loc_id" value="london_GB_gid_2643743"></attvalue>
-          <attvalue for="pob_loc_annotation" value="London"></attvalue>
-          <attvalue for="dob_year1" value="1467"></attvalue>
-          <attvalue for="dob_computable1" value="1467-01-01"></attvalue>
-          <attvalue for="dob_has_range" value="1"></attvalue>
-          <attvalue for="dob_year2" value="1467"></attvalue>
-          <attvalue for="dob_computable2" value="1467-12-31"></attvalue>
-          <attvalue for="pod_loc_id" value="london_GB_gid_2643743"></attvalue>
-          <attvalue for="pod_loc_annotation" value="London"></attvalue>
-          <attvalue for="dod_year1" value="1519"></attvalue>
-          <attvalue for="dod_computable1" value="1519-09-16"></attvalue>
-          <attvalue for="dod_has_range" value="0"></attvalue>
-          <attvalue for="dod_year2" value="1519"></attvalue>
-          <attvalue for="colour" value="#525252"></attvalue>
+          <attvalue for="att1" value="1.0"></attvalue>
+          <attvalue for="att2" value="#525252"></attvalue>
+          <attvalue for="att3" value="2.0"></attvalue>
           <attvalue for="weighted indegree" value="2.0"></attvalue>
           <attvalue for="weighted outdegree" value="0.0"></attvalue>
           <attvalue for="weighted degree" value="2.0"></attvalue>
         </attvalues>
-        <viz:size value="10.714286"></viz:size>
-        <viz:position x="-133.53699" y="-622.153"></viz:position>
+        <viz:size value="11.071428"></viz:size>
+        <viz:position x="248.14761" y="54.10978"></viz:position>
         <viz:color r="82" g="82" b="82"></viz:color>
       </node>
-      <node id="della_rena_andrea_viaf_77136743" label="Andrea AMMONIO">
+      <node id="3" label="Andrea AMMONIO">
         <attvalues>
-          <attvalue for="type" value="individual"></attvalue>
-          <attvalue for="gender" value="male"></attvalue>
-          <attvalue for="pob_loc_id" value="lucca_IT_gid_3174530"></attvalue>
-          <attvalue for="pob_loc_annotation" value="Lucca"></attvalue>
-          <attvalue for="dob_year1" value="1487"></attvalue>
-          <attvalue for="dob_computable1" value="1478-01-01"></attvalue>
-          <attvalue for="dob_has_range" value="1"></attvalue>
-          <attvalue for="dob_year2" value="1487"></attvalue>
-          <attvalue for="dob_computable2" value="1478-12-31"></attvalue>
-          <attvalue for="pod_loc_id" value="london_GB_gid_2643743"></attvalue>
-          <attvalue for="pod_loc_annotation" value="London"></attvalue>
-          <attvalue for="dod_year1" value="1517"></attvalue>
-          <attvalue for="dod_computable1" value="1517-08-17"></attvalue>
-          <attvalue for="dod_has_range" value="0"></attvalue>
-          <attvalue for="dod_year2" value="1517"></attvalue>
-          <attvalue for="colour" value="#525252"></attvalue>
+          <attvalue for="att1" value="2.0"></attvalue>
+          <attvalue for="att2" value="#525252"></attvalue>
+          <attvalue for="att3" value="5.0"></attvalue>
           <attvalue for="weighted indegree" value="4.0"></attvalue>
           <attvalue for="weighted outdegree" value="1.0"></attvalue>
           <attvalue for="weighted degree" value="5.0"></attvalue>
         </attvalues>
-        <viz:size value="11.428572"></viz:size>
-        <viz:position x="-136.5035" y="-792.82074"></viz:position>
+        <viz:size value="12.142858"></viz:size>
+        <viz:position x="309.41663" y="-61.912212"></viz:position>
         <viz:color r="82" g="82" b="82"></viz:color>
       </node>
-      <node id="erasmus_desiderius_viaf_95982394" label="Erasmus Desiderius">
+      <node id="4" label="Erasmus Desiderius">
         <attvalues>
-          <attvalue for="type" value="individual"></attvalue>
-          <attvalue for="gender" value="male"></attvalue>
-          <attvalue for="pob_loc_id" value="rotterdam_NL_gid_2747891"></attvalue>
-          <attvalue for="pob_loc_annotation" value="bei Rotterdam"></attvalue>
-          <attvalue for="dob_year1" value="1469"></attvalue>
-          <attvalue for="dob_computable1" value="1469-01-01"></attvalue>
-          <attvalue for="dob_has_range" value="1"></attvalue>
-          <attvalue for="dob_year2" value="1469"></attvalue>
-          <attvalue for="dob_computable2" value="1469-12-31"></attvalue>
-          <attvalue for="pod_loc_id" value="basel_CH_gid_2661604"></attvalue>
-          <attvalue for="pod_loc_annotation" value="Basel"></attvalue>
-          <attvalue for="dod_year1" value="1536"></attvalue>
-          <attvalue for="dod_computable1" value="1536-01-01"></attvalue>
-          <attvalue for="dod_has_range" value="1"></attvalue>
-          <attvalue for="dod_year2" value="1536"></attvalue>
-          <attvalue for="colour" value="#e66101"></attvalue>
+          <attvalue for="att1" value="9.0"></attvalue>
+          <attvalue for="att2" value="#3C93AF"></attvalue>
+          <attvalue for="att3" value="16.0"></attvalue>
           <attvalue for="weighted indegree" value="1.0"></attvalue>
           <attvalue for="weighted outdegree" value="15.0"></attvalue>
           <attvalue for="weighted degree" value="16.0"></attvalue>
         </attvalues>
-        <viz:size value="10.357142"></viz:size>
-        <viz:position x="-112.46906" y="-710.3926"></viz:position>
-        <viz:color r="230" g="97" b="1"></viz:color>
+        <viz:size value="10.535714"></viz:size>
+        <viz:position x="300.76608" y="-10.162207"></viz:position>
+        <viz:color r="60" g="147" b="175"></viz:color>
       </node>
-      <node id="gonnell_william_viaf_unknown" label="William GONNELL">
+      <node id="5" label="William GONNELL">
         <attvalues>
-          <attvalue for="type" value="individual"></attvalue>
-          <attvalue for="gender" value="male"></attvalue>
-          <attvalue for="pob_loc_id" value="landbeach_GB_gid_6284113"></attvalue>
-          <attvalue for="pob_loc_annotation" value="Landbeach, Cambridgeshire"></attvalue>
-          <attvalue for="dob_year1" value="NA"></attvalue>
-          <attvalue for="dob_computable1" value="0000-00-00"></attvalue>
-          <attvalue for="dob_has_range" value="1"></attvalue>
-          <attvalue for="dob_year2" value="NA"></attvalue>
-          <attvalue for="dob_computable2" value="0000-00-00"></attvalue>
-          <attvalue for="pod_loc_id" value="conington_GB_gid_2652460"></attvalue>
-          <attvalue for="pod_loc_annotation" value="prob. Conington, near Landbeach"></attvalue>
-          <attvalue for="dod_year1" value="1560"></attvalue>
-          <attvalue for="dod_computable1" value="1560-08-28"></attvalue>
-          <attvalue for="dod_has_range" value="0"></attvalue>
-          <attvalue for="dod_year2" value="1560"></attvalue>
-          <attvalue for="colour" value="#525252"></attvalue>
+          <attvalue for="att1" value="1.0"></attvalue>
+          <attvalue for="att2" value="#525252"></attvalue>
+          <attvalue for="att3" value="4.0"></attvalue>
           <attvalue for="weighted indegree" value="4.0"></attvalue>
           <attvalue for="weighted outdegree" value="0.0"></attvalue>
           <attvalue for="weighted degree" value="4.0"></attvalue>
         </attvalues>
-        <viz:size value="11.428572"></viz:size>
-        <viz:position x="-29.257668" y="-729.5967"></viz:position>
+        <viz:size value="12.142858"></viz:size>
+        <viz:position x="357.8537" y="21.705328"></viz:position>
         <viz:color r="82" g="82" b="82"></viz:color>
       </node>
-      <node id="henry_viii_king_of_england_viaf_172419710" label="HENRY VIII">
+      <node id="6" label="HENRY VIII">
         <attvalues>
-          <attvalue for="type" value="individual"></attvalue>
-          <attvalue for="gender" value="male"></attvalue>
-          <attvalue for="pob_loc_id" value="greenwich_GB_gid_2647937"></attvalue>
-          <attvalue for="pob_loc_annotation" value="Greenwich"></attvalue>
-          <attvalue for="dob_year1" value="1491"></attvalue>
-          <attvalue for="dob_computable1" value="1491-06-28"></attvalue>
-          <attvalue for="dob_has_range" value="0"></attvalue>
-          <attvalue for="dob_year2" value="1491"></attvalue>
-          <attvalue for="dob_computable2" value="1491-06-28"></attvalue>
-          <attvalue for="pod_loc_id" value="london_GB_gid_2643743"></attvalue>
-          <attvalue for="pod_loc_annotation" value="London"></attvalue>
-          <attvalue for="dod_year1" value="1547"></attvalue>
-          <attvalue for="dod_computable1" value="1547-01-28"></attvalue>
-          <attvalue for="dod_has_range" value="0"></attvalue>
-          <attvalue for="dod_year2" value="1547"></attvalue>
-          <attvalue for="colour" value="#525252"></attvalue>
+          <attvalue for="att1" value="1.0"></attvalue>
+          <attvalue for="att2" value="#525252"></attvalue>
+          <attvalue for="att3" value="1.0"></attvalue>
           <attvalue for="weighted indegree" value="1.0"></attvalue>
           <attvalue for="weighted outdegree" value="0.0"></attvalue>
           <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="10.357142"></viz:size>
-        <viz:position x="56.48753" y="-686.7928"></viz:position>
+        <viz:size value="10.535714"></viz:size>
+        <viz:position x="284.07196" y="-169.41695"></viz:position>
         <viz:color r="82" g="82" b="82"></viz:color>
       </node>
-      <node id="more_thomas_sir_saint_viaf_29541174" label="Thomas MORE">
+      <node id="7" label="Thomas MORE">
         <attvalues>
-          <attvalue for="type" value="individual"></attvalue>
-          <attvalue for="gender" value="male"></attvalue>
-          <attvalue for="pob_loc_id" value="london_GB_gid_2643743"></attvalue>
-          <attvalue for="pob_loc_annotation" value="London"></attvalue>
-          <attvalue for="dob_year1" value="1477"></attvalue>
-          <attvalue for="dob_computable1" value="1477-02-06"></attvalue>
-          <attvalue for="dob_has_range" value="1"></attvalue>
-          <attvalue for="dob_year2" value="1478"></attvalue>
-          <attvalue for="dob_computable2" value="1478-02-07"></attvalue>
-          <attvalue for="pod_loc_id" value="london_GB_gid_2643743"></attvalue>
-          <attvalue for="pod_loc_annotation" value="London"></attvalue>
-          <attvalue for="dod_year1" value="1535"></attvalue>
-          <attvalue for="dod_computable1" value="1535-07-06"></attvalue>
-          <attvalue for="dod_has_range" value="0"></attvalue>
-          <attvalue for="dod_year2" value="1535"></attvalue>
-          <attvalue for="colour" value="#525252"></attvalue>
+          <attvalue for="att1" value="1.0"></attvalue>
+          <attvalue for="att2" value="#525252"></attvalue>
+          <attvalue for="att3" value="1.0"></attvalue>
           <attvalue for="weighted indegree" value="1.0"></attvalue>
           <attvalue for="weighted outdegree" value="0.0"></attvalue>
           <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="10.357142"></viz:size>
-        <viz:position x="-255.27715" y="-678.0937"></viz:position>
+        <viz:size value="10.535714"></viz:size>
+        <viz:position x="368.46744" y="-118.53321"></viz:position>
         <viz:color r="82" g="82" b="82"></viz:color>
       </node>
-      <node id="neuenar_hermann_graf_von_viaf_18164526" label="Hermann von NEUENAHR">
+      <node id="8" label="Hermann von NEUENAHR">
         <attvalues>
-          <attvalue for="type" value="individual"></attvalue>
-          <attvalue for="gender" value="male"></attvalue>
-          <attvalue for="pob_loc_id" value="unknown_location_in_germany_DE_gid_unknown"></attvalue>
-          <attvalue for="pob_loc_annotation" value="Unknown"></attvalue>
-          <attvalue for="dob_year1" value="1492"></attvalue>
-          <attvalue for="dob_computable1" value="1492-01-01"></attvalue>
-          <attvalue for="dob_has_range" value="1"></attvalue>
-          <attvalue for="dob_year2" value="1492"></attvalue>
-          <attvalue for="dob_computable2" value="1492-12-31"></attvalue>
-          <attvalue for="pod_loc_id" value="augsburg_DE_gid_2954172"></attvalue>
-          <attvalue for="pod_loc_annotation" value="Augsburg"></attvalue>
-          <attvalue for="dod_year1" value="1530"></attvalue>
-          <attvalue for="dod_computable1" value="1530-10-30"></attvalue>
-          <attvalue for="dod_has_range" value="0"></attvalue>
-          <attvalue for="dod_year2" value="1530"></attvalue>
-          <attvalue for="colour" value="#fdb863"></attvalue>
+          <attvalue for="att1" value="1.0"></attvalue>
+          <attvalue for="att2" value="#C3161F"></attvalue>
+          <attvalue for="att3" value="1.0"></attvalue>
           <attvalue for="weighted indegree" value="1.0"></attvalue>
           <attvalue for="weighted outdegree" value="0.0"></attvalue>
           <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="10.357142"></viz:size>
-        <viz:position x="196.44589" y="141.94052"></viz:position>
-        <viz:color r="253" g="184" b="99"></viz:color>
+        <viz:size value="10.535714"></viz:size>
+        <viz:position x="-283.96805" y="-104.96309"></viz:position>
+        <viz:color r="195" g="22" b="31"></viz:color>
       </node>
-      <node id="pirckheimer_willibald_viaf_27173507" label="Willibald PIRCKHEIMER">
+      <node id="9" label="Willibald PIRCKHEIMER">
         <attvalues>
-          <attvalue for="type" value="individual"></attvalue>
-          <attvalue for="gender" value="male"></attvalue>
-          <attvalue for="pob_loc_id" value="eichstätt_DE_gid_2932069"></attvalue>
-          <attvalue for="pob_loc_annotation" value="Eichstätt"></attvalue>
-          <attvalue for="dob_year1" value="1470"></attvalue>
-          <attvalue for="dob_computable1" value="1470-12-05"></attvalue>
-          <attvalue for="dob_has_range" value="0"></attvalue>
-          <attvalue for="dob_year2" value="1470"></attvalue>
-          <attvalue for="dob_computable2" value="1470-12-05"></attvalue>
-          <attvalue for="pod_loc_id" value="nürnberg_DE_gid_2861650"></attvalue>
-          <attvalue for="pod_loc_annotation" value="Nürnberg"></attvalue>
-          <attvalue for="dod_year1" value="1530"></attvalue>
-          <attvalue for="dod_computable1" value="1530-12-22"></attvalue>
-          <attvalue for="dod_has_range" value="0"></attvalue>
-          <attvalue for="dod_year2" value="1530"></attvalue>
-          <attvalue for="colour" value="#5e3c99"></attvalue>
+          <attvalue for="att1" value="22.0"></attvalue>
+          <attvalue for="att2" value="#D5AB5B"></attvalue>
+          <attvalue for="att3" value="56.0"></attvalue>
           <attvalue for="weighted indegree" value="28.0"></attvalue>
           <attvalue for="weighted outdegree" value="28.0"></attvalue>
           <attvalue for="weighted degree" value="56.0"></attvalue>
         </attvalues>
-        <viz:size value="20.0"></viz:size>
-        <viz:position x="57.420025" y="324.0988"></viz:position>
-        <viz:color r="94" g="60" b="153"></viz:color>
+        <viz:size value="25.0"></viz:size>
+        <viz:position x="-124.86087" y="-0.4484282"></viz:position>
+        <viz:color r="213" g="171" b="91"></viz:color>
       </node>
-      <node id="rhenanus_beatus_viaf_39415982" label="BEATUS Rhenanus">
+      <node id="10" label="BEATUS Rhenanus">
         <attvalues>
-          <attvalue for="type" value="individual"></attvalue>
-          <attvalue for="gender" value="male"></attvalue>
-          <attvalue for="pob_loc_id" value="sélestat_FR_gid_2975233"></attvalue>
-          <attvalue for="pob_loc_annotation" value="Sélestat"></attvalue>
-          <attvalue for="dob_year1" value="1485"></attvalue>
-          <attvalue for="dob_computable1" value="1485-08-22"></attvalue>
-          <attvalue for="dob_has_range" value="0"></attvalue>
-          <attvalue for="dob_year2" value="1485"></attvalue>
-          <attvalue for="dob_computable2" value="1485-08-22"></attvalue>
-          <attvalue for="pod_loc_id" value="strasbourg_FR_gid_2973783"></attvalue>
-          <attvalue for="pod_loc_annotation" value="Strasbourg"></attvalue>
-          <attvalue for="dod_year1" value="1547"></attvalue>
-          <attvalue for="dod_computable1" value="1547-07-20"></attvalue>
-          <attvalue for="dod_has_range" value="0"></attvalue>
-          <attvalue for="dod_year2" value="1547"></attvalue>
-          <attvalue for="colour" value="#fdb863"></attvalue>
+          <attvalue for="att1" value="1.0"></attvalue>
+          <attvalue for="att2" value="#C3161F"></attvalue>
+          <attvalue for="att3" value="1.0"></attvalue>
           <attvalue for="weighted indegree" value="1.0"></attvalue>
           <attvalue for="weighted outdegree" value="0.0"></attvalue>
           <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="10.357142"></viz:size>
-        <viz:position x="-112.8078" y="143.61426"></viz:position>
-        <viz:color r="253" g="184" b="99"></viz:color>
+        <viz:size value="10.535714"></viz:size>
+        <viz:position x="-65.46405" y="-175.99086"></viz:position>
+        <viz:color r="195" g="22" b="31"></viz:color>
       </node>
-      <node id="spalatin_georg_viaf_240011410" label="Georgius SPALATINUS">
+      <node id="11" label="Georgius SPALATINUS">
         <attvalues>
-          <attvalue for="type" value="individual"></attvalue>
-          <attvalue for="gender" value="male"></attvalue>
-          <attvalue for="pob_loc_id" value="spalt_DE_gid_2830849"></attvalue>
-          <attvalue for="pob_loc_annotation" value="Spalt"></attvalue>
-          <attvalue for="dob_year1" value="1484"></attvalue>
-          <attvalue for="dob_computable1" value="1484-01-17"></attvalue>
-          <attvalue for="dob_has_range" value="0"></attvalue>
-          <attvalue for="dob_year2" value="1484"></attvalue>
-          <attvalue for="dob_computable2" value="1484-01-17"></attvalue>
-          <attvalue for="pod_loc_id" value="altenburg_DE_gid_2957773"></attvalue>
-          <attvalue for="pod_loc_annotation" value="Altenburg"></attvalue>
-          <attvalue for="dod_year1" value="1545"></attvalue>
-          <attvalue for="dod_computable1" value="1545-01-16"></attvalue>
-          <attvalue for="dod_has_range" value="0"></attvalue>
-          <attvalue for="dod_year2" value="1545"></attvalue>
-          <attvalue for="colour" value="#fdb863"></attvalue>
+          <attvalue for="att1" value="1.0"></attvalue>
+          <attvalue for="att2" value="#C3161F"></attvalue>
+          <attvalue for="att3" value="1.0"></attvalue>
           <attvalue for="weighted indegree" value="1.0"></attvalue>
           <attvalue for="weighted outdegree" value="0.0"></attvalue>
           <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="10.357142"></viz:size>
-        <viz:position x="281.4284" y="277.02304"></viz:position>
-        <viz:color r="253" g="184" b="99"></viz:color>
+        <viz:size value="10.535714"></viz:size>
+        <viz:position x="17.435873" y="78.90431"></viz:position>
+        <viz:color r="195" g="22" b="31"></viz:color>
       </node>
-      <node id="unnamed_person_viaf_not_applicable" label="Unnamed Person">
+      <node id="12" label="Unnamed Person">
         <attvalues>
-          <attvalue for="type" value="individual"></attvalue>
-          <attvalue for="pob_loc_id" value="unknown_location_XX_gid_unknown"></attvalue>
-          <attvalue for="pob_loc_annotation" value="Unknown"></attvalue>
-          <attvalue for="dob_year1" value="NA"></attvalue>
-          <attvalue for="dob_computable1" value="0000-00-00"></attvalue>
-          <attvalue for="dob_has_range" value="1"></attvalue>
-          <attvalue for="dob_year2" value="NA"></attvalue>
-          <attvalue for="dob_computable2" value="0000-00-00"></attvalue>
-          <attvalue for="pod_loc_id" value="unknown_location_XX_gid_unknown"></attvalue>
-          <attvalue for="pod_loc_annotation" value="Unknown"></attvalue>
-          <attvalue for="dod_year1" value="NA"></attvalue>
-          <attvalue for="dod_computable1" value="0000-00-00"></attvalue>
-          <attvalue for="dod_has_range" value="1"></attvalue>
-          <attvalue for="dod_year2" value="NA"></attvalue>
-          <attvalue for="colour" value="#525252"></attvalue>
+          <attvalue for="att1" value="1.0"></attvalue>
+          <attvalue for="att2" value="#525252"></attvalue>
+          <attvalue for="att3" value="1.0"></attvalue>
           <attvalue for="weighted indegree" value="1.0"></attvalue>
           <attvalue for="weighted outdegree" value="0.0"></attvalue>
           <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="10.357142"></viz:size>
-        <viz:position x="-178.22852" y="370.85413"></viz:position>
+        <viz:size value="10.535714"></viz:size>
+        <viz:position x="-215.80505" y="-162.46133"></viz:position>
         <viz:color r="82" g="82" b="82"></viz:color>
       </node>
-      <node id="walkden_humprey_viaf_unknown" label="Humphrey WALKDEN">
+      <node id="13" label="Humphrey WALKDEN">
         <attvalues>
-          <attvalue for="type" value="individual"></attvalue>
-          <attvalue for="gender" value="male"></attvalue>
-          <attvalue for="pob_loc_id" value="unknown_location_in_england_GB_gid_unknown"></attvalue>
-          <attvalue for="pob_loc_annotation" value="Unknown"></attvalue>
-          <attvalue for="dob_year1" value="NA"></attvalue>
-          <attvalue for="dob_computable1" value="0000-00-00"></attvalue>
-          <attvalue for="dob_has_range" value="1"></attvalue>
-          <attvalue for="dob_year2" value="NA"></attvalue>
-          <attvalue for="dob_computable2" value="0000-00-00"></attvalue>
-          <attvalue for="pod_loc_id" value="cambridge_GB_gid_2653941"></attvalue>
-          <attvalue for="pod_loc_annotation" value="Cambridge"></attvalue>
-          <attvalue for="dod_year1" value="1525"></attvalue>
-          <attvalue for="dod_computable1" value="1525-01-01"></attvalue>
-          <attvalue for="dod_has_range" value="1"></attvalue>
-          <attvalue for="dod_year2" value="1526"></attvalue>
-          <attvalue for="colour" value="#525252"></attvalue>
+          <attvalue for="att1" value="1.0"></attvalue>
+          <attvalue for="att2" value="#525252"></attvalue>
+          <attvalue for="att3" value="1.0"></attvalue>
           <attvalue for="weighted indegree" value="1.0"></attvalue>
           <attvalue for="weighted outdegree" value="0.0"></attvalue>
           <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="10.357142"></viz:size>
-        <viz:position x="-213.50288" y="-575.6353"></viz:position>
+        <viz:size value="10.535714"></viz:size>
+        <viz:position x="222.87598" y="-117.88198"></viz:position>
         <viz:color r="82" g="82" b="82"></viz:color>
       </node>
-      <node id="wentford_roger_viaf_unknown" label="Roger WENTFORD">
+      <node id="14" label="Roger WENTFORD">
         <attvalues>
-          <attvalue for="type" value="individual"></attvalue>
-          <attvalue for="gender" value="male"></attvalue>
-          <attvalue for="pob_loc_id" value="unknown_location_in_england_GB_gid_unknown"></attvalue>
-          <attvalue for="pob_loc_annotation" value="Unknown"></attvalue>
-          <attvalue for="dob_year1" value="NA"></attvalue>
-          <attvalue for="dob_computable1" value="0000-00-00"></attvalue>
-          <attvalue for="dob_has_range" value="1"></attvalue>
-          <attvalue for="dob_year2" value="NA"></attvalue>
-          <attvalue for="dob_computable2" value="0000-00-00"></attvalue>
-          <attvalue for="pod_loc_id" value="unknown_location_XX_gid_unknown"></attvalue>
-          <attvalue for="pod_loc_annotation" value="Unknown"></attvalue>
-          <attvalue for="dod_year1" value="NA"></attvalue>
-          <attvalue for="dod_computable1" value="0000-00-00"></attvalue>
-          <attvalue for="dod_has_range" value="1"></attvalue>
-          <attvalue for="dod_year2" value="NA"></attvalue>
-          <attvalue for="colour" value="#525252"></attvalue>
+          <attvalue for="att1" value="1.0"></attvalue>
+          <attvalue for="att2" value="#525252"></attvalue>
+          <attvalue for="att3" value="1.0"></attvalue>
           <attvalue for="weighted indegree" value="1.0"></attvalue>
           <attvalue for="weighted outdegree" value="0.0"></attvalue>
           <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="10.357142"></viz:size>
-        <viz:position x="6.980374" y="-594.529"></viz:position>
+        <viz:size value="10.535714"></viz:size>
+        <viz:position x="348.2262" y="121.24358"></viz:position>
         <viz:color r="82" g="82" b="82"></viz:color>
       </node>
-      <node id="yonge_john_viaf_194704149" label="John YONGE">
+      <node id="15" label="John YONGE">
         <attvalues>
-          <attvalue for="type" value="individual"></attvalue>
-          <attvalue for="gender" value="male"></attvalue>
-          <attvalue for="pob_loc_id" value="unknown_location_in_england_GB_gid_unknown"></attvalue>
-          <attvalue for="pob_loc_annotation" value="Unknown"></attvalue>
-          <attvalue for="dob_year1" value="NA"></attvalue>
-          <attvalue for="dob_computable1" value="0000-00-00"></attvalue>
-          <attvalue for="dob_has_range" value="1"></attvalue>
-          <attvalue for="dob_year2" value="NA"></attvalue>
-          <attvalue for="dob_computable2" value="0000-00-00"></attvalue>
-          <attvalue for="pod_loc_id" value="unknown_location_XX_gid_unknown"></attvalue>
-          <attvalue for="pod_loc_annotation" value="Unknown"></attvalue>
-          <attvalue for="dod_year1" value="1516"></attvalue>
-          <attvalue for="dod_computable1" value="1516-04-25"></attvalue>
-          <attvalue for="dod_has_range" value="0"></attvalue>
-          <attvalue for="dod_year2" value="1516"></attvalue>
-          <attvalue for="colour" value="#525252"></attvalue>
+          <attvalue for="att1" value="1.0"></attvalue>
+          <attvalue for="att2" value="#525252"></attvalue>
+          <attvalue for="att3" value="1.0"></attvalue>
           <attvalue for="weighted indegree" value="1.0"></attvalue>
           <attvalue for="weighted outdegree" value="0.0"></attvalue>
           <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="10.357142"></viz:size>
-        <viz:position x="-83.60538" y="-543.75854"></viz:position>
+        <viz:size value="10.535714"></viz:size>
+        <viz:position x="265.49066" y="142.61467"></viz:position>
         <viz:color r="82" g="82" b="82"></viz:color>
       </node>
-      <node id="ansbach_margrave_counselors_of_viaf_not_applicable" label="Räte des Markgrafen in Ansbach">
+      <node id="16" label="Räte des Markgrafen in Ansbach">
         <attvalues>
-          <attvalue for="type" value="group"></attvalue>
-          <attvalue for="gender" value="not applicable"></attvalue>
-          <attvalue for="pob_loc_id" value="unknown_location_XX_gid_unknown"></attvalue>
-          <attvalue for="pob_loc_annotation" value="not applicable"></attvalue>
-          <attvalue for="dob_year1" value="NA"></attvalue>
-          <attvalue for="dob_computable1" value="0000-00-00"></attvalue>
-          <attvalue for="dob_has_range" value="1"></attvalue>
-          <attvalue for="dob_year2" value="NA"></attvalue>
-          <attvalue for="dob_computable2" value="0000-00-00"></attvalue>
-          <attvalue for="pod_loc_id" value="unknown_location_XX_gid_unknown"></attvalue>
-          <attvalue for="pod_loc_annotation" value="unknown"></attvalue>
-          <attvalue for="dod_year1" value="NA"></attvalue>
-          <attvalue for="dod_computable1" value="0000-00-00"></attvalue>
-          <attvalue for="dod_has_range" value="1"></attvalue>
-          <attvalue for="dod_year2" value="NA"></attvalue>
-          <attvalue for="colour" value="#525252"></attvalue>
+          <attvalue for="att1" value="1.0"></attvalue>
+          <attvalue for="att2" value="#525252"></attvalue>
+          <attvalue for="att3" value="1.0"></attvalue>
           <attvalue for="weighted indegree" value="1.0"></attvalue>
           <attvalue for="weighted outdegree" value="0.0"></attvalue>
           <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="10.357142"></viz:size>
-        <viz:position x="276.42178" y="372.24054"></viz:position>
+        <viz:size value="10.535714"></viz:size>
+        <viz:position x="-307.74176" y="14.709225"></viz:position>
         <viz:color r="82" g="82" b="82"></viz:color>
       </node>
-      <node id="baumann_konrad_viaf_unknown" label="Konrad Baumann">
+      <node id="17" label="Konrad Baumann">
         <attvalues>
-          <attvalue for="type" value="individual"></attvalue>
-          <attvalue for="gender" value="male"></attvalue>
-          <attvalue for="pob_loc_id" value="unknown_location_XX_gid_unknown"></attvalue>
-          <attvalue for="pob_loc_annotation" value="unknown"></attvalue>
-          <attvalue for="dob_year1" value="NA"></attvalue>
-          <attvalue for="dob_computable1" value="0000-00-00"></attvalue>
-          <attvalue for="dob_has_range" value="1"></attvalue>
-          <attvalue for="dob_year2" value="NA"></attvalue>
-          <attvalue for="dob_computable2" value="0000-00-00"></attvalue>
-          <attvalue for="pod_loc_id" value="unknown_location_XX_gid_unknown"></attvalue>
-          <attvalue for="pod_loc_annotation" value="unknown"></attvalue>
-          <attvalue for="dod_year1" value="NA"></attvalue>
-          <attvalue for="dod_computable1" value="0000-00-00"></attvalue>
-          <attvalue for="dod_has_range" value="1"></attvalue>
-          <attvalue for="dod_year2" value="NA"></attvalue>
-          <attvalue for="colour" value="#525252"></attvalue>
+          <attvalue for="att1" value="1.0"></attvalue>
+          <attvalue for="att2" value="#525252"></attvalue>
+          <attvalue for="att3" value="1.0"></attvalue>
           <attvalue for="weighted indegree" value="1.0"></attvalue>
           <attvalue for="weighted outdegree" value="0.0"></attvalue>
           <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="10.357142"></viz:size>
-        <viz:position x="36.047394" y="86.05904"></viz:position>
+        <viz:size value="10.535714"></viz:size>
+        <viz:position x="-9.80606" y="-127.83269"></viz:position>
         <viz:color r="82" g="82" b="82"></viz:color>
       </node>
-      <node id="behaim_lorenz_viaf_20423397" label="Lorenz Beheim">
+      <node id="18" label="Lorenz Beheim">
         <attvalues>
-          <attvalue for="type" value="individual"></attvalue>
-          <attvalue for="gender" value="male"></attvalue>
-          <attvalue for="pob_loc_id" value="nürnberg_DE_gid_2861650"></attvalue>
-          <attvalue for="pob_loc_annotation" value="Nürnberg"></attvalue>
-          <attvalue for="dob_year1" value="1457"></attvalue>
-          <attvalue for="dob_computable1" value="1457-01-01"></attvalue>
-          <attvalue for="dob_has_range" value="1"></attvalue>
-          <attvalue for="dob_year2" value="1457"></attvalue>
-          <attvalue for="dob_computable2" value="1457-12-31"></attvalue>
-          <attvalue for="pod_loc_id" value="bamberg_DE_gid_2952984"></attvalue>
-          <attvalue for="pod_loc_annotation" value="Bamberg"></attvalue>
-          <attvalue for="dod_year1" value="1521"></attvalue>
-          <attvalue for="dod_computable1" value="1521-04-11"></attvalue>
-          <attvalue for="dod_has_range" value="0"></attvalue>
-          <attvalue for="dod_year2" value="1521"></attvalue>
-          <attvalue for="colour" value="#525252"></attvalue>
+          <attvalue for="att1" value="1.0"></attvalue>
+          <attvalue for="att2" value="#525252"></attvalue>
+          <attvalue for="att3" value="1.0"></attvalue>
           <attvalue for="weighted indegree" value="0.0"></attvalue>
           <attvalue for="weighted outdegree" value="1.0"></attvalue>
           <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="-189.70341" y="280.62173"></viz:position>
+        <viz:position x="-275.54578" y="98.06716"></viz:position>
         <viz:color r="82" g="82" b="82"></viz:color>
       </node>
-      <node id="brant_sebastian_viaf_29530930" label="Sebastian Brant">
+      <node id="19" label="Sebastian Brant">
         <attvalues>
-          <attvalue for="type" value="individual"></attvalue>
-          <attvalue for="gender" value="male"></attvalue>
-          <attvalue for="pob_loc_id" value="strasbourg_FR_gid_2973783"></attvalue>
-          <attvalue for="pob_loc_annotation" value="Straßburg"></attvalue>
-          <attvalue for="dob_year1" value="1458"></attvalue>
-          <attvalue for="dob_computable1" value="1458-01-01"></attvalue>
-          <attvalue for="dob_has_range" value="1"></attvalue>
-          <attvalue for="dob_year2" value="1458"></attvalue>
-          <attvalue for="dob_computable2" value="1458-12-31"></attvalue>
-          <attvalue for="pod_loc_id" value="strasbourg_FR_gid_2973783"></attvalue>
-          <attvalue for="pod_loc_annotation" value="Straßburg"></attvalue>
-          <attvalue for="dod_year1" value="1521"></attvalue>
-          <attvalue for="dod_computable1" value="1521-05-10"></attvalue>
-          <attvalue for="dod_has_range" value="0"></attvalue>
-          <attvalue for="dod_year2" value="1521"></attvalue>
-          <attvalue for="colour" value="#525252"></attvalue>
+          <attvalue for="att1" value="1.0"></attvalue>
+          <attvalue for="att2" value="#525252"></attvalue>
+          <attvalue for="att3" value="1.0"></attvalue>
           <attvalue for="weighted indegree" value="1.0"></attvalue>
           <attvalue for="weighted outdegree" value="0.0"></attvalue>
           <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="10.357142"></viz:size>
-        <viz:position x="248.74854" y="198.29285"></viz:position>
+        <viz:size value="10.535714"></viz:size>
+        <viz:position x="-150.98183" y="204.79001"></viz:position>
         <viz:color r="82" g="82" b="82"></viz:color>
       </node>
-      <node id="chelidonius_benedictus_viaf_88090962" label="Benedictus Chelidonius">
+      <node id="20" label="Benedictus Chelidonius">
         <attvalues>
-          <attvalue for="type" value="individual"></attvalue>
-          <attvalue for="gender" value="male"></attvalue>
-          <attvalue for="pob_loc_id" value="nürnberg_DE_gid_2861650"></attvalue>
-          <attvalue for="pob_loc_annotation" value="Nürnberg"></attvalue>
-          <attvalue for="dob_year1" value="1460"></attvalue>
-          <attvalue for="dob_computable1" value="1460-01-01"></attvalue>
-          <attvalue for="dob_has_range" value="1"></attvalue>
-          <attvalue for="dob_year2" value="1480"></attvalue>
-          <attvalue for="dob_computable2" value="1480-12-31"></attvalue>
-          <attvalue for="pod_loc_id" value="vienna_AT_gid_2761369"></attvalue>
-          <attvalue for="pod_loc_annotation" value="Wien"></attvalue>
-          <attvalue for="dod_year1" value="1521"></attvalue>
-          <attvalue for="dod_computable1" value="1521-09-08"></attvalue>
-          <attvalue for="dod_has_range" value="0"></attvalue>
-          <attvalue for="dod_year2" value="1521"></attvalue>
-          <attvalue for="colour" value="#525252"></attvalue>
+          <attvalue for="att1" value="1.0"></attvalue>
+          <attvalue for="att2" value="#525252"></attvalue>
+          <attvalue for="att3" value="1.0"></attvalue>
           <attvalue for="weighted indegree" value="0.0"></attvalue>
           <attvalue for="weighted outdegree" value="1.0"></attvalue>
           <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="134.12747" y="534.2653"></viz:position>
+        <viz:position x="-139.10947" y="-190.40907"></viz:position>
         <viz:color r="82" g="82" b="82"></viz:color>
       </node>
-      <node id="georg_III_bamberg_bischof_viaf_15568815" label="Bischof Georg von Bamberg // Georg III., Schenk von Limpurg">
+      <node id="21" label="Bischof Georg von Bamberg">
         <attvalues>
-          <attvalue for="type" value="individual"></attvalue>
-          <attvalue for="gender" value="male"></attvalue>
-          <attvalue for="pob_loc_id" value="oberlimpurg_DE_gid_unknown"></attvalue>
-          <attvalue for="pob_loc_annotation" value="Oberlimpurg?"></attvalue>
-          <attvalue for="dob_year1" value="1470"></attvalue>
-          <attvalue for="dob_computable1" value="1470-01-23"></attvalue>
-          <attvalue for="dob_has_range" value="0"></attvalue>
-          <attvalue for="dob_year2" value="1470"></attvalue>
-          <attvalue for="dob_computable2" value="1470-01-23"></attvalue>
-          <attvalue for="pod_loc_id" value="bamberg_DE_gid_2952984"></attvalue>
-          <attvalue for="pod_loc_annotation" value="Bamberg"></attvalue>
-          <attvalue for="dod_year1" value="1522"></attvalue>
-          <attvalue for="dod_computable1" value="1522-05-27"></attvalue>
-          <attvalue for="dod_has_range" value="0"></attvalue>
-          <attvalue for="dod_year2" value="1522"></attvalue>
-          <attvalue for="colour" value="#525252"></attvalue>
+          <attvalue for="att1" value="1.0"></attvalue>
+          <attvalue for="att2" value="#525252"></attvalue>
+          <attvalue for="att3" value="4.0"></attvalue>
           <attvalue for="weighted indegree" value="4.0"></attvalue>
           <attvalue for="weighted outdegree" value="0.0"></attvalue>
           <attvalue for="weighted degree" value="4.0"></attvalue>
         </attvalues>
-        <viz:size value="11.428572"></viz:size>
-        <viz:position x="155.98874" y="302.26532"></viz:position>
+        <viz:size value="12.142858"></viz:size>
+        <viz:position x="-76.146095" y="-53.21395"></viz:position>
         <viz:color r="82" g="82" b="82"></viz:color>
       </node>
-      <node id="nürnberg_town_council_of_viaf_not_applicable" label="Rat der Stadt Nürnberg">
+      <node id="22" label="Rat der Stadt Nürnberg">
         <attvalues>
-          <attvalue for="type" value="corporate body"></attvalue>
-          <attvalue for="gender" value="not applicable"></attvalue>
-          <attvalue for="pob_loc_id" value="unknown_location_XX_gid_unknown"></attvalue>
-          <attvalue for="pob_loc_annotation" value="not applicable"></attvalue>
-          <attvalue for="dob_year1" value="NA"></attvalue>
-          <attvalue for="dob_computable1" value="0000-00-00"></attvalue>
-          <attvalue for="dob_has_range" value="1"></attvalue>
-          <attvalue for="dob_year2" value="NA"></attvalue>
-          <attvalue for="dob_computable2" value="0000-00-00"></attvalue>
-          <attvalue for="pod_loc_id" value="unknown_location_XX_gid_unknown"></attvalue>
-          <attvalue for="pod_loc_annotation" value="unknown"></attvalue>
-          <attvalue for="dod_year1" value="NA"></attvalue>
-          <attvalue for="dod_computable1" value="0000-00-00"></attvalue>
-          <attvalue for="dod_has_range" value="1"></attvalue>
-          <attvalue for="dod_year2" value="NA"></attvalue>
-          <attvalue for="colour" value="#525252"></attvalue>
+          <attvalue for="att1" value="2.0"></attvalue>
+          <attvalue for="att2" value="#525252"></attvalue>
+          <attvalue for="att3" value="28.0"></attvalue>
           <attvalue for="weighted indegree" value="9.0"></attvalue>
           <attvalue for="weighted outdegree" value="19.0"></attvalue>
           <attvalue for="weighted degree" value="28.0"></attvalue>
         </attvalues>
-        <viz:size value="13.214286"></viz:size>
-        <viz:position x="-23.475435" y="345.76816"></viz:position>
+        <viz:size value="14.821428"></viz:size>
+        <viz:position x="-186.3772" y="31.830698"></viz:position>
         <viz:color r="82" g="82" b="82"></viz:color>
       </node>
-      <node id="nützel_kaspar_viaf_15536542" label="Kaspar Nützel">
+      <node id="23" label="Kaspar Nützel">
         <attvalues>
-          <attvalue for="type" value="individual"></attvalue>
-          <attvalue for="gender" value="male"></attvalue>
-          <attvalue for="pob_loc_id" value="nürnberg_DE_gid_2861650"></attvalue>
-          <attvalue for="pob_loc_annotation" value="Nürnberg"></attvalue>
-          <attvalue for="dob_year1" value="1471"></attvalue>
-          <attvalue for="dob_computable1" value="1471-01-01"></attvalue>
-          <attvalue for="dob_has_range" value="1"></attvalue>
-          <attvalue for="dob_year2" value="1471"></attvalue>
-          <attvalue for="dob_computable2" value="1471-12-31"></attvalue>
-          <attvalue for="pod_loc_id" value="unknown_location_XX_gid_unknown"></attvalue>
-          <attvalue for="pod_loc_annotation" value="unknown"></attvalue>
-          <attvalue for="dod_year1" value="1529"></attvalue>
-          <attvalue for="dod_computable1" value="1529-09-25"></attvalue>
-          <attvalue for="dod_has_range" value="0"></attvalue>
-          <attvalue for="dod_year2" value="1529"></attvalue>
-          <attvalue for="colour" value="#525252"></attvalue>
+          <attvalue for="att1" value="1.0"></attvalue>
+          <attvalue for="att2" value="#525252"></attvalue>
+          <attvalue for="att3" value="1.0"></attvalue>
           <attvalue for="weighted indegree" value="0.0"></attvalue>
           <attvalue for="weighted outdegree" value="1.0"></attvalue>
           <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="-145.61545" y="214.44989"></viz:position>
+        <viz:position x="-69.58359" y="189.63997"></viz:position>
         <viz:color r="82" g="82" b="82"></viz:color>
       </node>
-      <node id="pfintzing_melchior_viaf_56753537" label="Melchior Pfinzing">
+      <node id="24" label="Melchior Pfinzing">
         <attvalues>
-          <attvalue for="type" value="individual"></attvalue>
-          <attvalue for="gender" value="male"></attvalue>
-          <attvalue for="pob_loc_id" value="nürnberg_DE_gid_2861650"></attvalue>
-          <attvalue for="pob_loc_annotation" value="Nürnberg"></attvalue>
-          <attvalue for="dob_year1" value="1481"></attvalue>
-          <attvalue for="dob_computable1" value="1481-11-25"></attvalue>
-          <attvalue for="dob_has_range" value="0"></attvalue>
-          <attvalue for="dob_year2" value="1481"></attvalue>
-          <attvalue for="dob_computable2" value="1481-11-25"></attvalue>
-          <attvalue for="pod_loc_id" value="mainz_DE_gid_2874225"></attvalue>
-          <attvalue for="pod_loc_annotation" value="Mainz"></attvalue>
-          <attvalue for="dod_year1" value="1535"></attvalue>
-          <attvalue for="dod_computable1" value="1535-11-24"></attvalue>
-          <attvalue for="dod_has_range" value="1"></attvalue>
-          <attvalue for="dod_year2" value="1535"></attvalue>
-          <attvalue for="colour" value="#525252"></attvalue>
+          <attvalue for="att1" value="1.0"></attvalue>
+          <attvalue for="att2" value="#525252"></attvalue>
+          <attvalue for="att3" value="1.0"></attvalue>
           <attvalue for="weighted indegree" value="0.0"></attvalue>
           <attvalue for="weighted outdegree" value="1.0"></attvalue>
           <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="-141.46664" y="466.56006"></viz:position>
+        <viz:position x="-222.73296" y="166.77014"></viz:position>
         <viz:color r="82" g="82" b="82"></viz:color>
       </node>
-      <node id="pirckheimer_caritas_die_ältere_viaf_41848634" label="Caritas Pirckheimer d. Ä.">
+      <node id="25" label="Caritas Pirckheimer d. Ä.">
         <attvalues>
-          <attvalue for="type" value="individual"></attvalue>
-          <attvalue for="gender" value="female"></attvalue>
-          <attvalue for="pob_loc_id" value="eichstätt_DE_gid_2932069"></attvalue>
-          <attvalue for="pob_loc_annotation" value="Eichstätt"></attvalue>
-          <attvalue for="dob_year1" value="1467"></attvalue>
-          <attvalue for="dob_computable1" value="1467-03-21"></attvalue>
-          <attvalue for="dob_has_range" value="0"></attvalue>
-          <attvalue for="dob_year2" value="1467"></attvalue>
-          <attvalue for="dob_computable2" value="1467-03-21"></attvalue>
-          <attvalue for="pod_loc_id" value="nürnberg_DE_gid_2861650"></attvalue>
-          <attvalue for="pod_loc_annotation" value="Nürnberg"></attvalue>
-          <attvalue for="dod_year1" value="1532"></attvalue>
-          <attvalue for="dod_computable1" value="1532-08-19"></attvalue>
-          <attvalue for="dod_has_range" value="0"></attvalue>
-          <attvalue for="dod_year2" value="1532"></attvalue>
-          <attvalue for="colour" value="#525252"></attvalue>
+          <attvalue for="att1" value="2.0"></attvalue>
+          <attvalue for="att2" value="#525252"></attvalue>
+          <attvalue for="att3" value="2.0"></attvalue>
           <attvalue for="weighted indegree" value="1.0"></attvalue>
           <attvalue for="weighted outdegree" value="1.0"></attvalue>
           <attvalue for="weighted degree" value="2.0"></attvalue>
         </attvalues>
-        <viz:size value="10.357142"></viz:size>
-        <viz:position x="11.801201" y="514.0769"></viz:position>
+        <viz:size value="10.535714"></viz:size>
+        <viz:position x="-146.02353" y="113.68358"></viz:position>
         <viz:color r="82" g="82" b="82"></viz:color>
       </node>
-      <node id="pirckheimer_katharina_die_jüngere_viaf_unknown" label="Katharina Pirckheimer d. J.">
+      <node id="26" label="Katharina Pirckheimer d. J.">
         <attvalues>
-          <attvalue for="type" value="individual"></attvalue>
-          <attvalue for="gender" value="female"></attvalue>
-          <attvalue for="pob_loc_id" value="unknown_location_XX_gid_unknown"></attvalue>
-          <attvalue for="pob_loc_annotation" value="unknown"></attvalue>
-          <attvalue for="dob_year1" value="1498"></attvalue>
-          <attvalue for="dob_computable1" value="1498-01-01"></attvalue>
-          <attvalue for="dob_has_range" value="1"></attvalue>
-          <attvalue for="dob_year2" value="1498"></attvalue>
-          <attvalue for="dob_computable2" value="1498-12-31"></attvalue>
-          <attvalue for="pod_loc_id" value="unknown_location_XX_gid_unknown"></attvalue>
-          <attvalue for="pod_loc_annotation" value="unknown"></attvalue>
-          <attvalue for="dod_year1" value="1563"></attvalue>
-          <attvalue for="dod_computable1" value="1563-01-14"></attvalue>
-          <attvalue for="dod_has_range" value="0"></attvalue>
-          <attvalue for="dod_year2" value="1563"></attvalue>
-          <attvalue for="colour" value="#525252"></attvalue>
+          <attvalue for="att1" value="1.0"></attvalue>
+          <attvalue for="att2" value="#525252"></attvalue>
+          <attvalue for="att3" value="1.0"></attvalue>
           <attvalue for="weighted indegree" value="0.0"></attvalue>
           <attvalue for="weighted outdegree" value="1.0"></attvalue>
           <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="-42.60004" y="123.12706"></viz:position>
+        <viz:position x="21.689478" y="-34.765686"></viz:position>
         <viz:color r="82" g="82" b="82"></viz:color>
       </node>
-      <node id="praun_hans_viaf_unknown" label="Hans Praun">
+      <node id="27" label="Hans Praun">
         <attvalues>
-          <attvalue for="type" value="individual"></attvalue>
-          <attvalue for="gender" value="male"></attvalue>
-          <attvalue for="pob_loc_id" value="unknown_location_XX_gid_unknown"></attvalue>
-          <attvalue for="pob_loc_annotation" value="unknown"></attvalue>
-          <attvalue for="dob_year1" value="NA"></attvalue>
-          <attvalue for="dob_computable1" value="0000-00-00"></attvalue>
-          <attvalue for="dob_has_range" value="1"></attvalue>
-          <attvalue for="dob_year2" value="NA"></attvalue>
-          <attvalue for="dob_computable2" value="0000-00-00"></attvalue>
-          <attvalue for="pod_loc_id" value="unknown_location_XX_gid_unknown"></attvalue>
-          <attvalue for="pod_loc_annotation" value="unknown"></attvalue>
-          <attvalue for="dod_year1" value="NA"></attvalue>
-          <attvalue for="dod_computable1" value="0000-00-00"></attvalue>
-          <attvalue for="dod_has_range" value="1"></attvalue>
-          <attvalue for="dod_year2" value="NA"></attvalue>
-          <attvalue for="colour" value="#525252"></attvalue>
+          <attvalue for="att1" value="1.0"></attvalue>
+          <attvalue for="att2" value="#525252"></attvalue>
+          <attvalue for="att3" value="1.0"></attvalue>
           <attvalue for="weighted indegree" value="1.0"></attvalue>
           <attvalue for="weighted outdegree" value="0.0"></attvalue>
           <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="10.357142"></viz:size>
-        <viz:position x="126.455696" y="104.668884"></viz:position>
+        <viz:size value="10.535714"></viz:size>
+        <viz:position x="-14.96705" y="153.93681"></viz:position>
         <viz:color r="82" g="82" b="82"></viz:color>
       </node>
-      <node id="schwarzenberg_johann_von_viaf_41987336" label="Johann von Schwarzenberg">
+      <node id="28" label="Johann von Schwarzenberg">
         <attvalues>
-          <attvalue for="type" value="individual"></attvalue>
-          <attvalue for="gender" value="male"></attvalue>
-          <attvalue for="pob_loc_id" value="schloss_schwarzenberg_bei_scheinfeld_DE_gid_unknown"></attvalue>
-          <attvalue for="pob_loc_annotation" value="Burg Schwarzenberg (Scheinfeld, Mittelfranken)"></attvalue>
-          <attvalue for="dob_year1" value="1463"></attvalue>
-          <attvalue for="dob_computable1" value="1463-12-26"></attvalue>
-          <attvalue for="dob_has_range" value="1"></attvalue>
-          <attvalue for="dob_year2" value="1465"></attvalue>
-          <attvalue for="dob_computable2" value="1465-12-26"></attvalue>
-          <attvalue for="pod_loc_id" value="nürnberg_DE_gid_2861650"></attvalue>
-          <attvalue for="pod_loc_annotation" value="Nürnberg"></attvalue>
-          <attvalue for="dod_year1" value="1528"></attvalue>
-          <attvalue for="dod_computable1" value="1528-10-21"></attvalue>
-          <attvalue for="dod_has_range" value="0"></attvalue>
-          <attvalue for="dod_year2" value="1528"></attvalue>
-          <attvalue for="colour" value="#525252"></attvalue>
+          <attvalue for="att1" value="1.0"></attvalue>
+          <attvalue for="att2" value="#525252"></attvalue>
+          <attvalue for="att3" value="5.0"></attvalue>
           <attvalue for="weighted indegree" value="5.0"></attvalue>
           <attvalue for="weighted outdegree" value="0.0"></attvalue>
           <attvalue for="weighted degree" value="5.0"></attvalue>
         </attvalues>
-        <viz:size value="11.785714"></viz:size>
-        <viz:position x="53.75031" y="230.98723"></viz:position>
+        <viz:size value="12.678572"></viz:size>
+        <viz:position x="-72.558716" y="51.794342"></viz:position>
         <viz:color r="82" g="82" b="82"></viz:color>
       </node>
-      <node id="tucher_andreas_viaf_232443010" label="Endres Tucher">
+      <node id="29" label="Endres Tucher">
         <attvalues>
-          <attvalue for="type" value="individual"></attvalue>
-          <attvalue for="gender" value="male"></attvalue>
-          <attvalue for="pob_loc_id" value="nürnberg_DE_gid_2861650"></attvalue>
-          <attvalue for="pob_loc_annotation" value="Nürnberg"></attvalue>
-          <attvalue for="dob_year1" value="1453"></attvalue>
-          <attvalue for="dob_computable1" value="1453-03-22"></attvalue>
-          <attvalue for="dob_has_range" value="0"></attvalue>
-          <attvalue for="dob_year2" value="1453"></attvalue>
-          <attvalue for="dob_computable2" value="1453-03-22"></attvalue>
-          <attvalue for="pod_loc_id" value="nürnberg_DE_gid_2861650"></attvalue>
-          <attvalue for="pod_loc_annotation" value="Nürnberg"></attvalue>
-          <attvalue for="dod_year1" value="1521"></attvalue>
-          <attvalue for="dod_computable1" value="1521-11-21"></attvalue>
-          <attvalue for="dod_has_range" value="0"></attvalue>
-          <attvalue for="dod_year2" value="1521"></attvalue>
-          <attvalue for="colour" value="#525252"></attvalue>
+          <attvalue for="att1" value="1.0"></attvalue>
+          <attvalue for="att2" value="#525252"></attvalue>
+          <attvalue for="att3" value="2.0"></attvalue>
           <attvalue for="weighted indegree" value="0.0"></attvalue>
           <attvalue for="weighted outdegree" value="2.0"></attvalue>
           <attvalue for="weighted degree" value="2.0"></attvalue>
         </attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="-48.862904" y="440.32645"></viz:position>
+        <viz:position x="-151.35039" y="-90.821205"></viz:position>
         <viz:color r="82" g="82" b="82"></viz:color>
       </node>
     </nodes>
     <edges>
-      <edge id="era_cwe_268" source="erasmus_desiderius_viaf_95982394" target="yonge_john_viaf_194704149" label="268 To John Yonge London, 1 January 1513 [CWE]">
-        <attvalues>
-          <attvalue for="letter_no_in_edition" value="268 [CWE] // 268 [ALLEN]"></attvalue>
-          <attvalue for="sender_inferred" value="0"></attvalue>
-          <attvalue for="sender_uncertain" value="0"></attvalue>
-          <attvalue for="recipient_inferred" value="0"></attvalue>
-          <attvalue for="recipient_uncertain" value="0"></attvalue>
-          <attvalue for="send_date_year1" value="1513"></attvalue>
-          <attvalue for="send_date_computable1" value="1513-01-01"></attvalue>
-          <attvalue for="send_date_has_range" value="0"></attvalue>
-          <attvalue for="send_date_year2" value="1513"></attvalue>
-          <attvalue for="send_date_computable2" value="1513-01-01"></attvalue>
-          <attvalue for="send_date_inferred" value="0"></attvalue>
-          <attvalue for="send_date_approx" value="0"></attvalue>
-          <attvalue for="send_date_uncertain" value="0"></attvalue>
-          <attvalue for="source_loc_id" value="london_GB_gid_2643743"></attvalue>
-          <attvalue for="source_loc_inferred" value="0"></attvalue>
-          <attvalue for="source_loc_uncertain" value="0"></attvalue>
-          <attvalue for="target_loc_id" value="london_GB_gid_2643743"></attvalue>
-          <attvalue for="target_loc_inferred" value="1"></attvalue>
-          <attvalue for="target_loc_uncertain" value="0"></attvalue>
-          <attvalue for="letter_language" value="latin"></attvalue>
-          <attvalue for="letter_type_genus" value="dedicatory letter"></attvalue>
-          <attvalue for="letter_type_x_to_x" value="letter_1_to_1"></attvalue>
-        </attvalues>
+      <edge id="0" source="1" target="9">
+        <viz:color r="195" g="22" b="31"></viz:color>
       </edge>
-      <edge id="era_cwe_270" source="erasmus_desiderius_viaf_95982394" target="colet_john_viaf_34454805" label="278 To John Colet [?Landbeach near] Cambridge, 31 October [1513] [CWE]" weight="2.0">
-        <attvalues>
-          <attvalue for="letter_no_in_edition" value="278 [CWE] // 278 [ALLEN]"></attvalue>
-          <attvalue for="sender_inferred" value="0"></attvalue>
-          <attvalue for="sender_uncertain" value="0"></attvalue>
-          <attvalue for="recipient_inferred" value="0"></attvalue>
-          <attvalue for="recipient_uncertain" value="0"></attvalue>
-          <attvalue for="send_date_year1" value="1513"></attvalue>
-          <attvalue for="send_date_computable1" value="1513-10-31"></attvalue>
-          <attvalue for="send_date_has_range" value="0"></attvalue>
-          <attvalue for="send_date_year2" value="1513"></attvalue>
-          <attvalue for="send_date_computable2" value="1513-10-31"></attvalue>
-          <attvalue for="send_date_inferred" value="1"></attvalue>
-          <attvalue for="send_date_approx" value="0"></attvalue>
-          <attvalue for="send_date_uncertain" value="0"></attvalue>
-          <attvalue for="source_loc_id" value="landbeach_GB_gid_6284113"></attvalue>
-          <attvalue for="source_loc_inferred" value="1"></attvalue>
-          <attvalue for="source_loc_uncertain" value="1"></attvalue>
-          <attvalue for="target_loc_id" value="london_GB_gid_2643743"></attvalue>
-          <attvalue for="target_loc_inferred" value="1"></attvalue>
-          <attvalue for="target_loc_uncertain" value="0"></attvalue>
-          <attvalue for="letter_language" value="latin"></attvalue>
-          <attvalue for="letter_type_genus" value="familiar letter"></attvalue>
-          <attvalue for="letter_type_x_to_x" value="letter_1_to_1"></attvalue>
-        </attvalues>
+      <edge id="1" source="3" target="4">
+        <viz:color r="82" g="82" b="82"></viz:color>
       </edge>
-      <edge id="era_cwe_271" source="erasmus_desiderius_viaf_95982394" target="more_thomas_sir_saint_viaf_29541174" label="271 To Thomas More Cambridge, Uuly 1513] [CWE]">
-        <attvalues>
-          <attvalue for="letter_no_in_edition" value="271 [CWE] // 271 [ALLEN]"></attvalue>
-          <attvalue for="sender_inferred" value="0"></attvalue>
-          <attvalue for="sender_uncertain" value="0"></attvalue>
-          <attvalue for="recipient_inferred" value="0"></attvalue>
-          <attvalue for="recipient_uncertain" value="0"></attvalue>
-          <attvalue for="send_date_year1" value="1513"></attvalue>
-          <attvalue for="send_date_computable1" value="1513-07-01"></attvalue>
-          <attvalue for="send_date_has_range" value="1"></attvalue>
-          <attvalue for="send_date_year2" value="1513"></attvalue>
-          <attvalue for="send_date_computable2" value="1513-07-31"></attvalue>
-          <attvalue for="send_date_inferred" value="1"></attvalue>
-          <attvalue for="send_date_approx" value="0"></attvalue>
-          <attvalue for="send_date_uncertain" value="0"></attvalue>
-          <attvalue for="source_loc_id" value="cambridge_GB_gid_2653941"></attvalue>
-          <attvalue for="source_loc_inferred" value="0"></attvalue>
-          <attvalue for="source_loc_uncertain" value="0"></attvalue>
-          <attvalue for="target_loc_id" value="london_GB_gid_2643743"></attvalue>
-          <attvalue for="target_loc_inferred" value="1"></attvalue>
-          <attvalue for="target_loc_uncertain" value="0"></attvalue>
-          <attvalue for="letter_language" value="latin"></attvalue>
-          <attvalue for="letter_type_genus" value="familiar letter"></attvalue>
-          <attvalue for="letter_type_x_to_x" value="letter_1_to_1"></attvalue>
-        </attvalues>
+      <edge id="2" source="4" target="2" weight="2.0">
+        <viz:color r="60" g="147" b="175"></viz:color>
       </edge>
-      <edge id="era_cwe_272" source="erasmus_desiderius_viaf_95982394" target="henry_viii_king_of_england_viaf_172419710" label="272 To Henry VIII [Cambridge, July 1513] [CWE]">
-        <attvalues>
-          <attvalue for="letter_no_in_edition" value="272 [CWE] // 272 [ALLEN]"></attvalue>
-          <attvalue for="sender_inferred" value="0"></attvalue>
-          <attvalue for="sender_uncertain" value="0"></attvalue>
-          <attvalue for="recipient_inferred" value="0"></attvalue>
-          <attvalue for="recipient_uncertain" value="0"></attvalue>
-          <attvalue for="send_date_year1" value="1513"></attvalue>
-          <attvalue for="send_date_computable1" value="1513-07-01"></attvalue>
-          <attvalue for="send_date_has_range" value="1"></attvalue>
-          <attvalue for="send_date_year2" value="1513"></attvalue>
-          <attvalue for="send_date_computable2" value="1513-07-31"></attvalue>
-          <attvalue for="send_date_inferred" value="1"></attvalue>
-          <attvalue for="send_date_approx" value="0"></attvalue>
-          <attvalue for="send_date_uncertain" value="0"></attvalue>
-          <attvalue for="source_loc_id" value="cambridge_GB_gid_2653941"></attvalue>
-          <attvalue for="source_loc_inferred" value="1"></attvalue>
-          <attvalue for="source_loc_uncertain" value="0"></attvalue>
-          <attvalue for="target_loc_id" value="unknown_location_in_england_GB_gid_unknown"></attvalue>
-          <attvalue for="target_loc_inferred" value="1"></attvalue>
-          <attvalue for="target_loc_uncertain" value="0"></attvalue>
-          <attvalue for="letter_language" value="latin"></attvalue>
-          <attvalue for="letter_type_genus" value="dedicatory letter"></attvalue>
-          <attvalue for="letter_type_x_to_x" value="letter_1_to_1"></attvalue>
-        </attvalues>
+      <edge id="3" source="4" target="3" weight="4.0">
+        <viz:color r="60" g="147" b="175"></viz:color>
       </edge>
-      <edge id="era_cwe_273" source="erasmus_desiderius_viaf_95982394" target="della_rena_andrea_viaf_77136743" label="283 To Andrea Ammonio Cambridge, 2 December [1513] [CWE]" weight="4.0">
-        <attvalues>
-          <attvalue for="letter_no_in_edition" value="283 [CWE] // 283 [ALLEN]"></attvalue>
-          <attvalue for="sender_inferred" value="0"></attvalue>
-          <attvalue for="sender_uncertain" value="0"></attvalue>
-          <attvalue for="recipient_inferred" value="0"></attvalue>
-          <attvalue for="recipient_uncertain" value="0"></attvalue>
-          <attvalue for="send_date_year1" value="1513"></attvalue>
-          <attvalue for="send_date_computable1" value="1513-12-02"></attvalue>
-          <attvalue for="send_date_has_range" value="0"></attvalue>
-          <attvalue for="send_date_year2" value="1513"></attvalue>
-          <attvalue for="send_date_computable2" value="1513-12-02"></attvalue>
-          <attvalue for="send_date_inferred" value="1"></attvalue>
-          <attvalue for="send_date_approx" value="0"></attvalue>
-          <attvalue for="send_date_uncertain" value="0"></attvalue>
-          <attvalue for="source_loc_id" value="cambridge_GB_gid_2653941"></attvalue>
-          <attvalue for="source_loc_inferred" value="0"></attvalue>
-          <attvalue for="source_loc_uncertain" value="0"></attvalue>
-          <attvalue for="target_loc_id" value="london_GB_gid_2643743"></attvalue>
-          <attvalue for="target_loc_inferred" value="1"></attvalue>
-          <attvalue for="target_loc_uncertain" value="0"></attvalue>
-          <attvalue for="letter_language" value="latin"></attvalue>
-          <attvalue for="letter_type_genus" value="familiar letter"></attvalue>
-          <attvalue for="letter_type_x_to_x" value="letter_1_to_1"></attvalue>
-        </attvalues>
+      <edge id="4" source="4" target="5" weight="4.0">
+        <viz:color r="60" g="147" b="175"></viz:color>
       </edge>
-      <edge id="era_cwe_274" source="erasmus_desiderius_viaf_95982394" target="gonnell_william_viaf_unknown" label="279 To William Gonnell [Cambridge, first part of November 1513] [CWE]" weight="4.0">
-        <attvalues>
-          <attvalue for="letter_no_in_edition" value="279 [CWE] // 279 [ALLEN]"></attvalue>
-          <attvalue for="sender_inferred" value="0"></attvalue>
-          <attvalue for="sender_uncertain" value="0"></attvalue>
-          <attvalue for="recipient_inferred" value="0"></attvalue>
-          <attvalue for="recipient_uncertain" value="0"></attvalue>
-          <attvalue for="send_date_year1" value="1513"></attvalue>
-          <attvalue for="send_date_computable1" value="1513-11-01"></attvalue>
-          <attvalue for="send_date_has_range" value="1"></attvalue>
-          <attvalue for="send_date_year2" value="1513"></attvalue>
-          <attvalue for="send_date_computable2" value="1513-11-15"></attvalue>
-          <attvalue for="send_date_inferred" value="1"></attvalue>
-          <attvalue for="send_date_approx" value="0"></attvalue>
-          <attvalue for="send_date_uncertain" value="0"></attvalue>
-          <attvalue for="source_loc_id" value="cambridge_GB_gid_2653941"></attvalue>
-          <attvalue for="source_loc_inferred" value="1"></attvalue>
-          <attvalue for="source_loc_uncertain" value="0"></attvalue>
-          <attvalue for="target_loc_id" value="landbeach_GB_gid_6284113"></attvalue>
-          <attvalue for="target_loc_inferred" value="1"></attvalue>
-          <attvalue for="target_loc_uncertain" value="0"></attvalue>
-          <attvalue for="letter_language" value="latin"></attvalue>
-          <attvalue for="letter_type_genus" value="familiar letter"></attvalue>
-          <attvalue for="letter_type_x_to_x" value="letter_1_to_1"></attvalue>
-        </attvalues>
+      <edge id="5" source="4" target="6">
+        <viz:color r="60" g="147" b="175"></viz:color>
       </edge>
-      <edge id="era_cwe_276ck2" source="erasmus_desiderius_viaf_95982394" target="walkden_humprey_viaf_unknown" label="276 To [William] G[onnell?] and H[umphrey Walkden?] [Cambridge, October 1513] [CWE]">
-        <attvalues>
-          <attvalue for="letter_no_in_edition" value="276 [CWE] // 276 [ALLEN]"></attvalue>
-          <attvalue for="sender_inferred" value="0"></attvalue>
-          <attvalue for="sender_uncertain" value="0"></attvalue>
-          <attvalue for="recipient_inferred" value="1"></attvalue>
-          <attvalue for="recipient_uncertain" value="1"></attvalue>
-          <attvalue for="send_date_year1" value="1513"></attvalue>
-          <attvalue for="send_date_computable1" value="1513-10-01"></attvalue>
-          <attvalue for="send_date_has_range" value="1"></attvalue>
-          <attvalue for="send_date_year2" value="1513"></attvalue>
-          <attvalue for="send_date_computable2" value="1513-10-31"></attvalue>
-          <attvalue for="send_date_inferred" value="1"></attvalue>
-          <attvalue for="send_date_approx" value="0"></attvalue>
-          <attvalue for="send_date_uncertain" value="0"></attvalue>
-          <attvalue for="source_loc_id" value="cambridge_GB_gid_2653941"></attvalue>
-          <attvalue for="source_loc_inferred" value="1"></attvalue>
-          <attvalue for="source_loc_uncertain" value="0"></attvalue>
-          <attvalue for="target_loc_id" value="cambridge_GB_gid_2653941"></attvalue>
-          <attvalue for="target_loc_inferred" value="1"></attvalue>
-          <attvalue for="target_loc_uncertain" value="0"></attvalue>
-          <attvalue for="letter_language" value="latin"></attvalue>
-          <attvalue for="letter_type_genus" value="familiar letter"></attvalue>
-          <attvalue for="letter_type_x_to_x" value="letter_1_to_n"></attvalue>
-        </attvalues>
+      <edge id="6" source="4" target="7">
+        <viz:color r="60" g="147" b="175"></viz:color>
       </edge>
-      <edge id="era_cwe_277" source="erasmus_desiderius_viaf_95982394" target="wentford_roger_viaf_unknown" label="277 To Roger Wentford [Landbeach? October 1513] [CWE]">
-        <attvalues>
-          <attvalue for="letter_no_in_edition" value="277 [CWE] // 277 [ALLEN]"></attvalue>
-          <attvalue for="sender_inferred" value="0"></attvalue>
-          <attvalue for="sender_uncertain" value="0"></attvalue>
-          <attvalue for="recipient_inferred" value="0"></attvalue>
-          <attvalue for="recipient_uncertain" value="0"></attvalue>
-          <attvalue for="send_date_year1" value="1513"></attvalue>
-          <attvalue for="send_date_computable1" value="1513-10-01"></attvalue>
-          <attvalue for="send_date_has_range" value="1"></attvalue>
-          <attvalue for="send_date_year2" value="1513"></attvalue>
-          <attvalue for="send_date_computable2" value="1513-10-31"></attvalue>
-          <attvalue for="send_date_inferred" value="1"></attvalue>
-          <attvalue for="send_date_approx" value="0"></attvalue>
-          <attvalue for="send_date_uncertain" value="0"></attvalue>
-          <attvalue for="source_loc_id" value="landbeach_GB_gid_6284113"></attvalue>
-          <attvalue for="source_loc_inferred" value="1"></attvalue>
-          <attvalue for="source_loc_uncertain" value="1"></attvalue>
-          <attvalue for="target_loc_id" value="london_GB_gid_2643743"></attvalue>
-          <attvalue for="target_loc_inferred" value="1"></attvalue>
-          <attvalue for="target_loc_uncertain" value="0"></attvalue>
-          <attvalue for="letter_language" value="latin"></attvalue>
-          <attvalue for="letter_type_genus" value="familiar letter"></attvalue>
-          <attvalue for="letter_type_x_to_x" value="letter_1_to_1"></attvalue>
-        </attvalues>
+      <edge id="7" source="4" target="13">
+        <viz:color r="60" g="147" b="175"></viz:color>
       </edge>
-      <edge id="era_cwe_280" source="della_rena_andrea_viaf_77136743" target="erasmus_desiderius_viaf_95982394" label="280 From Andrea Ammonio London, 25 November [1513] [CWE]">
-        <attvalues>
-          <attvalue for="letter_no_in_edition" value="280 [CWE] // 280 [ALLEN]"></attvalue>
-          <attvalue for="sender_inferred" value="0"></attvalue>
-          <attvalue for="sender_uncertain" value="0"></attvalue>
-          <attvalue for="recipient_inferred" value="0"></attvalue>
-          <attvalue for="recipient_uncertain" value="0"></attvalue>
-          <attvalue for="send_date_year1" value="1513"></attvalue>
-          <attvalue for="send_date_computable1" value="1513-11-25"></attvalue>
-          <attvalue for="send_date_has_range" value="0"></attvalue>
-          <attvalue for="send_date_year2" value="1513"></attvalue>
-          <attvalue for="send_date_computable2" value="1513-11-25"></attvalue>
-          <attvalue for="send_date_inferred" value="1"></attvalue>
-          <attvalue for="send_date_approx" value="0"></attvalue>
-          <attvalue for="send_date_uncertain" value="0"></attvalue>
-          <attvalue for="source_loc_id" value="london_GB_gid_2643743"></attvalue>
-          <attvalue for="source_loc_inferred" value="0"></attvalue>
-          <attvalue for="source_loc_uncertain" value="0"></attvalue>
-          <attvalue for="target_loc_id" value="london_GB_gid_2643743"></attvalue>
-          <attvalue for="target_loc_inferred" value="1"></attvalue>
-          <attvalue for="target_loc_uncertain" value="0"></attvalue>
-          <attvalue for="letter_language" value="latin"></attvalue>
-          <attvalue for="letter_type_genus" value="familiar letter"></attvalue>
-          <attvalue for="letter_type_x_to_x" value="letter_1_to_1"></attvalue>
-        </attvalues>
+      <edge id="8" source="4" target="14">
+        <viz:color r="60" g="147" b="175"></viz:color>
       </edge>
-      <edge id="wpirck_bw_237" source="pfintzing_melchior_viaf_56753537" target="pirckheimer_willibald_viaf_27173507" label="Von demselben. Dtsch. Orig. Landau (Pfalz), 12.1.1513">
-        <attvalues>
-          <attvalue for="letter_no_in_edition" value="237"></attvalue>
-          <attvalue for="sender_inferred" value="0"></attvalue>
-          <attvalue for="sender_uncertain" value="0"></attvalue>
-          <attvalue for="recipient_inferred" value="0"></attvalue>
-          <attvalue for="recipient_uncertain" value="0"></attvalue>
-          <attvalue for="send_date_year1" value="1513"></attvalue>
-          <attvalue for="send_date_computable1" value="1513-01-12"></attvalue>
-          <attvalue for="send_date_has_range" value="0"></attvalue>
-          <attvalue for="send_date_year2" value="1513"></attvalue>
-          <attvalue for="send_date_computable2" value="1513-01-12"></attvalue>
-          <attvalue for="send_date_inferred" value="0"></attvalue>
-          <attvalue for="send_date_approx" value="0"></attvalue>
-          <attvalue for="send_date_uncertain" value="0"></attvalue>
-          <attvalue for="source_loc_id" value="landau_in_der_pfalz_DE_gid_2881646"></attvalue>
-          <attvalue for="source_loc_inferred" value="0"></attvalue>
-          <attvalue for="source_loc_uncertain" value="0"></attvalue>
-          <attvalue for="target_loc_id" value="unknown_location_XX_gid_unknown"></attvalue>
-          <attvalue for="target_loc_inferred" value="0"></attvalue>
-          <attvalue for="target_loc_uncertain" value="1"></attvalue>
-          <attvalue for="letter_language" value="german"></attvalue>
-          <attvalue for="letter_type_genus" value="familiar letter"></attvalue>
-          <attvalue for="letter_type_x_to_x" value="letter_1_to_1"></attvalue>
-        </attvalues>
+      <edge id="9" source="4" target="15">
+        <viz:color r="60" g="147" b="175"></viz:color>
       </edge>
-      <edge id="wpirck_bw_238" source="nürnberg_town_council_of_viaf_not_applicable" target="pirckheimer_willibald_viaf_27173507" label="Nürnberger Rat an P., Kaspar Nützel und Lienhart Groland (in Augsburg). Dtsch. Briefb. Regest. Nbg., 23.12.1513" weight="19.0">
-        <attvalues>
-          <attvalue for="letter_no_in_edition" value="287"></attvalue>
-          <attvalue for="sender_inferred" value="0"></attvalue>
-          <attvalue for="sender_uncertain" value="0"></attvalue>
-          <attvalue for="recipient_inferred" value="0"></attvalue>
-          <attvalue for="recipient_uncertain" value="0"></attvalue>
-          <attvalue for="send_date_year1" value="1513"></attvalue>
-          <attvalue for="send_date_computable1" value="1513-12-23"></attvalue>
-          <attvalue for="send_date_has_range" value="0"></attvalue>
-          <attvalue for="send_date_year2" value="1513"></attvalue>
-          <attvalue for="send_date_computable2" value="1513-12-23"></attvalue>
-          <attvalue for="send_date_inferred" value="0"></attvalue>
-          <attvalue for="send_date_approx" value="0"></attvalue>
-          <attvalue for="send_date_uncertain" value="0"></attvalue>
-          <attvalue for="source_loc_id" value="nürnberg_DE_gid_2861650"></attvalue>
-          <attvalue for="source_loc_inferred" value="0"></attvalue>
-          <attvalue for="source_loc_uncertain" value="0"></attvalue>
-          <attvalue for="target_loc_id" value="augsburg_DE_gid_2954172"></attvalue>
-          <attvalue for="target_loc_inferred" value="0"></attvalue>
-          <attvalue for="target_loc_uncertain" value="1"></attvalue>
-          <attvalue for="letter_language" value="german"></attvalue>
-          <attvalue for="letter_type_genus" value="familiar letter"></attvalue>
-          <attvalue for="letter_type_x_to_x" value="letter_1_to_n"></attvalue>
-        </attvalues>
+      <edge id="10" source="9" target="1">
+        <viz:color r="213" g="171" b="91"></viz:color>
       </edge>
-      <edge id="wpirck_bw_241" source="pirckheimer_willibald_viaf_27173507" target="ansbach_margrave_counselors_of_viaf_not_applicable" label="P. und Michel Behaim an die Räte des Markgrafen in Ansbach. Dtsch. Briefb. Nbg., 7.4.1513">
-        <attvalues>
-          <attvalue for="letter_no_in_edition" value="241"></attvalue>
-          <attvalue for="sender_inferred" value="0"></attvalue>
-          <attvalue for="sender_uncertain" value="0"></attvalue>
-          <attvalue for="recipient_inferred" value="0"></attvalue>
-          <attvalue for="recipient_uncertain" value="0"></attvalue>
-          <attvalue for="send_date_year1" value="1513"></attvalue>
-          <attvalue for="send_date_computable1" value="1513-04-07"></attvalue>
-          <attvalue for="send_date_has_range" value="0"></attvalue>
-          <attvalue for="send_date_year2" value="1513"></attvalue>
-          <attvalue for="send_date_computable2" value="1513-04-07"></attvalue>
-          <attvalue for="send_date_inferred" value="0"></attvalue>
-          <attvalue for="send_date_approx" value="0"></attvalue>
-          <attvalue for="send_date_uncertain" value="0"></attvalue>
-          <attvalue for="source_loc_id" value="nürnberg_DE_gid_2861650"></attvalue>
-          <attvalue for="source_loc_inferred" value="0"></attvalue>
-          <attvalue for="source_loc_uncertain" value="0"></attvalue>
-          <attvalue for="target_loc_id" value="ansbach_DE_gid_2955936"></attvalue>
-          <attvalue for="target_loc_inferred" value="0"></attvalue>
-          <attvalue for="target_loc_uncertain" value="0"></attvalue>
-          <attvalue for="letter_language" value="german"></attvalue>
-          <attvalue for="letter_type_genus" value="familiar letter"></attvalue>
-          <attvalue for="letter_type_x_to_x" value="letter_n_to_1"></attvalue>
-        </attvalues>
+      <edge id="11" source="9" target="8">
+        <viz:color r="213" g="171" b="91"></viz:color>
       </edge>
-      <edge id="wpirck_bw_242" source="behaim_lorenz_viaf_20423397" target="pirckheimer_willibald_viaf_27173507" label="Von Dr. Lorenz Beheim. Lat. Orig. Bamberg, 10.5.1513">
-        <attvalues>
-          <attvalue for="letter_no_in_edition" value="242"></attvalue>
-          <attvalue for="sender_inferred" value="0"></attvalue>
-          <attvalue for="sender_uncertain" value="0"></attvalue>
-          <attvalue for="recipient_inferred" value="0"></attvalue>
-          <attvalue for="recipient_uncertain" value="0"></attvalue>
-          <attvalue for="send_date_year1" value="1513"></attvalue>
-          <attvalue for="send_date_computable1" value="1513-05-10"></attvalue>
-          <attvalue for="send_date_has_range" value="0"></attvalue>
-          <attvalue for="send_date_year2" value="1513"></attvalue>
-          <attvalue for="send_date_computable2" value="1513-05-10"></attvalue>
-          <attvalue for="send_date_inferred" value="0"></attvalue>
-          <attvalue for="send_date_approx" value="0"></attvalue>
-          <attvalue for="send_date_uncertain" value="0"></attvalue>
-          <attvalue for="source_loc_id" value="bamberg_DE_gid_2952984"></attvalue>
-          <attvalue for="source_loc_inferred" value="0"></attvalue>
-          <attvalue for="source_loc_uncertain" value="0"></attvalue>
-          <attvalue for="target_loc_id" value="unknown_location_XX_gid_unknown"></attvalue>
-          <attvalue for="target_loc_inferred" value="0"></attvalue>
-          <attvalue for="target_loc_uncertain" value="1"></attvalue>
-          <attvalue for="letter_language" value="latin"></attvalue>
-          <attvalue for="letter_type_genus" value="familiar letter"></attvalue>
-          <attvalue for="letter_type_x_to_x" value="letter_1_to_1"></attvalue>
-        </attvalues>
+      <edge id="12" source="9" target="10">
+        <viz:color r="213" g="171" b="91"></viz:color>
       </edge>
-      <edge id="wpirck_bw_243" source="pirckheimer_willibald_viaf_27173507" target="pirckheimer_caritas_die_ältere_viaf_41848634" label="An Charitas Pirckheimer (Widmungsschreiben). Lat. Druck und *Konzept. Nbg., 1.6.1513">
-        <attvalues>
-          <attvalue for="letter_no_in_edition" value="243"></attvalue>
-          <attvalue for="sender_inferred" value="0"></attvalue>
-          <attvalue for="sender_uncertain" value="0"></attvalue>
-          <attvalue for="recipient_inferred" value="0"></attvalue>
-          <attvalue for="recipient_uncertain" value="0"></attvalue>
-          <attvalue for="send_date_year1" value="1513"></attvalue>
-          <attvalue for="send_date_computable1" value="1513-06-01"></attvalue>
-          <attvalue for="send_date_has_range" value="0"></attvalue>
-          <attvalue for="send_date_year2" value="1513"></attvalue>
-          <attvalue for="send_date_computable2" value="1513-06-01"></attvalue>
-          <attvalue for="send_date_inferred" value="0"></attvalue>
-          <attvalue for="send_date_approx" value="0"></attvalue>
-          <attvalue for="send_date_uncertain" value="0"></attvalue>
-          <attvalue for="source_loc_id" value="nürnberg_DE_gid_2861650"></attvalue>
-          <attvalue for="source_loc_inferred" value="0"></attvalue>
-          <attvalue for="source_loc_uncertain" value="0"></attvalue>
-          <attvalue for="target_loc_id" value="nürnberg_klarissenkloster_st_klara_DE_gid_unknown"></attvalue>
-          <attvalue for="target_loc_inferred" value="1"></attvalue>
-          <attvalue for="target_loc_uncertain" value="1"></attvalue>
-          <attvalue for="letter_language" value="latin"></attvalue>
-          <attvalue for="letter_type_genus" value="dedicatory letter"></attvalue>
-          <attvalue for="letter_type_x_to_x" value="letter_1_to_1"></attvalue>
-        </attvalues>
+      <edge id="13" source="9" target="11">
+        <viz:color r="213" g="171" b="91"></viz:color>
       </edge>
-      <edge id="wpirck_bw_244" source="pirckheimer_willibald_viaf_27173507" target="cochlæus_johannes_viaf_121589726" label="An Johannes Cochläus (Schlußwort). Lat. Druck. S. d. [vor 30.6.1513]">
-        <attvalues>
-          <attvalue for="letter_no_in_edition" value="244"></attvalue>
-          <attvalue for="sender_inferred" value="0"></attvalue>
-          <attvalue for="sender_uncertain" value="0"></attvalue>
-          <attvalue for="recipient_inferred" value="0"></attvalue>
-          <attvalue for="recipient_uncertain" value="0"></attvalue>
-          <attvalue for="send_date_year1" value="1513"></attvalue>
-          <attvalue for="send_date_computable1" value="1513-01-01"></attvalue>
-          <attvalue for="send_date_has_range" value="1"></attvalue>
-          <attvalue for="send_date_year2" value="1513"></attvalue>
-          <attvalue for="send_date_computable2" value="1513-06-29"></attvalue>
-          <attvalue for="send_date_inferred" value="1"></attvalue>
-          <attvalue for="send_date_approx" value="0"></attvalue>
-          <attvalue for="send_date_uncertain" value="1"></attvalue>
-          <attvalue for="source_loc_id" value="unknown_location_XX_gid_unknown"></attvalue>
-          <attvalue for="source_loc_inferred" value="0"></attvalue>
-          <attvalue for="source_loc_uncertain" value="1"></attvalue>
-          <attvalue for="target_loc_id" value="nürnberg_DE_gid_2861650"></attvalue>
-          <attvalue for="target_loc_inferred" value="1"></attvalue>
-          <attvalue for="target_loc_uncertain" value="1"></attvalue>
-          <attvalue for="letter_language" value="latin"></attvalue>
-          <attvalue for="letter_type_genus" value="dedicatory letter"></attvalue>
-          <attvalue for="letter_type_x_to_x" value="letter_1_to_1"></attvalue>
-        </attvalues>
+      <edge id="14" source="9" target="12">
+        <viz:color r="213" g="171" b="91"></viz:color>
       </edge>
-      <edge id="wpirck_bw_244bis" source="cochlæus_johannes_viaf_121589726" target="pirckheimer_willibald_viaf_27173507" label="Von demselben (Epigramm). Lat. Druck. S. d. [vor 30.6.1513]">
-        <attvalues>
-          <attvalue for="letter_no_in_edition" value="244bis"></attvalue>
-          <attvalue for="sender_inferred" value="0"></attvalue>
-          <attvalue for="sender_uncertain" value="0"></attvalue>
-          <attvalue for="recipient_inferred" value="0"></attvalue>
-          <attvalue for="recipient_uncertain" value="0"></attvalue>
-          <attvalue for="send_date_year1" value="1513"></attvalue>
-          <attvalue for="send_date_computable1" value="1513-01-01"></attvalue>
-          <attvalue for="send_date_has_range" value="1"></attvalue>
-          <attvalue for="send_date_year2" value="1513"></attvalue>
-          <attvalue for="send_date_computable2" value="1513-06-29"></attvalue>
-          <attvalue for="send_date_inferred" value="1"></attvalue>
-          <attvalue for="send_date_approx" value="0"></attvalue>
-          <attvalue for="send_date_uncertain" value="1"></attvalue>
-          <attvalue for="source_loc_id" value="unknown_location_XX_gid_unknown"></attvalue>
-          <attvalue for="source_loc_inferred" value="0"></attvalue>
-          <attvalue for="source_loc_uncertain" value="1"></attvalue>
-          <attvalue for="target_loc_id" value="unknown_location_XX_gid_unknown"></attvalue>
-          <attvalue for="target_loc_inferred" value="0"></attvalue>
-          <attvalue for="target_loc_uncertain" value="1"></attvalue>
-          <attvalue for="letter_language" value="latin"></attvalue>
-          <attvalue for="letter_type_genus" value="poetic letter"></attvalue>
-          <attvalue for="letter_type_x_to_x" value="letter_1_to_1"></attvalue>
-        </attvalues>
+      <edge id="15" source="9" target="16">
+        <viz:color r="213" g="171" b="91"></viz:color>
       </edge>
-      <edge id="wpirck_bw_245" source="chelidonius_benedictus_viaf_88090962" target="pirckheimer_willibald_viaf_27173507" label="Von Benedictus Chelidonius (Gedicht). Lat. Druck. S. d. [vor 30.6.1513]">
-        <attvalues>
-          <attvalue for="letter_no_in_edition" value="245"></attvalue>
-          <attvalue for="sender_inferred" value="0"></attvalue>
-          <attvalue for="sender_uncertain" value="0"></attvalue>
-          <attvalue for="recipient_inferred" value="0"></attvalue>
-          <attvalue for="recipient_uncertain" value="0"></attvalue>
-          <attvalue for="send_date_year1" value="1513"></attvalue>
-          <attvalue for="send_date_computable1" value="1513-01-01"></attvalue>
-          <attvalue for="send_date_has_range" value="1"></attvalue>
-          <attvalue for="send_date_year2" value="1513"></attvalue>
-          <attvalue for="send_date_computable2" value="1513-06-29"></attvalue>
-          <attvalue for="send_date_inferred" value="1"></attvalue>
-          <attvalue for="send_date_approx" value="0"></attvalue>
-          <attvalue for="send_date_uncertain" value="1"></attvalue>
-          <attvalue for="source_loc_id" value="unknown_location_XX_gid_unknown"></attvalue>
-          <attvalue for="source_loc_inferred" value="0"></attvalue>
-          <attvalue for="source_loc_uncertain" value="1"></attvalue>
-          <attvalue for="target_loc_id" value="unknown_location_XX_gid_unknown"></attvalue>
-          <attvalue for="target_loc_inferred" value="0"></attvalue>
-          <attvalue for="target_loc_uncertain" value="1"></attvalue>
-          <attvalue for="letter_language" value="latin"></attvalue>
-          <attvalue for="letter_type_genus" value="poetic letter"></attvalue>
-          <attvalue for="letter_type_x_to_x" value="letter_1_to_1"></attvalue>
-        </attvalues>
+      <edge id="16" source="9" target="17">
+        <viz:color r="213" g="171" b="91"></viz:color>
       </edge>
-      <edge id="wpirck_bw_246" source="pirckheimer_caritas_die_ältere_viaf_41848634" target="pirckheimer_willibald_viaf_27173507" label="Von Charitas Pirckheimer. Lat. Druck. S. d. [nach 1. bzw. 30.6.1513]">
-        <attvalues>
-          <attvalue for="letter_no_in_edition" value="246"></attvalue>
-          <attvalue for="sender_inferred" value="0"></attvalue>
-          <attvalue for="sender_uncertain" value="0"></attvalue>
-          <attvalue for="recipient_inferred" value="0"></attvalue>
-          <attvalue for="recipient_uncertain" value="0"></attvalue>
-          <attvalue for="send_date_year1" value="1513"></attvalue>
-          <attvalue for="send_date_computable1" value="1513-07-01"></attvalue>
-          <attvalue for="send_date_has_range" value="1"></attvalue>
-          <attvalue for="send_date_year2" value="1513"></attvalue>
-          <attvalue for="send_date_computable2" value="1513-07-31"></attvalue>
-          <attvalue for="send_date_inferred" value="1"></attvalue>
-          <attvalue for="send_date_approx" value="0"></attvalue>
-          <attvalue for="send_date_uncertain" value="1"></attvalue>
-          <attvalue for="source_loc_id" value="nürnberg_klarissenkloster_st_klara_DE_gid_unknown"></attvalue>
-          <attvalue for="source_loc_inferred" value="0"></attvalue>
-          <attvalue for="source_loc_uncertain" value="1"></attvalue>
-          <attvalue for="target_loc_id" value="unknown_location_XX_gid_unknown"></attvalue>
-          <attvalue for="target_loc_inferred" value="0"></attvalue>
-          <attvalue for="target_loc_uncertain" value="1"></attvalue>
-          <attvalue for="letter_language" value="latin"></attvalue>
-          <attvalue for="letter_type_genus" value="familiar letter"></attvalue>
-          <attvalue for="letter_type_x_to_x" value="letter_1_to_1"></attvalue>
-        </attvalues>
+      <edge id="17" source="9" target="19">
+        <viz:color r="213" g="171" b="91"></viz:color>
       </edge>
-      <edge id="wpirck_bw_247" source="pirckheimer_willibald_viaf_27173507" target="unnamed_person_viaf_not_applicable" label="An einen Ungenannten. Lat. Konzept. S. d. [1513/14]">
-        <attvalues>
-          <attvalue for="letter_no_in_edition" value="247"></attvalue>
-          <attvalue for="sender_inferred" value="0"></attvalue>
-          <attvalue for="sender_uncertain" value="0"></attvalue>
-          <attvalue for="recipient_inferred" value="0"></attvalue>
-          <attvalue for="recipient_uncertain" value="0"></attvalue>
-          <attvalue for="send_date_year1" value="1513"></attvalue>
-          <attvalue for="send_date_computable1" value="1513-07-01"></attvalue>
-          <attvalue for="send_date_has_range" value="1"></attvalue>
-          <attvalue for="send_date_year2" value="1514"></attvalue>
-          <attvalue for="send_date_computable2" value="1514-12-31"></attvalue>
-          <attvalue for="send_date_inferred" value="1"></attvalue>
-          <attvalue for="send_date_approx" value="0"></attvalue>
-          <attvalue for="send_date_uncertain" value="1"></attvalue>
-          <attvalue for="source_loc_id" value="unknown_location_XX_gid_unknown"></attvalue>
-          <attvalue for="source_loc_inferred" value="0"></attvalue>
-          <attvalue for="source_loc_uncertain" value="1"></attvalue>
-          <attvalue for="target_loc_id" value="unknown_location_XX_gid_unknown"></attvalue>
-          <attvalue for="target_loc_inferred" value="0"></attvalue>
-          <attvalue for="target_loc_uncertain" value="1"></attvalue>
-          <attvalue for="letter_language" value="latin"></attvalue>
-          <attvalue for="letter_type_genus" value="familiar letter"></attvalue>
-          <attvalue for="letter_type_x_to_x" value="letter_1_to_1"></attvalue>
-        </attvalues>
+      <edge id="18" source="9" target="21" weight="4.0">
+        <viz:color r="213" g="171" b="91"></viz:color>
       </edge>
-      <edge id="wpirck_bw_248" source="pirckheimer_willibald_viaf_27173507" target="georg_III_bamberg_bischof_viaf_15568815" label="Dieselben an Bischof Georg von Bamberg. Dtsch. Briefb. Nbg., 10.10.1513" weight="4.0">
-        <attvalues>
-          <attvalue for="letter_no_in_edition" value="271"></attvalue>
-          <attvalue for="sender_inferred" value="0"></attvalue>
-          <attvalue for="sender_uncertain" value="0"></attvalue>
-          <attvalue for="recipient_inferred" value="0"></attvalue>
-          <attvalue for="recipient_uncertain" value="0"></attvalue>
-          <attvalue for="send_date_year1" value="1513"></attvalue>
-          <attvalue for="send_date_computable1" value="1513-10-10"></attvalue>
-          <attvalue for="send_date_has_range" value="0"></attvalue>
-          <attvalue for="send_date_year2" value="1513"></attvalue>
-          <attvalue for="send_date_computable2" value="1513-10-10"></attvalue>
-          <attvalue for="send_date_inferred" value="0"></attvalue>
-          <attvalue for="send_date_approx" value="0"></attvalue>
-          <attvalue for="send_date_uncertain" value="0"></attvalue>
-          <attvalue for="source_loc_id" value="nürnberg_DE_gid_2861650"></attvalue>
-          <attvalue for="source_loc_inferred" value="0"></attvalue>
-          <attvalue for="source_loc_uncertain" value="0"></attvalue>
-          <attvalue for="target_loc_id" value="bamberg_DE_gid_2952984"></attvalue>
-          <attvalue for="target_loc_inferred" value="1"></attvalue>
-          <attvalue for="target_loc_uncertain" value="1"></attvalue>
-          <attvalue for="letter_language" value="german"></attvalue>
-          <attvalue for="letter_type_genus" value="familiar letter"></attvalue>
-          <attvalue for="letter_type_x_to_x" value="letter_n_to_1"></attvalue>
-        </attvalues>
+      <edge id="19" source="9" target="22" weight="9.0">
+        <viz:color r="213" g="171" b="91"></viz:color>
       </edge>
-      <edge id="wpirck_bw_249a" source="pirckheimer_katharina_die_jüngere_viaf_unknown" target="pirckheimer_willibald_viaf_27173507" label="Katharina Pirckheimer d. J. an P. Dt. Autogr. &lt;Nürnberg, Klarakloster, vermutlich Juli frühestens 1513&gt;">
-        <attvalues>
-          <attvalue for="letter_no_in_edition" value="249a"></attvalue>
-          <attvalue for="sender_inferred" value="0"></attvalue>
-          <attvalue for="sender_uncertain" value="0"></attvalue>
-          <attvalue for="recipient_inferred" value="0"></attvalue>
-          <attvalue for="recipient_uncertain" value="0"></attvalue>
-          <attvalue for="send_date_year1" value="1513"></attvalue>
-          <attvalue for="send_date_computable1" value="1513-11-01"></attvalue>
-          <attvalue for="send_date_has_range" value="1"></attvalue>
-          <attvalue for="send_date_computable2" value="1530-12-21"></attvalue>
-          <attvalue for="send_date_inferred" value="1"></attvalue>
-          <attvalue for="send_date_approx" value="0"></attvalue>
-          <attvalue for="send_date_uncertain" value="1"></attvalue>
-          <attvalue for="source_loc_id" value="nürnberg_klarissenkloster_st_klara_DE_gid_unknown"></attvalue>
-          <attvalue for="source_loc_inferred" value="1"></attvalue>
-          <attvalue for="source_loc_uncertain" value="0"></attvalue>
-          <attvalue for="target_loc_id" value="augsburg_DE_gid_2954172"></attvalue>
-          <attvalue for="target_loc_inferred" value="1"></attvalue>
-          <attvalue for="target_loc_uncertain" value="1"></attvalue>
-          <attvalue for="letter_language" value="german"></attvalue>
-          <attvalue for="letter_type_genus" value="familiar letter"></attvalue>
-          <attvalue for="letter_type_x_to_x" value="letter_1_to_1"></attvalue>
-        </attvalues>
+      <edge id="20" source="9" target="25">
+        <viz:color r="213" g="171" b="91"></viz:color>
       </edge>
-      <edge id="wpirck_bw_250" source="pirckheimer_willibald_viaf_27173507" target="baumann_konrad_viaf_unknown" label="P. an den bischöfl. bamberg. Sekretär Konrad Baumann. Dtsch. Briefb. Nbg., 16.7.1513">
-        <attvalues>
-          <attvalue for="letter_no_in_edition" value="250"></attvalue>
-          <attvalue for="sender_inferred" value="0"></attvalue>
-          <attvalue for="sender_uncertain" value="0"></attvalue>
-          <attvalue for="recipient_inferred" value="0"></attvalue>
-          <attvalue for="recipient_uncertain" value="0"></attvalue>
-          <attvalue for="send_date_year1" value="1513"></attvalue>
-          <attvalue for="send_date_computable1" value="1513-07-16"></attvalue>
-          <attvalue for="send_date_has_range" value="0"></attvalue>
-          <attvalue for="send_date_year2" value="1513"></attvalue>
-          <attvalue for="send_date_computable2" value="1513-07-16"></attvalue>
-          <attvalue for="send_date_inferred" value="0"></attvalue>
-          <attvalue for="send_date_approx" value="0"></attvalue>
-          <attvalue for="send_date_uncertain" value="0"></attvalue>
-          <attvalue for="source_loc_id" value="nürnberg_DE_gid_2861650"></attvalue>
-          <attvalue for="source_loc_inferred" value="0"></attvalue>
-          <attvalue for="source_loc_uncertain" value="0"></attvalue>
-          <attvalue for="target_loc_id" value="bamberg_DE_gid_2952984"></attvalue>
-          <attvalue for="target_loc_inferred" value="1"></attvalue>
-          <attvalue for="target_loc_uncertain" value="1"></attvalue>
-          <attvalue for="letter_language" value="german"></attvalue>
-          <attvalue for="letter_type_genus" value="familiar letter"></attvalue>
-          <attvalue for="letter_type_x_to_x" value="letter_1_to_1"></attvalue>
-        </attvalues>
+      <edge id="21" source="9" target="27">
+        <viz:color r="213" g="171" b="91"></viz:color>
       </edge>
-      <edge id="wpirck_bw_252" source="pirckheimer_willibald_viaf_27173507" target="nürnberg_town_council_of_viaf_not_applicable" label="P., Kaspar Nützel und Lienhart Groland an den Nürnberger Rat. Dtsch. Orig. [Augsburg], 22.12.1513" weight="9.0">
-        <attvalues>
-          <attvalue for="letter_no_in_edition" value="286"></attvalue>
-          <attvalue for="sender_inferred" value="0"></attvalue>
-          <attvalue for="sender_uncertain" value="0"></attvalue>
-          <attvalue for="recipient_inferred" value="0"></attvalue>
-          <attvalue for="recipient_uncertain" value="0"></attvalue>
-          <attvalue for="send_date_year1" value="1513"></attvalue>
-          <attvalue for="send_date_computable1" value="1513-12-22"></attvalue>
-          <attvalue for="send_date_has_range" value="0"></attvalue>
-          <attvalue for="send_date_year2" value="1513"></attvalue>
-          <attvalue for="send_date_computable2" value="1513-12-22"></attvalue>
-          <attvalue for="send_date_inferred" value="0"></attvalue>
-          <attvalue for="send_date_approx" value="0"></attvalue>
-          <attvalue for="send_date_uncertain" value="0"></attvalue>
-          <attvalue for="source_loc_id" value="augsburg_DE_gid_2954172"></attvalue>
-          <attvalue for="source_loc_inferred" value="1"></attvalue>
-          <attvalue for="source_loc_uncertain" value="0"></attvalue>
-          <attvalue for="target_loc_id" value="nürnberg_DE_gid_2861650"></attvalue>
-          <attvalue for="target_loc_inferred" value="1"></attvalue>
-          <attvalue for="target_loc_uncertain" value="1"></attvalue>
-          <attvalue for="letter_language" value="german"></attvalue>
-          <attvalue for="letter_type_genus" value="familiar letter"></attvalue>
-          <attvalue for="letter_type_x_to_x" value="letter_n_to_1"></attvalue>
-        </attvalues>
+      <edge id="22" source="9" target="28" weight="5.0">
+        <viz:color r="213" g="171" b="91"></viz:color>
       </edge>
-      <edge id="wpirck_bw_254" source="tucher_andreas_viaf_232443010" target="pirckheimer_willibald_viaf_27173507" label="Endres Tucher an dieselben (in Augsburg). Dtsch. Briefb. Regest. Nbg., 25.12.1513" weight="2.0">
-        <attvalues>
-          <attvalue for="letter_no_in_edition" value="288"></attvalue>
-          <attvalue for="sender_inferred" value="0"></attvalue>
-          <attvalue for="sender_uncertain" value="0"></attvalue>
-          <attvalue for="recipient_inferred" value="0"></attvalue>
-          <attvalue for="recipient_uncertain" value="0"></attvalue>
-          <attvalue for="send_date_year1" value="1513"></attvalue>
-          <attvalue for="send_date_computable1" value="1513-12-25"></attvalue>
-          <attvalue for="send_date_has_range" value="0"></attvalue>
-          <attvalue for="send_date_year2" value="1513"></attvalue>
-          <attvalue for="send_date_computable2" value="1513-12-25"></attvalue>
-          <attvalue for="send_date_inferred" value="0"></attvalue>
-          <attvalue for="send_date_approx" value="0"></attvalue>
-          <attvalue for="send_date_uncertain" value="0"></attvalue>
-          <attvalue for="source_loc_id" value="nürnberg_DE_gid_2861650"></attvalue>
-          <attvalue for="source_loc_inferred" value="0"></attvalue>
-          <attvalue for="source_loc_uncertain" value="0"></attvalue>
-          <attvalue for="target_loc_id" value="augsburg_DE_gid_2954172"></attvalue>
-          <attvalue for="target_loc_inferred" value="0"></attvalue>
-          <attvalue for="target_loc_uncertain" value="1"></attvalue>
-          <attvalue for="letter_language" value="german"></attvalue>
-          <attvalue for="letter_type_genus" value="familiar letter"></attvalue>
-          <attvalue for="letter_type_x_to_x" value="letter_1_to_n"></attvalue>
-        </attvalues>
+      <edge id="23" source="18" target="9">
+        <viz:color r="82" g="82" b="82"></viz:color>
       </edge>
-      <edge id="wpirck_bw_261" source="pirckheimer_willibald_viaf_27173507" target="brant_sebastian_viaf_29530930" label="An Sebastian Brant.[Nbg.], 20.8.1513 (siehe Nachtrag, Bd. III)">
-        <attvalues>
-          <attvalue for="letter_no_in_edition" value="261"></attvalue>
-          <attvalue for="sender_inferred" value="0"></attvalue>
-          <attvalue for="sender_uncertain" value="0"></attvalue>
-          <attvalue for="recipient_inferred" value="0"></attvalue>
-          <attvalue for="recipient_uncertain" value="0"></attvalue>
-          <attvalue for="send_date_year1" value="1513"></attvalue>
-          <attvalue for="send_date_computable1" value="1513-08-20"></attvalue>
-          <attvalue for="send_date_has_range" value="0"></attvalue>
-          <attvalue for="send_date_year2" value="1513"></attvalue>
-          <attvalue for="send_date_computable2" value="1513-08-20"></attvalue>
-          <attvalue for="send_date_inferred" value="0"></attvalue>
-          <attvalue for="send_date_approx" value="0"></attvalue>
-          <attvalue for="send_date_uncertain" value="0"></attvalue>
-          <attvalue for="source_loc_id" value="nürnberg_DE_gid_2861650"></attvalue>
-          <attvalue for="source_loc_inferred" value="1"></attvalue>
-          <attvalue for="source_loc_uncertain" value="0"></attvalue>
-          <attvalue for="target_loc_id" value="strasbourg_FR_gid_2973783"></attvalue>
-          <attvalue for="target_loc_inferred" value="1"></attvalue>
-          <attvalue for="target_loc_uncertain" value="1"></attvalue>
-          <attvalue for="letter_language" value="latin"></attvalue>
-          <attvalue for="letter_type_genus" value="familiar letter"></attvalue>
-          <attvalue for="letter_type_x_to_x" value="letter_1_to_1"></attvalue>
-        </attvalues>
+      <edge id="24" source="20" target="9">
+        <viz:color r="82" g="82" b="82"></viz:color>
       </edge>
-      <edge id="wpirck_bw_265" source="pirckheimer_willibald_viaf_27173507" target="schwarzenberg_johann_von_viaf_41987336" label="P. an Johann von Schwarzenberg. Dtsch. Briefb. Regest. Nbg., 31.12.1513" weight="5.0">
-        <attvalues>
-          <attvalue for="letter_no_in_edition" value="290"></attvalue>
-          <attvalue for="sender_inferred" value="0"></attvalue>
-          <attvalue for="sender_uncertain" value="0"></attvalue>
-          <attvalue for="recipient_inferred" value="0"></attvalue>
-          <attvalue for="recipient_uncertain" value="0"></attvalue>
-          <attvalue for="send_date_year1" value="1513"></attvalue>
-          <attvalue for="send_date_computable1" value="1513-12-31"></attvalue>
-          <attvalue for="send_date_has_range" value="0"></attvalue>
-          <attvalue for="send_date_year2" value="1513"></attvalue>
-          <attvalue for="send_date_computable2" value="1513-12-31"></attvalue>
-          <attvalue for="send_date_inferred" value="0"></attvalue>
-          <attvalue for="send_date_approx" value="0"></attvalue>
-          <attvalue for="send_date_uncertain" value="0"></attvalue>
-          <attvalue for="source_loc_id" value="nürnberg_DE_gid_2861650"></attvalue>
-          <attvalue for="source_loc_inferred" value="0"></attvalue>
-          <attvalue for="source_loc_uncertain" value="0"></attvalue>
-          <attvalue for="target_loc_id" value="bamberg_DE_gid_2952984"></attvalue>
-          <attvalue for="target_loc_inferred" value="0"></attvalue>
-          <attvalue for="target_loc_uncertain" value="1"></attvalue>
-          <attvalue for="letter_language" value="german"></attvalue>
-          <attvalue for="letter_type_genus" value="familiar letter"></attvalue>
-          <attvalue for="letter_type_x_to_x" value="letter_1_to_1"></attvalue>
-        </attvalues>
+      <edge id="25" source="22" target="9" weight="19.0">
+        <viz:color r="82" g="82" b="82"></viz:color>
       </edge>
-      <edge id="wpirck_bw_270" source="pirckheimer_willibald_viaf_27173507" target="praun_hans_viaf_unknown" label="Dieselben an Hans Praun, bischöfl. Kammermeister in Bamberg. Dtsch. Briefb. Nbg., 5.10.1513">
-        <attvalues>
-          <attvalue for="letter_no_in_edition" value="270"></attvalue>
-          <attvalue for="sender_inferred" value="0"></attvalue>
-          <attvalue for="sender_uncertain" value="0"></attvalue>
-          <attvalue for="recipient_inferred" value="0"></attvalue>
-          <attvalue for="recipient_uncertain" value="0"></attvalue>
-          <attvalue for="send_date_year1" value="1513"></attvalue>
-          <attvalue for="send_date_computable1" value="1513-10-05"></attvalue>
-          <attvalue for="send_date_has_range" value="0"></attvalue>
-          <attvalue for="send_date_year2" value="1513"></attvalue>
-          <attvalue for="send_date_computable2" value="1513-10-05"></attvalue>
-          <attvalue for="send_date_inferred" value="0"></attvalue>
-          <attvalue for="send_date_approx" value="0"></attvalue>
-          <attvalue for="send_date_uncertain" value="0"></attvalue>
-          <attvalue for="source_loc_id" value="nürnberg_DE_gid_2861650"></attvalue>
-          <attvalue for="source_loc_inferred" value="0"></attvalue>
-          <attvalue for="source_loc_uncertain" value="0"></attvalue>
-          <attvalue for="target_loc_id" value="bamberg_DE_gid_2952984"></attvalue>
-          <attvalue for="target_loc_inferred" value="0"></attvalue>
-          <attvalue for="target_loc_uncertain" value="0"></attvalue>
-          <attvalue for="letter_language" value="german"></attvalue>
-          <attvalue for="letter_type_genus" value="familiar letter"></attvalue>
-          <attvalue for="letter_type_x_to_x" value="letter_n_to_1"></attvalue>
-        </attvalues>
+      <edge id="26" source="23" target="9">
+        <viz:color r="82" g="82" b="82"></viz:color>
       </edge>
-      <edge id="wpirck_bw_272" source="pirckheimer_willibald_viaf_27173507" target="spalatin_georg_viaf_240011410" label="An Georg Spalatin. Lat. Abschrift und Druck. Nbg., 25.10.1513">
-        <attvalues>
-          <attvalue for="letter_no_in_edition" value="272"></attvalue>
-          <attvalue for="sender_inferred" value="0"></attvalue>
-          <attvalue for="sender_uncertain" value="0"></attvalue>
-          <attvalue for="recipient_inferred" value="0"></attvalue>
-          <attvalue for="recipient_uncertain" value="0"></attvalue>
-          <attvalue for="send_date_year1" value="1513"></attvalue>
-          <attvalue for="send_date_computable1" value="1513-10-25"></attvalue>
-          <attvalue for="send_date_has_range" value="0"></attvalue>
-          <attvalue for="send_date_year2" value="1513"></attvalue>
-          <attvalue for="send_date_computable2" value="1513-10-25"></attvalue>
-          <attvalue for="send_date_inferred" value="0"></attvalue>
-          <attvalue for="send_date_approx" value="0"></attvalue>
-          <attvalue for="send_date_uncertain" value="0"></attvalue>
-          <attvalue for="source_loc_id" value="nürnberg_DE_gid_2861650"></attvalue>
-          <attvalue for="source_loc_inferred" value="0"></attvalue>
-          <attvalue for="source_loc_uncertain" value="0"></attvalue>
-          <attvalue for="target_loc_id" value="wittenberg_DE_gid_7303020"></attvalue>
-          <attvalue for="target_loc_inferred" value="1"></attvalue>
-          <attvalue for="target_loc_uncertain" value="1"></attvalue>
-          <attvalue for="letter_language" value="latin"></attvalue>
-          <attvalue for="letter_type_genus" value="familiar letter"></attvalue>
-          <attvalue for="letter_type_x_to_x" value="letter_1_to_1"></attvalue>
-        </attvalues>
+      <edge id="27" source="24" target="9">
+        <viz:color r="82" g="82" b="82"></viz:color>
       </edge>
-      <edge id="wpirck_bw_289" source="nützel_kaspar_viaf_15536542" target="pirckheimer_willibald_viaf_27173507" label="Kaspar Nützel an P., Lienhart Groland und Lazarus Spengler. Dtsch. Orig. Augsburg, 25.12.1513">
-        <attvalues>
-          <attvalue for="letter_no_in_edition" value="289"></attvalue>
-          <attvalue for="sender_inferred" value="0"></attvalue>
-          <attvalue for="sender_uncertain" value="0"></attvalue>
-          <attvalue for="recipient_inferred" value="0"></attvalue>
-          <attvalue for="recipient_uncertain" value="0"></attvalue>
-          <attvalue for="send_date_year1" value="1513"></attvalue>
-          <attvalue for="send_date_computable1" value="1513-12-25"></attvalue>
-          <attvalue for="send_date_has_range" value="0"></attvalue>
-          <attvalue for="send_date_year2" value="1513"></attvalue>
-          <attvalue for="send_date_computable2" value="1513-12-25"></attvalue>
-          <attvalue for="send_date_inferred" value="0"></attvalue>
-          <attvalue for="send_date_approx" value="0"></attvalue>
-          <attvalue for="send_date_uncertain" value="0"></attvalue>
-          <attvalue for="source_loc_id" value="augsburg_DE_gid_2954172"></attvalue>
-          <attvalue for="source_loc_inferred" value="0"></attvalue>
-          <attvalue for="source_loc_uncertain" value="0"></attvalue>
-          <attvalue for="target_loc_id" value="augsburg_DE_gid_2954172"></attvalue>
-          <attvalue for="target_loc_inferred" value="1"></attvalue>
-          <attvalue for="target_loc_uncertain" value="1"></attvalue>
-          <attvalue for="letter_language" value="german"></attvalue>
-          <attvalue for="letter_type_genus" value="familiar letter"></attvalue>
-          <attvalue for="letter_type_x_to_x" value="letter_1_to_n"></attvalue>
-        </attvalues>
+      <edge id="28" source="25" target="9">
+        <viz:color r="82" g="82" b="82"></viz:color>
       </edge>
-      <edge id="wpirck_bw_291" source="pirckheimer_willibald_viaf_27173507" target="rhenanus_beatus_viaf_39415982" label="An Beatus Rhenanus. Lat. Konzept. S. d. [Nbg., etwa Ende 1513]">
-        <attvalues>
-          <attvalue for="letter_no_in_edition" value="291"></attvalue>
-          <attvalue for="sender_inferred" value="0"></attvalue>
-          <attvalue for="sender_uncertain" value="0"></attvalue>
-          <attvalue for="recipient_inferred" value="0"></attvalue>
-          <attvalue for="recipient_uncertain" value="0"></attvalue>
-          <attvalue for="send_date_year1" value="1513"></attvalue>
-          <attvalue for="send_date_computable1" value="1513-11-01"></attvalue>
-          <attvalue for="send_date_has_range" value="1"></attvalue>
-          <attvalue for="send_date_year2" value="1513"></attvalue>
-          <attvalue for="send_date_computable2" value="1513-12-31"></attvalue>
-          <attvalue for="send_date_inferred" value="1"></attvalue>
-          <attvalue for="send_date_approx" value="1"></attvalue>
-          <attvalue for="send_date_uncertain" value="0"></attvalue>
-          <attvalue for="source_loc_id" value="nürnberg_DE_gid_2861650"></attvalue>
-          <attvalue for="source_loc_inferred" value="1"></attvalue>
-          <attvalue for="source_loc_uncertain" value="0"></attvalue>
-          <attvalue for="target_loc_id" value="basel_CH_gid_2661604"></attvalue>
-          <attvalue for="target_loc_inferred" value="1"></attvalue>
-          <attvalue for="target_loc_uncertain" value="1"></attvalue>
-          <attvalue for="letter_language" value="latin"></attvalue>
-          <attvalue for="letter_type_genus" value="familiar letter"></attvalue>
-          <attvalue for="letter_type_x_to_x" value="letter_1_to_1"></attvalue>
-        </attvalues>
+      <edge id="29" source="26" target="9">
+        <viz:color r="82" g="82" b="82"></viz:color>
       </edge>
-      <edge id="wpirck_bw_292" source="pirckheimer_willibald_viaf_27173507" target="neuenar_hermann_graf_von_viaf_18164526" label="An Graf Hermann von Nuenar (Neuenahr)? Lat. Konzept. S. d. [Nbg., 2. Hälfte 1513?]">
-        <attvalues>
-          <attvalue for="letter_no_in_edition" value="292"></attvalue>
-          <attvalue for="sender_inferred" value="0"></attvalue>
-          <attvalue for="sender_uncertain" value="0"></attvalue>
-          <attvalue for="recipient_inferred" value="1"></attvalue>
-          <attvalue for="recipient_uncertain" value="1"></attvalue>
-          <attvalue for="send_date_year1" value="1513"></attvalue>
-          <attvalue for="send_date_computable1" value="1513-07-01"></attvalue>
-          <attvalue for="send_date_has_range" value="1"></attvalue>
-          <attvalue for="send_date_year2" value="1513"></attvalue>
-          <attvalue for="send_date_computable2" value="1513-12-31"></attvalue>
-          <attvalue for="send_date_inferred" value="1"></attvalue>
-          <attvalue for="send_date_approx" value="1"></attvalue>
-          <attvalue for="send_date_uncertain" value="1"></attvalue>
-          <attvalue for="source_loc_id" value="nürnberg_DE_gid_2861650"></attvalue>
-          <attvalue for="source_loc_inferred" value="1"></attvalue>
-          <attvalue for="source_loc_uncertain" value="0"></attvalue>
-          <attvalue for="target_loc_id" value="köln_DE_gid_2886242"></attvalue>
-          <attvalue for="target_loc_inferred" value="1"></attvalue>
-          <attvalue for="target_loc_uncertain" value="1"></attvalue>
-          <attvalue for="letter_language" value="latin"></attvalue>
-          <attvalue for="letter_type_genus" value="familiar letter"></attvalue>
-          <attvalue for="letter_type_x_to_x" value="letter_1_to_1"></attvalue>
-        </attvalues>
+      <edge id="30" source="29" target="9" weight="2.0">
+        <viz:color r="82" g="82" b="82"></viz:color>
       </edge>
     </edges>
   </graph>
