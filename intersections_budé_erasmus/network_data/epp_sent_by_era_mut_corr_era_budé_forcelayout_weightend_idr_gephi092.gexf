@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gexf xmlns="http://www.gexf.net/1.3" version="1.3" xmlns:viz="http://www.gexf.net/1.3/viz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.3 http://www.gexf.net/1.3/gexf.xsd">
-  <meta lastmodifieddate="2019-11-12">
+  <meta lastmodifieddate="2019-11-13">
     <creator>Gephi 0.9</creator>
     <description></description>
   </meta>
@@ -11,6 +11,15 @@
       <attribute id="locations_lat" title="locations_lat" type="double"></attribute>
       <attribute id="locations_lng" title="locations_lng" type="double"></attribute>
       <attribute id="colour" title="colour" type="string"></attribute>
+      <attribute id="weighted indegree" title="Weighted In-Degree" type="double">
+        <default>0.0</default>
+      </attribute>
+      <attribute id="weighted outdegree" title="Weighted Out-Degree" type="double">
+        <default>0.0</default>
+      </attribute>
+      <attribute id="weighted degree" title="Weighted Degree" type="double">
+        <default>0.0</default>
+      </attribute>
     </attributes>
     <nodes>
       <node id="anderlecht_BE_gid_2803201" label="Anderlecht">
@@ -20,6 +29,9 @@
           <attvalue for="locations_lat" value="50.83619"></attvalue>
           <attvalue for="locations_lng" value="4.31454"></attvalue>
           <attvalue for="colour" value="#525252"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="2.0"></attvalue>
+          <attvalue for="weighted degree" value="2.0"></attvalue>
         </attvalues>
         <viz:size value="10.0"></viz:size>
         <viz:position x="-330.95187" y="-227.98428"></viz:position>
@@ -32,8 +44,11 @@
           <attvalue for="locations_lat" value="45.65"></attvalue>
           <attvalue for="locations_lng" value="0.15"></attvalue>
           <attvalue for="colour" value="#525252"></attvalue>
+          <attvalue for="weighted indegree" value="1.0"></attvalue>
+          <attvalue for="weighted outdegree" value="0.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="13.0"></viz:size>
+        <viz:size value="10.3125"></viz:size>
         <viz:position x="-357.55283" y="339.4317"></viz:position>
         <viz:color r="82" g="82" b="82"></viz:color>
       </node>
@@ -44,6 +59,9 @@
           <attvalue for="locations_lat" value="51.21989"></attvalue>
           <attvalue for="locations_lng" value="4.40346"></attvalue>
           <attvalue for="colour" value="#525252"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="19.0"></attvalue>
+          <attvalue for="weighted degree" value="19.0"></attvalue>
         </attvalues>
         <viz:size value="10.0"></viz:size>
         <viz:position x="8.035273" y="-178.8955"></viz:position>
@@ -56,8 +74,11 @@
           <attvalue for="locations_lat" value="43.94834"></attvalue>
           <attvalue for="locations_lng" value="4.80892"></attvalue>
           <attvalue for="colour" value="#525252"></attvalue>
+          <attvalue for="weighted indegree" value="3.0"></attvalue>
+          <attvalue for="weighted outdegree" value="0.0"></attvalue>
+          <attvalue for="weighted degree" value="3.0"></attvalue>
         </attvalues>
-        <viz:size value="13.0"></viz:size>
+        <viz:size value="10.9375"></viz:size>
         <viz:position x="71.06033" y="178.91269"></viz:position>
         <viz:color r="82" g="82" b="82"></viz:color>
       </node>
@@ -68,6 +89,9 @@
           <attvalue for="locations_lat" value="47.5584"></attvalue>
           <attvalue for="locations_lng" value="7.57327"></attvalue>
           <attvalue for="colour" value="#525252"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="52.0"></attvalue>
+          <attvalue for="weighted degree" value="52.0"></attvalue>
         </attvalues>
         <viz:size value="10.0"></viz:size>
         <viz:position x="-55.765663" y="113.92006"></viz:position>
@@ -80,8 +104,11 @@
           <attvalue for="locations_lat" value="47.58333"></attvalue>
           <attvalue for="locations_lng" value="1.33333"></attvalue>
           <attvalue for="colour" value="#525252"></attvalue>
+          <attvalue for="weighted indegree" value="2.0"></attvalue>
+          <attvalue for="weighted outdegree" value="0.0"></attvalue>
+          <attvalue for="weighted degree" value="2.0"></attvalue>
         </attvalues>
-        <viz:size value="13.0"></viz:size>
+        <viz:size value="10.625"></viz:size>
         <viz:position x="-284.7947" y="131.73448"></viz:position>
         <viz:color r="82" g="82" b="82"></viz:color>
       </node>
@@ -92,8 +119,11 @@
           <attvalue for="locations_lat" value="47.08333"></attvalue>
           <attvalue for="locations_lng" value="2.4"></attvalue>
           <attvalue for="colour" value="#525252"></attvalue>
+          <attvalue for="weighted indegree" value="2.0"></attvalue>
+          <attvalue for="weighted outdegree" value="0.0"></attvalue>
+          <attvalue for="weighted degree" value="2.0"></attvalue>
         </attvalues>
-        <viz:size value="13.0"></viz:size>
+        <viz:size value="10.625"></viz:size>
         <viz:position x="-14.649326" y="500.88416"></viz:position>
         <viz:color r="82" g="82" b="82"></viz:color>
       </node>
@@ -104,8 +134,11 @@
           <attvalue for="locations_lat" value="51.20892"></attvalue>
           <attvalue for="locations_lng" value="3.22424"></attvalue>
           <attvalue for="colour" value="#525252"></attvalue>
+          <attvalue for="weighted indegree" value="10.0"></attvalue>
+          <attvalue for="weighted outdegree" value="2.0"></attvalue>
+          <attvalue for="weighted degree" value="12.0"></attvalue>
         </attvalues>
-        <viz:size value="22.0"></viz:size>
+        <viz:size value="13.125"></viz:size>
         <viz:position x="276.436" y="-71.22353"></viz:position>
         <viz:color r="82" g="82" b="82"></viz:color>
       </node>
@@ -116,6 +149,9 @@
           <attvalue for="locations_lat" value="50.85045"></attvalue>
           <attvalue for="locations_lng" value="4.34878"></attvalue>
           <attvalue for="colour" value="#525252"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="2.0"></attvalue>
+          <attvalue for="weighted degree" value="2.0"></attvalue>
         </attvalues>
         <viz:size value="10.0"></viz:size>
         <viz:position x="17.356478" y="-490.00583"></viz:position>
@@ -128,8 +164,11 @@
           <attvalue for="locations_lat" value="50.95194"></attvalue>
           <attvalue for="locations_lng" value="1.85635"></attvalue>
           <attvalue for="colour" value="#525252"></attvalue>
+          <attvalue for="weighted indegree" value="1.0"></attvalue>
+          <attvalue for="weighted outdegree" value="0.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="13.0"></viz:size>
+        <viz:size value="10.3125"></viz:size>
         <viz:position x="521.9631" y="-235.49545"></viz:position>
         <viz:color r="82" g="82" b="82"></viz:color>
       </node>
@@ -140,8 +179,11 @@
           <attvalue for="locations_lat" value="50.16667"></attvalue>
           <attvalue for="locations_lng" value="3.23333"></attvalue>
           <attvalue for="colour" value="#525252"></attvalue>
+          <attvalue for="weighted indegree" value="1.0"></attvalue>
+          <attvalue for="weighted outdegree" value="0.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="13.0"></viz:size>
+        <viz:size value="10.3125"></viz:size>
         <viz:position x="-116.21086" y="604.5598"></viz:position>
         <viz:color r="82" g="82" b="82"></viz:color>
       </node>
@@ -152,8 +194,11 @@
           <attvalue for="locations_lat" value="52.2"></attvalue>
           <attvalue for="locations_lng" value="0.11667"></attvalue>
           <attvalue for="colour" value="#525252"></attvalue>
+          <attvalue for="weighted indegree" value="1.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="2.0"></attvalue>
         </attvalues>
-        <viz:size value="13.0"></viz:size>
+        <viz:size value="10.3125"></viz:size>
         <viz:position x="333.26413" y="-464.74683"></viz:position>
         <viz:color r="82" g="82" b="82"></viz:color>
       </node>
@@ -164,8 +209,11 @@
           <attvalue for="locations_lat" value="44.05"></attvalue>
           <attvalue for="locations_lng" value="5.05"></attvalue>
           <attvalue for="colour" value="#525252"></attvalue>
+          <attvalue for="weighted indegree" value="5.0"></attvalue>
+          <attvalue for="weighted outdegree" value="0.0"></attvalue>
+          <attvalue for="weighted degree" value="5.0"></attvalue>
         </attvalues>
-        <viz:size value="16.0"></viz:size>
+        <viz:size value="11.5625"></viz:size>
         <viz:position x="64.12774" y="397.56055"></viz:position>
         <viz:color r="82" g="82" b="82"></viz:color>
       </node>
@@ -176,8 +224,11 @@
           <attvalue for="locations_lat" value="51.05089"></attvalue>
           <attvalue for="locations_lng" value="13.73832"></attvalue>
           <attvalue for="colour" value="#525252"></attvalue>
+          <attvalue for="weighted indegree" value="5.0"></attvalue>
+          <attvalue for="weighted outdegree" value="0.0"></attvalue>
+          <attvalue for="weighted degree" value="5.0"></attvalue>
         </attvalues>
-        <viz:size value="16.0"></viz:size>
+        <viz:size value="11.5625"></viz:size>
         <viz:position x="-192.66486" y="224.05794"></viz:position>
         <viz:color r="82" g="82" b="82"></viz:color>
       </node>
@@ -188,8 +239,11 @@
           <attvalue for="locations_lat" value="47.9959"></attvalue>
           <attvalue for="locations_lng" value="7.85222"></attvalue>
           <attvalue for="colour" value="#525252"></attvalue>
+          <attvalue for="weighted indegree" value="10.0"></attvalue>
+          <attvalue for="weighted outdegree" value="25.0"></attvalue>
+          <attvalue for="weighted degree" value="35.0"></attvalue>
         </attvalues>
-        <viz:size value="16.0"></viz:size>
+        <viz:size value="13.125"></viz:size>
         <viz:position x="-20.600985" y="287.22543"></viz:position>
         <viz:color r="82" g="82" b="82"></viz:color>
       </node>
@@ -200,8 +254,11 @@
           <attvalue for="locations_lat" value="48.81294"></attvalue>
           <attvalue for="locations_lng" value="2.3417"></attvalue>
           <attvalue for="colour" value="#525252"></attvalue>
+          <attvalue for="weighted indegree" value="3.0"></attvalue>
+          <attvalue for="weighted outdegree" value="0.0"></attvalue>
+          <attvalue for="weighted degree" value="3.0"></attvalue>
         </attvalues>
-        <viz:size value="13.0"></viz:size>
+        <viz:size value="10.9375"></viz:size>
         <viz:position x="-205.34425" y="84.54084"></viz:position>
         <viz:color r="82" g="82" b="82"></viz:color>
       </node>
@@ -212,8 +269,11 @@
           <attvalue for="locations_lat" value="51.05"></attvalue>
           <attvalue for="locations_lng" value="3.71667"></attvalue>
           <attvalue for="colour" value="#525252"></attvalue>
+          <attvalue for="weighted indegree" value="1.0"></attvalue>
+          <attvalue for="weighted outdegree" value="0.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="13.0"></viz:size>
+        <viz:size value="10.3125"></viz:size>
         <viz:position x="512.379" y="-95.33943"></viz:position>
         <viz:color r="82" g="82" b="82"></viz:color>
       </node>
@@ -224,8 +284,11 @@
           <attvalue for="locations_lat" value="51.47785"></attvalue>
           <attvalue for="locations_lng" value="-0.01176"></attvalue>
           <attvalue for="colour" value="#525252"></attvalue>
+          <attvalue for="weighted indegree" value="7.0"></attvalue>
+          <attvalue for="weighted outdegree" value="0.0"></attvalue>
+          <attvalue for="weighted degree" value="7.0"></attvalue>
         </attvalues>
-        <viz:size value="22.0"></viz:size>
+        <viz:size value="12.1875"></viz:size>
         <viz:position x="-163.72263" y="-167.57138"></viz:position>
         <viz:color r="82" g="82" b="82"></viz:color>
       </node>
@@ -236,8 +299,11 @@
           <attvalue for="locations_lat" value="50.93333"></attvalue>
           <attvalue for="locations_lng" value="6.95"></attvalue>
           <attvalue for="colour" value="#525252"></attvalue>
+          <attvalue for="weighted indegree" value="1.0"></attvalue>
+          <attvalue for="weighted outdegree" value="0.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="13.0"></viz:size>
+        <viz:size value="10.3125"></viz:size>
         <viz:position x="91.65431" y="597.4541"></viz:position>
         <viz:color r="82" g="82" b="82"></viz:color>
       </node>
@@ -248,8 +314,11 @@
           <attvalue for="locations_lat" value="50.87959"></attvalue>
           <attvalue for="locations_lng" value="4.70093"></attvalue>
           <attvalue for="colour" value="#525252"></attvalue>
+          <attvalue for="weighted indegree" value="1.0"></attvalue>
+          <attvalue for="weighted outdegree" value="38.0"></attvalue>
+          <attvalue for="weighted degree" value="39.0"></attvalue>
         </attvalues>
-        <viz:size value="13.0"></viz:size>
+        <viz:size value="10.3125"></viz:size>
         <viz:position x="159.7413" y="-144.91615"></viz:position>
         <viz:color r="82" g="82" b="82"></viz:color>
       </node>
@@ -260,8 +329,11 @@
           <attvalue for="locations_lat" value="50.63373"></attvalue>
           <attvalue for="locations_lng" value="5.56749"></attvalue>
           <attvalue for="colour" value="#525252"></attvalue>
+          <attvalue for="weighted indegree" value="1.0"></attvalue>
+          <attvalue for="weighted outdegree" value="0.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="13.0"></viz:size>
+        <viz:size value="10.3125"></viz:size>
         <viz:position x="-315.4119" y="-638.9656"></viz:position>
         <viz:color r="82" g="82" b="82"></viz:color>
       </node>
@@ -272,8 +344,11 @@
           <attvalue for="locations_lat" value="51.50853"></attvalue>
           <attvalue for="locations_lng" value="-0.12574"></attvalue>
           <attvalue for="colour" value="#525252"></attvalue>
+          <attvalue for="weighted indegree" value="22.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="23.0"></attvalue>
         </attvalues>
-        <viz:size value="40.0"></viz:size>
+        <viz:size value="16.875"></viz:size>
         <viz:position x="139.80779" y="-307.1227"></viz:position>
         <viz:color r="82" g="82" b="82"></viz:color>
       </node>
@@ -284,8 +359,11 @@
           <attvalue for="locations_lat" value="49.98419"></attvalue>
           <attvalue for="locations_lng" value="8.2791"></attvalue>
           <attvalue for="colour" value="#525252"></attvalue>
+          <attvalue for="weighted indegree" value="1.0"></attvalue>
+          <attvalue for="weighted outdegree" value="0.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="13.0"></viz:size>
+        <viz:size value="10.3125"></viz:size>
         <viz:position x="-421.4854" y="82.96998"></viz:position>
         <viz:color r="82" g="82" b="82"></viz:color>
       </node>
@@ -296,6 +374,9 @@
           <attvalue for="locations_lat" value="51.02574"></attvalue>
           <attvalue for="locations_lng" value="4.47762"></attvalue>
           <attvalue for="colour" value="#525252"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="3.0"></attvalue>
+          <attvalue for="weighted degree" value="3.0"></attvalue>
         </attvalues>
         <viz:size value="10.0"></viz:size>
         <viz:position x="-181.5874" y="-465.19122"></viz:position>
@@ -308,8 +389,11 @@
           <attvalue for="locations_lat" value="51.5"></attvalue>
           <attvalue for="locations_lng" value="3.61389"></attvalue>
           <attvalue for="colour" value="#525252"></attvalue>
+          <attvalue for="weighted indegree" value="2.0"></attvalue>
+          <attvalue for="weighted outdegree" value="0.0"></attvalue>
+          <attvalue for="weighted degree" value="2.0"></attvalue>
         </attvalues>
-        <viz:size value="13.0"></viz:size>
+        <viz:size value="10.625"></viz:size>
         <viz:position x="-19.093397" y="-331.92987"></viz:position>
         <viz:color r="82" g="82" b="82"></viz:color>
       </node>
@@ -320,8 +404,11 @@
           <attvalue for="locations_lat" value="45.46427"></attvalue>
           <attvalue for="locations_lng" value="9.18951"></attvalue>
           <attvalue for="colour" value="#525252"></attvalue>
+          <attvalue for="weighted indegree" value="2.0"></attvalue>
+          <attvalue for="weighted outdegree" value="0.0"></attvalue>
+          <attvalue for="weighted degree" value="2.0"></attvalue>
         </attvalues>
-        <viz:size value="16.0"></viz:size>
+        <viz:size value="10.625"></viz:size>
         <viz:position x="338.9448" y="147.43678"></viz:position>
         <viz:color r="82" g="82" b="82"></viz:color>
       </node>
@@ -332,8 +419,11 @@
           <attvalue for="locations_lat" value="51.75222"></attvalue>
           <attvalue for="locations_lng" value="-1.25596"></attvalue>
           <attvalue for="colour" value="#525252"></attvalue>
+          <attvalue for="weighted indegree" value="3.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="4.0"></attvalue>
         </attvalues>
-        <viz:size value="16.0"></viz:size>
+        <viz:size value="10.9375"></viz:size>
         <viz:position x="384.12943" y="-262.56177"></viz:position>
         <viz:color r="82" g="82" b="82"></viz:color>
       </node>
@@ -344,8 +434,11 @@
           <attvalue for="locations_lat" value="45.40797"></attvalue>
           <attvalue for="locations_lng" value="11.88586"></attvalue>
           <attvalue for="colour" value="#525252"></attvalue>
+          <attvalue for="weighted indegree" value="6.0"></attvalue>
+          <attvalue for="weighted outdegree" value="0.0"></attvalue>
+          <attvalue for="weighted degree" value="6.0"></attvalue>
         </attvalues>
-        <viz:size value="16.0"></viz:size>
+        <viz:size value="11.875"></viz:size>
         <viz:position x="-91.22593" y="388.5067"></viz:position>
         <viz:color r="82" g="82" b="82"></viz:color>
       </node>
@@ -356,8 +449,11 @@
           <attvalue for="locations_lat" value="48.85341"></attvalue>
           <attvalue for="locations_lng" value="2.3488"></attvalue>
           <attvalue for="colour" value="#525252"></attvalue>
+          <attvalue for="weighted indegree" value="48.0"></attvalue>
+          <attvalue for="weighted outdegree" value="2.0"></attvalue>
+          <attvalue for="weighted degree" value="50.0"></attvalue>
         </attvalues>
-        <viz:size value="31.0"></viz:size>
+        <viz:size value="25.0"></viz:size>
         <viz:position x="21.581327" y="-53.698284"></viz:position>
         <viz:color r="82" g="82" b="82"></viz:color>
       </node>
@@ -368,8 +464,11 @@
           <attvalue for="locations_lat" value="41.89193"></attvalue>
           <attvalue for="locations_lng" value="12.51133"></attvalue>
           <attvalue for="colour" value="#525252"></attvalue>
+          <attvalue for="weighted indegree" value="3.0"></attvalue>
+          <attvalue for="weighted outdegree" value="0.0"></attvalue>
+          <attvalue for="weighted degree" value="3.0"></attvalue>
         </attvalues>
-        <viz:size value="16.0"></viz:size>
+        <viz:size value="10.9375"></viz:size>
         <viz:position x="188.50517" y="142.13574"></viz:position>
         <viz:color r="82" g="82" b="82"></viz:color>
       </node>
@@ -380,6 +479,9 @@
           <attvalue for="locations_lat" value="50.75"></attvalue>
           <attvalue for="locations_lng" value="2.25"></attvalue>
           <attvalue for="colour" value="#525252"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
         <viz:size value="10.0"></viz:size>
         <viz:position x="205.68935" y="-606.7379"></viz:position>
@@ -392,8 +494,11 @@
           <attvalue for="locations_lat" value="45.43713"></attvalue>
           <attvalue for="locations_lng" value="12.33265"></attvalue>
           <attvalue for="colour" value="#525252"></attvalue>
+          <attvalue for="weighted indegree" value="6.0"></attvalue>
+          <attvalue for="weighted outdegree" value="0.0"></attvalue>
+          <attvalue for="weighted degree" value="6.0"></attvalue>
         </attvalues>
-        <viz:size value="16.0"></viz:size>
+        <viz:size value="11.875"></viz:size>
         <viz:position x="-149.75337" y="302.6463"></viz:position>
         <viz:color r="82" g="82" b="82"></viz:color>
       </node>
@@ -404,8 +509,11 @@
           <attvalue for="locations_lat" value="48.78204"></attvalue>
           <attvalue for="locations_lng" value="6.53081"></attvalue>
           <attvalue for="colour" value="#525252"></attvalue>
+          <attvalue for="weighted indegree" value="1.0"></attvalue>
+          <attvalue for="weighted outdegree" value="0.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="13.0"></viz:size>
+        <viz:size value="10.3125"></viz:size>
         <viz:position x="-413.85715" y="218.43729"></viz:position>
         <viz:color r="82" g="82" b="82"></viz:color>
       </node>
