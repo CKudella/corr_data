@@ -13,17 +13,17 @@ data_epp<-read.csv("no_epp_per_loc/no_epp_per_loc_sent_by_pirck_to.csv", fileEnc
 # read data for avg no epp per corr loc written by pirck to
 data_avg <-read.csv("no_epp_per_loc/avg_no_epp_per_corr_loc_written_by_pirck_to.csv", fileEncoding="UTF-8", na.strings=c("NULL"))
 
-# read data for no corr per loc writing to pirck
+# read data for no corr per receiving from pirck
 data_corr<-read.csv("no_corr_per_loc/no_corr_per_loc_receiving_from_pirck_with_geocoordinates.csv", fileEncoding="UTF-8", na.strings=c("NULL"))
 
 # subset data_avg outliers
 data_avg_outlier <- subset(data_avg, data_avg$Average.Number.of.Letters >= 4.3325)
 
 # subset data_epp outliers
-data_epp_outlier <- subset(data_epp, data_epp$Number.of.Letters.sent.from.this.location.TO.Pirckheimer >= 11)
+data_epp_outlier <- subset(data_epp, data_epp$Number.of.letters.sent.to.this.location.from.Pirckheimer >= 11)
 
 # subset data_corr outliers
-data_corr_outlier <- subset(data_corr, data_corr$Number.of.correspondents.who.wrote.from.this.location.letters.to.Pirckheimer >= 6)
+data_corr_outlier <- subset(data_corr, data_corr$Number.of.correspondents.who.received.at.this.Location.letters.from.Pirckheimer >= 6)
 
 # === Data Query ===
 
