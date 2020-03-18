@@ -25,13 +25,13 @@ allcorr$Label <- gsub("^(\\W+E)", "E", allcorr$Label)
 allcorr$colour <- "#525252"
 
 # add colour column for mutual correspondents to be used with the "give colour to nodes" plugin for gephi
-allcorr$colour <- ifelse(allcorr$Id %in% mutcorr$correspondents_id, as.character("#fdb863"), allcorr$colour)
+allcorr$colour <- ifelse(allcorr$Id %in% mutcorr$correspondents_id, as.character("#C3161F"), allcorr$colour)
 
 #assign specific colour for erasmus
-allcorr$colour <- ifelse(allcorr$Id == "erasmus_desiderius_viaf_95982394", as.character("#e66101"), allcorr$colour)
+allcorr$colour <- ifelse(allcorr$Id == "erasmus_desiderius_viaf_95982394", as.character("#3C93AF"), allcorr$colour)
 
 #assign specific colour for budé
-allcorr$colour <- ifelse(allcorr$Id == "budé_guillaume_viaf_105878228", as.character("#5e3c99"), allcorr$colour)
+allcorr$colour <- ifelse(allcorr$Id == "budé_guillaume_viaf_105878228", as.character("#D5AB5B"), allcorr$colour)
 
 # ------------------------------
 # subset letters for 1499
