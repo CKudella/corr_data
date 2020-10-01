@@ -30,4 +30,6 @@ FROM
    UNION ALL
      (SELECT *
       FROM budé_cdb_v1.letters
-      WHERE letters_id NOT LIKE '%_cwe_%')) AS L
+      WHERE letters_id NOT LIKE '%_cwe_%'
+        OR (letters_id LIKE 'gbudé_%'
+            OR letters_id LIKE 'era_cwealien%'))) AS L
