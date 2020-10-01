@@ -30,9 +30,9 @@ FROM
    UNION ALL
      (SELECT *
       FROM budé_cdb_v1.letters AS BL
-      WHERE BL.letters_id letters_id NOT LIKE '%_cwe_%'
-        OR (letters_id LIKE 'gbudé_%'
-            OR letters_id LIKE 'era_cwealien%'))) AS L
+      WHERE BL.letters_id NOT LIKE '%_cwe_%'
+        OR (BL.letters_id LIKE 'gbudé_%'
+            OR BL.letters_id LIKE 'era_cwealien%'))) AS L
 WHERE L.sender_id IN
     (SELECT X.correspondents_id
      FROM era_cdb_v3.correspondents AS X
