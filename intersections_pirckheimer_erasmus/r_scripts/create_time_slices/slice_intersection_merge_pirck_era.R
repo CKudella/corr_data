@@ -1,9 +1,7 @@
 require(readr)
 require(tidyverse)
-require(ggplot2)
 library(readr)
 library(tidyverse)
-library(ggplot2)
 
 # set working directory
 getwd()
@@ -31,10 +29,9 @@ allcorr$colour <- ifelse(allcorr$Id %in% mutcorr$correspondents_id, as.character
 #assign specific colour for erasmus
 allcorr$colour <- ifelse(allcorr$Id == "erasmus_desiderius_viaf_95982394", as.character("#3C93AF"), allcorr$colour)
 
-#assign specific colour for budé
+#assign specific colour for pirckheimer
 allcorr$colour <- ifelse(allcorr$Id == "pirckheimer_willibald_viaf_27173507", as.character("#D5AB5B"), allcorr$colour)
 
-# ------------------------------
 #-------------------------------
 # subset letters for 1508
 letters1508 <- subset(allepp, send_date_year1 == 1508)
