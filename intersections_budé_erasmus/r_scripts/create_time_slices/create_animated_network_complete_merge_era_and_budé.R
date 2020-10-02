@@ -5,16 +5,15 @@ library(readr)
 library(lubridate)
 library(ndtv)
 
-
 # set working directory
 getwd()
 setwd("../query_results/")
 
-# read data for mutual correspondents
-mutcorr<-read.csv("merge_scripts/intersection_merge/intersection_merge_era_and_budé_correspondents.csv", fileEncoding="UTF-8", na.strings=c("NULL"))
+# read data for correspondents
+mutcorr<-read.csv("merge_scripts/complete_merge/complete_merge_budé_and_era_correspondents.csv", fileEncoding="UTF-8", na.strings=c("NULL"))
 
-# read data for letters exchanged between erasmus, budé, and their mutual correspondents
-mutepp<-read.csv("merge_scripts/intersection_merge/intersection_merge_era_and_budé_letters_corr_as_nodes.csv", fileEncoding="UTF-8", na.strings=c("NULL"))
+# read data for letters exchanged between erasmus, budé, and all their correspondents
+mutepp<-read.csv("merge_scripts/complete_merge/complete_merge_budé_and_era_letters_corr_as_nodes.csv", fileEncoding="UTF-8", na.strings=c("NULL"))
 
 # cut uncessary label parts from Label column
 mutcorr$Label <- gsub("\\b(\\W+COE+.*)", "", mutcorr$Label)
@@ -71,7 +70,7 @@ mutepp$edge.id <- seq.int(nrow(mutepp))
 mutepp <- subset(mutepp, !is.na(onset))
 
 # initialze network
-network <- network.initialize(n = 28)
+network <- network.initialize(n = 743)
 
 # copy label column to vertices
 set.vertex.attribute(network,"vertex.names",as.vector(mutcorr$Label))
