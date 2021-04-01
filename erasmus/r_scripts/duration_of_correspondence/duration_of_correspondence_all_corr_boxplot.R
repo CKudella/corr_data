@@ -5,7 +5,7 @@ require(ggplot2)
 
 # set working directory
 getwd()
-setwd("../query_results")
+setwd("../query_results/")
 
 # read data and define data type for date columns
 duration_of_correspondence_all_corr <- read.csv("duration_of_correspondence/duration_of_correspodence_all_corr.csv", fileEncoding = "UTF-8", colClasses = c("Beginning.of.correspondence.with.Erasmus" = "Date", "End.of.the.correspondence.with.Erasmus" = "Date"))
