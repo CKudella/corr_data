@@ -1,32 +1,51 @@
 require(readr)
-require(timelineS)
+require(tidyverse)
+require(lubridate)
 require(ggplot2)
-library(readr)
-library(timelineS)
-library(ggplot2)
 
 # set working directory
 getwd()
 setwd("../query_results/")
 
 # read data and define data type for date columns
-data<-read.csv("duration_of_correspondence/duration_of_correspodence_all_corr.csv", fileEncoding="UTF-8", colClasses=c("Beginning.of.correspondence.with.Erasmus"="Date","End.of.the.correspondence.with.Erasmus"="Date"))
+duration_of_correspondence_all_corr <- read.csv("duration_of_correspondence/duration_of_correspodence_all_corr.csv", fileEncoding = "UTF-8", colClasses = c("Beginning.of.correspondence.with.Erasmus" = "Date", "End.of.the.correspondence.with.Erasmus" = "Date"))
 
-# subset to remove 0000-00-00 dates
-data <- subset(data, Beginning.of.correspondence.with.Erasmus!=0000-00-00)
+# set Beginning[...] and End[...] as.Date
+duration_of_correspondence_all_corr[, 3] <- as.Date(duration_of_correspondence_all_corr[, 3], format = "%Y-%m-%d")
+duration_of_correspondence_all_corr[, 4] <- as.Date(duration_of_correspondence_all_corr[, 4], format = "%Y-%m-%d")
 
-# calculate duration of correspondence
-data$duration <- durCalc(data, start="Beginning.of.correspondence.with.Erasmus", end="End.of.the.correspondence.with.Erasmus", timeunit="years")
+# calculate duration using lubridate
+duration_of_correspondence_all_corr$duration_in_years <- interval(duration_of_correspondence_all_corr[, 3], duration_of_correspondence_all_corr[, 4]) / years(1)
 
-#durPlot (density) for duration of correspondence in correlation to the beginning of the correspondence
-durPlot(df=data, start="Beginning.of.correspondence.with.Erasmus", end="End.of.the.correspondence.with.Erasmus", plot_type="density", timeunit = "years")
+# round duration to 1 digit
+duration_of_correspondence_all_corr$duration_in_years <- round(duration_of_correspondence_all_corr$duration_in_years, digits = 1)
+
+# drop NA rows
+duration_of_correspondence_all_corr <- drop_na(duration_of_correspondence_all_corr)
+
+# calculate mean of "duration of correspondence"
+duration_of_correspondence_mean <- mean(duration_of_correspondence_all_corr$duration_in_years)
+
+# calculate median of "duration of correspondence"
+duration_of_correspondence_median <- median(duration_of_correspondence_all_corr$duration_in_years)
+
+# create density plot
+plot <- ggplot(duration_of_correspondence_all_corr, aes(x = duration_in_years)) +
+  geom_density(fill = "black", alpha = 0.5) +
+  geom_vline(aes(xintercept = mean(duration_in_years), linetype="mean"), size = 0.3) +
+  geom_vline(aes(xintercept = median(duration_in_years), linetype="median"), size = 0.3) +
+  scale_x_continuous(breaks = seq(0,35, by = 5)) +
+  theme_bw() +
+  theme(legend.position = "bottom") +
+  labs(y = "density", x = "Duration of correspondence in years")
+plot
 
 # change working directory
 getwd()
 setwd("../r_plots/")
 
 # save plot in multiple formats
-ggsave("duration_of_correspodence_all_corr_density_plot.pdf", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
-ggsave("duration_of_correspodence_all_corr_density_plot.png", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
-ggsave("duration_of_correspodence_all_corr_density_plot.eps", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
-ggsave("duration_of_correspodence_all_corr_density_plot.svg", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("duration_of_correspodence_all_corr_density_plot.pdf", plot = last_plot(), scale = 1, width = 33.1, height = 23.4, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("duration_of_correspodence_all_corr_density_plot.png", plot = last_plot(), scale = 1, width = 33.1, height = 23.4, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("duration_of_correspodence_all_corr_density_plot.eps", plot = last_plot(), scale = 1, width = 33.1, height = 23.4, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("duration_of_correspodence_all_corr_density_plot.svg", plot = last_plot(), scale = 1, width = 33.1, height = 23.4, units = "in", dpi = 600, limitsize = TRUE)
