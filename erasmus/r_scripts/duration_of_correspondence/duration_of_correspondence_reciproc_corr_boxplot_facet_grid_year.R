@@ -23,7 +23,7 @@ data$start_year <-as.factor(data$start_year)
 
 # create boxplot with facet grid for years
 plot <- ggplot(data, aes(x= ' ', y = duration_in_years)) +
-  geom_boxplot(outlier.size=2, notch = FALSE) +
+  geom_boxplot(notch = FALSE) +
   theme_bw() +
   theme(axis.title.x=element_blank()) +
   labs(y = "Duration of correspondence in years") +
@@ -35,7 +35,7 @@ getwd()
 setwd("../r_plots/")
 
 # save plot in multiple formats
-ggsave("duration_reciproc_era_boxplot_facet_grid_year.pdf", plot = last_plot(), scale = 1, width = 33.1, height = 23.4, units = "in", dpi = 600, limitsize = TRUE)
-ggsave("duration_reciproc_era_boxplot_facet_grid_year.png", plot = last_plot(), scale = 1, width = 33.1, height = 23.4, units = "in", dpi = 600, limitsize = TRUE)
-ggsave("duration_reciproc_era_boxplot_facet_grid_year.eps", plot = last_plot(), scale = 1, width = 33.1, height = 23.4, units = "in", dpi = 600, limitsize = TRUE)
-ggsave("duration_reciproc_era_boxplot_facet_grid_year.svg", plot = last_plot(), scale = 1, width = 33.1, height = 23.4, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("duration_of_correspodence_reciproc_corr_boxplot_facet_grid_year.pdf", plot = last_plot(), scale = 1, width = 33.1, height = 23.4, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("duration_of_correspodence_reciproc_corr_boxplot_facet_grid_year.png", plot = last_plot(), scale = 1, width = 33.1, height = 23.4, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("duration_of_correspodence_reciproc_corr_boxplot_facet_grid_year.eps", plot = last_plot(), scale = 1, width = 33.1, height = 23.4, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("duration_of_correspodence_reciproc_corr_boxplot_facet_grid_year.svg", plot = last_plot(), scale = 1, width = 33.1, height = 23.4, units = "in", dpi = 600, limitsize = TRUE)
