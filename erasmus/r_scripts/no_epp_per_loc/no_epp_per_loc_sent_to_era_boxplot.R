@@ -1,23 +1,29 @@
 require(readr)
 require(ggplot2)
 require(ggrepel)
-library(readr)
-library(ggplot2)
-library(ggrepel)
 
 # set working directory
 getwd()
 setwd("../query_results/")
 
 # read data
-data<-read.csv("no_epp_per_loc/no_epp_per_loc_sent_to_era.csv", fileEncoding="UTF-8")
+data <- read.csv("no_epp_per_loc/no_epp_per_loc_sent_to_era.csv", fileEncoding = "UTF-8")
+
+# caculate quartiles
+quartiles <- as.numeric(quantile(data$Number.of.letters.sent.from.this.location, probs = c(0.25, 0.5, 0.75)))
+
+# calculate IQR
+IQR <- diff(quartiles[c(1, 3)])
+
+# calculate upper whisker
+upper_whisker <- max(data$Number.of.letters.sent.from.this.location[data$Number.of.letters.sent.from.this.location < (quartiles[3] + 1.5 * IQR)])
 
 # create boxplot
-plot <- ggplot(data, aes(x= ' ', y = Number.of.letters.sent.from.this.location.to.Erasmus)) +
-  geom_boxplot(outlier.size=2, notch = FALSE) +
-  geom_text_repel(label=ifelse(data$Number.of.letters.sent.from.this.location.to.Erasmus>8.5,as.character(data$Location.Name),'')) +
+plot <- ggplot(data, aes(x = " ", y = Number.of.letters.sent.from.this.location.to.Erasmus)) +
+  geom_boxplot(outlier.size = 2, notch = FALSE) +
+  geom_text_repel(box.padding = 1.25, label = ifelse(data$Number.of.letters.sent.from.this.location.to.Erasmus > upper_whisker, as.character(data$Location.Name), "")) +
   theme_bw() +
-  theme(axis.title.x=element_blank()) +
+  theme(axis.title.x = element_blank()) +
   labs(y = "Number of letters sent from this location to Erasmus")
 plot
 

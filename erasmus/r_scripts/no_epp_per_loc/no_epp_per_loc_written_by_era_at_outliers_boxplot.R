@@ -1,25 +1,22 @@
 require(readr)
-require(plyr)
+require(tidyverse)
 require(ggplot2)
-library(readr)
-library(plyr)
-library(ggplot2)
 
 # set working directory
 getwd()
 setwd("../query_results/")
 
 # read data
-data<-read.csv("no_epp_per_loc/no_epp_per_loc_written_by_era_at_outliers.csv", fileEncoding="UTF-8", na.strings=c("NULL"))
+data <- read.csv("no_epp_per_loc/no_epp_per_loc_written_by_era_at_outliers.csv", fileEncoding = "UTF-8", na.strings = c("NULL"))
 
-# callculate median for label
-data_meds <- ddply(data, .(locations_name_modern), summarise, med = median(COUNT))
+# calculate median for label
+data_meds <- summarise(group_by(data, locations_name_modern), med = median(COUNT))
 
 # create boxplot
 plot <- ggplot(data, aes(x = locations_name_modern, y = COUNT)) +
   geom_boxplot(notch = FALSE) +
   geom_text(data = data_meds, aes(x = locations_name_modern, y = med, label = med), size = 3, vjust = -0.5) +
-  labs(x="Outlier Location", y =" Number of letters sent from this location by Erasmus per year") +
+  labs(x = "Outlier Location", y = " Number of letters sent from this location by Erasmus per year") +
   theme_bw()
 plot
 

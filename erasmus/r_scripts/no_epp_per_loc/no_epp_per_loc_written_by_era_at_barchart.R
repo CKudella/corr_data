@@ -1,20 +1,18 @@
 require(readr)
 require(ggplot2)
-library(readr)
-library(ggplot2)
 
 # set working directory
 getwd()
 setwd("../query_results/")
 
 # read data
-data<-read.csv("no_epp_per_loc/no_epp_per_loc_written_by_era_at.csv", fileEncoding="UTF-8", na.strings=c("NULL"))
+data <- read.csv("no_epp_per_loc/no_epp_per_loc_written_by_era_at.csv", fileEncoding = "UTF-8", na.strings = c("NULL"))
 
 # create barchart
-plot <- ggplot(data=data, aes(x= reorder(Location.Name, -Number.of.letters.sent.from.this.location.from.Erasmus), y=Number.of.letters.sent.from.this.location.from.Erasmus, label=Location.Name)) +
+plot <- ggplot(data = data, aes(x = reorder(Location.Name, -Number.of.letters.sent.from.this.location.from.Erasmus), y = Number.of.letters.sent.from.this.location.from.Erasmus, label = Location.Name)) +
   geom_bar(stat = "identity") +
-  labs(x="Locations",y="Number of letters sent from this location by Erasmus") +
-  geom_text(aes(label=Number.of.letters.sent.from.this.location.from.Erasmus), vjust=-0.5, color='black') +
+  labs(x = "Locations", y = "Number of letters sent from this location by Erasmus") +
+  geom_text(aes(label = Number.of.letters.sent.from.this.location.from.Erasmus), vjust = -0.5, color = "black") +
   theme_bw() +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.35))
 plot
