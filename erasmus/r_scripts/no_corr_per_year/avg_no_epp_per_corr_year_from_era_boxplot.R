@@ -1,5 +1,6 @@
 require(readr)
 require(ggplot2)
+require(ggrepel)
 
 # set working directory
 getwd()
@@ -8,16 +9,22 @@ setwd("../query_results/")
 # read data
 data <- read.csv("no_corr_per_year/avg_no_epp_per_corr_year_from_era.csv", fileEncoding = "UTF-8")
 
-# create barchart
-plot <- ggplot(data, aes(x = Year, y = Average.number.of.letters.sent.from.Erasmus.per.correspondent.this.year)) +
-  geom_bar(position = "dodge", stat = "identity") +
-  geom_hline(aes(yintercept = mean(Average.number.of.letters.sent.from.Erasmus.per.correspondent.this.year), linetype = "mean"), size = 0.3) +
-  geom_hline(aes(yintercept = median(Average.number.of.letters.sent.from.Erasmus.per.correspondent.this.year), linetype = "median"), size = 0.3) +
-  labs(x = "Year", y = "Average number of letters from Erasmus per correspondent") +
-  scale_x_continuous(breaks = c(1484:1536)) +
+# caculate quartiles
+quartiles <- as.numeric(quantile(data$Average.number.of.letters.sent.from.Erasmus.per.correspondent.this.year, probs = c(0.25, 0.5, 0.75)))
+
+# calculate IQR
+IQR <- diff(quartiles[c(1, 3)])
+
+# calculate upper whisker
+upper_whisker <- max(data$Average.number.of.letters.sent.from.Erasmus.per.correspondent.this.year[data$Average.number.of.letters.sent.from.Erasmus.per.correspondent.this.year < (quartiles[3] + 1.5 * IQR)])
+
+# create boxplot
+plot <- ggplot(data, aes(x = " ", y = Average.number.of.letters.sent.from.Erasmus.per.correspondent.this.year)) +
+  geom_boxplot(notch = FALSE) +
+  geom_text_repel(label = ifelse(data$Average.number.of.letters.sent.from.Erasmus.per.correspondent.this.year > upper_whisker, as.character(data$Year), "")) +
   theme_bw() +
-  theme(axis.text.x = element_text(angle = 90, vjust = 0.35)) +
-  theme(legend.position = "bottom")
+  theme(axis.title.x = element_blank()) +
+  labs(y = "Average number of letters from Erasmus per correspondent")
 plot
 
 # change working directory
