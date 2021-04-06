@@ -1,39 +1,46 @@
 require(readr)
 require(ggplot2)
 require(ggrepel)
-require(ggpubr)
-library(readr)
-library(ggplot2)
-library(ggrepel)
-library(ggpubr)
+require(patchwork)
 
 # set working directory
 getwd()
 setwd("../query_results/")
 
 # read data
-data<-read.csv("no_corr_per_loc/no_corr_per_loc_receiving_from_era_with_geocoordinates.csv", fileEncoding="UTF-8", na.strings=c("NULL"))
+data <- read.csv("no_corr_per_loc/no_corr_per_loc_receiving_from_era_with_geocoordinates.csv", fileEncoding = "UTF-8", na.strings = c("NULL"))
+
+# caculate quartiles
+quartiles <- as.numeric(quantile(data$Number.of.correspondents.who.received.at.this.location.letters.from.Erasmus, probs = c(0.25, 0.5, 0.75)))
+
+# calculate IQR
+IQR <- diff(quartiles[c(1, 3)])
+
+# calculate upper whisker
+upper_whisker <- max(data$Number.of.correspondents.who.received.at.this.location.letters.from.Erasmus[data$Number.of.correspondents.who.received.at.this.location.letters.from.Erasmus < (quartiles[3] + 1.58 * IQR)])
 
 # create pointplot
-plot <- ggplot(data=data, aes(x= reorder(Location.Name.Modern, -Number.of.correspondents.who.received.at.this.location.letters.from.Erasmus), y=Number.of.correspondents.who.received.at.this.location.letters.from.Erasmus, label=Location.Name.Modern)) + 
-  geom_point(stat = "identity") + 
-  labs(x="Locations",y="Number of correspondents receiving letters from Erasmus") +
+plot1 <- ggplot(data = data, aes(x = reorder(Location.Name.Modern, -Number.of.correspondents.who.received.at.this.location.letters.from.Erasmus), y = Number.of.correspondents.who.received.at.this.location.letters.from.Erasmus, label = Location.Name.Modern)) +
+  geom_point(stat = "identity") +
+  geom_hline(aes(yintercept = mean(Number.of.correspondents.who.received.at.this.location.letters.from.Erasmus), linetype = "mean"), size = 0.3) +
+  geom_hline(aes(yintercept = median(Number.of.correspondents.who.received.at.this.location.letters.from.Erasmus), linetype = "median"), size = 0.3) +
+  labs(x = "Locations", y = "Number of correspondents receiving letters from Erasmus") +
   theme_bw() +
-  theme(axis.title.x=element_text(), axis.text.x=element_blank(), axis.ticks.x=element_blank())
-plot
+  theme(legend.position = "bottom") +
+  theme(axis.title.x = element_text(), axis.text.x = element_blank(), axis.ticks.x = element_blank())
+plot1
 
 # create boxplot
-plot2 <- ggplot(data, aes(x= ' ', y = Number.of.correspondents.who.received.at.this.location.letters.from.Erasmus)) +
-  geom_boxplot(outlier.size=2, notch = FALSE) +
-  geom_text_repel(label=ifelse(data$Number.of.correspondents.who.received.at.this.location.letters.from.Erasmus>6,as.character(data$Location.Name.Modern),'')) +
+plot2 <- ggplot(data, aes(x = " ", y = Number.of.correspondents.who.received.at.this.location.letters.from.Erasmus)) +
+  geom_boxplot(outlier.size = 2, notch = FALSE) +
+  geom_text_repel(label = ifelse(data$Number.of.correspondents.who.received.at.this.location.letters.from.Erasmus > upper_whisker, as.character(data$Location.Name.Modern), "")) +
   theme_bw() +
-  theme(axis.title.x=element_blank()) +
+  theme(axis.title.x = element_blank()) +
   labs(y = "Number of correspondents receiving letters from Erasmus")
 plot2
 
-# arrange plots
-ggarrange(plot, plot2, 
-          ncol = 2, nrow = 1)
+# create combined plot via patchwork
+plot1 + plot2
 
 # change working directory
 getwd()
