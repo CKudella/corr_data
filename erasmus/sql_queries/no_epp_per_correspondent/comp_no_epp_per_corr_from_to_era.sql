@@ -17,4 +17,4 @@ LEFT JOIN
    FROM letters
    WHERE recipient_id = 'erasmus_desiderius_viaf_95982394'
    GROUP BY sender_id
-   ORDER BY COUNT('NoEPPtoEra') DESC) AS C ON A.correspondents_id = C.sender_id"
+   ORDER BY COUNT('NoEPPtoEra') DESC) AS C ON A.correspondents_id = C.sender_id
