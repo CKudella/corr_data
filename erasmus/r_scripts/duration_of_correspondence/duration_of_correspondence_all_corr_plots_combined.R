@@ -9,7 +9,7 @@ getwd()
 setwd("../query_results/")
 
 # read data and define data type for date columns
-duration_of_correspondence_all_corr <- read.csv("duration_of_correspondence/duration_of_correspodence_all_corr.csv", fileEncoding = "UTF-8", colClasses = c("Beginning.of.correspondence.with.Erasmus" = "Date", "End.of.the.correspondence.with.Erasmus" = "Date"))
+duration_of_correspondence_all_corr <- read.csv("duration_of_correspondence/duration_corr_all_corr.csv", fileEncoding = "UTF-8", colClasses = c("Beginning.of.correspondence.with.Erasmus" = "Date", "End.of.the.correspondence.with.Erasmus" = "Date"))
 
 # set Beginning[...] and End[...] as.Date
 duration_of_correspondence_all_corr[, 3] <- as.Date(duration_of_correspondence_all_corr[, 3], format = "%Y-%m-%d")
@@ -17,9 +17,6 @@ duration_of_correspondence_all_corr[, 4] <- as.Date(duration_of_correspondence_a
 
 # calculate duration using lubridate
 duration_of_correspondence_all_corr$duration_in_years <- interval(duration_of_correspondence_all_corr[, 3], duration_of_correspondence_all_corr[, 4]) / years(1)
-
-# round duration to 1 digit
-duration_of_correspondence_all_corr$duration_in_years <- round(duration_of_correspondence_all_corr$duration_in_years, digits = 1)
 
 # drop NA rows
 duration_of_correspondence_all_corr <- drop_na(duration_of_correspondence_all_corr)
@@ -81,7 +78,7 @@ getwd()
 setwd("../r_plots/")
 
 # save plot in multiple formats
-ggsave("duration_of_correspodence_all_corr_plots_combined.pdf", plot = last_plot(), scale = 1, width = 33.1, height = 23.4, units = "in", dpi = 600, limitsize = TRUE)
-ggsave("duration_of_correspodence_all_corr_plots_combined.png", plot = last_plot(), scale = 1, width = 33.1, height = 23.4, units = "in", dpi = 600, limitsize = TRUE)
-ggsave("duration_of_correspodence_all_corr_plots_combined.eps", plot = last_plot(), scale = 1, width = 33.1, height = 23.4, units = "in", dpi = 600, limitsize = TRUE)
-ggsave("duration_of_correspodence_all_corr_plots_combined.svg", plot = last_plot(), scale = 1, width = 33.1, height = 23.4, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("duration_of_correspondence_all_corr_plots_combined.pdf", plot = last_plot(), scale = 1, width = 33.1, height = 23.4, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("duration_of_correspondence_all_corr_plots_combined.png", plot = last_plot(), scale = 1, width = 33.1, height = 23.4, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("duration_of_correspondence_all_corr_plots_combined.eps", plot = last_plot(), scale = 1, width = 33.1, height = 23.4, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("duration_of_correspondence_all_corr_plots_combined.svg", plot = last_plot(), scale = 1, width = 33.1, height = 23.4, units = "in", dpi = 600, limitsize = TRUE)

@@ -8,7 +8,7 @@ getwd()
 setwd("../query_results/")
 
 # read data and define data type for date columns
-duration_of_correspondence_reciproc_corr <- read.csv("duration_of_correspondence/dates_begin_end_reciproc_correspondence.csv", fileEncoding = "UTF-8", colClasses = c("Start.of.correspondence" = "Date", "End.of.correspondence" = "Date"))
+duration_of_correspondence_reciproc_corr <- read.csv("duration_of_correspondence/duration_corr_reciproc.csv", fileEncoding = "UTF-8", colClasses = c("Start.of.correspondence" = "Date", "End.of.correspondence" = "Date"))
 
 # calculate duration using lubridate
 duration_of_correspondence_reciproc_corr$duration_in_years <- interval(duration_of_correspondence_reciproc_corr[, 2], duration_of_correspondence_reciproc_corr[, 3]) / years(1)
@@ -39,7 +39,7 @@ getwd()
 setwd("../r_plots/")
 
 # save plot in multiple formats
-ggsave("duration_of_correspodence_reciproc_corr_histogram.pdf", plot = last_plot(), scale = 1, width = 33.1, height = 23.4, units = "in", dpi = 600, limitsize = TRUE)
-ggsave("duration_of_correspodence_reciproc_corr_histogram.png", plot = last_plot(), scale = 1, width = 33.1, height = 23.4, units = "in", dpi = 600, limitsize = TRUE)
-ggsave("duration_of_correspodence_reciproc_corr_histogram.eps", plot = last_plot(), scale = 1, width = 33.1, height = 23.4, units = "in", dpi = 600, limitsize = TRUE)
-ggsave("duration_of_correspodence_reciproc_corr_histogram.svg", plot = last_plot(), scale = 1, width = 33.1, height = 23.4, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("duration_of_correspondence_reciproc_corr_histogram.pdf", plot = last_plot(), scale = 1, width = 33.1, height = 23.4, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("duration_of_correspondence_reciproc_corr_histogram.png", plot = last_plot(), scale = 1, width = 33.1, height = 23.4, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("duration_of_correspondence_reciproc_corr_histogram.eps", plot = last_plot(), scale = 1, width = 33.1, height = 23.4, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("duration_of_correspondence_reciproc_corr_histogram.svg", plot = last_plot(), scale = 1, width = 33.1, height = 23.4, units = "in", dpi = 600, limitsize = TRUE)
