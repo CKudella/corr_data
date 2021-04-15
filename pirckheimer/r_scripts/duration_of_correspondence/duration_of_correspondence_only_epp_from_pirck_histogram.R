@@ -8,7 +8,7 @@ getwd()
 setwd("../query_results/")
 
 # read data and define data type for date columns
-duration_of_correspondence_only_epp_from_pirck <- read.csv("duration_of_correspondence/duration_corr_only_epp_from_erasmus.csv", fileEncoding = "UTF-8", colClasses = c("FLFE" = "Date", "LLFE" = "Date"))
+duration_of_correspondence_only_epp_from_pirck <- read.csv("duration_of_correspondence/duration_corr_only_epp_from_pirck.csv", fileEncoding = "UTF-8", colClasses = c("FLFE" = "Date", "LLFE" = "Date"))
 
 # calculate duration using lubridate
 duration_of_correspondence_only_epp_from_pirck$duration_in_years <- interval(duration_of_correspondence_only_epp_from_pirck[, 2], duration_of_correspondence_only_epp_from_pirck[, 3]) / years(1)
