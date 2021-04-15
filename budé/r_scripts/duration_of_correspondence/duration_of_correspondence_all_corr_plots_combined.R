@@ -60,7 +60,7 @@ plot3 <- ggplot(duration_of_correspondence_all_corr, aes(x = duration_in_years))
 plot3
 
 # create scatterplot plot
-plot4 <- ggplot(duration_of_correspondence_all_corr, aes(x = Beginning.of.correspondence.with.budé ,y = duration_in_years)) +
+plot4 <- ggplot(duration_of_correspondence_all_corr, aes(x = Beginning.of.correspondence.with.Budé ,y = duration_in_years)) +
   geom_point(stat = "identity", fill = "black", alpha = 0.5) +
   geom_hline(aes(yintercept = mean(duration_in_years), linetype="mean"), size = 0.3) +
   geom_hline(aes(yintercept = median(duration_in_years), linetype="median"), size = 0.3) +

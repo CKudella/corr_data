@@ -30,7 +30,7 @@ duration_of_correspondence_mean <- mean(duration_of_correspondence_all_corr$dura
 duration_of_correspondence_median <- median(duration_of_correspondence_all_corr$duration_in_years)
 
 # create scatterplot plot
-plot <- ggplot(duration_of_correspondence_all_corr, aes(x = Beginning.of.correspondence.with.budé ,y = duration_in_years)) +
+plot <- ggplot(duration_of_correspondence_all_corr, aes(x = Beginning.of.correspondence.with.Budé ,y = duration_in_years)) +
   geom_point(stat = "identity", fill = "black", alpha = 0.5) +
   geom_hline(aes(yintercept = mean(duration_in_years), linetype="mean"), size = 0.3) +
   geom_hline(aes(yintercept = median(duration_in_years), linetype="median"), size = 0.3) +
