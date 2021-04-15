@@ -2,41 +2,38 @@ require(readr)
 require(ggplot2)
 require(ggrepel)
 require(ggpubr)
-library(readr)
-library(ggplot2)
-library(ggrepel)
-library(ggpubr)
 
 # set working directory
 getwd()
 setwd("../query_results/")
 
 # read data
-data<-read.csv("no_epp_per_loc/no_epp_per_loc_sent_to_pirck.csv", fileEncoding="UTF-8", na.strings=c("NULL"))
+data <- read.csv("no_epp_per_loc/no_epp_per_loc_sent_to_pirck.csv", fileEncoding = "UTF-8", na.strings = c("NULL"))
 
 # read data
-data2<-read.csv("no_epp_per_loc/no_epp_per_loc_sent_to_pirck.csv", fileEncoding="UTF-8", na.strings=c("NULL"))
+data2 <- read.csv("no_epp_per_loc/no_epp_per_loc_sent_to_pirck.csv", fileEncoding = "UTF-8", na.strings = c("NULL"))
 
 # create pointplot
-plot <- ggplot(data=data, aes(x= reorder(Location.Name, -Number.of.letters.sent.from.this.location.to.Pirckheimer), y=Number.of.letters.sent.from.this.location.to.Pirckheimer, label=Location.Name)) +
+plot <- ggplot(data = data, aes(x = reorder(Location.Name, -Number.of.letters.sent.from.this.location.to.Pirckheimer), y = Number.of.letters.sent.from.this.location.to.Pirckheimer, label = Location.Name)) +
   geom_point(stat = "identity") +
-  labs(x="Locations",y="Number of letters sent from this location to Pirckheimer") +
+  labs(x = "Locations", y = "Number of letters sent from this location to Pirckheimer") +
   theme_bw() +
-  theme(axis.title.x=element_text(), axis.text.x=element_blank(), axis.ticks.x=element_blank())
+  theme(axis.title.x = element_text(), axis.text.x = element_blank(), axis.ticks.x = element_blank())
 plot
 
 # create boxplot
-plot2 <- ggplot(data2, aes(x= ' ', y = Number.of.letters.sent.from.this.location.to.Pirckheimer)) +
-  geom_boxplot(outlier.size=2, notch = FALSE) +
-  geom_text_repel(label=ifelse(data$Number.of.letters.sent.from.this.location.to.Pirckheimer>8.5,as.character(data$Location.Name),'')) +
+plot2 <- ggplot(data2, aes(x = " ", y = Number.of.letters.sent.from.this.location.to.Pirckheimer)) +
+  geom_boxplot(outlier.size = 2, notch = FALSE) +
+  geom_text_repel(label = ifelse(data$Number.of.letters.sent.from.this.location.to.Pirckheimer > 8.5, as.character(data$Location.Name), "")) +
   theme_bw() +
-  theme(axis.title.x=element_blank()) +
+  theme(axis.title.x = element_blank()) +
   labs(y = "Number of letters sent from this location to Pirckheimer")
 plot2
 
 # arrange plots
 ggarrange(plot, plot2,
-          ncol = 2, nrow = 1)
+  ncol = 2, nrow = 1
+)
 
 # change working directory
 getwd()

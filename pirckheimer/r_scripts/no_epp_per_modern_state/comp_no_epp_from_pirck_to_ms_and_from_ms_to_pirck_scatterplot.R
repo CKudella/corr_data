@@ -1,20 +1,18 @@
 require(readr)
 require(ggplot2)
-library(readr)
-library(ggplot2)
 
 # set working directory
 getwd()
 setwd("../query_results/")
 
 # read data
-data<-read.csv("no_epp_per_modern_state/comp_no_epp_from_pirck_to_ms_and_from_ms_to_pirck.csv", fileEncoding="UTF-8", na.strings=c("NULL"))
+data <- read.csv("no_epp_per_modern_state/comp_no_epp_from_pirck_to_ms_and_from_ms_to_pirck.csv", fileEncoding = "UTF-8", na.strings = c("NULL"))
 
 # create scatterplot
-plot <- ggplot(data=data, aes(x=Number.of.letters.sent.from.this.modern.state.to.Pirckheimer, y=Number.of.letters.Pirckheimer.sent.to.this.modern.state, label=ModernState)) +
+plot <- ggplot(data = data, aes(x = Number.of.letters.sent.from.this.modern.state.to.Pirckheimer, y = Number.of.letters.Pirckheimer.sent.to.this.modern.state, label = ModernState)) +
   geom_point(stat = "identity") +
   geom_smooth(method = lm) +
-  labs(x="Number of letters sent from this modern state to Pirckheimer",y="Number of letters sent from Pirckheimer to this modern state") + 
+  labs(x = "Number of letters sent from this modern state to Pirckheimer", y = "Number of letters sent from Pirckheimer to this modern state") +
   theme_bw()
 plot
 

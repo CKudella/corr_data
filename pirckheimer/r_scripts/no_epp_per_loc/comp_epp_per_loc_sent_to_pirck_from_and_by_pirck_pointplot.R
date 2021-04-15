@@ -1,27 +1,24 @@
 require(readr)
 require(ggplot2)
 require(reshape2)
-library(readr)
-library(ggplot2)
-library(reshape2)
 
 # set working directory
 getwd()
 setwd("../query_results/")
 
 # read data
-data<-read.csv("no_epp_per_loc/comp_epp_per_loc_sent_to_pirck_from_and_by_pirck_to.csv", fileEncoding="UTF-8", na.strings=c("NULL"))
+data <- read.csv("no_epp_per_loc/comp_epp_per_loc_sent_to_pirck_from_and_by_pirck_to.csv", fileEncoding = "UTF-8", na.strings = c("NULL"))
 
 # apply melt for wide to long
-data_long <- melt(data, id.vars= c("LocationName","Latitude","Longitude"))
+data_long <- melt(data, id.vars = c("LocationName", "Latitude", "Longitude"))
 
 # create poinplot
 plot <- ggplot(data_long, aes(x = reorder(LocationName, -value), y = value, colour = variable)) +
   geom_point() +
-  labs(x="Locations",y="Number of letters") +
+  labs(x = "Locations", y = "Number of letters") +
   theme_bw() +
-  theme(legend.position="bottom") +
-  theme(axis.text.x=element_blank(), axis.ticks.x=element_blank())
+  theme(legend.position = "bottom") +
+  theme(axis.text.x = element_blank(), axis.ticks.x = element_blank())
 plot
 
 # change working directory
