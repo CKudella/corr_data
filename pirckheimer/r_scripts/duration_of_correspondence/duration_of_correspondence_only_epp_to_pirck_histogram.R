@@ -39,7 +39,7 @@ getwd()
 setwd("../r_plots/")
 
 # save plot in multiple formats
-ggsave("duration_of_correspondence_only_epp_to_era_histogram.pdf", plot = last_plot(), scale = 1, width = 33.1, height = 23.4, units = "in", dpi = 600, limitsize = TRUE)
-ggsave("duration_of_correspondence_only_epp_to_era_histogram.png", plot = last_plot(), scale = 1, width = 33.1, height = 23.4, units = "in", dpi = 600, limitsize = TRUE)
-ggsave("duration_of_correspondence_only_epp_to_era_histogram.eps", plot = last_plot(), scale = 1, width = 33.1, height = 23.4, units = "in", dpi = 600, limitsize = TRUE)
-ggsave("duration_of_correspondence_only_epp_to_era_histogram.svg", plot = last_plot(), scale = 1, width = 33.1, height = 23.4, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("duration_of_correspondence_only_epp_to_pirck_histogram.pdf", plot = last_plot(), scale = 1, width = 33.1, height = 23.4, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("duration_of_correspondence_only_epp_to_pirck_histogram.png", plot = last_plot(), scale = 1, width = 33.1, height = 23.4, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("duration_of_correspondence_only_epp_to_pirck_histogram.eps", plot = last_plot(), scale = 1, width = 33.1, height = 23.4, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("duration_of_correspondence_only_epp_to_pirck_histogram.svg", plot = last_plot(), scale = 1, width = 33.1, height = 23.4, units = "in", dpi = 600, limitsize = TRUE)
