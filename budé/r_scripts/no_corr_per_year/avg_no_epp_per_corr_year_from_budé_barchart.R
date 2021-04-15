@@ -11,6 +11,8 @@ data <- read.csv("no_corr_per_year/avg_no_epp_per_corr_year_from_budé.csv", fil
 # create barchart
 plot <- ggplot(data, aes(x = Year, y = Average.number.of.letters.sent.from.Budé.per.correspondent.this.year)) +
   geom_bar(position = "dodge", stat = "identity") +
+  geom_hline(aes(yintercept = mean(Average.number.of.letters.sent.from.Budé.per.correspondent.this.year), linetype = "mean"), size = 0.3) +
+  geom_hline(aes(yintercept = median(Average.number.of.letters.sent.from.Budé.per.correspondent.this.year), linetype = "median"), size = 0.3) +
   labs(x = "Year", y = "Average number of letters") +
   scale_x_continuous(breaks = c(1484:1540)) +
   theme_bw() +
