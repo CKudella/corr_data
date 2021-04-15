@@ -1,24 +1,21 @@
 require(readr)
 require(ggplot2)
 require(ggrepel)
-library(readr)
-library(ggplot2)
-library(ggrepel)
 
 # set working directory
 getwd()
 setwd("../query_results/")
 
 # read data
-data<-read.csv("no_epp_per_loc/avg_no_epp_per_loc_year_written_to_budé.csv", fileEncoding="UTF-8")
+data <- read.csv("no_epp_per_loc/avg_no_epp_per_loc_year_written_to_budé.csv", fileEncoding = "UTF-8")
 
 # create boxplot
-plot <- ggplot(data, aes(x= ' ', y = Average.number.of.letters.written.from.this.location.to.Budé.per.year)) +
-  geom_boxplot(outlier.size=2, notch = FALSE) +
-  geom_text_repel(label=ifelse(data$Average.number.of.letters.written.from.this.location.to.Budé.per.year>1.4175,as.character(data$Location.Name),'')) +
-  geom_text_repel(label=ifelse(data$Average.number.of.letters.written.from.this.location.to.Budé.per.year<0.7495,as.character(data$Location.Name),'')) +
+plot <- ggplot(data, aes(x = " ", y = Average.number.of.letters.written.from.this.location.to.Budé.per.year)) +
+  geom_boxplot(outlier.size = 2, notch = FALSE) +
+  geom_text_repel(label = ifelse(data$Average.number.of.letters.written.from.this.location.to.Budé.per.year > 1.4175, as.character(data$Location.Name), "")) +
+  geom_text_repel(label = ifelse(data$Average.number.of.letters.written.from.this.location.to.Budé.per.year < 0.7495, as.character(data$Location.Name), "")) +
   theme_bw() +
-  theme(axis.title.x=element_blank()) +
+  theme(axis.title.x = element_blank()) +
   labs(y = "Average number of letters sent to Budé from this location per year")
 plot
 

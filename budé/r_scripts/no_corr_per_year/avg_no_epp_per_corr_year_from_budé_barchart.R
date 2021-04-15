@@ -1,23 +1,21 @@
 require(readr)
 require(ggplot2)
-library(readr)
-library(ggplot2)
 
 # set working directory
 getwd()
 setwd("../query_results/")
 
 # read data
-data<-read.csv("no_corr_per_year/avg_no_epp_per_corr_year_from_budé.csv", fileEncoding="UTF-8")
+data <- read.csv("no_corr_per_year/avg_no_epp_per_corr_year_from_budé.csv", fileEncoding = "UTF-8")
 
 # create barchart
-plot <- ggplot(data,aes(x= Year, y=Average.number.of.letters.sent.from.Budé.per.correspondent.this.year)) +
+plot <- ggplot(data, aes(x = Year, y = Average.number.of.letters.sent.from.Budé.per.correspondent.this.year)) +
   geom_bar(position = "dodge", stat = "identity") +
-  labs(x="Year",y="Average number of letters") +
+  labs(x = "Year", y = "Average number of letters") +
   scale_x_continuous(breaks = c(1484:1540)) +
   theme_bw() +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.35)) +
-  theme(legend.position="bottom")
+  theme(legend.position = "bottom")
 plot
 
 # change working directory

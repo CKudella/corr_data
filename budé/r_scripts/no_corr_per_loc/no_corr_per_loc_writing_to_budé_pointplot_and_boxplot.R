@@ -2,38 +2,35 @@ require(readr)
 require(ggplot2)
 require(ggrepel)
 require(ggpubr)
-library(readr)
-library(ggplot2)
-library(ggrepel)
-library(ggpubr)
 
 # set working directory
 getwd()
 setwd("../query_results/")
 
 # read data
-data<-read.csv("no_corr_per_loc/no_corr_per_loc_writing_to_budé_with_geocoordinates.csv", fileEncoding="UTF-8", na.strings=c("NULL"))
+data <- read.csv("no_corr_per_loc/no_corr_per_loc_writing_to_budé_with_geocoordinates.csv", fileEncoding = "UTF-8", na.strings = c("NULL"))
 
 # create pointplot
-plot <- ggplot(data=data, aes(x= reorder(Location.Name.Modern, -Number.of.correspondents.who.wrote.from.this.location.letters.to.Budé), y=Number.of.correspondents.who.wrote.from.this.location.letters.to.Budé, label=Location.Name.Modern)) + 
-  geom_point(stat = "identity") + 
-  labs(x="Locations",y="Number of correspondents writing letters to Budé") +
+plot <- ggplot(data = data, aes(x = reorder(Location.Name.Modern, -Number.of.correspondents.who.wrote.from.this.location.letters.to.Budé), y = Number.of.correspondents.who.wrote.from.this.location.letters.to.Budé, label = Location.Name.Modern)) +
+  geom_point(stat = "identity") +
+  labs(x = "Locations", y = "Number of correspondents writing letters to Budé") +
   theme_bw() +
-  theme(axis.title.x=element_text(), axis.text.x=element_blank(), axis.ticks.x=element_blank())
+  theme(axis.title.x = element_text(), axis.text.x = element_blank(), axis.ticks.x = element_blank())
 plot
 
 # create boxplot
-plot2 <- ggplot(data, aes(x= ' ', y = Number.of.correspondents.who.wrote.from.this.location.letters.to.Budé)) +
-  geom_boxplot(outlier.size=2, notch = FALSE) +
-  geom_text_repel(label=ifelse(data$Number.of.correspondents.who.wrote.from.this.location.letters.to.Budé>1,as.character(data$Location.Name.Modern),'')) +
+plot2 <- ggplot(data, aes(x = " ", y = Number.of.correspondents.who.wrote.from.this.location.letters.to.Budé)) +
+  geom_boxplot(outlier.size = 2, notch = FALSE) +
+  geom_text_repel(label = ifelse(data$Number.of.correspondents.who.wrote.from.this.location.letters.to.Budé > 1, as.character(data$Location.Name.Modern), "")) +
   theme_bw() +
-  theme(axis.title.x=element_blank()) +
+  theme(axis.title.x = element_blank()) +
   labs(y = "Number of correspondents writing letters to Budé")
 plot2
 
 # arrange plots
-ggarrange(plot, plot2, 
-          ncol = 2, nrow = 1)
+ggarrange(plot, plot2,
+  ncol = 2, nrow = 1
+)
 
 # change working directory
 getwd()

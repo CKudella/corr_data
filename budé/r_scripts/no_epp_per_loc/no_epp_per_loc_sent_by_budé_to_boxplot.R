@@ -1,23 +1,20 @@
 require(readr)
 require(ggplot2)
 require(ggrepel)
-library(readr)
-library(ggplot2)
-library(ggrepel)
 
 # set working directory
 getwd()
 setwd("../query_results/")
 
 # read data
-data<-read.csv("no_epp_per_loc/no_epp_per_loc_sent_by_budé_to.csv", fileEncoding="UTF-8")
+data <- read.csv("no_epp_per_loc/no_epp_per_loc_sent_by_budé_to.csv", fileEncoding = "UTF-8")
 
 # create boxplot
-plot <- ggplot(data, aes(x= ' ', y = Number.of.letters.sent.to.this.location.from.Budé)) +
-  geom_boxplot(outlier.size=2, notch = FALSE) +
-  geom_text_repel(label=ifelse(data$Number.of.letters.sent.to.this.location.from.Budé>6,as.character(data$Location.Name),'')) +
+plot <- ggplot(data, aes(x = " ", y = Number.of.letters.sent.to.this.location.from.Budé)) +
+  geom_boxplot(outlier.size = 2, notch = FALSE) +
+  geom_text_repel(label = ifelse(data$Number.of.letters.sent.to.this.location.from.Budé > 6, as.character(data$Location.Name), "")) +
   theme_bw() +
-  theme(axis.title.x=element_blank()) +
+  theme(axis.title.x = element_blank()) +
   labs(y = "Number of letters sent from Budé to this location")
 plot
 

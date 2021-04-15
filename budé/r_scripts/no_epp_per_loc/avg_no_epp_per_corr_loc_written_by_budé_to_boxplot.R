@@ -1,23 +1,20 @@
 require(readr)
 require(ggplot2)
 require(ggrepel)
-library(readr)
-library(ggplot2)
-library(ggrepel)
 
 # set working directory
 getwd()
 setwd("../query_results/")
 
 # read data
-data<-read.csv("no_epp_per_loc/avg_no_epp_per_corr_loc_written_by_budé_to.csv", fileEncoding="UTF-8")
+data <- read.csv("no_epp_per_loc/avg_no_epp_per_corr_loc_written_by_budé_to.csv", fileEncoding = "UTF-8")
 
 # create boxplot
-plot <- ggplot(data, aes(x= ' ', y = Average.number.of.letters.per.correspondent)) +
-  geom_boxplot(outlier.size=2, notch = FALSE) +
-  geom_text_repel(label=ifelse(data$Average.number.of.letters.per.correspondent>3.5,as.character(data$Location.Name),'')) +
+plot <- ggplot(data, aes(x = " ", y = Average.number.of.letters.per.correspondent)) +
+  geom_boxplot(outlier.size = 2, notch = FALSE) +
+  geom_text_repel(label = ifelse(data$Average.number.of.letters.per.correspondent > 3.5, as.character(data$Location.Name), "")) +
   theme_bw() +
-  theme(axis.title.x=element_blank()) +
+  theme(axis.title.x = element_blank()) +
   labs(y = "Average number of letters sent from Budé to this location per correspondent")
 plot
 

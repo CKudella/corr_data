@@ -1,23 +1,20 @@
 require(readr)
 require(ggplot2)
 require(ggrepel)
-library(readr)
-library(ggplot2)
-library(ggrepel)
 
 # set working directory
 getwd()
 setwd("../query_results/")
 
 # read data
-data<-read.csv("no_corr_per_loc/comp_corr_per_loc_writing_to_receiving_from_budé.csv", fileEncoding="UTF-8", na.strings=c("NULL"))
+data <- read.csv("no_corr_per_loc/comp_corr_per_loc_writing_to_receiving_from_budé.csv", fileEncoding = "UTF-8", na.strings = c("NULL"))
 
 # create scatterplot
-plot <- ggplot(data=data, aes(x=NoCorrFromBudé, y=NoCorrToBudé, label=Location.Name.Modern)) + 
+plot <- ggplot(data = data, aes(x = NoCorrFromBudé, y = NoCorrToBudé, label = Location.Name.Modern)) +
   geom_point(stat = "identity") +
-  geom_text_repel(label=ifelse(data$NoCorrToBudé>3.5,as.character(data$Location.Name.Modern),'')) +
-  geom_text_repel(label=ifelse(data$NoCorrFromBudé>3.5,as.character(data$Location.Name.Modern),'')) +
-  labs(x="Number of correspondents receiving letters from Budé",y="Number of Correspondents writing letters to Budé") + 
+  geom_text_repel(label = ifelse(data$NoCorrToBudé > 3.5, as.character(data$Location.Name.Modern), "")) +
+  geom_text_repel(label = ifelse(data$NoCorrFromBudé > 3.5, as.character(data$Location.Name.Modern), "")) +
+  labs(x = "Number of correspondents receiving letters from Budé", y = "Number of Correspondents writing letters to Budé") +
   theme_bw()
 plot
 

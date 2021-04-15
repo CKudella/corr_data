@@ -1,19 +1,17 @@
 require(readr)
 require(ggplot2)
-library(readr)
-library(ggplot2)
 
 # set working directory
 getwd()
 setwd("../query_results/")
 
 # read data
-data<-read.csv("no_epp_per_loc/comp_epp_per_loc_sent_to_budé_from_and_by_budé_to.csv", fileEncoding="UTF-8", na.strings=c("NULL"))
+data <- read.csv("no_epp_per_loc/comp_epp_per_loc_sent_to_budé_from_and_by_budé_to.csv", fileEncoding = "UTF-8", na.strings = c("NULL"))
 
 # create scatterplot
-plot <- ggplot(data=data, aes(x=NoLettersWrittenTOBudé, y=NoLettersWrittenBYBudéTO, label=LocationName)) +
+plot <- ggplot(data = data, aes(x = NoLettersWrittenTOBudé, y = NoLettersWrittenBYBudéTO, label = LocationName)) +
   geom_point(stat = "identity") +
-  labs(x="Number of letters written to Budé",y="Number of letters received from Budé") + 
+  labs(x = "Number of letters written to Budé", y = "Number of letters received from Budé") +
   theme_bw()
 plot
 
