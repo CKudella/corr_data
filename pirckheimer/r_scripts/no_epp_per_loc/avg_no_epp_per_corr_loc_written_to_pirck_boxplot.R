@@ -9,10 +9,19 @@ setwd("../query_results/")
 # read data
 data <- read.csv("no_epp_per_loc/avg_no_epp_per_corr_loc_written_to_pirck.csv", fileEncoding = "UTF-8")
 
+# calculate quartiles
+quartiles <- as.numeric(quantile(data$Average.Number.of.Letters, probs = c(0.25, 0.5, 0.75)))
+
+# calculate IQR
+IQR <- diff(quartiles[c(1, 3)])
+
+# calculate upper whisker
+upper_whisker <- max(data$Average.Number.of.Letters[data$Average.Number.of.Letters < (quartiles[3] + 1.58 * IQR)])
+
 # create boxplot
 plot <- ggplot(data, aes(x = " ", y = Average.Number.of.Letters)) +
   geom_boxplot(outlier.size = 2, notch = FALSE) +
-  geom_text_repel(label = ifelse(data$Average.Number.of.Letters > 3.5, as.character(data$Location.Name), "")) +
+  geom_text_repel(label = ifelse(data$Average.Number.of.Letters > upper_whisker, as.character(data$Location.Name), "")) +
   theme_bw() +
   theme(axis.title.x = element_blank()) +
   labs(y = "Average number of letters sent to Pirckheimer from this location per correspondent")

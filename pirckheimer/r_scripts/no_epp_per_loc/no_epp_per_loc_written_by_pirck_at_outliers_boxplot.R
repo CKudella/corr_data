@@ -1,5 +1,5 @@
 require(readr)
-require(dplyr)
+require(tidyverse)
 require(ggplot2)
 
 # set working directory
@@ -9,10 +9,8 @@ setwd("../query_results/")
 # read data
 data <- read.csv("no_epp_per_loc/no_epp_per_loc_written_by_pirck_at_outliers.csv", fileEncoding = "UTF-8", na.strings = c("NULL"))
 
-# callculate median for label
-data_meds <- data %>%
-  group_by(locations_name_modern) %>%
-  summarise(med = median(COUNT))
+# calculate median for label
+data_meds <- summarise(group_by(data, locations_name_modern), med = median(COUNT))
 
 # create boxplot
 plot <- ggplot(data, aes(x = locations_name_modern, y = COUNT)) +

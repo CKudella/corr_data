@@ -1,7 +1,7 @@
 require(readr)
 require(ggplot2)
 require(ggrepel)
-require(ggpubr)
+require(patchwork)
 
 # set working directory
 getwd()
@@ -10,27 +10,35 @@ setwd("../query_results/")
 # read data
 data <- read.csv("no_epp_per_loc/no_epp_per_loc_sent_from.csv", fileEncoding = "UTF-8")
 
+# calculate quartiles
+quartiles <- as.numeric(quantile(data$Number.of.letters.sent.from.this.location, probs = c(0.25, 0.5, 0.75)))
+
+# calculate IQR
+IQR <- diff(quartiles[c(1, 3)])
+
+# calculate upper whisker
+upper_whisker <- max(data$Number.of.letters.sent.from.this.location[data$Number.of.letters.sent.from.this.location < (quartiles[3] + 1.58 * IQR)])
+
 # create pointplot (with sqrt trans)
-plot <- ggplot(data = data, aes(x = reorder(Location.Name, -Number.of.letters.sent.from.this.location), y = Number.of.letters.sent.from.this.location, label = Location.Name)) +
+plot1 <- ggplot(data = data, aes(x = reorder(Location.Name, -Number.of.letters.sent.from.this.location), y = Number.of.letters.sent.from.this.location, label = Location.Name)) +
   geom_point(stat = "identity") +
   labs(x = "Locations", y = "Number of letters sent from this location") +
   theme_bw() +
   theme(axis.title.x = element_text(), axis.text.x = element_blank(), axis.ticks.x = element_blank())
-plot
+plot1
 
-# create boxplot (with log10 trans)
+# create boxplot (with swrt trans)
 plot2 <- ggplot(data, aes(x = " ", y = Number.of.letters.sent.from.this.location)) +
   geom_boxplot(outlier.size = 2, notch = FALSE) +
-  geom_text_repel(label = ifelse(data$Number.of.letters.sent.from.this.location > 11, as.character(data$Location.Name), "")) +
+  coord_trans(y = "sqrt") +
+  geom_text_repel(label = ifelse(data$Number.of.letters.sent.from.this.location > upper_whisker, as.character(data$Location.Name), "")) +
   theme_bw() +
   theme(axis.title.x = element_blank()) +
   labs(y = "Number of letters sent from this location")
 plot2
 
-# arrange plots
-ggarrange(plot, plot2,
-  ncol = 2, nrow = 1
-)
+# create combined plot via patchwork
+plot1 + plot2
 
 # change working directory
 getwd()

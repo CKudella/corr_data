@@ -8,10 +8,19 @@ setwd("../query_results/")
 # read data
 data <- read.csv("no_epp_per_loc/avg_no_epp_per_loc_year_written_by_pirck_at.csv", fileEncoding = "UTF-8")
 
+# calculate quartiles
+quartiles <- as.numeric(quantile(data$Average.number.of.letters.written.by.Pirckheimer.from.this.location.per.year, probs = c(0.25, 0.5, 0.75)))
+
+# calculate IQR
+IQR <- diff(quartiles[c(1, 3)])
+
+# calculate upper whisker
+upper_whisker <- max(data$Average.number.of.letters.written.by.Pirckheimer.from.this.location.per.year[data$Average.number.of.letters.written.by.Pirckheimer.from.this.location.per.year < (quartiles[3] + 1.58 * IQR)])
+
 # create boxplot
 plot <- ggplot(data, aes(x = " ", y = Average.number.of.letters.written.by.Pirckheimer.from.this.location.per.year)) +
   geom_boxplot(outlier.size = 2, notch = FALSE) +
-  geom_text(check_overlap = TRUE, aes(label = ifelse(Average.number.of.letters.written.by.Pirckheimer.from.this.location.per.year >= 8.8125, as.character(Location.Name), "")), hjust = -0.1, vjust = 0) +
+  geom_text(check_overlap = TRUE, aes(label = ifelse(Average.number.of.letters.written.by.Pirckheimer.from.this.location.per.year > upper_whisker, as.character(Location.Name), "")), hjust = -0.1, vjust = 0) +
   theme_bw() +
   theme(axis.title.x = element_blank()) +
   labs(y = "Average number of letters sent from this location by Pirckheimer per year")
