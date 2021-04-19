@@ -16,8 +16,8 @@ quartiles <- as.numeric(quantile(data$Average.Number.of.Letters, probs = c(0.25,
 # calculate IQR
 IQR <- diff(quartiles[c(1, 3)])
 
-# calculate upper whisker
-upper_whisker <- max(data$Average.Number.of.Letters[data$Average.Number.of.Letters < (quartiles[3] + 1.58 * IQR)])
+# calculate outlier treshold
+upper_dots <- min(data$Average.Number.of.Letters[data$Average.Number.of.Letters > (quartiles[3] + 1.5*IQR)])
 
 # create pointplot
 plot1 <- ggplot(data = data, aes(x = reorder(Location.Name, -Average.Number.of.Letters), y = Average.Number.of.Letters, label = Location.Name)) +
@@ -30,7 +30,7 @@ plot1
 # create boxplot
 plot2 <- ggplot(data, aes(x = " ", y = Average.Number.of.Letters)) +
   geom_boxplot(outlier.size = 2, notch = FALSE) +
-  geom_text_repel(label = ifelse(data$Average.Number.of.Letters > upper_whisker, as.character(data$Location.Name), "")) +
+  geom_text_repel(box.padding = 2, label = ifelse(data$Average.Number.of.Letters >= upper_dots, as.character(data$Location.Name), "")) +
   theme_bw() +
   theme(axis.title.x = element_blank()) +
   labs(y = "Average Number of letters sent from this location per correspondent to Pirckheimer")
