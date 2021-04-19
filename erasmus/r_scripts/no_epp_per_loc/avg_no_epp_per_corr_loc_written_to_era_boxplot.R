@@ -15,13 +15,13 @@ quartiles <- as.numeric(quantile(data$Average.Number.of.Letters, probs = c(0.25,
 # calculate IQR
 IQR <- diff(quartiles[c(1, 3)])
 
-# calculate upper whisker
-upper_whisker <- max(data$Average.Number.of.Letters[data$Average.Number.of.Letters < (quartiles[3] + 1.5 * IQR)])
+# calculate outlier treshold
+upper_dots <- min(data$Average.Number.of.Letters[data$Average.Number.of.Letters > (quartiles[3] + 1.5*IQR)])
 
 # create boxplot
 plot <- ggplot(data, aes(x = " ", y = Average.Number.of.Letters)) +
   geom_boxplot(outlier.size = 2, notch = FALSE) +
-  geom_text_repel(label = ifelse(data$Average.Number.of.Letters > upper_whisker, as.character(data$Location.Name), "")) +
+  geom_text_repel(box.padding = 1.75, label = ifelse(data$Average.Number.of.Letters >= upper_dots, as.character(data$Location.Name), "")) +
   theme_bw() +
   theme(axis.title.x = element_blank()) +
   labs(y = "Average number of letters sent to Erasmus from this location per correspondent")

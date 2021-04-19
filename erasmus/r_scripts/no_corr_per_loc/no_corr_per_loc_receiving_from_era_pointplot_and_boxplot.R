@@ -16,8 +16,8 @@ quartiles <- as.numeric(quantile(data$Number.of.correspondents.who.received.at.t
 # calculate IQR
 IQR <- diff(quartiles[c(1, 3)])
 
-# calculate upper whisker
-upper_whisker <- max(data$Number.of.correspondents.who.received.at.this.location.letters.from.Erasmus[data$Number.of.correspondents.who.received.at.this.location.letters.from.Erasmus < (quartiles[3] + 1.58 * IQR)])
+# calculate outlier treshold
+upper_dots <- min(data$Number.of.correspondents.who.received.at.this.location.letters.from.Erasmus[data$Number.of.correspondents.who.received.at.this.location.letters.from.Erasmus > (quartiles[3] + 1.5*IQR)])
 
 # create pointplot
 plot1 <- ggplot(data = data, aes(x = reorder(Location.Name.Modern, -Number.of.correspondents.who.received.at.this.location.letters.from.Erasmus), y = Number.of.correspondents.who.received.at.this.location.letters.from.Erasmus, label = Location.Name.Modern)) +
@@ -33,7 +33,7 @@ plot1
 # create boxplot
 plot2 <- ggplot(data, aes(x = " ", y = Number.of.correspondents.who.received.at.this.location.letters.from.Erasmus)) +
   geom_boxplot(outlier.size = 2, notch = FALSE) +
-  geom_text_repel(label = ifelse(data$Number.of.correspondents.who.received.at.this.location.letters.from.Erasmus > upper_whisker, as.character(data$Location.Name.Modern), "")) +
+  geom_text_repel(label = ifelse(data$Number.of.correspondents.who.received.at.this.location.letters.from.Erasmus >= upper_dots, as.character(data$Location.Name.Modern), "")) +
   theme_bw() +
   theme(axis.title.x = element_blank()) +
   labs(y = "Number of correspondents receiving letters from Erasmus")
