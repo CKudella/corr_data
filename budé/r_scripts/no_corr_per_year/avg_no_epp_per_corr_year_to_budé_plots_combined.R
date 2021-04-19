@@ -17,8 +17,8 @@ quartiles <- as.numeric(quantile(data$Average.number.of.letters.sent.per.corresp
 # calculate IQR
 IQR <- diff(quartiles[c(1, 3)])
 
-# calculate upper whisker
-upper_whisker <- max(data$Average.number.of.letters.sent.per.correspondent.to.Budé.this.year[data$Average.number.of.letters.sent.per.correspondent.to.Budé.this.year < (quartiles[3] + 1.5 * IQR)])
+# calculate outlier treshold
+upper_dots <- min(data$Average.number.of.letters.sent.per.correspondent.to.Budé.this.year[data$Average.number.of.letters.sent.per.correspondent.to.Budé.this.year > (quartiles[3] + 1.5*IQR)])
 
 # create data frame for years 1484-1536
 data2 <- data.frame(matrix(ncol = 1, nrow = 53))
@@ -43,7 +43,7 @@ plot1
 # create boxplot
 plot2 <- ggplot(data, aes(x = " ", y = Average.number.of.letters.sent.per.correspondent.to.Budé.this.year)) +
   geom_boxplot(notch = FALSE) +
-  geom_text_repel(label = ifelse(data$Average.number.of.letters.sent.per.correspondent.to.Budé.this.year > upper_whisker, as.character(data$Year), "")) +
+  geom_text_repel(label = ifelse(data$Average.number.of.letters.sent.per.correspondent.to.Budé.this.year >= upper_dots, as.character(data$Year), "")) +
   theme_bw() +
   theme(axis.title.x = element_blank()) +
   labs(y = "Average number of letters to Budé per correspondent")

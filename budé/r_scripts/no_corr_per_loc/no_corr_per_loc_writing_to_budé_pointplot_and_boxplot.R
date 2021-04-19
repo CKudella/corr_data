@@ -16,8 +16,7 @@ quartiles <- as.numeric(quantile(data$Number.of.correspondents.who.wrote.from.th
 # calculate IQR
 IQR <- diff(quartiles[c(1, 3)])
 
-# calculate upper whisker
-upper_whisker <- max(data$Number.of.correspondents.who.wrote.from.this.location.letters.to.Budé[data$Number.of.correspondents.who.wrote.from.this.location.letters.to.Budé < (quartiles[3] + 1.5 * IQR)])
+# calculate outlier treshold
 upper_dots <- data$Number.of.correspondents.who.wrote.from.this.location.letters.to.Budé[data$Number.of.correspondents.who.wrote.from.this.location.letters.to.Budé > (quartiles[3] + 1.5*IQR)]
 
 # create pointplot

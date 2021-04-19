@@ -15,17 +15,17 @@ quartiles <- as.numeric(quantile(data$Average.number.of.letters.written.from.thi
 # calculate IQR
 IQR <- diff(quartiles[c(1, 3)])
 
-# calculate upper whisker
-upper_whisker <- max(data$Average.number.of.letters.written.from.this.location.to.Budé.per.year[data$Average.number.of.letters.written.from.this.location.to.Budé.per.year < (quartiles[3] + 1.5 * IQR)])
+# calculate upper outlier treshold
+upper_dots <- min(data$Average.number.of.letters.written.from.this.location.to.Budé.per.year[data$Average.number.of.letters.written.from.this.location.to.Budé.per.year > (quartiles[3] + 1.5*IQR)])
 
 # calculate lower whisker
-lower_whisker <- min(data$Average.number.of.letters.written.from.this.location.to.Budé.per.year[data$Average.number.of.letters.written.from.this.location.to.Budé.per.year > (quartiles[1] - 1.5 * IQR)])
+lower_dots <- max(data$Average.number.of.letters.written.from.this.location.to.Budé.per.year[data$Average.number.of.letters.written.from.this.location.to.Budé.per.year < (quartiles[1] - 1.5 * IQR)])
 
 # create boxplot
 plot <- ggplot(data, aes(x = " ", y = Average.number.of.letters.written.from.this.location.to.Budé.per.year)) +
   geom_boxplot(outlier.size = 2, notch = FALSE) +
-  geom_text_repel(label = ifelse(data$Average.number.of.letters.written.from.this.location.to.Budé.per.year > upper_whisker, as.character(data$Location.Name), "")) +
-  geom_text_repel(label = ifelse(data$Average.number.of.letters.written.from.this.location.to.Budé.per.year < lower_whisker, as.character(data$Location.Name), "")) +
+  geom_text_repel(label = ifelse(data$Average.number.of.letters.written.from.this.location.to.Budé.per.year >= upper_dots, as.character(data$Location.Name), "")) +
+  geom_text_repel(label = ifelse(data$Average.number.of.letters.written.from.this.location.to.Budé.per.year <= lower_dots, as.character(data$Location.Name), "")) +
   theme_bw() +
   theme(axis.title.x = element_blank()) +
   labs(y = "Average number of letters sent to Budé from this location per year")

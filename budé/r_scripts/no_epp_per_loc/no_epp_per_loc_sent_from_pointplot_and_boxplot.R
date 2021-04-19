@@ -16,8 +16,8 @@ quartiles <- as.numeric(quantile(data$Number.of.letters.sent.from.this.location,
 # calculate IQR
 IQR <- diff(quartiles[c(1, 3)])
 
-# calculate upper whisker
-upper_whisker <- max(data$Number.of.letters.sent.from.this.location[data$Number.of.letters.sent.from.this.location < (quartiles[3] + 1.5 * IQR)])
+# calculate outlier treshold
+upper_dots <- min(data$Number.of.letters.sent.from.this.location[data$Number.of.letters.sent.from.this.location > (quartiles[3] + 1.5*IQR)])
 
 # create pointplot (with sqrt trans)
 plot1 <- ggplot(data = data, aes(x = reorder(Location.Name, -Number.of.letters.sent.from.this.location), y = Number.of.letters.sent.from.this.location, label = Location.Name)) +
@@ -32,7 +32,7 @@ plot1
 plot2 <- ggplot(data, aes(x = " ", y = Number.of.letters.sent.from.this.location)) +
   geom_boxplot(outlier.size = 2, notch = FALSE) +
   coord_trans(y = "sqrt") +
-  geom_text_repel(label = ifelse(data$Number.of.letters.sent.from.this.location > upper_whisker, as.character(data$Location.Name), "")) +
+  geom_text_repel(label = ifelse(data$Number.of.letters.sent.from.this.location >= upper_dots, as.character(data$Location.Name), "")) +
   theme_bw() +
   theme(axis.title.x = element_blank()) +
   labs(y = "Number of letters sent from this location")
