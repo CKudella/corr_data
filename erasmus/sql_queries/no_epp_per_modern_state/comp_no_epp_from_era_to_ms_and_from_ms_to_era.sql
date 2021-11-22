@@ -7,7 +7,7 @@ FROM (
               locations AS XB
          WHERE XB.locations_id = XA.target_loc_id
            AND XA.letters_id NOT LIKE '%ck2'
-           AND XA.sender_id = 'erasmus_desiderius_viaf_95982394'
+           AND XA.sender_id = '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf'
          GROUP BY XB.locations_modern_state
          ORDER BY COUNT(*) DESC)
       UNION
@@ -16,7 +16,7 @@ FROM (
               locations AS YB
          WHERE YB.locations_id = YA.source_loc_id
            AND YA.letters_id NOT LIKE '%ck2'
-           AND YA.recipient_id = 'erasmus_desiderius_viaf_95982394'
+           AND YA.recipient_id = '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf'
          GROUP BY YB.locations_modern_state
          ORDER BY YB.locations_modern_state DESC)) AS Z
 LEFT OUTER JOIN
@@ -26,7 +26,7 @@ LEFT OUTER JOIN
         locations
    WHERE locations.locations_id = letters.target_loc_id
      AND letters_id NOT LIKE '%ck2'
-     AND sender_id = 'erasmus_desiderius_viaf_95982394'
+     AND sender_id = '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf'
    GROUP BY locations_modern_state
    ORDER BY COUNT(*) DESC) AS B ON B.ModernState = Z.ModernState
 LEFT OUTER JOIN
@@ -36,7 +36,7 @@ LEFT OUTER JOIN
         locations
    WHERE locations.locations_id = letters.source_loc_id
      AND letters_id NOT LIKE '%ck2'
-     AND recipient_id = 'erasmus_desiderius_viaf_95982394'
+     AND recipient_id = '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf'
    GROUP BY locations_modern_state
    ORDER BY COUNT(*) DESC) AS C ON C.ModernState = Z.ModernState
 ORDER BY (B.NoEppFromEra + C.NoEppToEra) DESC

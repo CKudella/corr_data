@@ -9,15 +9,15 @@ LEFT OUTER JOIN
   (SELECT send_date_year1 AS 'Year',
           COUNT(DISTINCT recipient_id) AS NoCorrEppFromEra
    FROM letters
-   WHERE sender_id = 'erasmus_desiderius_viaf_95982394'
-     AND recipient_id != 'unnamed_person_viaf_not_applicable'
+   WHERE sender_id = '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf'
+     AND recipient_id != 'be1dcbc4-3987-472a-b4a0-c3305ead139f'
    GROUP BY send_date_year1) AS B ON B.Year = A.Year
 LEFT OUTER JOIN
   (SELECT send_date_year1 AS 'Year',
           COUNT(DISTINCT sender_id) AS NoCorrEppToEra
    FROM letters
-   WHERE recipient_id = 'erasmus_desiderius_viaf_95982394'
-     AND sender_id != 'unnamed_person_viaf_not_applicable'
+   WHERE recipient_id = '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf'
+     AND sender_id != 'be1dcbc4-3987-472a-b4a0-c3305ead139f'
    GROUP BY send_date_year1) AS C ON C.Year = A.Year
 GROUP BY A.Year
 ORDER BY A.Year ASC

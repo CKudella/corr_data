@@ -2,6 +2,6 @@ SELECT letters_id,
        source_loc_id AS 'Source',
        target_loc_id AS 'Target'
 FROM letters
-WHERE sender_id = 'erasmus_desiderius_viaf_95982394'
+WHERE sender_id = '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf'
   AND source_loc_id NOT LIKE 'unknown%'
-  AND recipient_id = 'nausea_friedrich_viaf_248203874'
+  AND recipient_id = 'e1d61ad4-bfa4-4202-97c4-29ef8cf66541'

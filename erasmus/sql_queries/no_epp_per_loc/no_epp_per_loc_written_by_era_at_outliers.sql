@@ -4,7 +4,7 @@ SELECT locations_name_modern,
 FROM letters,
      locations
 WHERE source_loc_id = locations_id
-  AND sender_id = 'erasmus_desiderius_viaf_95982394'
+  AND sender_id = '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf'
   AND letters_id NOT LIKE '%ck2'
   AND source_loc_id NOT LIKE 'unknown%'
   AND locations.locations_name_modern IN ('Basel',

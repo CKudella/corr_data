@@ -5,23 +5,23 @@ FROM
   (SELECT DISTINCT send_date_year1
    FROM letters
    WHERE letters_id NOT LIKE '%ck2'
-     AND sender_id = 'erasmus_desiderius_viaf_95982394'
+     AND sender_id = '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf'
    UNION ALL SELECT DISTINCT send_date_year1
    FROM letters
    WHERE letters_id NOT LIKE '%ck2'
-     AND recipient_id = 'erasmus_desiderius_viaf_95982394') AS A
+     AND recipient_id = '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf') AS A
 LEFT OUTER JOIN
   (SELECT send_date_year1,
           COUNT(*) AS NoEppSentFromEra
    FROM letters
    WHERE letters_id NOT LIKE '%ck2'
-     AND sender_id = 'erasmus_desiderius_viaf_95982394'
+     AND sender_id = '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf'
    GROUP BY send_date_year1) AS B ON B.send_date_year1 = A.send_date_year1
 LEFT OUTER JOIN
   (SELECT send_date_year1,
           COUNT(*) AS NoEppSentToEra
    FROM letters
    WHERE letters_id NOT LIKE '%ck2'
-     AND recipient_id = 'erasmus_desiderius_viaf_95982394'
+     AND recipient_id = '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf'
    GROUP BY send_date_year1) AS C ON C.send_date_year1 = A.send_date_year1
 ORDER BY A.send_date_year1 ASC

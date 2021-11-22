@@ -12,7 +12,7 @@ SELECT letters_id,
 FROM era_cdb_v3.letters
 LEFT JOIN era_cdb_v3.locations AS SourceLoc ON SourceLoc.locations_id = letters.source_loc_id
 LEFT JOIN era_cdb_v3.locations AS TargetLoc ON TargetLoc.locations_id = letters.target_loc_id
-WHERE sender_id = 'erasmus_desiderius_viaf_95982394'
+WHERE sender_id = '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf'
   AND letters_id NOT LIKE '%ck2'
   AND source_loc_id NOT LIKE 'unknown%'
   AND target_loc_id NOT LIKE 'unknown%'

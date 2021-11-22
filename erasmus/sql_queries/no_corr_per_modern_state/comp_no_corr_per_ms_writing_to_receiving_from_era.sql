@@ -16,7 +16,7 @@ LEFT OUTER JOIN
    FROM letters,
         locations
    WHERE locations.locations_id = letters.target_loc_id
-     AND sender_id LIKE 'erasmus_desiderius_viaf_95982394'
+     AND sender_id LIKE '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf'
    GROUP BY locations_modern_state
    ORDER BY COUNT(DISTINCT recipient_id) DESC) AS A ON X.ModernState = A.ModernState
 LEFT OUTER JOIN
@@ -25,6 +25,6 @@ LEFT OUTER JOIN
    FROM letters,
         locations
    WHERE locations.locations_id = letters.source_loc_id
-     AND recipient_id LIKE 'erasmus_desiderius_viaf_95982394'
+     AND recipient_id LIKE '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf'
    GROUP BY locations_modern_state
    ORDER BY COUNT(DISTINCT sender_id) DESC) AS B ON X.ModernState = B.ModernState

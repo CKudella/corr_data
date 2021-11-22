@@ -4,7 +4,7 @@ SELECT locations_name_modern AS 'Location Name Modern',
        COUNT(DISTINCT recipient_id) AS 'Number of correspondents who received at this location letters from Erasmus'
 FROM letters
 JOIN era_cdb_v3.locations ON locations.locations_id = letters.target_loc_id
-WHERE sender_id = 'erasmus_desiderius_viaf_95982394'
+WHERE sender_id = '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf'
   AND target_loc_id NOT LIKE 'unknown%'
 GROUP BY target_loc_id
 ORDER BY COUNT(DISTINCT recipient_id) DESC

@@ -6,12 +6,12 @@ FROM
   (SELECT COUNT(*) AS NoEPPfromEra
    FROM era_cdb_v3.letters
    WHERE letters_id NOT LIKE '%ck2'
-     AND sender_id = 'erasmus_desiderius_viaf_95982394') AS A,
+     AND sender_id = '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf') AS A,
 
   (SELECT COUNT(*) AS NoEPPtoEra
    FROM era_cdb_v3.letters
    WHERE letters_id NOT LIKE '%ck2'
-     AND recipient_id = 'erasmus_desiderius_viaf_95982394') AS B,
+     AND recipient_id = '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf') AS B,
 
   (SELECT COUNT(*) AS 'TotalNoEPP'
    FROM era_cdb_v3.letters

@@ -23,7 +23,7 @@ LEFT OUTER JOIN
         locations
    WHERE locations.locations_id = letters.target_loc_id
      AND letters_id NOT LIKE '%ck2'
-     AND sender_id = 'erasmus_desiderius_viaf_95982394'
+     AND sender_id = '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf'
    GROUP BY locations_modern_state,
             send_date_year1
    ORDER BY send_date_year1 ASC) AS B ON B.ModernState = A.ModernState
@@ -36,7 +36,7 @@ LEFT OUTER JOIN
         locations
    WHERE locations.locations_id = letters.source_loc_id
      AND letters_id NOT LIKE '%ck2'
-     AND recipient_id = 'erasmus_desiderius_viaf_95982394'
+     AND recipient_id = '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf'
    GROUP BY locations_modern_state,
             send_date_year1
    ORDER BY send_date_year1 ASC) AS C ON C.ModernState = A.ModernState

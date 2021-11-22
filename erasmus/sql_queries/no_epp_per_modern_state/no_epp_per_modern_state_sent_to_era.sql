@@ -4,6 +4,6 @@ FROM letters,
      locations
 WHERE locations.locations_id = letters.source_loc_id
   AND letters_id NOT LIKE '%ck2'
-  AND recipient_id = 'erasmus_desiderius_viaf_95982394'
+  AND recipient_id = '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf'
 GROUP BY locations_modern_state
 ORDER BY COUNT(*) DESC

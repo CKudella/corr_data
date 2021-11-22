@@ -10,7 +10,7 @@ LEFT OUTER JOIN
    FROM letters AS XA
    WHERE XA.letters_id NOT LIKE '%ck2%'
      AND XA.send_date_inferred = '1'
-     AND XA.recipient_id = 'erasmus_desiderius_viaf_95982394'
+     AND XA.recipient_id = '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf'
    GROUP BY XA.send_date_year1) AS X ON X.Year = Z.Year
 LEFT OUTER JOIN
   (SELECT DISTINCT YA.send_date_year1 AS YEAR,
@@ -18,6 +18,6 @@ LEFT OUTER JOIN
    FROM letters YA
    WHERE YA.letters_id NOT LIKE '%ck2%'
      AND YA.send_date_inferred = '0'
-     AND YA.recipient_id = 'erasmus_desiderius_viaf_95982394'
+     AND YA.recipient_id = '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf'
    GROUP BY YA.send_date_year1) AS Y ON Y.Year = Z.Year
 ORDER BY Z.Year ASC

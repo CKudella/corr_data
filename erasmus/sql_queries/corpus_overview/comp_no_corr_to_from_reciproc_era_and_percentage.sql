@@ -10,41 +10,41 @@ FROM
    WHERE correspondents_id IN
        (SELECT DISTINCT recipient_id
         FROM letters
-        WHERE sender_id = 'erasmus_desiderius_viaf_95982394'
-          AND recipient_id != 'unnamed_person_viaf_not_applicable')
+        WHERE sender_id = '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf'
+          AND recipient_id != 'be1dcbc4-3987-472a-b4a0-c3305ead139f')
      AND correspondents_id NOT IN
        (SELECT DISTINCT sender_id
         FROM letters
-        WHERE recipient_id = 'erasmus_desiderius_viaf_95982394'
-          AND sender_id != 'unnamed_person_viaf_not_applicable')) AS A,
+        WHERE recipient_id = '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf'
+          AND sender_id != 'be1dcbc4-3987-472a-b4a0-c3305ead139f')) AS A,
 
   (SELECT COUNT(correspondents_id) AS NoCorrOnlyEpptoEra
    FROM era_cdb_v3.correspondents
    WHERE correspondents_id IN
        (SELECT DISTINCT sender_id
         FROM letters
-        WHERE recipient_id = 'erasmus_desiderius_viaf_95982394'
-          AND sender_id != 'unnamed_person_viaf_not_applicable')
+        WHERE recipient_id = '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf'
+          AND sender_id != 'be1dcbc4-3987-472a-b4a0-c3305ead139f')
      AND correspondents_id NOT IN
        (SELECT DISTINCT recipient_id
         FROM letters
-        WHERE sender_id = 'erasmus_desiderius_viaf_95982394'
-          AND recipient_id != 'unnamed_person_viaf_not_applicable') ) AS B,
+        WHERE sender_id = '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf'
+          AND recipient_id != 'be1dcbc4-3987-472a-b4a0-c3305ead139f') ) AS B,
 
   (SELECT COUNT(correspondents_id) AS NoCorrReciproc
    FROM era_cdb_v3.correspondents
    WHERE correspondents_id IN
        (SELECT DISTINCT sender_id
         FROM letters
-        WHERE recipient_id = 'erasmus_desiderius_viaf_95982394'
-          AND sender_id != 'unnamed_person_viaf_not_applicable')
+        WHERE recipient_id = '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf'
+          AND sender_id != 'be1dcbc4-3987-472a-b4a0-c3305ead139f')
      AND correspondents_id IN
        (SELECT DISTINCT recipient_id
         FROM letters
-        WHERE sender_id = 'erasmus_desiderius_viaf_95982394'
-          AND recipient_id != 'unnamed_person_viaf_not_applicable')) AS C,
+        WHERE sender_id = '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf'
+          AND recipient_id != 'be1dcbc4-3987-472a-b4a0-c3305ead139f')) AS C,
 
   (SELECT COUNT(correspondents_id) AS TotalNoCorr
    FROM era_cdb_v3.correspondents
-   WHERE correspondents_id NOT IN ('erasmus_desiderius_viaf_95982394',
-                                   'unnamed_person_viaf_not_applicable')) AS D
+   WHERE correspondents_id NOT IN ('17c580aa-3ba7-4851-8f26-9b3a0ebeadbf',
+                                   'be1dcbc4-3987-472a-b4a0-c3305ead139f')) AS D

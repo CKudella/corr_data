@@ -13,7 +13,7 @@ date: 2018-03-03
 | no_epp_in_db_from_allen_excl_splits.sql | This query calculates the total number of letters from the ALLEN edition contained in the letters table , but excludes splits that have been manually conducted. |
 | no_epp_in_db_not_from_allen_excl_splits.sql | This query calculates the total number of letters contained in the letters table that are not part of the ALLEN edition , but excludes splits that have been manually conducted. |
 | comp_no_epp_from_to_era_and_percentage.sql | This query calculates both the total number of letters sent by Erasmus and written to Erasmus in the letters table as well as the respective percentage of these letters of the total number of letters in the dataset. |
-| comp_no_corr_to_from_reciproc_era_and_percentage.sql | This query caluclates the the number of correspondents for whom only letters written to Erasmus are contained in the dataset, the inverse and the reciprocal corrrespondence. Additionally, for these three categories the percentage of the total number of correspondents in the dataset (excl. Erasmus and undistinguishalbe correspondents (i.e. unnamed_person_viaf_not_applicable) are calculated. )
+| comp_no_corr_to_from_reciproc_era_and_percentage.sql | This query caluclates the the number of correspondents for whom only letters written to Erasmus are contained in the dataset, the inverse and the reciprocal corrrespondence. Additionally, for these three categories the percentage of the total number of correspondents in the dataset (excl. Erasmus and undistinguishalbe correspondents (i.e. be1dcbc4-3987-472a-b4a0-c3305ead139f) are calculated. )
 
 ### Queries that calculate the number of locations from/to which letters have been sent according to various criteria
 
