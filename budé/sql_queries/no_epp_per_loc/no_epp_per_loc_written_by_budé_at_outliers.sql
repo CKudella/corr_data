@@ -4,7 +4,7 @@ SELECT locations_name_modern,
 FROM letters,
      locations
 WHERE source_loc_id = locations_id
-  AND sender_id = 'budé_guillaume_viaf_105878228'
+  AND sender_id = 'c0b89c75-45b8-4b04-bfd7-25bfe9ed040b'
   AND letters_id NOT LIKE '%ck2'
   AND source_loc_id NOT LIKE 'unknown%'
   AND locations.locations_name_modern IN ('Paris',

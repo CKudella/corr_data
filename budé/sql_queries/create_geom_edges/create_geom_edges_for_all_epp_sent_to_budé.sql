@@ -12,7 +12,7 @@ SELECT letters_id,
 FROM budé_cdb_v1.letters
 LEFT JOIN budé_cdb_v1.locations AS SourceLoc ON SourceLoc.locations_id = letters.source_loc_id
 LEFT JOIN budé_cdb_v1.locations AS TargetLoc ON TargetLoc.locations_id = letters.target_loc_id
-WHERE recipient_id = 'budé_guillaume_viaf_105878228'
+WHERE recipient_id = 'c0b89c75-45b8-4b04-bfd7-25bfe9ed040b'
   AND letters_id NOT LIKE '%ck2'
   AND source_loc_id NOT LIKE 'unknown%'
   AND target_loc_id NOT LIKE 'unknown%'

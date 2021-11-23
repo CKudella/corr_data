@@ -9,15 +9,15 @@ LEFT OUTER JOIN
   (SELECT send_date_year1 AS 'Year',
           COUNT(DISTINCT recipient_id) AS NoCorrEppFromBudé
    FROM letters
-   WHERE sender_id = 'budé_guillaume_viaf_105878228'
-     AND recipient_id != 'unnamed_person_viaf_not_applicable'
+   WHERE sender_id = 'c0b89c75-45b8-4b04-bfd7-25bfe9ed040b'
+     AND recipient_id != 'be1dcbc4-3987-472a-b4a0-c3305ead139f'
    GROUP BY send_date_year1) AS B ON B.Year = A.Year
 LEFT OUTER JOIN
   (SELECT send_date_year1 AS 'Year',
           COUNT(DISTINCT sender_id) AS NoCorrEppToBudé
    FROM letters
-   WHERE recipient_id = 'budé_guillaume_viaf_105878228'
-     AND sender_id != 'unnamed_person_viaf_not_applicable'
+   WHERE recipient_id = 'c0b89c75-45b8-4b04-bfd7-25bfe9ed040b'
+     AND sender_id != 'be1dcbc4-3987-472a-b4a0-c3305ead139f'
    GROUP BY send_date_year1) AS C ON C.Year = A.Year
 GROUP BY A.Year
 ORDER BY A.Year ASC

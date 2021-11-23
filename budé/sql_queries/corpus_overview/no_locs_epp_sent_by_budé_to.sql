@@ -3,6 +3,6 @@ FROM budé_cdb_v1.locations
 WHERE locations.locations_id IN
     (SELECT DISTINCT target_loc_id
      FROM letters
-     WHERE sender_id = 'budé_guillaume_viaf_105878228'
+     WHERE sender_id = 'c0b89c75-45b8-4b04-bfd7-25bfe9ed040b'
        AND target_loc_id NOT LIKE 'unknown%'
      GROUP BY target_loc_id)

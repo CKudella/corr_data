@@ -6,12 +6,12 @@ FROM
   (SELECT COUNT(*) AS NoEPPfromBudé
    FROM budé_cdb_v1.letters
    WHERE letters_id NOT LIKE '%ck2'
-     AND sender_id = 'budé_guillaume_viaf_105878228') AS A,
+     AND sender_id = 'c0b89c75-45b8-4b04-bfd7-25bfe9ed040b') AS A,
 
   (SELECT COUNT(*) AS NoEPPtoBudé
    FROM budé_cdb_v1.letters
    WHERE letters_id NOT LIKE '%ck2'
-     AND recipient_id = 'budé_guillaume_viaf_105878228') AS B,
+     AND recipient_id = 'c0b89c75-45b8-4b04-bfd7-25bfe9ed040b') AS B,
 
   (SELECT COUNT(*) AS 'TotalNoEPP'
    FROM budé_cdb_v1.letters

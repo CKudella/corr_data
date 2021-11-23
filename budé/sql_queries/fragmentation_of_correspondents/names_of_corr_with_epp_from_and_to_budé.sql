@@ -6,7 +6,7 @@ WHERE name_in_edition NOT IN
      WHERE correspondents.correspondents_id NOT IN
          (SELECT DISTINCT recipient_id
           FROM letters
-          WHERE recipient_id != 'budé_guillaume_viaf_105878228')
+          WHERE recipient_id != 'c0b89c75-45b8-4b04-bfd7-25bfe9ed040b')
      GROUP BY name_in_edition)
   AND name_in_edition NOT IN
     (SELECT name_in_edition
@@ -15,5 +15,5 @@ WHERE name_in_edition NOT IN
      WHERE correspondents.correspondents_id NOT IN
          (SELECT DISTINCT sender_id
           FROM letters
-          WHERE sender_id != 'budé_guillaume_viaf_105878228')
+          WHERE sender_id != 'c0b89c75-45b8-4b04-bfd7-25bfe9ed040b')
      GROUP BY name_in_edition)

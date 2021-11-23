@@ -3,10 +3,10 @@ SELECT COUNT(correspondents_id) AS 'Total number of correspondents for whom the 
  WHERE correspondents_id IN
      (SELECT DISTINCT recipient_id
       FROM letters
-      WHERE sender_id = 'budé_guillaume_viaf_105878228'
-        AND recipient_id != 'unnamed_person_viaf_not_applicable')
+      WHERE sender_id = 'c0b89c75-45b8-4b04-bfd7-25bfe9ed040b'
+        AND recipient_id != 'be1dcbc4-3987-472a-b4a0-c3305ead139f')
    AND correspondents_id NOT IN
      (SELECT DISTINCT sender_id
       FROM letters
-      WHERE recipient_id = 'budé_guillaume_viaf_105878228'
-        AND sender_id != 'unnamed_person_viaf_not_applicable')
+      WHERE recipient_id = 'c0b89c75-45b8-4b04-bfd7-25bfe9ed040b'
+        AND sender_id != 'be1dcbc4-3987-472a-b4a0-c3305ead139f')

@@ -16,7 +16,7 @@ LEFT OUTER JOIN
    FROM budé_cdb_v1.letters,
         budé_cdb_v1.locations
    WHERE locations.locations_id = letters.target_loc_id
-     AND sender_id LIKE 'budé_guillaume_viaf_105878228'
+     AND sender_id LIKE 'c0b89c75-45b8-4b04-bfd7-25bfe9ed040b'
    GROUP BY locations_modern_state
    ORDER BY COUNT(DISTINCT recipient_id) DESC) AS A ON X.ModernState = A.ModernState
 LEFT OUTER JOIN
@@ -25,6 +25,6 @@ LEFT OUTER JOIN
    FROM budé_cdb_v1.letters,
         budé_cdb_v1.locations
    WHERE locations.locations_id = letters.source_loc_id
-     AND recipient_id LIKE 'budé_guillaume_viaf_105878228'
+     AND recipient_id LIKE 'c0b89c75-45b8-4b04-bfd7-25bfe9ed040b'
    GROUP BY locations_modern_state
    ORDER BY COUNT(DISTINCT sender_id) DESC) AS B ON X.ModernState = B.ModernState

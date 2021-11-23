@@ -4,7 +4,7 @@ SELECT B.locations_name_modern,
 FROM letters AS A,
      locations AS B
 WHERE A.source_loc_id = B.locations_id
-  AND A.recipient_id = 'budé_guillaume_viaf_105878228'
+  AND A.recipient_id = 'c0b89c75-45b8-4b04-bfd7-25bfe9ed040b'
   AND A.letters_id NOT LIKE '%ck2'
   AND A.source_loc_id NOT LIKE 'unknown%'
   AND A.source_loc_id IN
@@ -15,7 +15,7 @@ WHERE A.source_loc_id = B.locations_id
         FROM letters AS D
         JOIN locations AS E ON E.locations_id = D.source_loc_id
         WHERE D.letters_id NOT LIKE '%ck2'
-          AND D.recipient_id = 'budé_guillaume_viaf_105878228'
+          AND D.recipient_id = 'c0b89c75-45b8-4b04-bfd7-25bfe9ed040b'
           AND D.source_loc_id NOT LIKE 'unknown%'
         GROUP BY D.source_loc_id
         ORDER BY COUNT(D.source_loc_id) DESC) AS C

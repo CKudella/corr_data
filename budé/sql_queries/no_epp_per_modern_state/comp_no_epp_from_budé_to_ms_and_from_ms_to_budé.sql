@@ -7,7 +7,7 @@ FROM (
               budé_cdb_v1.locations AS XB
          WHERE XB.locations_id = XA.target_loc_id
            AND XA.letters_id NOT LIKE '%ck2'
-           AND XA.sender_id = 'budé_guillaume_viaf_105878228'
+           AND XA.sender_id = 'c0b89c75-45b8-4b04-bfd7-25bfe9ed040b'
          GROUP BY XB.locations_modern_state
          ORDER BY COUNT(*) DESC)
       UNION
@@ -16,7 +16,7 @@ FROM (
               budé_cdb_v1.locations AS YB
          WHERE YB.locations_id = YA.source_loc_id
            AND YA.letters_id NOT LIKE '%ck2'
-           AND YA.recipient_id = 'budé_guillaume_viaf_105878228'
+           AND YA.recipient_id = 'c0b89c75-45b8-4b04-bfd7-25bfe9ed040b'
          GROUP BY YB.locations_modern_state
          ORDER BY YB.locations_modern_state DESC)) AS Z
 LEFT OUTER JOIN
@@ -26,7 +26,7 @@ LEFT OUTER JOIN
         budé_cdb_v1.locations
    WHERE locations.locations_id = letters.target_loc_id
      AND letters_id NOT LIKE '%ck2'
-     AND sender_id = 'budé_guillaume_viaf_105878228'
+     AND sender_id = 'c0b89c75-45b8-4b04-bfd7-25bfe9ed040b'
    GROUP BY locations_modern_state
    ORDER BY COUNT(*) DESC) AS B ON B.ModernState = Z.ModernState
 LEFT OUTER JOIN
@@ -36,7 +36,7 @@ LEFT OUTER JOIN
         budé_cdb_v1.locations
    WHERE locations.locations_id = letters.source_loc_id
      AND letters_id NOT LIKE '%ck2'
-     AND recipient_id = 'budé_guillaume_viaf_105878228'
+     AND recipient_id = 'c0b89c75-45b8-4b04-bfd7-25bfe9ed040b'
    GROUP BY locations_modern_state
    ORDER BY COUNT(*) DESC) AS C ON C.ModernState = Z.ModernState
 ORDER BY (B.NoEppFromBudé + C.NoEppToBudé) DESC
