@@ -21,7 +21,7 @@ LEFT OUTER JOIN
           COUNT(DISTINCT XA.sender_id) AS NoCorrToPirck
    FROM letters AS XA
    JOIN locations AS XB ON XB.locations_id = XA.source_loc_id
-   WHERE XA.sender_id != 'pirckheimer_willibald_viaf_27173507'
+   WHERE XA.sender_id != 'd9233b24-a98c-4279-8065-e2ab70c0d080'
     AND XA.source_loc_id NOT LIKE 'unknown%'
    GROUP BY XA.source_loc_id
    ORDER BY COUNT(DISTINCT sender_id) DESC) AS X ON X.locations_id = Z.locations_id
@@ -30,7 +30,7 @@ LEFT OUTER JOIN
           COUNT(DISTINCT YA.recipient_id) AS NoCorrFromPirck
    FROM letters AS YA
    JOIN locations AS YB ON YB.locations_id = YA.target_loc_id
-   WHERE YA.sender_id = 'pirckheimer_willibald_viaf_27173507'
+   WHERE YA.sender_id = 'd9233b24-a98c-4279-8065-e2ab70c0d080'
     AND YA.target_loc_id NOT LIKE 'unknown%'
    GROUP BY YA.target_loc_id
    ORDER BY COUNT(DISTINCT recipient_id) DESC) AS Y ON Y.locations_id = Z.locations_id

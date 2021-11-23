@@ -6,7 +6,7 @@ WHERE name_in_edition NOT IN
      WHERE correspondents.correspondents_id NOT IN
          (SELECT DISTINCT recipient_id
           FROM letters
-          WHERE recipient_id != 'pirckheimer_willibald_viaf_27173507')
+          WHERE recipient_id != 'd9233b24-a98c-4279-8065-e2ab70c0d080')
      GROUP BY name_in_edition)
   AND name_in_edition NOT IN
     (SELECT name_in_edition
@@ -15,5 +15,5 @@ WHERE name_in_edition NOT IN
      WHERE correspondents.correspondents_id NOT IN
          (SELECT DISTINCT sender_id
           FROM letters
-          WHERE sender_id != 'pirckheimer_willibald_viaf_27173507')
+          WHERE sender_id != 'd9233b24-a98c-4279-8065-e2ab70c0d080')
      GROUP BY name_in_edition)

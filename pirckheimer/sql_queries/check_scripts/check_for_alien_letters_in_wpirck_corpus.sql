@@ -1,4 +1,4 @@
 SELECT *
 FROM letters
-WHERE sender_id <> 'pirckheimer_willibald_viaf_27173507'
-  AND recipient_id <> 'pirckheimer_willibald_viaf_27173507'
+WHERE sender_id <> 'd9233b24-a98c-4279-8065-e2ab70c0d080'
+  AND recipient_id <> 'd9233b24-a98c-4279-8065-e2ab70c0d080'

@@ -3,6 +3,6 @@ FROM locations
 WHERE locations.locations_id IN
     (SELECT DISTINCT target_loc_id
      FROM letters
-     WHERE sender_id = 'pirckheimer_willibald_viaf_27173507'
+     WHERE sender_id = 'd9233b24-a98c-4279-8065-e2ab70c0d080'
        AND target_loc_id NOT LIKE 'unknown%'
      GROUP BY target_loc_id)

@@ -10,7 +10,7 @@ LEFT OUTER JOIN
    FROM letters AS XA
    WHERE XA.letters_id NOT REGEXP '[0-7]ck2|ck3|ck4|ck5|ck6|ck7|ck8]'
      AND XA.send_date_inferred = '1'
-     AND XA.sender_id = 'pirckheimer_willibald_viaf_27173507'
+     AND XA.sender_id = 'd9233b24-a98c-4279-8065-e2ab70c0d080'
    GROUP BY XA.send_date_year1) AS X ON X.Year = Z.Year
 LEFT OUTER JOIN
   (SELECT DISTINCT YA.send_date_year1 AS YEAR,
@@ -18,6 +18,6 @@ LEFT OUTER JOIN
    FROM letters YA
    WHERE YA.letters_id NOT REGEXP '[0-7]ck2|ck3|ck4|ck5|ck6|ck7|ck8]'
      AND YA.send_date_inferred = '0'
-     AND YA.sender_id = 'pirckheimer_willibald_viaf_27173507'
+     AND YA.sender_id = 'd9233b24-a98c-4279-8065-e2ab70c0d080'
    GROUP BY YA.send_date_year1) AS Y ON Y.Year = Z.Year
 ORDER BY Z.Year ASC

@@ -10,41 +10,41 @@ FROM
    WHERE correspondents_id IN
        (SELECT DISTINCT recipient_id
         FROM letters
-        WHERE sender_id = 'pirckheimer_willibald_viaf_27173507'
-          AND recipient_id != 'unnamed_person_viaf_not_applicable')
+        WHERE sender_id = 'd9233b24-a98c-4279-8065-e2ab70c0d080'
+          AND recipient_id != 'be1dcbc4-3987-472a-b4a0-c3305ead139f')
      AND correspondents_id NOT IN
        (SELECT DISTINCT sender_id
         FROM letters
-        WHERE recipient_id = 'pirckheimer_willibald_viaf_27173507'
-          AND sender_id != 'unnamed_person_viaf_not_applicable')) AS A,
+        WHERE recipient_id = 'd9233b24-a98c-4279-8065-e2ab70c0d080'
+          AND sender_id != 'be1dcbc4-3987-472a-b4a0-c3305ead139f')) AS A,
 
   (SELECT COUNT(correspondents_id) AS NoCorrOnlyEpptoPirck
    FROM wpirck_cdb_v1.correspondents
    WHERE correspondents_id IN
        (SELECT DISTINCT sender_id
         FROM letters
-        WHERE recipient_id = 'pirckheimer_willibald_viaf_27173507'
-          AND sender_id != 'unnamed_person_viaf_not_applicable')
+        WHERE recipient_id = 'd9233b24-a98c-4279-8065-e2ab70c0d080'
+          AND sender_id != 'be1dcbc4-3987-472a-b4a0-c3305ead139f')
      AND correspondents_id NOT IN
        (SELECT DISTINCT recipient_id
         FROM letters
-        WHERE sender_id = 'pirckheimer_willibald_viaf_27173507'
-          AND recipient_id != 'unnamed_person_viaf_not_applicable') ) AS B,
+        WHERE sender_id = 'd9233b24-a98c-4279-8065-e2ab70c0d080'
+          AND recipient_id != 'be1dcbc4-3987-472a-b4a0-c3305ead139f') ) AS B,
 
   (SELECT COUNT(correspondents_id) AS NoCorrReciproc
    FROM wpirck_cdb_v1.correspondents
    WHERE correspondents_id IN
        (SELECT DISTINCT sender_id
         FROM letters
-        WHERE recipient_id = 'pirckheimer_willibald_viaf_27173507'
-          AND sender_id != 'unnamed_person_viaf_not_applicable')
+        WHERE recipient_id = 'd9233b24-a98c-4279-8065-e2ab70c0d080'
+          AND sender_id != 'be1dcbc4-3987-472a-b4a0-c3305ead139f')
      AND correspondents_id IN
        (SELECT DISTINCT recipient_id
         FROM letters
-        WHERE sender_id = 'pirckheimer_willibald_viaf_27173507'
-          AND recipient_id != 'unnamed_person_viaf_not_applicable')) AS C,
+        WHERE sender_id = 'd9233b24-a98c-4279-8065-e2ab70c0d080'
+          AND recipient_id != 'be1dcbc4-3987-472a-b4a0-c3305ead139f')) AS C,
 
   (SELECT COUNT(correspondents_id) AS TotalNoCorr
    FROM wpirck_cdb_v1.correspondents
-   WHERE correspondents_id NOT IN ('pirckheimer_willibald_viaf_27173507',
-                                   'unnamed_person_viaf_not_applicable')) AS D
+   WHERE correspondents_id NOT IN ('d9233b24-a98c-4279-8065-e2ab70c0d080',
+                                   'be1dcbc4-3987-472a-b4a0-c3305ead139f')) AS D

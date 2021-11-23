@@ -16,7 +16,7 @@ LEFT OUTER JOIN
    FROM letters,
         locations
    WHERE locations.locations_id = letters.target_loc_id
-     AND sender_id LIKE 'pirckheimer_willibald_viaf_27173507'
+     AND sender_id LIKE 'd9233b24-a98c-4279-8065-e2ab70c0d080'
    GROUP BY locations_modern_state
    ORDER BY COUNT(DISTINCT recipient_id) DESC) AS A ON X.ModernState = A.ModernState
 LEFT OUTER JOIN
@@ -25,6 +25,6 @@ LEFT OUTER JOIN
    FROM letters,
         locations
    WHERE locations.locations_id = letters.source_loc_id
-     AND recipient_id LIKE 'pirckheimer_willibald_viaf_27173507'
+     AND recipient_id LIKE 'd9233b24-a98c-4279-8065-e2ab70c0d080'
    GROUP BY locations_modern_state
    ORDER BY COUNT(DISTINCT sender_id) DESC) AS B ON X.ModernState = B.ModernState

@@ -11,4 +11,4 @@ SELECT letters_id,
 FROM wpirck_cdb_v1.letters
 LEFT JOIN wpirck_cdb_v1.locations AS SourceLoc ON SourceLoc.locations_id = letters.source_loc_id
 LEFT JOIN wpirck_cdb_v1.locations AS TargetLoc ON TargetLoc.locations_id = letters.target_loc_id
-WHERE recipient_id = 'pirckheimer_willibald_viaf_27173507'
+WHERE recipient_id = 'd9233b24-a98c-4279-8065-e2ab70c0d080'

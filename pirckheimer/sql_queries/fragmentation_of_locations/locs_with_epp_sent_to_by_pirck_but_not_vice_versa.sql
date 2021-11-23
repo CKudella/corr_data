@@ -9,8 +9,8 @@ SELECT DISTINCT A.target_loc_id,
 FROM letters AS A
 LEFT JOIN locations AS SourceLoc ON SourceLoc.locations_id = A.source_loc_id
 LEFT JOIN locations AS TargetLoc ON TargetLoc.locations_id = A.target_loc_id
-WHERE A.sender_id = 'pirckheimer_willibald_viaf_27173507'
+WHERE A.sender_id = 'd9233b24-a98c-4279-8065-e2ab70c0d080'
   AND A.target_loc_id NOT IN
     (SELECT DISTINCT B.source_loc_id
      FROM letters AS B
-     WHERE B.sender_id != 'pirckheimer_willibald_viaf_27173507')
+     WHERE B.sender_id != 'd9233b24-a98c-4279-8065-e2ab70c0d080')
