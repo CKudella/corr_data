@@ -16,29 +16,28 @@ LEFT JOIN
   (SELECT send_date_year1,
           COUNT(*) AS EPPEtX
    FROM era_cdb_v3.letters
-   WHERE recipient_id = 'alciati_andrea_viaf_51699991'
-     AND sender_id = 'erasmus_desiderius_viaf_95982394'
+   WHERE recipient_id = '639f3ce8-be9f-4993-b200-3fcde3a3b4e9'
+     AND sender_id = '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf'
    GROUP BY send_date_year1) AS EtX ON EtX.send_date_year1 = TE.Year
 LEFT JOIN
   (SELECT send_date_year1,
           COUNT(*) AS EPPXtE
    FROM era_cdb_v3.letters
-   WHERE sender_id = 'alciati_andrea_viaf_51699991'
-     AND recipient_id = 'erasmus_desiderius_viaf_95982394'
+   WHERE sender_id = '639f3ce8-be9f-4993-b200-3fcde3a3b4e9'
+     AND recipient_id = '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf'
    GROUP BY send_date_year1) AS XtE ON XtE.send_date_year1 = TE.Year
 LEFT JOIN
   (SELECT send_date_year1,
           COUNT(*) AS EPPBtX
    FROM budé_cdb_v1.letters
-   WHERE recipient_id = 'alciati_andrea_viaf_51699991'
-     AND sender_id = 'budé_guillaume_viaf_105878228'
+   WHERE recipient_id = '639f3ce8-be9f-4993-b200-3fcde3a3b4e9'
+     AND sender_id = 'c0b89c75-45b8-4b04-bfd7-25bfe9ed040b'
    GROUP BY send_date_year1) AS PtX ON PtX.send_date_year1 = TE.Year
 LEFT JOIN
   (SELECT send_date_year1,
           COUNT(*) AS EPPXtB
    FROM budé_cdb_v1.letters
-   WHERE sender_id = 'alciati_andrea_viaf_51699991'
-     AND recipient_id = 'budé_guillaume_viaf_105878228'
+   WHERE sender_id = '639f3ce8-be9f-4993-b200-3fcde3a3b4e9'
+     AND recipient_id = 'c0b89c75-45b8-4b04-bfd7-25bfe9ed040b'
    GROUP BY send_date_year1) AS XtP ON XtP.send_date_year1 = TE.Year
 ORDER BY TE.Year ASC
-

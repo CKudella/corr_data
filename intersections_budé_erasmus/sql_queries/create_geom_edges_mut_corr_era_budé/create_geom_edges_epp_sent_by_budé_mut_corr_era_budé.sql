@@ -12,13 +12,13 @@ SELECT letters_id,
 FROM budé_cdb_v1.letters AS L
 LEFT JOIN budé_cdb_v1.locations AS SourceLoc ON SourceLoc.locations_id = L.source_loc_id
 LEFT JOIN budé_cdb_v1.locations AS TargetLoc ON TargetLoc.locations_id = L.target_loc_id
-WHERE L.sender_id = 'budé_guillaume_viaf_105878228'
+WHERE L.sender_id = 'c0b89c75-45b8-4b04-bfd7-25bfe9ed040b'
   AND recipient_id IN
     (SELECT E.correspondents_id
      FROM budé_cdb_v1.correspondents AS B,
           era_cdb_v3.correspondents AS E
      WHERE B.correspondents_id = E.correspondents_id
-       AND B.correspondents_id NOT IN ('unnamed_person_viaf_not_applicable')
-       AND E.correspondents_id NOT IN ('unnamed_person_viaf_not_applicable'))
+       AND B.correspondents_id NOT IN ('be1dcbc4-3987-472a-b4a0-c3305ead139f')
+       AND E.correspondents_id NOT IN ('be1dcbc4-3987-472a-b4a0-c3305ead139f'))
   AND source_loc_id NOT LIKE 'unknown%'
   AND target_loc_id NOT LIKE 'unknown%'

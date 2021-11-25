@@ -8,7 +8,7 @@ FROM budé_cdb_v1.locations AS BLOC
 WHERE BLOC.locations_id IN
     (SELECT DISTINCT BLETA.source_loc_id
      FROM budé_cdb_v1.letters BLETA
-     WHERE BLETA.recipient_id = 'budé_guillaume_viaf_105878228'
+     WHERE BLETA.recipient_id = 'c0b89c75-45b8-4b04-bfd7-25bfe9ed040b'
        AND BLETA.sender_id IN
          (SELECT X.correspondents_id
           FROM budé_cdb_v1.correspondents AS X
@@ -23,7 +23,7 @@ WHERE BLOC.locations_id IN
   OR BLOC.locations_id IN
     (SELECT DISTINCT BLETB.target_loc_id
      FROM budé_cdb_v1.letters BLETB
-     WHERE BLETB.recipient_id = 'budé_guillaume_viaf_105878228'
+     WHERE BLETB.recipient_id = 'c0b89c75-45b8-4b04-bfd7-25bfe9ed040b'
        AND BLETB.sender_id IN
          (SELECT X.correspondents_id
           FROM budé_cdb_v1.correspondents AS X
