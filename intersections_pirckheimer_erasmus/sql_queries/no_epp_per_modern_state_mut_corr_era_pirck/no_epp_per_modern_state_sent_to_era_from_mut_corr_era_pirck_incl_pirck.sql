@@ -3,7 +3,7 @@ SELECT DISTINCT locations.locations_modern_state AS 'Name Modern State',
 FROM era_cdb_v3.letters
 JOIN era_cdb_v3.locations ON locations.locations_id = letters.source_loc_id
 WHERE letters_id NOT LIKE '%ck2'
-  AND recipient_id = 'erasmus_desiderius_viaf_95982394'
+  AND recipient_id = '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf'
   AND sender_id IN
     (SELECT X.correspondents_id
      FROM era_cdb_v3.correspondents AS X

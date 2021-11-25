@@ -2,7 +2,7 @@ SELECT COUNT(*) AS 'Total number of letters sent from Erasmus to mutual correspo
 FROM
   (SELECT *
    FROM era_cdb_v3.letters) AS L
-WHERE L.sender_id = 'erasmus_desiderius_viaf_95982394'
+WHERE L.sender_id = '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf'
   AND L.recipient_id IN
     (SELECT X.correspondents_id
      FROM wpirck_cdb_v1.correspondents AS X
@@ -11,5 +11,5 @@ WHERE L.sender_id = 'erasmus_desiderius_viaf_95982394'
           FROM era_cdb_v3.correspondents AS E,
                wpirck_cdb_v1.correspondents AS P
           WHERE E.correspondents_id = P.correspondents_id
-            AND E.correspondents_id NOT LIKE 'unnamed_person_viaf_not_applicable'
-            AND P.correspondents_id NOT LIKE 'unnamed_person_viaf_not_applicable'))
+            AND E.correspondents_id NOT LIKE 'be1dcbc4-3987-472a-b4a0-c3305ead139f'
+            AND P.correspondents_id NOT LIKE 'be1dcbc4-3987-472a-b4a0-c3305ead139f'))

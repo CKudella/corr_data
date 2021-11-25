@@ -16,28 +16,28 @@ LEFT JOIN
   (SELECT send_date_year1,
           COUNT(*) AS EPPEtX
    FROM era_cdb_v3.letters
-   WHERE recipient_id = 'frederick_iii_elector_of_saxony_viaf_316392243'
-     AND sender_id = 'erasmus_desiderius_viaf_95982394'
+   WHERE recipient_id = '853e25f4-7e65-49c4-a737-7fdba57aa66c'
+     AND sender_id = '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf'
    GROUP BY send_date_year1) AS EtX ON EtX.send_date_year1 = TE.Year
 LEFT JOIN
   (SELECT send_date_year1,
           COUNT(*) AS EPPXtE
    FROM era_cdb_v3.letters
-   WHERE sender_id = 'frederick_iii_elector_of_saxony_viaf_316392243'
-     AND recipient_id = 'erasmus_desiderius_viaf_95982394'
+   WHERE sender_id = '853e25f4-7e65-49c4-a737-7fdba57aa66c'
+     AND recipient_id = '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf'
    GROUP BY send_date_year1) AS XtE ON XtE.send_date_year1 = TE.Year
 LEFT JOIN
   (SELECT send_date_year1,
           COUNT(*) AS EPPPtX
    FROM wpirck_cdb_v1.letters
-   WHERE recipient_id = 'frederick_iii_elector_of_saxony_viaf_316392243'
-     AND sender_id = 'pirckheimer_willibald_viaf_27173507'
+   WHERE recipient_id = '853e25f4-7e65-49c4-a737-7fdba57aa66c'
+     AND sender_id = 'd9233b24-a98c-4279-8065-e2ab70c0d080'
    GROUP BY send_date_year1) AS PtX ON PtX.send_date_year1 = TE.Year
 LEFT JOIN
   (SELECT send_date_year1,
           COUNT(*) AS EPPXtP
    FROM wpirck_cdb_v1.letters
-   WHERE sender_id = 'frederick_iii_elector_of_saxony_viaf_316392243'
-     AND recipient_id = 'pirckheimer_willibald_viaf_27173507'
+   WHERE sender_id = '853e25f4-7e65-49c4-a737-7fdba57aa66c'
+     AND recipient_id = 'd9233b24-a98c-4279-8065-e2ab70c0d080'
    GROUP BY send_date_year1) AS XtP ON XtP.send_date_year1 = TE.Year
 ORDER BY TE.Year ASC

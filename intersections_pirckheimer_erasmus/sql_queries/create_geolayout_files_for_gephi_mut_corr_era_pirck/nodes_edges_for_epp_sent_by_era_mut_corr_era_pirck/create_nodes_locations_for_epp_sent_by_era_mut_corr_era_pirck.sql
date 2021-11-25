@@ -8,7 +8,7 @@ FROM era_cdb_v3.locations AS ELOC
 WHERE ELOC.locations_id IN
     (SELECT DISTINCT ELETA.source_loc_id
      FROM era_cdb_v3.letters AS ELETA
-     WHERE ELETA.sender_id = 'erasmus_desiderius_viaf_95982394'
+     WHERE ELETA.sender_id = '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf'
        AND ELETA.recipient_id IN
          (SELECT X.correspondents_id
           FROM wpirck_cdb_v1.correspondents AS X
@@ -23,7 +23,7 @@ WHERE ELOC.locations_id IN
   OR ELOC.locations_id IN
     (SELECT DISTINCT ELETB.target_loc_id
      FROM era_cdb_v3.letters AS ELETB
-     WHERE ELETB.sender_id = 'erasmus_desiderius_viaf_95982394'
+     WHERE ELETB.sender_id = '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf'
        AND ELETB.recipient_id IN
          (SELECT X.correspondents_id
           FROM wpirck_cdb_v1.correspondents AS X

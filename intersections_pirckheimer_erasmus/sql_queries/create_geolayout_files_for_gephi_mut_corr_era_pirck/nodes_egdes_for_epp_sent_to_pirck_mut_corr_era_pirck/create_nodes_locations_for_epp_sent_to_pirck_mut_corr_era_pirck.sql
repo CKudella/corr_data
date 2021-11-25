@@ -8,7 +8,7 @@ FROM wpirck_cdb_v1.locations AS PLOC
 WHERE PLOC.locations_id IN
     (SELECT DISTINCT PLETA.source_loc_id
      FROM wpirck_cdb_v1.letters PLETA
-     WHERE PLETA.recipient_id = 'pirckheimer_willibald_viaf_27173507'
+     WHERE PLETA.recipient_id = 'd9233b24-a98c-4279-8065-e2ab70c0d080'
        AND PLETA.sender_id IN
          (SELECT X.correspondents_id
           FROM wpirck_cdb_v1.correspondents AS X
@@ -23,7 +23,7 @@ WHERE PLOC.locations_id IN
   OR PLOC.locations_id IN
     (SELECT DISTINCT PLETB.target_loc_id
      FROM wpirck_cdb_v1.letters PLETB
-     WHERE PLETB.recipient_id = 'pirckheimer_willibald_viaf_27173507'
+     WHERE PLETB.recipient_id = 'd9233b24-a98c-4279-8065-e2ab70c0d080'
        AND PLETB.sender_id IN
          (SELECT X.correspondents_id
           FROM wpirck_cdb_v1.correspondents AS X

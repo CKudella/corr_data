@@ -31,8 +31,8 @@ WHERE LOC.locations_id IN
                FROM wpirck_cdb_v1.correspondents AS P,
                     era_cdb_v3.correspondents AS E
                WHERE P.correspondents_id = E.correspondents_id
-                 AND P.correspondents_id NOT LIKE 'unnamed_person_viaf_not_applicable'
-                 AND E.correspondents_id NOT LIKE 'unnamed_person_viaf_not_applicable'))
+                 AND P.correspondents_id NOT LIKE 'be1dcbc4-3987-472a-b4a0-c3305ead139f'
+                 AND E.correspondents_id NOT LIKE 'be1dcbc4-3987-472a-b4a0-c3305ead139f'))
        AND L.recipient_id IN
          (SELECT X.correspondents_id
           FROM era_cdb_v3.correspondents AS X
@@ -41,5 +41,5 @@ WHERE LOC.locations_id IN
                FROM wpirck_cdb_v1.correspondents AS P,
                     era_cdb_v3.correspondents AS E
                WHERE P.correspondents_id = E.correspondents_id
-                 AND P.correspondents_id NOT LIKE 'unnamed_person_viaf_not_applicable'
-                 AND E.correspondents_id NOT LIKE 'unnamed_person_viaf_not_applicable')))
+                 AND P.correspondents_id NOT LIKE 'be1dcbc4-3987-472a-b4a0-c3305ead139f'
+                 AND E.correspondents_id NOT LIKE 'be1dcbc4-3987-472a-b4a0-c3305ead139f')))

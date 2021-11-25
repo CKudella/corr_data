@@ -3,7 +3,7 @@ SELECT DISTINCT locations.locations_modern_state AS 'Name Modern State',
 FROM wpirck_cdb_v1.letters
 JOIN wpirck_cdb_v1.locations ON locations.locations_id = letters.source_loc_id
 WHERE letters_id NOT REGEXP '[0-7]ck2|ck3|ck4|ck5|ck6|ck7|ck8]'
-  AND recipient_id = 'pirckheimer_willibald_viaf_27173507'
+  AND recipient_id = 'd9233b24-a98c-4279-8065-e2ab70c0d080'
   AND sender_id IN
     (SELECT X.correspondents_id
      FROM era_cdb_v3.correspondents AS X
@@ -12,6 +12,6 @@ WHERE letters_id NOT REGEXP '[0-7]ck2|ck3|ck4|ck5|ck6|ck7|ck8]'
           FROM wpirck_cdb_v1.correspondents AS P,
                era_cdb_v3.correspondents AS E
           WHERE P.correspondents_id = E.correspondents_id))
-  AND sender_id != 'erasmus_desiderius_viaf_95982394'
+  AND sender_id != '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf'
 GROUP BY locations_modern_state
 ORDER BY COUNT(letters.source_loc_id) DESC
