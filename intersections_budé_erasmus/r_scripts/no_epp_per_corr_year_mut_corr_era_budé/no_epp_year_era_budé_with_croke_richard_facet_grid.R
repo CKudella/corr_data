@@ -10,7 +10,7 @@ getwd()
 setwd("../query_results/")
 
 # read data
-data<-read.csv("no_epp_per_corr_year_mut_corr_era_budé/no_epp_year_era_budé_with_croke_richard_viaf_67250364.csv", fileEncoding="UTF-8", na.strings=c("NULL"))
+data<-read.csv("no_epp_per_corr_year_mut_corr_era_budé/no_epp_year_era_budé_with_croke_richard.csv", fileEncoding="UTF-8", na.strings=c("NULL"))
 
 # set R plot specific labels
 labels <- c(EPPEtX = "Erasmus to Richard CROKE ", EPPXtE = "Richard CROKE  to Erasmus", EPPBtX = "Budé to Richard CROKE ", EPPXtB = "Richard CROKE  to Budé")
@@ -36,8 +36,7 @@ getwd()
 setwd("../r_plots/")
 
 # save plot in multiple formats
-ggsave("no_epp_year_era_budé_with_croke_richard_viaf_67250364_facet_grid.pdf", plot = last_plot(), scale = 1, width = 11.7, height = 4.15, units = "in", dpi = 600, limitsize = TRUE)
-ggsave("no_epp_year_era_budé_with_croke_richard_viaf_67250364_facet_grid.png", plot = last_plot(), scale = 1, width = 11.7, height = 4.15, units = "in", dpi = 600, limitsize = TRUE)
-ggsave("no_epp_year_era_budé_with_croke_richard_viaf_67250364_facet_grid.eps", plot = last_plot(), scale = 1, width = 11.7, height = 4.15, units = "in", dpi = 600, limitsize = TRUE)
-ggsave("no_epp_year_era_budé_with_croke_richard_viaf_67250364_facet_grid.svg", plot = last_plot(), scale = 1, width = 11.7, height = 4.15, units = "in", dpi = 600, limitsize = TRUE)
-
+ggsave("no_epp_year_era_budé_with_croke_richard_facet_grid.pdf", plot = last_plot(), scale = 1, width = 11.7, height = 4.15, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("no_epp_year_era_budé_with_croke_richard_facet_grid.png", plot = last_plot(), scale = 1, width = 11.7, height = 4.15, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("no_epp_year_era_budé_with_croke_richard_facet_grid.eps", plot = last_plot(), scale = 1, width = 11.7, height = 4.15, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("no_epp_year_era_budé_with_croke_richard_facet_grid.svg", plot = last_plot(), scale = 1, width = 11.7, height = 4.15, units = "in", dpi = 600, limitsize = TRUE)
