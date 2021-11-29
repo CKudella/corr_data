@@ -13,7 +13,7 @@ setwd("../query_results/")
 data<-read.csv("no_epp_per_corr_year_mut_corr_era_pirck/no_epp_year_era_pirck_with_pellicanus_konrad.csv", fileEncoding="UTF-8", na.strings=c("NULL"))
 
 # set R plot specific labels
-labels <- c(EPPEtX = "Erasmus to Conradus PELLICANUS ", EPPXtE = "Conradus PELLICANUS to Erasmus", EPPPtX = "Pirckheimer to Conradus PELLICANUS ", EPPXtP = "Conradus PELLICANUS to Pirckheimer")
+labels <- c(EPPEtX = "Erasmus to Conradus PELLICANUS", EPPXtE = "Conradus PELLICANUS to Erasmus", EPPPtX = "Pirckheimer to Conradus PELLICANUS", EPPXtP = "Conradus PELLICANUS to Pirckheimer")
 
 # Melt (Wide to Long)
 data_long <- melt(data, id.vars= c("Year"))
