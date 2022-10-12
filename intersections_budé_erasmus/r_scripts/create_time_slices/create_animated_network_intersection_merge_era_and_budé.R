@@ -1,10 +1,6 @@
 require(readr)
 require(lubridate)
 require(ndtv)
-library(readr)
-library(lubridate)
-library(ndtv)
-
 
 # set working directory
 getwd()
@@ -24,10 +20,10 @@ mutcorr$Label <- gsub("^(\\W+E)", "E", mutcorr$Label)
 mutcorr$colour <- "#c3161F"
 
 #assign specific colour for erasmus
-mutcorr$colour <- ifelse(mutcorr$Id == "erasmus_desiderius_viaf_95982394", as.character("#3c93AF"), mutcorr$colour)
+mutcorr$colour <- ifelse(mutcorr$Id == "17c580aa-3ba7-4851-8f26-9b3a0ebeadbf", as.character("#3c93AF"), mutcorr$colour)
 
 #assign specific colour for budé
-mutcorr$colour <- ifelse(mutcorr$Id == "budé_guillaume_viaf_105878228", as.character("#D5ab5b"), mutcorr$colour)
+mutcorr$colour <- ifelse(mutcorr$Id == "c0b89c75-45b8-4b04-bfd7-25bfe9ed040b", as.character("#D5ab5b"), mutcorr$colour)
 
 # assign colours to edges according to the source
 mutepp$colour <- mutcorr$colour[match(mutepp$Source,mutcorr$Id)]
@@ -71,7 +67,7 @@ mutepp$edge.id <- seq.int(nrow(mutepp))
 mutepp <- subset(mutepp, !is.na(onset))
 
 # initialze network
-network <- network.initialize(n = 28)
+network <- network.initialize(n = nrow(mutcorr))
 
 # copy label column to vertices
 set.vertex.attribute(network,"vertex.names",as.vector(mutcorr$Label))
