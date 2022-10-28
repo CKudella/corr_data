@@ -8,9 +8,9 @@ WHERE source_loc_id = locations_id
   AND letters_id NOT LIKE '%ck2'
   AND source_loc_id NOT LIKE 'unknown%'
   AND locations.locations_name_modern IN ('Basel',
-                                          'Freiburg',
+                                          'Freiburg im Breisgau',
                                           'Leuven',
-                                          'Antwerpen',
+                                          'Antwerp',
                                           'Paris')
 GROUP BY locations_name_modern,
          send_date_year1
