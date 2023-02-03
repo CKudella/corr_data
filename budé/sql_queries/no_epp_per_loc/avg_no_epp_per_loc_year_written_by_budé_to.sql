@@ -14,6 +14,7 @@ FROM
    WHERE letters_id NOT LIKE '%ck2'
      AND sender_id = 'c0b89c75-45b8-4b04-bfd7-25bfe9ed040b'
      AND target_loc_id NOT LIKE 'unknown%'
+     AND send_date_year1 NOT NULL
    GROUP BY target_loc_id
    ORDER BY COUNT DESC) AS X
 INNER JOIN
@@ -24,5 +25,6 @@ INNER JOIN
    WHERE letters_id NOT LIKE '%ck2'
      AND sender_id = 'c0b89c75-45b8-4b04-bfd7-25bfe9ed040b'
      AND target_loc_id NOT LIKE 'unknown%'
+     AND send_date_year1 NOT NULL
    GROUP BY target_loc_id
    ORDER BY COUNT DESC) AS Y ON X.locations_name_modern = Y.locations_name_modern
