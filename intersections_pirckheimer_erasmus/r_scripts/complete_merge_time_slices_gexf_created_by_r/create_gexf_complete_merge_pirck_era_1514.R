@@ -2,10 +2,6 @@ require(readr)
 require(plyr)
 require(igraph)
 require(rgexf)
-library(readr)
-library(plyr)
-library(igraph)
-library(rgexf)
 
 # set working directory
 getwd()

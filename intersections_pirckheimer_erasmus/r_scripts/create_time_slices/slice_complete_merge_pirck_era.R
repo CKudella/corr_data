@@ -1,7 +1,5 @@
 require(readr)
 require(tidyverse)
-library(readr)
-library(tidyverse)
 
 # set working directory
 getwd()
