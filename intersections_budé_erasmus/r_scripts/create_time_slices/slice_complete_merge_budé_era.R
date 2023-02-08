@@ -30,6 +30,126 @@ allcorr$colour <- ifelse(allcorr$Id == "17c580aa-3ba7-4851-8f26-9b3a0ebeadbf", a
 allcorr$colour <- ifelse(allcorr$Id == "c0b89c75-45b8-4b04-bfd7-25bfe9ed040b", as.character("#D5AB5B"), allcorr$colour)
 
 # ------------------------------
+# subset letters for 1484
+letters1484 <- subset(allepp, send_date_year1 == 1484)
+
+# subset correspondents for 1484
+corr1484 <- subset(allcorr, allcorr$Id %in% letters1484$Source | allcorr$Id %in% letters1484$Target)
+
+# write file for letters
+write.csv(letters1484, file = "merge_scripts/complete_merge/time_slice_1484_complete_merge_budé_and_era_letters_corr_as_nodes.csv", fileEncoding="UTF-8", row.names=FALSE)
+
+# write file for correspondents
+write.csv(corr1484, file = "merge_scripts/complete_merge/time_slice_1484_complete_merge_budé_and_era_correspondents.csv", fileEncoding="UTF-8", row.names=FALSE)
+# ------------------------------
+# subset letters for 1487
+letters1487 <- subset(allepp, send_date_year1 == 1487)
+
+# subset correspondents for 1487
+corr1487 <- subset(allcorr, allcorr$Id %in% letters1487$Source | allcorr$Id %in% letters1487$Target)
+
+# write file for letters
+write.csv(letters1487, file = "merge_scripts/complete_merge/time_slice_1487_complete_merge_budé_and_era_letters_corr_as_nodes.csv", fileEncoding="UTF-8", row.names=FALSE)
+
+# write file for correspondents
+write.csv(corr1487, file = "merge_scripts/complete_merge/time_slice_1487_complete_merge_budé_and_era_correspondents.csv", fileEncoding="UTF-8", row.names=FALSE)
+#-------------------------------
+# subset letters for 1488
+letters1488 <- subset(allepp, send_date_year1 == 1488)
+
+# subset correspondents for 1488
+corr1488 <- subset(allcorr, allcorr$Id %in% letters1488$Source | allcorr$Id %in% letters1488$Target)
+
+# write file for letters
+write.csv(letters1488, file = "merge_scripts/complete_merge/time_slice_1488_complete_merge_budé_and_era_letters_corr_as_nodes.csv", fileEncoding="UTF-8", row.names=FALSE)
+
+# write file for correspondents
+write.csv(corr1488, file = "merge_scripts/complete_merge/time_slice_1488_complete_merge_budé_and_era_correspondents.csv", fileEncoding="UTF-8", row.names=FALSE)
+#-------------------------------
+# subset letters for 1489
+letters1489 <- subset(allepp, send_date_year1 == 1489)
+
+# subset correspondents for 1489
+corr1489 <- subset(allcorr, allcorr$Id %in% letters1489$Source | allcorr$Id %in% letters1489$Target)
+
+# write file for letters
+write.csv(letters1489, file = "merge_scripts/complete_merge/time_slice_1489_complete_merge_budé_and_era_letters_corr_as_nodes.csv", fileEncoding="UTF-8", row.names=FALSE)
+
+# write file for correspondents
+write.csv(corr1489, file = "merge_scripts/complete_merge/time_slice_1489_complete_merge_budé_and_era_correspondents.csv", fileEncoding="UTF-8", row.names=FALSE)
+#-------------------------------
+# subset letters for 1493
+letters1493 <- subset(allepp, send_date_year1 == 1493)
+
+# subset correspondents for 1493
+corr1493 <- subset(allcorr, allcorr$Id %in% letters1493$Source | allcorr$Id %in% letters1493$Target)
+
+# write file for letters
+write.csv(letters1493, file = "merge_scripts/complete_merge/time_slice_1493_complete_merge_budé_and_era_letters_corr_as_nodes.csv", fileEncoding="UTF-8", row.names=FALSE)
+
+# write file for correspondents
+write.csv(corr1493, file = "merge_scripts/complete_merge/time_slice_1493_complete_merge_budé_and_era_correspondents.csv", fileEncoding="UTF-8", row.names=FALSE)
+#-------------------------------
+# subset letters for 1494
+letters1494 <- subset(allepp, send_date_year1 == 1494)
+
+# subset correspondents for 1494
+corr1494 <- subset(allcorr, allcorr$Id %in% letters1494$Source | allcorr$Id %in% letters1494$Target)
+
+# write file for letters
+write.csv(letters1494, file = "merge_scripts/complete_merge/time_slice_1494_complete_merge_budé_and_era_letters_corr_as_nodes.csv", fileEncoding="UTF-8", row.names=FALSE)
+
+# write file for correspondents
+write.csv(corr1494, file = "merge_scripts/complete_merge/time_slice_1494_complete_merge_budé_and_era_correspondents.csv", fileEncoding="UTF-8", row.names=FALSE)
+#-------------------------------
+# subset letters for 1495
+letters1495 <- subset(allepp, send_date_year1 == 1495)
+
+# subset correspondents for 1495
+corr1495 <- subset(allcorr, allcorr$Id %in% letters1495$Source | allcorr$Id %in% letters1495$Target)
+
+# write file for letters
+write.csv(letters1495, file = "merge_scripts/complete_merge/time_slice_1495_complete_merge_budé_and_era_letters_corr_as_nodes.csv", fileEncoding="UTF-8", row.names=FALSE)
+
+# write file for correspondents
+write.csv(corr1495, file = "merge_scripts/complete_merge/time_slice_1495_complete_merge_budé_and_era_correspondents.csv", fileEncoding="UTF-8", row.names=FALSE)
+#-------------------------------
+# subset letters for 1496
+letters1496 <- subset(allepp, send_date_year1 == 1496)
+
+# subset correspondents for 1496
+corr1496 <- subset(allcorr, allcorr$Id %in% letters1496$Source | allcorr$Id %in% letters1496$Target)
+
+# write file for letters
+write.csv(letters1496, file = "merge_scripts/complete_merge/time_slice_1496_complete_merge_budé_and_era_letters_corr_as_nodes.csv", fileEncoding="UTF-8", row.names=FALSE)
+
+# write file for correspondents
+write.csv(corr1496, file = "merge_scripts/complete_merge/time_slice_1496_complete_merge_budé_and_era_correspondents.csv", fileEncoding="UTF-8", row.names=FALSE)
+#-------------------------------
+# subset letters for 1497
+letters1497 <- subset(allepp, send_date_year1 == 1497)
+
+# subset correspondents for 1497
+corr1497 <- subset(allcorr, allcorr$Id %in% letters1497$Source | allcorr$Id %in% letters1497$Target)
+
+# write file for letters
+write.csv(letters1497, file = "merge_scripts/complete_merge/time_slice_1497_complete_merge_budé_and_era_letters_corr_as_nodes.csv", fileEncoding="UTF-8", row.names=FALSE)
+
+# write file for correspondents
+write.csv(corr1497, file = "merge_scripts/complete_merge/time_slice_1497_complete_merge_budé_and_era_correspondents.csv", fileEncoding="UTF-8", row.names=FALSE)
+#-------------------------------
+# subset letters for 1498
+letters1498 <- subset(allepp, send_date_year1 == 1498)
+
+# subset correspondents for 1498
+corr1498 <- subset(allcorr, allcorr$Id %in% letters1498$Source | allcorr$Id %in% letters1498$Target)
+
+# write file for letters
+write.csv(letters1498, file = "merge_scripts/complete_merge/time_slice_1498_complete_merge_budé_and_era_letters_corr_as_nodes.csv", fileEncoding="UTF-8", row.names=FALSE)
+
+# write file for correspondents
+write.csv(corr1498, file = "merge_scripts/complete_merge/time_slice_1498_complete_merge_budé_and_era_correspondents.csv", fileEncoding="UTF-8", row.names=FALSE)
+# ------------------------------
 # subset letters for 1499
 letters1499 <- subset(allepp, send_date_year1 == 1499)
 
@@ -42,6 +162,78 @@ write.csv(letters1499, file = "merge_scripts/complete_merge/time_slice_1499_comp
 # write file for correspondents
 write.csv(corr1499, file = "merge_scripts/complete_merge/time_slice_1499_complete_merge_budé_and_era_correspondents.csv", fileEncoding="UTF-8", row.names=FALSE)
 #-------------------------------
+# subset letters for 1500
+letters1500 <- subset(allepp, send_date_year1 == 1500)
+
+# subset correspondents for 1500
+corr1500 <- subset(allcorr, allcorr$Id %in% letters1500$Source | allcorr$Id %in% letters1500$Target)
+
+# write file for letters
+write.csv(letters1500, file = "merge_scripts/complete_merge/time_slice_1500_complete_merge_budé_and_era_letters_corr_as_nodes.csv", fileEncoding="UTF-8", row.names=FALSE)
+
+# write file for correspondents
+write.csv(corr1500, file = "merge_scripts/complete_merge/time_slice_1500_complete_merge_budé_and_era_correspondents.csv", fileEncoding="UTF-8", row.names=FALSE)
+#-------------------------------
+# subset letters for 1501
+letters1501 <- subset(allepp, send_date_year1 == 1501)
+
+# subset correspondents for 1501
+corr1501 <- subset(allcorr, allcorr$Id %in% letters1501$Source | allcorr$Id %in% letters1501$Target)
+
+# write file for letters
+write.csv(letters1501, file = "merge_scripts/complete_merge/time_slice_1501_complete_merge_budé_and_era_letters_corr_as_nodes.csv", fileEncoding="UTF-8", row.names=FALSE)
+
+# write file for correspondents
+write.csv(corr1501, file = "merge_scripts/complete_merge/time_slice_1501_complete_merge_budé_and_era_correspondents.csv", fileEncoding="UTF-8", row.names=FALSE)
+# ------------------------------
+# subset letters for 1502
+letters1502 <- subset(allepp, send_date_year1 == 1502)
+
+# subset correspondents for 1502
+corr1502 <- subset(allcorr, allcorr$Id %in% letters1502$Source | allcorr$Id %in% letters1502$Target)
+
+# write file for letters
+write.csv(letters1502, file = "merge_scripts/complete_merge/time_slice_1502_complete_merge_budé_and_era_letters_corr_as_nodes.csv", fileEncoding="UTF-8", row.names=FALSE)
+
+# write file for correspondents
+write.csv(corr1502, file = "merge_scripts/complete_merge/time_slice_1502_complete_merge_budé_and_era_correspondents.csv", fileEncoding="UTF-8", row.names=FALSE)
+#-------------------------------
+# subset letters for 1503
+letters1503 <- subset(allepp, send_date_year1 == 1503)
+
+# subset correspondents for 1503
+corr1503 <- subset(allcorr, allcorr$Id %in% letters1503$Source | allcorr$Id %in% letters1503$Target)
+
+# write file for letters
+write.csv(letters1503, file = "merge_scripts/complete_merge/time_slice_1503_complete_merge_budé_and_era_letters_corr_as_nodes.csv", fileEncoding="UTF-8", row.names=FALSE)
+
+# write file for correspondents
+write.csv(corr1503, file = "merge_scripts/complete_merge/time_slice_1503_complete_merge_budé_and_era_correspondents.csv", fileEncoding="UTF-8", row.names=FALSE)
+#-------------------------------
+# subset letters for 1504
+letters1504 <- subset(allepp, send_date_year1 == 1504)
+
+# subset correspondents for 1504
+corr1504 <- subset(allcorr, allcorr$Id %in% letters1504$Source | allcorr$Id %in% letters1504$Target)
+
+# write file for letters
+write.csv(letters1504, file = "merge_scripts/complete_merge/time_slice_1504_complete_merge_budé_and_era_letters_corr_as_nodes.csv", fileEncoding="UTF-8", row.names=FALSE)
+
+# write file for correspondents
+write.csv(corr1504, file = "merge_scripts/complete_merge/time_slice_1504_complete_merge_budé_and_era_correspondents.csv", fileEncoding="UTF-8", row.names=FALSE)
+#-------------------------------
+# subset letters for 1505
+letters1505 <- subset(allepp, send_date_year1 == 1505)
+
+# subset correspondents for 1505
+corr1505 <- subset(allcorr, allcorr$Id %in% letters1505$Source | allcorr$Id %in% letters1505$Target)
+
+# write file for letters
+write.csv(letters1505, file = "merge_scripts/complete_merge/time_slice_1505_complete_merge_budé_and_era_letters_corr_as_nodes.csv", fileEncoding="UTF-8", row.names=FALSE)
+
+# write file for correspondents
+write.csv(corr1505, file = "merge_scripts/complete_merge/time_slice_1505_complete_merge_budé_and_era_correspondents.csv", fileEncoding="UTF-8", row.names=FALSE)
+#-------------------------------
 # subset letters for 1506
 letters1506 <- subset(allepp, send_date_year1 == 1506)
 
@@ -53,6 +245,42 @@ write.csv(letters1506, file = "merge_scripts/complete_merge/time_slice_1506_comp
 
 # write file for correspondents
 write.csv(corr1506, file = "merge_scripts/complete_merge/time_slice_1506_complete_merge_budé_and_era_correspondents.csv", fileEncoding="UTF-8", row.names=FALSE)
+#-------------------------------
+# subset letters for 1507
+letters1507 <- subset(allepp, send_date_year1 == 1507)
+
+# subset correspondents for 1507
+corr1507 <- subset(allcorr, allcorr$Id %in% letters1507$Source | allcorr$Id %in% letters1507$Target)
+
+# write file for letters
+write.csv(letters1507, file = "merge_scripts/complete_merge/time_slice_1507_complete_merge_budé_and_era_letters_corr_as_nodes.csv", fileEncoding="UTF-8", row.names=FALSE)
+
+# write file for correspondents
+write.csv(corr1507, file = "merge_scripts/complete_merge/time_slice_1507_complete_merge_budé_and_era_correspondents.csv", fileEncoding="UTF-8", row.names=FALSE)
+# ------------------------------
+# subset letters for 1508
+letters1508 <- subset(allepp, send_date_year1 == 1508)
+
+# subset correspondents for 1508
+corr1508 <- subset(allcorr, allcorr$Id %in% letters1508$Source | allcorr$Id %in% letters1508$Target)
+
+# write file for letters
+write.csv(letters1508, file = "merge_scripts/complete_merge/time_slice_1508_complete_merge_budé_and_era_letters_corr_as_nodes.csv", fileEncoding="UTF-8", row.names=FALSE)
+
+# write file for correspondents
+write.csv(corr1508, file = "merge_scripts/complete_merge/time_slice_1508_complete_merge_budé_and_era_correspondents.csv", fileEncoding="UTF-8", row.names=FALSE)
+#-------------------------------
+# subset letters for 1509
+letters1509 <- subset(allepp, send_date_year1 == 1509)
+
+# subset correspondents for 1509
+corr1509 <- subset(allcorr, allcorr$Id %in% letters1509$Source | allcorr$Id %in% letters1509$Target)
+
+# write file for letters
+write.csv(letters1509, file = "merge_scripts/complete_merge/time_slice_1509_complete_merge_budé_and_era_letters_corr_as_nodes.csv", fileEncoding="UTF-8", row.names=FALSE)
+
+# write file for correspondents
+write.csv(corr1509, file = "merge_scripts/complete_merge/time_slice_1509_complete_merge_budé_and_era_correspondents.csv", fileEncoding="UTF-8", row.names=FALSE)
 #-------------------------------
 # subset letters for 1510
 letters1510 <- subset(allepp, send_date_year1 == 1510)
@@ -377,4 +605,16 @@ write.csv(letters1536, file = "merge_scripts/complete_merge/time_slice_1536_comp
 
 # write file for correspondents
 write.csv(corr1536, file = "merge_scripts/complete_merge/time_slice_1536_complete_merge_budé_and_era_correspondents.csv", fileEncoding="UTF-8", row.names=FALSE)
+#-------------------------------
+# subset letters for 1539
+letters1539 <- subset(allepp, send_date_year1 == 1539)
+
+# subset correspondents for 1539
+corr1539 <- subset(allcorr, allcorr$Id %in% letters1539$Source | allcorr$Id %in% letters1539$Target)
+
+# write file for letters
+write.csv(letters1539, file = "merge_scripts/complete_merge/time_slice_1539_complete_merge_budé_and_era_letters_corr_as_nodes.csv", fileEncoding="UTF-8", row.names=FALSE)
+
+# write file for correspondents
+write.csv(corr1539, file = "merge_scripts/complete_merge/time_slice_1539_complete_merge_budé_and_era_correspondents.csv", fileEncoding="UTF-8", row.names=FALSE)
 #-------------------------------
