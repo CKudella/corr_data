@@ -22,10 +22,10 @@ nodes$colour <- "#525252"
 nodes$colour <- ifelse(nodes$Id %in% mutcorr$correspondents_id, as.character("#C3161F"), nodes$colour)
 
 #assign specific colour for erasmus
-nodes$colour <- ifelse(nodes$Id == "erasmus_desiderius_viaf_95982394", as.character("#3C93AF"), nodes$colour)
+nodes$colour <- ifelse(nodes$Id == "17c580aa-3ba7-4851-8f26-9b3a0ebeadbf", as.character("#3C93AF"), nodes$colour)
 
 #assign specific colour for budé
-nodes$colour <- ifelse(nodes$Id == "budé_guillaume_viaf_105878228", as.character("#D5AB5B"), nodes$colour)
+nodes$colour <- ifelse(nodes$Id == "c0b89c75-45b8-4b04-bfd7-25bfe9ed040b", as.character("#D5AB5B"), nodes$colour)
 
 #assign edge weight
 links$weight <- 1

@@ -24,10 +24,10 @@ allcorr$colour <- "#525252"
 allcorr$colour <- ifelse(allcorr$Id %in% mutcorr$correspondents_id, as.character("#C3161F"), allcorr$colour)
 
 #assign specific colour for erasmus
-allcorr$colour <- ifelse(allcorr$Id == "erasmus_desiderius_viaf_95982394", as.character("#3C93AF"), allcorr$colour)
+allcorr$colour <- ifelse(allcorr$Id == "17c580aa-3ba7-4851-8f26-9b3a0ebeadbf", as.character("#3C93AF"), allcorr$colour)
 
 #assign specific colour for pirckheimer
-allcorr$colour <- ifelse(allcorr$Id == "pirckheimer_willibald_viaf_27173507", as.character("#D5AB5B"), allcorr$colour)
+allcorr$colour <- ifelse(allcorr$Id == "d9233b24-a98c-4279-8065-e2ab70c0d080", as.character("#D5AB5B"), allcorr$colour)
 
 #-------------------------------
 # subset letters for 1508
