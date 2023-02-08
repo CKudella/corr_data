@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:viz="http://www.gexf.net/1.1draft/viz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
-  <meta lastmodifieddate="2019-11-11">
+<gexf xmlns="http://www.gexf.net/1.3" xmlns:viz="http://www.gexf.net/1.3/viz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.3 http://www.gexf.net/1.3/gexf.xsd" version="1.3">
+  <meta lastmodifieddate="2023-02-08">
     <creator>Christoph Kudella</creator>
     <description>A graph representing the intersection between Erasmus's and Budé's networks of correspondence in the year 1518</description>
     <keywords/>
@@ -12,869 +12,965 @@
       <attribute id="att3" title="Weighted.Degree" type="float"/>
     </attributes>
     <nodes>
-      <node id="1" label="Henricus AFINIUS">
-        <attvalues>
-          <attvalue for="att1" value="1"/>
-          <attvalue for="att2" value="#525252"/>
-          <attvalue for="att3" value="2"/>
-        </attvalues>
-        <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="435.96115960368" y="-119.555471551418" z="0"/>
-      </node>
-      <node id="2" label="Bonifacius AMERBACH">
+      <node id="1" label="Johannes SAPIDUS">
         <attvalues>
           <attvalue for="att1" value="1"/>
           <attvalue for="att2" value="#525252"/>
           <attvalue for="att3" value="1"/>
         </attvalues>
         <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="542.664090386772" y="-138.595903125679" z="0"/>
+        <viz:position x="-62.0026710349082" y="68.4091157384551" z="0"/>
+        <viz:size value="10"/>
       </node>
-      <node id="3" label="Bruno AMERBACH">
-        <attvalues>
-          <attvalue for="att1" value="2"/>
-          <attvalue for="att2" value="#525252"/>
-          <attvalue for="att3" value="2"/>
-        </attvalues>
-        <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="314.23937699479" y="-57.1022033585557" z="0"/>
-      </node>
-      <node id="4" label="ANTONIUS of Luxembourg">
+      <node id="2" label="Wilhelm NESEN">
         <attvalues>
           <attvalue for="att1" value="1"/>
           <attvalue for="att2" value="#525252"/>
           <attvalue for="att3" value="2"/>
         </attvalues>
         <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="522.312558957981" y="30.3444721993039" z="0"/>
+        <viz:position x="-9.76859535697938" y="-30.5810838698777" z="0"/>
+        <viz:size value="10"/>
       </node>
-      <node id="5" label="Josse BADE">
-        <attvalues>
-          <attvalue for="att1" value="1"/>
-          <attvalue for="att2" value="#525252"/>
-          <attvalue for="att3" value="2"/>
-        </attvalues>
-        <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="302.582583609298" y="40.3110350085868" z="0"/>
-      </node>
-      <node id="6" label="Pierre BARBIER">
-        <attvalues>
-          <attvalue for="att1" value="1"/>
-          <attvalue for="att2" value="#525252"/>
-          <attvalue for="att3" value="4"/>
-        </attvalues>
-        <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="470.339512354263" y="-24.5765836232498" z="0"/>
-      </node>
-      <node id="7" label="Cornelis BATT">
+      <node id="3" label="Edward LEE">
         <attvalues>
           <attvalue for="att1" value="1"/>
           <attvalue for="att2" value="#525252"/>
           <attvalue for="att3" value="1"/>
         </attvalues>
         <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="591.324680952033" y="28.7560503763115" z="0"/>
+        <viz:position x="21.3888196497776" y="-64.0104187159602" z="0"/>
+        <viz:size value="10"/>
       </node>
-      <node id="8" label="Thomas BEDYLL">
-        <attvalues>
-          <attvalue for="att1" value="1"/>
-          <attvalue for="att2" value="#525252"/>
-          <attvalue for="att3" value="3"/>
-        </attvalues>
-        <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="489.488800290637" y="3.6773456741633" z="0"/>
-      </node>
-      <node id="9" label="Antoon (I) van BERGEN">
+      <node id="4" label="Antoon (I) van BERGEN">
         <attvalues>
           <attvalue for="att1" value="1"/>
           <attvalue for="att2" value="#525252"/>
           <attvalue for="att3" value="1"/>
         </attvalues>
         <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="479.850052629991" y="198.984995476189" z="0"/>
+        <viz:position x="56.2502114565305" y="85.0738658552802" z="0"/>
+        <viz:size value="10"/>
       </node>
-      <node id="10" label="Antoon (III) van BERGEN">
-        <attvalues>
-          <attvalue for="att1" value="1"/>
-          <attvalue for="att2" value="#525252"/>
-          <attvalue for="att3" value="1"/>
-        </attvalues>
-        <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="578.843275211123" y="-115.282055909502" z="0"/>
-      </node>
-      <node id="11" label="Paschasius BERSELIUS">
-        <attvalues>
-          <attvalue for="att1" value="2"/>
-          <attvalue for="att2" value="#525252"/>
-          <attvalue for="att3" value="2"/>
-        </attvalues>
-        <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="295.215327222286" y="-33.1371855232177" z="0"/>
-      </node>
-      <node id="12" label="Heinrich BEYMING">
-        <attvalues>
-          <attvalue for="att1" value="1"/>
-          <attvalue for="att2" value="#525252"/>
-          <attvalue for="att3" value="1"/>
-        </attvalues>
-        <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="445.29114202426" y="-220.539907988982" z="0"/>
-      </node>
-      <node id="13" label="Jan BIJL">
-        <attvalues>
-          <attvalue for="att1" value="1"/>
-          <attvalue for="att2" value="#525252"/>
-          <attvalue for="att3" value="1"/>
-        </attvalues>
-        <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="553.366835880094" y="109.806906928829" z="0"/>
-      </node>
-      <node id="14" label="William BLOUNT">
+      <node id="5" label="BEATUS Rhenanus">
         <attvalues>
           <attvalue for="att1" value="1"/>
           <attvalue for="att2" value="#525252"/>
           <attvalue for="att3" value="2"/>
         </attvalues>
         <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="314.75097613435" y="-7.28044430140956" z="0"/>
+        <viz:position x="-38.7738234074895" y="46.1738009567601" z="0"/>
+        <viz:size value="10"/>
       </node>
-      <node id="15" label="Paolo BOMBACE">
-        <attvalues>
-          <attvalue for="att1" value="2"/>
-          <attvalue for="att2" value="#525252"/>
-          <attvalue for="att3" value="4"/>
-        </attvalues>
-        <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="436.115774261701" y="-47.3428429972028" z="0"/>
-      </node>
-      <node id="16" label="Guillaume BUDÉ">
-        <attvalues>
-          <attvalue for="att1" value="8"/>
-          <attvalue for="att2" value="#D5AB5B"/>
-          <attvalue for="att3" value="18"/>
-        </attvalues>
-        <viz:color r="213" g="171" b="91" a="1"/>
-        <viz:position x="315.283600996379" y="70.6872159522065" z="0"/>
-      </node>
-      <node id="17" label="Henry BULLOCK">
-        <attvalues>
-          <attvalue for="att1" value="1"/>
-          <attvalue for="att2" value="#525252"/>
-          <attvalue for="att3" value="3"/>
-        </attvalues>
-        <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="414.195542104577" y="64.2159390927474" z="0"/>
-      </node>
-      <node id="18" label="Hermannus BUSCHIUS">
-        <attvalues>
-          <attvalue for="att1" value="1"/>
-          <attvalue for="att2" value="#525252"/>
-          <attvalue for="att3" value="2"/>
-        </attvalues>
-        <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="533.644635203568" y="-4.06342080735029" z="0"/>
-      </node>
-      <node id="19" label="Gilles de BUSLEYDEN">
-        <attvalues>
-          <attvalue for="att1" value="1"/>
-          <attvalue for="att2" value="#525252"/>
-          <attvalue for="att3" value="1"/>
-        </attvalues>
-        <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="234.952889046172" y="-48.7397293597483" z="0"/>
-      </node>
-      <node id="20" label="Johannes CAESARIUS">
-        <attvalues>
-          <attvalue for="att1" value="1"/>
-          <attvalue for="att2" value="#525252"/>
-          <attvalue for="att3" value="2"/>
-        </attvalues>
-        <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="485.988898483467" y="81.983048974298" z="0"/>
-      </node>
-      <node id="21" label="Wolfgang Faber CAPITO">
-        <attvalues>
-          <attvalue for="att1" value="1"/>
-          <attvalue for="att2" value="#525252"/>
-          <attvalue for="att3" value="2"/>
-        </attvalues>
-        <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="461.865831023665" y="102.462028290985" z="0"/>
-      </node>
-      <node id="22" label="Antonius CLAVA">
-        <attvalues>
-          <attvalue for="att1" value="1"/>
-          <attvalue for="att2" value="#525252"/>
-          <attvalue for="att3" value="1"/>
-        </attvalues>
-        <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="258.425969963686" y="106.975819110807" z="0"/>
-      </node>
-      <node id="23" label="John COLET">
-        <attvalues>
-          <attvalue for="att1" value="1"/>
-          <attvalue for="att2" value="#525252"/>
-          <attvalue for="att3" value="3"/>
-        </attvalues>
-        <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="464.133616655641" y="45.7553309067517" z="0"/>
-      </node>
-      <node id="24" label="Richard CROKE">
+      <node id="6" label="Cuthbert TUNSTALL">
         <attvalues>
           <attvalue for="att1" value="1"/>
           <attvalue for="att2" value="#C3161F"/>
-          <attvalue for="att3" value="1"/>
+          <attvalue for="att3" value="2"/>
         </attvalues>
         <viz:color r="195" g="22" b="31" a="1"/>
-        <viz:position x="242.952059219266" y="-130.791275853346" z="0"/>
+        <viz:position x="-51.506146386304" y="26.3929251586851" z="0"/>
+        <viz:size value="10"/>
       </node>
-      <node id="25" label="Maarten van DORP">
-        <attvalues>
-          <attvalue for="att1" value="1"/>
-          <attvalue for="att2" value="#525252"/>
-          <attvalue for="att3" value="1"/>
-        </attvalues>
-        <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="206.704470947285" y="-18.9346788790402" z="0"/>
-      </node>
-      <node id="26" label="Johannes DRACONITES">
-        <attvalues>
-          <attvalue for="att1" value="1"/>
-          <attvalue for="att2" value="#525252"/>
-          <attvalue for="att3" value="1"/>
-        </attvalues>
-        <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="268.422063104098" y="-160.785926316068" z="0"/>
-      </node>
-      <node id="27" label="Johann Maier of ECK">
+      <node id="7" label="Johann Maier of ECK">
         <attvalues>
           <attvalue for="att1" value="2"/>
           <attvalue for="att2" value="#525252"/>
           <attvalue for="att3" value="2"/>
         </attvalues>
         <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="291.903579417173" y="10.3400459340784" z="0"/>
+        <viz:position x="-50.3836217554416" y="38.5675900153527" z="0"/>
+        <viz:size value="10"/>
       </node>
-      <node id="28" label="Giambattista EGNAZIO">
+      <node id="8" label="Paul VOLZ">
         <attvalues>
           <attvalue for="att1" value="1"/>
-          <attvalue for="att2" value="#C3161F"/>
+          <attvalue for="att2" value="#525252"/>
           <attvalue for="att3" value="1"/>
         </attvalues>
-        <viz:color r="195" g="22" b="31" a="1"/>
-        <viz:position x="197.183050394822" y="221.174237711304" z="0"/>
+        <viz:color r="82" g="82" b="82" a="1"/>
+        <viz:position x="62.4825050487118" y="-46.5052264270772" z="0"/>
+        <viz:size value="10"/>
       </node>
-      <node id="29" label="Adolf EICHHOLZ">
-        <attvalues>
-          <attvalue for="att1" value="1"/>
-          <attvalue for="att2" value="#C3161F"/>
-          <attvalue for="att3" value="1"/>
-        </attvalues>
-        <viz:color r="195" g="22" b="31" a="1"/>
-        <viz:position x="373.900895007359" y="170.595521096372" z="0"/>
-      </node>
-      <node id="30" label="Erasmus Desiderius">
+      <node id="9" label="Erasmus Desiderius">
         <attvalues>
           <attvalue for="att1" value="105"/>
           <attvalue for="att2" value="#3C93AF"/>
           <attvalue for="att3" value="165"/>
         </attvalues>
         <viz:color r="60" g="147" b="175" a="1"/>
-        <viz:position x="414.910523484544" y="-5.86083249706275" z="0"/>
+        <viz:position x="-0.766733037605107" y="15.3614390081914" z="0"/>
+        <viz:size value="10"/>
       </node>
-      <node id="31" label="Christoph ESCHENFELDER">
+      <node id="10" label="Johann WERTER">
         <attvalues>
           <attvalue for="att1" value="1"/>
           <attvalue for="att2" value="#525252"/>
           <attvalue for="att3" value="1"/>
         </attvalues>
         <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="297.869601776817" y="151.92058626958" z="0"/>
+        <viz:position x="46.2530378896145" y="-49.3763828430273" z="0"/>
+        <viz:size value="10"/>
       </node>
-      <node id="32" label="John FISHER">
+      <node id="11" label="Jean GROLIER">
         <attvalues>
           <attvalue for="att1" value="1"/>
           <attvalue for="att2" value="#525252"/>
-          <attvalue for="att3" value="3"/>
+          <attvalue for="att3" value="1"/>
         </attvalues>
         <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="414.650081563414" y="-78.8368248657243" z="0"/>
+        <viz:position x="37.6914074597047" y="93.914796046779" z="0"/>
+        <viz:size value="10"/>
       </node>
-      <node id="33" label="Johann FROBEN">
+      <node id="12" label="Johannes OECOLAMPADIUS">
         <attvalues>
-          <attvalue for="att1" value="2"/>
+          <attvalue for="att1" value="1"/>
           <attvalue for="att2" value="#525252"/>
-          <attvalue for="att3" value="3"/>
+          <attvalue for="att3" value="1"/>
         </attvalues>
         <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="465.018324918842" y="-66.9183085866393" z="0"/>
+        <viz:position x="-43.6249421233295" y="76.9844404051942" z="0"/>
+        <viz:size value="10"/>
       </node>
-      <node id="34" label="Gerard GELDENHOUWER">
+      <node id="13" label="Pierre BARBIER">
         <attvalues>
           <attvalue for="att1" value="1"/>
           <attvalue for="att2" value="#525252"/>
           <attvalue for="att3" value="4"/>
         </attvalues>
         <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="382.060049849218" y="-51.2435806192745" z="0"/>
+        <viz:position x="-25.1272747724986" y="15.584063983248" z="0"/>
+        <viz:size value="10"/>
       </node>
-      <node id="35" label="Nikolaus GERBEL">
-        <attvalues>
-          <attvalue for="att1" value="1"/>
-          <attvalue for="att2" value="#525252"/>
-          <attvalue for="att3" value="1"/>
-        </attvalues>
-        <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="579.443984445854" y="71.863736951767" z="0"/>
-      </node>
-      <node id="36" label="Pieter GILLIS">
-        <attvalues>
-          <attvalue for="att1" value="2"/>
-          <attvalue for="att2" value="#525252"/>
-          <attvalue for="att3" value="5"/>
-        </attvalues>
-        <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="390.726477081604" y="25.7184768699495" z="0"/>
-      </node>
-      <node id="37" label="Henricus GLAREANUS">
+      <node id="14" label="Johannes CAESARIUS">
         <attvalues>
           <attvalue for="att1" value="1"/>
           <attvalue for="att2" value="#525252"/>
           <attvalue for="att3" value="2"/>
         </attvalues>
         <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="331.751929524725" y="-79.1736852959356" z="0"/>
+        <viz:position x="-16.1176338493803" y="57.2348560334524" z="0"/>
+        <viz:size value="10"/>
       </node>
-      <node id="38" label="William GONNELL">
-        <attvalues>
-          <attvalue for="att1" value="1"/>
-          <attvalue for="att2" value="#525252"/>
-          <attvalue for="att3" value="1"/>
-        </attvalues>
-        <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="502.773913443573" y="-194.707797868327" z="0"/>
-      </node>
-      <node id="39" label="Domenico GRIMANI">
-        <attvalues>
-          <attvalue for="att1" value="1"/>
-          <attvalue for="att2" value="#525252"/>
-          <attvalue for="att3" value="1"/>
-        </attvalues>
-        <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="332.661420143367" y="189.767969725097" z="0"/>
-      </node>
-      <node id="40" label="Jean GROLIER">
-        <attvalues>
-          <attvalue for="att1" value="1"/>
-          <attvalue for="att2" value="#525252"/>
-          <attvalue for="att3" value="1"/>
-        </attvalues>
-        <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="479.512636233149" y="163.863884124161" z="0"/>
-      </node>
-      <node id="41" label="Johannes LONGICAMPIANUS">
-        <attvalues>
-          <attvalue for="att1" value="1"/>
-          <attvalue for="att2" value="#525252"/>
-          <attvalue for="att3" value="1"/>
-        </attvalues>
-        <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="373.034769992968" y="202.21682568546" z="0"/>
-      </node>
-      <node id="42" label="Maternus HATTEN">
-        <attvalues>
-          <attvalue for="att1" value="1"/>
-          <attvalue for="att2" value="#525252"/>
-          <attvalue for="att3" value="1"/>
-        </attvalues>
-        <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="606.841359318423" y="-58.1787183478516" z="0"/>
-      </node>
-      <node id="43" label="HENRY VIII">
-        <attvalues>
-          <attvalue for="att1" value="1"/>
-          <attvalue for="att2" value="#525252"/>
-          <attvalue for="att3" value="1"/>
-        </attvalues>
-        <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="594.311803727241" y="107.610579544292" z="0"/>
-      </node>
-      <node id="44" label="Helius EOBANUS Hessus">
-        <attvalues>
-          <attvalue for="att1" value="1"/>
-          <attvalue for="att2" value="#525252"/>
-          <attvalue for="att3" value="1"/>
-        </attvalues>
-        <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="227.35975134246" y="55.7690190753303" z="0"/>
-      </node>
-      <node id="45" label="Lambertus HOLLONIUS">
-        <attvalues>
-          <attvalue for="att1" value="1"/>
-          <attvalue for="att2" value="#525252"/>
-          <attvalue for="att3" value="1"/>
-        </attvalues>
-        <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="443.597366751503" y="206.273264803512" z="0"/>
-      </node>
-      <node id="46" label="Jan de HONDT">
-        <attvalues>
-          <attvalue for="att1" value="1"/>
-          <attvalue for="att2" value="#525252"/>
-          <attvalue for="att3" value="1"/>
-        </attvalues>
-        <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="574.507071395307" y="137.777027253513" z="0"/>
-      </node>
-      <node id="47" label="Ulrich von HUTTEN">
-        <attvalues>
-          <attvalue for="att1" value="1"/>
-          <attvalue for="att2" value="#525252"/>
-          <attvalue for="att3" value="1"/>
-        </attvalues>
-        <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="407.654852201382" y="201.175303524581" z="0"/>
-      </node>
-      <node id="48" label="Jean (I) LE SAUVAGE">
-        <attvalues>
-          <attvalue for="att1" value="1"/>
-          <attvalue for="att2" value="#525252"/>
-          <attvalue for="att3" value="2"/>
-        </attvalues>
-        <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="376.762364860591" y="-106.129746344499" z="0"/>
-      </node>
-      <node id="49" label="Johannes (II) THURZO">
-        <attvalues>
-          <attvalue for="att1" value="1"/>
-          <attvalue for="att2" value="#525252"/>
-          <attvalue for="att3" value="1"/>
-        </attvalues>
-        <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="270.852754992609" y="137.303382161964" z="0"/>
-      </node>
-      <node id="50" label="Justus JONAS">
-        <attvalues>
-          <attvalue for="att1" value="1"/>
-          <attvalue for="att2" value="#525252"/>
-          <attvalue for="att3" value="1"/>
-        </attvalues>
-        <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="579.877685731963" y="-146.050782334211" z="0"/>
-      </node>
-      <node id="51" label="Johann LANG">
-        <attvalues>
-          <attvalue for="att1" value="1"/>
-          <attvalue for="att2" value="#525252"/>
-          <attvalue for="att3" value="1"/>
-        </attvalues>
-        <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="255.562575793816" y="-96.8658799874203" z="0"/>
-      </node>
-      <node id="52" label="Janus LASCARIS">
-        <attvalues>
-          <attvalue for="att1" value="1"/>
-          <attvalue for="att2" value="#C3161F"/>
-          <attvalue for="att3" value="1"/>
-        </attvalues>
-        <viz:color r="195" g="22" b="31" a="1"/>
-        <viz:position x="632.064906657428" y="-35.1572219323204" z="0"/>
-      </node>
-      <node id="53" label="Marcus LAURINUS">
-        <attvalues>
-          <attvalue for="att1" value="1"/>
-          <attvalue for="att2" value="#525252"/>
-          <attvalue for="att3" value="4"/>
-        </attvalues>
-        <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="360.690881344095" y="-21.4849951747385" z="0"/>
-      </node>
-      <node id="54" label="Edward LEE">
-        <attvalues>
-          <attvalue for="att1" value="1"/>
-          <attvalue for="att2" value="#525252"/>
-          <attvalue for="att3" value="1"/>
-        </attvalues>
-        <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="434.133255748156" y="174.257804466489" z="0"/>
-      </node>
-      <node id="55" label="Jacques LEFÈVRE d'Etaples">
-        <attvalues>
-          <attvalue for="att1" value="1"/>
-          <attvalue for="att2" value="#525252"/>
-          <attvalue for="att3" value="1"/>
-        </attvalues>
-        <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="623.573528841891" y="40.3486122815109" z="0"/>
-      </node>
-      <node id="56" label="Ambrogio LEONI">
-        <attvalues>
-          <attvalue for="att1" value="2"/>
-          <attvalue for="att2" value="#525252"/>
-          <attvalue for="att3" value="2"/>
-        </attvalues>
-        <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="402.419577151233" y="-124.959372185502" z="0"/>
-      </node>
-      <node id="57" label="Pope LEO X">
-        <attvalues>
-          <attvalue for="att1" value="1"/>
-          <attvalue for="att2" value="#525252"/>
-          <attvalue for="att3" value="1"/>
-        </attvalues>
-        <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="222.527974295144" y="-93.9314797683678" z="0"/>
-      </node>
-      <node id="58" label="Thomas LINACRE">
-        <attvalues>
-          <attvalue for="att1" value="1"/>
-          <attvalue for="att2" value="#C3161F"/>
-          <attvalue for="att3" value="1"/>
-        </attvalues>
-        <viz:color r="195" g="22" b="31" a="1"/>
-        <viz:position x="162.710744069785" y="188.088486144694" z="0"/>
-      </node>
-      <node id="59" label="Maarten LIPS">
+      <node id="15" label="Maarten LIPS">
         <attvalues>
           <attvalue for="att1" value="2"/>
           <attvalue for="att2" value="#525252"/>
           <attvalue for="att3" value="10"/>
         </attvalues>
         <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="434.486069424396" y="15.3632470636671" z="0"/>
+        <viz:position x="3.20620804170018" y="6.17883869684319" z="0"/>
+        <viz:size value="10"/>
       </node>
-      <node id="60" label="Gerardus LISTRIUS">
+      <node id="16" label="Paolo BOMBACE">
+        <attvalues>
+          <attvalue for="att1" value="2"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="4"/>
+        </attvalues>
+        <viz:color r="82" g="82" b="82" a="1"/>
+        <viz:position x="24.2257473955522" y="15.9274234285157" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="17" label="William GONNELL">
         <attvalues>
           <attvalue for="att1" value="1"/>
           <attvalue for="att2" value="#525252"/>
           <attvalue for="att3" value="1"/>
         </attvalues>
         <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="331.207849746913" y="-202.354891869149" z="0"/>
+        <viz:position x="-81.0097244997547" y="-13.8916664887847" z="0"/>
+        <viz:size value="10"/>
       </node>
-      <node id="61" label="LUDOVICUS">
+      <node id="18" label="Wolfgang Faber CAPITO">
+        <attvalues>
+          <attvalue for="att1" value="1"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="2"/>
+        </attvalues>
+        <viz:color r="82" g="82" b="82" a="1"/>
+        <viz:position x="41.0144594043096" y="45.7343711520971" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="19" label="Thomas LINACRE">
+        <attvalues>
+          <attvalue for="att1" value="1"/>
+          <attvalue for="att2" value="#C3161F"/>
+          <attvalue for="att3" value="1"/>
+        </attvalues>
+        <viz:color r="195" g="22" b="31" a="1"/>
+        <viz:position x="71.9005267778334" y="-92.4978527308767" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="20" label="Osvaldus MYCONIUS">
         <attvalues>
           <attvalue for="att1" value="1"/>
           <attvalue for="att2" value="#525252"/>
           <attvalue for="att3" value="1"/>
         </attvalues>
         <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="476.053047233402" y="-204.597434852137" z="0"/>
+        <viz:position x="58.9864193480889" y="-33.843202245857" z="0"/>
+        <viz:size value="10"/>
       </node>
-      <node id="62" label="Nicolas de MALAISE">
+      <node id="21" label="John SMITH">
         <attvalues>
           <attvalue for="att1" value="1"/>
           <attvalue for="att2" value="#525252"/>
           <attvalue for="att3" value="1"/>
         </attvalues>
         <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="322.761083163235" y="-162.355678316799" z="0"/>
+        <viz:position x="-89.6824229341879" y="8.3282191083515" z="0"/>
+        <viz:size value="10"/>
       </node>
-      <node id="63" label="Helias MARCAEUS">
+      <node id="22" label="Helias MARCAEUS">
         <attvalues>
           <attvalue for="att1" value="1"/>
           <attvalue for="att2" value="#525252"/>
           <attvalue for="att3" value="1"/>
         </attvalues>
         <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="598.618017210816" y="-21.5325863818062" z="0"/>
+        <viz:position x="-0.865288071164301" y="100" z="0"/>
+        <viz:size value="10"/>
       </node>
-      <node id="64" label="Erard de la MARCK">
+      <node id="23" label="Henricus GLAREANUS">
+        <attvalues>
+          <attvalue for="att1" value="1"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="2"/>
+        </attvalues>
+        <viz:color r="82" g="82" b="82" a="1"/>
+        <viz:position x="-60.0345964637496" y="16.9269445708544" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="24" label="Jakob SPIEGEL">
         <attvalues>
           <attvalue for="att1" value="1"/>
           <attvalue for="att2" value="#525252"/>
           <attvalue for="att3" value="1"/>
         </attvalues>
         <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="518.824313965873" y="-171.840381898827" z="0"/>
+        <viz:position x="86.3125922529584" y="16.1458382680081" z="0"/>
+        <viz:size value="10"/>
       </node>
-      <node id="65" label="Jan van MERLEBERGE">
+      <node id="25" label="Erard de la MARCK">
         <attvalues>
           <attvalue for="att1" value="1"/>
           <attvalue for="att2" value="#525252"/>
           <attvalue for="att3" value="1"/>
         </attvalues>
         <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="452.888171379911" y="-180.715335169452" z="0"/>
+        <viz:position x="86.105771867124" y="60.0189758091179" z="0"/>
+        <viz:size value="10"/>
       </node>
-      <node id="66" label="Johannes de MOLENDINO">
+      <node id="26" label="Johann FROBEN">
+        <attvalues>
+          <attvalue for="att1" value="2"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="3"/>
+        </attvalues>
+        <viz:color r="82" g="82" b="82" a="1"/>
+        <viz:position x="-15.2790186092227" y="-12.7407958545718" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="27" label="Helius EOBANUS Hessus">
         <attvalues>
           <attvalue for="att1" value="1"/>
           <attvalue for="att2" value="#525252"/>
           <attvalue for="att3" value="1"/>
         </attvalues>
         <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="329.041328499123" y="158.869423875949" z="0"/>
+        <viz:position x="83.5771763050253" y="32.1049285303139" z="0"/>
+        <viz:size value="10"/>
       </node>
-      <node id="67" label="Thomas MORE">
+      <node id="28" label="Maternus HATTEN">
+        <attvalues>
+          <attvalue for="att1" value="1"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="1"/>
+        </attvalues>
+        <viz:color r="82" g="82" b="82" a="1"/>
+        <viz:position x="10.0187294796556" y="-55.2076439961022" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="29" label="ANTONIUS of Luxembourg">
+        <attvalues>
+          <attvalue for="att1" value="1"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="2"/>
+        </attvalues>
+        <viz:color r="82" g="82" b="82" a="1"/>
+        <viz:position x="-52.1533906137127" y="7.76393206913369" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="30" label="William WARHAM">
+        <attvalues>
+          <attvalue for="att1" value="1"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="2"/>
+        </attvalues>
+        <viz:color r="82" g="82" b="82" a="1"/>
+        <viz:position x="-33.8084903018849" y="-17.7445619786399" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="31" label="Gerard GELDENHOUWER">
+        <attvalues>
+          <attvalue for="att1" value="1"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="4"/>
+        </attvalues>
+        <viz:color r="82" g="82" b="82" a="1"/>
+        <viz:position x="-12.6213627945188" y="35.0460300297408" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="32" label="Gianfrancesco TORRESANI">
+        <attvalues>
+          <attvalue for="att1" value="1"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="1"/>
+        </attvalues>
+        <viz:color r="82" g="82" b="82" a="1"/>
+        <viz:position x="95.7867654259756" y="-6.91682332422756" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="33" label="Gerardus LISTRIUS">
+        <attvalues>
+          <attvalue for="att1" value="1"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="1"/>
+        </attvalues>
+        <viz:color r="82" g="82" b="82" a="1"/>
+        <viz:position x="-32.5422823802515" y="93.5240881033936" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="34" label="Philip (I) of BURGUNDY">
+        <attvalues>
+          <attvalue for="att1" value="1"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="1"/>
+        </attvalues>
+        <viz:color r="82" g="82" b="82" a="1"/>
+        <viz:position x="-88.3844555271018" y="44.3400199220994" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="35" label="Pierre VITRÉ">
+        <attvalues>
+          <attvalue for="att1" value="1"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="2"/>
+        </attvalues>
+        <viz:color r="82" g="82" b="82" a="1"/>
+        <viz:position x="-30.1183424518919" y="55.4576086282106" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="36" label="Nikolaus GERBEL">
+        <attvalues>
+          <attvalue for="att1" value="1"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="1"/>
+        </attvalues>
+        <viz:color r="82" g="82" b="82" a="1"/>
+        <viz:position x="74.5505795824976" y="-18.3965966684428" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="37" label="Hermannus BUSCHIUS">
+        <attvalues>
+          <attvalue for="att1" value="1"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="2"/>
+        </attvalues>
+        <viz:color r="82" g="82" b="82" a="1"/>
+        <viz:position x="53.2924655825145" y="23.037332134185" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="38" label="Christoph ESCHENFELDER">
+        <attvalues>
+          <attvalue for="att1" value="1"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="1"/>
+        </attvalues>
+        <viz:color r="82" g="82" b="82" a="1"/>
+        <viz:position x="77.9250103615958" y="46.9054342490271" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="39" label="Ulrich von HUTTEN">
+        <attvalues>
+          <attvalue for="att1" value="1"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="1"/>
+        </attvalues>
+        <viz:color r="82" g="82" b="82" a="1"/>
+        <viz:position x="-10.4491833758836" y="-58.3211642181199" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="40" label="Roger WENTFORD">
+        <attvalues>
+          <attvalue for="att1" value="1"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="2"/>
+        </attvalues>
+        <viz:color r="82" g="82" b="82" a="1"/>
+        <viz:position x="-26.5340210584578" y="-28.4269699476905" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="41" label="Henricus AFINIUS">
+        <attvalues>
+          <attvalue for="att1" value="1"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="2"/>
+        </attvalues>
+        <viz:color r="82" g="82" b="82" a="1"/>
+        <viz:position x="27.9495678310546" y="53.4151914539848" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="42" label="Thomas MORE">
         <attvalues>
           <attvalue for="att1" value="4"/>
           <attvalue for="att2" value="#C3161F"/>
           <attvalue for="att3" value="9"/>
         </attvalues>
         <viz:color r="195" g="22" b="31" a="1"/>
-        <viz:position x="360.110217355033" y="28.6808054736371" z="0"/>
+        <viz:position x="16.7588194628512" y="-5.23255114940208" z="0"/>
+        <viz:size value="10"/>
       </node>
-      <node id="68" label="Conradus MUTIANUS Rufus">
+      <node id="43" label="Jan de HONDT">
         <attvalues>
           <attvalue for="att1" value="1"/>
           <attvalue for="att2" value="#525252"/>
           <attvalue for="att3" value="1"/>
         </attvalues>
         <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="230.714377819851" y="4.83120510920929" z="0"/>
+        <viz:position x="-100" y="0.888885278211717" z="0"/>
+        <viz:size value="10"/>
       </node>
-      <node id="69" label="Osvaldus MYCONIUS">
+      <node id="44" label="Henry BULLOCK">
+        <attvalues>
+          <attvalue for="att1" value="1"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="3"/>
+        </attvalues>
+        <viz:color r="82" g="82" b="82" a="1"/>
+        <viz:position x="26.1608282877907" y="33.4094061173064" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="45" label="Pieter GILLIS">
+        <attvalues>
+          <attvalue for="att1" value="2"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="5"/>
+        </attvalues>
+        <viz:color r="82" g="82" b="82" a="1"/>
+        <viz:position x="7.98887157329504" y="29.9871252318942" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="46" label="Johannes (II) THURZO">
         <attvalues>
           <attvalue for="att1" value="1"/>
           <attvalue for="att2" value="#525252"/>
           <attvalue for="att3" value="1"/>
         </attvalues>
         <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="414.761207958988" y="-193.127945520774" z="0"/>
+        <viz:position x="-87.075762717356" y="-26.4763703675799" z="0"/>
+        <viz:size value="10"/>
       </node>
-      <node id="70" label="Wilhelm NESEN">
+      <node id="47" label="Maarten van DORP">
+        <attvalues>
+          <attvalue for="att1" value="1"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="1"/>
+        </attvalues>
+        <viz:color r="82" g="82" b="82" a="1"/>
+        <viz:position x="-30.6755430045656" y="-53.2953997491824" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="48" label="Richard WINGFIELD">
+        <attvalues>
+          <attvalue for="att1" value="1"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="1"/>
+        </attvalues>
+        <viz:color r="82" g="82" b="82" a="1"/>
+        <viz:position x="94.5666851725329" y="43.8294349992997" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="49" label="Johannes LONGICAMPIANUS">
+        <attvalues>
+          <attvalue for="att1" value="1"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="1"/>
+        </attvalues>
+        <viz:color r="82" g="82" b="82" a="1"/>
+        <viz:position x="-77.6266758340893" y="69.6508522826882" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="50" label="Johannes SIXTINUS">
         <attvalues>
           <attvalue for="att1" value="1"/>
           <attvalue for="att2" value="#525252"/>
           <attvalue for="att3" value="2"/>
         </attvalues>
         <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="348.017180788412" y="-104.067702983815" z="0"/>
+        <viz:position x="56.1825495153985" y="7.42453771462212" z="0"/>
+        <viz:size value="10"/>
       </node>
-      <node id="71" label="Hermann von NEUENAHR">
+      <node id="51" label="Gilles de BUSLEYDEN">
         <attvalues>
           <attvalue for="att1" value="1"/>
           <attvalue for="att2" value="#525252"/>
           <attvalue for="att3" value="1"/>
         </attvalues>
         <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="582.261161146119" y="-82.6322511320739" z="0"/>
+        <viz:position x="-85.5149490636332" y="27.9557479080362" z="0"/>
+        <viz:size value="10"/>
       </node>
-      <node id="72" label="Johannes OECOLAMPADIUS">
+      <node id="52" label="John FISHER">
+        <attvalues>
+          <attvalue for="att1" value="1"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="3"/>
+        </attvalues>
+        <viz:color r="82" g="82" b="82" a="1"/>
+        <viz:position x="-29.9085026358378" y="30.0388547668297" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="53" label="John COLET">
+        <attvalues>
+          <attvalue for="att1" value="1"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="3"/>
+        </attvalues>
+        <viz:color r="82" g="82" b="82" a="1"/>
+        <viz:position x="-29.8379832232848" y="2.02316797196865" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="54" label="Jan van MERLEBERGE">
         <attvalues>
           <attvalue for="att1" value="1"/>
           <attvalue for="att2" value="#525252"/>
           <attvalue for="att3" value="1"/>
         </attvalues>
         <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="550.116669406056" y="-175.218571843196" z="0"/>
+        <viz:position x="-73.7553403276089" y="53.8455701777365" z="0"/>
+        <viz:size value="10"/>
       </node>
-      <node id="73" label="Richard PACE">
+      <node id="55" label="Jan BIJL">
+        <attvalues>
+          <attvalue for="att1" value="1"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="1"/>
+        </attvalues>
+        <viz:color r="82" g="82" b="82" a="1"/>
+        <viz:position x="-99.6162718041153" y="34.1418785545692" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="56" label="Giambattista EGNAZIO">
+        <attvalues>
+          <attvalue for="att1" value="1"/>
+          <attvalue for="att2" value="#C3161F"/>
+          <attvalue for="att3" value="1"/>
+        </attvalues>
+        <viz:color r="195" g="22" b="31" a="1"/>
+        <viz:position x="51.8842994809301" y="-100" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="57" label="Richard SAMPSON">
+        <attvalues>
+          <attvalue for="att1" value="2"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="2"/>
+        </attvalues>
+        <viz:color r="82" g="82" b="82" a="1"/>
+        <viz:position x="-46.6559906496533" y="-14.2544694713969" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="58" label="Johannes DRACONITES">
+        <attvalues>
+          <attvalue for="att1" value="1"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="1"/>
+        </attvalues>
+        <viz:color r="82" g="82" b="82" a="1"/>
+        <viz:position x="-90.0900002500015" y="57.2939624171747" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="59" label="HENRY VIII">
+        <attvalues>
+          <attvalue for="att1" value="1"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="1"/>
+        </attvalues>
+        <viz:color r="82" g="82" b="82" a="1"/>
+        <viz:position x="4.92377487481912" y="87.6954290032937" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="60" label="Cornelis BATT">
+        <attvalues>
+          <attvalue for="att1" value="1"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="1"/>
+        </attvalues>
+        <viz:color r="82" g="82" b="82" a="1"/>
+        <viz:position x="76.9929369591984" y="-33.9472480089429" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="61" label="Domenico GRIMANI">
+        <attvalues>
+          <attvalue for="att1" value="1"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="1"/>
+        </attvalues>
+        <viz:color r="82" g="82" b="82" a="1"/>
+        <viz:position x="23.1833451614219" y="85.1942313323054" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="62" label="Udalricus ZASIUS">
+        <attvalues>
+          <attvalue for="att1" value="2"/>
+          <attvalue for="att2" value="#C3161F"/>
+          <attvalue for="att3" value="2"/>
+        </attvalues>
+        <viz:color r="195" g="22" b="31" a="1"/>
+        <viz:position x="42.4345512760164" y="9.39504428273179" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="63" label="Heinrich BEYMING">
+        <attvalues>
+          <attvalue for="att1" value="1"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="1"/>
+        </attvalues>
+        <viz:color r="82" g="82" b="82" a="1"/>
+        <viz:position x="18.6886508205849" y="98.6114282145238" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="64" label="Adolf EICHHOLZ">
+        <attvalues>
+          <attvalue for="att1" value="1"/>
+          <attvalue for="att2" value="#C3161F"/>
+          <attvalue for="att3" value="1"/>
+        </attvalues>
+        <viz:color r="195" g="22" b="31" a="1"/>
+        <viz:position x="71.7974385400645" y="74.7391233395983" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="65" label="Lambertus HOLLONIUS">
+        <attvalues>
+          <attvalue for="att1" value="1"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="1"/>
+        </attvalues>
+        <viz:color r="82" g="82" b="82" a="1"/>
+        <viz:position x="-64.8249107578514" y="-33.0346010806314" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="66" label="Jan ROBBYNS">
+        <attvalues>
+          <attvalue for="att1" value="1"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="1"/>
+        </attvalues>
+        <viz:color r="82" g="82" b="82" a="1"/>
+        <viz:position x="33.9812751295906" y="-55.9639350427625" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="67" label="Thomas PARCIUS">
+        <attvalues>
+          <attvalue for="att1" value="1"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="1"/>
+        </attvalues>
+        <viz:color r="82" g="82" b="82" a="1"/>
+        <viz:position x="-99.8649298714594" y="19.0243658362455" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="68" label="Caspar URSINUS Velius">
+        <attvalues>
+          <attvalue for="att1" value="1"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="1"/>
+        </attvalues>
+        <viz:color r="82" g="82" b="82" a="1"/>
+        <viz:position x="40.4180883131131" y="79.8105130403744" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="69" label="Guillaume BUDÉ">
+        <attvalues>
+          <attvalue for="att1" value="8"/>
+          <attvalue for="att2" value="#D5AB5B"/>
+          <attvalue for="att3" value="18"/>
+        </attvalues>
+        <viz:color r="213" g="171" b="91" a="1"/>
+        <viz:position x="27.9462356507347" y="-27.3264900534133" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="70" label="Hermann von NEUENAHR">
+        <attvalues>
+          <attvalue for="att1" value="1"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="1"/>
+        </attvalues>
+        <viz:color r="82" g="82" b="82" a="1"/>
+        <viz:position x="-17.4995643827733" y="84.3409417944414" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="71" label="Josse BADE">
+        <attvalues>
+          <attvalue for="att1" value="1"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="2"/>
+        </attvalues>
+        <viz:color r="82" g="82" b="82" a="1"/>
+        <viz:position x="-53.3626857920478" y="-3.50440332644779" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="72" label="Antonius CLAVA">
+        <attvalues>
+          <attvalue for="att1" value="1"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="1"/>
+        </attvalues>
+        <viz:color r="82" g="82" b="82" a="1"/>
+        <viz:position x="-23.8806271599085" y="-66.3070539088301" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="73" label="Nicolas de MALAISE">
+        <attvalues>
+          <attvalue for="att1" value="1"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="1"/>
+        </attvalues>
+        <viz:color r="82" g="82" b="82" a="1"/>
+        <viz:position x="-51.093438589564" y="-47.6790143734318" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="74" label="Ambrogio LEONI">
+        <attvalues>
+          <attvalue for="att1" value="2"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="2"/>
+        </attvalues>
+        <viz:color r="82" g="82" b="82" a="1"/>
+        <viz:position x="-2.18278097444006" y="61.4003234495662" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="75" label="Richard CROKE">
+        <attvalues>
+          <attvalue for="att1" value="1"/>
+          <attvalue for="att2" value="#C3161F"/>
+          <attvalue for="att3" value="1"/>
+        </attvalues>
+        <viz:color r="195" g="22" b="31" a="1"/>
+        <viz:position x="-43.4653757355327" y="-59.8681038570829" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="76" label="Jacques LEFÈVRE d'Etaples">
+        <attvalues>
+          <attvalue for="att1" value="1"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="1"/>
+        </attvalues>
+        <viz:color r="82" g="82" b="82" a="1"/>
+        <viz:position x="0.226036332534377" y="-67.7057896505263" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="77" label="Johannes de MOLENDINO">
+        <attvalues>
+          <attvalue for="att1" value="1"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="1"/>
+        </attvalues>
+        <viz:color r="82" g="82" b="82" a="1"/>
+        <viz:position x="69.4620573467564" y="60.5958814404393" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="78" label="Bruno AMERBACH">
+        <attvalues>
+          <attvalue for="att1" value="2"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="2"/>
+        </attvalues>
+        <viz:color r="82" g="82" b="82" a="1"/>
+        <viz:position x="6.16726825768777" y="-30.8749565978826" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="79" label="Pope LEO X">
+        <attvalues>
+          <attvalue for="att1" value="1"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="1"/>
+        </attvalues>
+        <viz:color r="82" g="82" b="82" a="1"/>
+        <viz:position x="100" y="9.5192834041522" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="80" label="Bonifacius AMERBACH">
+        <attvalues>
+          <attvalue for="att1" value="1"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="1"/>
+        </attvalues>
+        <viz:color r="82" g="82" b="82" a="1"/>
+        <viz:position x="-65.8728986215761" y="-49.7411238982616" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="81" label="Willibald PIRCKHEIMER">
+        <attvalues>
+          <attvalue for="att1" value="1"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="1"/>
+        </attvalues>
+        <viz:color r="82" g="82" b="82" a="1"/>
+        <viz:position x="-96.1319117018127" y="-12.120142108975" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="82" label="Pietro VANNES">
+        <attvalues>
+          <attvalue for="att1" value="1"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="2"/>
+        </attvalues>
+        <viz:color r="82" g="82" b="82" a="1"/>
+        <viz:position x="14.2833252651388" y="59.3776488707738" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="83" label="Thomas BEDYLL">
+        <attvalues>
+          <attvalue for="att1" value="1"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="3"/>
+        </attvalues>
+        <viz:color r="82" g="82" b="82" a="1"/>
+        <viz:position x="3.41135457780217" y="44.6347042654991" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="84" label="Matthias von SAARBURG">
+        <attvalues>
+          <attvalue for="att1" value="1"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="1"/>
+        </attvalues>
+        <viz:color r="82" g="82" b="82" a="1"/>
+        <viz:position x="-17.3875187173285" y="97.963581403519" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="85" label="Jean (I) LE SAUVAGE">
+        <attvalues>
+          <attvalue for="att1" value="1"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="2"/>
+        </attvalues>
+        <viz:color r="82" g="82" b="82" a="1"/>
+        <viz:position x="37.6376094271704" y="-15.1402492042374" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="86" label="Marcus LAURINUS">
+        <attvalues>
+          <attvalue for="att1" value="1"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="4"/>
+        </attvalues>
+        <viz:color r="82" g="82" b="82" a="1"/>
+        <viz:position x="-2.96514825463532" y="-6.82517686813988" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="87" label="Conradus MUTIANUS Rufus">
+        <attvalues>
+          <attvalue for="att1" value="1"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="1"/>
+        </attvalues>
+        <viz:color r="82" g="82" b="82" a="1"/>
+        <viz:position x="-47.1037340023031" y="90.0075889158948" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="88" label="Justus JONAS">
+        <attvalues>
+          <attvalue for="att1" value="1"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="1"/>
+        </attvalues>
+        <viz:color r="82" g="82" b="82" a="1"/>
+        <viz:position x="88.9578471233268" y="-21.0132022501587" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="89" label="Johann LANG">
+        <attvalues>
+          <attvalue for="att1" value="1"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="1"/>
+        </attvalues>
+        <viz:color r="82" g="82" b="82" a="1"/>
+        <viz:position x="54.7264368566426" y="69.9801178734735" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="90" label="William BLOUNT">
+        <attvalues>
+          <attvalue for="att1" value="1"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="2"/>
+        </attvalues>
+        <viz:color r="82" g="82" b="82" a="1"/>
+        <viz:position x="47.3064653130552" y="-5.98387896075769" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="91" label="Richard PACE">
         <attvalues>
           <attvalue for="att1" value="2"/>
           <attvalue for="att2" value="#C3161F"/>
           <attvalue for="att3" value="7"/>
         </attvalues>
         <viz:color r="195" g="22" b="31" a="1"/>
-        <viz:position x="345.842663988507" y="53.7500085259035" z="0"/>
+        <viz:position x="17.9692885927946" y="-17.6350341681606" z="0"/>
+        <viz:size value="10"/>
       </node>
-      <node id="74" label="Thomas PARCIUS">
+      <node id="92" label="Antoon (III) van BERGEN">
         <attvalues>
           <attvalue for="att1" value="1"/>
           <attvalue for="att2" value="#525252"/>
           <attvalue for="att3" value="1"/>
         </attvalues>
         <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="524.121702291868" y="141.403046933331" z="0"/>
+        <viz:position x="-78.6612501054064" y="-37.9873751731306" z="0"/>
+        <viz:size value="10"/>
       </node>
-      <node id="75" label="Philip (I) of BURGUNDY">
-        <attvalues>
-          <attvalue for="att1" value="1"/>
-          <attvalue for="att2" value="#525252"/>
-          <attvalue for="att3" value="1"/>
-        </attvalues>
-        <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="234.083277223298" y="86.1458044794263" z="0"/>
-      </node>
-      <node id="76" label="Willibald PIRCKHEIMER">
-        <attvalues>
-          <attvalue for="att1" value="1"/>
-          <attvalue for="att2" value="#525252"/>
-          <attvalue for="att3" value="1"/>
-        </attvalues>
-        <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="284.942099539257" y="-132.710374676042" z="0"/>
-      </node>
-      <node id="77" label="Antonio PUCCI">
-        <attvalues>
-          <attvalue for="att1" value="1"/>
-          <attvalue for="att2" value="#525252"/>
-          <attvalue for="att3" value="1"/>
-        </attvalues>
-        <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="364.864529471931" y="-179.626164323704" z="0"/>
-      </node>
-      <node id="78" label="BEATUS Rhenanus">
-        <attvalues>
-          <attvalue for="att1" value="1"/>
-          <attvalue for="att2" value="#525252"/>
-          <attvalue for="att3" value="2"/>
-        </attvalues>
-        <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="468.879663014787" y="-112.378211208335" z="0"/>
-      </node>
-      <node id="79" label="Jan ROBBYNS">
-        <attvalues>
-          <attvalue for="att1" value="1"/>
-          <attvalue for="att2" value="#525252"/>
-          <attvalue for="att3" value="1"/>
-        </attvalues>
-        <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="206.110249911862" y="-59.7084504096117" z="0"/>
-      </node>
-      <node id="80" label="Matthias von SAARBURG">
-        <attvalues>
-          <attvalue for="att1" value="1"/>
-          <attvalue for="att2" value="#525252"/>
-          <attvalue for="att3" value="1"/>
-        </attvalues>
-        <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="623.462381205668" y="4.10537653559109" z="0"/>
-      </node>
-      <node id="81" label="Richard SAMPSON">
+      <node id="93" label="Paschasius BERSELIUS">
         <attvalues>
           <attvalue for="att1" value="2"/>
           <attvalue for="att2" value="#525252"/>
           <attvalue for="att3" value="2"/>
         </attvalues>
         <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="515.860295839854" y="-65.2351378599021" z="0"/>
+        <viz:position x="48.1608197485544" y="34.5768233513219" z="0"/>
+        <viz:size value="10"/>
       </node>
-      <node id="82" label="Johannes SAPIDUS">
+      <node id="94" label="Antonio PUCCI">
         <attvalues>
           <attvalue for="att1" value="1"/>
           <attvalue for="att2" value="#525252"/>
           <attvalue for="att3" value="1"/>
         </attvalues>
         <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="208.796433725953" y="28.104596710833" z="0"/>
+        <viz:position x="82.8985798133744" y="-0.440363289643273" z="0"/>
+        <viz:size value="10"/>
       </node>
-      <node id="83" label="Johannes SIXTINUS">
-        <attvalues>
-          <attvalue for="att1" value="1"/>
-          <attvalue for="att2" value="#525252"/>
-          <attvalue for="att3" value="2"/>
-        </attvalues>
-        <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="376.20078485919" y="98.0481698289788" z="0"/>
-      </node>
-      <node id="84" label="John SMITH">
-        <attvalues>
-          <attvalue for="att1" value="1"/>
-          <attvalue for="att2" value="#525252"/>
-          <attvalue for="att3" value="1"/>
-        </attvalues>
-        <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="367.54085760231" y="-212.601770305375" z="0"/>
-      </node>
-      <node id="85" label="Jakob SPIEGEL">
-        <attvalues>
-          <attvalue for="att1" value="1"/>
-          <attvalue for="att2" value="#525252"/>
-          <attvalue for="att3" value="1"/>
-        </attvalues>
-        <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="613.984588473002" y="75.3246772758232" z="0"/>
-      </node>
-      <node id="86" label="Gianfrancesco TORRESANI">
-        <attvalues>
-          <attvalue for="att1" value="1"/>
-          <attvalue for="att2" value="#525252"/>
-          <attvalue for="att3" value="1"/>
-        </attvalues>
-        <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="296.546699887475" y="-183.595954562438" z="0"/>
-      </node>
-      <node id="87" label="Cuthbert TUNSTALL">
+      <node id="95" label="Janus LASCARIS">
         <attvalues>
           <attvalue for="att1" value="1"/>
           <attvalue for="att2" value="#C3161F"/>
-          <attvalue for="att3" value="2"/>
+          <attvalue for="att3" value="1"/>
         </attvalues>
         <viz:color r="195" g="22" b="31" a="1"/>
-        <viz:position x="527.545906074799" y="-36.9342118025959" z="0"/>
+        <viz:position x="99.5786145654615" y="27.0652826236357" z="0"/>
+        <viz:size value="10"/>
       </node>
-      <node id="88" label="Pietro VANNES">
-        <attvalues>
-          <attvalue for="att1" value="1"/>
-          <attvalue for="att2" value="#525252"/>
-          <attvalue for="att3" value="2"/>
-        </attvalues>
-        <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="431.316051595395" y="102.785225915887" z="0"/>
-      </node>
-      <node id="89" label="Caspar URSINUS Velius">
+      <node id="96" label="LUDOVICUS">
         <attvalues>
           <attvalue for="att1" value="1"/>
           <attvalue for="att2" value="#525252"/>
           <attvalue for="att3" value="1"/>
         </attvalues>
         <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="512.79683989139" y="180.903798143875" z="0"/>
-      </node>
-      <node id="90" label="Pierre VITRÉ">
-        <attvalues>
-          <attvalue for="att1" value="1"/>
-          <attvalue for="att2" value="#525252"/>
-          <attvalue for="att3" value="2"/>
-        </attvalues>
-        <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="497.468156002269" y="-93.2828819424102" z="0"/>
-      </node>
-      <node id="91" label="Paul VOLZ">
-        <attvalues>
-          <attvalue for="att1" value="1"/>
-          <attvalue for="att2" value="#525252"/>
-          <attvalue for="att3" value="1"/>
-        </attvalues>
-        <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="401.773866460492" y="-221.485619062352" z="0"/>
-      </node>
-      <node id="92" label="William WARHAM">
-        <attvalues>
-          <attvalue for="att1" value="1"/>
-          <attvalue for="att2" value="#525252"/>
-          <attvalue for="att3" value="2"/>
-        </attvalues>
-        <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="402.471275417788" y="114.457789338137" z="0"/>
-      </node>
-      <node id="93" label="Roger WENTFORD">
-        <attvalues>
-          <attvalue for="att1" value="1"/>
-          <attvalue for="att2" value="#525252"/>
-          <attvalue for="att3" value="2"/>
-        </attvalues>
-        <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="509.619972894562" y="59.4743538138634" z="0"/>
-      </node>
-      <node id="94" label="Johann WERTER">
-        <attvalues>
-          <attvalue for="att1" value="1"/>
-          <attvalue for="att2" value="#525252"/>
-          <attvalue for="att3" value="1"/>
-        </attvalues>
-        <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="547.223121086521" y="164.897142283876" z="0"/>
-      </node>
-      <node id="95" label="Richard WINGFIELD">
-        <attvalues>
-          <attvalue for="att1" value="1"/>
-          <attvalue for="att2" value="#525252"/>
-          <attvalue for="att3" value="1"/>
-        </attvalues>
-        <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="614.729972868179" y="-96.5081646096196" z="0"/>
-      </node>
-      <node id="96" label="Udalricus ZASIUS">
-        <attvalues>
-          <attvalue for="att1" value="2"/>
-          <attvalue for="att2" value="#C3161F"/>
-          <attvalue for="att3" value="2"/>
-        </attvalues>
-        <viz:color r="195" g="22" b="31" a="1"/>
-        <viz:position x="345.009444373851" y="94.6969930089651" z="0"/>
+        <viz:position x="-62.1921005202562" y="82.2067034309161" z="0"/>
+        <viz:size value="10"/>
       </node>
       <node id="97" label="Joachim Vadianus">
         <attvalues>
@@ -883,342 +979,343 @@
           <attvalue for="att3" value="1"/>
         </attvalues>
         <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="138.494470168329" y="146.477099653454" z="0"/>
+        <viz:position x="90.2928867395744" y="-81.8571595478206" z="0"/>
+        <viz:size value="10"/>
       </node>
     </nodes>
     <edges>
-      <edge id="0" source="3" target="30" weight="1">
+      <edge id="0" source="7" target="9" weight="1">
         <viz:color r="82" g="82" b="82" a="1"/>
       </edge>
-      <edge id="1" source="11" target="30" weight="1">
+      <edge id="1" source="9" target="1" weight="1">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="2" source="9" target="2" weight="2">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="3" source="9" target="3" weight="1">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="4" source="9" target="4" weight="1">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="5" source="9" target="5" weight="2">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="6" source="9" target="6" weight="2">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="7" source="9" target="7" weight="1">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="8" source="9" target="8" weight="1">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="9" source="9" target="10" weight="1">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="10" source="9" target="11" weight="1">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="11" source="9" target="12" weight="1">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="12" source="9" target="13" weight="4">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="13" source="9" target="14" weight="2">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="14" source="9" target="15" weight="9">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="15" source="9" target="16" weight="3">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="16" source="9" target="17" weight="1">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="17" source="9" target="18" weight="2">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="18" source="9" target="20" weight="1">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="19" source="9" target="21" weight="1">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="20" source="9" target="22" weight="1">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="21" source="9" target="23" weight="2">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="22" source="9" target="25" weight="1">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="23" source="9" target="26" weight="2">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="24" source="9" target="27" weight="1">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="25" source="9" target="28" weight="1">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="26" source="9" target="29" weight="2">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="27" source="9" target="30" weight="2">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="28" source="9" target="31" weight="4">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="29" source="9" target="33" weight="1">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="30" source="9" target="34" weight="1">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="31" source="9" target="35" weight="2">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="32" source="9" target="36" weight="1">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="33" source="9" target="37" weight="2">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="34" source="9" target="38" weight="1">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="35" source="9" target="39" weight="1">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="36" source="9" target="40" weight="2">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="37" source="9" target="41" weight="2">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="38" source="9" target="42" weight="4">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="39" source="9" target="43" weight="1">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="40" source="9" target="44" weight="3">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="41" source="9" target="45" weight="3">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="42" source="9" target="48" weight="1">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="43" source="9" target="49" weight="1">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="44" source="9" target="50" weight="2">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="45" source="9" target="51" weight="1">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="46" source="9" target="52" weight="3">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="47" source="9" target="53" weight="3">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="48" source="9" target="54" weight="1">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="49" source="9" target="55" weight="1">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="50" source="9" target="57" weight="1">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="51" source="9" target="58" weight="1">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="52" source="9" target="59" weight="1">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="53" source="9" target="60" weight="1">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="54" source="9" target="61" weight="1">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="55" source="9" target="62" weight="1">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="56" source="9" target="63" weight="1">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="57" source="9" target="66" weight="1">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="58" source="9" target="67" weight="1">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="59" source="9" target="69" weight="5">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="60" source="9" target="70" weight="1">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="61" source="9" target="71" weight="2">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="62" source="9" target="72" weight="1">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="63" source="9" target="73" weight="1">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="64" source="9" target="74" weight="1">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="65" source="9" target="75" weight="1">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="66" source="9" target="76" weight="1">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="67" source="9" target="77" weight="1">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="68" source="9" target="78" weight="1">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="69" source="9" target="80" weight="1">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="70" source="9" target="81" weight="1">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="71" source="9" target="82" weight="2">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="72" source="9" target="83" weight="3">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="73" source="9" target="84" weight="1">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="74" source="9" target="85" weight="2">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="75" source="9" target="86" weight="4">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="76" source="9" target="87" weight="1">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="77" source="9" target="88" weight="1">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="78" source="9" target="89" weight="1">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="79" source="9" target="90" weight="2">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="80" source="9" target="91" weight="3">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="81" source="9" target="92" weight="1">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="82" source="9" target="93" weight="1">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="83" source="9" target="94" weight="1">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="84" source="9" target="95" weight="1">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="85" source="9" target="96" weight="1">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="86" source="15" target="9" weight="1">
         <viz:color r="82" g="82" b="82" a="1"/>
       </edge>
-      <edge id="2" source="15" target="30" weight="1">
+      <edge id="87" source="16" target="9" weight="1">
         <viz:color r="82" g="82" b="82" a="1"/>
       </edge>
-      <edge id="3" source="16" target="28" weight="1">
-        <viz:color r="213" g="171" b="91" a="1"/>
-      </edge>
-      <edge id="4" source="16" target="30" weight="3">
-        <viz:color r="213" g="171" b="91" a="1"/>
-      </edge>
-      <edge id="5" source="16" target="58" weight="1">
-        <viz:color r="213" g="171" b="91" a="1"/>
-      </edge>
-      <edge id="6" source="16" target="67" weight="1">
-        <viz:color r="213" g="171" b="91" a="1"/>
-      </edge>
-      <edge id="7" source="16" target="73" weight="4">
-        <viz:color r="213" g="171" b="91" a="1"/>
-      </edge>
-      <edge id="8" source="16" target="97" weight="1">
-        <viz:color r="213" g="171" b="91" a="1"/>
-      </edge>
-      <edge id="9" source="25" target="30" weight="1">
+      <edge id="88" source="24" target="9" weight="1">
         <viz:color r="82" g="82" b="82" a="1"/>
       </edge>
-      <edge id="10" source="27" target="30" weight="1">
+      <edge id="89" source="26" target="9" weight="1">
         <viz:color r="82" g="82" b="82" a="1"/>
       </edge>
-      <edge id="11" source="29" target="30" weight="1">
+      <edge id="90" source="32" target="9" weight="1">
+        <viz:color r="82" g="82" b="82" a="1"/>
+      </edge>
+      <edge id="91" source="42" target="9" weight="2">
         <viz:color r="195" g="22" b="31" a="1"/>
       </edge>
-      <edge id="12" source="30" target="1" weight="2">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="13" source="30" target="2" weight="1">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="14" source="30" target="3" weight="1">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="15" source="30" target="4" weight="2">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="16" source="30" target="5" weight="2">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="17" source="30" target="6" weight="4">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="18" source="30" target="7" weight="1">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="19" source="30" target="8" weight="3">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="20" source="30" target="9" weight="1">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="21" source="30" target="10" weight="1">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="22" source="30" target="11" weight="1">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="23" source="30" target="12" weight="1">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="24" source="30" target="13" weight="1">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="25" source="30" target="14" weight="2">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="26" source="30" target="15" weight="3">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="27" source="30" target="16" weight="5">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="28" source="30" target="17" weight="3">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="29" source="30" target="18" weight="2">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="30" source="30" target="19" weight="1">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="31" source="30" target="20" weight="2">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="32" source="30" target="21" weight="2">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="33" source="30" target="22" weight="1">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="34" source="30" target="23" weight="3">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="35" source="30" target="24" weight="1">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="36" source="30" target="26" weight="1">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="37" source="30" target="27" weight="1">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="38" source="30" target="31" weight="1">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="39" source="30" target="32" weight="3">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="40" source="30" target="33" weight="2">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="41" source="30" target="34" weight="4">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="42" source="30" target="35" weight="1">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="43" source="30" target="36" weight="3">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="44" source="30" target="37" weight="2">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="45" source="30" target="38" weight="1">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="46" source="30" target="39" weight="1">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="47" source="30" target="40" weight="1">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="48" source="30" target="41" weight="1">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="49" source="30" target="42" weight="1">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="50" source="30" target="43" weight="1">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="51" source="30" target="44" weight="1">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="52" source="30" target="46" weight="1">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="53" source="30" target="47" weight="1">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="54" source="30" target="48" weight="2">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="55" source="30" target="50" weight="1">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="56" source="30" target="51" weight="1">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="57" source="30" target="52" weight="1">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="58" source="30" target="53" weight="4">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="59" source="30" target="54" weight="1">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="60" source="30" target="55" weight="1">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="61" source="30" target="56" weight="1">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="62" source="30" target="59" weight="9">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="63" source="30" target="60" weight="1">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="64" source="30" target="61" weight="1">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="65" source="30" target="62" weight="1">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="66" source="30" target="63" weight="1">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="67" source="30" target="64" weight="1">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="68" source="30" target="65" weight="1">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="69" source="30" target="66" weight="1">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="70" source="30" target="67" weight="4">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="71" source="30" target="68" weight="1">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="72" source="30" target="69" weight="1">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="73" source="30" target="70" weight="2">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="74" source="30" target="71" weight="1">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="75" source="30" target="72" weight="1">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="76" source="30" target="73" weight="3">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="77" source="30" target="74" weight="1">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="78" source="30" target="75" weight="1">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="79" source="30" target="76" weight="1">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="80" source="30" target="77" weight="1">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="81" source="30" target="78" weight="2">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="82" source="30" target="79" weight="1">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="83" source="30" target="80" weight="1">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="84" source="30" target="81" weight="1">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="85" source="30" target="82" weight="1">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="86" source="30" target="83" weight="2">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="87" source="30" target="84" weight="1">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="88" source="30" target="87" weight="2">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="89" source="30" target="88" weight="2">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="90" source="30" target="90" weight="2">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="91" source="30" target="91" weight="1">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="92" source="30" target="92" weight="2">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="93" source="30" target="93" weight="2">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="94" source="30" target="94" weight="1">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="95" source="30" target="95" weight="1">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="96" source="30" target="96" weight="1">
-        <viz:color r="60" g="147" b="175" a="1"/>
-      </edge>
-      <edge id="97" source="33" target="30" weight="1">
-        <viz:color r="82" g="82" b="82" a="1"/>
-      </edge>
-      <edge id="98" source="36" target="30" weight="2">
-        <viz:color r="82" g="82" b="82" a="1"/>
-      </edge>
-      <edge id="99" source="45" target="30" weight="1">
-        <viz:color r="82" g="82" b="82" a="1"/>
-      </edge>
-      <edge id="100" source="49" target="30" weight="1">
-        <viz:color r="82" g="82" b="82" a="1"/>
-      </edge>
-      <edge id="101" source="56" target="30" weight="1">
-        <viz:color r="82" g="82" b="82" a="1"/>
-      </edge>
-      <edge id="102" source="57" target="30" weight="1">
-        <viz:color r="82" g="82" b="82" a="1"/>
-      </edge>
-      <edge id="103" source="59" target="30" weight="1">
-        <viz:color r="82" g="82" b="82" a="1"/>
-      </edge>
-      <edge id="104" source="67" target="16" weight="2">
+      <edge id="92" source="42" target="69" weight="2">
         <viz:color r="195" g="22" b="31" a="1"/>
       </edge>
-      <edge id="105" source="67" target="30" weight="2">
+      <edge id="93" source="45" target="9" weight="2">
+        <viz:color r="82" g="82" b="82" a="1"/>
+      </edge>
+      <edge id="94" source="46" target="9" weight="1">
+        <viz:color r="82" g="82" b="82" a="1"/>
+      </edge>
+      <edge id="95" source="47" target="9" weight="1">
+        <viz:color r="82" g="82" b="82" a="1"/>
+      </edge>
+      <edge id="96" source="57" target="9" weight="1">
+        <viz:color r="82" g="82" b="82" a="1"/>
+      </edge>
+      <edge id="97" source="62" target="9" weight="1">
         <viz:color r="195" g="22" b="31" a="1"/>
       </edge>
-      <edge id="106" source="81" target="30" weight="1">
-        <viz:color r="82" g="82" b="82" a="1"/>
-      </edge>
-      <edge id="107" source="85" target="30" weight="1">
-        <viz:color r="82" g="82" b="82" a="1"/>
-      </edge>
-      <edge id="108" source="86" target="30" weight="1">
-        <viz:color r="82" g="82" b="82" a="1"/>
-      </edge>
-      <edge id="109" source="89" target="30" weight="1">
-        <viz:color r="82" g="82" b="82" a="1"/>
-      </edge>
-      <edge id="110" source="96" target="30" weight="1">
+      <edge id="98" source="64" target="9" weight="1">
         <viz:color r="195" g="22" b="31" a="1"/>
+      </edge>
+      <edge id="99" source="65" target="9" weight="1">
+        <viz:color r="82" g="82" b="82" a="1"/>
+      </edge>
+      <edge id="100" source="68" target="9" weight="1">
+        <viz:color r="82" g="82" b="82" a="1"/>
+      </edge>
+      <edge id="101" source="69" target="9" weight="3">
+        <viz:color r="213" g="171" b="91" a="1"/>
+      </edge>
+      <edge id="102" source="69" target="19" weight="1">
+        <viz:color r="213" g="171" b="91" a="1"/>
+      </edge>
+      <edge id="103" source="69" target="42" weight="1">
+        <viz:color r="213" g="171" b="91" a="1"/>
+      </edge>
+      <edge id="104" source="69" target="56" weight="1">
+        <viz:color r="213" g="171" b="91" a="1"/>
+      </edge>
+      <edge id="105" source="69" target="91" weight="4">
+        <viz:color r="213" g="171" b="91" a="1"/>
+      </edge>
+      <edge id="106" source="69" target="97" weight="1">
+        <viz:color r="213" g="171" b="91" a="1"/>
+      </edge>
+      <edge id="107" source="74" target="9" weight="1">
+        <viz:color r="82" g="82" b="82" a="1"/>
+      </edge>
+      <edge id="108" source="78" target="9" weight="1">
+        <viz:color r="82" g="82" b="82" a="1"/>
+      </edge>
+      <edge id="109" source="79" target="9" weight="1">
+        <viz:color r="82" g="82" b="82" a="1"/>
+      </edge>
+      <edge id="110" source="93" target="9" weight="1">
+        <viz:color r="82" g="82" b="82" a="1"/>
       </edge>
     </edges>
   </graph>
