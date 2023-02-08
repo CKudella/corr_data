@@ -1,9 +1,6 @@
 require(readr)
 require(reshape2)
 require(ggplot2)
-library(readr)
-library(reshape2)
-library(ggplot2)
 
 # set working directory
 getwd()

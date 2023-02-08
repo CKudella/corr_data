@@ -2,10 +2,6 @@ require(readr)
 require(ggplot2)
 require(ggrepel)
 require(ggpubr)
-library(readr)
-library(ggplot2)
-library(ggrepel)
-library(ggpubr)
 
 # set working directory
 getwd()
