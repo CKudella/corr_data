@@ -1,6 +1,5 @@
 require(readr)
 require(ggplot2)
-require(tidyverse)
 
 # set working directory
 getwd()
