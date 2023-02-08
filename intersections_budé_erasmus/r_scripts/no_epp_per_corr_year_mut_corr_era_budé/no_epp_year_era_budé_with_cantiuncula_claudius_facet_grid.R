@@ -20,7 +20,7 @@ plot <- ggplot(data=data_long, aes(x= Year,y=value, factor = variable)) +
     geom_point(stat = "identity", size = 1.75) +
     labs(x="Year",y="Number of letters") +
     scale_x_continuous(breaks = c(1484:1540)) +
-    scale_y_continuous(breaks = seq(1,10,1)) +
+    scale_y_continuous(limits = c(0,3)) +
     facet_grid(variable ~ ., labeller=labeller(variable = labels)) +
     theme_bw() +
     theme(axis.text.x = element_text(angle = 90, vjust = 0.35)) +
