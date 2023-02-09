@@ -1,4 +1,4 @@
-﻿require(readr)
+require(readr)
 require(reshape2)
 require(ggplot2)
 
@@ -20,7 +20,7 @@ plot <- ggplot(data=data_long, aes(x= Year,y=value, factor = variable)) +
     geom_point(stat = "identity", size = 1.75) +
     labs(x="Year",y="Number of letters") +
     scale_x_continuous(breaks = c(1484:1536)) +
-    scale_y_continuous(breaks = seq(1,10,1)) +
+    scale_y_continuous(limits = c(0,3)) +
     facet_grid(variable ~ ., labeller=labeller(variable = labels)) +
     theme_bw() +
     theme(axis.text.x = element_text(angle = 90, vjust = 0.35)) +
@@ -33,7 +33,7 @@ getwd()
 setwd("../r_plots/")
 
 # save plot in multiple formats
-ggsave("no_epp_year_era_pirck_with_lange_johannes_facet_grid.pdf", plot = last_plot(), scale = 1, width = 11.7, height = 4.15, units = "in", dpi = 600, limitsize = TRUE)
-ggsave("no_epp_year_era_pirck_with_lange_johannes_facet_grid.png", plot = last_plot(), scale = 1, width = 11.7, height = 4.15, units = "in", dpi = 600, limitsize = TRUE)
-ggsave("no_epp_year_era_pirck_with_lange_johannes_facet_grid.eps", plot = last_plot(), scale = 1, width = 11.7, height = 4.15, units = "in", dpi = 600, limitsize = TRUE)
-ggsave("no_epp_year_era_pirck_with_lange_johannes_facet_grid.svg", plot = last_plot(), scale = 1, width = 11.7, height = 4.15, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("no_epp_year_era_pirck_with_lang_johannes_facet_grid.pdf", plot = last_plot(), scale = 1, width = 11.7, height = 4.15, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("no_epp_year_era_pirck_with_lang_johannes_facet_grid.png", plot = last_plot(), scale = 1, width = 11.7, height = 4.15, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("no_epp_year_era_pirck_with_lang_johannes_facet_grid.eps", plot = last_plot(), scale = 1, width = 11.7, height = 4.15, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("no_epp_year_era_pirck_with_lang_johannes_facet_grid.svg", plot = last_plot(), scale = 1, width = 11.7, height = 4.15, units = "in", dpi = 600, limitsize = TRUE)
