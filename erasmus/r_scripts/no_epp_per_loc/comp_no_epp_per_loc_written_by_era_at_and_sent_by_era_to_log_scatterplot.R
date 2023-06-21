@@ -1,7 +1,5 @@
 require(readr)
 require(ggplot2)
-library(readr)
-library(ggplot2)
 
 # set working directory
 getwd()
