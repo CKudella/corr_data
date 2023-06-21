@@ -1,7 +1,7 @@
 require(readr)
 require(ggplot2)
 require(ggrepel)
-require(ggpubr)
+require(patchwork)
 
 # set working directory
 getwd()
@@ -11,13 +11,13 @@ setwd("../query_results/")
 data<-read.csv("no_epp_per_loc_from_and_to_mut_corr_era_budé/no_epp_per_loc_sent_to_era_from_mut_corr_era_budé_excl_budé.csv", fileEncoding="UTF-8", na.strings=c("NULL"))
 
 # create barchart
-plot <- ggplot(data, aes(x= reorder(Location.Name.Modern, -Number.of.letters.sent.from.this.location.to.Erasmus.from.mutual.correspondents.of.his.and.Budé..excl..Budé.),y=Number.of.letters.sent.from.this.location.to.Erasmus.from.mutual.correspondents.of.his.and.Budé..excl..Budé.)) +
+plot1 <- ggplot(data, aes(x= reorder(Location.Name.Modern, -Number.of.letters.sent.from.this.location.to.Erasmus.from.mutual.correspondents.of.his.and.Budé..excl..Budé.),y=Number.of.letters.sent.from.this.location.to.Erasmus.from.mutual.correspondents.of.his.and.Budé..excl..Budé.)) +
   geom_bar(stat = "identity") +
   geom_text(aes(label=Number.of.letters.sent.from.this.location.to.Erasmus.from.mutual.correspondents.of.his.and.Budé..excl..Budé.), vjust=-0.5, color='black') +
   labs(x="Locations",y="Number of letters written to Erasmus by mutual correspondents of his and Budé per location") +
   theme_bw() +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.35))
-plot
+plot1
 
 # create boxplot
 plot2 <- ggplot(data, aes(x= ' ', y = Number.of.letters.sent.from.this.location.to.Erasmus.from.mutual.correspondents.of.his.and.Budé..excl..Budé.)) +
@@ -28,9 +28,8 @@ plot2 <- ggplot(data, aes(x= ' ', y = Number.of.letters.sent.from.this.location.
   labs(y = "Number of letters written to Erasmus by mutual correspondents of his and Budé per location")
 plot2
 
-# arrange plots
-ggarrange(plot, plot2,
-          ncol = 2, nrow = 1)
+# combine plots via patchwork
+plot1 + plot2
 
 # change working directory
 getwd()
