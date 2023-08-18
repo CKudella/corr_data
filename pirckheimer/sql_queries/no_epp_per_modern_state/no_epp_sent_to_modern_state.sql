@@ -3,6 +3,6 @@ SELECT DISTINCT locations.locations_modern_state AS 'Modern State',
 FROM letters,
      locations
 WHERE locations.locations_id = letters.target_loc_id
-  AND letters_id NOT REGEXP '[0-7]ck2|ck3|ck4|ck5|ck6|ck7|ck8]'
+  AND letters_id NOT REGEXP '[0-7]ck2|ck3|ck4|ck5|ck6|ck7|ck8'
 GROUP BY locations_modern_state
 ORDER BY COUNT(*) DESC
