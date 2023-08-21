@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gexf xmlns="http://www.gexf.net/1.3" version="1.3" xmlns:viz="http://www.gexf.net/1.3/viz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.3 http://www.gexf.net/1.3/gexf.xsd">
-  <meta lastmodifieddate="2018-03-25">
+  <meta lastmodifieddate="2023-08-21">
     <creator>Gephi 0.9</creator>
     <description></description>
   </meta>
@@ -10,1455 +10,1594 @@
       <attribute id="locations_modern_province" title="locations_modern_province" type="string"></attribute>
       <attribute id="locations_lat" title="locations_lat" type="double"></attribute>
       <attribute id="locations_lng" title="locations_lng" type="double"></attribute>
+      <attribute id="weighted indegree" title="Weighted In-Degree" type="double">
+        <default>0.0</default>
+      </attribute>
+      <attribute id="weighted outdegree" title="Weighted Out-Degree" type="double">
+        <default>0.0</default>
+      </attribute>
+      <attribute id="weighted degree" title="Weighted Degree" type="double">
+        <default>0.0</default>
+      </attribute>
     </attributes>
     <nodes>
       <node id="altenburg_DE_gid_2957773" label="Altenburg">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
           <attvalue for="locations_modern_province" value="Thuringia"></attvalue>
-          <attvalue for="locations_lat" value="50.98763"></attvalue>
-          <attvalue for="locations_lng" value="12.43684"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="5.0"></attvalue>
+          <attvalue for="weighted degree" value="5.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="230.21529" y="-188.01872"></viz:position>
+        <viz:size value="10.684932"></viz:size>
+        <viz:position x="564.1809" y="-78.54166"></viz:position>
       </node>
       <node id="amberg_DE_gid_2956656" label="Amberg">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
           <attvalue for="locations_modern_province" value="Bavaria"></attvalue>
-          <attvalue for="locations_lat" value="49.44287"></attvalue>
-          <attvalue for="locations_lng" value="11.86267"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="2.0"></attvalue>
+          <attvalue for="weighted degree" value="2.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="-297.527" y="388.65933"></viz:position>
+        <viz:size value="10.2739725"></viz:size>
+        <viz:position x="896.8595" y="-331.49185"></viz:position>
       </node>
       <node id="ansbach_DE_gid_2955936" label="Ansbach">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
           <attvalue for="locations_modern_province" value="Bavaria"></attvalue>
-          <attvalue for="locations_lat" value="49.30481"></attvalue>
-          <attvalue for="locations_lng" value="10.5931"></attvalue>
+          <attvalue for="weighted indegree" value="1.0"></attvalue>
+          <attvalue for="weighted outdegree" value="3.0"></attvalue>
+          <attvalue for="weighted degree" value="4.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="-333.66257" y="256.136"></viz:position>
+        <viz:size value="10.410959"></viz:size>
+        <viz:position x="271.31793" y="761.7264"></viz:position>
       </node>
-      <node id="antwerpen_BE_gid_2803138" label="Antwerpen">
+      <node id="antwerpen_BE_gid_2803138" label="Antwerp">
         <attvalues>
           <attvalue for="locations_modern_state" value="Belgium"></attvalue>
-          <attvalue for="locations_modern_province" value="Flemish"></attvalue>
-          <attvalue for="locations_lat" value="51.21989"></attvalue>
-          <attvalue for="locations_lng" value="4.40346"></attvalue>
+          <attvalue for="locations_modern_province" value="Flanders"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="-282.57928" y="-693.0826"></viz:position>
+        <viz:size value="10.136987"></viz:size>
+        <viz:position x="856.1973" y="-1062.6742"></viz:position>
       </node>
       <node id="aschaffenburg_DE_gid_2955272" label="Aschaffenburg">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
           <attvalue for="locations_modern_province" value="Bavaria"></attvalue>
-          <attvalue for="locations_lat" value="49.97704"></attvalue>
-          <attvalue for="locations_lng" value="9.15214"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="-328.76382" y="590.04987"></viz:position>
+        <viz:size value="10.136987"></viz:size>
+        <viz:position x="1325.3167" y="-384.5228"></viz:position>
       </node>
       <node id="augsburg_DE_gid_2954172" label="Augsburg">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
           <attvalue for="locations_modern_province" value="Bavaria"></attvalue>
-          <attvalue for="locations_lat" value="48.37154"></attvalue>
-          <attvalue for="locations_lng" value="10.89851"></attvalue>
+          <attvalue for="weighted indegree" value="15.0"></attvalue>
+          <attvalue for="weighted outdegree" value="109.0"></attvalue>
+          <attvalue for="weighted degree" value="124.0"></attvalue>
         </attvalues>
-        <viz:size value="13.75"></viz:size>
-        <viz:position x="84.23383" y="-102.743965"></viz:position>
+        <viz:size value="24.931507"></viz:size>
+        <viz:position x="174.46393" y="-109.74855"></viz:position>
       </node>
-      <node id="baden_AT_gid_2782067" label="Baden">
+      <node id="baden_AT_gid_2782067" label="Baden bei Wien">
         <attvalues>
           <attvalue for="locations_modern_state" value="Austria"></attvalue>
           <attvalue for="locations_modern_province" value="Lower Austria"></attvalue>
-          <attvalue for="locations_lat" value="48.00543"></attvalue>
-          <attvalue for="locations_lng" value="16.23264"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="10.040791" y="757.49866"></viz:position>
+        <viz:size value="10.136987"></viz:size>
+        <viz:position x="-1445.886" y="430.98523"></viz:position>
       </node>
       <node id="bad_tölz_DE_gid_2953324" label="Bad Tölz">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
           <attvalue for="locations_modern_province" value="Bavaria"></attvalue>
-          <attvalue for="locations_lat" value="47.76111"></attvalue>
-          <attvalue for="locations_lng" value="11.5589"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="-666.23083" y="97.41664"></viz:position>
+        <viz:size value="10.136987"></viz:size>
+        <viz:position x="-1233.1259" y="-556.0655"></viz:position>
       </node>
       <node id="bamberg_DE_gid_2952984" label="Bamberg">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
           <attvalue for="locations_modern_province" value="Bavaria"></attvalue>
-          <attvalue for="locations_lat" value="49.89873"></attvalue>
-          <attvalue for="locations_lng" value="10.90067"></attvalue>
+          <attvalue for="weighted indegree" value="4.0"></attvalue>
+          <attvalue for="weighted outdegree" value="86.0"></attvalue>
+          <attvalue for="weighted degree" value="90.0"></attvalue>
         </attvalues>
-        <viz:size value="13.75"></viz:size>
-        <viz:position x="134.90762" y="25.272156"></viz:position>
+        <viz:size value="21.780823"></viz:size>
+        <viz:position x="-174.2389" y="73.77635"></viz:position>
       </node>
       <node id="basel_CH_gid_2661604" label="Basel">
         <attvalues>
           <attvalue for="locations_modern_state" value="Switzerland"></attvalue>
           <attvalue for="locations_modern_province" value="Basel-City"></attvalue>
-          <attvalue for="locations_lat" value="47.5584"></attvalue>
-          <attvalue for="locations_lng" value="7.57327"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="45.0"></attvalue>
+          <attvalue for="weighted degree" value="45.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="-10.220943" y="-124.12217"></viz:position>
+        <viz:size value="16.164383"></viz:size>
+        <viz:position x="70.74315" y="179.1617"></viz:position>
       </node>
       <node id="beaune_FR_gid_3034126" label="Beaune">
         <attvalues>
           <attvalue for="locations_modern_state" value="France"></attvalue>
           <attvalue for="locations_modern_province" value="Bourgogne-Franche-Comté"></attvalue>
-          <attvalue for="locations_lat" value="47.03333"></attvalue>
-          <attvalue for="locations_lng" value="4.83333"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="681.9058" y="-316.36603"></viz:position>
+        <viz:size value="10.136987"></viz:size>
+        <viz:position x="-1131.5183" y="822.2112"></viz:position>
       </node>
       <node id="bergen_abbey_DE_gid_unknown" label="Bergen Abbey">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
           <attvalue for="locations_modern_province" value="Bavaria"></attvalue>
-          <attvalue for="locations_lat" value="48.73218"></attvalue>
-          <attvalue for="locations_lng" value="11.18709"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="84.0"></attvalue>
+          <attvalue for="weighted degree" value="84.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="-0.09170774" y="116.28274"></viz:position>
+        <viz:size value="21.50685"></viz:size>
+        <viz:position x="-40.989635" y="143.12984"></viz:position>
       </node>
-      <node id="biberach_DE_gid_2949423" label="Biberach">
+      <node id="biberach_DE_gid_2949423" label="Biberach an der Riss">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
-          <attvalue for="locations_modern_province" value="Baden-Württemberg"></attvalue>
-          <attvalue for="locations_lat" value="48.09345"></attvalue>
-          <attvalue for="locations_lng" value="9.79053"></attvalue>
+          <attvalue for="locations_modern_province" value="Baden-Wurttemberg"></attvalue>
+          <attvalue for="weighted indegree" value="1.0"></attvalue>
+          <attvalue for="weighted outdegree" value="0.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="-190.08171" y="-641.61053"></viz:position>
+        <viz:position x="256.87125" y="-1500.3369"></viz:position>
       </node>
       <node id="blois_FR_gid_3032213" label="Blois">
         <attvalues>
           <attvalue for="locations_modern_state" value="France"></attvalue>
-          <attvalue for="locations_modern_province" value="Centre"></attvalue>
-          <attvalue for="locations_lat" value="47.58333"></attvalue>
-          <attvalue for="locations_lng" value="1.33333"></attvalue>
+          <attvalue for="locations_modern_province" value="Centre-Val de Loire"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="2.0"></attvalue>
+          <attvalue for="weighted degree" value="2.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="37.344097" y="479.4573"></viz:position>
+        <viz:size value="10.2739725"></viz:size>
+        <viz:position x="945.1619" y="164.1182"></viz:position>
       </node>
       <node id="bologna_IT_gid_3181928" label="Bologna">
         <attvalues>
           <attvalue for="locations_modern_state" value="Italy"></attvalue>
           <attvalue for="locations_modern_province" value="Emilia-Romagna"></attvalue>
-          <attvalue for="locations_lat" value="44.49381"></attvalue>
-          <attvalue for="locations_lng" value="11.33875"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="22.0"></attvalue>
+          <attvalue for="weighted degree" value="22.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="-146.14937" y="59.843655"></viz:position>
+        <viz:size value="13.013699"></viz:size>
+        <viz:position x="-85.9256" y="-233.88995"></viz:position>
       </node>
       <node id="bolzano_IT_gid_3181913" label="Bolzano">
         <attvalues>
           <attvalue for="locations_modern_state" value="Italy"></attvalue>
           <attvalue for="locations_modern_province" value="Trentino-Alto Adige"></attvalue>
-          <attvalue for="locations_lat" value="46.49067"></attvalue>
-          <attvalue for="locations_lng" value="11.33982"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="674.5843" y="-86.794525"></viz:position>
+        <viz:size value="10.136987"></viz:size>
+        <viz:position x="249.8053" y="1500.8704"></viz:position>
       </node>
       <node id="burgos_ES_gid_3127461" label="Burgos">
         <attvalues>
           <attvalue for="locations_modern_state" value="Spain"></attvalue>
           <attvalue for="locations_modern_province" value="Castille and León"></attvalue>
-          <attvalue for="locations_lat" value="42.35022"></attvalue>
-          <attvalue for="locations_lng" value="-3.67527"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="5.0"></attvalue>
+          <attvalue for="weighted degree" value="5.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="-227.39772" y="193.30025"></viz:position>
+        <viz:size value="10.684932"></viz:size>
+        <viz:position x="-539.0897" y="-116.03627"></viz:position>
       </node>
       <node id="chiateoscutella_IT_gid_unknown" label="Chiateoscutella">
         <attvalues>
           <attvalue for="locations_modern_state" value="Italy"></attvalue>
           <attvalue for="locations_modern_province" value="Unknown"></attvalue>
-          <attvalue for="locations_lat" value="0.0"></attvalue>
-          <attvalue for="locations_lng" value="0.0"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="2.0"></attvalue>
+          <attvalue for="weighted degree" value="2.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="204.18237" y="-431.13358"></viz:position>
+        <viz:size value="10.2739725"></viz:size>
+        <viz:position x="-759.0028" y="579.2823"></viz:position>
       </node>
       <node id="dachsbach_DE_gid_2939608" label="Dachsbach">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
           <attvalue for="locations_modern_province" value="Bavaria"></attvalue>
-          <attvalue for="locations_lat" value="49.64051"></attvalue>
-          <attvalue for="locations_lng" value="10.70652"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="80.021576" y="-666.26044"></viz:position>
+        <viz:size value="10.136987"></viz:size>
+        <viz:position x="1086.2266" y="1072.5972"></viz:position>
       </node>
       <node id="donauwörth_DE_gid_2936253" label="Donauwörth">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
           <attvalue for="locations_modern_province" value="Bavaria"></attvalue>
-          <attvalue for="locations_lat" value="48.71804"></attvalue>
-          <attvalue for="locations_lng" value="10.7793"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="4.0"></attvalue>
+          <attvalue for="weighted degree" value="4.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="-293.6867" y="-143.92694"></viz:position>
+        <viz:size value="10.547945"></viz:size>
+        <viz:position x="-21.584328" y="-634.9643"></viz:position>
       </node>
       <node id="dresden_DE_gid_2935022" label="Dresden">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
           <attvalue for="locations_modern_province" value="Saxony"></attvalue>
-          <attvalue for="locations_lat" value="51.05089"></attvalue>
-          <attvalue for="locations_lng" value="13.73832"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="5.0"></attvalue>
+          <attvalue for="weighted degree" value="5.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="62.00927" y="-283.86536"></viz:position>
+        <viz:size value="10.684932"></viz:size>
+        <viz:position x="141.5085" y="533.40704"></viz:position>
       </node>
       <node id="ebernburg_castle_DE_gid_unknown" label="Burg Ebernburg">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
           <attvalue for="locations_modern_province" value="Rheinland-Pfalz"></attvalue>
-          <attvalue for="locations_lat" value="49.807044"></attvalue>
-          <attvalue for="locations_lng" value="7.838608"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="-508.71054" y="549.4327"></viz:position>
+        <viz:size value="10.136987"></viz:size>
+        <viz:position x="-358.1825" y="-1477.1608"></viz:position>
       </node>
       <node id="eichstätt_DE_gid_2932069" label="Eichstätt">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
           <attvalue for="locations_modern_province" value="Bavaria"></attvalue>
-          <attvalue for="locations_lat" value="48.88854"></attvalue>
-          <attvalue for="locations_lng" value="11.19675"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="13.0"></attvalue>
+          <attvalue for="weighted degree" value="13.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="-169.04514" y="-91.53356"></viz:position>
+        <viz:size value="11.780822"></viz:size>
+        <viz:position x="-321.8745" y="67.2082"></viz:position>
       </node>
       <node id="erfurt_DE_gid_2929670" label="Erfurt">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
           <attvalue for="locations_modern_province" value="Thuringia"></attvalue>
-          <attvalue for="locations_lat" value="50.9787"></attvalue>
-          <attvalue for="locations_lng" value="11.03283"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="5.0"></attvalue>
+          <attvalue for="weighted degree" value="5.0"></attvalue>
         </attvalues>
-        <viz:size value="13.75"></viz:size>
-        <viz:position x="404.35583" y="69.227806"></viz:position>
+        <viz:size value="10.684932"></viz:size>
+        <viz:position x="-710.2128" y="325.49945"></viz:position>
       </node>
-      <node id="esslingen_DE_gid_2928751" label="Esslingen">
+      <node id="esslingen_DE_gid_2928751" label="Esslingen am Neckar">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
-          <attvalue for="locations_modern_province" value="Baden-Württemberg"></attvalue>
-          <attvalue for="locations_lat" value="48.73961"></attvalue>
-          <attvalue for="locations_lng" value="9.30473"></attvalue>
+          <attvalue for="locations_modern_province" value="Baden-Wurttemberg"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="2.0"></attvalue>
+          <attvalue for="weighted degree" value="2.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="-336.60992" y="-337.84146"></viz:position>
+        <viz:size value="10.2739725"></viz:size>
+        <viz:position x="-106.34598" y="-935.62335"></viz:position>
       </node>
       <node id="feldkirch_AT_gid_2779674" label="Feldkirch">
         <attvalues>
           <attvalue for="locations_modern_state" value="Austria"></attvalue>
           <attvalue for="locations_modern_province" value="Vorarlberg"></attvalue>
-          <attvalue for="locations_lat" value="47.23306"></attvalue>
-          <attvalue for="locations_lng" value="9.6"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="13.0"></attvalue>
+          <attvalue for="weighted degree" value="13.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="78.12657" y="181.43903"></viz:position>
+        <viz:size value="11.780822"></viz:size>
+        <viz:position x="17.511156" y="-344.1563"></viz:position>
       </node>
       <node id="feldlager_bei_herrenberg_gid_unknown" label="Feldlager bei Herrenberg">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
-          <attvalue for="locations_modern_province" value="Baden-Württemberg"></attvalue>
-          <attvalue for="locations_lat" value="48.59523"></attvalue>
-          <attvalue for="locations_lng" value="8.86648"></attvalue>
+          <attvalue for="locations_modern_province" value="Baden-Wurttemberg"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="-318.0308" y="-592.64484"></viz:position>
+        <viz:size value="10.136987"></viz:size>
+        <viz:position x="-923.6906" y="-998.89197"></viz:position>
       </node>
       <node id="ferrara_IT_gid_3177090" label="Ferrara">
         <attvalues>
           <attvalue for="locations_modern_state" value="Italy"></attvalue>
           <attvalue for="locations_modern_province" value="Emilia-Romagna"></attvalue>
-          <attvalue for="locations_lat" value="44.84346"></attvalue>
-          <attvalue for="locations_lng" value="11.60868"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="632.9846" y="314.28177"></viz:position>
+        <viz:size value="10.136987"></viz:size>
+        <viz:position x="-184.30963" y="-1351.9755"></viz:position>
       </node>
       <node id="florence_IT_gid_3176959" label="Florence">
         <attvalues>
           <attvalue for="locations_modern_state" value="Italy"></attvalue>
           <attvalue for="locations_modern_province" value="Tuscany"></attvalue>
-          <attvalue for="locations_lat" value="43.77925"></attvalue>
-          <attvalue for="locations_lng" value="11.24626"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="333.62253" y="-577.2914"></viz:position>
+        <viz:size value="10.136987"></viz:size>
+        <viz:position x="-1298.9634" y="700.52234"></viz:position>
       </node>
       <node id="forchheim_DE_gid_2925910" label="Forchheim">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
           <attvalue for="locations_modern_province" value="Bavaria"></attvalue>
-          <attvalue for="locations_lat" value="49.71754"></attvalue>
-          <attvalue for="locations_lng" value="11.05877"></attvalue>
+          <attvalue for="weighted indegree" value="3.0"></attvalue>
+          <attvalue for="weighted outdegree" value="2.0"></attvalue>
+          <attvalue for="weighted degree" value="5.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="-361.46555" y="66.87005"></viz:position>
+        <viz:size value="10.2739725"></viz:size>
+        <viz:position x="700.29675" y="117.29743"></viz:position>
       </node>
       <node id="frankfurt_am_main_DE_gid_2925533" label="Frankfurt am Main">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
           <attvalue for="locations_modern_province" value="Hesse"></attvalue>
-          <attvalue for="locations_lat" value="50.11552"></attvalue>
-          <attvalue for="locations_lng" value="8.68417"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="10.0"></attvalue>
+          <attvalue for="weighted degree" value="10.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="-129.20212" y="185.50397"></viz:position>
+        <viz:size value="11.3698635"></viz:size>
+        <viz:position x="-146.05975" y="357.31085"></viz:position>
       </node>
       <node id="freiberg_DE_gid_2925192" label="Freiberg">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
           <attvalue for="locations_modern_province" value="Saxony"></attvalue>
-          <attvalue for="locations_lat" value="50.91089"></attvalue>
-          <attvalue for="locations_lng" value="13.33881"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="-141.78319" y="-735.52484"></viz:position>
+        <viz:size value="10.136987"></viz:size>
+        <viz:position x="1403.5717" y="540.9531"></viz:position>
       </node>
-      <node id="freiburg_DE_gid_2925177" label="Freiburg">
+      <node id="freiburg_DE_gid_2925177" label="Freiburg im Breisgau">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
-          <attvalue for="locations_modern_province" value="Baden-Württemberg"></attvalue>
-          <attvalue for="locations_lat" value="47.9959"></attvalue>
-          <attvalue for="locations_lng" value="7.85222"></attvalue>
+          <attvalue for="locations_modern_province" value="Baden-Wurttemberg"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="9.0"></attvalue>
+          <attvalue for="weighted degree" value="9.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="-147.64285" y="-170.47867"></viz:position>
+        <viz:size value="11.232877"></viz:size>
+        <viz:position x="414.24774" y="1.1024963"></viz:position>
       </node>
       <node id="fürth_DE_gid_2923544" label="Fürth">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
           <attvalue for="locations_modern_province" value="Bavaria"></attvalue>
-          <attvalue for="locations_lat" value="49.47593"></attvalue>
-          <attvalue for="locations_lng" value="10.98856"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="82.81302" y="682.2528"></viz:position>
+        <viz:size value="10.136987"></viz:size>
+        <viz:position x="1070.1826" y="-1085.6658"></viz:position>
       </node>
       <node id="garmisch_partenkirchen_DE_gid_2922530" label="Garmisch-Partenkirchen">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
           <attvalue for="locations_modern_province" value="Bavaria"></attvalue>
-          <attvalue for="locations_lat" value="47.49209"></attvalue>
-          <attvalue for="locations_lng" value="11.09576"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="212.07806" y="-639.6605"></viz:position>
+        <viz:size value="10.136987"></viz:size>
+        <viz:position x="-648.9705" y="-1372.9348"></viz:position>
       </node>
       <node id="geisenfeld_abbey_DE_gid_unknown" label="Geisenfeld Abbey">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
           <attvalue for="locations_modern_province" value="Bavaria"></attvalue>
-          <attvalue for="locations_lat" value="48.683256"></attvalue>
-          <attvalue for="locations_lng" value="11.613472"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="19.0"></attvalue>
+          <attvalue for="weighted degree" value="19.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="-105.052666" y="130.36856"></viz:position>
+        <viz:size value="12.602739"></viz:size>
+        <viz:position x="-226.37967" y="-131.76495"></viz:position>
       </node>
-      <node id="genève_CH_gid_2660646" label="Genève">
+      <node id="genève_CH_gid_2660646" label="Geneva">
         <attvalues>
           <attvalue for="locations_modern_state" value="Switzerland"></attvalue>
           <attvalue for="locations_modern_province" value="Geneva"></attvalue>
-          <attvalue for="locations_lat" value="46.20222"></attvalue>
-          <attvalue for="locations_lng" value="6.14569"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="732.3428" y="-175.43695"></viz:position>
-      </node>
-      <node id="georgenthal_DE_gid_2921261" label="Georgenthal">
-        <attvalues>
-          <attvalue for="locations_modern_state" value="Germany"></attvalue>
-          <attvalue for="locations_modern_province" value="Thuringia"></attvalue>
-          <attvalue for="locations_lat" value="50.83205"></attvalue>
-          <attvalue for="locations_lng" value="10.66266"></attvalue>
-        </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="309.52145" y="-683.672"></viz:position>
+        <viz:size value="10.136987"></viz:size>
+        <viz:position x="81.24913" y="1370.9768"></viz:position>
       </node>
       <node id="gmunden_AT_gid_2778436" label="Gmunden">
         <attvalues>
           <attvalue for="locations_modern_state" value="Austria"></attvalue>
           <attvalue for="locations_modern_province" value="Upper Austria"></attvalue>
-          <attvalue for="locations_lat" value="47.91839"></attvalue>
-          <attvalue for="locations_lng" value="13.79933"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="-633.80255" y="-402.014"></viz:position>
+        <viz:size value="10.136987"></viz:size>
+        <viz:position x="363.10187" y="1319.9614"></viz:position>
       </node>
       <node id="göppingen_DE_gid_2919054" label="Göppingen">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
-          <attvalue for="locations_modern_province" value="Baden-Württemberg"></attvalue>
-          <attvalue for="locations_lat" value="48.70354"></attvalue>
-          <attvalue for="locations_lng" value="9.65209"></attvalue>
+          <attvalue for="locations_modern_province" value="Baden-Wurttemberg"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="521.90857" y="525.6778"></viz:position>
+        <viz:size value="10.136987"></viz:size>
+        <viz:position x="-703.5959" y="-1165.6539"></viz:position>
       </node>
       <node id="granada_ES_gid_2517117" label="Granada">
         <attvalues>
           <attvalue for="locations_modern_state" value="Spain"></attvalue>
           <attvalue for="locations_modern_province" value="Andalusia"></attvalue>
-          <attvalue for="locations_lat" value="37.18817"></attvalue>
-          <attvalue for="locations_lng" value="-3.60667"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="4.0"></attvalue>
+          <attvalue for="weighted degree" value="4.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="78.270546" y="330.33374"></viz:position>
+        <viz:size value="10.547945"></viz:size>
+        <viz:position x="-174.12071" y="-611.235"></viz:position>
       </node>
       <node id="graz_AT_gid_2778067" label="Graz">
         <attvalues>
           <attvalue for="locations_modern_state" value="Austria"></attvalue>
           <attvalue for="locations_modern_province" value="Styria"></attvalue>
-          <attvalue for="locations_lat" value="47.06667"></attvalue>
-          <attvalue for="locations_lng" value="15.45"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="163.28052" y="-732.92773"></viz:position>
+        <viz:size value="10.136987"></viz:size>
+        <viz:position x="93.08371" y="-1362.1978"></viz:position>
       </node>
       <node id="haguenau_FR_gid_3014078" label="Haguenau">
         <attvalues>
           <attvalue for="locations_modern_state" value="France"></attvalue>
-          <attvalue for="locations_modern_province" value="Alsace-Champagne-Ardenne-Lorraine"></attvalue>
-          <attvalue for="locations_lat" value="48.81557"></attvalue>
-          <attvalue for="locations_lng" value="7.79051"></attvalue>
+          <attvalue for="locations_modern_province" value="Grand Est"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="2.0"></attvalue>
+          <attvalue for="weighted degree" value="2.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="470.59802" y="-95.34507"></viz:position>
+        <viz:size value="10.2739725"></viz:size>
+        <viz:position x="-897.51556" y="-273.64597"></viz:position>
       </node>
       <node id="hall_in_tirol_AT_gid_2764958" label="Hall in Tirol">
         <attvalues>
           <attvalue for="locations_modern_state" value="Austria"></attvalue>
           <attvalue for="locations_modern_province" value="Tyrol"></attvalue>
-          <attvalue for="locations_lat" value="47.28333"></attvalue>
-          <attvalue for="locations_lng" value="11.51667"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="-741.7837" y="-119.775246"></viz:position>
+        <viz:size value="10.136987"></viz:size>
+        <viz:position x="-688.84344" y="1347.846"></viz:position>
       </node>
       <node id="herford_DE_gid_2906121" label="Herford">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
           <attvalue for="locations_modern_province" value="North Rhine-Westphalia"></attvalue>
-          <attvalue for="locations_lat" value="52.11457"></attvalue>
-          <attvalue for="locations_lng" value="8.67343"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="20.0"></attvalue>
+          <attvalue for="weighted degree" value="20.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="-161.17194" y="-14.079918"></viz:position>
+        <viz:size value="12.739726"></viz:size>
+        <viz:position x="76.567696" y="-256.02032"></viz:position>
       </node>
       <node id="hilpoltstein_DE_gid_2904638" label="Hilpoltstein">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
           <attvalue for="locations_modern_province" value="Bavaria"></attvalue>
-          <attvalue for="locations_lat" value="49.19047"></attvalue>
-          <attvalue for="locations_lng" value="11.1906"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="-681.64777" y="320.6068"></viz:position>
+        <viz:size value="10.136987"></viz:size>
+        <viz:position x="367.55637" y="-1316.7922"></viz:position>
       </node>
       <node id="hollfeld_DE_gid_2900453" label="Hollfeld">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
           <attvalue for="locations_modern_province" value="Bavaria"></attvalue>
-          <attvalue for="locations_lat" value="49.93793"></attvalue>
-          <attvalue for="locations_lng" value="11.29153"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="487.69266" y="-453.05212"></viz:position>
+        <viz:size value="10.136987"></viz:size>
+        <viz:position x="-1503.0497" y="-182.4274"></viz:position>
       </node>
       <node id="ingolstadt_DE_gid_2895992" label="Ingolstadt">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
           <attvalue for="locations_modern_province" value="Bavaria"></attvalue>
-          <attvalue for="locations_lat" value="48.76508"></attvalue>
-          <attvalue for="locations_lng" value="11.42372"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="14.0"></attvalue>
+          <attvalue for="weighted degree" value="14.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="51.356415" y="-181.48889"></viz:position>
+        <viz:size value="11.917809"></viz:size>
+        <viz:position x="105.048355" y="310.5421"></viz:position>
       </node>
       <node id="innsbruck_AT_gid_2775220" label="Innsbruck">
         <attvalues>
           <attvalue for="locations_modern_state" value="Austria"></attvalue>
           <attvalue for="locations_modern_province" value="Tyrol"></attvalue>
-          <attvalue for="locations_lat" value="47.26266"></attvalue>
-          <attvalue for="locations_lng" value="11.39454"></attvalue>
+          <attvalue for="weighted indegree" value="1.0"></attvalue>
+          <attvalue for="weighted outdegree" value="13.0"></attvalue>
+          <attvalue for="weighted degree" value="14.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="-220.46378" y="45.214943"></viz:position>
+        <viz:size value="11.780822"></viz:size>
+        <viz:position x="-324.34293" y="-233.09082"></viz:position>
       </node>
       <node id="jena_DE_gid_2895044" label="Jena">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
           <attvalue for="locations_modern_province" value="Thuringia"></attvalue>
-          <attvalue for="locations_lat" value="50.92878"></attvalue>
-          <attvalue for="locations_lng" value="11.5899"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="602.77045" y="-443.5042"></viz:position>
+        <viz:size value="10.136987"></viz:size>
+        <viz:position x="1263.9863" y="-854.41486"></viz:position>
       </node>
       <node id="kalbensteinberg_DE_gid_2893928" label="Kalbensteinberg">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
           <attvalue for="locations_modern_province" value="Bavaria"></attvalue>
-          <attvalue for="locations_lat" value="49.17645"></attvalue>
-          <attvalue for="locations_lng" value="10.84607"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="226.64713" y="650.98376"></viz:position>
+        <viz:size value="10.136987"></viz:size>
+        <viz:position x="1211.1163" y="-646.71405"></viz:position>
       </node>
       <node id="kirchehrenbach_DE_gid_2890592" label="Kirchehrenbach">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
           <attvalue for="locations_modern_province" value="Bavaria"></attvalue>
-          <attvalue for="locations_lat" value="49.73333"></attvalue>
-          <attvalue for="locations_lng" value="11.15"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="11.0"></attvalue>
+          <attvalue for="weighted degree" value="11.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="-175.07964" y="119.07781"></viz:position>
+        <viz:size value="11.506849"></viz:size>
+        <viz:position x="-350.65814" y="-67.99903"></viz:position>
       </node>
       <node id="kitzingen_DE_gid_2890158" label="Kitzingen">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
           <attvalue for="locations_modern_province" value="Bavaria"></attvalue>
-          <attvalue for="locations_lat" value="49.73973"></attvalue>
-          <attvalue for="locations_lng" value="10.15072"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="2.0"></attvalue>
+          <attvalue for="weighted degree" value="2.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="241.41495" y="414.82278"></viz:position>
+        <viz:size value="10.2739725"></viz:size>
+        <viz:position x="942.7548" y="-97.35972"></viz:position>
       </node>
-      <node id="köln_DE_gid_2886242" label="Köln">
+      <node id="kloster_georgenthal_DE_gid_unknown" label="Kloster Georgenthal">
+        <attvalues>
+          <attvalue for="locations_modern_state" value="Germany"></attvalue>
+          <attvalue for="locations_modern_province" value="Thuringia"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
+        </attvalues>
+        <viz:size value="10.136987"></viz:size>
+        <viz:position x="626.7707" y="-1217.1548"></viz:position>
+      </node>
+      <node id="kollegiatstift_st_viktor_DE_gid_unknown" label="Kollegiatstift St. Viktor">
+        <attvalues>
+          <attvalue for="locations_modern_state" value="Germany"></attvalue>
+          <attvalue for="locations_modern_province" value="Rheinland-Pfalz"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="3.0"></attvalue>
+          <attvalue for="weighted degree" value="3.0"></attvalue>
+        </attvalues>
+        <viz:size value="10.410959"></viz:size>
+        <viz:position x="-471.43152" y="575.03674"></viz:position>
+      </node>
+      <node id="köln_DE_gid_2886242" label="Cologne">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
           <attvalue for="locations_modern_province" value="North Rhine-Westphalia"></attvalue>
-          <attvalue for="locations_lat" value="50.93333"></attvalue>
-          <attvalue for="locations_lng" value="6.95"></attvalue>
+          <attvalue for="weighted indegree" value="24.0"></attvalue>
+          <attvalue for="weighted outdegree" value="5.0"></attvalue>
+          <attvalue for="weighted degree" value="29.0"></attvalue>
         </attvalues>
-        <viz:size value="13.75"></viz:size>
-        <viz:position x="9.650339" y="224.61472"></viz:position>
+        <viz:size value="10.684932"></viz:size>
+        <viz:position x="240.40817" y="-312.74286"></viz:position>
       </node>
       <node id="königstein_DE_gid_2885765" label="Königstein">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
           <attvalue for="locations_modern_province" value="Bavaria"></attvalue>
-          <attvalue for="locations_lat" value="49.60854"></attvalue>
-          <attvalue for="locations_lng" value="11.63143"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="-631.4781" y="225.3249"></viz:position>
+        <viz:size value="10.136987"></viz:size>
+        <viz:position x="1412.9275" y="-578.98914"></viz:position>
       </node>
       <node id="kornburg_DE_gid_2885443" label="Kornburg">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
           <attvalue for="locations_modern_province" value="Bavaria"></attvalue>
-          <attvalue for="locations_lat" value="49.35521"></attvalue>
-          <attvalue for="locations_lng" value="11.09885"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="-492.96994" y="454.2415"></viz:position>
+        <viz:size value="10.136987"></viz:size>
+        <viz:position x="835.0264" y="1275.1903"></viz:position>
       </node>
       <node id="langenburg_DE_gid_2881128" label="Langenburg">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
-          <attvalue for="locations_modern_province" value="Baden-Württemberg"></attvalue>
-          <attvalue for="locations_lat" value="49.25401"></attvalue>
-          <attvalue for="locations_lng" value="9.85673"></attvalue>
+          <attvalue for="locations_modern_province" value="Baden-Wurttemberg"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="2.0"></attvalue>
+          <attvalue for="weighted degree" value="2.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="459.16025" y="170.78696"></viz:position>
+        <viz:size value="10.2739725"></viz:size>
+        <viz:position x="857.5845" y="408.08472"></viz:position>
       </node>
       <node id="lauf_an_der_pegnitz_DE_gid_2880144" label="Lauf an der Pegnitz">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
           <attvalue for="locations_modern_province" value="Bavaria"></attvalue>
-          <attvalue for="locations_lat" value="49.51386"></attvalue>
-          <attvalue for="locations_lng" value="11.28247"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="426.00687" y="-603.3547"></viz:position>
+        <viz:size value="10.136987"></viz:size>
+        <viz:position x="-453.27826" y="-1285.2104"></viz:position>
       </node>
       <node id="leipzig_DE_gid_2879139" label="Leipzig">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
           <attvalue for="locations_modern_province" value="Saxony"></attvalue>
-          <attvalue for="locations_lat" value="51.33962"></attvalue>
-          <attvalue for="locations_lng" value="12.37129"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="27.0"></attvalue>
+          <attvalue for="weighted degree" value="27.0"></attvalue>
         </attvalues>
-        <viz:size value="13.75"></viz:size>
-        <viz:position x="162.6264" y="94.153114"></viz:position>
+        <viz:size value="13.69863"></viz:size>
+        <viz:position x="-210.3747" y="215.9747"></viz:position>
       </node>
       <node id="leuven_BE_gid_2792482" label="Leuven">
         <attvalues>
           <attvalue for="locations_modern_state" value="Belgium"></attvalue>
-          <attvalue for="locations_modern_province" value="Flemish"></attvalue>
-          <attvalue for="locations_lat" value="50.87959"></attvalue>
-          <attvalue for="locations_lng" value="4.70093"></attvalue>
+          <attvalue for="locations_modern_province" value="Flanders"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="4.0"></attvalue>
+          <attvalue for="weighted degree" value="4.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="-326.71857" y="-25.564901"></viz:position>
+        <viz:size value="10.547945"></viz:size>
+        <viz:position x="-163.29883" y="591.3435"></viz:position>
       </node>
       <node id="lichtenau_DE_gid_8629617" label="Lichtenau">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
           <attvalue for="locations_modern_province" value="Bavaria"></attvalue>
-          <attvalue for="locations_lat" value="49.27746"></attvalue>
-          <attvalue for="locations_lng" value="10.68674"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="4.0"></attvalue>
+          <attvalue for="weighted degree" value="4.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="336.4383" y="-41.986156"></viz:position>
+        <viz:size value="10.547945"></viz:size>
+        <viz:position x="6.636654" y="635.1067"></viz:position>
       </node>
       <node id="lindau_DE_gid_2877550" label="Lindau">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
           <attvalue for="locations_modern_province" value="Bavaria"></attvalue>
-          <attvalue for="locations_lat" value="47.54612"></attvalue>
-          <attvalue for="locations_lng" value="9.68431"></attvalue>
+          <attvalue for="weighted indegree" value="2.0"></attvalue>
+          <attvalue for="weighted outdegree" value="0.0"></attvalue>
+          <attvalue for="weighted degree" value="2.0"></attvalue>
         </attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="-14.148434" y="-473.58566"></viz:position>
+        <viz:position x="-506.92804" y="811.27606"></viz:position>
       </node>
       <node id="linz_AT_gid_2772400" label="Linz">
         <attvalues>
           <attvalue for="locations_modern_state" value="Austria"></attvalue>
           <attvalue for="locations_modern_province" value="Upper Austria"></attvalue>
-          <attvalue for="locations_lat" value="48.30639"></attvalue>
-          <attvalue for="locations_lng" value="14.28611"></attvalue>
+          <attvalue for="weighted indegree" value="2.0"></attvalue>
+          <attvalue for="weighted outdegree" value="2.0"></attvalue>
+          <attvalue for="weighted degree" value="4.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="-146.66656" y="389.33984"></viz:position>
+        <viz:size value="10.2739725"></viz:size>
+        <viz:position x="684.61993" y="-459.80222"></viz:position>
       </node>
       <node id="mainz_DE_gid_2874225" label="Mainz">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
           <attvalue for="locations_modern_province" value="Rheinland-Pfalz"></attvalue>
-          <attvalue for="locations_lat" value="49.98419"></attvalue>
-          <attvalue for="locations_lng" value="8.2791"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="4.0"></attvalue>
+          <attvalue for="weighted degree" value="4.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="150.32971" y="-302.61346"></viz:position>
-      </node>
-      <node id="mainz_st_viktorsberg_DE_gid_unknown" label="Mainz-St. Viktorsberg">
-        <attvalues>
-          <attvalue for="locations_modern_state" value="Germany"></attvalue>
-          <attvalue for="locations_modern_province" value="Rheinland-Pfalz"></attvalue>
-          <attvalue for="locations_lat" value="49.98419"></attvalue>
-          <attvalue for="locations_lng" value="8.2791"></attvalue>
-        </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="-219.81793" y="309.78128"></viz:position>
+        <viz:size value="10.547945"></viz:size>
+        <viz:position x="-576.0386" y="-266.3032"></viz:position>
       </node>
       <node id="marienburg_abbey_DE_gid_unknown" label="Marienburg Abbey">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
           <attvalue for="locations_modern_province" value="Bavaria"></attvalue>
-          <attvalue for="locations_lat" value="49.235"></attvalue>
-          <attvalue for="locations_lng" value="10.965278"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="13.985033" y="-750.0011"></viz:position>
+        <viz:size value="10.136987"></viz:size>
+        <viz:position x="-208.09534" y="1356.7711"></viz:position>
       </node>
       <node id="marienstein_abbey_DE_gid_unknown" label="Marienstein Abbey">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
           <attvalue for="locations_modern_province" value="Bavaria"></attvalue>
-          <attvalue for="locations_lat" value="48.893031"></attvalue>
-          <attvalue for="locations_lng" value="11.162989"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="-56.909676" y="-671.9758"></viz:position>
+        <viz:size value="10.136987"></viz:size>
+        <viz:position x="1526.7634" y="55.7781"></viz:position>
       </node>
-      <node id="milano_IT_gid_3173435" label="Milano">
+      <node id="milano_IT_gid_3173435" label="Milan">
         <attvalues>
           <attvalue for="locations_modern_state" value="Italy"></attvalue>
           <attvalue for="locations_modern_province" value="Lombardy"></attvalue>
-          <attvalue for="locations_lat" value="45.46427"></attvalue>
-          <attvalue for="locations_lng" value="9.18951"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="5.0"></attvalue>
+          <attvalue for="weighted degree" value="5.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="151.1085" y="262.94333"></viz:position>
+        <viz:size value="10.684932"></viz:size>
+        <viz:position x="502.0806" y="270.11017"></viz:position>
       </node>
       <node id="mirandola_IT_gid_3173370" label="Mirandola">
         <attvalues>
           <attvalue for="locations_modern_state" value="Italy"></attvalue>
           <attvalue for="locations_modern_province" value="Emilia-Romagna"></attvalue>
-          <attvalue for="locations_lat" value="44.88515"></attvalue>
-          <attvalue for="locations_lng" value="11.06902"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="3.0"></attvalue>
+          <attvalue for="weighted degree" value="3.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="75.156784" y="-382.85828"></viz:position>
+        <viz:size value="10.410959"></viz:size>
+        <viz:position x="-286.53107" y="695.9167"></viz:position>
       </node>
       <node id="monastery_rebdorf_DE_gid_unknown" label="Monastery Rebdorf">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
           <attvalue for="locations_modern_province" value="Bavaria"></attvalue>
-          <attvalue for="locations_lat" value="48.888103"></attvalue>
-          <attvalue for="locations_lng" value="11.167556"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="8.0"></attvalue>
+          <attvalue for="weighted degree" value="8.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="-231.99472" y="-52.23199"></viz:position>
+        <viz:size value="11.09589"></viz:size>
+        <viz:position x="285.5328" y="329.54306"></viz:position>
       </node>
       <node id="munich_DE_gid_2867714" label="Munich">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
           <attvalue for="locations_modern_province" value="Bavaria"></attvalue>
-          <attvalue for="locations_lat" value="48.13743"></attvalue>
-          <attvalue for="locations_lng" value="11.57549"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="2.0"></attvalue>
+          <attvalue for="weighted degree" value="2.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="321.8575" y="-348.00592"></viz:position>
+        <viz:size value="10.2739725"></viz:size>
+        <viz:position x="-937.325" y="48.587387"></viz:position>
       </node>
       <node id="neuburg_an_der_donau_DE_gid_2866070" label="Neuburg an der Donau">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
           <attvalue for="locations_modern_province" value="Bavaria"></attvalue>
-          <attvalue for="locations_lat" value="48.73218"></attvalue>
-          <attvalue for="locations_lng" value="11.18709"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="2.0"></attvalue>
+          <attvalue for="weighted degree" value="2.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="-163.36278" y="-446.5977"></viz:position>
+        <viz:size value="10.2739725"></viz:size>
+        <viz:position x="-644.3308" y="-690.12604"></viz:position>
       </node>
       <node id="neuenstein_DE_gid_2865557" label="Neuenstein">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
-          <attvalue for="locations_modern_province" value="Baden-Württemberg"></attvalue>
-          <attvalue for="locations_lat" value="49.2049"></attvalue>
-          <attvalue for="locations_lng" value="9.58"></attvalue>
+          <attvalue for="locations_modern_province" value="Baden-Wurttemberg"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="2.0"></attvalue>
+          <attvalue for="weighted degree" value="2.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="-75.54746" y="480.94745"></viz:position>
+        <viz:size value="10.2739725"></viz:size>
+        <viz:position x="81.219025" y="946.30145"></viz:position>
       </node>
       <node id="neumarkt_in_der_oberpfalz_DE_gid_2864549" label="Neumarkt in der Oberpfalz">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
           <attvalue for="locations_modern_province" value="Bavaria"></attvalue>
-          <attvalue for="locations_lat" value="49.28028"></attvalue>
-          <attvalue for="locations_lng" value="11.46278"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="-729.8749" y="182.84433"></viz:position>
+        <viz:size value="10.136987"></viz:size>
+        <viz:position x="551.9196" y="1419.5579"></viz:position>
       </node>
       <node id="neunhof_DE_gid_2864443" label="Neunhof">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
           <attvalue for="locations_modern_province" value="Bavaria"></attvalue>
-          <attvalue for="locations_lat" value="49.55495"></attvalue>
-          <attvalue for="locations_lng" value="11.23017"></attvalue>
+          <attvalue for="weighted indegree" value="23.0"></attvalue>
+          <attvalue for="weighted outdegree" value="0.0"></attvalue>
+          <attvalue for="weighted degree" value="23.0"></attvalue>
         </attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="275.94955" y="95.41937"></viz:position>
+        <viz:position x="-436.44214" y="306.07343"></viz:position>
       </node>
       <node id="nördlingen_DE_gid_2861914" label="Nördlingen">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
           <attvalue for="locations_modern_province" value="Bavaria"></attvalue>
-          <attvalue for="locations_lat" value="48.85122"></attvalue>
-          <attvalue for="locations_lng" value="10.48868"></attvalue>
+          <attvalue for="weighted indegree" value="11.0"></attvalue>
+          <attvalue for="weighted outdegree" value="4.0"></attvalue>
+          <attvalue for="weighted degree" value="15.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="-29.159857" y="-213.00383"></viz:position>
+        <viz:size value="10.547945"></viz:size>
+        <viz:position x="361.30707" y="149.15172"></viz:position>
       </node>
-      <node id="nürnberg_DE_gid_2861650" label="Nürnberg">
+      <node id="nürnberg_DE_gid_2861650" label="Nuremberg">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
           <attvalue for="locations_modern_province" value="Bavaria"></attvalue>
-          <attvalue for="locations_lat" value="49.45421"></attvalue>
-          <attvalue for="locations_lng" value="11.07752"></attvalue>
+          <attvalue for="weighted indegree" value="886.0"></attvalue>
+          <attvalue for="weighted outdegree" value="146.0"></attvalue>
+          <attvalue for="weighted degree" value="1032.0"></attvalue>
         </attvalues>
-        <viz:size value="40.0"></viz:size>
-        <viz:position x="2.2135093" y="2.1426132"></viz:position>
+        <viz:size value="30.0"></viz:size>
+        <viz:position x="4.040212" y="1.9572439"></viz:position>
       </node>
       <node id="nürnberg_katharinenkloster_DE_gid_unknown" label="Katharinenkloster Nürnberg">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
           <attvalue for="locations_modern_province" value="Bavaria"></attvalue>
-          <attvalue for="locations_lat" value="49.451667"></attvalue>
-          <attvalue for="locations_lng" value="11.081944"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="726.8517" y="135.59398"></viz:position>
+        <viz:size value="10.136987"></viz:size>
+        <viz:position x="1504.263" y="-271.20514"></viz:position>
       </node>
       <node id="nürnberg_klarissenkloster_st_klara_DE_gid_unknown" label="Klarissenkloster St. Klara">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
           <attvalue for="locations_modern_province" value="Bavaria"></attvalue>
-          <attvalue for="locations_lat" value="49.448611"></attvalue>
-          <attvalue for="locations_lng" value="11.079444"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="67.0"></attvalue>
+          <attvalue for="weighted degree" value="67.0"></attvalue>
         </attvalues>
-        <viz:size value="13.75"></viz:size>
-        <viz:position x="-93.43424" y="-85.65665"></viz:position>
+        <viz:size value="19.178082"></viz:size>
+        <viz:position x="192.18182" y="55.59065"></viz:position>
       </node>
       <node id="oleśnica_PL_gid_3090170" label="Oleśnica">
         <attvalues>
           <attvalue for="locations_modern_state" value="Poland"></attvalue>
-          <attvalue for="locations_modern_province" value="Lower Silesian Voivodeship"></attvalue>
-          <attvalue for="locations_lat" value="51.21338"></attvalue>
-          <attvalue for="locations_lng" value="17.38986"></attvalue>
+          <attvalue for="locations_modern_province" value="Lower Silesia"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="-604.35425" y="448.40256"></viz:position>
+        <viz:size value="10.136987"></viz:size>
+        <viz:position x="-1322.5402" y="-298.2932"></viz:position>
       </node>
       <node id="orléans_FR_gid_2989317" label="Orléans">
         <attvalues>
           <attvalue for="locations_modern_state" value="France"></attvalue>
-          <attvalue for="locations_modern_province" value="Centre"></attvalue>
-          <attvalue for="locations_lat" value="47.90289"></attvalue>
-          <attvalue for="locations_lng" value="1.90389"></attvalue>
+          <attvalue for="locations_modern_province" value="Centre-Val de Loire"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="-424.0692" y="606.99335"></viz:position>
+        <viz:size value="10.136987"></viz:size>
+        <viz:position x="1291.4355" y="813.7224"></viz:position>
       </node>
-      <node id="padova_IT_gid_3171728" label="Padova">
+      <node id="padova_IT_gid_3171728" label="Padua">
         <attvalues>
           <attvalue for="locations_modern_state" value="Italy"></attvalue>
           <attvalue for="locations_modern_province" value="Veneto"></attvalue>
-          <attvalue for="locations_lat" value="45.40797"></attvalue>
-          <attvalue for="locations_lng" value="11.88586"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="525.7852" y="427.86356"></viz:position>
+        <viz:size value="10.136987"></viz:size>
+        <viz:position x="629.4527" y="1221.1838"></viz:position>
       </node>
       <node id="palencia_ES_gid_3114531" label="Palencia">
         <attvalues>
           <attvalue for="locations_modern_state" value="Spain"></attvalue>
           <attvalue for="locations_modern_province" value="Castille and León"></attvalue>
-          <attvalue for="locations_lat" value="42.00955"></attvalue>
-          <attvalue for="locations_lng" value="-4.52406"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="-305.56427" y="693.3565"></viz:position>
+        <viz:size value="10.136987"></viz:size>
+        <viz:position x="-1006.568" y="977.3293"></viz:position>
       </node>
       <node id="pamplona_ES_gid_3114472" label="Pamplona">
         <attvalues>
           <attvalue for="locations_modern_state" value="Spain"></attvalue>
           <attvalue for="locations_modern_province" value="Navarre"></attvalue>
-          <attvalue for="locations_lat" value="42.81687"></attvalue>
-          <attvalue for="locations_lng" value="-1.64323"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="-537.117" y="-523.2973"></viz:position>
+        <viz:size value="10.136987"></viz:size>
+        <viz:position x="-1507.558" y="125.695915"></viz:position>
       </node>
       <node id="passau_DE_gid_2855328" label="Passau">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
           <attvalue for="locations_modern_province" value="Bavaria"></attvalue>
-          <attvalue for="locations_lat" value="48.5665"></attvalue>
-          <attvalue for="locations_lng" value="13.43122"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="5.0"></attvalue>
+          <attvalue for="weighted degree" value="5.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="173.57005" y="-233.97855"></viz:position>
+        <viz:size value="10.684932"></viz:size>
+        <viz:position x="317.31924" y="475.0062"></viz:position>
       </node>
       <node id="pavia_IT_gid_3171366" label="Pavia">
         <attvalues>
           <attvalue for="locations_modern_state" value="Italy"></attvalue>
           <attvalue for="locations_modern_province" value="Lombardy"></attvalue>
-          <attvalue for="locations_lat" value="45.19205"></attvalue>
-          <attvalue for="locations_lng" value="9.15917"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="4.0"></attvalue>
+          <attvalue for="weighted degree" value="4.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="-108.07717" y="-308.0494"></viz:position>
+        <viz:size value="10.547945"></viz:size>
+        <viz:position x="-317.5294" y="-548.6272"></viz:position>
       </node>
       <node id="pfunds_AT_gid_2768905" label="Pfunds">
         <attvalues>
           <attvalue for="locations_modern_state" value="Austria"></attvalue>
           <attvalue for="locations_modern_province" value="Tyrol"></attvalue>
-          <attvalue for="locations_lat" value="46.96667"></attvalue>
-          <attvalue for="locations_lng" value="10.55"></attvalue>
+          <attvalue for="weighted indegree" value="2.0"></attvalue>
+          <attvalue for="weighted outdegree" value="0.0"></attvalue>
+          <attvalue for="weighted degree" value="2.0"></attvalue>
         </attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="-422.02972" y="-217.32297"></viz:position>
+        <viz:position x="187.36102" y="-925.23926"></viz:position>
       </node>
       <node id="pillenreuth_abbey_DE_gid_unknown" label="Pillenreuth Abbey">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
           <attvalue for="locations_modern_province" value="Bavaria"></attvalue>
-          <attvalue for="locations_lat" value="49.379167"></attvalue>
-          <attvalue for="locations_lng" value="11.078056"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="327.01846" y="684.0826"></viz:position>
+        <viz:size value="10.136987"></viz:size>
+        <viz:position x="-912.9168" y="-1212.6229"></viz:position>
       </node>
       <node id="prague_CZ_gid_3067696" label="Prague">
         <attvalues>
           <attvalue for="locations_modern_state" value="Czech Republic"></attvalue>
-          <attvalue for="locations_modern_province" value="Hlavní Mesto Praha"></attvalue>
-          <attvalue for="locations_lat" value="50.08804"></attvalue>
-          <attvalue for="locations_lng" value="14.42076"></attvalue>
+          <attvalue for="locations_modern_province" value="Hlavní město Praha"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="625.41595" y="417.86548"></viz:position>
+        <viz:size value="10.136987"></viz:size>
+        <viz:position x="-745.87604" y="1139.8293"></viz:position>
       </node>
       <node id="ravensburg_DE_gid_2849802" label="Ravensburg">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
-          <attvalue for="locations_modern_province" value="Baden-Württemberg"></attvalue>
-          <attvalue for="locations_lat" value="47.78198"></attvalue>
-          <attvalue for="locations_lng" value="9.61062"></attvalue>
+          <attvalue for="locations_modern_province" value="Baden-Wurttemberg"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="4.0"></attvalue>
+          <attvalue for="weighted degree" value="4.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="-46.3064" y="331.88974"></viz:position>
+        <viz:size value="10.547945"></viz:size>
+        <viz:position x="576.10834" y="-262.02472"></viz:position>
       </node>
       <node id="regensburg_DE_gid_2849483" label="Regensburg">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
           <attvalue for="locations_modern_province" value="Bavaria"></attvalue>
-          <attvalue for="locations_lat" value="49.01513"></attvalue>
-          <attvalue for="locations_lng" value="12.10161"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="3.0"></attvalue>
+          <attvalue for="weighted degree" value="3.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="-378.24454" y="-101.91947"></viz:position>
+        <viz:size value="10.410959"></viz:size>
+        <viz:position x="-634.2776" y="-430.47253"></viz:position>
       </node>
       <node id="roding_DE_gid_2845924" label="Roding">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
           <attvalue for="locations_modern_province" value="Bavaria"></attvalue>
-          <attvalue for="locations_lat" value="49.19426"></attvalue>
-          <attvalue for="locations_lng" value="12.51956"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="-431.3641" y="-516.6003"></viz:position>
+        <viz:size value="10.136987"></viz:size>
+        <viz:position x="-947.53015" y="1172.1865"></viz:position>
       </node>
       <node id="rome_IT_gid_3169070" label="Rome">
         <attvalues>
           <attvalue for="locations_modern_state" value="Italy"></attvalue>
-          <attvalue for="locations_modern_province" value="Latium"></attvalue>
-          <attvalue for="locations_lat" value="41.89193"></attvalue>
-          <attvalue for="locations_lng" value="12.51133"></attvalue>
+          <attvalue for="locations_modern_province" value="Lazio"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="6.0"></attvalue>
+          <attvalue for="weighted degree" value="6.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="258.79495" y="-86.0918"></viz:position>
+        <viz:size value="10.821918"></viz:size>
+        <viz:position x="-491.34537" y="74.57835"></viz:position>
       </node>
       <node id="salzburg_AT_gid_2766824" label="Salzburg">
         <attvalues>
           <attvalue for="locations_modern_state" value="Austria"></attvalue>
           <attvalue for="locations_modern_province" value="Salzburg"></attvalue>
-          <attvalue for="locations_lat" value="47.79941"></attvalue>
-          <attvalue for="locations_lng" value="13.04399"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="671.9476" y="51.592762"></viz:position>
+        <viz:size value="10.136987"></viz:size>
+        <viz:position x="555.8584" y="-1418.768"></viz:position>
       </node>
       <node id="schloss_münchsdorf_DE_gid_unknown" label="Schloss Münchsdorf">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
           <attvalue for="locations_modern_province" value="Bavaria"></attvalue>
-          <attvalue for="locations_lat" value="48.588261"></attvalue>
-          <attvalue for="locations_lng" value="12.903188"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="-64.54802" y="684.28064"></viz:position>
+        <viz:size value="10.136987"></viz:size>
+        <viz:position x="-1355.5574" y="-26.406784"></viz:position>
       </node>
       <node id="schloss_schillingsfürst_DE_gid_unknown" label="Schloss Schillingsfürst">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
           <attvalue for="locations_modern_province" value="Bavaria"></attvalue>
-          <attvalue for="locations_lat" value="49.289854"></attvalue>
-          <attvalue for="locations_lng" value="10.257884"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="-419.34714" y="-621.98444"></viz:position>
+        <viz:size value="10.136987"></viz:size>
+        <viz:position x="-1098.3429" y="-788.8902"></viz:position>
       </node>
       <node id="schloss_schwarzenberg_bei_scheinfeld_DE_gid_unknown" label="Schloss Schwarzenberg (Scheinfeld)">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
           <attvalue for="locations_modern_province" value="Bavaria"></attvalue>
-          <attvalue for="locations_lat" value="49.672"></attvalue>
-          <attvalue for="locations_lng" value="10.47555"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="-151.78467" y="742.2513"></viz:position>
+        <viz:size value="10.136987"></viz:size>
+        <viz:position x="-1435.5631" y="-481.54245"></viz:position>
       </node>
       <node id="schloss_schwarzenburg_gid_unknown" label="Schloß Schwarzenburg">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
           <attvalue for="locations_modern_province" value="Bavaria"></attvalue>
-          <attvalue for="locations_lat" value="49.35412"></attvalue>
-          <attvalue for="locations_lng" value="12.49065"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="-648.8908" y="-172.06796"></viz:position>
+        <viz:size value="10.136987"></viz:size>
+        <viz:position x="-487.62625" y="1280.7722"></viz:position>
       </node>
       <node id="schwabach_DE_gid_2835537" label="Schwabach">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
           <attvalue for="locations_modern_province" value="Bavaria"></attvalue>
-          <attvalue for="locations_lat" value="49.33047"></attvalue>
-          <attvalue for="locations_lng" value="11.02346"></attvalue>
+          <attvalue for="weighted indegree" value="1.0"></attvalue>
+          <attvalue for="weighted outdegree" value="0.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="579.78143" y="-342.80435"></viz:position>
+        <viz:position x="1049.3264" y="-870.6857"></viz:position>
       </node>
       <node id="schwäbisch_hall_DE_gid_2835481" label="Schwäbisch Hall">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
-          <attvalue for="locations_modern_province" value="Baden-Württemberg"></attvalue>
-          <attvalue for="locations_lat" value="49.11127"></attvalue>
-          <attvalue for="locations_lng" value="9.73908"></attvalue>
+          <attvalue for="locations_modern_province" value="Baden-Wurttemberg"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="2.0"></attvalue>
+          <attvalue for="weighted degree" value="2.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="144.63863" y="458.90118"></viz:position>
+        <viz:size value="10.2739725"></viz:size>
+        <viz:position x="720.5173" y="632.12256"></viz:position>
       </node>
       <node id="sélestat_FR_gid_2975233" label="Sélestat">
         <attvalues>
           <attvalue for="locations_modern_state" value="France"></attvalue>
-          <attvalue for="locations_modern_province" value="Alsace-Champagne-Ardenne-Lorraine"></attvalue>
-          <attvalue for="locations_lat" value="48.26667"></attvalue>
-          <attvalue for="locations_lng" value="7.45"></attvalue>
+          <attvalue for="locations_modern_province" value="Grand Est"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="2.0"></attvalue>
+          <attvalue for="weighted degree" value="2.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="327.61917" y="353.18375"></viz:position>
+        <viz:size value="10.2739725"></viz:size>
+        <viz:position x="475.9824" y="-825.3426"></viz:position>
       </node>
-      <node id="sevilla_ES_gid_2510911" label="Sevilla">
+      <node id="sevilla_ES_gid_2510911" label="Seville">
         <attvalues>
           <attvalue for="locations_modern_state" value="Spain"></attvalue>
           <attvalue for="locations_modern_province" value="Andalusia"></attvalue>
-          <attvalue for="locations_lat" value="37.38283"></attvalue>
-          <attvalue for="locations_lng" value="-5.97317"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="2.0"></attvalue>
+          <attvalue for="weighted degree" value="2.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="412.85446" y="-239.28351"></viz:position>
+        <viz:size value="10.2739725"></viz:size>
+        <viz:position x="-389.96365" y="-855.2399"></viz:position>
       </node>
       <node id="siena_IT_gid_3166548" label="Siena">
         <attvalues>
           <attvalue for="locations_modern_state" value="Italy"></attvalue>
           <attvalue for="locations_modern_province" value="Tuscany"></attvalue>
-          <attvalue for="locations_lat" value="43.31822"></attvalue>
-          <attvalue for="locations_lng" value="11.33064"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="-673.76154" y="-38.763584"></viz:position>
+        <viz:size value="10.136987"></viz:size>
+        <viz:position x="-1312.1947" y="-756.74567"></viz:position>
       </node>
       <node id="solothurn_CH_gid_2658564" label="Solothurn">
         <attvalues>
           <attvalue for="locations_modern_state" value="Switzerland"></attvalue>
           <attvalue for="locations_modern_province" value="Solothurn"></attvalue>
-          <attvalue for="locations_lat" value="47.20791"></attvalue>
-          <attvalue for="locations_lng" value="7.53714"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="-603.1732" y="-300.832"></viz:position>
+        <viz:size value="10.136987"></viz:size>
+        <viz:position x="832.8688" y="-1276.4427"></viz:position>
       </node>
       <node id="strasbourg_FR_gid_2973783" label="Strasbourg">
         <attvalues>
           <attvalue for="locations_modern_state" value="France"></attvalue>
-          <attvalue for="locations_modern_province" value="Alsace-Champagne-Ardenne-Lorraine"></attvalue>
-          <attvalue for="locations_lat" value="48.58342"></attvalue>
-          <attvalue for="locations_lng" value="7.74296"></attvalue>
+          <attvalue for="locations_modern_province" value="Grand Est"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="12.0"></attvalue>
+          <attvalue for="weighted degree" value="12.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="-65.14048" y="193.09543"></viz:position>
+        <viz:size value="11.643835"></viz:size>
+        <viz:position x="340.63895" y="-124.558495"></viz:position>
       </node>
       <node id="stuttgart_DE_gid_2825297" label="Stuttgart">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
-          <attvalue for="locations_modern_province" value="Baden-Württemberg"></attvalue>
-          <attvalue for="locations_lat" value="48.78232"></attvalue>
-          <attvalue for="locations_lng" value="9.17702"></attvalue>
+          <attvalue for="locations_modern_province" value="Baden-Wurttemberg"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="10.0"></attvalue>
+          <attvalue for="weighted degree" value="10.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="217.87732" y="-14.03563"></viz:position>
+        <viz:size value="11.3698635"></viz:size>
+        <viz:position x="-101.13278" y="-380.2665"></viz:position>
       </node>
       <node id="toledo_ES_gid_2510409" label="Toledo">
         <attvalues>
           <attvalue for="locations_modern_state" value="Spain"></attvalue>
           <attvalue for="locations_modern_province" value="Castille-La Mancha"></attvalue>
-          <attvalue for="locations_lat" value="39.8581"></attvalue>
-          <attvalue for="locations_lng" value="-4.02263"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="4.0"></attvalue>
+          <attvalue for="weighted degree" value="4.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="-246.89046" y="-214.53523"></viz:position>
+        <viz:size value="10.547945"></viz:size>
+        <viz:position x="279.0419" y="-570.891"></viz:position>
       </node>
       <node id="torgau_DE_gid_2821807" label="Torgau">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
           <attvalue for="locations_modern_province" value="Saxony"></attvalue>
-          <attvalue for="locations_lat" value="51.56016"></attvalue>
-          <attvalue for="locations_lng" value="12.99617"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="449.34323" y="595.6366"></viz:position>
+        <viz:size value="10.136987"></viz:size>
+        <viz:position x="-1331.9556" y="247.5839"></viz:position>
       </node>
       <node id="toulouse_FR_gid_2972315" label="Toulouse">
         <attvalues>
           <attvalue for="locations_modern_state" value="France"></attvalue>
-          <attvalue for="locations_modern_province" value="Languedoc-Roussillon-Midi-Pyrénées"></attvalue>
-          <attvalue for="locations_lat" value="43.60426"></attvalue>
-          <attvalue for="locations_lng" value="1.44367"></attvalue>
+          <attvalue for="locations_modern_province" value="Occitanie"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="353.53107" y="581.7663"></viz:position>
+        <viz:size value="10.136987"></viz:size>
+        <viz:position x="1221.5599" y="608.21454"></viz:position>
       </node>
       <node id="tours_FR_gid_972191" label="Tours">
         <attvalues>
           <attvalue for="locations_modern_state" value="France"></attvalue>
-          <attvalue for="locations_modern_province" value="Centre"></attvalue>
-          <attvalue for="locations_lat" value="47.38333"></attvalue>
-          <attvalue for="locations_lng" value="0.68333"></attvalue>
+          <attvalue for="locations_modern_province" value="Centre-Val de Loire"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="-751.3317" y="33.71203"></viz:position>
+        <viz:size value="10.136987"></viz:size>
+        <viz:position x="1083.4484" y="862.1743"></viz:position>
       </node>
       <node id="trento_IT_gid_3165243" label="Trento">
         <attvalues>
           <attvalue for="locations_modern_state" value="Italy"></attvalue>
           <attvalue for="locations_modern_province" value="Trentino-Alto Adige"></attvalue>
-          <attvalue for="locations_lat" value="46.06787"></attvalue>
-          <attvalue for="locations_lng" value="11.12108"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="170.70422" y="738.63135"></viz:position>
+        <viz:size value="10.136987"></viz:size>
+        <viz:position x="-1138.4822" y="-1001.00696"></viz:position>
       </node>
       <node id="trier_DE_gid_2821164" label="Trier">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
           <attvalue for="locations_modern_province" value="Rheinland-Pfalz"></attvalue>
-          <attvalue for="locations_lat" value="49.75565"></attvalue>
-          <attvalue for="locations_lng" value="6.63935"></attvalue>
+          <attvalue for="weighted indegree" value="1.0"></attvalue>
+          <attvalue for="weighted outdegree" value="0.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="637.2655" y="-219.69736"></viz:position>
+        <viz:position x="-70.800804" y="1518.7515"></viz:position>
       </node>
       <node id="tübingen_DE_gid_2820860" label="Tübingen">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
-          <attvalue for="locations_modern_province" value="Baden-Württemberg"></attvalue>
-          <attvalue for="locations_lat" value="48.52266"></attvalue>
-          <attvalue for="locations_lng" value="9.05222"></attvalue>
+          <attvalue for="locations_modern_province" value="Baden-Wurttemberg"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="3.0"></attvalue>
+          <attvalue for="weighted degree" value="3.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="-353.98972" y="159.39139"></viz:position>
+        <viz:size value="10.410959"></viz:size>
+        <viz:position x="561.09106" y="488.45572"></viz:position>
       </node>
       <node id="ulm_DE_gid_2820256" label="Ulm">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
-          <attvalue for="locations_modern_province" value="Baden-Württemberg"></attvalue>
-          <attvalue for="locations_lat" value="48.39841"></attvalue>
-          <attvalue for="locations_lng" value="9.99155"></attvalue>
+          <attvalue for="locations_modern_province" value="Baden-Wurttemberg"></attvalue>
+          <attvalue for="weighted indegree" value="2.0"></attvalue>
+          <attvalue for="weighted outdegree" value="3.0"></attvalue>
+          <attvalue for="weighted degree" value="5.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="-204.14615" y="-303.7722"></viz:position>
+        <viz:size value="10.410959"></viz:size>
+        <viz:position x="469.27826" y="-537.53534"></viz:position>
       </node>
       <node id="valladolid_ES_gid_3106672" label="Valladolid">
         <attvalues>
           <attvalue for="locations_modern_state" value="Spain"></attvalue>
           <attvalue for="locations_modern_province" value="Castille and León"></attvalue>
-          <attvalue for="locations_lat" value="41.65518"></attvalue>
-          <attvalue for="locations_lng" value="-4.72372"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="4.0"></attvalue>
+          <attvalue for="weighted degree" value="4.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="242.5134" y="235.36655"></viz:position>
+        <viz:size value="10.547945"></viz:size>
+        <viz:position x="-442.09232" y="-444.93713"></viz:position>
       </node>
       <node id="venice_IT_gid_3164603" label="Venice">
         <attvalues>
           <attvalue for="locations_modern_state" value="Italy"></attvalue>
           <attvalue for="locations_modern_province" value="Veneto"></attvalue>
-          <attvalue for="locations_lat" value="45.43713"></attvalue>
-          <attvalue for="locations_lng" value="12.33265"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="18.0"></attvalue>
+          <attvalue for="weighted degree" value="18.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="-73.97048" y="-151.97931"></viz:position>
+        <viz:size value="12.465754"></viz:size>
+        <viz:position x="204.53104" y="205.19489"></viz:position>
       </node>
       <node id="vienna_AT_gid_2761369" label="Vienna">
         <attvalues>
           <attvalue for="locations_modern_state" value="Austria"></attvalue>
           <attvalue for="locations_modern_province" value="Vienna"></attvalue>
-          <attvalue for="locations_lat" value="48.20849"></attvalue>
-          <attvalue for="locations_lng" value="16.37208"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="12.0"></attvalue>
+          <attvalue for="weighted degree" value="12.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="133.60278" y="158.86406"></viz:position>
+        <viz:size value="11.643835"></viz:size>
+        <viz:position x="-194.95247" y="-287.19824"></viz:position>
       </node>
       <node id="waischenfeld_DE_gid_2815297" label="Waischenfeld">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
           <attvalue for="locations_modern_province" value="Bavaria"></attvalue>
-          <attvalue for="locations_lat" value="49.84645"></attvalue>
-          <attvalue for="locations_lng" value="11.3481"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="2.0"></attvalue>
+          <attvalue for="weighted degree" value="2.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="-481.2415" y="5.3804665"></viz:position>
+        <viz:size value="10.2739725"></viz:size>
+        <viz:position x="-180.67757" y="930.8535"></viz:position>
       </node>
       <node id="weil_der_stadt_DE_gid_2812625" label="Weil der Stadt">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
-          <attvalue for="locations_modern_province" value="Baden-Württemberg"></attvalue>
-          <attvalue for="locations_lat" value="48.74953"></attvalue>
-          <attvalue for="locations_lng" value="8.87176"></attvalue>
+          <attvalue for="locations_modern_province" value="Baden-Wurttemberg"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="753.1235" y="-16.164547"></viz:position>
+        <viz:size value="10.136987"></viz:size>
+        <viz:position x="874.6724" y="1066.3018"></viz:position>
       </node>
       <node id="weinsberg_DE_gid_2812158" label="Weinsberg">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
-          <attvalue for="locations_modern_province" value="Baden-Württemberg"></attvalue>
-          <attvalue for="locations_lat" value="49.15127"></attvalue>
-          <attvalue for="locations_lng" value="9.28762"></attvalue>
+          <attvalue for="locations_modern_province" value="Baden-Wurttemberg"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="-529.29614" y="-417.85614"></viz:position>
+        <viz:size value="10.136987"></viz:size>
+        <viz:position x="1353.506" y="185.71234"></viz:position>
       </node>
       <node id="weißenburg_in_bayern_DE_gid_2811909" label="Weißenburg in Bayern">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
           <attvalue for="locations_modern_province" value="Bavaria"></attvalue>
-          <attvalue for="locations_lat" value="49.03095"></attvalue>
-          <attvalue for="locations_lng" value="10.97221"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="-702.5833" y="-264.07495"></viz:position>
+        <viz:size value="10.136987"></viz:size>
+        <viz:position x="1380.5398" y="-100.51396"></viz:position>
       </node>
-      <node id="wertheim_DE_gid_2810716" label="Wertheim">
+      <node id="wertheim_DE_gid_2810716" label="Wertheim am Main">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
-          <attvalue for="locations_modern_province" value="Baden-Württemberg"></attvalue>
-          <attvalue for="locations_lat" value="49.759"></attvalue>
-          <attvalue for="locations_lng" value="9.50852"></attvalue>
+          <attvalue for="locations_modern_province" value="Baden-Wurttemberg"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="2.0"></attvalue>
+          <attvalue for="weighted degree" value="2.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="398.78537" y="269.7486"></viz:position>
+        <viz:size value="10.2739725"></viz:size>
+        <viz:position x="517.14484" y="801.80237"></viz:position>
       </node>
       <node id="wiener_neustadt_AT_gid_2761353" label="Wiener Neustadt">
         <attvalues>
           <attvalue for="locations_modern_state" value="Austria"></attvalue>
           <attvalue for="locations_modern_province" value="Lower Austria"></attvalue>
-          <attvalue for="locations_lat" value="47.8"></attvalue>
-          <attvalue for="locations_lng" value="16.25"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="-206.34149" y="653.4679"></viz:position>
+        <viz:size value="10.136987"></viz:size>
+        <viz:position x="-1244.4799" y="506.8553"></viz:position>
       </node>
       <node id="wiesensteig_DE_gid_2809214" label="Wiesensteig">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
-          <attvalue for="locations_modern_province" value="Baden-Württemberg"></attvalue>
-          <attvalue for="locations_lat" value="48.56127"></attvalue>
-          <attvalue for="locations_lng" value="9.6254"></attvalue>
+          <attvalue for="locations_modern_province" value="Baden-Wurttemberg"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="664.9036" y="218.26357"></viz:position>
+        <viz:size value="10.136987"></viz:size>
+        <viz:position x="1463.4696" y="345.48242"></viz:position>
       </node>
       <node id="wildberg_DE_gid_2809013" label="Wildberg">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
-          <attvalue for="locations_modern_province" value="Baden-Württemberg"></attvalue>
-          <attvalue for="locations_lat" value="48.62336"></attvalue>
-          <attvalue for="locations_lng" value="8.74518"></attvalue>
+          <attvalue for="locations_modern_province" value="Baden-Wurttemberg"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="512.54517" y="-545.0572"></viz:position>
+        <viz:size value="10.136987"></viz:size>
+        <viz:position x="-388.95987" y="1468.0513"></viz:position>
       </node>
       <node id="wittenberg_DE_gid_7303020" label="Wittenberg">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
           <attvalue for="locations_modern_province" value="Saxony-Anhalt"></attvalue>
-          <attvalue for="locations_lat" value="51.8661"></attvalue>
-          <attvalue for="locations_lng" value="12.64973"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="12.0"></attvalue>
+          <attvalue for="weighted degree" value="12.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="176.96098" y="-95.50436"></viz:position>
+        <viz:size value="11.643835"></viz:size>
+        <viz:position x="-16.761597" y="348.62073"></viz:position>
       </node>
-      <node id="wrocław_PL_gid_3081368" label="Wrocław">
+      <node id="wrocław_PL_gid_3081368" label="Wroclaw">
         <attvalues>
           <attvalue for="locations_modern_state" value="Poland"></attvalue>
-          <attvalue for="locations_modern_province" value="Lower Silesian Voivodeship"></attvalue>
-          <attvalue for="locations_lat" value="51.1"></attvalue>
-          <attvalue for="locations_lng" value="17.03333"></attvalue>
+          <attvalue for="locations_modern_province" value="Lower Silesia"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="4.0"></attvalue>
+          <attvalue for="weighted degree" value="4.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="305.30695" y="-155.9693"></viz:position>
+        <viz:size value="10.547945"></viz:size>
+        <viz:position x="130.46146" y="-623.19855"></viz:position>
       </node>
       <node id="würzburg_DE_gid_2805615" label="Würzburg">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
           <attvalue for="locations_modern_province" value="Bavaria"></attvalue>
-          <attvalue for="locations_lat" value="49.79391"></attvalue>
-          <attvalue for="locations_lng" value="9.95121"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="4.0"></attvalue>
+          <attvalue for="weighted degree" value="4.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="-23.614277" y="-330.20676"></viz:position>
+        <viz:size value="10.547945"></viz:size>
+        <viz:position x="-650.03107" y="19.912403"></viz:position>
       </node>
       <node id="zeil_DE_gid_2805008" label="Zeil">
         <attvalues>
           <attvalue for="locations_modern_state" value="Germany"></attvalue>
           <attvalue for="locations_modern_province" value="Bavaria"></attvalue>
-          <attvalue for="locations_lat" value="50.00986"></attvalue>
-          <attvalue for="locations_lng" value="10.5947"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="850.7461" y="292.16577"></viz:position>
+        <viz:size value="10.136987"></viz:size>
+        <viz:position x="-1463.8284" y="1037.2452"></viz:position>
       </node>
       <node id="zürich_CH_gid_2657896" label="Zürich">
         <attvalues>
           <attvalue for="locations_modern_state" value="Switzerland"></attvalue>
           <attvalue for="locations_modern_province" value="Zurich"></attvalue>
-          <attvalue for="locations_lat" value="47.36667"></attvalue>
-          <attvalue for="locations_lng" value="8.55"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="11.875"></viz:size>
-        <viz:position x="-578.2018" y="345.7882"></viz:position>
+        <viz:size value="10.136987"></viz:size>
+        <viz:position x="-51.628872" y="-1520.2142"></viz:position>
       </node>
     </nodes>
     <edges>
-      <edge id="5311" source="freiburg_DE_gid_2925177" target="nürnberg_DE_gid_2861650" weight="9.0"></edge>
-      <edge id="5312" source="leuven_BE_gid_2792482" target="nürnberg_DE_gid_2861650" weight="4.0"></edge>
-      <edge id="5315" source="basel_CH_gid_2661604" target="nürnberg_DE_gid_2861650" weight="45.0"></edge>
-      <edge id="5351" source="nürnberg_DE_gid_2861650" target="lindau_DE_gid_2877550" weight="2.0"></edge>
-      <edge id="5352" source="augsburg_DE_gid_2954172" target="nürnberg_DE_gid_2861650" weight="108.0"></edge>
-      <edge id="5353" source="bamberg_DE_gid_2952984" target="nürnberg_DE_gid_2861650" weight="83.0"></edge>
-      <edge id="5354" source="herford_DE_gid_2906121" target="nürnberg_DE_gid_2861650" weight="20.0"></edge>
-      <edge id="5355" source="esslingen_DE_gid_2928751" target="nürnberg_DE_gid_2861650" weight="2.0"></edge>
-      <edge id="5356" source="bergen_abbey_DE_gid_unknown" target="nürnberg_DE_gid_2861650" weight="85.0"></edge>
-      <edge id="5359" source="toledo_ES_gid_2510409" target="nürnberg_DE_gid_2861650" weight="4.0"></edge>
-      <edge id="5363" source="venice_IT_gid_3164603" target="nürnberg_DE_gid_2861650" weight="18.0"></edge>
-      <edge id="5364" source="vienna_AT_gid_2761369" target="nürnberg_DE_gid_2861650" weight="12.0"></edge>
-      <edge id="5365" source="königstein_DE_gid_2885765" target="nürnberg_DE_gid_2861650"></edge>
-      <edge id="5366" source="geisenfeld_abbey_DE_gid_unknown" target="nürnberg_DE_gid_2861650" weight="19.0"></edge>
-      <edge id="5367" source="nürnberg_DE_gid_2861650" target="nürnberg_DE_gid_2861650" weight="64.0"></edge>
-      <edge id="5368" source="neuenstein_DE_gid_2865557" target="nürnberg_DE_gid_2861650" weight="2.0"></edge>
-      <edge id="5369" source="donauwörth_DE_gid_2936253" target="nürnberg_DE_gid_2861650" weight="4.0"></edge>
-      <edge id="5371" source="graz_AT_gid_2778067" target="nürnberg_DE_gid_2861650"></edge>
-      <edge id="5372" source="bad_tölz_DE_gid_2953324" target="nürnberg_DE_gid_2861650"></edge>
-      <edge id="5373" source="nördlingen_DE_gid_2861914" target="nürnberg_DE_gid_2861650" weight="4.0"></edge>
-      <edge id="5376" source="schloss_schwarzenberg_bei_scheinfeld_DE_gid_unknown" target="nürnberg_DE_gid_2861650"></edge>
-      <edge id="5377" source="nürnberg_klarissenkloster_st_klara_DE_gid_unknown" target="nürnberg_DE_gid_2861650" weight="66.0"></edge>
-      <edge id="5386" source="sevilla_ES_gid_2510911" target="nürnberg_DE_gid_2861650" weight="2.0"></edge>
-      <edge id="5392" source="granada_ES_gid_2517117" target="nürnberg_DE_gid_2861650" weight="4.0"></edge>
-      <edge id="5397" source="passau_DE_gid_2855328" target="nürnberg_DE_gid_2861650" weight="5.0"></edge>
-      <edge id="5400" source="innsbruck_AT_gid_2775220" target="nürnberg_DE_gid_2861650" weight="13.0"></edge>
-      <edge id="5406" source="wittenberg_DE_gid_7303020" target="nürnberg_DE_gid_2861650" weight="12.0"></edge>
-      <edge id="5407" source="lichtenau_DE_gid_8629617" target="nürnberg_DE_gid_2861650" weight="4.0"></edge>
-      <edge id="5408" source="mainz_st_viktorsberg_DE_gid_unknown" target="nürnberg_DE_gid_2861650" weight="3.0"></edge>
-      <edge id="5410" source="leipzig_DE_gid_2879139" target="nürnberg_DE_gid_2861650" weight="25.0"></edge>
-      <edge id="5415" source="nürnberg_katharinenkloster_DE_gid_unknown" target="nürnberg_DE_gid_2861650"></edge>
-      <edge id="5420" source="ravensburg_DE_gid_2849802" target="nürnberg_DE_gid_2861650" weight="4.0"></edge>
-      <edge id="5425" source="eichstätt_DE_gid_2932069" target="nürnberg_DE_gid_2861650" weight="13.0"></edge>
-      <edge id="5435" source="prague_CZ_gid_3067696" target="nürnberg_DE_gid_2861650"></edge>
-      <edge id="5441" source="valladolid_ES_gid_3106672" target="nürnberg_DE_gid_2861650" weight="4.0"></edge>
-      <edge id="5451" source="altenburg_DE_gid_2957773" target="nürnberg_DE_gid_2861650" weight="5.0"></edge>
-      <edge id="5465" source="milano_IT_gid_3173435" target="nürnberg_DE_gid_2861650" weight="5.0"></edge>
-      <edge id="5468" source="pillenreuth_abbey_DE_gid_unknown" target="nürnberg_DE_gid_2861650"></edge>
-      <edge id="5469" source="ansbach_DE_gid_2955936" target="nürnberg_DE_gid_2861650" weight="3.0"></edge>
-      <edge id="5481" source="feldkirch_AT_gid_2779674" target="nürnberg_DE_gid_2861650" weight="13.0"></edge>
-      <edge id="5483" source="tours_FR_gid_972191" target="nürnberg_DE_gid_2861650"></edge>
-      <edge id="5486" source="palencia_ES_gid_3114531" target="nürnberg_DE_gid_2861650"></edge>
-      <edge id="5488" source="burgos_ES_gid_3127461" target="nürnberg_DE_gid_2861650" weight="5.0"></edge>
-      <edge id="5492" source="stuttgart_DE_gid_2825297" target="nürnberg_DE_gid_2861650" weight="10.0"></edge>
-      <edge id="5493" source="toulouse_FR_gid_2972315" target="nürnberg_DE_gid_2861650"></edge>
-      <edge id="5501" source="erfurt_DE_gid_2929670" target="nürnberg_DE_gid_2861650" weight="4.0"></edge>
-      <edge id="5513" source="mainz_DE_gid_2874225" target="nürnberg_DE_gid_2861650" weight="4.0"></edge>
-      <edge id="5520" source="orléans_FR_gid_2989317" target="nürnberg_DE_gid_2861650"></edge>
-      <edge id="5521" source="dresden_DE_gid_2935022" target="nürnberg_DE_gid_2861650" weight="5.0"></edge>
-      <edge id="5531" source="forchheim_DE_gid_2925910" target="nürnberg_DE_gid_2861650" weight="2.0"></edge>
-      <edge id="5542" source="sélestat_FR_gid_2975233" target="nürnberg_DE_gid_2861650" weight="2.0"></edge>
-      <edge id="5546" source="schwäbisch_hall_DE_gid_2835481" target="nürnberg_DE_gid_2861650" weight="2.0"></edge>
-      <edge id="5554" source="wrocław_PL_gid_3081368" target="nürnberg_DE_gid_2861650" weight="4.0"></edge>
-      <edge id="5575" source="monastery_rebdorf_DE_gid_unknown" target="nürnberg_DE_gid_2861650" weight="8.0"></edge>
-      <edge id="5580" source="blois_FR_gid_3032213" target="nürnberg_DE_gid_2861650" weight="2.0"></edge>
-      <edge id="5587" source="salzburg_AT_gid_2766824" target="nürnberg_DE_gid_2861650"></edge>
-      <edge id="5589" source="munich_DE_gid_2867714" target="nürnberg_DE_gid_2861650" weight="2.0"></edge>
-      <edge id="5593" source="strasbourg_FR_gid_2973783" target="nürnberg_DE_gid_2861650" weight="12.0"></edge>
-      <edge id="5604" source="ferrara_IT_gid_3177090" target="nürnberg_DE_gid_2861650"></edge>
-      <edge id="5608" source="neumarkt_in_der_oberpfalz_DE_gid_2864549" target="nürnberg_DE_gid_2861650"></edge>
-      <edge id="5614" source="bologna_IT_gid_3181928" target="nürnberg_DE_gid_2861650" weight="22.0"></edge>
-      <edge id="5624" source="tübingen_DE_gid_2820860" target="nürnberg_DE_gid_2861650" weight="3.0"></edge>
-      <edge id="5632" source="nürnberg_DE_gid_2861650" target="pfunds_AT_gid_2768905" weight="2.0"></edge>
-      <edge id="5662" source="regensburg_DE_gid_2849483" target="nürnberg_DE_gid_2861650" weight="3.0"></edge>
-      <edge id="5664" source="lauf_an_der_pegnitz_DE_gid_2880144" target="nürnberg_DE_gid_2861650"></edge>
-      <edge id="5669" source="padova_IT_gid_3171728" target="nürnberg_DE_gid_2861650"></edge>
-      <edge id="5673" source="marienstein_abbey_DE_gid_unknown" target="nürnberg_DE_gid_2861650"></edge>
-      <edge id="5681" source="chiateoscutella_IT_gid_unknown" target="nürnberg_DE_gid_2861650" weight="2.0"></edge>
-      <edge id="5686" source="kalbensteinberg_DE_gid_2893928" target="nürnberg_DE_gid_2861650"></edge>
-      <edge id="5687" source="genève_CH_gid_2660646" target="nürnberg_DE_gid_2861650"></edge>
-      <edge id="5688" source="nürnberg_DE_gid_2861650" target="augsburg_DE_gid_2954172" weight="13.0"></edge>
-      <edge id="5690" source="beaune_FR_gid_3034126" target="nürnberg_DE_gid_2861650"></edge>
-      <edge id="5693" source="würzburg_DE_gid_2805615" target="nürnberg_DE_gid_2861650" weight="4.0"></edge>
-      <edge id="5697" source="schloss_schwarzenburg_gid_unknown" target="nürnberg_DE_gid_2861650"></edge>
-      <edge id="5698" source="georgenthal_DE_gid_2921261" target="nürnberg_DE_gid_2861650"></edge>
-      <edge id="5701" source="hollfeld_DE_gid_2900453" target="nürnberg_DE_gid_2861650"></edge>
-      <edge id="5704" source="ingolstadt_DE_gid_2895992" target="nürnberg_DE_gid_2861650" weight="14.0"></edge>
-      <edge id="5717" source="nürnberg_DE_gid_2861650" target="trier_DE_gid_2821164"></edge>
-      <edge id="5718" source="nürnberg_DE_gid_2861650" target="köln_DE_gid_2886242" weight="22.0"></edge>
-      <edge id="5722" source="köln_DE_gid_2886242" target="köln_DE_gid_2886242" weight="2.0"></edge>
-      <edge id="5725" source="nürnberg_DE_gid_2861650" target="bamberg_DE_gid_2952984" weight="4.0"></edge>
-      <edge id="5729" source="nürnberg_DE_gid_2861650" target="ansbach_DE_gid_2955936"></edge>
-      <edge id="5730" source="nürnberg_klarissenkloster_st_klara_DE_gid_unknown" target="augsburg_DE_gid_2954172"></edge>
-      <edge id="5731" source="nürnberg_DE_gid_2861650" target="nördlingen_DE_gid_2861914" weight="11.0"></edge>
-      <edge id="5737" source="nürnberg_DE_gid_2861650" target="forchheim_DE_gid_2925910" weight="3.0"></edge>
-      <edge id="5740" source="nürnberg_DE_gid_2861650" target="ulm_DE_gid_2820256" weight="2.0"></edge>
-      <edge id="5749" source="augsburg_DE_gid_2954172" target="augsburg_DE_gid_2954172"></edge>
-      <edge id="5753" source="nürnberg_DE_gid_2861650" target="linz_AT_gid_2772400" weight="2.0"></edge>
-      <edge id="5758" source="torgau_DE_gid_2821807" target="nürnberg_DE_gid_2861650"></edge>
-      <edge id="5759" source="nürnberg_DE_gid_2861650" target="schwabach_DE_gid_2835537"></edge>
-      <edge id="5761" source="gmunden_AT_gid_2778436" target="nürnberg_DE_gid_2861650"></edge>
-      <edge id="5764" source="nürnberg_DE_gid_2861650" target="innsbruck_AT_gid_2775220"></edge>
-      <edge id="5770" source="mirandola_IT_gid_3173370" target="nürnberg_DE_gid_2861650" weight="3.0"></edge>
-      <edge id="5781" source="pavia_IT_gid_3171366" target="nürnberg_DE_gid_2861650" weight="4.0"></edge>
-      <edge id="5786" source="haguenau_FR_gid_3014078" target="nürnberg_DE_gid_2861650" weight="2.0"></edge>
-      <edge id="5796" source="antwerpen_BE_gid_2803138" target="nürnberg_DE_gid_2861650"></edge>
-      <edge id="5800" source="roding_DE_gid_2845924" target="nürnberg_DE_gid_2861650"></edge>
-      <edge id="5809" source="weil_der_stadt_DE_gid_2812625" target="nürnberg_DE_gid_2861650"></edge>
-      <edge id="5833" source="florence_IT_gid_3176959" target="nürnberg_DE_gid_2861650"></edge>
-      <edge id="5835" source="baden_AT_gid_2782067" target="nürnberg_DE_gid_2861650"></edge>
-      <edge id="5836" source="rome_IT_gid_3169070" target="nürnberg_DE_gid_2861650" weight="6.0"></edge>
-      <edge id="5844" source="aschaffenburg_DE_gid_2955272" target="nürnberg_DE_gid_2861650"></edge>
-      <edge id="5847" source="wiener_neustadt_AT_gid_2761353" target="nürnberg_DE_gid_2861650"></edge>
-      <edge id="5859" source="linz_AT_gid_2772400" target="nürnberg_DE_gid_2861650" weight="2.0"></edge>
-      <edge id="5864" source="oleśnica_PL_gid_3090170" target="nürnberg_DE_gid_2861650"></edge>
-      <edge id="5868" source="weinsberg_DE_gid_2812158" target="nürnberg_DE_gid_2861650"></edge>
-      <edge id="5881" source="köln_DE_gid_2886242" target="nürnberg_DE_gid_2861650" weight="3.0"></edge>
-      <edge id="5884" source="frankfurt_am_main_DE_gid_2925533" target="nürnberg_DE_gid_2861650" weight="10.0"></edge>
-      <edge id="5888" source="fürth_DE_gid_2923544" target="nürnberg_DE_gid_2861650"></edge>
-      <edge id="5891" source="neuburg_an_der_donau_DE_gid_2866070" target="nürnberg_DE_gid_2861650" weight="2.0"></edge>
-      <edge id="5893" source="hilpoltstein_DE_gid_2904638" target="nürnberg_DE_gid_2861650"></edge>
-      <edge id="5894" source="hall_in_tirol_AT_gid_2764958" target="nürnberg_DE_gid_2861650"></edge>
-      <edge id="5895" source="waischenfeld_DE_gid_2815297" target="nürnberg_DE_gid_2861650" weight="2.0"></edge>
-      <edge id="5900" source="freiberg_DE_gid_2925192" target="nürnberg_DE_gid_2861650"></edge>
-      <edge id="5903" source="wertheim_DE_gid_2810716" target="nürnberg_DE_gid_2861650" weight="2.0"></edge>
-      <edge id="5914" source="siena_IT_gid_3166548" target="nürnberg_DE_gid_2861650"></edge>
-      <edge id="5920" source="wildberg_DE_gid_2809013" target="nürnberg_DE_gid_2861650"></edge>
-      <edge id="5923" source="kornburg_DE_gid_2885443" target="nürnberg_DE_gid_2861650"></edge>
-      <edge id="5936" source="ulm_DE_gid_2820256" target="nürnberg_DE_gid_2861650" weight="3.0"></edge>
-      <edge id="5939" source="göppingen_DE_gid_2919054" target="nürnberg_DE_gid_2861650"></edge>
-      <edge id="5943" source="feldlager_bei_herrenberg_gid_unknown" target="nürnberg_DE_gid_2861650"></edge>
-      <edge id="5976" source="dachsbach_DE_gid_2939608" target="nürnberg_DE_gid_2861650"></edge>
-      <edge id="6015" source="amberg_DE_gid_2956656" target="nürnberg_DE_gid_2861650" weight="2.0"></edge>
-      <edge id="6041" source="weißenburg_in_bayern_DE_gid_2811909" target="nürnberg_DE_gid_2861650"></edge>
-      <edge id="6042" source="leipzig_DE_gid_2879139" target="neunhof_DE_gid_2864443" weight="2.0"></edge>
-      <edge id="6045" source="nürnberg_DE_gid_2861650" target="neunhof_DE_gid_2864443" weight="16.0"></edge>
-      <edge id="6051" source="bamberg_DE_gid_2952984" target="neunhof_DE_gid_2864443" weight="3.0"></edge>
-      <edge id="6056" source="erfurt_DE_gid_2929670" target="neunhof_DE_gid_2864443"></edge>
-      <edge id="6057" source="zeil_DE_gid_2805008" target="neunhof_DE_gid_2864443"></edge>
-      <edge id="6072" source="ebernburg_castle_DE_gid_unknown" target="nürnberg_DE_gid_2861650"></edge>
-      <edge id="6079" source="wiesensteig_DE_gid_2809214" target="nürnberg_DE_gid_2861650"></edge>
-      <edge id="6095" source="pamplona_ES_gid_3114472" target="nürnberg_DE_gid_2861650"></edge>
-      <edge id="6100" source="nürnberg_DE_gid_2861650" target="biberach_DE_gid_2949423"></edge>
-      <edge id="6111" source="trento_IT_gid_3165243" target="nürnberg_DE_gid_2861650"></edge>
-      <edge id="6114" source="kirchehrenbach_DE_gid_2890592" target="nürnberg_DE_gid_2861650" weight="11.0"></edge>
-      <edge id="6126" source="jena_DE_gid_2895044" target="nürnberg_DE_gid_2861650"></edge>
-      <edge id="6166" source="schloss_münchsdorf_DE_gid_unknown" target="nürnberg_DE_gid_2861650"></edge>
-      <edge id="6171" source="zürich_CH_gid_2657896" target="nürnberg_DE_gid_2861650"></edge>
-      <edge id="6172" source="solothurn_CH_gid_2658564" target="nürnberg_DE_gid_2861650"></edge>
-      <edge id="6173" source="schloss_schillingsfürst_DE_gid_unknown" target="nürnberg_DE_gid_2861650"></edge>
-      <edge id="6181" source="garmisch_partenkirchen_DE_gid_2922530" target="nürnberg_DE_gid_2861650"></edge>
-      <edge id="6184" source="bolzano_IT_gid_3181913" target="nürnberg_DE_gid_2861650"></edge>
-      <edge id="6210" source="marienburg_abbey_DE_gid_unknown" target="nürnberg_DE_gid_2861650"></edge>
-      <edge id="6249" source="langenburg_DE_gid_2881128" target="nürnberg_DE_gid_2861650" weight="2.0"></edge>
-      <edge id="6256" source="kitzingen_DE_gid_2890158" target="nürnberg_DE_gid_2861650" weight="2.0"></edge>
+      <edge id="0" source="leuven_BE_gid_2792482" target="nürnberg_DE_gid_2861650" weight="4.0"></edge>
+      <edge id="3" source="basel_CH_gid_2661604" target="nürnberg_DE_gid_2861650" weight="45.0"></edge>
+      <edge id="31" source="freiburg_DE_gid_2925177" target="nürnberg_DE_gid_2861650" weight="9.0"></edge>
+      <edge id="40" source="nürnberg_DE_gid_2861650" target="lindau_DE_gid_2877550" weight="2.0"></edge>
+      <edge id="41" source="augsburg_DE_gid_2954172" target="nürnberg_DE_gid_2861650" weight="108.0"></edge>
+      <edge id="42" source="bamberg_DE_gid_2952984" target="nürnberg_DE_gid_2861650" weight="83.0"></edge>
+      <edge id="43" source="herford_DE_gid_2906121" target="nürnberg_DE_gid_2861650" weight="20.0"></edge>
+      <edge id="44" source="esslingen_DE_gid_2928751" target="nürnberg_DE_gid_2861650" weight="2.0"></edge>
+      <edge id="45" source="bergen_abbey_DE_gid_unknown" target="nürnberg_DE_gid_2861650" weight="84.0"></edge>
+      <edge id="48" source="toledo_ES_gid_2510409" target="nürnberg_DE_gid_2861650" weight="4.0"></edge>
+      <edge id="52" source="venice_IT_gid_3164603" target="nürnberg_DE_gid_2861650" weight="18.0"></edge>
+      <edge id="53" source="vienna_AT_gid_2761369" target="nürnberg_DE_gid_2861650" weight="12.0"></edge>
+      <edge id="54" source="königstein_DE_gid_2885765" target="nürnberg_DE_gid_2861650"></edge>
+      <edge id="55" source="geisenfeld_abbey_DE_gid_unknown" target="nürnberg_DE_gid_2861650" weight="19.0"></edge>
+      <edge id="56" source="nürnberg_DE_gid_2861650" target="nürnberg_DE_gid_2861650" weight="64.0"></edge>
+      <edge id="57" source="neuenstein_DE_gid_2865557" target="nürnberg_DE_gid_2861650" weight="2.0"></edge>
+      <edge id="58" source="donauwörth_DE_gid_2936253" target="nürnberg_DE_gid_2861650" weight="4.0"></edge>
+      <edge id="60" source="graz_AT_gid_2778067" target="nürnberg_DE_gid_2861650"></edge>
+      <edge id="61" source="bad_tölz_DE_gid_2953324" target="nürnberg_DE_gid_2861650"></edge>
+      <edge id="62" source="nördlingen_DE_gid_2861914" target="nürnberg_DE_gid_2861650" weight="4.0"></edge>
+      <edge id="65" source="schloss_schwarzenberg_bei_scheinfeld_DE_gid_unknown" target="nürnberg_DE_gid_2861650"></edge>
+      <edge id="66" source="nürnberg_klarissenkloster_st_klara_DE_gid_unknown" target="nürnberg_DE_gid_2861650" weight="66.0"></edge>
+      <edge id="75" source="sevilla_ES_gid_2510911" target="nürnberg_DE_gid_2861650" weight="2.0"></edge>
+      <edge id="81" source="granada_ES_gid_2517117" target="nürnberg_DE_gid_2861650" weight="4.0"></edge>
+      <edge id="86" source="passau_DE_gid_2855328" target="nürnberg_DE_gid_2861650" weight="5.0"></edge>
+      <edge id="89" source="innsbruck_AT_gid_2775220" target="nürnberg_DE_gid_2861650" weight="13.0"></edge>
+      <edge id="95" source="wittenberg_DE_gid_7303020" target="nürnberg_DE_gid_2861650" weight="12.0"></edge>
+      <edge id="96" source="lichtenau_DE_gid_8629617" target="nürnberg_DE_gid_2861650" weight="4.0"></edge>
+      <edge id="97" source="kollegiatstift_st_viktor_DE_gid_unknown" target="nürnberg_DE_gid_2861650" weight="3.0"></edge>
+      <edge id="99" source="leipzig_DE_gid_2879139" target="nürnberg_DE_gid_2861650" weight="25.0"></edge>
+      <edge id="104" source="nürnberg_katharinenkloster_DE_gid_unknown" target="nürnberg_DE_gid_2861650"></edge>
+      <edge id="109" source="ravensburg_DE_gid_2849802" target="nürnberg_DE_gid_2861650" weight="4.0"></edge>
+      <edge id="114" source="eichstätt_DE_gid_2932069" target="nürnberg_DE_gid_2861650" weight="13.0"></edge>
+      <edge id="124" source="prague_CZ_gid_3067696" target="nürnberg_DE_gid_2861650"></edge>
+      <edge id="130" source="valladolid_ES_gid_3106672" target="nürnberg_DE_gid_2861650" weight="4.0"></edge>
+      <edge id="140" source="altenburg_DE_gid_2957773" target="nürnberg_DE_gid_2861650" weight="5.0"></edge>
+      <edge id="154" source="milano_IT_gid_3173435" target="nürnberg_DE_gid_2861650" weight="5.0"></edge>
+      <edge id="157" source="pillenreuth_abbey_DE_gid_unknown" target="nürnberg_DE_gid_2861650"></edge>
+      <edge id="158" source="ansbach_DE_gid_2955936" target="nürnberg_DE_gid_2861650" weight="3.0"></edge>
+      <edge id="170" source="feldkirch_AT_gid_2779674" target="nürnberg_DE_gid_2861650" weight="13.0"></edge>
+      <edge id="172" source="tours_FR_gid_972191" target="nürnberg_DE_gid_2861650"></edge>
+      <edge id="175" source="palencia_ES_gid_3114531" target="nürnberg_DE_gid_2861650"></edge>
+      <edge id="177" source="burgos_ES_gid_3127461" target="nürnberg_DE_gid_2861650" weight="5.0"></edge>
+      <edge id="181" source="stuttgart_DE_gid_2825297" target="nürnberg_DE_gid_2861650" weight="10.0"></edge>
+      <edge id="182" source="toulouse_FR_gid_2972315" target="nürnberg_DE_gid_2861650"></edge>
+      <edge id="190" source="erfurt_DE_gid_2929670" target="nürnberg_DE_gid_2861650" weight="4.0"></edge>
+      <edge id="202" source="mainz_DE_gid_2874225" target="nürnberg_DE_gid_2861650" weight="4.0"></edge>
+      <edge id="209" source="orléans_FR_gid_2989317" target="nürnberg_DE_gid_2861650"></edge>
+      <edge id="210" source="dresden_DE_gid_2935022" target="nürnberg_DE_gid_2861650" weight="5.0"></edge>
+      <edge id="220" source="forchheim_DE_gid_2925910" target="nürnberg_DE_gid_2861650" weight="2.0"></edge>
+      <edge id="231" source="sélestat_FR_gid_2975233" target="nürnberg_DE_gid_2861650" weight="2.0"></edge>
+      <edge id="235" source="schwäbisch_hall_DE_gid_2835481" target="nürnberg_DE_gid_2861650" weight="2.0"></edge>
+      <edge id="243" source="wrocław_PL_gid_3081368" target="nürnberg_DE_gid_2861650" weight="4.0"></edge>
+      <edge id="264" source="monastery_rebdorf_DE_gid_unknown" target="nürnberg_DE_gid_2861650" weight="8.0"></edge>
+      <edge id="269" source="blois_FR_gid_3032213" target="nürnberg_DE_gid_2861650" weight="2.0"></edge>
+      <edge id="276" source="salzburg_AT_gid_2766824" target="nürnberg_DE_gid_2861650"></edge>
+      <edge id="278" source="munich_DE_gid_2867714" target="nürnberg_DE_gid_2861650" weight="2.0"></edge>
+      <edge id="282" source="strasbourg_FR_gid_2973783" target="nürnberg_DE_gid_2861650" weight="12.0"></edge>
+      <edge id="293" source="ferrara_IT_gid_3177090" target="nürnberg_DE_gid_2861650"></edge>
+      <edge id="297" source="neumarkt_in_der_oberpfalz_DE_gid_2864549" target="nürnberg_DE_gid_2861650"></edge>
+      <edge id="303" source="bologna_IT_gid_3181928" target="nürnberg_DE_gid_2861650" weight="22.0"></edge>
+      <edge id="313" source="tübingen_DE_gid_2820860" target="nürnberg_DE_gid_2861650" weight="3.0"></edge>
+      <edge id="321" source="nürnberg_DE_gid_2861650" target="pfunds_AT_gid_2768905" weight="2.0"></edge>
+      <edge id="351" source="regensburg_DE_gid_2849483" target="nürnberg_DE_gid_2861650" weight="3.0"></edge>
+      <edge id="353" source="lauf_an_der_pegnitz_DE_gid_2880144" target="nürnberg_DE_gid_2861650"></edge>
+      <edge id="358" source="padova_IT_gid_3171728" target="nürnberg_DE_gid_2861650"></edge>
+      <edge id="362" source="marienstein_abbey_DE_gid_unknown" target="nürnberg_DE_gid_2861650"></edge>
+      <edge id="370" source="chiateoscutella_IT_gid_unknown" target="nürnberg_DE_gid_2861650" weight="2.0"></edge>
+      <edge id="375" source="kalbensteinberg_DE_gid_2893928" target="nürnberg_DE_gid_2861650"></edge>
+      <edge id="376" source="genève_CH_gid_2660646" target="nürnberg_DE_gid_2861650"></edge>
+      <edge id="377" source="nürnberg_DE_gid_2861650" target="augsburg_DE_gid_2954172" weight="13.0"></edge>
+      <edge id="379" source="beaune_FR_gid_3034126" target="nürnberg_DE_gid_2861650"></edge>
+      <edge id="382" source="würzburg_DE_gid_2805615" target="nürnberg_DE_gid_2861650" weight="4.0"></edge>
+      <edge id="386" source="schloss_schwarzenburg_gid_unknown" target="nürnberg_DE_gid_2861650"></edge>
+      <edge id="387" source="kloster_georgenthal_DE_gid_unknown" target="nürnberg_DE_gid_2861650"></edge>
+      <edge id="390" source="hollfeld_DE_gid_2900453" target="nürnberg_DE_gid_2861650"></edge>
+      <edge id="393" source="ingolstadt_DE_gid_2895992" target="nürnberg_DE_gid_2861650" weight="14.0"></edge>
+      <edge id="406" source="nürnberg_DE_gid_2861650" target="trier_DE_gid_2821164"></edge>
+      <edge id="407" source="nürnberg_DE_gid_2861650" target="köln_DE_gid_2886242" weight="22.0"></edge>
+      <edge id="411" source="köln_DE_gid_2886242" target="köln_DE_gid_2886242" weight="2.0"></edge>
+      <edge id="414" source="nürnberg_DE_gid_2861650" target="bamberg_DE_gid_2952984" weight="4.0"></edge>
+      <edge id="418" source="nürnberg_DE_gid_2861650" target="ansbach_DE_gid_2955936"></edge>
+      <edge id="419" source="nürnberg_klarissenkloster_st_klara_DE_gid_unknown" target="augsburg_DE_gid_2954172"></edge>
+      <edge id="420" source="nürnberg_DE_gid_2861650" target="nördlingen_DE_gid_2861914" weight="11.0"></edge>
+      <edge id="426" source="nürnberg_DE_gid_2861650" target="forchheim_DE_gid_2925910" weight="3.0"></edge>
+      <edge id="429" source="nürnberg_DE_gid_2861650" target="ulm_DE_gid_2820256" weight="2.0"></edge>
+      <edge id="438" source="augsburg_DE_gid_2954172" target="augsburg_DE_gid_2954172"></edge>
+      <edge id="442" source="nürnberg_DE_gid_2861650" target="linz_AT_gid_2772400" weight="2.0"></edge>
+      <edge id="447" source="torgau_DE_gid_2821807" target="nürnberg_DE_gid_2861650"></edge>
+      <edge id="448" source="nürnberg_DE_gid_2861650" target="schwabach_DE_gid_2835537"></edge>
+      <edge id="450" source="gmunden_AT_gid_2778436" target="nürnberg_DE_gid_2861650"></edge>
+      <edge id="453" source="nürnberg_DE_gid_2861650" target="innsbruck_AT_gid_2775220"></edge>
+      <edge id="459" source="mirandola_IT_gid_3173370" target="nürnberg_DE_gid_2861650" weight="3.0"></edge>
+      <edge id="470" source="pavia_IT_gid_3171366" target="nürnberg_DE_gid_2861650" weight="4.0"></edge>
+      <edge id="475" source="haguenau_FR_gid_3014078" target="nürnberg_DE_gid_2861650" weight="2.0"></edge>
+      <edge id="485" source="antwerpen_BE_gid_2803138" target="nürnberg_DE_gid_2861650"></edge>
+      <edge id="489" source="roding_DE_gid_2845924" target="nürnberg_DE_gid_2861650"></edge>
+      <edge id="498" source="weil_der_stadt_DE_gid_2812625" target="nürnberg_DE_gid_2861650"></edge>
+      <edge id="522" source="florence_IT_gid_3176959" target="nürnberg_DE_gid_2861650"></edge>
+      <edge id="524" source="baden_AT_gid_2782067" target="nürnberg_DE_gid_2861650"></edge>
+      <edge id="525" source="rome_IT_gid_3169070" target="nürnberg_DE_gid_2861650" weight="6.0"></edge>
+      <edge id="533" source="aschaffenburg_DE_gid_2955272" target="nürnberg_DE_gid_2861650"></edge>
+      <edge id="536" source="wiener_neustadt_AT_gid_2761353" target="nürnberg_DE_gid_2861650"></edge>
+      <edge id="548" source="linz_AT_gid_2772400" target="nürnberg_DE_gid_2861650" weight="2.0"></edge>
+      <edge id="553" source="oleśnica_PL_gid_3090170" target="nürnberg_DE_gid_2861650"></edge>
+      <edge id="557" source="weinsberg_DE_gid_2812158" target="nürnberg_DE_gid_2861650"></edge>
+      <edge id="570" source="köln_DE_gid_2886242" target="nürnberg_DE_gid_2861650" weight="3.0"></edge>
+      <edge id="573" source="frankfurt_am_main_DE_gid_2925533" target="nürnberg_DE_gid_2861650" weight="10.0"></edge>
+      <edge id="577" source="fürth_DE_gid_2923544" target="nürnberg_DE_gid_2861650"></edge>
+      <edge id="580" source="neuburg_an_der_donau_DE_gid_2866070" target="nürnberg_DE_gid_2861650" weight="2.0"></edge>
+      <edge id="582" source="hilpoltstein_DE_gid_2904638" target="nürnberg_DE_gid_2861650"></edge>
+      <edge id="583" source="hall_in_tirol_AT_gid_2764958" target="nürnberg_DE_gid_2861650"></edge>
+      <edge id="584" source="waischenfeld_DE_gid_2815297" target="nürnberg_DE_gid_2861650" weight="2.0"></edge>
+      <edge id="589" source="freiberg_DE_gid_2925192" target="nürnberg_DE_gid_2861650"></edge>
+      <edge id="592" source="wertheim_DE_gid_2810716" target="nürnberg_DE_gid_2861650" weight="2.0"></edge>
+      <edge id="603" source="siena_IT_gid_3166548" target="nürnberg_DE_gid_2861650"></edge>
+      <edge id="609" source="wildberg_DE_gid_2809013" target="nürnberg_DE_gid_2861650"></edge>
+      <edge id="612" source="kornburg_DE_gid_2885443" target="nürnberg_DE_gid_2861650"></edge>
+      <edge id="625" source="ulm_DE_gid_2820256" target="nürnberg_DE_gid_2861650" weight="3.0"></edge>
+      <edge id="628" source="göppingen_DE_gid_2919054" target="nürnberg_DE_gid_2861650"></edge>
+      <edge id="632" source="feldlager_bei_herrenberg_gid_unknown" target="nürnberg_DE_gid_2861650"></edge>
+      <edge id="665" source="dachsbach_DE_gid_2939608" target="nürnberg_DE_gid_2861650"></edge>
+      <edge id="704" source="amberg_DE_gid_2956656" target="nürnberg_DE_gid_2861650" weight="2.0"></edge>
+      <edge id="730" source="weißenburg_in_bayern_DE_gid_2811909" target="nürnberg_DE_gid_2861650"></edge>
+      <edge id="731" source="leipzig_DE_gid_2879139" target="neunhof_DE_gid_2864443" weight="2.0"></edge>
+      <edge id="734" source="nürnberg_DE_gid_2861650" target="neunhof_DE_gid_2864443" weight="16.0"></edge>
+      <edge id="740" source="bamberg_DE_gid_2952984" target="neunhof_DE_gid_2864443" weight="3.0"></edge>
+      <edge id="745" source="erfurt_DE_gid_2929670" target="neunhof_DE_gid_2864443"></edge>
+      <edge id="746" source="zeil_DE_gid_2805008" target="neunhof_DE_gid_2864443"></edge>
+      <edge id="761" source="ebernburg_castle_DE_gid_unknown" target="nürnberg_DE_gid_2861650"></edge>
+      <edge id="767" source="wiesensteig_DE_gid_2809214" target="nürnberg_DE_gid_2861650"></edge>
+      <edge id="783" source="pamplona_ES_gid_3114472" target="nürnberg_DE_gid_2861650"></edge>
+      <edge id="788" source="nürnberg_DE_gid_2861650" target="biberach_DE_gid_2949423"></edge>
+      <edge id="799" source="trento_IT_gid_3165243" target="nürnberg_DE_gid_2861650"></edge>
+      <edge id="802" source="kirchehrenbach_DE_gid_2890592" target="nürnberg_DE_gid_2861650" weight="11.0"></edge>
+      <edge id="814" source="jena_DE_gid_2895044" target="nürnberg_DE_gid_2861650"></edge>
+      <edge id="854" source="schloss_münchsdorf_DE_gid_unknown" target="nürnberg_DE_gid_2861650"></edge>
+      <edge id="859" source="zürich_CH_gid_2657896" target="nürnberg_DE_gid_2861650"></edge>
+      <edge id="860" source="solothurn_CH_gid_2658564" target="nürnberg_DE_gid_2861650"></edge>
+      <edge id="861" source="schloss_schillingsfürst_DE_gid_unknown" target="nürnberg_DE_gid_2861650"></edge>
+      <edge id="869" source="garmisch_partenkirchen_DE_gid_2922530" target="nürnberg_DE_gid_2861650"></edge>
+      <edge id="872" source="bolzano_IT_gid_3181913" target="nürnberg_DE_gid_2861650"></edge>
+      <edge id="898" source="marienburg_abbey_DE_gid_unknown" target="nürnberg_DE_gid_2861650"></edge>
+      <edge id="937" source="langenburg_DE_gid_2881128" target="nürnberg_DE_gid_2861650" weight="2.0"></edge>
+      <edge id="944" source="kitzingen_DE_gid_2890158" target="nürnberg_DE_gid_2861650" weight="2.0"></edge>
     </edges>
   </graph>
 </gexf>
