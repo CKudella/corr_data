@@ -17,7 +17,7 @@ WHERE PLOC.locations_id IN
                FROM era_cdb_v3.correspondents AS E,
                     wpirck_cdb_v1.correspondents AS P
                WHERE E.correspondents_id = P.correspondents_id))
-       AND PLETA.letters_id NOT REGEXP '[0-7]ck2|ck3|ck4|ck5|ck6|ck7|ck8]'
+       AND PLETA.letters_id NOT REGEXP '[0-7]ck2|ck3|ck4|ck5|ck6|ck7|ck8'
        AND PLETA.source_loc_id NOT LIKE 'unknown%'
        AND PLETA.target_loc_id NOT LIKE 'unknown%')
   OR PLOC.locations_id IN
@@ -32,7 +32,7 @@ WHERE PLOC.locations_id IN
                FROM era_cdb_v3.correspondents AS E,
                     wpirck_cdb_v1.correspondents AS P
                WHERE E.correspondents_id = P.correspondents_id))
-       AND PLETB.letters_id NOT REGEXP '[0-7]ck2|ck3|ck4|ck5|ck6|ck7|ck8]'
+       AND PLETB.letters_id NOT REGEXP '[0-7]ck2|ck3|ck4|ck5|ck6|ck7|ck8'
        AND PLETB.source_loc_id NOT LIKE 'unknown%'
        AND PLETB.target_loc_id NOT LIKE 'unknown%')
 GROUP BY PLOC.locations_id
