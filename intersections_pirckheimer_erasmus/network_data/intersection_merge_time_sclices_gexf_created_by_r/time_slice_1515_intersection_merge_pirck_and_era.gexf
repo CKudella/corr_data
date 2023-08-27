@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:viz="http://www.gexf.net/1.1draft/viz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
-  <meta lastmodifieddate="2020-03-18">
+<gexf xmlns="http://www.gexf.net/1.3" xmlns:viz="http://www.gexf.net/1.3/viz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.3 http://www.gexf.net/1.3/gexf.xsd" version="1.3">
+  <meta lastmodifieddate="2023-08-27">
     <creator>Christoph Kudella</creator>
     <description>A graph representing the intersection between Erasmus's and Pirckheimer's networks of correspondence in the year 1515</description>
     <keywords/>
@@ -19,7 +19,8 @@
           <attvalue for="att3" value="1"/>
         </attvalues>
         <viz:color r="195" g="22" b="31" a="1"/>
-        <viz:position x="585.738788359309" y="-43.8390548550715" z="0"/>
+        <viz:position x="100" y="71.747280601132" z="0"/>
+        <viz:size value="10"/>
       </node>
       <node id="2" label="Willibald PIRCKHEIMER">
         <attvalues>
@@ -28,7 +29,8 @@
           <attvalue for="att3" value="9"/>
         </attvalues>
         <viz:color r="213" g="171" b="91" a="1"/>
-        <viz:position x="586.283638665467" y="42.768031949194" z="0"/>
+        <viz:position x="14.6579232415857" y="23.5875462588814" z="0"/>
+        <viz:size value="10"/>
       </node>
       <node id="3" label="Pope LEO X">
         <attvalues>
@@ -37,7 +39,8 @@
           <attvalue for="att3" value="3"/>
         </attvalues>
         <viz:color r="195" g="22" b="31" a="1"/>
-        <viz:position x="616.247694401386" y="86.7056048166816" z="0"/>
+        <viz:position x="-51.8613510005605" y="20.0224376454315" z="0"/>
+        <viz:size value="10"/>
       </node>
       <node id="4" label="Udalricus ZASIUS">
         <attvalues>
@@ -46,7 +49,8 @@
           <attvalue for="att3" value="9"/>
         </attvalues>
         <viz:color r="195" g="22" b="31" a="1"/>
-        <viz:position x="527.142657758266" y="99.3537518245873" z="0"/>
+        <viz:position x="-2.00352315069881" y="-50.310857820478" z="0"/>
+        <viz:size value="10"/>
       </node>
       <node id="5" label="Nikolaus GERBEL">
         <attvalues>
@@ -55,7 +59,8 @@
           <attvalue for="att3" value="6"/>
         </attvalues>
         <viz:color r="195" g="22" b="31" a="1"/>
-        <viz:position x="563.798160101728" y="129.420260798898" z="0"/>
+        <viz:position x="-59.4567559819826" y="-31.7215767489312" z="0"/>
+        <viz:size value="10"/>
       </node>
       <node id="6" label="Johann REUCHLIN">
         <attvalues>
@@ -64,16 +69,18 @@
           <attvalue for="att3" value="1"/>
         </attvalues>
         <viz:color r="195" g="22" b="31" a="1"/>
-        <viz:position x="582.345699297578" y="184.429314908338" z="0"/>
+        <viz:position x="36.363383132877" y="-100" z="0"/>
+        <viz:size value="10"/>
       </node>
-      <node id="7" label="Erasmus Desiderius">
+      <node id="7" label="Desiderius ERASMUS">
         <attvalues>
           <attvalue for="att1" value="11"/>
           <attvalue for="att2" value="#3C93AF"/>
           <attvalue for="att3" value="27"/>
         </attvalues>
         <viz:color r="60" g="147" b="175" a="1"/>
-        <viz:position x="557.79352171499" y="92.9868110917254" z="0"/>
+        <viz:position x="-12.2925902104697" y="-24.1567257143256" z="0"/>
+        <viz:size value="10"/>
       </node>
       <node id="8" label="BEATUS Rhenanus">
         <attvalues>
@@ -82,7 +89,8 @@
           <attvalue for="att3" value="4"/>
         </attvalues>
         <viz:color r="195" g="22" b="31" a="1"/>
-        <viz:position x="535.635463489164" y="47.6312898905423" z="0"/>
+        <viz:position x="48.9731060268038" y="-14.3679915321739" z="0"/>
+        <viz:size value="10"/>
       </node>
       <node id="9" label="Ulrich von HUTTEN">
         <attvalues>
@@ -91,7 +99,8 @@
           <attvalue for="att3" value="1"/>
         </attvalues>
         <viz:color r="195" g="22" b="31" a="1"/>
-        <viz:position x="472.056393043316" y="133.041049610014" z="0"/>
+        <viz:position x="-100" y="-80.6595490415608" z="0"/>
+        <viz:size value="10"/>
       </node>
       <node id="10" label="Hieronymus EMSER">
         <attvalues>
@@ -100,7 +109,8 @@
           <attvalue for="att3" value="1"/>
         </attvalues>
         <viz:color r="195" g="22" b="31" a="1"/>
-        <viz:position x="658.240621239153" y="-5.03111322102688" z="0"/>
+        <viz:position x="3.80068125690225" y="100" z="0"/>
+        <viz:size value="10"/>
       </node>
     </nodes>
     <edges>

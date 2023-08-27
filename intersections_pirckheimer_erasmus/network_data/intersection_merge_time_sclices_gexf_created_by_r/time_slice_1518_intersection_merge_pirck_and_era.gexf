@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:viz="http://www.gexf.net/1.1draft/viz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
-  <meta lastmodifieddate="2020-03-18">
+<gexf xmlns="http://www.gexf.net/1.3" xmlns:viz="http://www.gexf.net/1.3/viz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.3 http://www.gexf.net/1.3/gexf.xsd" version="1.3">
+  <meta lastmodifieddate="2023-08-27">
     <creator>Christoph Kudella</creator>
     <description>A graph representing the intersection between Erasmus's and Pirckheimer's networks of correspondence in the year 1518</description>
     <keywords/>
@@ -19,7 +19,8 @@
           <attvalue for="att3" value="2"/>
         </attvalues>
         <viz:color r="195" g="22" b="31" a="1"/>
-        <viz:position x="128.111844180857" y="403.055564557896" z="0"/>
+        <viz:position x="-4.35507789941771" y="-52.1736422423987" z="0"/>
+        <viz:size value="10"/>
       </node>
       <node id="2" label="Willibald PIRCKHEIMER">
         <attvalues>
@@ -28,7 +29,8 @@
           <attvalue for="att3" value="14"/>
         </attvalues>
         <viz:color r="213" g="171" b="91" a="1"/>
-        <viz:position x="36.7856948382623" y="231.009647852534" z="0"/>
+        <viz:position x="-50.2016523161628" y="43.4412652929898" z="0"/>
+        <viz:size value="10"/>
       </node>
       <node id="3" label="Johann LANG">
         <attvalues>
@@ -37,7 +39,8 @@
           <attvalue for="att3" value="1"/>
         </attvalues>
         <viz:color r="195" g="22" b="31" a="1"/>
-        <viz:position x="-22.1362770578144" y="425.983703880982" z="0"/>
+        <viz:position x="82.6941537159528" y="32.2947678321575" z="0"/>
+        <viz:size value="10"/>
       </node>
       <node id="4" label="Pope LEO X">
         <attvalues>
@@ -46,7 +49,8 @@
           <attvalue for="att3" value="1"/>
         </attvalues>
         <viz:color r="195" g="22" b="31" a="1"/>
-        <viz:position x="183.778565483853" y="405.122464831549" z="0"/>
+        <viz:position x="-17.5815930768186" y="-86.3266098809438" z="0"/>
+        <viz:size value="10"/>
       </node>
       <node id="5" label="Wolfgang Faber CAPITO">
         <attvalues>
@@ -55,7 +59,8 @@
           <attvalue for="att3" value="2"/>
         </attvalues>
         <viz:color r="195" g="22" b="31" a="1"/>
-        <viz:position x="8.92736961989403" y="373.719110659869" z="0"/>
+        <viz:position x="64.6125607423986" y="-4.55124526039012" z="0"/>
+        <viz:size value="10"/>
       </node>
       <node id="6" label="Helius EOBANUS Hessus">
         <attvalues>
@@ -64,7 +69,8 @@
           <attvalue for="att3" value="1"/>
         </attvalues>
         <viz:color r="195" g="22" b="31" a="1"/>
-        <viz:position x="47.0896730890056" y="477.660931710098" z="0"/>
+        <viz:position x="28.2874732835188" y="-100" z="0"/>
+        <viz:size value="10"/>
       </node>
       <node id="7" label="Udalricus ZASIUS">
         <attvalues>
@@ -73,7 +79,8 @@
           <attvalue for="att3" value="2"/>
         </attvalues>
         <viz:color r="195" g="22" b="31" a="1"/>
-        <viz:position x="84.2758433881259" y="431.126580337771" z="0"/>
+        <viz:position x="33.61213012979" y="-62.3710993368667" z="0"/>
+        <viz:size value="10"/>
       </node>
       <node id="8" label="Henricus GLAREANUS">
         <attvalues>
@@ -82,7 +89,8 @@
           <attvalue for="att3" value="2"/>
         </attvalues>
         <viz:color r="195" g="22" b="31" a="1"/>
-        <viz:position x="135.899964653823" y="348.20748748781" z="0"/>
+        <viz:position x="62.0682441952275" y="-40.9289695163661" z="0"/>
+        <viz:size value="10"/>
       </node>
       <node id="9" label="Nikolaus GERBEL">
         <attvalues>
@@ -91,7 +99,8 @@
           <attvalue for="att3" value="2"/>
         </attvalues>
         <viz:color r="195" g="22" b="31" a="1"/>
-        <viz:position x="-2.36108915393307" y="299.835191040657" z="0"/>
+        <viz:position x="-44.3199993244797" y="-12.4961236526724" z="0"/>
+        <viz:size value="10"/>
       </node>
       <node id="10" label="Johann REUCHLIN">
         <attvalues>
@@ -100,16 +109,18 @@
           <attvalue for="att3" value="3"/>
         </attvalues>
         <viz:color r="195" g="22" b="31" a="1"/>
-        <viz:position x="42.169032075017" y="175.333901848399" z="0"/>
+        <viz:position x="-65.661771754651" y="80.9795861442353" z="0"/>
+        <viz:size value="10"/>
       </node>
-      <node id="11" label="Erasmus Desiderius">
+      <node id="11" label="Desiderius ERASMUS">
         <attvalues>
           <attvalue for="att1" value="17"/>
           <attvalue for="att2" value="#3C93AF"/>
           <attvalue for="att3" value="21"/>
         </attvalues>
         <viz:color r="60" g="147" b="175" a="1"/>
-        <viz:position x="76.0560686023916" y="364.5355150557" z="0"/>
+        <viz:position x="22.9437267499223" y="-18.7899454890067" z="0"/>
+        <viz:size value="10"/>
       </node>
       <node id="12" label="Hermannus BUSCHIUS">
         <attvalues>
@@ -118,7 +129,8 @@
           <attvalue for="att3" value="2"/>
         </attvalues>
         <viz:color r="195" g="22" b="31" a="1"/>
-        <viz:position x="35.8718488088019" y="416.750305819891" z="0"/>
+        <viz:position x="43.3479106598741" y="24.9008890106604" z="0"/>
+        <viz:size value="10"/>
       </node>
       <node id="13" label="BEATUS Rhenanus">
         <attvalues>
@@ -127,7 +139,8 @@
           <attvalue for="att3" value="3"/>
         </attvalues>
         <viz:color r="195" g="22" b="31" a="1"/>
-        <viz:position x="71.247581304128" y="303.601315010286" z="0"/>
+        <viz:position x="-4.87006413970654" y="13.6620681918569" z="0"/>
+        <viz:size value="10"/>
       </node>
       <node id="14" label="Jakob SPIEGEL">
         <attvalues>
@@ -136,7 +149,8 @@
           <attvalue for="att3" value="1"/>
         </attvalues>
         <viz:color r="195" g="22" b="31" a="1"/>
-        <viz:position x="132.061622914413" y="466.367388716066" z="0"/>
+        <viz:position x="100" y="-25.3503406935973" z="0"/>
+        <viz:size value="10"/>
       </node>
       <node id="15" label="Ulrich von HUTTEN">
         <attvalues>
@@ -145,7 +159,8 @@
           <attvalue for="att3" value="4"/>
         </attvalues>
         <viz:color r="195" g="22" b="31" a="1"/>
-        <viz:position x="33.3538393461584" y="272.722757853717" z="0"/>
+        <viz:position x="-35.7717599459842" y="18.4420217019146" z="0"/>
+        <viz:size value="10"/>
       </node>
       <node id="16" label="Tranquillus ANDRONICUS Parthenius">
         <attvalues>
@@ -154,7 +169,8 @@
           <attvalue for="att3" value="1"/>
         </attvalues>
         <viz:color r="195" g="22" b="31" a="1"/>
-        <viz:position x="34.6983664266189" y="121.959593643415" z="0"/>
+        <viz:position x="-100" y="100" z="0"/>
+        <viz:size value="10"/>
       </node>
       <node id="17" label="Hermann von NEUENAHR">
         <attvalues>
@@ -163,7 +179,8 @@
           <attvalue for="att3" value="3"/>
         </attvalues>
         <viz:color r="195" g="22" b="31" a="1"/>
-        <viz:position x="87.1511688931384" y="258.483850922391" z="0"/>
+        <viz:position x="-11.5390023559203" y="47.750171253208" z="0"/>
+        <viz:size value="10"/>
       </node>
       <node id="18" label="Fridericus NAUSEA">
         <attvalues>
@@ -172,7 +189,8 @@
           <attvalue for="att3" value="2"/>
         </attvalues>
         <viz:color r="195" g="22" b="31" a="1"/>
-        <viz:position x="-18.8844688571192" y="180.073099576361" z="0"/>
+        <viz:position x="-99.1671195794484" y="50.2292396703407" z="0"/>
+        <viz:size value="10"/>
       </node>
       <node id="19" label="Johannes OECOLAMPADIUS">
         <attvalues>
@@ -181,7 +199,8 @@
           <attvalue for="att3" value="1"/>
         </attvalues>
         <viz:color r="195" g="22" b="31" a="1"/>
-        <viz:position x="183.130773443017" y="328.207677589715" z="0"/>
+        <viz:position x="76.2219630898691" y="-78.5778738030995" z="0"/>
+        <viz:size value="10"/>
       </node>
     </nodes>
     <edges>
