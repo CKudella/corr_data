@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gexf xmlns="http://www.gexf.net/1.3" xmlns:viz="http://www.gexf.net/1.3/viz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.3 http://www.gexf.net/1.3/gexf.xsd" version="1.3">
-  <meta lastmodifieddate="2023-08-25">
+  <meta lastmodifieddate="2023-08-27">
     <creator>Christoph Kudella</creator>
-    <description>A graph representing the intersection between Erasmus's and Pirckheimer's networks of correspondence in the year 1509</description>
+    <description>A graph representing Erasmus's and Pirckheimer's networks of correspondence in the year 1509</description>
     <keywords/>
   </meta>
   <graph mode="static" defaultedgetype="directed">
@@ -12,14 +12,14 @@
       <attribute id="att3" title="Weighted.Degree" type="float"/>
     </attributes>
     <nodes>
-      <node id="1" label="Erasmus Desiderius">
+      <node id="1" label="Desiderius ERASMUS">
         <attvalues>
           <attvalue for="att1" value="4"/>
           <attvalue for="att2" value="#3C93AF"/>
           <attvalue for="att3" value="4"/>
         </attvalues>
         <viz:color r="60" g="147" b="175" a="1"/>
-        <viz:position x="-50.8587127992446" y="46.5810275077721" z="0"/>
+        <viz:position x="-49.3819754256317" y="50.4945541322428" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="2" label="Daniele SCEVOLA">
@@ -29,7 +29,7 @@
           <attvalue for="att3" value="1"/>
         </attvalues>
         <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="-76.5487856835763" y="-12.8345239553343" z="0"/>
+        <viz:position x="-100" y="42.6267389485636" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="3" label="William WARHAM">
@@ -39,7 +39,7 @@
           <attvalue for="att3" value="1"/>
         </attvalues>
         <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="-100" y="37.6846434690239" z="0"/>
+        <viz:position x="6.9572776809041" y="76.4382970975445" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="4" label="Jacobus PISO">
@@ -49,7 +49,7 @@
           <attvalue for="att3" value="1"/>
         </attvalues>
         <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="2.95787845655184" y="76.8476046700173" z="0"/>
+        <viz:position x="-76.6654840397532" y="-4.12843681087178" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="5" label="Willibald PIRCKHEIMER">
@@ -59,7 +59,7 @@
           <attvalue for="att3" value="7"/>
         </attvalues>
         <viz:color r="213" g="171" b="91" a="1"/>
-        <viz:position x="45.4908120630651" y="-54.115250820237" z="0"/>
+        <viz:position x="46.5950090953502" y="-46.0903308039767" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="6" label="William BLOUNT">
@@ -69,7 +69,7 @@
           <attvalue for="att3" value="1"/>
         </attvalues>
         <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="-44.1079061696253" y="100" z="0"/>
+        <viz:position x="-41.039659996279" y="100" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="7" label="Caritas Pirckheimer d. Ä.">
@@ -79,7 +79,7 @@
           <attvalue for="att3" value="2"/>
         </attvalues>
         <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="16.0726956352218" y="-97.673330835004" z="0"/>
+        <viz:position x="50.3846344268229" y="-3.10789662994792" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="8" label="Bürgermeister zu Hollfeld">
@@ -89,7 +89,7 @@
           <attvalue for="att3" value="1"/>
         </attvalues>
         <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="66.059672780649" y="10.6785093763126" z="0"/>
+        <viz:position x="100" y="-6.78260747055715" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="9" label="Rat zu Hollfeld">
@@ -99,7 +99,7 @@
           <attvalue for="att3" value="1"/>
         </attvalues>
         <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="73.6337779457837" y="-100" z="0"/>
+        <viz:position x="87.2219918921689" y="-76.6632021876403" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="10" label="Lorenz Beheim">
@@ -109,7 +109,7 @@
           <attvalue for="att3" value="2"/>
         </attvalues>
         <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="2.15005648953006" y="-50.7380068723966" z="0"/>
+        <viz:position x="1.4310957257871" y="-53.7651819937907" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="11" label="Martin Truchseß">
@@ -119,7 +119,7 @@
           <attvalue for="att3" value="1"/>
         </attvalues>
         <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="100" y="-29.2213782717503" z="0"/>
+        <viz:position x="13.1237847640438" y="-100" z="0"/>
         <viz:size value="10"/>
       </node>
     </nodes>

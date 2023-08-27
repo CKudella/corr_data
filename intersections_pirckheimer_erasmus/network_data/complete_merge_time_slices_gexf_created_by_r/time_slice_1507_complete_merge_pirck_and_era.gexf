@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gexf xmlns="http://www.gexf.net/1.3" xmlns:viz="http://www.gexf.net/1.3/viz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.3 http://www.gexf.net/1.3/gexf.xsd" version="1.3">
-  <meta lastmodifieddate="2023-08-25">
+  <meta lastmodifieddate="2023-08-27">
     <creator>Christoph Kudella</creator>
-    <description>A graph representing the intersection between Erasmus's and Pirckheimer's networks of correspondence in the year 1507</description>
+    <description>A graph representing Erasmus's and Pirckheimer's networks of correspondence in the year 1507</description>
     <keywords/>
   </meta>
   <graph mode="static" defaultedgetype="directed">
@@ -12,14 +12,14 @@
       <attribute id="att3" title="Weighted.Degree" type="float"/>
     </attributes>
     <nodes>
-      <node id="1" label="Erasmus Desiderius">
+      <node id="1" label="Desiderius ERASMUS">
         <attvalues>
           <attvalue for="att1" value="3"/>
           <attvalue for="att2" value="#3C93AF"/>
           <attvalue for="att3" value="4"/>
         </attvalues>
         <viz:color r="60" g="147" b="175" a="1"/>
-        <viz:position x="-57.4764992205341" y="-75.6069487392175" z="0"/>
+        <viz:position x="-17.4196863469978" y="-82.8970661526339" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="2" label="William WARHAM">
@@ -29,7 +29,7 @@
           <attvalue for="att3" value="1"/>
         </attvalues>
         <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="-100" y="-59.6335230382996" z="0"/>
+        <viz:position x="-75.8509532468256" y="-75.7815956136826" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="3" label="HENRY VIII">
@@ -39,7 +39,7 @@
           <attvalue for="att3" value="1"/>
         </attvalues>
         <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="-41.0193809928429" y="-100" z="0"/>
+        <viz:position x="39.7537796604072" y="-85.1796308740569" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="4" label="Willibald PIRCKHEIMER">
@@ -49,7 +49,7 @@
           <attvalue for="att3" value="35"/>
         </attvalues>
         <viz:color r="213" g="171" b="91" a="1"/>
-        <viz:position x="18.1893821527458" y="41.5482664920682" z="0"/>
+        <viz:position x="2.65879467946766" y="44.3395665644065" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="5" label="Aldo MANUZIO">
@@ -59,7 +59,7 @@
           <attvalue for="att3" value="2"/>
         </attvalues>
         <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="-21.0584172831107" y="-79.2279985097867" z="0"/>
+        <viz:position x="-32.7619320492763" y="-100" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="6" label="Johannes Trithemius">
@@ -69,7 +69,7 @@
           <attvalue for="att3" value="2"/>
         </attvalues>
         <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="14.3642916451487" y="72.8785450176885" z="0"/>
+        <viz:position x="48.292544227837" y="58.9961947888168" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="7" label="Giovanni Galeazzo di San Severino">
@@ -79,7 +79,7 @@
           <attvalue for="att3" value="1"/>
         </attvalues>
         <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="-34.2856656447373" y="81.2446714762822" z="0"/>
+        <viz:position x="9.75769030424721" y="-9.69871473972536" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="8" label="Johannes Boemio">
@@ -89,7 +89,7 @@
           <attvalue for="att3" value="1"/>
         </attvalues>
         <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="86.9548496728336" y="4.30137713374499" z="0"/>
+        <viz:position x="-88.1314893392094" y="68.6364453843325" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="9" label="Rat zu Laufenburg">
@@ -99,7 +99,7 @@
           <attvalue for="att3" value="1"/>
         </attvalues>
         <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="60.3419196791868" y="89.127534356026" z="0"/>
+        <viz:position x="-100" y="45.1314821530563" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="10" label="Kaspar von Eyb">
@@ -109,7 +109,7 @@
           <attvalue for="att3" value="1"/>
         </attvalues>
         <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="26.8248947229597" y="100" z="0"/>
+        <viz:position x="49.1362028665586" y="93.4545124582361" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="11" label="Balthasar Graf">
@@ -119,7 +119,7 @@
           <attvalue for="att3" value="2"/>
         </attvalues>
         <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="54.8718670968537" y="22.909808424729" z="0"/>
+        <viz:position x="43.1769106526434" y="25.5583670575652" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="12" label="Eufemia Pirckheimer">
@@ -129,7 +129,7 @@
           <attvalue for="att3" value="1"/>
         </attvalues>
         <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="-5.48346271260809" y="-10.3957542868901" z="0"/>
+        <viz:position x="-28.7758773401028" y="97.4680881774711" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="13" label="Rat der Stadt Nürnberg">
@@ -139,7 +139,7 @@
           <attvalue for="att3" value="6"/>
         </attvalues>
         <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="9.70782402083756" y="24.0141013156517" z="0"/>
+        <viz:position x="-9.49044766588923" y="27.3386319697064" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="14" label="Johann Rehlinger">
@@ -149,7 +149,7 @@
           <attvalue for="att3" value="1"/>
         </attvalues>
         <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="61.9617110396329" y="-11.678040461249" z="0"/>
+        <viz:position x="83.7909266963194" y="77.6752020826761" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="15" label="David de Marchello">
@@ -159,7 +159,7 @@
           <attvalue for="att3" value="1"/>
         </attvalues>
         <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="-11.7106482336031" y="97.6746734213799" z="0"/>
+        <viz:position x="10.1829242767446" y="100" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="16" label="Eufemia von Murr">
@@ -169,7 +169,7 @@
           <attvalue for="att3" value="1"/>
         </attvalues>
         <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="-58.757331062122" y="68.7815914196294" z="0"/>
+        <viz:position x="-69.418943656314" y="4.70199640481445" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="17" label="Katharina Herden // Katharina, Priorin von Marienstein">
@@ -179,7 +179,7 @@
           <attvalue for="att3" value="1"/>
         </attvalues>
         <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="-66.5048443534115" y="45.8131127869456" z="0"/>
+        <viz:position x="100" y="53.5231114983156" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="18" label="Georg Beheim">
@@ -189,7 +189,7 @@
           <attvalue for="att3" value="1"/>
         </attvalues>
         <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="83.7241113004315" y="71.7294088668558" z="0"/>
+        <viz:position x="52.8605387891525" y="-7.00553612453881" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="19" label="Martin Tucher">
@@ -199,7 +199,7 @@
           <attvalue for="att3" value="1"/>
         </attvalues>
         <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="29.8726738691809" y="-14.508375027443" z="0"/>
+        <viz:position x="84.6637804614951" y="8.38998463440251" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="20" label="Die Älteren Herren des Nürnberger Rats">
@@ -209,7 +209,7 @@
           <attvalue for="att3" value="2"/>
         </attvalues>
         <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="-24.3601395573362" y="42.9848850469785" z="0"/>
+        <viz:position x="-48.8656226910783" y="49.0109159741979" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="21" label="Walburg Pirckheimer">
@@ -219,7 +219,7 @@
           <attvalue for="att3" value="1"/>
         </attvalues>
         <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="-60.3004888181236" y="22.2040610622117" z="0"/>
+        <viz:position x="-88.6858273286823" y="23.3849762192387" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="22" label="Ambrosius Dietrich">
@@ -229,7 +229,7 @@
           <attvalue for="att3" value="1"/>
         </attvalues>
         <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="95.9834582997122" y="50.3650821701172" z="0"/>
+        <viz:position x="-62.3083878316057" y="86.2642854278969" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="23" label="Sabina Pirckheimer">
@@ -239,7 +239,7 @@
           <attvalue for="att3" value="1"/>
         </attvalues>
         <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="-38.2473053466162" y="3.22518802563164" z="0"/>
+        <viz:position x="-33.8133537590083" y="-5.88637513421388" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="24" label="Lorenz Beheim">
@@ -249,7 +249,7 @@
           <attvalue for="att3" value="8"/>
         </attvalues>
         <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="37.7937213533311" y="50.111874198336" z="0"/>
+        <viz:position x="-1.34505413291704" y="60.8536816434025" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="25" label="C. Fuchs">
@@ -259,7 +259,7 @@
           <attvalue for="att3" value="1"/>
         </attvalues>
         <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="100" y="27.1900276776211" z="0"/>
+        <viz:position x="99.8154515801637" y="30.1395256991212" z="0"/>
         <viz:size value="10"/>
       </node>
     </nodes>

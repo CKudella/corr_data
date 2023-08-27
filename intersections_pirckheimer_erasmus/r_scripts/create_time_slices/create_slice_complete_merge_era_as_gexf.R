@@ -23,6 +23,10 @@ allcorr$Label <- gsub("\\b(\\W+COE+.*)", "", allcorr$Label)
 allcorr$Label <- gsub("^(\\W+E)", "E", allcorr$Label)
 allcorr$Label <- gsub("^\\[", "", allcorr$Label)
 
+# modify the label for Erasmus
+erasmus_index <- which(allcorr$Id == "17c580aa-3ba7-4851-8f26-9b3a0ebeadbf")
+allcorr$Label[erasmus_index] <- "Desiderius ERASMUS"
+
 # add colour for all correspondents
 allcorr$colour <- "#525252"
 
@@ -89,8 +93,7 @@ for (year in sorted_years_list) {
 
   # assign a colour for each edge
   edges_col <- edge.col
-
-  # Transform it into a data frame (we have to transpose it first)
+  # transform edges into a data frame
   edges_col_df <- as.data.frame(t(col2rgb(edges_col, alpha = FALSE)))
   edges_col_df <- cbind(edges_col_df, alpha = rep(1, times = nrow(edges_col_df)))
   # assign visual attributes to edges (RGBA)
@@ -107,7 +110,7 @@ for (year in sorted_years_list) {
   gexf_file <- file.path("..", "network_data", "complete_merge_time_slices_gexf_created_by_r", sprintf("time_slice_%s_complete_merge_pirck_and_era.gexf", year))
 
   # create the description with the year for the gexf metadata
-  description <- sprintf("A graph representing the intersection between Erasmus's and Pirckheimer's networks of correspondence in the year %s", year)
+  description <- sprintf("A graph representing Erasmus's and Pirckheimer's networks of correspondence in the year %s", year)
 
   # write gexf
   write.gexf(nodes = nodes_df, edges = edges_df, edgesWeight = E(net2)$weight, nodesAtt = nodes_att, nodesVizAtt = nodes_att_viz, edgesVizAtt = edges_att_viz, defaultedgetype = "directed", meta = list(creator = "Christoph Kudella", description = description), output = gexf_file)
