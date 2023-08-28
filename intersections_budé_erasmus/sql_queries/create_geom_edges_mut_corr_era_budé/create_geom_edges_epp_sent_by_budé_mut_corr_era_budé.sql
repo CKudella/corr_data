@@ -18,7 +18,11 @@ WHERE L.sender_id = 'c0b89c75-45b8-4b04-bfd7-25bfe9ed040b'
      FROM budé_cdb_v1.correspondents AS B,
           era_cdb_v3.correspondents AS E
      WHERE B.correspondents_id = E.correspondents_id
-       AND B.correspondents_id NOT IN ('be1dcbc4-3987-472a-b4a0-c3305ead139f')
-       AND E.correspondents_id NOT IN ('be1dcbc4-3987-472a-b4a0-c3305ead139f'))
+       AND B.correspondents_id NOT IN ('be1dcbc4-3987-472a-b4a0-c3305ead139f',
+                                       '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf',
+                                       'c0b89c75-45b8-4b04-bfd7-25bfe9ed040b')
+       AND E.correspondents_id NOT IN ('be1dcbc4-3987-472a-b4a0-c3305ead139f',
+                                       '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf',
+                                       'c0b89c75-45b8-4b04-bfd7-25bfe9ed040b'))
   AND source_loc_id NOT LIKE 'unknown%'
   AND target_loc_id NOT LIKE 'unknown%'
