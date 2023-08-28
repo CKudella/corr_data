@@ -8,7 +8,7 @@ SELECT letters_id,
        target_loc_id,
        TargetLoc.locations_lat AS TargetLAT,
        TargetLoc.locations_lng AS TargetLNG,
-       CONCAT('LINESTRING (',SourceLoc.locations_lng,' ', SourceLoc.locations_lat,' , ',TargetLoc.locations_lng,' ', TargetLoc.locations_lat,')',' |',letters_id) AS GEOM
+       CONCAT('LINESTRING (', SourceLoc.locations_lng, ' ', SourceLoc.locations_lat, ', ', TargetLoc.locations_lng, ' ', TargetLoc.locations_lat, ')') AS GEOM
 FROM budé_cdb_v1.letters AS L
 LEFT JOIN budé_cdb_v1.locations AS SourceLoc ON SourceLoc.locations_id = L.source_loc_id
 LEFT JOIN budé_cdb_v1.locations AS TargetLoc ON TargetLoc.locations_id = L.target_loc_id
