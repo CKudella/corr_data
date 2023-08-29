@@ -1,4 +1,3 @@
-
 require(tidyverse)
 require(igraph)
 require(rgexf)
@@ -7,47 +6,47 @@ require(rgexf)
 getwd()
 setwd("../query_results/")
 
-# read data for all correspondents
-allcorr <- read.csv("merge_scripts/intersection_merge/intersection_merge_era_and_pirck_correspondents.csv", fileEncoding = "UTF-8", na.strings = c("NULL"))
+# read data for mutual correspondents
+mutcorr <- read.csv("merge_scripts/intersection_merge/intersection_merge_era_and_pirck_correspondents.csv", fileEncoding = "UTF-8", na.strings = c("NULL"))
 
-# read data for all letters
-allepp <- read.csv("merge_scripts/intersection_merge/intersection_merge_era_and_pirck_letters.csv", fileEncoding = "UTF-8", na.strings = c("NULL"))
+# read data for letters exchanged between Erasmus, Pirckheimer, and their mutual correspondents
+mutepp <- read.csv("merge_scripts/intersection_merge/intersection_merge_era_and_pirck_letters.csv", fileEncoding = "UTF-8", na.strings = c("NULL"))
 
 # remove rows with NA values in send_date_computable1
-allepp <- allepp[!is.na(allepp$send_date_computable1), ]
+mutepp <- mutepp[!is.na(mutepp$send_date_computable1), ]
 
 # cut uncessary label parts from Label column
-allcorr$Label <- gsub("\\b(\\W+COE+.*)", "", allcorr$Label)
-allcorr$Label <- gsub("^(\\W+E)", "E", allcorr$Label)
-allcorr$Label <- gsub("^\\[", "", allcorr$Label)
+mutcorr$Label <- gsub("\\b(\\W+COE+.*)", "", mutcorr$Label)
+mutcorr$Label <- gsub("^(\\W+E)", "E", mutcorr$Label)
+mutcorr$Label <- gsub("^\\[", "", mutcorr$Label)
 
 # modify the label for Erasmus
-erasmus_index <- which(allcorr$Id == "17c580aa-3ba7-4851-8f26-9b3a0ebeadbf")
-allcorr$Label[erasmus_index] <- "Desiderius ERASMUS"
+erasmus_index <- which(mutcorr$Id == "17c580aa-3ba7-4851-8f26-9b3a0ebeadbf")
+mutcorr$Label[erasmus_index] <- "Desiderius ERASMUS"
 
 # add colour for all correspondents
-allcorr$colour <- "#C3161F"
+mutcorr$colour <- "#C3161F"
 
 # assign specific colour for Erasmus
-allcorr$colour <- ifelse(allcorr$Id == "17c580aa-3ba7-4851-8f26-9b3a0ebeadbf", as.character("#3C93AF"), allcorr$colour)
+mutcorr$colour <- ifelse(mutcorr$Id == "17c580aa-3ba7-4851-8f26-9b3a0ebeadbf", as.character("#3C93AF"), mutcorr$colour)
 
 # assign specific colour for Pirckheimer
-allcorr$colour <- ifelse(allcorr$Id == "d9233b24-a98c-4279-8065-e2ab70c0d080", as.character("#D5AB5B"), allcorr$colour)
+mutcorr$colour <- ifelse(mutcorr$Id == "d9233b24-a98c-4279-8065-e2ab70c0d080", as.character("#D5AB5B"), mutcorr$colour)
 
 # extract years from send_date_computable1 and generate an ordered list of unique years
-allepp$send_date_computable1 <- as.Date(allepp$send_date_computable1)
-years_list <- unique(substr(allepp$send_date_computable1, 1, 4))
+mutepp$send_date_computable1 <- as.Date(mutepp$send_date_computable1)
+years_list <- unique(substr(mutepp$send_date_computable1, 1, 4))
 sorted_years_list <- sort(years_list)
 remove(years_list)
 
 # Iterate over each year in sorted_years_list
 for (year in sorted_years_list) {
   # create a subset dataframe (links) for the current year
-  links <- allepp[substr(allepp$send_date_computable1, 1, 4) == as.character(year), c("Source", "Target")]
+  links <- mutepp[substr(mutepp$send_date_computable1, 1, 4) == as.character(year), c("Source", "Target")]
 
-  # create a subset of allcorr for correspondents (nodes) in links
+  # create a subset of mutcorr for correspondents (nodes) in links
   relevant_corr_ids <- unique(c(links$Source, links$Target))
-  nodes <- allcorr[allcorr$Id %in% relevant_corr_ids, ]
+  nodes <- mutcorr[mutcorr$Id %in% relevant_corr_ids, ]
 
   # assign edge weight
   links$weight <- 1
