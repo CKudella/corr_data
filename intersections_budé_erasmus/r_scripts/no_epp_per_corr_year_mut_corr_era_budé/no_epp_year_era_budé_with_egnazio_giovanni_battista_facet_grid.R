@@ -1,6 +1,4 @@
-require(readr)
-require(reshape2)
-require(ggplot2)
+require(tidverse)
 
 # set working directory
 getwd()
@@ -9,13 +7,13 @@ setwd("../query_results/")
 # read data
 data<-read.csv("no_epp_per_corr_year_mut_corr_era_budé/no_epp_year_era_budé_with_egnazio_giovanni_battista.csv", fileEncoding="UTF-8", na.strings=c("NULL"))
 
-# set R plot specific labels
+# set labels
 labels <- c(EPPEtX = "Erasmus to Giambattista EGNAZIO", EPPXtE = "Giambattista EGNAZIO to Erasmus", EPPBtX = "Budé to Giambattista EGNAZIO", EPPXtB = "Giambattista EGNAZIO to Budé")
 
-# Melt (Wide to Long)
-data_long <- melt(data, id.vars= c("Year"))
+# pivot data to longer format
+data_long <- data %>% pivot_longer(cols = starts_with("EPP"), names_to = "variable", values_to = "value")
 
-# Plot Facet Grid
+# plot facet grid
 plot <- ggplot(data=data_long, aes(x= Year,y=value, factor = variable)) +
     geom_point(stat = "identity", size = 1.75) +
     labs(x="Year",y="Number of letters") +
