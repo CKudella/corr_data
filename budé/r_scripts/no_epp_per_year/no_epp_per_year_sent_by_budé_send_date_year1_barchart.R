@@ -1,5 +1,5 @@
-require(readr)
-require(ggplot2)
+require(tidyverse)
+require(svglite)
 
 # set working directory
 getwd()
@@ -8,7 +8,7 @@ setwd("../query_results/")
 # read data
 data <- read.csv("no_epp_per_year/no_epp_per_year_sent_by_budé_send_date_year1.csv", fileEncoding = "UTF-8", na.strings = c("NULL"))
 
-# create barchart
+# create bar chart
 plot <- ggplot(data = data, aes(x = send_date_year1, y = Total.number.of.letters.sent.by.Budé.this.year)) +
   geom_bar(stat = "identity") +
   geom_text(aes(label = Total.number.of.letters.sent.by.Budé.this.year), vjust = -0.5, color = "black", size = 2.5) +

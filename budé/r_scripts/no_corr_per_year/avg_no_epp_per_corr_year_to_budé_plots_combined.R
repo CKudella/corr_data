@@ -1,8 +1,7 @@
-require(readr)
-require(reshape2)
-require(ggplot2)
+require(tidyverse)
 require(ggrepel)
 require(patchwork)
+require(svglite)
 
 # set working directory
 getwd()
@@ -21,13 +20,10 @@ IQR <- diff(quartiles[c(1, 3)])
 upper_dots <- min(data$Average.number.of.letters.sent.per.correspondent.to.Budé.this.year[data$Average.number.of.letters.sent.per.correspondent.to.Budé.this.year > (quartiles[3] + 1.5*IQR)])
 
 # create data frame for years 1484-1536
-data2 <- data.frame(matrix(ncol = 1, nrow = 53))
-x <- c("Year")
-colnames(data2) <- x
-data2$Year <- c(1484:1536)
+data2 <- tibble(Year = 1484:1536)
 
-# merge dataframes
-data3 <- merge(x = data2, y = data, by = "Year", all.x = TRUE)
+# merge data frames
+data3 <- left_join(data2, data, by = "Year")
 
 # create linechart plot
 plot1 <- ggplot(data3, aes(x = Year, y = Average.number.of.letters.sent.per.correspondent.to.Budé.this.year)) +

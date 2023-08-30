@@ -1,6 +1,5 @@
-require(readr)
-require(reshape2)
-require(ggplot2)
+require(tidyverse)
+require(svglite)
 
 # set working directory
 getwd()
@@ -9,17 +8,14 @@ setwd("../query_results/")
 # read data
 data <- read.csv("no_corr_per_year/comp_no_corr_per_year_to_from_budé.csv", fileEncoding = "UTF-8", na.strings = c("NULL"))
 
-# create data frame for years 1484-1540
-data2 <- data.frame(matrix(ncol = 1, nrow = 57))
-x <- c("Year")
-colnames(data2) <- x
-data2$Year <- c(1484:1540)
+# create data frame for years 1484-1536
+data2 <- tibble(Year = 1484:1536)
 
-# merge dataframes
-data3 <- merge(x = data2, y = data, by = "Year", all.x = TRUE)
+# merge data frames
+data3 <- left_join(data2, data, by = "Year")
 
-# apply melt for wide to long
-data_long <- melt(data3, id.vars = c("Year"))
+# pivot data from wide to long format
+data_long <- data %>% pivot_longer(cols = c("Number.of.correspondents.Budé.writes.to.this.year", "Number.of.correspondents.writing.letters.to.Budé.this.year"), names_to = "variable", values_to = "value")
 
 # create linechart
 plot <- ggplot(data = data_long, aes(x = Year, y = value, colour = variable)) +

@@ -1,6 +1,5 @@
-require(readr)
-require(reshape2)
-require(ggplot2)
+require(tidyverse)
+require(svglite)
 
 # set working directory
 getwd()
@@ -9,20 +8,20 @@ setwd("../query_results/")
 # read data
 data <- read.csv("no_epp_per_year/comp_no_epp_per_year_sent_by_to_budé.csv", fileEncoding = "UTF-8", na.strings = c("NULL"))
 
-# create data frame for years 1484-1540
-data2 <- data.frame(matrix(ncol = 1, nrow = 57))
-x <- c("send_date_year1")
-colnames(data2) <- x
-data2$send_date_year1 <- c(1484:1540)
+# rename a column
+colnames(data)[colnames(data) == "send_date_year1"] <- "Year"
 
-# merge dataframes
-data3 <- merge(x = data2, y = data, by = "send_date_year1", all.x = TRUE)
+# create data frame for years 1484-1536
+data2 <- tibble(Year = 1484:1536)
 
-# apply melt for wide to long
-data_long <- melt(data3, id.vars = c("send_date_year1"))
+# merge data frames
+data3 <- left_join(data2, data, by = "Year")
+
+# pivot data from wide to long format
+data_long <- data3 %>%  pivot_longer(cols = c("NoEppSentFromBudé", "NoEppSentToBudé"), names_to = "variable", values_to = "value")
 
 # create linechart
-plot <- ggplot(data = data_long, aes(x = send_date_year1, y = value, colour = variable)) +
+plot <- ggplot(data = data_long, aes(x = Year, y = value, colour = variable)) +
   geom_line(stat = "identity", size = 0.9) +
   geom_point(shape = 1, fill = "white", stroke = 1.25) +
   labs(x = "Year", y = "Number of letters") +

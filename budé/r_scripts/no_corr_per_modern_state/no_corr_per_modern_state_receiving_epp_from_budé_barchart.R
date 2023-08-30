@@ -1,5 +1,5 @@
-require(readr)
-require(ggplot2)
+require(tidyverse)
+require(svglite)
 
 # set working directory
 getwd()
@@ -8,7 +8,7 @@ setwd("../query_results/")
 # read data
 data <- read.csv("no_corr_per_modern_state/no_corr_per_modern_state_receiving_epp_from_budé.csv", fileEncoding = "UTF-8", na.strings = c("NULL"))
 
-# create barchart
+# create bar chart
 plot <- ggplot(data, aes(x = reorder(Modern.State, -Number.of.correspondents.who.received.letters.from.Budé), y = Number.of.correspondents.who.received.letters.from.Budé)) +
   geom_bar(stat = "identity") +
   geom_text(aes(label = Number.of.correspondents.who.received.letters.from.Budé), vjust = -0.5, color = "black") +

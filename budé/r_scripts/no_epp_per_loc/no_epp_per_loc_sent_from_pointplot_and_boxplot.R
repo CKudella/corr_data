@@ -1,7 +1,7 @@
-require(readr)
-require(ggplot2)
+require(tidyverse)
 require(ggrepel)
 require(patchwork)
+require(svglite)
 
 # set working directory
 getwd()
@@ -10,7 +10,7 @@ setwd("../query_results/")
 # read data
 data <- read.csv("no_epp_per_loc/no_epp_per_loc_sent_from.csv", fileEncoding = "UTF-8")
 
-# caculate quartiles
+# calculate quartiles
 quartiles <- as.numeric(quantile(data$Number.of.letters.sent.from.this.location, probs = c(0.25, 0.5, 0.75)))
 
 # calculate IQR
@@ -25,7 +25,7 @@ plot1 <- ggplot(data = data, aes(x = reorder(Location.Name, -Number.of.letters.s
   scale_y_continuous(trans = "sqrt") +
   labs(x = "Locations", y = "Number of letters sent from this location") +
   theme_bw() +
-  theme(axis.title.x = element_text(), axis.text.x = element_blank(), axis.ticks.x = element_blank())
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))
 plot1
 
 # create boxplot (with log10 trans)

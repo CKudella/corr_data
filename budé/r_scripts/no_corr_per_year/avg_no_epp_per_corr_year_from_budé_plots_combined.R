@@ -1,8 +1,7 @@
-require(readr)
-require(reshape2)
-require(ggplot2)
+require(tidyverse)
 require(ggrepel)
 require(patchwork)
+require(svglite)
 
 # set working directory
 getwd()
@@ -11,7 +10,7 @@ setwd("../query_results/")
 # read data
 data <- read.csv("no_corr_per_year/avg_no_epp_per_corr_year_from_budé.csv", fileEncoding = "UTF-8")
 
-# caculate quartiles
+# calculate quartiles
 quartiles <- as.numeric(quantile(data$Average.number.of.letters.sent.from.Budé.per.correspondent.this.year, probs = c(0.25, 0.5, 0.75)))
 
 # calculate IQR
@@ -21,13 +20,10 @@ IQR <- diff(quartiles[c(1, 3)])
 upper_dots <- min(data$Average.number.of.letters.sent.from.Budé.per.correspondent.this.year[data$Average.number.of.letters.sent.from.Budé.per.correspondent.this.year > (quartiles[3] + 1.5*IQR)])
 
 # create data frame for years 1484-1536
-data2 <- data.frame(matrix(ncol = 1, nrow = 53))
-x <- c("Year")
-colnames(data2) <- x
-data2$Year <- c(1484:1536)
+data2 <- tibble(Year = 1484:1536)
 
-# merge dataframes
-data3 <- merge(x = data2, y = data, by = "Year", all.x = TRUE)
+# merge data frames
+data3 <- left_join(data2, data, by = "Year")
 
 # create linechart plot
 plot1 <- ggplot(data3, aes(x = Year, y = Average.number.of.letters.sent.from.Budé.per.correspondent.this.year)) +

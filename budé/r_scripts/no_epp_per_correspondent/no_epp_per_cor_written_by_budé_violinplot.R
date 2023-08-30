@@ -1,5 +1,5 @@
-require(readr)
-require(ggplot2)
+require(tidyverse)
+require(svglite)
 
 # set working directory
 getwd()
@@ -14,7 +14,7 @@ plot <- ggplot(data, aes(x = " ", y = Number.of.letters.sent.from.Budé.to.this.
   geom_boxplot(width = 0.1, color = "black", outlier.alpha = 0.25) +
   theme_bw() +
   theme(axis.title.x = element_blank()) +
-  labs(y = "Number of letters received from from Budé")
+  labs(y = "Number of letters received from Budé")
 plot
 
 # change working directory

@@ -1,6 +1,5 @@
-require(readr)
-require(lubridate)
-require(ggplot2)
+require(tidyverse)
+require(svglite)
 
 # set working directory
 getwd()
@@ -18,10 +17,10 @@ data$mday <- mday(data$send_date_computable1)
 data$month <- month(data$send_date_computable1)
 data$year <- year(data$send_date_computable1)
 
-# create barchart with facet grid
+# create facet grid with bar charts
 plot <- ggplot(data = data, aes(x = mday, y = NoEppSentFromBudé)) +
   geom_bar(stat = "identity") +
-  labs(x = "Day", y = "Number of letters sent from Budé") +
+  labs(x = "Day", y = "Number of letters sent by Budé") +
   scale_y_continuous(breaks = seq(0, 5, 1)) +
   facet_grid(year ~ month) +
   theme_bw() +

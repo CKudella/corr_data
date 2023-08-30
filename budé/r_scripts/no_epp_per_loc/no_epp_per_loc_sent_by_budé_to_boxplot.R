@@ -1,6 +1,6 @@
-require(readr)
-require(ggplot2)
+require(tidyverse)
 require(ggrepel)
+require(svglite)
 
 # set working directory
 getwd()
@@ -9,7 +9,7 @@ setwd("../query_results/")
 # read data
 data <- read.csv("no_epp_per_loc/no_epp_per_loc_sent_by_budé_to.csv", fileEncoding = "UTF-8")
 
-# caculate quartiles
+# calculate quartiles
 quartiles <- as.numeric(quantile(data$Number.of.letters.sent.to.this.location.from.Budé, probs = c(0.25, 0.5, 0.75)))
 
 # calculate IQR
