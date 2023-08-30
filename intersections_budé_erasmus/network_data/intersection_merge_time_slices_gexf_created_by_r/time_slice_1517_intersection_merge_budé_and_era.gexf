@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://www.gexf.net/1.3" xmlns:viz="http://www.gexf.net/1.3/viz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.3 http://www.gexf.net/1.3/gexf.xsd" version="1.3">
+  <meta lastmodifieddate="2023-08-29">
+    <creator>Christoph Kudella</creator>
+    <description>A graph representing the intersection between Erasmus's and Budé's networks of correspondence in the year 1517</description>
+    <keywords/>
+  </meta>
+  <graph mode="static" defaultedgetype="directed">
+    <attributes class="node" mode="static">
+      <attribute id="att1" title="Degree" type="float"/>
+      <attribute id="att2" title="colour" type="string"/>
+      <attribute id="att3" title="Weighted.Degree" type="float"/>
+    </attributes>
+    <nodes>
+      <node id="1" label="Germain de BRIE">
+        <attvalues>
+          <attvalue for="att1" value="2"/>
+          <attvalue for="att2" value="#C3161F"/>
+          <attvalue for="att3" value="2"/>
+        </attvalues>
+        <viz:color r="195" g="22" b="31" a="1"/>
+        <viz:position x="-24.9372600930992" y="100" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="2" label="Guillaume COP">
+        <attvalues>
+          <attvalue for="att1" value="2"/>
+          <attvalue for="att2" value="#C3161F"/>
+          <attvalue for="att3" value="2"/>
+        </attvalues>
+        <viz:color r="195" g="22" b="31" a="1"/>
+        <viz:position x="34.3025195573626" y="85.658546439258" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="3" label="François DELOYNES">
+        <attvalues>
+          <attvalue for="att1" value="1"/>
+          <attvalue for="att2" value="#C3161F"/>
+          <attvalue for="att3" value="1"/>
+        </attvalues>
+        <viz:color r="195" g="22" b="31" a="1"/>
+        <viz:position x="100" y="34.6060378827606" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="4" label="Thomas LINACRE">
+        <attvalues>
+          <attvalue for="att1" value="1"/>
+          <attvalue for="att2" value="#C3161F"/>
+          <attvalue for="att3" value="1"/>
+        </attvalues>
+        <viz:color r="195" g="22" b="31" a="1"/>
+        <viz:position x="-98.4813407082962" y="-100" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="5" label="FRANCIS I">
+        <attvalues>
+          <attvalue for="att1" value="1"/>
+          <attvalue for="att2" value="#C3161F"/>
+          <attvalue for="att3" value="1"/>
+        </attvalues>
+        <viz:color r="195" g="22" b="31" a="1"/>
+        <viz:position x="-100" y="85.5482094827169" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="6" label="Cuthbert TUNSTALL">
+        <attvalues>
+          <attvalue for="att1" value="4"/>
+          <attvalue for="att2" value="#C3161F"/>
+          <attvalue for="att3" value="8"/>
+        </attvalues>
+        <viz:color r="195" g="22" b="31" a="1"/>
+        <viz:position x="-5.3886450086473" y="-17.0233568797715" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="7" label="Thomas MORE">
+        <attvalues>
+          <attvalue for="att1" value="2"/>
+          <attvalue for="att2" value="#C3161F"/>
+          <attvalue for="att3" value="13"/>
+        </attvalues>
+        <viz:color r="195" g="22" b="31" a="1"/>
+        <viz:position x="-23.1653583487918" y="46.6083624805184" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="8" label="Thomas LUPSET">
+        <attvalues>
+          <attvalue for="att1" value="3"/>
+          <attvalue for="att2" value="#C3161F"/>
+          <attvalue for="att3" value="3"/>
+        </attvalues>
+        <viz:color r="195" g="22" b="31" a="1"/>
+        <viz:position x="-82.5099099375417" y="4.14194368422862" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="9" label="Guillaume BUDÉ">
+        <attvalues>
+          <attvalue for="att1" value="6"/>
+          <attvalue for="att2" value="#D5AB5B"/>
+          <attvalue for="att3" value="12"/>
+        </attvalues>
+        <viz:color r="213" g="171" b="91" a="1"/>
+        <viz:position x="-41.0498193523385" y="-17.2661308205965" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="10" label="Desiderius ERASMUS">
+        <attvalues>
+          <attvalue for="att1" value="17"/>
+          <attvalue for="att2" value="#3C93AF"/>
+          <attvalue for="att3" value="39"/>
+        </attvalues>
+        <viz:color r="60" g="147" b="175" a="1"/>
+        <viz:position x="-10.9975923954634" y="22.2680247070283" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="11" label="Richard PACE">
+        <attvalues>
+          <attvalue for="att1" value="2"/>
+          <attvalue for="att2" value="#C3161F"/>
+          <attvalue for="att3" value="3"/>
+        </attvalues>
+        <viz:color r="195" g="22" b="31" a="1"/>
+        <viz:position x="45.4404634338646" y="16.7015585649884" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="12" label="Giambattista EGNAZIO">
+        <attvalues>
+          <attvalue for="att1" value="1"/>
+          <attvalue for="att2" value="#C3161F"/>
+          <attvalue for="att3" value="1"/>
+        </attvalues>
+        <viz:color r="195" g="22" b="31" a="1"/>
+        <viz:position x="47.2950801477313" y="-69.4178316379648" z="0"/>
+        <viz:size value="10"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="0" source="1" target="10" weight="1">
+        <viz:color r="195" g="22" b="31" a="1"/>
+      </edge>
+      <edge id="1" source="2" target="10" weight="1">
+        <viz:color r="195" g="22" b="31" a="1"/>
+      </edge>
+      <edge id="2" source="6" target="9" weight="1">
+        <viz:color r="195" g="22" b="31" a="1"/>
+      </edge>
+      <edge id="3" source="6" target="10" weight="2">
+        <viz:color r="195" g="22" b="31" a="1"/>
+      </edge>
+      <edge id="4" source="7" target="10" weight="6">
+        <viz:color r="195" g="22" b="31" a="1"/>
+      </edge>
+      <edge id="5" source="8" target="10" weight="1">
+        <viz:color r="195" g="22" b="31" a="1"/>
+      </edge>
+      <edge id="6" source="9" target="4" weight="1">
+        <viz:color r="213" g="171" b="91" a="1"/>
+      </edge>
+      <edge id="7" source="9" target="6" weight="1">
+        <viz:color r="213" g="171" b="91" a="1"/>
+      </edge>
+      <edge id="8" source="9" target="8" weight="1">
+        <viz:color r="213" g="171" b="91" a="1"/>
+      </edge>
+      <edge id="9" source="9" target="10" weight="4">
+        <viz:color r="213" g="171" b="91" a="1"/>
+      </edge>
+      <edge id="10" source="10" target="1" weight="1">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="11" source="10" target="2" weight="1">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="12" source="10" target="3" weight="1">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="13" source="10" target="5" weight="1">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="14" source="10" target="6" weight="4">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="15" source="10" target="7" weight="7">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="16" source="10" target="8" weight="1">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="17" source="10" target="9" weight="4">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="18" source="10" target="11" weight="2">
+        <viz:color r="60" g="147" b="175" a="1"/>
+      </edge>
+      <edge id="19" source="11" target="10" weight="1">
+        <viz:color r="195" g="22" b="31" a="1"/>
+      </edge>
+      <edge id="20" source="12" target="10" weight="1">
+        <viz:color r="195" g="22" b="31" a="1"/>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
+
