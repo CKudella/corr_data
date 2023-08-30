@@ -1,4 +1,5 @@
 require(tidyverse)
+require(svglite)
 
 # set working directory
 getwd()

@@ -1,5 +1,5 @@
-require(readr)
-require(ggplot2)
+require(tidyverse)
+require(svglite)
 
 # set working directory
 getwd()
@@ -8,11 +8,11 @@ setwd("../query_results/")
 # read data
 data<-read.csv("no_epp_per_loc_from_and_to_mut_corr_era_budé/no_epp_per_loc_sent_by_era_to_mut_corr_era_budé_incl_budé.csv", fileEncoding="UTF-8", na.strings=c("NULL"))
 
-# create barchart
+# create bar chart
 plot <- ggplot(data, aes(x= reorder(Location.Name.Modern, -Number.of.letters.sent.to.this.location.by.Erasmus.to.mutual.correspondents.of.his.and.Budé..incl..Budé.),y=Number.of.letters.sent.to.this.location.by.Erasmus.to.mutual.correspondents.of.his.and.Budé..incl..Budé.)) +
   geom_bar(stat = "identity") +
   geom_text(aes(label=Number.of.letters.sent.to.this.location.by.Erasmus.to.mutual.correspondents.of.his.and.Budé..incl..Budé.), vjust=-0.5, color='black') +
-  labs(x="Locations",y="Number of letters sent from Erasmus to this location") +
+  labs(x="Locations",y="Number of letters sent by Erasmus to this location (including letters to Budé)") +
   theme_bw() +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.35))
 plot

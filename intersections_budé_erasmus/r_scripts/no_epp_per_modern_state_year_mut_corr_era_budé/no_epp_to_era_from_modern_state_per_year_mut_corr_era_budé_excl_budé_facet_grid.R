@@ -1,5 +1,5 @@
-require(readr)
-require(ggplot2)
+require(tidyverse)
+require(svglite)
 
 # set working directory
 getwd()
@@ -8,10 +8,10 @@ setwd("../query_results/")
 # read data
 data<-read.csv("no_epp_per_modern_state_year_mut_corr_era_budé/no_epp_to_era_from_modern_state_per_year_mut_corr_era_budé_excl_budé.csv", fileEncoding="UTF-8", na.strings=c("NULL"))
 
-# # create barchart with facet grid
+# create facet grid with bar charts per modern state
 plot <- ggplot(data=data, aes(x=send_date_year1,y=Number.of.letters.sent.from.this.modern.state.to.Erasmus.this.year.from.mutual.correspondents.of.his.and.Budé..excl..Budé.)) +
   geom_bar(stat = "identity") +
-  labs(x="Year",y="Number of letters sent from this modern state to Erasmus from mutual correspondents") +
+  labs(x="Year",y="Number of letters sent from this modern state to Erasmus by mutual correspondents (excl. Budé)") +
   scale_x_continuous(breaks = c(1484:1536)) +
   scale_y_continuous(breaks = seq(0,10,2)) +
   facet_grid(Modern.State ~ ., space = "free" )+

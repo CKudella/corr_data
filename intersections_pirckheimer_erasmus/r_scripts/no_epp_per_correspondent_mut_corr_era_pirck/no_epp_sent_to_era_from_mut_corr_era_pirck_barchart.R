@@ -1,4 +1,5 @@
 require(tidyverse)
+require(svglite)
 
 # set working directory
 getwd()
@@ -15,7 +16,7 @@ data$name_in_edition <- gsub("^(\\W+E)", "E", data$name_in_edition)
 plot <- ggplot(data, aes(x= reorder(name_in_edition, -Number.of.letters.sent.to.Erasmus.per.mutual.correspondent),y=Number.of.letters.sent.to.Erasmus.per.mutual.correspondent)) +
   geom_bar(stat = "identity") +
   geom_text(aes(label=Number.of.letters.sent.to.Erasmus.per.mutual.correspondent), vjust=-0.5, color='black') +
-  labs(x="Mutual correspondents",y="Number of letter sent to Erasmus ") +
+  labs(x="Mutual correspondents",y="Number of letter sent to Erasmus") +
   theme_bw() +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.35))
 plot
