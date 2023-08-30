@@ -1,5 +1,4 @@
-require(readr)
-require(ggplot2)
+require(tidyverse)
 
 # set working directory
 getwd()
@@ -8,11 +7,15 @@ setwd("../query_results/")
 # read data
 data<-read.csv("no_epp_per_correspondent_mut_corr_era_pirck/no_epp_sent_to_pirck_from_mut_corr_era_pirck.csv", fileEncoding="UTF-8", na.strings=c("NULL"))
 
-# cut uncessary label parts from name_in_edition column
+# cut unnecessary label parts from name_in_edition column
 data$name_in_edition <- gsub("\\b(\\W+COE+.*)", "", data$name_in_edition)
 data$name_in_edition <- gsub("^(\\W+E)", "E", data$name_in_edition)
 
-# create barchart
+# modify the label for Erasmus
+erasmus_index <- which(data$sender_id == "17c580aa-3ba7-4851-8f26-9b3a0ebeadbf")
+data$name_in_edition[erasmus_index] <- "Desiderius ERASMUS"
+
+# create bar chart
 plot <- ggplot(data, aes(x= reorder(name_in_edition, -Number.of.letters.sent.to.Pirckheimer.per.mutual.correspondent),y=Number.of.letters.sent.to.Pirckheimer.per.mutual.correspondent)) +
   geom_bar(stat = "identity") +
   geom_text(aes(label=Number.of.letters.sent.to.Pirckheimer.per.mutual.correspondent), vjust=-0.5, color='black') +

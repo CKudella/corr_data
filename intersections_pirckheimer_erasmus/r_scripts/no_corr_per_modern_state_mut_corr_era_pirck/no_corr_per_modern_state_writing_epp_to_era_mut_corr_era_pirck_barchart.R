@@ -1,5 +1,4 @@
-require(readr)
-require(ggplot2)
+require(tidyverse)
 
 # set working directory
 getwd()
@@ -8,7 +7,7 @@ setwd("../query_results/")
 # read data
 data<-read.csv("no_corr_per_modern_state_mut_corr_era_pirck/no_corr_per_modern_state_writing_epp_to_era_mut_corr_era_pirck.csv", fileEncoding="UTF-8", na.strings=c("NULL"))
 
-# create barchart
+# create bar chart
 plot <- ggplot(data, aes(x= reorder(Modern.State, -Number.of.mutual.correspondents.of.Erasmus.and.Pirckheimer.who.wrote.from.this.modern.state.letters.to.Erasmus),y=Number.of.mutual.correspondents.of.Erasmus.and.Pirckheimer.who.wrote.from.this.modern.state.letters.to.Erasmus)) +
   geom_bar(stat = "identity") +
   geom_text(aes(label=Number.of.mutual.correspondents.of.Erasmus.and.Pirckheimer.who.wrote.from.this.modern.state.letters.to.Erasmus), vjust=-0.5, color='black') +
