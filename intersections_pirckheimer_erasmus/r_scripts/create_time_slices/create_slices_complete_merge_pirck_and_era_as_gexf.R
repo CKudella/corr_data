@@ -45,7 +45,7 @@ years_list <- unique(substr(allepp$send_date_computable1, 1, 4))
 sorted_years_list <- sort(years_list)
 remove(years_list)
 
-# Iterate over each year in sorted_years_list
+# iterate over each year in sorted_years_list
 for (year in sorted_years_list) {
   # create a subset dataframe (links) for the current year
   links <- allepp[substr(allepp$send_date_computable1, 1, 4) == as.character(year), c("Source", "Target")]

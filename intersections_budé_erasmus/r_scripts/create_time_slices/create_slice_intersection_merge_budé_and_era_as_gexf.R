@@ -87,7 +87,7 @@ for (year in sorted_years_list) {
 
   # assign a colour for each edge
   edges_col <- edge.col
-  # Transform edges into a data frame (we have to transpose it first)
+  # transform edges into a data frame
   edges_col_df <- as.data.frame(t(col2rgb(edges_col, alpha = FALSE)))
   edges_col_df <- cbind(edges_col_df, alpha = rep(1, times = nrow(edges_col_df)))
   # assign visual attributes to edges (RGBA)

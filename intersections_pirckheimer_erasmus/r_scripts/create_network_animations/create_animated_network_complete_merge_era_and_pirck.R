@@ -30,7 +30,7 @@ allcorr$Label[erasmus_index] <- "Desiderius ERASMUS"
 # add colour for all correspondents
 allcorr$colour <- "#525252"
 
-# Add colour column for mutual correspondents to be used with the "give colour to nodes" plugin for Gephi
+# add colour column for mutual correspondents to be used with the "give colour to nodes" plugin for Gephi
 allcorr$colour <- ifelse(allcorr$Id %in% mutcorr$correspondents_id, as.character("#C3161F"), allcorr$colour)
 
 # assign specific colour for Erasmus

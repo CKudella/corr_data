@@ -39,7 +39,7 @@ years_list <- unique(substr(mutepp$send_date_computable1, 1, 4))
 sorted_years_list <- sort(years_list)
 remove(years_list)
 
-# Iterate over each year in sorted_years_list
+# iterate over each year in sorted_years_list
 for (year in sorted_years_list) {
   # create a subset dataframe (links) for the current year
   links <- mutepp[substr(mutepp$send_date_computable1, 1, 4) == as.character(year), c("Source", "Target")]
@@ -87,7 +87,7 @@ for (year in sorted_years_list) {
 
   # assign a colour for each edge
   edges_col <- edge.col
-  # Transform edges into a data frame (we have to transpose it first)
+  # transform edges into a data frame
   edges_col_df <- as.data.frame(t(col2rgb(edges_col, alpha = FALSE)))
   edges_col_df <- cbind(edges_col_df, alpha = rep(1, times = nrow(edges_col_df)))
   # assign visual attributes to edges (RGBA)
