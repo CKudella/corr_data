@@ -19,7 +19,7 @@ plot1 <- ggplot(data, aes(x= reorder(Location.Name.Modern, -Number.of.letters.se
   theme(axis.text.x = element_text(angle = 90, vjust = 0.35))
 plot1
 
-# create boxplot
+# create box plot
 plot2 <- ggplot(data, aes(x= ' ', y = Number.of.letters.sent.from.this.location.to.Erasmus.from.mutual.correspondents.of.his.and.Budé..excl..Budé.)) +
   geom_boxplot(outlier.size=2, notch = FALSE) +
   geom_text_repel(label=ifelse(data$Number.of.letters.sent.from.this.location.to.Erasmus.from.mutual.correspondents.of.his.and.Budé..excl..Budé.>6,as.character(data$Location.Name.Modern),'')) +

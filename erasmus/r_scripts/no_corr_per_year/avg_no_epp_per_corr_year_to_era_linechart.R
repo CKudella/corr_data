@@ -14,7 +14,7 @@ data2 <- tibble(Year = 1484:1536)
 # merge data frames
 data3 <- left_join(data2, data, by = "Year")
 
-# create barchart
+# create bar chart
 plot <- ggplot(data3, aes(x = Year, y = Average.number.of.letters.sent.per.correspondent.to.Erasmus.this.year)) +
   geom_line(stat = "identity", size = 0.9) +
   geom_point(shape = 1, fill = "white", stroke = 1.25) +

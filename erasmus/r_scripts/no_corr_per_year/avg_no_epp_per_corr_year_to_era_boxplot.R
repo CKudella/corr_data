@@ -19,7 +19,7 @@ IQR <- diff(quartiles[c(1, 3)])
 # calculate outlier treshold
 upper_dots <- min(data$Average.number.of.letters.sent.per.correspondent.to.Erasmus.this.year[data$Average.number.of.letters.sent.per.correspondent.to.Erasmus.this.year > (quartiles[3] + 1.5*IQR)])
 
-# create boxplot
+# create box plot
 plot <- ggplot(data, aes(x = " ", y = Average.number.of.letters.sent.per.correspondent.to.Erasmus.this.year)) +
   geom_boxplot(notch = FALSE) +
   geom_text_repel(label = ifelse(data$Average.number.of.letters.sent.per.correspondent.to.Erasmus.this.year >= upper_dots, as.character(data$Year), "")) +

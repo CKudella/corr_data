@@ -22,7 +22,7 @@ duration_of_correspondence_mean <- mean(duration_of_correspondence_reciproc_corr
 # calculate median of "duration of correspondence"
 duration_of_correspondence_median <- median(duration_of_correspondence_reciproc_corr$duration_in_years)
 
-# create boxplot
+# create box plot
 plot1 <- ggplot(duration_of_correspondence_reciproc_corr, aes(x = " ", y = duration_in_years)) +
   geom_boxplot(notch = FALSE) +
   theme_bw() +
@@ -53,7 +53,7 @@ plot3 <- ggplot(duration_of_correspondence_reciproc_corr, aes(x = duration_in_ye
   labs(y = "Number of correspondents", x = "Duration of correspondence in years")
 plot3
 
-# create scatterplot plot
+# create scatter plot
 plot4 <- ggplot(duration_of_correspondence_reciproc_corr, aes(x = Start.of.correspondence ,y = duration_in_years)) +
   geom_point(stat = "identity", fill = "black", alpha = 0.5) +
   geom_hline(aes(yintercept = mean(duration_in_years), linetype="mean"), size = 0.3) +

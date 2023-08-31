@@ -8,7 +8,7 @@ setwd("../query_results/")
 # read data
 data<-read.csv("no_epp_per_modern_state_year_mut_corr_era_pirck/no_epp_to_pirck_from_modern_state_per_year_mut_corr_era_pirck_excl_era.csv", fileEncoding="UTF-8", na.strings=c("NULL"))
 
-# create facet grid with bar charts per modern state
+# create facet grid with bar charts
 plot <- ggplot(data=data, aes(x=send_date_year1,y=Number.of.letters.sent.from.this.modern.state.to.Pirckheimer.this.year.from.mutual.correspondents.of.his.and.Erasmus..excl..Erasmus.)) +
   geom_bar(stat = "identity") +
   labs(x="Year",y="Number of letters sent from this modern state to Pirckheimer by mutual correspondents (excl. Erasmus)") +

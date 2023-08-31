@@ -12,7 +12,7 @@ data <- read.csv("no_epp_per_loc/no_epp_per_loc_sent_by_budé_to.csv", fileEncod
 plot <- ggplot(data = data, aes(x = reorder(Location.Name, -Number.of.letters.sent.to.this.location.from.Budé), y = Number.of.letters.sent.to.this.location.from.Budé, label = Location.Name)) +
   geom_point(stat = "identity") +
   scale_y_continuous(trans = "sqrt") +
-  labs(x = "Locations", y = "Number of letters sent from Budé to this location") +
+  labs(x = "Locations", y = "Number of letters sent by Budé to this location") +
   theme_bw() +
   theme(axis.title.x = element_text(), axis.text.x = element_blank(), axis.ticks.x = element_blank())
 plot

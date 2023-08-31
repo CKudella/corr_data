@@ -21,7 +21,7 @@ duration_of_correspondence_mean <- mean(duration_of_correspondence_only_epp_to_b
 # calculate median of "duration of correspondence"
 duration_of_correspondence_median <- median(duration_of_correspondence_only_epp_to_budé$duration_in_years)
 
-# create boxplot
+# create box plot
 plot <- ggplot(duration_of_correspondence_only_epp_to_budé, aes(x = " ", y = duration_in_years)) +
   geom_boxplot(notch = FALSE) +
   theme_bw() +

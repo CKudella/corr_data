@@ -1,6 +1,6 @@
-require(readr)
-require(ggplot2)
+require(tidyverse)
 require(patchwork)
+require(svglite)
 
 # set working directory
 getwd()
@@ -14,7 +14,7 @@ plot1 <- ggplot(data = data, aes(x = reorder(recipient_id, -Number.of.letters.se
   geom_point(stat = "identity") +
   geom_hline(aes(yintercept = mean(Number.of.letters.sent.from.Pirckheimer.to.this.correspondent), linetype = "mean"), size = 0.3) +
   geom_hline(aes(yintercept = median(Number.of.letters.sent.from.Pirckheimer.to.this.correspondent), linetype = "median"), size = 0.3) +
-  labs(x = "Correspondents", y = "Number of letters received from from Pirckheimer") +
+  labs(x = "Correspondents", y = "Number of letters received from Pirckheimer") +
   theme_bw() +
   theme(legend.position = "bottom") +
   theme(axis.title.x = element_text(), axis.text.x = element_blank(), axis.ticks.x = element_blank())
@@ -26,7 +26,7 @@ plot2 <- ggplot(data, aes(x = " ", y = Number.of.letters.sent.from.Pirckheimer.t
   geom_boxplot(width = 0.1, color = "black", outlier.alpha = 0.25) +
   theme_bw() +
   theme(axis.title.x = element_blank()) +
-  labs(y = "Number of letters received from from Pirckheimer")
+  labs(y = "Number of letters received from Pirckheimer")
 plot2
 
 # create combined plot via patchwork

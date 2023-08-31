@@ -18,7 +18,7 @@ IQR <- diff(quartiles[c(1, 3)])
 # calculate outlier treshold
 upper_dots <- min(data$Number.of.letters.sent.from.this.location.to.Budé[data$Number.of.letters.sent.from.this.location.to.Budé > (quartiles[3] + 1.5*IQR)])
 
-# create boxplot
+# create box plot
 plot <- ggplot(data, aes(x = " ", y = Number.of.letters.sent.from.this.location.to.Budé)) +
   geom_boxplot(outlier.size = 2, notch = FALSE) +
   geom_text_repel(label = ifelse(data$Number.of.letters.sent.from.this.location.to.Budé >= upper_dots, as.character(data$Location.Name), "")) +

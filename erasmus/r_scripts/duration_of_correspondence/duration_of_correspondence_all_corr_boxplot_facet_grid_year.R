@@ -1,5 +1,6 @@
 require(tidyverse)
 require(svglite)
+require(lubridate) # in case an older tidyverse package version is used
 
 # set working directory
 getwd()
@@ -17,7 +18,7 @@ data$start_year <- year(data$Beginning.of.correspondence.with.Erasmus)
 # set start_year as factor
 data$start_year <-as.factor(data$start_year)
 
-# create boxplot with facet grid for years
+# create facet grid with box plots
 plot <- ggplot(data, aes(x= ' ', y = duration_in_years)) +
   geom_boxplot(notch = FALSE) +
   theme_bw() +

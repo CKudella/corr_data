@@ -1,5 +1,5 @@
-require(readr)
-require(ggplot2)
+require(tidyverse)
+require(svglite)
 
 # set working directory
 getwd()
@@ -11,7 +11,7 @@ data <- read.csv("no_epp_per_correspondent/no_epp_per_cor_written_by_pirck.csv",
 # create pointplot
 plot <- ggplot(data = data, aes(x = reorder(recipient_id, -Number.of.letters.sent.from.Pirckheimer.to.this.correspondent), y = Number.of.letters.sent.from.Pirckheimer.to.this.correspondent, label = recipient_id)) +
   geom_point(stat = "identity") +
-  labs(x = "Correspondents", y = "Number of letters received from from Pirckheimer") +
+  labs(x = "Correspondents", y = "Number of letters received from Pirckheimer") +
   theme_bw() +
   theme(axis.title.x = element_text(), axis.text.x = element_blank(), axis.ticks.x = element_blank())
 plot

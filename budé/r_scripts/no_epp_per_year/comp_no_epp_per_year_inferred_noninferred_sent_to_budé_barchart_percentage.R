@@ -17,7 +17,7 @@ data3 <- left_join(data2, data, by = "Year")
 # pivot data from wide to long format
 data_long <- data3 %>%  pivot_longer(cols = c("Number.of.letters.with.inferred.send.date", "Number.of.letters.with.non.inferred.send.date"), names_to = "variable", values_to = "value")
 
-# create stacked barchart
+# create stacked bar chart
 plot <- ggplot(data_long, aes(x = Year, y = value, fill = variable)) +
   geom_bar(position = "fill", stat = "identity") +
   scale_y_continuous(labels = function(x) sprintf("%.0f%%", x * 100)) +

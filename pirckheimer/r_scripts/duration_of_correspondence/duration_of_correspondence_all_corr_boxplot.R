@@ -1,7 +1,6 @@
-require(readr)
 require(tidyverse)
-require(lubridate)
-require(ggplot2)
+require(svglite)
+require(lubridate) # in case an older tidyverse package version is used
 
 # set working directory
 getwd()
@@ -26,7 +25,7 @@ duration_of_correspondence_mean <- mean(duration_of_correspondence_all_corr$dura
 # calculate median of "duration of correspondence"
 duration_of_correspondence_median <- median(duration_of_correspondence_all_corr$duration_in_years)
 
-# create boxplot
+# create box plot
 plot <- ggplot(duration_of_correspondence_all_corr, aes(x = " ", y = duration_in_years)) +
   geom_boxplot(notch = FALSE) +
   theme_bw() +

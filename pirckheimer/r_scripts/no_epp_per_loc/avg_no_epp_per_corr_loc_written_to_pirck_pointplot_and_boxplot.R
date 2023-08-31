@@ -1,7 +1,7 @@
-require(readr)
-require(ggplot2)
+require(tidyverse)
 require(ggrepel)
 require(patchwork)
+require(svglite)
 
 # set working directory
 getwd()
@@ -27,10 +27,10 @@ plot1 <- ggplot(data = data, aes(x = reorder(Location.Name, -Average.Number.of.L
   theme(axis.title.x = element_text(), axis.text.x = element_blank(), axis.ticks.x = element_blank())
 plot1
 
-# create boxplot
+# create box plot
 plot2 <- ggplot(data, aes(x = " ", y = Average.Number.of.Letters)) +
   geom_boxplot(outlier.size = 2, notch = FALSE) +
-  geom_text_repel(box.padding = 2, label = ifelse(data$Average.Number.of.Letters >= upper_dots, as.character(data$Location.Name), "")) +
+  geom_text_repel(box.padding = 2, max.overlaps = Inf, label = ifelse(data$Average.Number.of.Letters >= upper_dots, as.character(data$Location.Name), "")) +
   theme_bw() +
   theme(axis.title.x = element_blank()) +
   labs(y = "Average Number of letters sent from this location per correspondent to Pirckheimer")

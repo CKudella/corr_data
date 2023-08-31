@@ -36,7 +36,7 @@ plot1 <- ggplot(data3, aes(x = Year, y = Average.number.of.letters.sent.from.Era
   labs(y = "Average number of letters from Erasmus per correspondent", x = "Year")
 plot1
 
-# create boxplot
+# create box plot
 plot2 <- ggplot(data, aes(x = " ", y = Average.number.of.letters.sent.from.Erasmus.per.correspondent.this.year)) +
   geom_boxplot(notch = FALSE) +
   geom_text_repel(label = ifelse(data$Average.number.of.letters.sent.from.Erasmus.per.correspondent.this.year >= upper_dots, as.character(data$Year), "")) +

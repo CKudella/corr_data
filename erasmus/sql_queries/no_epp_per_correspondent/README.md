@@ -7,5 +7,5 @@ This folder contains scripts that calculate the number of letters per correspond
 
 | File | Description |
 | :------------- | :------------- |
-| no_epp_per_cor_written_by_era.sql | This query calculates the number of letters sent from Erasmus to the individual correspondents. |
-| no_epp_per_cor_written_to_era.sql | This query calculates the number of letters sent to Erasmus from the individual correspondents. |
+| no_epp_per_cor_written_by_era.sql | This query calculates the number of letters sent by Erasmus to the individual correspondents. |
+| no_epp_per_cor_written_to_era.sql | This query calculates the number of letters sent to Erasmus by the individual correspondents. |

@@ -1,5 +1,6 @@
 require(tidyverse)
 require(svglite)
+require(lubridate) # in case an older tidyverse package version is used
 
 # set working directory
 getwd()
@@ -8,7 +9,7 @@ setwd("../query_results/")
 # read data
 data <- read.csv("no_epp_per_year/no_epp_per_day_sent_by_era.csv", fileEncoding = "UTF-8", na.strings = c("NULL"))
 
-# Set send_date_computable1 asDate
+# set send_date_computable1 asDate
 data$send_date_computable1 <- as.Date(data$send_date_computable1, format = "%Y-%m-%d")
 
 # compute yearday, monthday, month, year

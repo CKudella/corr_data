@@ -1,6 +1,6 @@
-require(readr)
-require(ggplot2)
+require(tidyverse)
 require(ggrepel)
+require(svglite)
 
 # set working directory
 getwd()
@@ -18,13 +18,13 @@ IQR <- diff(quartiles[c(1, 3)])
 # calculate outlier treshold
 upper_dots <- min(data$Number.of.letters.sent.to.this.location.from.Pirckheimer[data$Number.of.letters.sent.to.this.location.from.Pirckheimer > (quartiles[3] + 1.5*IQR)])
 
-# create boxplot
+# create box plot
 plot <- ggplot(data, aes(x = " ", y = Number.of.letters.sent.to.this.location.from.Pirckheimer)) +
   geom_boxplot(outlier.size = 2, notch = FALSE) +
   geom_text_repel(label = ifelse(data$Number.of.letters.sent.to.this.location.from.Pirckheimer >= upper_dots, as.character(data$Location.Name), "")) +
   theme_bw() +
   theme(axis.title.x = element_blank()) +
-  labs(y = "Number of letters sent from Pirckheimer to this location")
+  labs(y = "Number of letters sent by Pirckheimer to this location")
 plot
 
 # change working directory

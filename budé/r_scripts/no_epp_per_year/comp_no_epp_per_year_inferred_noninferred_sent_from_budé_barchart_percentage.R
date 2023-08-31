@@ -21,13 +21,13 @@ data_long <- data3 %>%  pivot_longer(cols = c("Number.of.letters.with.inferred.s
 plot <- ggplot(data_long, aes(x = Year, y = value, fill = variable)) +
   geom_bar(position = "fill", stat = "identity") +
   scale_y_continuous(labels = function(x) sprintf("%.0f%%", x * 100)) +
-  labs(x = "Year", y = "Number of letters") +
+  labs(x = "Year", y = "Number of letters sent by Budé") +
   scale_x_continuous(breaks = c(1484:1540)) +
   theme_bw() +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.35)) +
   theme(legend.position = "bottom") +
   theme(legend.title = element_blank()) +
-  scale_fill_grey(labels = c("Letters sent from Budé with inferred send date", "Letters sent from Budé with non-inferred send date"))
+  scale_fill_grey(labels = c("Letters sent by Budé with inferred send date", "Letters sent by Budé with non-inferred send date"))
 plot
 
 # change working directory

@@ -7,5 +7,5 @@ This folder contains scripts that calculate the number of letters per correspond
 
 | File | Description |
 | :------------- | :------------- |
-| no_epp_per_cor_written_by_budé.sql | This query calculates the number of letters sent from Budé to the individual correspondents. |
-| no_epp_per_cor_written_to_budé.sql | This query calculates the number of letters sent to Budé from the individual correspondents. |
+| no_epp_per_cor_written_by_budé.sql | This query calculates the number of letters sent by Budé to the individual correspondents. |
+| no_epp_per_cor_written_to_budé.sql | This query calculates the number of letters sent to Budé by the individual correspondents. |

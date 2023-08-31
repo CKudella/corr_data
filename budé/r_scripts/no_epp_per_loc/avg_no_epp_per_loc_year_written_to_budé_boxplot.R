@@ -21,7 +21,7 @@ upper_dots <- min(data$Average.number.of.letters.written.from.this.location.to.B
 # calculate lower whisker
 lower_dots <- max(data$Average.number.of.letters.written.from.this.location.to.Budé.per.year[data$Average.number.of.letters.written.from.this.location.to.Budé.per.year < (quartiles[1] - 1.5 * IQR)])
 
-# create boxplot
+# create box plot
 plot <- ggplot(data, aes(x = " ", y = Average.number.of.letters.written.from.this.location.to.Budé.per.year)) +
   geom_boxplot(outlier.size = 2, notch = FALSE) +
   geom_text_repel(label = ifelse(data$Average.number.of.letters.written.from.this.location.to.Budé.per.year >= upper_dots, as.character(data$Location.Name), "")) +

@@ -8,10 +8,10 @@ setwd("../query_results/")
 # read data
 data <- read.csv("no_epp_per_loc/no_epp_per_loc_sent_by_budé_to_outliers.csv", fileEncoding = "UTF-8", na.strings = c("NULL"))
 
-# create barchart with facet grid
+# create facet grid with bar charts
 plot <- ggplot(data = data, aes(x = YEAR, y = COUNT)) +
   geom_bar(stat = "identity") +
-  labs(x = "Year", y = "Number of letters sent from Budé to this location per year") +
+  labs(x = "Year", y = "Number of letters sent by Budé to this location per year") +
   scale_x_continuous(breaks = c(1484:1536)) +
   facet_grid(locations_name_modern ~ ., space = "free") +
   theme_bw() +

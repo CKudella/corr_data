@@ -1,4 +1,5 @@
 require(tidyverse)
+require(ggrepel)
 require(svglite)
 
 # set working directory
@@ -26,7 +27,7 @@ outliers_df <- data %>%
   filter(is_outlier) %>%
   ungroup()
 
-# create boxplot
+# create box plot
 plot <- ggplot(data, aes(x = locations_name_modern, y = COUNT)) +
   geom_boxplot(notch = FALSE) +
   geom_text(data = data_meds, aes(x = locations_name_modern, y = med, label = med), size = 3, vjust = -0.5) +

@@ -31,7 +31,7 @@ plot <- ggplot(data = data_long, aes(x = Year, y = value, colour = variable)) +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.35)) +
   theme(legend.position = "bottom") +
   theme(legend.title = element_blank()) +
-  scale_color_grey(labels = c("Letters sent from Budé", "Letters sent to Budé"))
+  scale_color_grey(labels = c("Letters sent by Budé", "Letters sent to Budé"))
 plot
 
 # change working directory

@@ -1,5 +1,5 @@
-require(readr)
-require(ggplot2)
+require(tidyverse)
+require(svglite)
 
 # set working directory
 getwd()
@@ -11,7 +11,8 @@ data <- read.csv("no_epp_per_loc/comp_epp_per_loc_written_by_pirck_at_and_sent_b
 # create scatterplot
 plot <- ggplot(data = data, aes(x = NoLettersWrittenByPirckheimerTO, y = NoLettersWrittenBYPirckheimerAT, label = LocationName)) +
   geom_point(stat = "identity") +
-  labs(x = "Number of letters sent from Pirckheimer to this location", y = "Number of letters written by Pirckheimer at this location") +
+  geom_text(vjust = -0.5, hjust = 1) +
+  labs(x = "Number of letters sent by Pirckheimer to this location", y = "Number of letters written by Pirckheimer at this location") +
   theme_bw()
 plot
 

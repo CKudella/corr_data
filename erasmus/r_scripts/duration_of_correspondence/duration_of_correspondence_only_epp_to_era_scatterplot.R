@@ -1,5 +1,6 @@
 require(tidyverse)
 require(svglite)
+require(lubridate) # in case an older tidyverse package version is used
 
 # set working directory
 getwd()
@@ -20,7 +21,7 @@ duration_of_correspondence_mean <- mean(duration_of_correspondence_only_epp_to_e
 # calculate median of "duration of correspondence"
 duration_of_correspondence_median <- median(duration_of_correspondence_only_epp_to_erasmus$duration_in_years)
 
-# create scatterplot plot
+# create scatter plot
 plot <- ggplot(duration_of_correspondence_only_epp_to_erasmus, aes(x = FLTE ,y = duration_in_years)) +
   geom_point(stat = "identity", fill = "black", alpha = 0.5) +
   geom_hline(aes(yintercept = mean(duration_in_years), linetype="mean"), size = 0.3) +

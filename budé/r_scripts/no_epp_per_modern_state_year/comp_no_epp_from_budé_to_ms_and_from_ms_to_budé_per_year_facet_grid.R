@@ -11,7 +11,7 @@ data <- read.csv("no_epp_per_modern_state_year/comp_no_epp_from_budé_to_ms_and_
 # pivot data from wide to long format
 data_long <- data %>% pivot_longer(cols = c(NoEppSentFromBudé, NoEppSentToBudé), names_to = "variable", values_to = "value")
 
-# create barchart with facet grid
+# create facet grid with bar charts
 plot <- ggplot(data = data_long, aes(x = Year, y = value, colour = variable)) +
   geom_line(stat = "identity", size = 1) +
   labs(x = "Year", y = "Number of letters") +
@@ -22,7 +22,7 @@ plot <- ggplot(data = data_long, aes(x = Year, y = value, colour = variable)) +
   theme(strip.text.y = element_text(angle = 0, hjust = 1)) +
   theme(legend.position = "bottom") +
   theme(legend.title = element_blank()) +
-  scale_colour_discrete(labels = c("Number of letters Budé sent to this modern state", "Number of letters sent from this modern state to Budé"))
+  scale_colour_discrete(labels = c("Number of letters sent to this modern state by Budé", "Number of letters sent from this modern state to Budé"))
 plot
 
 # change working directory

@@ -21,7 +21,7 @@ duration_of_correspondence_mean <- mean(duration_of_correspondence_only_epp_to_b
 # calculate median of "duration of correspondence"
 duration_of_correspondence_median <- median(duration_of_correspondence_only_epp_to_budé$duration_in_years)
 
-# create scatterplot plot
+# create scatter plot
 plot <- ggplot(duration_of_correspondence_only_epp_to_budé, aes(x = FLTE ,y = duration_in_years)) +
   geom_point(stat = "identity", fill = "black", alpha = 0.5) +
   geom_hline(aes(yintercept = mean(duration_in_years), linetype="mean"), size = 0.3) +

@@ -1,7 +1,7 @@
-require(readr)
-require(ggplot2)
+require(tidyverse)
 require(ggrepel)
 require(patchwork)
+require(svglite)
 
 # set working directory
 getwd()
@@ -27,7 +27,7 @@ plot1 <- ggplot(data = data, aes(x = reorder(Location.Name.Modern, -Number.of.co
   theme(axis.title.x = element_text(), axis.text.x = element_blank(), axis.ticks.x = element_blank())
 plot1
 
-# create boxplot
+# create box plot
 plot2 <- ggplot(data, aes(x = " ", y = Number.of.correspondents.who.received.at.this.Location.letters.from.Pirckheimer)) +
   geom_boxplot(outlier.size = 2, notch = FALSE) +
   geom_text_repel(label = ifelse(data$Number.of.correspondents.who.received.at.this.Location.letters.from.Pirckheimer >= upper_dots, as.character(data$Location.Name.Modern), "")) +

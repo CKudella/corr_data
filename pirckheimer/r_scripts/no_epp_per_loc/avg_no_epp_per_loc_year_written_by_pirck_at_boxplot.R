@@ -1,5 +1,5 @@
-require(readr)
-require(ggplot2)
+require(tidyverse)
+require(svglite)
 
 # set working directory
 getwd()
@@ -17,7 +17,7 @@ IQR <- diff(quartiles[c(1, 3)])
 # calculate outlier treshold
 upper_dots <- min(data$Average.number.of.letters.written.by.Pirckheimer.from.this.location.per.year[data$Average.number.of.letters.written.by.Pirckheimer.from.this.location.per.year > (quartiles[3] + 1.5*IQR)])
 
-# create boxplot
+# create box plot
 plot <- ggplot(data, aes(x = " ", y = Average.number.of.letters.written.by.Pirckheimer.from.this.location.per.year)) +
   geom_boxplot(outlier.size = 2, notch = FALSE) +
   geom_text(check_overlap = TRUE, aes(label = ifelse(Average.number.of.letters.written.by.Pirckheimer.from.this.location.per.year >= upper_dots, as.character(Location.Name), "")), hjust = -0.1, vjust = 0) +

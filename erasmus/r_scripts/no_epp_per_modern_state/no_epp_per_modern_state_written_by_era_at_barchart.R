@@ -8,7 +8,7 @@ setwd("../query_results/")
 # read data
 data <- read.csv("no_epp_per_modern_state/no_epp_per_modern_state_written_by_era_at.csv", fileEncoding = "UTF-8", na.strings = c("NULL"))
 
-# create barchart
+# create bar chart
 plot <- ggplot(data, aes(x = reorder(Modern.State, -Number.of.letters.written.at.this.modern.state.by.Erasmus), y = Number.of.letters.written.at.this.modern.state.by.Erasmus)) +
   geom_bar(stat = "identity") +
   geom_text(aes(label = Number.of.letters.written.at.this.modern.state.by.Erasmus), vjust = -0.5, color = "black") +

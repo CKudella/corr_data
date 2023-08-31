@@ -1,6 +1,5 @@
-require(readr)
-require(reshape2)
-require(ggplot2)
+require(tidyverse)
+require(svglite)
 
 # set working directory
 getwd()
@@ -9,10 +8,10 @@ setwd("../query_results/")
 # read data
 data <- read.csv("no_epp_per_modern_state_year/comp_no_epp_from_pirck_to_ms_and_from_ms_to_pirck_per_year.csv", fileEncoding = "UTF-8", na.strings = c("NULL"))
 
-# apply melt for wide to long
-data_long <- melt(data, id.vars = c("ModernState", "Year"))
+# pivot data from wide to long format
+data_long <- data %>% pivot_longer(cols = c(NoEppSentFromPirck, NoEppSentToPirck), names_to = "variable", values_to = "value")
 
-# create barchart with facet grid
+# create facet grid with bar charts
 plot <- ggplot(data = data_long, aes(x = Year, y = value, colour = variable)) +
   geom_line(stat = "identity") +
   labs(x = "Year", y = "Number of letters") +
@@ -23,7 +22,7 @@ plot <- ggplot(data = data_long, aes(x = Year, y = value, colour = variable)) +
   theme(strip.text.y = element_text(angle = 0, hjust = 1)) +
   theme(legend.position = "bottom") +
   theme(legend.title = element_blank()) +
-  scale_colour_discrete(labels = c("Number of letters Pirckheimer sent to this modern state", "Number of letters sent from this modern state to Pirckheimer"))
+  scale_colour_discrete(labels = c("Number of letters sent to this modern state by Pirckheimer", "Number of letters sent from this modern state to Pirckheimer"))
 plot
 
 # change working directory

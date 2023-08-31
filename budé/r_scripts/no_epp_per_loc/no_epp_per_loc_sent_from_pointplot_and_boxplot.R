@@ -28,7 +28,7 @@ plot1 <- ggplot(data = data, aes(x = reorder(Location.Name, -Number.of.letters.s
   theme(axis.text.x = element_text(angle = 90, hjust = 1))
 plot1
 
-# create boxplot (with log10 trans)
+# create box plot (with log10 trans)
 plot2 <- ggplot(data, aes(x = " ", y = Number.of.letters.sent.from.this.location)) +
   geom_boxplot(outlier.size = 2, notch = FALSE) +
   coord_trans(y = "sqrt") +

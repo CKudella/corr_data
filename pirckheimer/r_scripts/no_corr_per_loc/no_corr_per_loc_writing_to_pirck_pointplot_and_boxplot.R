@@ -1,7 +1,7 @@
-require(readr)
-require(ggplot2)
+require(tidyverse)
 require(ggrepel)
 require(patchwork)
+require(svglite)
 
 # set working directory
 getwd()
@@ -10,7 +10,7 @@ setwd("../query_results/")
 # read data
 data <- read.csv("no_corr_per_loc/no_corr_per_loc_writing_to_pirck_with_geocoordinates.csv", fileEncoding = "UTF-8", na.strings = c("NULL"))
 
-# caculate quartiles
+# calculate quartiles
 quartiles <- as.numeric(quantile(data$Number.of.correspondents.who.wrote.from.this.location.letters.to.Pirckheimer, probs = c(0.25, 0.5, 0.75)))
 
 # calculate IQR
@@ -27,10 +27,10 @@ plot1 <- ggplot(data = data, aes(x = reorder(Location.Name.Modern, -Number.of.co
   theme(axis.title.x = element_text(), axis.text.x = element_blank(), axis.ticks.x = element_blank())
 plot1
 
-# create boxplot
+# create box plot
 plot2 <- ggplot(data, aes(x = " ", y = Number.of.correspondents.who.wrote.from.this.location.letters.to.Pirckheimer)) +
   geom_boxplot(outlier.size = 2, notch = FALSE) +
-  geom_text_repel(box.padding = 1.5, label = ifelse(data$Number.of.correspondents.who.wrote.from.this.location.letters.to.Pirckheimer >= upper_dots, as.character(data$Location.Name.Modern), "")) +
+  geom_text_repel(box.padding = 1.5, max.overlaps = Inf, label = ifelse(data$Number.of.correspondents.who.wrote.from.this.location.letters.to.Pirckheimer >= upper_dots, as.character(data$Location.Name.Modern), "")) +
   theme_bw() +
   theme(axis.title.x = element_blank()) +
   labs(y = "Number of correspondents writing letters to Pirckheimer")

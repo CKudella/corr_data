@@ -9,7 +9,7 @@ setwd("../query_results/")
 # read data
 data <- read.csv("no_epp_per_loc/avg_no_epp_per_loc_year_written_to_era.csv", fileEncoding = "UTF-8")
 
-# create boxplot
+# create box plot
 plot <- ggplot(data, aes(x = " ", y = Average.Number.of.Letters.written.from.this.location.to.Erasmus.per.year)) +
   geom_boxplot(outlier.size = 2, notch = FALSE) +
   geom_text_repel(box.padding = 1.25, max.overlaps = Inf, label = ifelse(data$Average.Number.of.Letters.written.from.this.location.to.Erasmus.per.year > 2.5825, as.character(data$Location.Name), "")) +
