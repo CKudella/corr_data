@@ -1,5 +1,6 @@
 require(tidyverse)
 require(svglite)
+require(lubridate) # in case an older tidyverse package version is used
 
 # set working directory
 getwd()
