@@ -1,6 +1,7 @@
-require(readr)
-require(ggplot2)
+require(tidyverse)
 require(ggrepel)
+require(svglite)
+
 
 # set working directory
 getwd()
@@ -9,7 +10,7 @@ setwd("../query_results/")
 # read data
 data <- read.csv("no_corr_per_year/avg_no_epp_per_corr_year_to_era.csv", fileEncoding = "UTF-8")
 
-# caculate quartiles
+# calculate quartiles
 quartiles <- as.numeric(quantile(data$Average.number.of.letters.sent.per.correspondent.to.Erasmus.this.year, probs = c(0.25, 0.5, 0.75)))
 
 # calculate IQR

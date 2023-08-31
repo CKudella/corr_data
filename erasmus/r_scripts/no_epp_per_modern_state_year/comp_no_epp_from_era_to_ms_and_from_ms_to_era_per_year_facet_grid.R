@@ -1,6 +1,5 @@
-require(readr)
-require(reshape2)
-require(ggplot2)
+require(tidyverse)
+require(svglite)
 
 # set working directory
 getwd()
@@ -9,10 +8,10 @@ setwd("../query_results/")
 # read data
 data <- read.csv("no_epp_per_modern_state_year/comp_no_epp_from_era_to_ms_and_from_ms_to_era_per_year.csv", fileEncoding = "UTF-8", na.strings = c("NULL"))
 
-# apply melt for wide to long
-data_long <- melt(data, id.vars = c("ModernState", "Year"))
+# pivot data from wide to long format
+data_long <- data %>% pivot_longer(cols = c(NoEppSentFromEra, NoEppSentToEra), names_to = "variable", values_to = "value")
 
-# create barchart with facet grid
+# create facet grid with bar charts
 plot <- ggplot(data = data_long, aes(x = Year, y = value, linetype = variable)) +
   geom_line(stat = "identity") +
   labs(x = "Year", y = "Number of letters") +

@@ -1,6 +1,6 @@
-require(readr)
-require(ggplot2)
+require(tidyverse)
 require(ggrepel)
+require(svglite)
 
 # set working directory
 getwd()
@@ -12,7 +12,7 @@ data <- read.csv("no_epp_per_loc/avg_no_epp_per_loc_year_written_to_era.csv", fi
 # create boxplot
 plot <- ggplot(data, aes(x = " ", y = Average.Number.of.Letters.written.from.this.location.to.Erasmus.per.year)) +
   geom_boxplot(outlier.size = 2, notch = FALSE) +
-  geom_text_repel(box.padding = 1.25, label = ifelse(data$Average.Number.of.Letters.written.from.this.location.to.Erasmus.per.year > 2.5825, as.character(data$Location.Name), "")) +
+  geom_text_repel(box.padding = 1.25, max.overlaps = Inf, label = ifelse(data$Average.Number.of.Letters.written.from.this.location.to.Erasmus.per.year > 2.5825, as.character(data$Location.Name), "")) +
   theme_bw() +
   theme(axis.title.x = element_blank()) +
   labs(y = "Average number of letters sent to Erasmus from this location per year")

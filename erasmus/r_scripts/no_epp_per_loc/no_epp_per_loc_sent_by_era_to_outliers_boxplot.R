@@ -1,6 +1,5 @@
-require(readr)
 require(tidyverse)
-require(ggplot2)
+require(svglite)
 
 # set working directory
 getwd()
@@ -12,11 +11,11 @@ data <- read.csv("no_epp_per_loc/no_epp_per_loc_sent_by_era_to_outliers.csv", fi
 # calculate median for label
 data_meds <- summarise(group_by(data, locations_name_modern), med = median(COUNT))
 
-# create boxplot with facet grid
+# create facet grid with box plots
 plot <- ggplot(data, aes(x = locations_name_modern, y = COUNT)) +
   geom_boxplot(notch = FALSE) +
   geom_text(data = data_meds, aes(x = locations_name_modern, y = med, label = med), size = 3, vjust = -0.5) +
-  labs(x = "Outlier Location", y = "Number of letters sent from Erasmus to this location per year") +
+  labs(x = "Outlier Location", y = "Number of letters sent by Erasmus to this location per year") +
   theme_bw() +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.35))
 plot

@@ -1,6 +1,5 @@
-require(readr)
-require(reshape2)
-require(ggplot2)
+require(tidyverse)
+require(svglite)
 
 # set working directory
 getwd()
@@ -13,10 +12,10 @@ data <- read.csv("no_corr_per_modern_state/comp_no_corr_per_ms_writing_to_receiv
 data$Number.of.correspondents.who.received.letters.from.Erasmus <- as.numeric(as.character(data$Number.of.correspondents.who.received.letters.from.Erasmus))
 data$Number.of.correspondents.who.wrote.letters.to.Erasmus <- as.numeric(as.character(data$Number.of.correspondents.who.wrote.letters.to.Erasmus))
 
-# apply melt for wide to long
-data_long <- melt(data, id.vars = c("Modern.State"))
+# pivot data from wide to long format
+data_long <- data %>% pivot_longer(cols = c("Number.of.correspondents.who.received.letters.from.Erasmus", "Number.of.correspondents.who.wrote.letters.to.Erasmus"), names_to = "variable", values_to = "value")
 
-# create barchart
+# create bar chart
 plot <- ggplot(data_long, aes(x = reorder(Modern.State, -value), y = value, fill = variable)) +
   geom_bar(position = "dodge", stat = "identity") +
   labs(x = "Modern State", y = "Number of correspondents") +

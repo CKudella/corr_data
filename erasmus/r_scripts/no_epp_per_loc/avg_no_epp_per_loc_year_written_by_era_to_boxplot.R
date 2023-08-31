@@ -1,6 +1,6 @@
-require(readr)
-require(ggplot2)
+require(tidyverse)
 require(ggrepel)
+require(svglite)
 
 # set working directory
 getwd()
@@ -9,7 +9,7 @@ setwd("../query_results/")
 # read data
 data <- read.csv("no_epp_per_loc/avg_no_epp_per_loc_year_written_by_era_to.csv", fileEncoding = "UTF-8")
 
-# caculate quartiles
+# calculate quartiles
 quartiles <- as.numeric(quantile(data$Average.Number.of.Letters.written.by.Erasmus.to.this.location.per.year, probs = c(0.25, 0.5, 0.75)))
 
 # calculate IQR
@@ -21,7 +21,7 @@ upper_dots <- min(data$Average.Number.of.Letters.written.by.Erasmus.to.this.loca
 # create boxplot
 plot <- ggplot(data, aes(x = " ", y = Average.Number.of.Letters.written.by.Erasmus.to.this.location.per.year)) +
   geom_boxplot(outlier.size = 2, notch = FALSE) +
-  geom_text_repel(box.padding = 1.25, label = ifelse(data$Average.Number.of.Letters.written.by.Erasmus.to.this.location.per.year >= upper_dots, as.character(data$Location.Name), "")) +
+  geom_text_repel(box.padding = 1.25, max.overlaps = Inf, label = ifelse(data$Average.Number.of.Letters.written.by.Erasmus.to.this.location.per.year >= upper_dots, as.character(data$Location.Name), "")) +
   theme_bw() +
   theme(axis.title.x = element_blank()) +
   labs(y = "Average number of letters sent from Erasmus to this location per year")

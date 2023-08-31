@@ -1,6 +1,5 @@
-require(readr)
-require(reshape2)
-require(ggplot2)
+require(tidyverse)
+require(svglite)
 
 # set working directory
 getwd()
@@ -10,13 +9,10 @@ setwd("../query_results/")
 data <- read.csv("no_corr_per_year/avg_no_epp_per_corr_year_to_era.csv", fileEncoding = "UTF-8")
 
 # create data frame for years 1484-1536
-data2 <- data.frame(matrix(ncol = 1, nrow = 53))
-x <- c("Year")
-colnames(data2) <- x
-data2$Year <- c(1484:1536)
+data2 <- tibble(Year = 1484:1536)
 
-# merge dataframes
-data3 <- merge(x = data2, y = data, by = "Year", all.x = TRUE)
+# merge data frames
+data3 <- left_join(data2, data, by = "Year")
 
 # create barchart
 plot <- ggplot(data3, aes(x = Year, y = Average.number.of.letters.sent.per.correspondent.to.Erasmus.this.year)) +

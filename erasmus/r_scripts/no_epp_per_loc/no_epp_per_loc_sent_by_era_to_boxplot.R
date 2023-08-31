@@ -1,6 +1,6 @@
-require(readr)
-require(ggplot2)
+require(tidyverse)
 require(ggrepel)
+require(svglite)
 
 # set working directory
 getwd()
@@ -9,7 +9,7 @@ setwd("../query_results/")
 # read data
 data <- read.csv("no_epp_per_loc/no_epp_per_loc_sent_by_era_to.csv", fileEncoding = "UTF-8")
 
-# caculate quartiles
+# calculate quartiles
 quartiles <- as.numeric(quantile(data$Number.of.letters.sent.to.this.location.from.Erasmus, probs = c(0.25, 0.5, 0.75)))
 
 # calculate IQR
@@ -21,10 +21,10 @@ upper_dots <- min(data$Number.of.letters.sent.to.this.location.from.Erasmus[data
 # create boxplot
 plot <- ggplot(data, aes(x = " ", y = Number.of.letters.sent.to.this.location.from.Erasmus)) +
   geom_boxplot(outlier.size = 2, notch = FALSE) +
-  geom_text_repel(box.padding = 1.75, label = ifelse(data$Number.of.letters.sent.to.this.location.from.Erasmus >= upper_dots, as.character(data$Location.Name), "")) +
+  geom_text_repel(box.padding = 1.75, max.overlaps = Inf, label = ifelse(data$Number.of.letters.sent.to.this.location.from.Erasmus >= upper_dots, as.character(data$Location.Name), "")) +
   theme_bw() +
   theme(axis.title.x = element_blank()) +
-  labs(y = "Number of letters sent from Erasmus to this location")
+  labs(y = "Number of letters sent by Erasmus to this location")
 plot
 
 # change working directory

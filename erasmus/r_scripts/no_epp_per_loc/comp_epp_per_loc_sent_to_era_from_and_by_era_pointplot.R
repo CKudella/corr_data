@@ -1,6 +1,5 @@
-require(readr)
-require(ggplot2)
-require(reshape2)
+require(tidyverse)
+require(svglite)
 
 # set working directory
 getwd()
@@ -9,8 +8,8 @@ setwd("../query_results/")
 # read data
 data<-read.csv("no_epp_per_loc/comp_epp_per_loc_sent_to_era_from_and_by_era_to.csv", fileEncoding="UTF-8", na.strings=c("NULL"))
 
-# apply melt for wide to long
-data_long <- melt(data, id.vars= c("LocationName","Latitude","Longitude"))
+# pivot data from wide to long format
+data_long <- data %>% pivot_longer(cols = c("NoLettersWrittenTOErasmus", "NoLettersWrittenBYErasmusTO"), names_to = "variable", values_to = "value")
 
 # create poinplot
 plot <- ggplot(data_long, aes(x = reorder(LocationName, -value), y = value, colour = variable)) +

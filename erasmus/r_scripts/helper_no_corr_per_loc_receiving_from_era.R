@@ -1,4 +1,3 @@
-require(readr)
 require(tidyverse)
 
 # set working directory
@@ -8,7 +7,7 @@ setwd("../query_results/")
 # === Data Preparation ===
 
 # read data for no corr per loc receiving from era
-data_corr_per_loc_rec_from_era<-read.csv("no_corr_per_loc/no_corr_per_loc_receiving_from_era_with_geocoordinates.csv", fileEncoding="UTF-8", na.strings=c("NULL"))
+data_corr_per_loc_rec_from_era <-read.csv("no_corr_per_loc/no_corr_per_loc_receiving_from_era_with_geocoordinates.csv", fileEncoding="UTF-8", na.strings=c("NULL"))
 
 # read data for no epp per loc sent by era to
 data_epp_sent_by_era_to <-read.csv("no_epp_per_loc/no_epp_per_loc_sent_by_era_to.csv", fileEncoding="UTF-8", na.strings=c("NULL"))

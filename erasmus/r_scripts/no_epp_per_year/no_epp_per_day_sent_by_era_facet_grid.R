@@ -1,6 +1,5 @@
-require(readr)
-require(lubridate)
-require(ggplot2)
+require(tidyverse)
+require(svglite)
 
 # set working directory
 getwd()
@@ -12,16 +11,16 @@ data <- read.csv("no_epp_per_year/no_epp_per_day_sent_by_era.csv", fileEncoding 
 # Set send_date_computable1 asDate
 data$send_date_computable1 <- as.Date(data$send_date_computable1, format = "%Y-%m-%d")
 
-# Compute yearday, monthday, month, year
+# compute yearday, monthday, month, year
 data$yday <- yday(data$send_date_computable1)
 data$mday <- mday(data$send_date_computable1)
 data$month <- month(data$send_date_computable1)
 data$year <- year(data$send_date_computable1)
 
-# create barchart with facet grid
+# create facet grid with bar charts
 plot <- ggplot(data = data, aes(x = mday, y = NoEppSentFromEra)) +
   geom_bar(stat = "identity") +
-  labs(x = "Day", y = "Number of letters sent from Erasmus") +
+  labs(x = "Day", y = "Number of letters sent by Erasmus") +
   scale_y_continuous(breaks = seq(0, 14, 2)) +
   facet_grid(year ~ month) +
   theme_bw() +

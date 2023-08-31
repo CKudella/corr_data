@@ -1,5 +1,5 @@
-require(readr)
-require(ggplot2)
+require(tidyverse)
+require(svglite)
 
 # set working directory
 getwd()
@@ -8,7 +8,7 @@ setwd("../query_results/")
 # read data
 data <- read.csv("no_epp_per_modern_state/no_epp_per_modern_state_sent_to_era.csv", fileEncoding = "UTF-8", na.strings = c("NULL"))
 
-# create barchart
+# create bar chart
 plot <- ggplot(data, aes(x = reorder(Modern.State, -Number.of.letters.sent.from.this.modern.state.to.Erasmus), y = Number.of.letters.sent.from.this.modern.state.to.Erasmus)) +
   geom_bar(stat = "identity") +
   geom_text(aes(label = Number.of.letters.sent.from.this.modern.state.to.Erasmus), vjust = -0.5, color = "black") +

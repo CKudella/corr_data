@@ -1,5 +1,5 @@
-require(readr)
-require(ggplot2)
+require(tidyverse)
+require(svglite)
 
 # set working directory
 getwd()
@@ -8,7 +8,7 @@ setwd("../query_results/")
 # read data
 data <- read.csv("no_corr_per_year/avg_no_epp_per_corr_year_to_era.csv", fileEncoding = "UTF-8")
 
-# create barchart
+# create bar chart
 plot <- ggplot(data, aes(x = Year, y = Average.number.of.letters.sent.per.correspondent.to.Erasmus.this.year)) +
   geom_bar(position = "dodge", stat = "identity") +
   labs(x = "Year", y = "Average number of letters") +

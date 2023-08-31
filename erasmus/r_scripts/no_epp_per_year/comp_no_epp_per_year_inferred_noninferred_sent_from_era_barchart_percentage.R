@@ -1,7 +1,5 @@
-require(readr)
-require(reshape2)
-require(ggplot2)
-require(scales)
+require(tidyverse)
+require(svglite)
 
 # set working directory
 getwd()
@@ -10,20 +8,26 @@ setwd("../query_results/")
 # read data
 data <- read.csv("no_epp_per_year/comp_no_epp_per_year_inferred_noninferred_sent_from_era.csv", fileEncoding = "UTF-8", na.strings = c("NULL"))
 
-# apply melt for wide to long
-data_long <- melt(data, id.vars = c("Year"))
+# create data frame for years 1484-1536
+data2 <- tibble(Year = 1484:1536)
 
-# create stacked barchart
+# merge data frames
+data3 <- left_join(data2, data, by = "Year")
+
+# pivot data from wide to long format
+data_long <- data3 %>%  pivot_longer(cols = c("Number.of.letters.with.inferred.send.date", "Number.of.letters.with.non.inferred.send.date"), names_to = "variable", values_to = "value")
+
+# create stacked bar chart
 plot <- ggplot(data_long, aes(x = Year, y = value, fill = variable)) +
   geom_bar(position = "fill", stat = "identity") +
-  scale_y_continuous(labels = percent_format()) +
+  scale_y_continuous(labels = function(x) sprintf("%.0f%%", x * 100)) +
   labs(x = "Year", y = "Number of letters") +
   scale_x_continuous(breaks = c(1484:1536)) +
   theme_bw() +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.35)) +
   theme(legend.position = "bottom") +
   theme(legend.title = element_blank()) +
-  scale_fill_grey(labels = c("Letters sent from Erasmus with inferred send date", "Letters sent from Erasmus with non-inferred send date"))
+  scale_fill_grey(labels = c("Letters sent by Erasmus with inferred send date", "Letters sent by Erasmus with non-inferred send date"))
 plot
 
 # change working directory

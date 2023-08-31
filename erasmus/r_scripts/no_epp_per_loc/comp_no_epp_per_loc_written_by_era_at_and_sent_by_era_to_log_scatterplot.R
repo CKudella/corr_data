@@ -1,5 +1,5 @@
-require(readr)
-require(ggplot2)
+require(tidyverse)
+require(svglite)
 
 # set working directory
 getwd()
@@ -11,10 +11,8 @@ data<-read.csv("no_epp_per_loc/comp_epp_per_loc_written_by_era_at_and_sent_by_er
 # create scatterplot
 plot <- ggplot(data=data, aes(x=NoLettersWrittenByErasmusTO, y=NoLettersWrittenBYErasmusAT, label=LocationName)) +
   geom_point(stat = "identity") +
-  geom_smooth(method = lm) +
-  scale_x_continuous(trans='log2') +
-  scale_y_continuous(trans='log2')
-labs(x="Number of letters sent from Erasmus to this location",y="Number of letters written by Erasmus at this location") + 
+  geom_text_repel(vjust = -0.5, hjust = 1) +
+labs(x="Number of letters sent by Erasmus to this location",y="Number of letters written by Erasmus at this location") + 
   theme_bw()
 plot
 

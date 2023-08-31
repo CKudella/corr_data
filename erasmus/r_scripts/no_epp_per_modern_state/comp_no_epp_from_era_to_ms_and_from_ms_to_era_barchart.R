@@ -1,6 +1,5 @@
-require(readr)
-require(reshape2)
-require(ggplot2)
+require(tidyverse)
+require(svglite)
 
 # set working directory
 getwd()
@@ -9,10 +8,10 @@ setwd("../query_results/")
 # read data
 data <- read.csv("no_epp_per_modern_state/comp_no_epp_from_era_to_ms_and_from_ms_to_era.csv", fileEncoding = "UTF-8", na.strings = c("NULL"))
 
-# apply melt for wide to long
-data_long <- melt(data, id.vars = c("ModernState"))
+# pivot data from wide to long format
+data_long <- data %>%  pivot_longer(cols = c("Number.of.letters.Erasmus.sent.to.this.modern.state", "Number.of.letters.sent.from.this.modern.state.to.Erasmus"), names_to = "variable", values_to = "value")
 
-# create barchart
+# create bar chart
 plot <- ggplot(data_long, aes(x = reorder(ModernState, -value), y = value, fill = variable)) +
   geom_bar(position = "dodge", stat = "identity") +
   labs(x = "Modern State", y = "Number of correspondents") +

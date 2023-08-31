@@ -1,8 +1,7 @@
-require(readr)
 require(tidyverse)
-require(lubridate)
-require(ggplot2)
 require(patchwork)
+require(svglite)
+
 
 # set working directory
 getwd()

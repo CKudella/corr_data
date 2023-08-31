@@ -1,6 +1,5 @@
-require(readr)
-require(lubridate)
-require(ggplot2)
+require(tidyverse)
+require(svglite)
 
 # set working directory
 getwd()
@@ -18,7 +17,7 @@ data$start_year <- year(data$Start.of.correspondence)
 # set start_year as factor
 data$start_year <-as.factor(data$start_year)
 
-# create boxplot with facet grid for years
+# create fcet grif with box plots
 plot <- ggplot(data, aes(x= ' ', y = duration_in_years)) +
   geom_boxplot(notch = FALSE) +
   theme_bw() +

@@ -1,6 +1,5 @@
-require(readr)
-require(reshape2)
-require(ggplot2)
+require(tidyverse)
+require(svglite)
 
 # set working directory
 getwd()
@@ -15,11 +14,11 @@ x <- c("Year")
 colnames(data2) <- x
 data2$Year <- c(1484:1536)
 
-# merge dataframes
-data3 <- merge(x = data2, y = data, by = "Year", all.x = TRUE)
+# create data frame for years 1484-1536
+data2 <- tibble(Year = 1484:1536)
 
-# apply melt for wide to long
-data_long <- melt(data3, id.vars= c("Year"))
+# merge data frames
+data3 <- left_join(data2, data, by = "Year")
 
 # create linechart
 plot <- ggplot(data=data_long, aes(x= Year, y=value, colour=variable)) +

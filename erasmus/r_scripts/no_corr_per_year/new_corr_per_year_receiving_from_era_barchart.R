@@ -1,5 +1,5 @@
-require(readr)
-require(ggplot2)
+require(tidyverse)
+require(svglite)
 
 # set working directory
 getwd()
@@ -8,7 +8,7 @@ setwd("../query_results/")
 # read data
 data <- read.csv("no_corr_per_year/new_corr_per_year_receiving_from_era.csv", fileEncoding = "UTF-8", na.strings = c("NULL"))
 
-# create barchart
+# create bar chart
 plot <- ggplot(data = data, aes(x = YEAR, y = NewCorrReceivingFromEra)) +
   geom_bar(stat = "identity") +
   labs(x = "Year", y = "Number of new correspondents receiving letters from Erasmus") +

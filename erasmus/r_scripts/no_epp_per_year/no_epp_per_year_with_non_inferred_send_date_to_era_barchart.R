@@ -1,5 +1,5 @@
-require(readr)
-require(ggplot2)
+require(tidyverse)
+require(svglite)
 
 # set working directory
 getwd()
@@ -8,7 +8,7 @@ setwd("../query_results/")
 # read data
 data <- read.csv("no_epp_per_year/no_epp_per_year_with_non_inferred_send_date_sent_to_era.csv", fileEncoding = "UTF-8", na.strings = c("NULL"))
 
-# create barchart
+# create bar chart
 plot <- ggplot(data = data, aes(x = Year, y = Number.of.letters.with.non.inferred.send.date.sent.to.Erasmus.this.year)) +
   geom_bar(stat = "identity") +
   geom_text(aes(label = Number.of.letters.with.non.inferred.send.date.sent.to.Erasmus.this.year), vjust = -0.5, color = "black", size = 2.5) +

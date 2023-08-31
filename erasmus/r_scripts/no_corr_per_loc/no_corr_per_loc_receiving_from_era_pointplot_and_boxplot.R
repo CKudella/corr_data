@@ -1,7 +1,7 @@
-require(readr)
-require(ggplot2)
-require(ggrepel)
+require(tidyverse)
 require(patchwork)
+require(svglite)
+
 
 # set working directory
 getwd()

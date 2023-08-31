@@ -1,5 +1,5 @@
-require(readr)
-require(ggplot2)
+require(tidyverse)
+require(svglite)
 
 # set working directory
 getwd()
@@ -8,7 +8,7 @@ setwd("../query_results/")
 # read data
 data <- read.csv("no_epp_per_loc/no_epp_per_loc_written_by_era_at_outliers.csv", fileEncoding = "UTF-8", na.strings = c("NULL"))
 
-# create barchart with facet grid
+# create facet grid with bar charts
 plot <- ggplot(data = data, aes(x = YEAR, y = COUNT)) +
   geom_bar(stat = "identity") +
   labs(x = "Year", y = " Number of letters sent from this location by Erasmus per year") +
