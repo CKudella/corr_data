@@ -14,7 +14,7 @@ plot <- ggplot(data = data, aes(x = YEAR, y = Number.of.letters.sent.to.Pirckhei
   geom_text(aes(label = Number.of.letters.sent.to.Pirckheimer.this.year), vjust = -0.5, color = "black", size = 2.5) +
   labs(x = "Year", y = "Number of letters sent to Pirckheimer") +
   scale_x_continuous(breaks = c(1484:1536)) +
-  scale_y_continuous(breaks = seq(0, 120, 10)) +
+  scale_y_continuous(breaks = seq(0, 110, 10)) +
   theme_bw() +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.35))
 plot

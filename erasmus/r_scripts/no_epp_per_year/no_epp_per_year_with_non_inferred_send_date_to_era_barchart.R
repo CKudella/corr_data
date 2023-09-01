@@ -12,9 +12,9 @@ data <- read.csv("no_epp_per_year/no_epp_per_year_with_non_inferred_send_date_se
 plot <- ggplot(data = data, aes(x = Year, y = Number.of.letters.with.non.inferred.send.date.sent.to.Erasmus.this.year)) +
   geom_bar(stat = "identity") +
   geom_text(aes(label = Number.of.letters.with.non.inferred.send.date.sent.to.Erasmus.this.year), vjust = -0.5, color = "black", size = 2.5) +
-  labs(x = "Year", y = "Number of letters") +
+  labs(x = "Year", y = "Number of letters sent to Erasmus with non-inferred send dates") +
   scale_x_continuous(breaks = c(1484:1536)) +
-  scale_y_continuous(breaks = seq(0, 240, 10)) +
+  scale_y_continuous(breaks = seq(0, 60, 10)) +
   theme_bw() +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.35))
 plot

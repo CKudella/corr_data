@@ -27,7 +27,7 @@ plot <- ggplot(data_long, aes(x = Year, y = value, fill = variable)) +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.35)) +
   theme(legend.position = "bottom") +
   theme(legend.title = element_blank()) +
-  scale_fill_grey(labels = c("Letters sent by Budé with inferred send date", "Letters sent by Budé with non-inferred send date"))
+  scale_fill_grey(labels = c("Letters sent by Budé with inferred send dates", "Letters sent by Budé with non-inferred send dates"))
 plot
 
 # change working directory

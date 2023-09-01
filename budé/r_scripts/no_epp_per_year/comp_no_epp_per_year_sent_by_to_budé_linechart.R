@@ -20,13 +20,13 @@ data3 <- left_join(data2, data, by = "Year")
 # pivot data from wide to long format
 data_long <- data3 %>%  pivot_longer(cols = c("NoEppSentFromBudé", "NoEppSentToBudé"), names_to = "variable", values_to = "value")
 
-# create linechart
+# create line chart
 plot <- ggplot(data = data_long, aes(x = Year, y = value, colour = variable)) +
   geom_line(stat = "identity", size = 0.9) +
   geom_point(shape = 1, fill = "white", stroke = 1.25) +
   labs(x = "Year", y = "Number of letters") +
   scale_x_continuous(breaks = c(1484:1540)) +
-  scale_y_continuous(breaks = seq(0, 50, 5)) +
+  scale_y_continuous(breaks = seq(0, 60, 10)) +
   theme_bw() +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.35)) +
   theme(legend.position = "bottom") +
