@@ -11,9 +11,12 @@ data <- read.csv("no_epp_per_loc/comp_epp_per_loc_sent_to_budé_from_and_by_bud�
 
 # create scatter plot
 plot <- ggplot(data = data, aes(x = NoLettersWrittenTOBudé, y = NoLettersWrittenBYBudéTO, label = LocationName)) +
-  geom_point(stat = "identity") +
-  geom_text_repel(vjust = -0.5, hjust = 1) +
-  labs(x = "Number of letters written to Budé", y = "Number of letters received from Budé") +
+  geom_point(stat = "identity", alpha = 0.25) +
+  geom_text_repel(data = filter(data, NoLettersWrittenTOBudé > quantile(data$NoLettersWrittenTOBudé, 0.75, na.rm = TRUE) + 1.5 * IQR(data$NoLettersWrittenTOBudé, na.rm = TRUE) |
+                                  NoLettersWrittenBYBudéTO > quantile(data$NoLettersWrittenBYBudéTO, 0.75, na.rm = TRUE) + 1.5 * IQR(data$NoLettersWrittenBYBudéTO, na.rm = TRUE)), 
+                  aes(label = LocationName), box.padding = 1.5, max.overlaps = Inf) +
+  labs(x = "Number of letters sent to Budé from this location", y = "Number of letters sent by Budé to this location") +
+  scale_y_log10() +
   theme_bw()
 plot
 

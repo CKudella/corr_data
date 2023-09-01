@@ -19,22 +19,21 @@ IQR <- diff(quartiles[c(1, 3)])
 # calculate outlier treshold
 upper_dots <- min(data$Number.of.letters.sent.from.this.location[data$Number.of.letters.sent.from.this.location > (quartiles[3] + 1.5*IQR)])
 
-# create pointplot (with sqrt trans)
+# create pointplot
 plot1 <- ggplot(data = data, aes(x = reorder(Location.Name, -Number.of.letters.sent.from.this.location), y = Number.of.letters.sent.from.this.location, label = Location.Name)) +
   geom_point(stat = "identity") +
-  labs(x = "Locations", y = "Number of letters sent from this location") +
+  labs(x = "Location", y = "Number of letters sent from this location") +
   theme_bw() +
   theme(axis.title.x = element_text(), axis.text.x = element_blank(), axis.ticks.x = element_blank())
 plot1
 
-# create box plot (with swrt trans)
+# create box plot
 plot2 <- ggplot(data, aes(x = " ", y = Number.of.letters.sent.from.this.location)) +
+  labs(x = "Location", y = "Number of letters sent from this location") +
   geom_boxplot(outlier.size = 2, notch = FALSE) +
-  coord_trans(y = "sqrt") +
-  geom_text_repel(box.padding = 2, max.overlaps = Inf, label = ifelse(data$Number.of.letters.sent.from.this.location >= upper_dots, as.character(data$Location.Name), "")) +
+  geom_text_repel(box.padding = 2.5, max.overlaps = Inf, label = ifelse(data$Number.of.letters.sent.from.this.location >= upper_dots, as.character(data$Location.Name), "")) +
   theme_bw() +
-  theme(axis.title.x = element_blank()) +
-  labs(y = "Number of letters sent from this location")
+  theme(axis.title.x = element_text(), axis.text.x = element_blank(), axis.ticks.x = element_blank())
 plot2
 
 # create combined plot via patchwork

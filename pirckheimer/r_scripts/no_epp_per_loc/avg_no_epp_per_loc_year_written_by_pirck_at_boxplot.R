@@ -21,9 +21,9 @@ upper_dots <- min(data$Average.number.of.letters.written.by.Pirckheimer.from.thi
 plot <- ggplot(data, aes(x = " ", y = Average.number.of.letters.written.by.Pirckheimer.from.this.location.per.year)) +
   geom_boxplot(outlier.size = 2, notch = FALSE) +
   geom_text(check_overlap = TRUE, aes(label = ifelse(Average.number.of.letters.written.by.Pirckheimer.from.this.location.per.year >= upper_dots, as.character(Location.Name), "")), hjust = -0.1, vjust = 0) +
+  labs(x = "Location", y = "Average number of letters written by Pirckheimer at this location per year") +
   theme_bw() +
-  theme(axis.title.x = element_blank()) +
-  labs(y = "Average number of letters sent from this location by Pirckheimer per year")
+  theme(axis.title.x = element_text(), axis.text.x = element_blank(), axis.ticks.x = element_blank())
 plot
 
 # change working directory

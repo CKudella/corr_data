@@ -8,15 +8,28 @@ setwd("../query_results/")
 # read data
 data <- read.csv("no_epp_per_loc/no_epp_per_loc_sent_to_budé_outliers.csv", fileEncoding = "UTF-8", na.strings = c("NULL"))
 
-# calculate median for usage as a label
-data_meds <- data %>%  group_by(locations_name_modern) %>%  summarise(med = median(COUNT))
+# identify outliers and their years for each location
+outliers_df <- data %>%
+  group_by(locations_name_modern) %>%
+  mutate(
+    Q1 = quantile(COUNT, 0.25),
+    Q3 = quantile(COUNT, 0.75),
+    IQR = Q3 - Q1,
+    lower_bound = Q1 - 1.5 * IQR,
+    upper_bound = Q3 + 1.5 * IQR,
+    is_outlier = COUNT < lower_bound | COUNT > upper_bound,
+    outlier_years = ifelse(is_outlier, as.character(YEAR), "")
+  ) %>%
+  filter(is_outlier) %>%
+  ungroup()
 
 # create box plot
 plot <- ggplot(data, aes(x = locations_name_modern, y = COUNT)) +
   geom_boxplot(notch = FALSE) +
-  geom_text(data = data_meds, aes(x = locations_name_modern, y = med, label = med), size = 3, vjust = -0.5) +
+  geom_text(data = outliers_df, aes(x = locations_name_modern, y = COUNT, label = outlier_years), size = 3, vjust = -1) +
   labs(x = "Outlier Location", y = " Number of letters sent from this location to Budé per year") +
-  theme_bw()
+  theme_bw() +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.35))
 plot
 
 # change working directory

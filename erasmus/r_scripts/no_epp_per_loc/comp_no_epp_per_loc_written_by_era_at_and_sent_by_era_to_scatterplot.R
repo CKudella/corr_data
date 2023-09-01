@@ -11,9 +11,11 @@ data<-read.csv("no_epp_per_loc/comp_epp_per_loc_written_by_era_at_and_sent_by_er
 
 # create scatterplot
 plot <- ggplot(data=data, aes(x=NoLettersWrittenByErasmusTO, y=NoLettersWrittenBYErasmusAT, label=LocationName)) +
-  geom_point(stat = "identity") +
-  geom_text_repel(vjust = -0.5, hjust = 1) +
-labs(x="Number of letters sent by Erasmus to this location",y="Number of letters written by Erasmus at this location") + 
+  geom_point(stat = "identity", alpha = 0.25) +
+  geom_text_repel(data = filter(data, NoLettersWrittenByErasmusTO > quantile(data$NoLettersWrittenByErasmusTO, 0.75, na.rm = TRUE) + 1.5 * IQR(data$NoLettersWrittenByErasmusTO, na.rm = TRUE) |
+                                  NoLettersWrittenBYErasmusAT > quantile(data$NoLettersWrittenBYErasmusAT, 0.75, na.rm = TRUE) + 1.5 * IQR(data$NoLettersWrittenBYErasmusAT, na.rm = TRUE)), 
+                  aes(label = LocationName), box.padding = 1.5, max.overlaps = Inf) +
+  labs(x="Number of letters sent by Erasmus to this location",y="Number of letters written by Erasmus at this location") +
   theme_bw()
 plot
 

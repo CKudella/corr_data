@@ -9,7 +9,7 @@ setwd("../query_results/")
 # read data
 data <- read.csv("no_epp_per_loc/avg_no_epp_per_corr_loc_written_to_budé.csv", fileEncoding = "UTF-8")
 
-# caculate quartiles
+# calculate quartiles
 quartiles <- as.numeric(quantile(data$Average.number.of.letters, probs = c(0.25, 0.5, 0.75)))
 
 # calculate IQR
@@ -22,9 +22,9 @@ upper_dots <- min(data$Average.number.of.letters[data$Average.number.of.letters 
 plot <- ggplot(data, aes(x = " ", y = Average.number.of.letters)) +
   geom_boxplot(outlier.size = 2, notch = FALSE) +
   geom_text_repel(label = ifelse(data$Average.number.of.letters >= upper_dots, as.character(data$Location.Name), "")) +
+  labs(x = "Location", y = "Average number of letters sent to Budé from this location per correspondent") +
   theme_bw() +
-  theme(axis.title.x = element_blank()) +
-  labs(y = "Average number of letters sent to Budé from this location per correspondent")
+  theme(axis.title.x = element_text(), axis.text.x = element_blank(), axis.ticks.x = element_blank())
 plot
 
 # change working directory

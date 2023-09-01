@@ -22,9 +22,9 @@ upper_dots <- min(data$Number.of.letters.sent.to.this.location.from.Pirckheimer[
 plot <- ggplot(data, aes(x = " ", y = Number.of.letters.sent.to.this.location.from.Pirckheimer)) +
   geom_boxplot(outlier.size = 2, notch = FALSE) +
   geom_text_repel(label = ifelse(data$Number.of.letters.sent.to.this.location.from.Pirckheimer >= upper_dots, as.character(data$Location.Name), "")) +
+  labs(x = "Location", y = "Number of letters sent by Pirckheimer to this location") +
   theme_bw() +
-  theme(axis.title.x = element_blank()) +
-  labs(y = "Number of letters sent by Pirckheimer to this location")
+  theme(axis.title.x = element_text(), axis.text.x = element_blank(), axis.ticks.x = element_blank())
 plot
 
 # change working directory
