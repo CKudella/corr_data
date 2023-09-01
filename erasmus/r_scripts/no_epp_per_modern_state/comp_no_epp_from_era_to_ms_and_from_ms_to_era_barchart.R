@@ -14,7 +14,7 @@ data_long <- data %>%  pivot_longer(cols = c("Number.of.letters.Erasmus.sent.to.
 # create bar chart
 plot <- ggplot(data_long, aes(x = reorder(ModernState, -value), y = value, fill = variable)) +
   geom_bar(position = "dodge", stat = "identity") +
-  labs(x = "Modern State", y = "Number of correspondents") +
+  labs(x = "Modern State", y = "Number of letters") +
   theme_bw() +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.35)) +
   theme(legend.position = "bottom") +
