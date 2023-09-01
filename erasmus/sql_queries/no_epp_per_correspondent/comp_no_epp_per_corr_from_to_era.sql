@@ -1,4 +1,5 @@
 SELECT A.correspondents_id,
+       A.name_in_edition,
        B.NoEPPfromEra,
        C.NoEPPtoEra
 FROM

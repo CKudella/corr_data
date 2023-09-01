@@ -1,4 +1,4 @@
-SELECT DISTINCT recipient_id,
+SELECT DISTINCT recipient_id, name_in_edition,
                 COUNT(*) 'Number of letters sent from Erasmus to this correspondent'
 FROM letters
 WHERE sender_id = '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf'
