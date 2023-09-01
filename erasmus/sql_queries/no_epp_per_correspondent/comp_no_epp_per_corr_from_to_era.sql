@@ -3,7 +3,7 @@ SELECT A.correspondents_id,
        B.NoEPPfromEra,
        C.NoEPPtoEra
 FROM
-  (SELECT DISTINCT correspondents_id
+  (SELECT DISTINCT correspondents_id, name_in_edition
    FROM correspondents) AS A
 LEFT JOIN
   (SELECT DISTINCT recipient_id,
