@@ -11,8 +11,11 @@ data <- read.csv("no_epp_per_correspondent/no_epp_per_cor_written_by_budé.csv",
 # create pointplot
 plot <- ggplot(data = data, aes(x = reorder(recipient_id, -Number.of.letters.sent.from.Budé.to.this.correspondent), y = Number.of.letters.sent.from.Budé.to.this.correspondent, label = recipient_id)) +
   geom_point(stat = "identity") +
-  labs(x = "Correspondents", y = "Number of letters received from from Budé") +
+  geom_hline(aes(yintercept = mean(Number.of.letters.sent.from.Budé.to.this.correspondent), linetype = "mean"), size = 0.3) +
+  geom_hline(aes(yintercept = median(Number.of.letters.sent.from.Budé.to.this.correspondent), linetype = "median"), size = 0.3) +
+  labs(x = "Correspondent", y = "Number of letters sent by Budé to this correspondent") +
   theme_bw() +
+  theme(legend.position = "bottom") +
   theme(axis.title.x = element_text(), axis.text.x = element_blank(), axis.ticks.x = element_blank())
 plot
 
