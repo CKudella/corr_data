@@ -1,4 +1,5 @@
 require(tidyverse)
+require(ggrepel)
 require(svglite)
 
 # set working directory
