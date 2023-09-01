@@ -13,7 +13,7 @@ data_long <- data %>% pivot_longer(cols = c(NoEppSentFromEra, NoEppSentToEra), n
 
 # create facet grid with bar charts
 plot <- ggplot(data = data_long, aes(x = Year, y = value, linetype = variable)) +
-  geom_line(stat = "identity") +
+  geom_line(stat = "identity", size = 0.9) +
   labs(x = "Year", y = "Number of letters") +
   scale_x_continuous(breaks = c(1484:1536)) +
   facet_grid(ModernState ~ ., space = "free") +
@@ -22,7 +22,7 @@ plot <- ggplot(data = data_long, aes(x = Year, y = value, linetype = variable)) 
   theme(strip.text.y = element_text(angle = 0, hjust = 1)) +
   theme(legend.position = "bottom") +
   theme(legend.title = element_blank()) +
-  scale_colour_discrete(labels = c("Number of letters Erasmus sent to this modern state", "Number of letters sent from this modern state to Erasmus"))
+  scale_colour_discrete(labels = c("Number of letters sent to this modern state by Erasmus", "Number of letters sent from this modern state to Erasmus"))
 plot
 
 # change working directory

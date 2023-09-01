@@ -13,7 +13,7 @@ data_long <- data %>% pivot_longer(cols = c(NoEppSentFromPirck, NoEppSentToPirck
 
 # create facet grid with bar charts
 plot <- ggplot(data = data_long, aes(x = Year, y = value, colour = variable)) +
-  geom_line(stat = "identity") +
+  geom_line(stat = "identity", size = 0.9) +
   labs(x = "Year", y = "Number of letters") +
   scale_x_continuous(breaks = c(1484:1536)) +
   facet_grid(ModernState ~ ., space = "free") +
