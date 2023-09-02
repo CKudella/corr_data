@@ -1,4 +1,5 @@
 require(tidyverse)
+require(ggrepel)
 require(svglite)
 require(lubridate) # in case an older tidyverse package version is used
 
@@ -9,22 +10,50 @@ setwd("../query_results/")
 # read data and define data type for date columns
 data<-read.csv("duration_of_correspondence/duration_corr_all_corr.csv", fileEncoding="UTF-8", colClasses=c("Beginning.of.correspondence.with.Erasmus"="Date","End.of.the.correspondence.with.Erasmus"="Date"))
 
+# remove unnamed person from the dataframe
+data <- data %>% filter(correspondents_id != "be1dcbc4-3987-472a-b4a0-c3305ead139f")
+
+# cut unnecessary label parts from name_in_edition column
+data$name_in_edition <- gsub("\\b(\\W+COE+.*)", "", data$name_in_edition)
+data$name_in_edition <- gsub("^(\\W+E)", "E", data$name_in_edition)
+data$name_in_edition <- gsub("^\\[", "", data$name_in_edition)
+
 # calculate duration using lubridate
 data$duration_in_years <- interval(data$Beginning.of.correspondence.with.Erasmus, data$End.of.the.correspondence.with.Erasmus) / years(1)
 
 # extract start_year
 data$start_year <- year(data$Beginning.of.correspondence.with.Erasmus)
 
+# remove star_year rows with NA
+data <- data %>% filter(!is.na(start_year))
+
 # set start_year as factor
 data$start_year <-as.factor(data$start_year)
 
-# create facet grid with box plots
+# identify outliers for each start_year
+outliers_df <- data %>%
+  group_by(start_year) %>%
+  mutate(
+    Q1 = quantile(duration_in_years, 0.25),
+    Q3 = quantile(duration_in_years, 0.75),
+    IQR = Q3 - Q1,
+    lower_bound = Q1 - 1.5 * IQR,
+    upper_bound = Q3 + 1.5 * IQR,
+    is_outlier = duration_in_years < lower_bound | duration_in_years > upper_bound,
+    outlier_years = ifelse(is_outlier, as.character(name_in_edition), "")
+  ) %>%
+  filter(is_outlier) %>%
+  ungroup()
+
+# create facet wrap with box plots
 plot <- ggplot(data, aes(x= ' ', y = duration_in_years)) +
   geom_boxplot(notch = FALSE) +
   theme_bw() +
   theme(axis.title.x=element_blank()) +
-  labs(y = "Duration of correspondence in years") +
-  facet_grid (. ~ start_year)
+  labs(x = "Beginning of the correspondence with Erasmus", y = "Duration of correspondence in years") +
+  facet_wrap (. ~ start_year, ncol =5 , nrow = 10) +
+  geom_text_repel(data = outliers_df, aes(label = name_in_edition), box.padding = 0.5, max.overlaps = Inf, size = 2.3) +
+  theme(axis.title.x = element_text(), axis.text.x = element_blank(), axis.ticks.x = element_blank())
 plot
 
 # change working directory
