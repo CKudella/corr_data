@@ -22,8 +22,11 @@ upper_dots <- min(data$Number.of.correspondents.who.received.at.this.location.le
 # create pointplot
 plot1 <- ggplot(data = data, aes(x = reorder(Location.Name.Modern, -Number.of.correspondents.who.received.at.this.location.letters.from.Budé), y = Number.of.correspondents.who.received.at.this.location.letters.from.Budé, label = Location.Name.Modern)) +
   geom_point(stat = "identity") +
-  labs(x = "Locations", y = "Number of correspondents receiving letters from Budé") +
+  geom_hline(aes(yintercept = mean(Number.of.correspondents.who.received.at.this.location.letters.from.Budé), linetype = "mean"), size = 0.3) +
+  geom_hline(aes(yintercept = median(Number.of.correspondents.who.received.at.this.location.letters.from.Budé), linetype = "median"), size = 0.3) +
+  labs(x = "Location", y = "Number of correspondents receiving letters from Budé") +
   theme_bw() +
+  theme(legend.position = "bottom") +
   theme(axis.title.x = element_text(), axis.text.x = element_blank(), axis.ticks.x = element_blank())
 plot1
 
@@ -31,9 +34,9 @@ plot1
 plot2 <- ggplot(data, aes(x = " ", y = Number.of.correspondents.who.received.at.this.location.letters.from.Budé)) +
   geom_boxplot(outlier.size = 2, notch = FALSE) +
   geom_text_repel(label = ifelse(data$Number.of.correspondents.who.received.at.this.location.letters.from.Budé >= upper_dots, as.character(data$Location.Name.Modern), "")) +
+  labs(x = "Location", y = "Number of correspondents receiving letters from Budé") +
   theme_bw() +
-  theme(axis.title.x = element_blank()) +
-  labs(y = "Number of correspondents receiving letters from Budé")
+  theme(axis.title.x = element_text(), axis.text.x = element_blank(), axis.ticks.x = element_blank())
 plot2
 
 # create combined plot via patchwork
