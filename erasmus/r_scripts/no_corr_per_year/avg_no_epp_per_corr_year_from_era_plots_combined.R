@@ -25,24 +25,33 @@ data2 <- tibble(Year = 1484:1536)
 # merge data frames
 data3 <- left_join(data2, data, by = "Year")
 
-# create linechart plot
+# filter out NAs from the data
+filtered_data <- data3[!is.na(data3$Average.number.of.letters.sent.from.Erasmus.per.correspondent.this.year), ]
+
+# calculate mean and median from the filtered data
+mean_value <- mean(filtered_data$Average.number.of.letters.sent.from.Erasmus.per.correspondent.this.year)
+median_value <- median(filtered_data$Average.number.of.letters.sent.from.Erasmus.per.correspondent.this.year)
+
+# create line chart plot
 plot1 <- ggplot(data3, aes(x = Year, y = Average.number.of.letters.sent.from.Erasmus.per.correspondent.this.year)) +
   geom_line(stat = "identity", size = 0.9) +
   geom_point(shape = 1, fill = "white", stroke = 1.25) +
+  geom_hline(aes(yintercept = mean_value, linetype = "mean"), size = 0.3) +
+  geom_hline(aes(yintercept = median_value, linetype = "median"), size = 0.3) +
+  labs(x = "Year", y = "Average number of letters by Erasmus per correspondent") +
   scale_x_continuous(breaks = seq(1484, 1536, by = 1)) +
   theme_bw() +
-  theme(axis.text.x = element_text(angle = 90, vjust = 0.35, size = rel(0.5))) +
   theme(legend.position = "bottom") +
-  labs(y = "Average number of letters from Erasmus per correspondent", x = "Year")
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.35))
 plot1
 
 # create box plot
-plot2 <- ggplot(data, aes(x = " ", y = Average.number.of.letters.sent.from.Erasmus.per.correspondent.this.year)) +
+plot2 <- ggplot(data3, aes(x = " ", y = Average.number.of.letters.sent.from.Erasmus.per.correspondent.this.year)) +
   geom_boxplot(notch = FALSE) +
-  geom_text_repel(label = ifelse(data$Average.number.of.letters.sent.from.Erasmus.per.correspondent.this.year >= upper_dots, as.character(data$Year), "")) +
+  geom_text_repel(label = ifelse(data3$Average.number.of.letters.sent.from.Erasmus.per.correspondent.this.year >= upper_dots, as.character(data3$Year), "")) +
+  labs(x = "Year", y = "Average number of letters by Erasmus per correspondent") +
   theme_bw() +
-  theme(axis.title.x = element_blank()) +
-  labs(y = "Average number of letters from Erasmus per correspondent")
+  theme(axis.title.x = element_text(), axis.text.x = element_blank(), axis.ticks.x = element_blank())
 plot2
 
 # create combined plot via patchwork

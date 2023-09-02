@@ -14,15 +14,24 @@ data2 <- tibble(Year = 1484:1536)
 # merge data frames
 data3 <- left_join(data2, data, by = "Year")
 
-# create linechart plot
+# filter out NAs from the data
+filtered_data <- data3[!is.na(data3$Average.number.of.letters.sent.from.Budé.per.correspondent.this.year), ]
+
+# calculate mean and median from the filtered data
+mean_value <- mean(filtered_data$Average.number.of.letters.sent.from.Budé.per.correspondent.this.year)
+median_value <- median(filtered_data$Average.number.of.letters.sent.from.Budé.per.correspondent.this.year)
+
+# create line chart plot
 plot <- ggplot(data3, aes(x = Year, y = Average.number.of.letters.sent.from.Budé.per.correspondent.this.year)) +
   geom_line(stat = "identity", size = 0.9) +
   geom_point(shape = 1, fill = "white", stroke = 1.25) +
+  geom_hline(aes(yintercept = mean_value, linetype = "mean"), size = 0.3) +
+  geom_hline(aes(yintercept = median_value, linetype = "median"), size = 0.3) +
+  labs(x = "Year", y = "Average number of letters by Budé per correspondent") +
   scale_x_continuous(breaks = seq(1484, 1536, by = 1)) +
   theme_bw() +
-  theme(axis.text.x = element_text(angle = 90, vjust = 0.35)) +
   theme(legend.position = "bottom") +
-  labs(y = "Average number of letters sent by Budé per correspondent", x = "Year")
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.35))
 plot
 
 # change working directory

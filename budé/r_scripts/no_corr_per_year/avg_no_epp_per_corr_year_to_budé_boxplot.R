@@ -22,9 +22,9 @@ upper_dots <- min(data$Average.number.of.letters.sent.per.correspondent.to.Budé
 plot <- ggplot(data, aes(x = " ", y = Average.number.of.letters.sent.per.correspondent.to.Budé.this.year)) +
   geom_boxplot(notch = FALSE) +
   geom_text_repel(label = ifelse(data$Average.number.of.letters.sent.per.correspondent.to.Budé.this.year >= upper_dots, as.character(data$Year), "")) +
+  labs(x = "Year", y = "Average number of letters to Budé per correspondent") +
   theme_bw() +
-  theme(axis.title.x = element_blank()) +
-  labs(y = "Average number of letters to Budé per correspondent")
+  theme(axis.title.x = element_text(), axis.text.x = element_blank(), axis.ticks.x = element_blank())
 plot
 
 # change working directory

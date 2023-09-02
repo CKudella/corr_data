@@ -9,7 +9,7 @@ setwd("../query_results/")
 # read data
 data <- read.csv("no_corr_per_year/avg_no_epp_per_corr_year_from_budé.csv", fileEncoding = "UTF-8")
 
-# caculate quartiles
+# calculate quartiles
 quartiles <- as.numeric(quantile(data$Average.number.of.letters.sent.from.Budé.per.correspondent.this.year, probs = c(0.25, 0.5, 0.75)))
 
 # calculate IQR
@@ -22,9 +22,9 @@ upper_dots <- min(data$Average.number.of.letters.sent.from.Budé.per.corresponde
 plot <- ggplot(data, aes(x = " ", y = Average.number.of.letters.sent.from.Budé.per.correspondent.this.year)) +
   geom_boxplot(notch = FALSE) +
   geom_text_repel(label = ifelse(data$Average.number.of.letters.sent.from.Budé.per.correspondent.this.year >= upper_dots, as.character(data$Year), "")) +
+  labs(x = "Year", y = "Average number of letters by Budé per correspondent") +
   theme_bw() +
-  theme(axis.title.x = element_blank()) +
-  labs(y = "Average number of letters from Budé per correspondent")
+  theme(axis.title.x = element_text(), axis.text.x = element_blank(), axis.ticks.x = element_blank())
 plot
 
 # change working directory
