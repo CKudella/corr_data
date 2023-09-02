@@ -12,7 +12,7 @@ data <- read.csv("no_corr_per_modern_state/no_corr_per_modern_state_receiving_ep
 plot <- ggplot(data, aes(x = reorder(Modern.State, -Number.of.correspondents.who.received.letters.from.Erasmus), y = Number.of.correspondents.who.received.letters.from.Erasmus)) +
   geom_bar(stat = "identity") +
   geom_text(aes(label = Number.of.correspondents.who.received.letters.from.Erasmus), vjust = -0.5, color = "black") +
-  labs(x = "Modern State", y = "Number of correspondents") +
+  labs(x = "Modern State", y = "Number of correspondents Erasmus wrote letters to") +
   theme_bw() +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.35))
 plot
