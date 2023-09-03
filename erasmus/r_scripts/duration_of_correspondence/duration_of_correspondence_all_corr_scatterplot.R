@@ -9,6 +9,10 @@ setwd("../query_results/")
 # read data and define data type for date columns
 duration_of_correspondence_all_corr <- read.csv("duration_of_correspondence/duration_corr_all_corr.csv", fileEncoding = "UTF-8", colClasses = c("Beginning.of.correspondence.with.Erasmus" = "Date", "End.of.the.correspondence.with.Erasmus" = "Date"))
 
+# remove the generic "unknown / unnamed" correspondent and "a friend" from the dataframe
+duration_of_correspondence_all_corr <- duration_of_correspondence_all_corr %>%  filter(correspondents_id != "be1dcbc4-3987-472a-b4a0-c3305ead139f")
+duration_of_correspondence_all_corr <- duration_of_correspondence_all_corr %>%  filter(correspondents_id != "cbd92b4f-8d61-4497-bace-f223843a7970")
+
 # set Beginning[...] and End[...] as.Date
 duration_of_correspondence_all_corr[, 3] <- as.Date(duration_of_correspondence_all_corr[, 3], format = "%Y-%m-%d")
 duration_of_correspondence_all_corr[, 4] <- as.Date(duration_of_correspondence_all_corr[, 4], format = "%Y-%m-%d")
@@ -33,10 +37,9 @@ plot <- ggplot(duration_of_correspondence_all_corr, aes(x = Beginning.of.corresp
   geom_point(stat = "identity", fill = "black", alpha = 0.5) +
   geom_hline(aes(yintercept = mean(duration_in_years), linetype="mean"), size = 0.3) +
   geom_hline(aes(yintercept = median(duration_in_years), linetype="median"), size = 0.3) +
-  scale_y_continuous(breaks = seq(0,25, by = 5)) +
+  labs(x = "Starting year of the correspondence with Erasmus", y = "Duration of the correspondence with Erasmus in years") +
   theme_bw() +
-  theme(legend.position = "bottom") +
-  labs(y = "Duration of correspondence in years", x = "Beginning of the correspondence with Erasmus")
+  theme(legend.position = "bottom")
 plot
 
 # change working directory

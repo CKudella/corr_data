@@ -7,23 +7,26 @@ require(lubridate) # in case an older tidyverse package version is used
 getwd()
 setwd("../query_results/")
 
-# read data and define data type for date columns
-data<-read.csv("duration_of_correspondence/duration_corr_all_corr.csv", fileEncoding="UTF-8", colClasses=c("Beginning.of.correspondence.with.Pirckheimer"="Date","End.of.the.correspondence.with.Pirckheimer"="Date"))
+# read duration_of_correspondence_all_corr and define duration_of_correspondence_all_corr type for date columns
+duration_of_correspondence_all_corr<-read.csv("duration_of_correspondence/duration_corr_all_corr.csv", fileEncoding="UTF-8", colClasses=c("Beginning.of.correspondence.with.Pirckheimer"="Date","End.of.the.correspondence.with.Pirckheimer"="Date"))
+
+# remove the generic "unknown / unnamed" correspondent from the duration_of_correspondence_all_corrframe
+duration_of_correspondence_all_corr <- duration_of_correspondence_all_corr %>%  filter(correspondents_id != "be1dcbc4-3987-472a-b4a0-c3305ead139f")
 
 # calculate duration using lubridate
-data$duration_in_years <- interval(data$Beginning.of.correspondence.with.Pirckheimer, data$End.of.the.correspondence.with.Pirckheimer) / years(1)
+duration_of_correspondence_all_corr$duration_in_years <- interval(duration_of_correspondence_all_corr$Beginning.of.correspondence.with.Pirckheimer, duration_of_correspondence_all_corr$End.of.the.correspondence.with.Pirckheimer) / years(1)
 
 # extract start_year
-data$start_year <- year(data$Beginning.of.correspondence.with.Pirckheimer)
+duration_of_correspondence_all_corr$start_year <- year(duration_of_correspondence_all_corr$Beginning.of.correspondence.with.Pirckheimer)
 
 # remove star_year rows with NA
-data <- data %>% filter(!is.na(start_year))
+duration_of_correspondence_all_corr <- duration_of_correspondence_all_corr %>% filter(!is.na(start_year))
 
 # set start_year as factor
-data$start_year <-as.factor(data$start_year)
+duration_of_correspondence_all_corr$start_year <-as.factor(duration_of_correspondence_all_corr$start_year)
 
 # identify outliers for each start_year
-outliers_df <- data %>%
+outliers_df <- duration_of_correspondence_all_corr %>%
   group_by(start_year) %>%
   mutate(
     Q1 = quantile(duration_in_years, 0.25),
@@ -38,11 +41,11 @@ outliers_df <- data %>%
   ungroup()
 
 # create facet wrap with box plots
-plot <- ggplot(data, aes(x= ' ', y = duration_in_years)) +
+plot <- ggplot(duration_of_correspondence_all_corr, aes(x= ' ', y = duration_in_years)) +
   geom_boxplot(notch = FALSE) +
   theme_bw() +
   theme(axis.title.x=element_blank()) +
-  labs(x = "Beginning of the correspondence with Pirckheimer", y = "Duration of correspondence in years") +
+  labs(x = "Starting year of the correspondence with Pirckheimer", y = "Duration of the correspondence with Pirckheimer in years") +
   facet_wrap (. ~ start_year, ncol =5 , nrow = 10) +
   geom_text_repel(data = outliers_df, aes(label = name_in_edition), box.padding = 0.5, max.overlaps = Inf, size = 2.3) +
   theme(axis.title.x = element_text(), axis.text.x = element_blank(), axis.ticks.x = element_blank())

@@ -10,15 +10,15 @@ setwd("../query_results/")
 # read duration_of_correspondence_all_corr and define duration_of_correspondence_all_corr type for date columns
 duration_of_correspondence_all_corr <- read.csv("duration_of_correspondence/duration_corr_all_corr.csv", fileEncoding = "UTF-8", colClasses = c("Beginning.of.correspondence.with.Pirckheimer" = "Date", "End.of.the.correspondence.with.Pirckheimer" = "Date"))
 
+# remove the generic "unknown / unnamed" correspondent from the dataframe
+duration_of_correspondence_all_corr <- duration_of_correspondence_all_corr %>%  filter(correspondents_id != "be1dcbc4-3987-472a-b4a0-c3305ead139f")
+
 # set Beginning[...] and End[...] as.Date
 duration_of_correspondence_all_corr[, 3] <- as.Date(duration_of_correspondence_all_corr[, 3], format = "%Y-%m-%d")
 duration_of_correspondence_all_corr[, 4] <- as.Date(duration_of_correspondence_all_corr[, 4], format = "%Y-%m-%d")
 
 # remove rows with the specified pattern in name_in_edition column using gsub
 duration_of_correspondence_all_corr$name_in_edition <- gsub("\\s*//\\s*.*", "", duration_of_correspondence_all_corr$name_in_edition)
-
-# remove the generic "unknown / unnamed" correspondent from the dataframe
-duration_of_correspondence_all_corr <- duration_of_correspondence_all_corr %>%  filter(correspondents_id != "be1dcbc4-3987-472a-b4a0-c3305ead139f")
 
 # calculate duration using lubridate
 duration_of_correspondence_all_corr$duration_in_years <- interval(duration_of_correspondence_all_corr[, 3], duration_of_correspondence_all_corr[, 4]) / years(1)
@@ -39,7 +39,7 @@ upper_dots <- min(duration_of_correspondence_all_corr$duration_in_years[duration
 plot <- ggplot(duration_of_correspondence_all_corr, aes(x = " ", y = duration_in_years)) +
   geom_boxplot(notch = FALSE) +
   geom_text_repel(label = ifelse(duration_of_correspondence_all_corr$duration_in_years >= upper_dots, as.character(duration_of_correspondence_all_corr$name_in_edition), ""), box.padding = 1, max.overlaps = Inf) +
-  labs(x = "Correspondent", y = "Duration of correspondence in years") +
+  labs(x = "Correspondent", y = "Duration of the correspondence with Pirckheimer in years") +
   theme_bw() +
   theme(axis.title.x = element_text(), axis.text.x = element_blank(), axis.ticks.x = element_blank())
 plot

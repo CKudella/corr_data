@@ -30,9 +30,9 @@ plot <- ggplot(duration_of_correspondence_all_corr, aes(x = duration_in_years)) 
   geom_histogram(fill = "black", alpha = 0.5, binwidth = 1) +
   geom_vline(aes(xintercept = mean(duration_in_years), linetype="mean"), size = 0.3) +
   geom_vline(aes(xintercept = median(duration_in_years), linetype="median"), size = 0.3) +
-  labs(x = "Duration of correspondence in years", y = "Number of correspondents") +
+  labs(x = "Duration of the correspondence with Budé in years", y = "Number of correspondents") +
   theme_bw() +
-  theme(legend.position = "bottom")  
+  theme(legend.position = "bottom")
 plot
 
 # change working directory

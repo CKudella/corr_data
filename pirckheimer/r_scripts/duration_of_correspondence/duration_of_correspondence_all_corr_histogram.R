@@ -9,6 +9,9 @@ setwd("../query_results/")
 # read data and define data type for date columns
 duration_of_correspondence_all_corr <- read.csv("duration_of_correspondence/duration_corr_all_corr.csv", fileEncoding = "UTF-8", colClasses = c("Beginning.of.correspondence.with.Pirckheimer" = "Date", "End.of.the.correspondence.with.Pirckheimer" = "Date"))
 
+# remove the generic "unknown / unnamed" correspondent from the dataframe
+duration_of_correspondence_all_corr <- duration_of_correspondence_all_corr %>%  filter(correspondents_id != "be1dcbc4-3987-472a-b4a0-c3305ead139f")
+
 # set Beginning[...] and End[...] as.Date
 duration_of_correspondence_all_corr[, 3] <- as.Date(duration_of_correspondence_all_corr[, 3], format = "%Y-%m-%d")
 duration_of_correspondence_all_corr[, 4] <- as.Date(duration_of_correspondence_all_corr[, 4], format = "%Y-%m-%d")
@@ -30,7 +33,7 @@ plot <- ggplot(duration_of_correspondence_all_corr, aes(x = duration_in_years)) 
   geom_histogram(fill = "black", alpha = 0.5, binwidth = 1) +
   geom_vline(aes(xintercept = mean(duration_in_years), linetype="mean"), size = 0.3) +
   geom_vline(aes(xintercept = median(duration_in_years), linetype="median"), size = 0.3) +
-  labs(x = "Duration of correspondence in years", y = "Number of correspondents") +
+  labs(x = "Duration of the correspondence with Pirckheimer in years", y = "Number of correspondents") +
   theme_bw() +
   theme(legend.position = "bottom")
 plot

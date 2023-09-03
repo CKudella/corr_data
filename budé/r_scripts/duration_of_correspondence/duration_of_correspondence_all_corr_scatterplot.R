@@ -33,10 +33,9 @@ plot <- ggplot(duration_of_correspondence_all_corr, aes(x = Beginning.of.corresp
   geom_point(stat = "identity", fill = "black", alpha = 0.5) +
   geom_hline(aes(yintercept = mean(duration_in_years), linetype="mean"), size = 0.3) +
   geom_hline(aes(yintercept = median(duration_in_years), linetype="median"), size = 0.3) +
-  scale_y_continuous(breaks = seq(0,25, by = 5)) +
+  labs(x = "Starting year of the correspondence with Budé", y = "Duration of the correspondence with Budé in years") +
   theme_bw() +
-  theme(legend.position = "bottom") +
-  labs(y = "Duration of correspondence in years", x = "Beginning of the correspondence with Budé")
+  theme(legend.position = "bottom")
 plot
 
 # change working directory
