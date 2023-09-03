@@ -1,5 +1,5 @@
 SELECT DISTINCT XA.recipient_id,
-                C.correspondents_id,
+                C.name_in_edition,
                 MIN(XA.send_date_computable1) AS FLFE,
                 MAX(XA.send_date_computable1) AS LLFE
 FROM budé_cdb_v1.letters AS XA
