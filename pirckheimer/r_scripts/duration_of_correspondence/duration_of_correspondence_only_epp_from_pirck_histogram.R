@@ -9,8 +9,15 @@ setwd("../query_results/")
 # read data and define data type for date columns
 duration_of_correspondence_only_epp_from_pirck <- read.csv("duration_of_correspondence/duration_corr_only_epp_from_pirck.csv", fileEncoding = "UTF-8", colClasses = c("FLFE" = "Date", "LLFE" = "Date"))
 
+# remove the generic "unknown / unnamed" correspondent from the duration_of_correspondence_all_corrframe
+duration_of_correspondence_only_epp_from_pirck <- duration_of_correspondence_only_epp_from_pirck %>%  filter(recipient_id != "be1dcbc4-3987-472a-b4a0-c3305ead139f")
+
+# set Beginning[...] and End[...] as.Date
+duration_of_correspondence_only_epp_from_pirck[, 3] <- as.Date(duration_of_correspondence_only_epp_from_pirck[, 3], format = "%Y-%m-%d")
+duration_of_correspondence_only_epp_from_pirck[, 4] <- as.Date(duration_of_correspondence_only_epp_from_pirck[, 4], format = "%Y-%m-%d")
+
 # calculate duration using lubridate
-duration_of_correspondence_only_epp_from_pirck$duration_in_years <- interval(duration_of_correspondence_only_epp_from_pirck[, 2], duration_of_correspondence_only_epp_from_pirck[, 3]) / years(1)
+duration_of_correspondence_only_epp_from_pirck$duration_in_years <- interval(duration_of_correspondence_only_epp_from_pirck[, 3], duration_of_correspondence_only_epp_from_pirck[, 4]) / years(1)
 
 # drop NA rows
 duration_of_correspondence_only_epp_from_pirck <- drop_na(duration_of_correspondence_only_epp_from_pirck)
@@ -26,11 +33,9 @@ plot <- ggplot(duration_of_correspondence_only_epp_from_pirck, aes(x = duration_
   geom_histogram(fill = "black", alpha = 0.5, binwidth = 1) +
   geom_vline(aes(xintercept = mean(duration_in_years), linetype="mean"), size = 0.3) +
   geom_vline(aes(xintercept = median(duration_in_years), linetype="median"), size = 0.3) +
-  scale_x_continuous(breaks = seq(0,35, by = 5)) +
-  scale_y_continuous(breaks = seq(0,400, by = 50)) +
+  labs(x = "Duration of the correspondence with Pirckheimer in years", y = "Number of correspondents") +
   theme_bw() +
-  theme(legend.position = "bottom") +
-  labs(y = "Number of correspondents", x = "Duration of correspondence in years")
+  theme(legend.position = "bottom")
 plot
 
 # change working directory

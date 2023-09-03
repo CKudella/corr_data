@@ -9,8 +9,15 @@ setwd("../query_results/")
 # read data and define data type for date columns
 duration_of_correspondence_only_epp_from_budé <- read.csv("duration_of_correspondence/duration_corr_only_epp_from_budé.csv", fileEncoding = "UTF-8", colClasses = c("FLFE" = "Date", "LLFE" = "Date"))
 
+# set Beginning[...] and End[...] as.Date
+duration_of_correspondence_only_epp_from_budé[, 3] <- as.Date(duration_of_correspondence_only_epp_from_budé[, 3], format = "%Y-%m-%d")
+duration_of_correspondence_only_epp_from_budé[, 4] <- as.Date(duration_of_correspondence_only_epp_from_budé[, 4], format = "%Y-%m-%d")
+
 # calculate duration using lubridate
-duration_of_correspondence_only_epp_from_budé$duration_in_years <- interval(duration_of_correspondence_only_epp_from_budé[, 2], duration_of_correspondence_only_epp_from_budé[, 3]) / years(1)
+duration_of_correspondence_only_epp_from_budé$duration_in_years <- interval(duration_of_correspondence_only_epp_from_budé[, 3], duration_of_correspondence_only_epp_from_budé[, 4]) / years(1)
+
+# round duration to 1 digit
+duration_of_correspondence_only_epp_from_budé$duration_in_years <- round(duration_of_correspondence_only_epp_from_budé$duration_in_years, digits = 1)
 
 # drop NA rows
 duration_of_correspondence_only_epp_from_budé <- drop_na(duration_of_correspondence_only_epp_from_budé)
@@ -26,10 +33,9 @@ plot <- ggplot(duration_of_correspondence_only_epp_from_budé, aes(x = FLFE ,y =
   geom_point(stat = "identity", fill = "black", alpha = 0.5) +
   geom_hline(aes(yintercept = mean(duration_in_years), linetype="mean"), size = 0.3) +
   geom_hline(aes(yintercept = median(duration_in_years), linetype="median"), size = 0.3) +
-  scale_y_continuous(breaks = seq(0,25, by = 5)) +
+  labs(x = "Starting year of the correspondence with Budé", y = "Duration of the correspondence with Budé in years") +
   theme_bw() +
-  theme(legend.position = "bottom") +
-  labs(y = "Duration of correspondence in years", x = "Beginning of correspondence with Budé")
+  theme(legend.position = "bottom")
 plot
 
 # change working directory
