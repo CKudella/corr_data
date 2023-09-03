@@ -33,10 +33,10 @@ plot <- ggplot(duration_of_correspondence_all_corr, aes(x = duration_in_years)) 
   geom_density(fill = "black", alpha = 0.5) +
   geom_vline(aes(xintercept = mean(duration_in_years), linetype="mean"), size = 0.3) +
   geom_vline(aes(xintercept = median(duration_in_years), linetype="median"), size = 0.3) +
+  labs(x = "Duration of correspondence in years", y = "Density") +
   scale_x_continuous(breaks = seq(0,35, by = 5)) +
   theme_bw() +
-  theme(legend.position = "bottom") +
-  labs(y = "density", x = "Duration of correspondence in years")
+  theme(legend.position = "bottom")  
 plot
 
 # change working directory
