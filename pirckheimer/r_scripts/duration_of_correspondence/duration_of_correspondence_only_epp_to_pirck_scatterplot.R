@@ -7,29 +7,38 @@ getwd()
 setwd("../query_results/")
 
 # read data and define data type for date columns
-duration_of_correspondence_only_epp_to_pirck <- read.csv("duration_of_correspondence/duration_corr_only_epp_to_pirck.csv", fileEncoding = "UTF-8", colClasses = c("FLTE" = "Date", "LLTE" = "Date"))
+duration_of_correspondence_all_corr <- read.csv("duration_of_correspondence/duration_corr_only_epp_to_pirck.csv", fileEncoding = "UTF-8", colClasses = c("FLTE" = "Date", "LLTE" = "Date"))
+
+# remove the generic "unknown / unnamed" correspondent from the data frame
+duration_of_correspondence_all_corr <- duration_of_correspondence_all_corr %>%  filter(sender_id != "be1dcbc4-3987-472a-b4a0-c3305ead139f")
+
+# set Beginning[...] and End[...] as.Date
+duration_of_correspondence_all_corr[, 3] <- as.Date(duration_of_correspondence_all_corr[, 3], format = "%Y-%m-%d")
+duration_of_correspondence_all_corr[, 4] <- as.Date(duration_of_correspondence_all_corr[, 4], format = "%Y-%m-%d")
 
 # calculate duration using lubridate
-duration_of_correspondence_only_epp_to_pirck$duration_in_years <- interval(duration_of_correspondence_only_epp_to_pirck[, 2], duration_of_correspondence_only_epp_to_pirck[, 3]) / years(1)
+duration_of_correspondence_all_corr$duration_in_years <- interval(duration_of_correspondence_all_corr[, 3], duration_of_correspondence_all_corr[, 4]) / years(1)
+
+# round duration to 1 digit
+duration_of_correspondence_all_corr$duration_in_years <- round(duration_of_correspondence_all_corr$duration_in_years, digits = 1)
 
 # drop NA rows
-duration_of_correspondence_only_epp_to_pirck <- drop_na(duration_of_correspondence_only_epp_to_pirck)
+duration_of_correspondence_all_corr <- drop_na(duration_of_correspondence_all_corr)
 
 # calculate mean of "duration of correspondence"
-duration_of_correspondence_mean <- mean(duration_of_correspondence_only_epp_to_pirck$duration_in_years)
+duration_of_correspondence_mean <- mean(duration_of_correspondence_all_corr$duration_in_years)
 
 # calculate median of "duration of correspondence"
-duration_of_correspondence_median <- median(duration_of_correspondence_only_epp_to_pirck$duration_in_years)
+duration_of_correspondence_median <- median(duration_of_correspondence_all_corr$duration_in_years)
 
 # create scatter plot
-plot <- ggplot(duration_of_correspondence_only_epp_to_pirck, aes(x = FLTE ,y = duration_in_years)) +
+plot <- ggplot(duration_of_correspondence_all_corr, aes(x = FLTE ,y = duration_in_years)) +
   geom_point(stat = "identity", fill = "black", alpha = 0.5) +
   geom_hline(aes(yintercept = mean(duration_in_years), linetype="mean"), size = 0.3) +
   geom_hline(aes(yintercept = median(duration_in_years), linetype="median"), size = 0.3) +
-  scale_y_continuous(breaks = seq(0,25, by = 5)) +
+  labs(x = "Starting year of the correspondence with Pirckheimer", y = "Duration of the correspondence with Pirckheimer in years") +
   theme_bw() +
-  theme(legend.position = "bottom") +
-  labs(y = "Duration of correspondence in years", x = "Beginning of correspondence with Pirckheimer")
+  theme(legend.position = "bottom")
 plot
 
 # change working directory
