@@ -16,4 +16,4 @@ INNER JOIN
    FROM letters
    WHERE recipient_id = 'd9233b24-a98c-4279-8065-e2ab70c0d080'
    GROUP BY sender_id) AS Y ON X.recipient_id = Y.sender_id
-INNER JOIN correspondents AS C ON x.recipient_id = C.correspondents_id
+INNER JOIN correspondents AS C ON X.recipient_id = C.correspondents_id
