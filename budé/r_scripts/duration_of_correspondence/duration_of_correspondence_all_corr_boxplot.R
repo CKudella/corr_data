@@ -1,4 +1,5 @@
 require(tidyverse)
+require(ggrepel)
 require(svglite)
 require(lubridate) # in case an older tidyverse package version is used
 
@@ -19,18 +20,22 @@ duration_of_correspondence_all_corr$duration_in_years <- interval(duration_of_co
 # drop NA rows
 duration_of_correspondence_all_corr <- drop_na(duration_of_correspondence_all_corr)
 
-# calculate mean of "duration of correspondence"
-duration_of_correspondence_mean <- mean(duration_of_correspondence_all_corr$duration_in_years)
+# calculate quartiles
+quartiles <- as.numeric(quantile(duration_of_correspondence_all_corr$duration_in_years, probs = c(0.25, 0.5, 0.75)))
 
-# calculate median of "duration of correspondence"
-duration_of_correspondence_median <- median(duration_of_correspondence_all_corr$duration_in_years)
+# calculate IQR
+IQR <- diff(quartiles[c(1, 3)])
+
+# calculate outlier treshold
+upper_dots <- min(duration_of_correspondence_all_corr$duration_in_years[duration_of_correspondence_all_corr$duration_in_years > (quartiles[3] + 1.5*IQR)])
 
 # create box plot
 plot <- ggplot(duration_of_correspondence_all_corr, aes(x = " ", y = duration_in_years)) +
   geom_boxplot(notch = FALSE) +
+  geom_text_repel(label = ifelse(duration_of_correspondence_all_corr$duration_in_years >= upper_dots, as.character(duration_of_correspondence_all_corr$name_in_edition), ""), box.padding = 0.5, max.overlaps = Inf) +
+  labs(x = "Correspondent", y = "Duration of correspondence in years") +
   theme_bw() +
-  theme(axis.title.x = element_blank()) +
-  labs(y = "Duration of correspondence in years")
+  theme(axis.title.x = element_text(), axis.text.x = element_blank(), axis.ticks.x = element_blank())
 plot
 
 # change working directory
