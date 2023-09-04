@@ -1,11 +1,11 @@
 SELECT C.correspondents_id,
        C.name_in_edition,
-       LEAST(IFNULL(X.FLFE, Y.FLTE), IFNULL(Y.FLTE, X.FLFE)) AS 'Beginning of correspondence with Erasmus',
-       GREATEST(IFNULL(X.LLFE, Y.LLTE), IFNULL(Y.LLTE, X.LLFE)) AS 'End of the correspondence with Erasmus'
+       LEAST(IFNULL(X.FLFE, Y.FLTE), IFNULL(Y.FLTE, X.FLFE)) AS 'Beginning of the correspondence',
+       GREATEST(IFNULL(X.LLFE, Y.LLTE), IFNULL(Y.LLTE, X.LLFE)) AS 'End of the correspondence'
 FROM
   (SELECT DISTINCT CA.correspondents_id,
                    CA.name_in_edition
-   FROM correspondents AS CA) AS C
+   FROM era_cdb_v3.correspondents AS CA) AS C
 LEFT OUTER JOIN
   (SELECT DISTINCT XA.recipient_id,
                    MIN(XA.send_date_computable1) AS FLFE,
