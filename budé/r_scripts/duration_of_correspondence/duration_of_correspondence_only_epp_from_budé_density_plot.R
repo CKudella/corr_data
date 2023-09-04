@@ -7,7 +7,7 @@ getwd()
 setwd("../query_results/")
 
 # read data and define data type for date columns
-duration_of_correspondence_only_epp_from_budé <- read.csv("duration_of_correspondence/duration_corr_only_epp_from_budé.csv", fileEncoding = "UTF-8", colClasses = c("FLFE" = "Date", "LLFE" = "Date"))
+duration_of_correspondence_only_epp_from_budé <- read.csv("duration_of_correspondence/duration_corr_only_epp_from_budé.csv", fileEncoding = "UTF-8", colClasses = c("Beginning.of.the.correspondence" = "Date", "End.of.the.correspondence" = "Date"))
 
 # set Beginning[...] and End[...] as.Date
 duration_of_correspondence_only_epp_from_budé[, 3] <- as.Date(duration_of_correspondence_only_epp_from_budé[, 3], format = "%Y-%m-%d")
@@ -47,4 +47,3 @@ ggsave("duration_of_correspondence_only_epp_from_budé_density_plot.pdf", plot =
 ggsave("duration_of_correspondence_only_epp_from_budé_density_plot.png", plot = last_plot(), scale = 1, width = 33.1, height = 23.4, units = "in", dpi = 600, limitsize = TRUE)
 ggsave("duration_of_correspondence_only_epp_from_budé_density_plot.eps", plot = last_plot(), scale = 1, width = 33.1, height = 23.4, units = "in", dpi = 600, limitsize = TRUE)
 ggsave("duration_of_correspondence_only_epp_from_budé_density_plot.svg", plot = last_plot(), scale = 1, width = 33.1, height = 23.4, units = "in", dpi = 600, limitsize = TRUE)
-

@@ -7,7 +7,7 @@ getwd()
 setwd("../query_results/")
 
 # read data and define data type for date columns
-duration_of_correspondence_all_corr <- read.csv("duration_of_correspondence/duration_corr_all_corr.csv", fileEncoding = "UTF-8", colClasses = c("Beginning.of.correspondence.with.Erasmus" = "Date", "End.of.the.correspondence.with.Erasmus" = "Date"))
+duration_of_correspondence_all_corr <- read.csv("duration_of_correspondence/duration_corr_all_corr.csv", fileEncoding = "UTF-8", colClasses = c("Beginning.of.the.correspondence" = "Date", "End.of.the.correspondence" = "Date"))
 
 # remove the generic "unknown / unnamed" correspondent and "a friend" from the dataframe
 duration_of_correspondence_all_corr <- duration_of_correspondence_all_corr %>%  filter(correspondents_id != "be1dcbc4-3987-472a-b4a0-c3305ead139f")
@@ -33,7 +33,7 @@ duration_of_correspondence_mean <- mean(duration_of_correspondence_all_corr$dura
 duration_of_correspondence_median <- median(duration_of_correspondence_all_corr$duration_in_years)
 
 # create scatter plot
-plot <- ggplot(duration_of_correspondence_all_corr, aes(x = Beginning.of.correspondence.with.Erasmus ,y = duration_in_years)) +
+plot <- ggplot(duration_of_correspondence_all_corr, aes(x = Beginning.of.the.correspondence ,y = duration_in_years)) +
   geom_point(stat = "identity", fill = "black", alpha = 0.5) +
   geom_hline(aes(yintercept = mean(duration_in_years), linetype="mean"), size = 0.3) +
   geom_hline(aes(yintercept = median(duration_in_years), linetype="median"), size = 0.3) +

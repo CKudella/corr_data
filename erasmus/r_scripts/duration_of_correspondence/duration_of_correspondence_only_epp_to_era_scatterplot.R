@@ -7,7 +7,7 @@ getwd()
 setwd("../query_results/")
 
 # read data and define data type for date columns
-duration_of_correspondence_only_epp_to_erasmus <- read.csv("duration_of_correspondence/duration_corr_only_epp_to_erasmus.csv", fileEncoding = "UTF-8", colClasses = c("FLTE" = "Date", "LLTE" = "Date"))
+duration_of_correspondence_only_epp_to_erasmus <- read.csv("duration_of_correspondence/duration_corr_only_epp_to_erasmus.csv", fileEncoding = "UTF-8", colClasses = c("Beginning.of.the.correspondence" = "Date", "End.of.the.correspondence" = "Date"))
 
 # calculate duration using lubridate
 duration_of_correspondence_only_epp_to_erasmus$duration_in_years <- interval(duration_of_correspondence_only_epp_to_erasmus[, 2], duration_of_correspondence_only_epp_to_erasmus[, 3]) / years(1)
@@ -22,7 +22,7 @@ duration_of_correspondence_mean <- mean(duration_of_correspondence_only_epp_to_e
 duration_of_correspondence_median <- median(duration_of_correspondence_only_epp_to_erasmus$duration_in_years)
 
 # create scatter plot
-plot <- ggplot(duration_of_correspondence_only_epp_to_erasmus, aes(x = FLTE ,y = duration_in_years)) +
+plot <- ggplot(duration_of_correspondence_only_epp_to_erasmus, aes(x = Beginning.of.the.correspondence ,y = duration_in_years)) +
   geom_point(stat = "identity", fill = "black", alpha = 0.5) +
   geom_hline(aes(yintercept = mean(duration_in_years), linetype="mean"), size = 0.3) +
   geom_hline(aes(yintercept = median(duration_in_years), linetype="median"), size = 0.3) +

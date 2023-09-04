@@ -8,7 +8,7 @@ getwd()
 setwd("../query_results/")
 
 # read duration_of_correspondence_only_epp_from_pirck and define type for date columns
-duration_of_correspondence_only_epp_from_pirck <- read.csv("duration_of_correspondence/duration_corr_only_epp_from_pirck.csv", fileEncoding = "UTF-8", colClasses = c("FLFE" = "Date", "LLFE" = "Date"))
+duration_of_correspondence_only_epp_from_pirck <- read.csv("duration_of_correspondence/duration_corr_only_epp_from_pirck.csv", fileEncoding = "UTF-8", colClasses = c("Beginning.of.the.correspondence" = "Date", "End.of.the.correspondence" = "Date"))
 
 # remove the generic "unknown / unnamed" correspondent from the duration_of_correspondence_all_corrframe
 duration_of_correspondence_only_epp_from_pirck <- duration_of_correspondence_only_epp_from_pirck %>%  filter(recipient_id != "be1dcbc4-3987-472a-b4a0-c3305ead139f")

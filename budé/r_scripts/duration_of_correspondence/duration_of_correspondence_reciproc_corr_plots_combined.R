@@ -8,10 +8,14 @@ getwd()
 setwd("../query_results/")
 
 # read data and define data type for date columns
-duration_of_correspondence_reciproc_corr <- read.csv("duration_of_correspondence/duration_corr_reciproc.csv", fileEncoding = "UTF-8", colClasses = c("Start.of.correspondence" = "Date", "End.of.correspondence" = "Date"))
+duration_of_correspondence_reciproc_corr <- read.csv("duration_of_correspondence/duration_corr_reciproc.csv", fileEncoding = "UTF-8", colClasses = c("Beginning.of.the.correspondence" = "Date", "End.of.the.correspondence" = "Date"))
+
+# set Beginning[...] and End[...] as.Date
+duration_of_correspondence_reciproc_corr[, 3] <- as.Date(duration_of_correspondence_reciproc_corr[, 3], format = "%Y-%m-%d")
+duration_of_correspondence_reciproc_corr[, 4] <- as.Date(duration_of_correspondence_reciproc_corr[, 4], format = "%Y-%m-%d")
 
 # calculate duration using lubridate
-duration_of_correspondence_reciproc_corr$duration_in_years <- interval(duration_of_correspondence_reciproc_corr[, 2], duration_of_correspondence_reciproc_corr[, 3]) / years(1)
+duration_of_correspondence_reciproc_corr$duration_in_years <- interval(duration_of_correspondence_reciproc_corr[, 3], duration_of_correspondence_reciproc_corr[, 4]) / years(1)
 
 # drop NA rows
 duration_of_correspondence_reciproc_corr <- drop_na(duration_of_correspondence_reciproc_corr)
@@ -25,9 +29,9 @@ duration_of_correspondence_median <- median(duration_of_correspondence_reciproc_
 # create box plot
 plot1 <- ggplot(duration_of_correspondence_reciproc_corr, aes(x = " ", y = duration_in_years)) +
   geom_boxplot(notch = FALSE) +
+  labs(x = "Correspondent", y = "Duration of the correspondence with Budé in years") +
   theme_bw() +
-  theme(axis.title.x = element_blank()) +
-  labs(y = "Duration of correspondence in years")
+  theme(axis.title.x = element_text(), axis.text.x = element_blank(), axis.ticks.x = element_blank())
 plot1
 
 # create density plot
@@ -35,10 +39,9 @@ plot2 <- ggplot(duration_of_correspondence_reciproc_corr, aes(x = duration_in_ye
   geom_density(fill = "black", alpha = 0.5) +
   geom_vline(aes(xintercept = mean(duration_in_years), linetype="mean"), size = 0.3) +
   geom_vline(aes(xintercept = median(duration_in_years), linetype="median"), size = 0.3) +
-  scale_x_continuous(breaks = seq(0,35, by = 5)) +
+  labs(x = "Duration of the correspondence with Budé in years", y = "Density") +
   theme_bw() +
-  theme(legend.position = "bottom") +
-  labs(y = "density", x = "Duration of correspondence in years")
+  theme(legend.position = "bottom")
 plot2
 
 # create histogram plot
@@ -46,22 +49,19 @@ plot3 <- ggplot(duration_of_correspondence_reciproc_corr, aes(x = duration_in_ye
   geom_histogram(fill = "black", alpha = 0.5, binwidth = 1) +
   geom_vline(aes(xintercept = mean(duration_in_years), linetype="mean"), size = 0.3) +
   geom_vline(aes(xintercept = median(duration_in_years), linetype="median"), size = 0.3) +
-  scale_x_continuous(breaks = seq(0,35, by = 5)) +
-  scale_y_continuous(breaks = seq(0,400, by = 50)) +
+  labs(x = "Duration of the correspondence with Budé in years", y = "Number of correspondents") +
   theme_bw() +
-  theme(legend.position = "bottom") +
-  labs(y = "Number of correspondents", x = "Duration of correspondence in years")
+  theme(legend.position = "bottom")
 plot3
 
 # create scatter plot
-plot4 <- ggplot(duration_of_correspondence_reciproc_corr, aes(x = Start.of.correspondence ,y = duration_in_years)) +
+plot4 <- ggplot(duration_of_correspondence_reciproc_corr, aes(x = Beginning.of.the.correspondence ,y = duration_in_years)) +
   geom_point(stat = "identity", fill = "black", alpha = 0.5) +
   geom_hline(aes(yintercept = mean(duration_in_years), linetype="mean"), size = 0.3) +
   geom_hline(aes(yintercept = median(duration_in_years), linetype="median"), size = 0.3) +
-  scale_y_continuous(breaks = seq(0,25, by = 5)) +
+  labs(x = "Starting year of the correspondence with Budé", y = "Duration of the correspondence with Budé in years") +
   theme_bw() +
-  theme(legend.position = "bottom") +
-  labs(y = "Duration of correspondence in years", x = "Beginning of correspondence")
+  theme(legend.position = "bottom")
 plot4
 
 # combine plots via patchwork

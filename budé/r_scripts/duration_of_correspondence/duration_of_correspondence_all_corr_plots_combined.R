@@ -8,7 +8,7 @@ getwd()
 setwd("../query_results/")
 
 # read data and define data type for date columns
-duration_of_correspondence_all_corr <- read.csv("duration_of_correspondence/duration_corr_all_corr.csv", fileEncoding = "UTF-8", colClasses = c("Beginning.of.correspondence.with.Budé" = "Date", "End.of.the.correspondence.with.Budé" = "Date"))
+duration_of_correspondence_all_corr <- read.csv("duration_of_correspondence/duration_corr_all_corr.csv", fileEncoding = "UTF-8", colClasses = c("Beginning.of.the.correspondence" = "Date", "End.of.the.correspondence" = "Date"))
 
 # set Beginning[...] and End[...] as.Date
 duration_of_correspondence_all_corr[, 3] <- as.Date(duration_of_correspondence_all_corr[, 3], format = "%Y-%m-%d")
@@ -55,7 +55,7 @@ plot3 <- ggplot(duration_of_correspondence_all_corr, aes(x = duration_in_years))
 plot3
 
 # create scatter plot
-plot4 <- ggplot(duration_of_correspondence_all_corr, aes(x = Beginning.of.correspondence.with.Budé ,y = duration_in_years)) +
+plot4 <- ggplot(duration_of_correspondence_all_corr, aes(x = Beginning.of.the.correspondence ,y = duration_in_years)) +
   geom_point(stat = "identity", fill = "black", alpha = 0.5) +
   geom_hline(aes(yintercept = mean(duration_in_years), linetype="mean"), size = 0.3) +
   geom_hline(aes(yintercept = median(duration_in_years), linetype="median"), size = 0.3) +

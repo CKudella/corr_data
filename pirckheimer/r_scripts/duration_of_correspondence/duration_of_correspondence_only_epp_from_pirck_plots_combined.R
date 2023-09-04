@@ -8,7 +8,7 @@ getwd()
 setwd("../query_results/")
 
 # read data and define data type for date columns
-duration_of_correspondence_only_epp_from_pirck <- read.csv("duration_of_correspondence/duration_corr_only_epp_from_pirck.csv", fileEncoding = "UTF-8", colClasses = c("FLFE" = "Date", "LLFE" = "Date"))
+duration_of_correspondence_only_epp_from_pirck <- read.csv("duration_of_correspondence/duration_corr_only_epp_from_pirck.csv", fileEncoding = "UTF-8", colClasses = c("Beginning.of.the.correspondence" = "Date", "End.of.the.correspondence" = "Date"))
 
 # remove the generic "unknown / unnamed" correspondent from the duration_of_correspondence_all_corrframe
 duration_of_correspondence_only_epp_from_pirck <- duration_of_correspondence_only_epp_from_pirck %>%  filter(recipient_id != "be1dcbc4-3987-472a-b4a0-c3305ead139f")
@@ -58,7 +58,7 @@ plot3 <- ggplot(duration_of_correspondence_only_epp_from_pirck, aes(x = duration
 plot3
 
 # create scatter plot
-plot4 <- ggplot(duration_of_correspondence_only_epp_from_pirck, aes(x = FLFE ,y = duration_in_years)) +
+plot4 <- ggplot(duration_of_correspondence_only_epp_from_pirck, aes(x = Beginning.of.the.correspondence ,y = duration_in_years)) +
   geom_point(stat = "identity", fill = "black", alpha = 0.5) +
   geom_hline(aes(yintercept = mean(duration_in_years), linetype="mean"), size = 0.3) +
   geom_hline(aes(yintercept = median(duration_in_years), linetype="median"), size = 0.3) +

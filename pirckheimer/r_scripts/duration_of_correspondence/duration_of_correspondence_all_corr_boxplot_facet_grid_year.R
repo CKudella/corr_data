@@ -8,16 +8,16 @@ getwd()
 setwd("../query_results/")
 
 # read duration_of_correspondence_all_corr and define duration_of_correspondence_all_corr type for date columns
-duration_of_correspondence_all_corr<-read.csv("duration_of_correspondence/duration_corr_all_corr.csv", fileEncoding="UTF-8", colClasses=c("Beginning.of.correspondence.with.Pirckheimer"="Date","End.of.the.correspondence.with.Pirckheimer"="Date"))
+duration_of_correspondence_all_corr<-read.csv("duration_of_correspondence/duration_corr_all_corr.csv", fileEncoding="UTF-8", colClasses=c("Beginning.of.the.correspondence"="Date","End.of.the.correspondence"="Date"))
 
 # remove the generic "unknown / unnamed" correspondent from the duration_of_correspondence_all_corrframe
 duration_of_correspondence_all_corr <- duration_of_correspondence_all_corr %>%  filter(correspondents_id != "be1dcbc4-3987-472a-b4a0-c3305ead139f")
 
 # calculate duration using lubridate
-duration_of_correspondence_all_corr$duration_in_years <- interval(duration_of_correspondence_all_corr$Beginning.of.correspondence.with.Pirckheimer, duration_of_correspondence_all_corr$End.of.the.correspondence.with.Pirckheimer) / years(1)
+duration_of_correspondence_all_corr$duration_in_years <- interval(duration_of_correspondence_all_corr$Beginning.of.the.correspondence, duration_of_correspondence_all_corr$End.of.the.correspondence) / years(1)
 
 # extract start_year
-duration_of_correspondence_all_corr$start_year <- year(duration_of_correspondence_all_corr$Beginning.of.correspondence.with.Pirckheimer)
+duration_of_correspondence_all_corr$start_year <- year(duration_of_correspondence_all_corr$Beginning.of.the.correspondence)
 
 # remove star_year rows with NA
 duration_of_correspondence_all_corr <- duration_of_correspondence_all_corr %>% filter(!is.na(start_year))
