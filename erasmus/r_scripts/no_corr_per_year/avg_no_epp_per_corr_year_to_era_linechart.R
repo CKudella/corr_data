@@ -39,7 +39,7 @@ getwd()
 setwd("../r_plots/")
 
 # save plot in multiple formats
-ggsave("avg_no_epp_per_corr_year_to_era_barchart.pdf", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
-ggsave("avg_no_epp_per_corr_year_to_era_barchart.png", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
-ggsave("avg_no_epp_per_corr_year_to_era_barchart.eps", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
-ggsave("avg_no_epp_per_corr_year_to_era_barchart.svg", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("avg_no_epp_per_corr_year_to_era_linechart.pdf", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("avg_no_epp_per_corr_year_to_era_linechart.png", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("avg_no_epp_per_corr_year_to_era_linechart.eps", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("avg_no_epp_per_corr_year_to_era_linechart.svg", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
