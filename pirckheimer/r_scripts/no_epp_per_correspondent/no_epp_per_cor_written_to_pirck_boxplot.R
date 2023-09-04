@@ -35,7 +35,7 @@ getwd()
 setwd("../r_plots/")
 
 # save plot in multiple formats
-ggsave("no_epp_per_cor_written_to_pirck_violinplot.pdf", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
-ggsave("no_epp_per_cor_written_to_pirck_violinplot.png", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
-ggsave("no_epp_per_cor_written_to_pirck_violinplot.eps", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
-ggsave("no_epp_per_cor_written_to_pirck_violinplot.svg", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("no_epp_per_cor_written_to_pirck_boxplot.pdf", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("no_epp_per_cor_written_to_pirck_boxplot.png", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("no_epp_per_cor_written_to_pirck_boxplot.eps", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("no_epp_per_cor_written_to_pirck_boxplot.svg", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
