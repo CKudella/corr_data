@@ -5,21 +5,21 @@ SELECT A.ModernState,
 FROM
   (SELECT DISTINCT AA.locations_modern_state AS ModernState,
                    AL.send_date_year1 AS YEAR
-   FROM locations AS AA,
+   FROM wpirck_cdb_v1.locations AS AA,
         letters AS AL
    WHERE AA.locations_id IN
        (SELECT DISTINCT AB.source_loc_id
-        FROM letters AS AB)
+        FROM wpirck_cdb_v1.letters AS AB)
      OR AA.locations_id IN
        (SELECT DISTINCT AC.target_loc_id
-        FROM letters AS AC)
+        FROM wpirck_cdb_v1.letters AS AC)
    GROUP BY AL.send_date_year1,
             AA.locations_modern_state) AS A
 LEFT OUTER JOIN
   (SELECT DISTINCT locations.locations_modern_state AS ModernState,
                    COUNT(*) AS NoEppSentFromPirck,
                    send_date_year1
-   FROM letters,
+   FROM wpirck_cdb_v1.letters,
         locations
    WHERE locations.locations_id = letters.target_loc_id
      AND letters_id NOT REGEXP '[0-7]ck2|ck3|ck4|ck5|ck6|ck7|ck8'
@@ -32,7 +32,7 @@ LEFT OUTER JOIN
   (SELECT DISTINCT locations.locations_modern_state AS ModernState,
                    COUNT(*) AS NoEppSentToPirck,
                    send_date_year1
-   FROM letters,
+   FROM wpirck_cdb_v1.letters,
         locations
    WHERE locations.locations_id = letters.source_loc_id
      AND letters_id NOT REGEXP '[0-7]ck2|ck3|ck4|ck5|ck6|ck7|ck8'

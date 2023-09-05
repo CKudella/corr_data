@@ -3,17 +3,17 @@ SELECT X.ModernState AS 'Modern State',
        B.NoCorrWritingToPirck AS 'Number of correspondents who wrote letters to Pirckheimer'
 FROM
   (SELECT DISTINCT locations.locations_modern_state AS ModernState
-   FROM locations
+   FROM wpirck_cdb_v1.locations
    WHERE locations.locations_id IN
        (SELECT DISTINCT source_loc_id
-        FROM letters)
+        FROM wpirck_cdb_v1.letters)
      OR locations.locations_id IN
        (SELECT DISTINCT target_loc_id
-        FROM letters)) AS X
+        FROM wpirck_cdb_v1.letters)) AS X
 LEFT OUTER JOIN
   (SELECT DISTINCT locations.locations_modern_state AS ModernState,
                    COUNT(DISTINCT recipient_id) AS NoCorrReceivingFromPirck
-   FROM letters,
+   FROM wpirck_cdb_v1.letters,
         locations
    WHERE locations.locations_id = letters.target_loc_id
      AND sender_id LIKE 'd9233b24-a98c-4279-8065-e2ab70c0d080'
@@ -22,7 +22,7 @@ LEFT OUTER JOIN
 LEFT OUTER JOIN
   (SELECT DISTINCT locations.locations_modern_state AS ModernState,
                    COUNT(DISTINCT sender_id) AS NoCorrWritingToPirck
-   FROM letters,
+   FROM wpirck_cdb_v1.letters,
         locations
    WHERE locations.locations_id = letters.source_loc_id
      AND recipient_id LIKE 'd9233b24-a98c-4279-8065-e2ab70c0d080'

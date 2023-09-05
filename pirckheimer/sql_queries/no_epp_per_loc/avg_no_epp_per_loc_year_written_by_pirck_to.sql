@@ -9,7 +9,7 @@ FROM
           locations_lat,
           locations_lng,
           COUNT(DISTINCT send_date_year1) AS COUNT
-   FROM letters
+   FROM wpirck_cdb_v1.letters
    JOIN wpirck_cdb_v1.locations ON locations.locations_id = letters.target_loc_id
    WHERE letters_id NOT REGEXP '[0-7]ck2|ck3|ck4|ck5|ck6|ck7|ck8'
      AND sender_id = 'd9233b24-a98c-4279-8065-e2ab70c0d080'
@@ -19,7 +19,7 @@ FROM
 INNER JOIN
   (SELECT locations.locations_name_modern,
           COUNT(letters.target_loc_id) AS COUNT
-   FROM letters
+   FROM wpirck_cdb_v1.letters
    JOIN locations ON locations.locations_id = letters.target_loc_id
    WHERE letters_id NOT REGEXP '[0-7]ck2|ck3|ck4|ck5|ck6|ck7|ck8'
      AND sender_id = 'd9233b24-a98c-4279-8065-e2ab70c0d080'

@@ -9,17 +9,17 @@ FROM
           ZA.locations_name_modern LocationName,
           ZA.locations_lat AS Latitude,
           ZA.locations_lng AS Longitude
-   FROM locations AS ZA
+   FROM wpirck_cdb_v1.locations AS ZA
    WHERE ZA.locations_id IN
        (SELECT DISTINCT source_loc_id
-        FROM letters)
+        FROM wpirck_cdb_v1.letters)
      OR ZA.locations_id IN
        (SELECT DISTINCT target_loc_id
-        FROM letters)) AS Z
+        FROM wpirck_cdb_v1.letters)) AS Z
 LEFT OUTER JOIN
   (SELECT XB.locations_id,
           COUNT(DISTINCT XA.sender_id) AS NoCorrToPirck
-   FROM letters AS XA
+   FROM wpirck_cdb_v1.letters AS XA
    JOIN locations AS XB ON XB.locations_id = XA.source_loc_id
    WHERE XA.sender_id != 'd9233b24-a98c-4279-8065-e2ab70c0d080'
     AND XA.source_loc_id NOT LIKE 'unknown%'
@@ -28,7 +28,7 @@ LEFT OUTER JOIN
 LEFT OUTER JOIN
   (SELECT YB.locations_id,
           COUNT(DISTINCT YA.recipient_id) AS NoCorrFromPirck
-   FROM letters AS YA
+   FROM wpirck_cdb_v1.letters AS YA
    JOIN locations AS YB ON YB.locations_id = YA.target_loc_id
    WHERE YA.sender_id = 'd9233b24-a98c-4279-8065-e2ab70c0d080'
     AND YA.target_loc_id NOT LIKE 'unknown%'
