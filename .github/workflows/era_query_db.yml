@@ -1,0 +1,48 @@
+name: era-query-db
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: mysql:5.7-debian
+
+    services:
+      mysql:
+        image: mysql:5.7-debian
+        env:
+          MYSQL_ROOT_PASSWORD: mysql
+          MYSQL_DATABASE: era_cdb_v3
+        ports:
+          - 3306:3306
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Ingest SQL dump
+        run: |
+          # Navigate to the directory where the SQL dump is located
+          cd corr_data/erasmus/database/dump
+
+          # Ingest the SQL dump into the MySQL database
+          mysql --user=root --password="$MYSQL_ROOT_PASSWORD" --host=mysql --default-character-set=utf8 --database=era_cdb_v3 < era_cdb_v3_dump.sql
+
+      - name: Run SQL queries and create CSV files
+        run: |
+          # Navigate to the directory where the .sql files are located
+          cd corr_data/erasmus/sql_queries
+
+          # Loop through .sql files and execute them
+          for file in check_scripts/*.sql corpus_overview/*.sql create_geolayout_files_for_gephi/nodes_edges_for_epp_sent_by_era/*.sql create_geolayout_files_for_gephi/nodes_egdes_for_epp_sent_to_era/*.sql create_geolayout_files_for_gephi/nodes_edges_for_epp_from_era_to_nausea/*.sql create_geolayout_files_for_gephi/nodes_edges_for_epp_from_era_to_venice/*.sql create_geom_edges/*.sql fragmentation_of_correspondents/*.sql fragmentation_of_locations/*.sql no_corr_per_loc/*.sql no_corr_per_modern_state/*.sql no_epp_per_correspondent/*.sql no_epp_per_modern_state/*.sql no_epp_per_modern_state_year/*.sql no_epp_per_year/*.sql no_epp_per_loc/*.sql duration_of_correspondence/*.sql enrich_epp_with_geocoordinates/*.sql no_corr_per_year/*.sql
+          do
+            mysql --user=root --password="$MYSQL_ROOT_PASSWORD" --host=mysql --default-character-set=utf8 --database=era_cdb_v3 < "$file" | sed 's/\t/","/g;s/^/"/;s/$/"/;' > query_results/"${file%.sql}.csv"
+          done
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: query_results
+          path: query_results/*
