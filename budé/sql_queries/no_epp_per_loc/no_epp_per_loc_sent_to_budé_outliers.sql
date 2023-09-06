@@ -1,7 +1,7 @@
 SELECT B.locations_name_modern,
        A.send_date_year1 AS YEAR,
        COUNT(*) AS COUNT
-FROM letters AS A,
+FROM budé_cdb_v1.letters AS A,
      locations AS B
 WHERE A.source_loc_id = B.locations_id
   AND A.recipient_id = 'c0b89c75-45b8-4b04-bfd7-25bfe9ed040b'
@@ -12,7 +12,7 @@ WHERE A.source_loc_id = B.locations_id
      FROM
        (SELECT DISTINCT D.source_loc_id,
                         COUNT(D.source_loc_id) AS NoEppToBudé
-        FROM letters AS D
+        FROM budé_cdb_v1.letters AS D
         JOIN locations AS E ON E.locations_id = D.source_loc_id
         WHERE D.letters_id NOT LIKE '%ck2'
           AND D.recipient_id = 'c0b89c75-45b8-4b04-bfd7-25bfe9ed040b'

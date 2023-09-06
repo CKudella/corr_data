@@ -3,7 +3,7 @@ SELECT Z.ModernState,
        C.NoEppToPirck AS 'Number of letters sent from this modern state to Pirckheimer'
 FROM (
         (SELECT DISTINCT XB.locations_modern_state AS ModernState
-         FROM letters AS XA,
+         FROM wpirck_cdb_v1.letters AS XA,
               locations AS XB
          WHERE XB.locations_id = XA.target_loc_id
            AND XA.letters_id NOT REGEXP '[0-7]ck2|ck3|ck4|ck5|ck6|ck7|ck8'
@@ -12,7 +12,7 @@ FROM (
          ORDER BY COUNT(*) DESC)
       UNION
         (SELECT DISTINCT YB.locations_modern_state AS ModernState
-         FROM letters AS YA,
+         FROM wpirck_cdb_v1.letters AS YA,
               locations AS YB
          WHERE YB.locations_id = YA.source_loc_id
            AND YA.letters_id NOT REGEXP '[0-7]ck2|ck3|ck4|ck5|ck6|ck7|ck8'
@@ -22,7 +22,7 @@ FROM (
 LEFT OUTER JOIN
   (SELECT DISTINCT locations.locations_modern_state AS ModernState,
                    COUNT(*) AS NoEppFromPirck
-   FROM letters,
+   FROM wpirck_cdb_v1.letters,
         locations
    WHERE locations.locations_id = letters.target_loc_id
      AND letters_id NOT REGEXP '[0-7]ck2|ck3|ck4|ck5|ck6|ck7|ck8'
@@ -32,7 +32,7 @@ LEFT OUTER JOIN
 LEFT OUTER JOIN
   (SELECT DISTINCT locations.locations_modern_state AS ModernState,
                    COUNT(*) AS NoEppToPirck
-   FROM letters,
+   FROM wpirck_cdb_v1.letters,
         locations
    WHERE locations.locations_id = letters.source_loc_id
      AND letters_id NOT REGEXP '[0-7]ck2|ck3|ck4|ck5|ck6|ck7|ck8'
