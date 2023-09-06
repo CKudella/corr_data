@@ -33,6 +33,6 @@ setwd("../r_plots/")
 
 # save plot in multiple formats
 ggsave("no_epp_year_era_budé_with_armagnac_georges_d_facet_grid.pdf", plot = last_plot(), scale = 1, width = 11.7, height = 4.15, units = "in", dpi = 600, limitsize = TRUE)
-ggsave("nno_epp_year_era_budé_with_armagnac_georges_d_facet_grid.png", plot = last_plot(), scale = 1, width = 11.7, height = 4.15, units = "in", dpi = 600, limitsize = TRUE)
-ggsave("nno_epp_year_era_budé_with_armagnac_georges_d_facet_grid.eps", plot = last_plot(), scale = 1, width = 11.7, height = 4.15, units = "in", dpi = 600, limitsize = TRUE)
-ggsave("nno_epp_year_era_budé_with_armagnac_georges_d_facet_grid.svg", plot = last_plot(), scale = 1, width = 11.7, height = 4.15, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("no_epp_year_era_budé_with_armagnac_georges_d_facet_grid.png", plot = last_plot(), scale = 1, width = 11.7, height = 4.15, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("no_epp_year_era_budé_with_armagnac_georges_d_facet_grid.eps", plot = last_plot(), scale = 1, width = 11.7, height = 4.15, units = "in", dpi = 600, limitsize = TRUE)
+ggsave("no_epp_year_era_budé_with_armagnac_georges_d_facet_grid.svg", plot = last_plot(), scale = 1, width = 11.7, height = 4.15, units = "in", dpi = 600, limitsize = TRUE)
