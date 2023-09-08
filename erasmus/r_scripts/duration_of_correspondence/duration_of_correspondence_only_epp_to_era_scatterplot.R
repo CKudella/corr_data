@@ -9,8 +9,16 @@ setwd("../query_results/")
 # read data and define data type for date columns
 duration_of_correspondence_only_epp_to_erasmus <- read.csv("duration_of_correspondence/duration_corr_only_epp_to_erasmus.csv", fileEncoding = "UTF-8", colClasses = c("Beginning.of.the.correspondence" = "Date", "End.of.the.correspondence" = "Date"))
 
+# remove the generic "unknown / unnamed" correspondent and "a friend" from the dataframe
+duration_of_correspondence_only_epp_to_erasmus <- duration_of_correspondence_only_epp_to_erasmus %>%  filter(sender_id != "be1dcbc4-3987-472a-b4a0-c3305ead139f")
+duration_of_correspondence_only_epp_to_erasmus <- duration_of_correspondence_only_epp_to_erasmus %>%  filter(sender_id != "cbd92b4f-8d61-4497-bace-f223843a7970")
+
+# set Beginning[...] and End[...] as.Date
+duration_of_correspondence_only_epp_to_erasmus[, 3] <- as.Date(duration_of_correspondence_only_epp_to_erasmus[, 3], format = "%Y-%m-%d")
+duration_of_correspondence_only_epp_to_erasmus[, 4] <- as.Date(duration_of_correspondence_only_epp_to_erasmus[, 4], format = "%Y-%m-%d")
+
 # calculate duration using lubridate
-duration_of_correspondence_only_epp_to_erasmus$duration_in_years <- interval(duration_of_correspondence_only_epp_to_erasmus[, 2], duration_of_correspondence_only_epp_to_erasmus[, 3]) / years(1)
+duration_of_correspondence_only_epp_to_erasmus$duration_in_years <- interval(duration_of_correspondence_only_epp_to_erasmus[, 3], duration_of_correspondence_only_epp_to_erasmus[, 4]) / years(1)
 
 # drop NA rows
 duration_of_correspondence_only_epp_to_erasmus <- drop_na(duration_of_correspondence_only_epp_to_erasmus)
