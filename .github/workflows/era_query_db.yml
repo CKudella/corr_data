@@ -7,8 +7,8 @@ on:
 
 jobs:
   build:
-    runs-on: mysql:5.7-debian
-
+    runs-on: ubuntu-latest
+    
     services:
       mysql:
         image: mysql:5.7-debian
@@ -21,6 +21,15 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+
+      - name: Set up Docker Compose
+        run: |
+          sudo apt-get update
+          sudo apt-get -y install docker-compose
+
+      - name: Start Docker Compose
+        run: |
+          docker-compose up -d
 
       - name: Ingest SQL dump
         run: |
