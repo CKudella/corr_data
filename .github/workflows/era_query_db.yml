@@ -40,6 +40,10 @@ jobs:
           # Ingest the SQL dump into the MySQL database
           mysql --user=root --password="$MYSQL_ROOT_PASSWORD" --host=mysql --default-character-set=utf8 --database=era_cdb_v3 < era_cdb_v3_dump.sql
 
+      - name: List Directory Contents
+        run: |
+        ls -R /github/workspace
+
       - name: Run SQL queries and create CSV files
         run: |
           # Navigate to the directory where the .sql files are located
