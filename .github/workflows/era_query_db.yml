@@ -30,16 +30,16 @@ jobs:
       - name: Start Docker Compose
         run: |
           docker-compose -f .github/workflows/docker_compose_era_query_db.yml up -d
-        working-directory: ${{ GITHUB_WORKSPACE }}
+        working-directory: ${{ github.workspace }}
 
       - name: List Directory Contents
         run: |
-          ls -R ${{ GITHUB_WORKSPACE }}
+          ls -R ${{ github.workspace }}
 
       - name: Ingest SQL dump
         run: |
           # Navigate to the directory where the SQL dump is located
-          cd ${{ GITHUB_WORKSPACE }}/corr_data/erasmus/database/dump
+          cd ${{ github.workspace }}/corr_data/erasmus/database/dump
 
           # Ingest the SQL dump into the MySQL database
           mysql --user=root --password="$MYSQL_ROOT_PASSWORD" --host=mysql --default-character-set=utf8 --database=era_cdb_v3 < era_cdb_v3_dump.sql
@@ -47,7 +47,7 @@ jobs:
       - name: Run SQL queries and create CSV files
         run: |
           # Navigate to the directory where the .sql files are located
-          cd ${{ GITHUB_WORKSPACE }}/corr_data/erasmus/sql_queries
+          cd ${{ github.workspace }}/corr_data/erasmus/sql_queries
 
           # Loop through .sql files and execute them
           for file in check_scripts/*.sql corpus_overview/*.sql create_geolayout_files_for_gephi/nodes_edges_for_epp_sent_by_era/*.sql create_geolayout_files_for_gephi/nodes_egdes_for_epp_sent_to_era/*.sql create_geolayout_files_for_gephi/nodes_edges_for_epp_from_era_to_nausea/*.sql create_geolayout_files_for_gephi/nodes_edges_for_epp_from_era_to_venice/*.sql create_geom_edges/*.sql fragmentation_of_correspondents/*.sql fragmentation_of_locations/*.sql no_corr_per_loc/*.sql no_corr_per_modern_state/*.sql no_epp_per_correspondent/*.sql no_epp_per_modern_state/*.sql no_epp_per_modern_state_year/*.sql no_epp_per_year/*.sql no_epp_per_loc/*.sql duration_of_correspondence/*.sql enrich_epp_with_geocoordinates/*.sql no_corr_per_year/*.sql
