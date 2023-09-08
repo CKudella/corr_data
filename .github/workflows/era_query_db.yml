@@ -39,7 +39,7 @@ jobs:
             echo "MySQL server is running."
           else
             echo "MySQL server is not running."
-          exit 1
+            exit 1
           fi
       
       - name: Check MySQL Container Status on Runner
