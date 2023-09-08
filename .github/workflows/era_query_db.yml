@@ -10,6 +10,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Check Runner MySQL Server Status (i.e. Ubuntu)
+        run: |
+          if sudo systemctl is-active mysql.service; then
+            echo "Local MySQL server is running."
+          else
+            echo "Local MySQL server is not running."
+          fi
+        continue-on-error: true
+      
       - name: Checkout code
         uses: actions/checkout@v2
 
