@@ -29,7 +29,7 @@ jobs:
 
       - name: Start Docker Compose
         run: |
-          docker-compose up -d
+          docker-compose up -f .github/workflows/docker_compose_era_query_db.yml -d
 
       - name: Ingest SQL dump
         run: |
