@@ -42,7 +42,7 @@ jobs:
 
       - name: List Directory Contents
         run: |
-        ls -R /github/workspace
+          ls -R /github/workspace
 
       - name: Run SQL queries and create CSV files
         run: |
