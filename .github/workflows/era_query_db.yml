@@ -32,7 +32,17 @@ jobs:
           docker-compose -f .github/workflows/docker_compose_era_query_db.yml up -d
         working-directory: ${{ github.workspace }}
 
-      - name: Check MySQL Container Status
+      - name: Check MySQL Server Status inside container
+        run: |
+          docker exec -i mysql mysqladmin ping --silent
+          if [ $? -eq 0 ]; then
+            echo "MySQL server is running."
+          else
+            echo "MySQL server is not running."
+          exit 1
+          fi
+      
+      - name: Check MySQL Container Status on Runner
         run: |
           docker ps | grep mysql
         continue-on-error: true  # Continue even if the container is not found
