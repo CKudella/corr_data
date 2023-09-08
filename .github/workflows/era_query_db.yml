@@ -9,15 +9,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    services:
-      mysql:
-        image: mysql:5.7-debian
-        env:
-          MYSQL_ROOT_PASSWORD: mysql
-          MYSQL_DATABASE: era_cdb_v3
-        ports:
-          - 3306:3306
-
     steps:
       - name: Check Runner MySQL Server Status (i.e. Ubuntu)
         run: |
@@ -30,6 +21,21 @@ jobs:
       
       - name: Checkout code
         uses: actions/checkout@v2
+
+      - name: Set up Docker Compose
+        run: |
+          sudo apt-get update
+          sudo apt-get -y install docker-compose
+
+      - name: Start Docker Compose
+        run: |
+          docker-compose -f .github/workflows/docker_compose_era_query_db.yml up -d
+        working-directory: ${{ github.workspace }}
+
+      - name: Check MySQL Container Status
+        run: |
+          docker ps | grep mysql
+        continue-on-error: true  # Continue even if the container is not found
       
       - name: Check MySQL Server Status
         run: |
