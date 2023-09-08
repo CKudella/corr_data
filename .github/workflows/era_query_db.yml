@@ -23,9 +23,12 @@ jobs:
           docker-compose -f .github/workflows/docker_compose_era_query_db.yml up -d
         working-directory: ${{ github.workspace }}
 
-      - name: List Directory Contents
+      - name: Check MySQL Server Status
         run: |
-          ls -R ${{ github.workspace }}
+          until mysqladmin ping -hmysql -P3306 --silent; do
+            echo "Waiting for MySQL server to start..."
+            sleep 5
+          done
 
       - name: Ingest SQL dump
         run: |
