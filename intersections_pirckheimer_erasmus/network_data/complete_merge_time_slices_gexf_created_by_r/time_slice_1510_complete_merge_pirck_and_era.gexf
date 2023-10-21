@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gexf xmlns="http://www.gexf.net/1.3" xmlns:viz="http://www.gexf.net/1.3/viz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.3 http://www.gexf.net/1.3/gexf.xsd" version="1.3">
-  <meta lastmodifieddate="2023-08-27">
+  <meta lastmodifieddate="2023-10-21">
     <creator>Christoph Kudella</creator>
     <description>A graph representing Erasmus's and Pirckheimer's networks of correspondence in the year 1510</description>
     <keywords/>
@@ -14,53 +14,40 @@
     <nodes>
       <node id="1" label="Willibald PIRCKHEIMER">
         <attvalues>
-          <attvalue for="att1" value="3"/>
+          <attvalue for="att1" value="2"/>
           <attvalue for="att2" value="#D5AB5B"/>
-          <attvalue for="att3" value="3"/>
+          <attvalue for="att3" value="2"/>
         </attvalues>
         <viz:color r="213" g="171" b="91" a="1"/>
-        <viz:position x="-0.670936243914824" y="-32.0022275430992" z="0"/>
+        <viz:position x="-0.207633583315385" y="0.207634401778378" z="0"/>
         <viz:size value="10"/>
       </node>
-      <node id="2" label="Margaretha Rauch // Margaretha Reuin">
+      <node id="2" label="Johann von Staupitz">
         <attvalues>
           <attvalue for="att1" value="1"/>
           <attvalue for="att2" value="#525252"/>
           <attvalue for="att3" value="1"/>
         </attvalues>
         <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="-100" y="-100" z="0"/>
+        <viz:position x="100" y="-100" z="0"/>
         <viz:size value="10"/>
       </node>
-      <node id="3" label="Johann von Staupitz">
+      <node id="3" label="Jakob Locher Philomusus">
         <attvalues>
           <attvalue for="att1" value="1"/>
           <attvalue for="att2" value="#525252"/>
           <attvalue for="att3" value="1"/>
         </attvalues>
         <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="100" y="-97.3413626857134" z="0"/>
-        <viz:size value="10"/>
-      </node>
-      <node id="4" label="Jakob Locher Philomusus">
-        <attvalues>
-          <attvalue for="att1" value="1"/>
-          <attvalue for="att2" value="#525252"/>
-          <attvalue for="att3" value="1"/>
-        </attvalues>
-        <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="-1.9992384385077" y="100" z="0"/>
+        <viz:position x="-100" y="100" z="0"/>
         <viz:size value="10"/>
       </node>
     </nodes>
     <edges>
-      <edge id="0" source="1" target="3" weight="1">
+      <edge id="0" source="1" target="2" weight="1">
         <viz:color r="213" g="171" b="91" a="1"/>
       </edge>
-      <edge id="1" source="2" target="1" weight="1">
-        <viz:color r="82" g="82" b="82" a="1"/>
-      </edge>
-      <edge id="2" source="4" target="1" weight="1">
+      <edge id="1" source="3" target="1" weight="1">
         <viz:color r="82" g="82" b="82" a="1"/>
       </edge>
     </edges>
