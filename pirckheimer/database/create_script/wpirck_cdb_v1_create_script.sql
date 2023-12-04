@@ -23,6 +23,8 @@ USE `wpirck_cdb_v1` ;
 CREATE TABLE IF NOT EXISTS `wpirck_cdb_v1`.`locations` (
   `locations_id` VARCHAR(90) NOT NULL COMMENT 'This column carries the primary key for the table that is also being used as a foreign key for ‘source_loc_id’ and target_loc_id’ in the ‘letters’ table as well as ‘pob_loc_id’ and ‘pod_loc_id’ in the ‘correspondents’ table. ',
   `geonames_id` VARCHAR(90) NULL COMMENT 'This column carries the numeric Geonames ID. For locations for which no Geonames ID is available, the value should be set to “unknown”.',
+  `wikidata_id` VARCHAR(45) NULL COMMENT 'This column carries the alphanumeric identifier provided by Wikidata.',
+  `emlo_location_id` VARCHAR(100) NULL COMMENT 'This column carries the alphanumeric identifier provided by EMLO.',
   `locations_name_modern` VARCHAR(90) NULL COMMENT 'This column carries the toponym of the location as specified by Geonames.',
   `locations_name_in_edition` VARCHAR(90) NULL COMMENT 'This column carries the name of the location as it appears in the source used for the capturing of the letter’s metadata.',
   `locations_modern_state` VARCHAR(90) NULL COMMENT 'This column carries the name of the modern state the location is situated in as provided by Geonames.',
