@@ -8,7 +8,7 @@ FROM
   (SELECT locations_name_modern,
           locations_lat,
           locations_lng,
-          COUNT(DISTINCT send_date_year1) AS COUNT
+          COUNT(DISTINCT COALESCE(send_date_year1, 'unknown')) AS COUNT
    FROM era_cdb_v3.letters
    JOIN era_cdb_v3.locations ON locations.locations_id = letters.source_loc_id
    WHERE letters_id NOT LIKE '%ck2'
