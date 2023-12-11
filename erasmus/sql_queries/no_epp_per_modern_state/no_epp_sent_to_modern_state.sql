@@ -3,6 +3,5 @@ SELECT DISTINCT locations.locations_modern_state AS 'Modern State',
 FROM era_cdb_v3.letters,
      locations
 WHERE locations.locations_id = letters.target_loc_id
-  AND letters_id NOT LIKE '%ck2'
 GROUP BY locations_modern_state
 ORDER BY COUNT(*) DESC
