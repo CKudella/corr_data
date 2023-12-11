@@ -7,6 +7,7 @@ This folder contains scripts that calculate the number of correspondents per loc
 
 | File | Description |
 | :------------- | :------------- |
-| no_corr_per_loc_excluding_budé_with_geocoordinates.sql | This script calculates the number of correspondents (writing letters to Budé or receiving letters from him) per location, excluding Budé. |
-| no_corr_per_loc_receiving_from_budé_with_geocoordinates.sql | This script calculates the number of correspondents receiving letters from Budé per location. |
-| no_corr_per_loc_writing_to_budé_with_geocoordinates.sql | This script calculates the number of correspondents writing letters to Budé per location. |
+| no_corr_per_loc_excluding_budé_with_geocoordinates.sql | This script calculates the number of correspondents (those writing to Budé or receiving letters from him) per location, excluding Budé. |
+| no_corr_per_loc_receiving_from_budé_with_geocoordinates.sql | This script calculates the number of correspondents per location who receive letters from Budé. |
+| no_corr_per_loc_writing_to_budé_with_geocoordinates.sql | This script calculates the number of correspondents per location who write letters to Budé. |
+| comp_corr_per_loc_writing_to_receiving_from_budé.sql | This script calculates both the number of correspondents per location who receive letters from Erasmus and who write letters to Budé. |
