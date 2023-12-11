@@ -11,8 +11,7 @@ FROM
           COUNT(DISTINCT COALESCE(send_date_year1, 'unknown')) AS COUNT
    FROM budé_cdb_v1.letters
    JOIN budé_cdb_v1.locations ON locations.locations_id = letters.target_loc_id
-   WHERE letters_id NOT LIKE '%ck2'
-     AND sender_id = 'c0b89c75-45b8-4b04-bfd7-25bfe9ed040b'
+   WHERE sender_id = 'c0b89c75-45b8-4b04-bfd7-25bfe9ed040b'
      AND target_loc_id NOT LIKE 'unknown%'
      AND send_date_year1 IS NOT NULL
    GROUP BY target_loc_id
@@ -22,8 +21,7 @@ INNER JOIN
           COUNT(letters.target_loc_id) AS COUNT
    FROM budé_cdb_v1.letters
    JOIN budé_cdb_v1.locations ON locations.locations_id = letters.target_loc_id
-   WHERE letters_id NOT LIKE '%ck2'
-     AND sender_id = 'c0b89c75-45b8-4b04-bfd7-25bfe9ed040b'
+   WHERE sender_id = 'c0b89c75-45b8-4b04-bfd7-25bfe9ed040b'
      AND target_loc_id NOT LIKE 'unknown%'
      AND send_date_year1 IS NOT NULL
    GROUP BY target_loc_id

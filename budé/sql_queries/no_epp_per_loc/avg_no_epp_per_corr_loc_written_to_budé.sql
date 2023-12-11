@@ -11,8 +11,7 @@ FROM
           COUNT(DISTINCT sender_id) AS COUNT
    FROM budé_cdb_v1.letters
    JOIN budé_cdb_v1.locations ON locations.locations_id = letters.source_loc_id
-   WHERE letters_id NOT LIKE '%ck2'
-     AND recipient_id = 'c0b89c75-45b8-4b04-bfd7-25bfe9ed040b'
+   WHERE recipient_id = 'c0b89c75-45b8-4b04-bfd7-25bfe9ed040b'
      AND source_loc_id NOT LIKE 'unknown%'
    GROUP BY source_loc_id
    ORDER BY COUNT DESC) AS X
@@ -21,8 +20,7 @@ INNER JOIN
           COUNT(letters.target_loc_id) AS COUNT
    FROM budé_cdb_v1.letters
    JOIN budé_cdb_v1.locations ON locations.locations_id = letters.source_loc_id
-   WHERE letters_id NOT LIKE '%ck2'
-     AND recipient_id = 'c0b89c75-45b8-4b04-bfd7-25bfe9ed040b'
+   WHERE recipient_id = 'c0b89c75-45b8-4b04-bfd7-25bfe9ed040b'
      AND source_loc_id NOT LIKE 'unknown%'
    GROUP BY source_loc_id
    ORDER BY COUNT DESC) AS Y ON X.locations_name_modern = Y.locations_name_modern
