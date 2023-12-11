@@ -7,5 +7,6 @@ This folder contains scripts that calculate the number of correspondents per mod
 
 | File | Description |
 | :------------- | :------------- |
-| no_corr_per_modern_state_receiving_epp_from_budé.sql | This query calculates the number of correspondents who received letters from Budé per modern state. |
-| no_corr_per_modern_state_writing_epp_to_budé.sql | This query calculates the number of correspondents who wrote letters to Budé per modern state. |
+| no_corr_per_modern_state_receiving_epp_from_budé.sql | This script calculates the number of correspondents per modern state who receive letters from Budé. |
+| no_corr_per_modern_state_writing_epp_to_budé.sql | This script calculates the number of correspondents per modern state who write letters to Budé. |
+| comp_no_corr_per_ms_writing_to_receiving_from_budé.sql | This script calculates both the number of correspondents per modern state who receive letters from Budé and who write letters to Budé. |
