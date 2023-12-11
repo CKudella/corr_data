@@ -6,5 +6,7 @@ date: 2018-03-10
 
 | File | Description |
 | :------------- | :------------- |
-| dates_begin_end_reciproc_correspondence.sql | This script calculates the beginning and the end date of the reciprocal correspondence of Erasmus with the correspondents who both wrote letters to and received letters from Erasmus. |
-| duration_of_correspodence_all_corr.sql | This script calculates the beginning and the end date of the correspondence of Erasmus with all his correspondents. |
+| duration_corr_all_cor.sql | This script calculates the start and end dates of the correspondence between Erasmus and all his correspondents. |
+| duration_corr_only_epp_from_erasmus.sql | This script calculates the start and end dates of the correspondence between Erasmus and those correspondents with only letters by Erasmus in the dataset. |
+| duration_corr_only_epp_to_erasmus.sql | This script calculates the start and end dates of the correspondence between Erasmus and those correspondents with only letters to Erasmus in the dataset. |
+| duration_corr_reciproc.sql | This script calculates the start and end dates of the correspondence between Erasmus and those correspondents for whom the dataset includes reciprocal correspondence.  |

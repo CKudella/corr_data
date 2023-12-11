@@ -6,5 +6,8 @@ date: 2018-03-10
 
 | File | Description |
 | :------------- | :------------- |
-| dates_begin_end_reciproc_correspondence.sql | This script calculates the beginning and the end date of the reciprocal correspondence of Budé with the correspondents who both wrote letters to and received letters from Budé.  |
-| duration_of_correspodence_all_corr.sql | This script calculates the beginning and the end date of the correspondence of Budé with all his correspondents. |
+| duration_corr_all_cor.sql | This script calculates the start and end dates of the correspondence between Budé and all his correspondents. |
+| duration_corr_only_epp_from_budé.sql | This script calculates the start and end dates of the correspondence between Budé and those correspondents with only letters by Budé in the dataset. |
+| duration_corr_only_epp_to_budé.sql | This script calculates the start and end dates of the correspondence between Budé and those correspondents with only letters to Budé in the dataset. |
+| duration_corr_reciproc.sql | This script calculates the start and end dates of the correspondence between Budé and those correspondents for whom the dataset includes reciprocal correspondence.  |
+
