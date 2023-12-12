@@ -2,8 +2,7 @@ SELECT DISTINCT locations.locations_modern_state AS 'Name Modern State',
                 COUNT(letters.target_loc_id) AS 'Number of letters sent to this modern state by Pirckheimer to mutual correspondents of his and Erasmus (incl. Erasmus)'
 FROM wpirck_cdb_v1.letters
 JOIN wpirck_cdb_v1.locations ON locations.locations_id = letters.target_loc_id
-WHERE letters_id NOT REGEXP '[0-7]ck2|ck3|ck4|ck5|ck6|ck7|ck8'
-  AND sender_id = 'd9233b24-a98c-4279-8065-e2ab70c0d080'
+WHERE sender_id = 'd9233b24-a98c-4279-8065-e2ab70c0d080'
   AND recipient_id IN
     (SELECT X.correspondents_id
      FROM era_cdb_v3.correspondents AS X
