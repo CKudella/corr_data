@@ -4,7 +4,6 @@ SELECT DISTINCT locations.locations_modern_state AS 'Modern State',
 FROM era_cdb_v3.letters,
      era_cdb_v3.locations
 WHERE locations.locations_id = letters.target_loc_id
-  AND letters_id NOT LIKE '%ck2'
   AND sender_id = '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf'
   AND recipient_id IN
     (SELECT E.correspondents_id

@@ -17,7 +17,6 @@ WHERE ELOC.locations_id IN
                FROM era_cdb_v3.correspondents AS E,
                     budé_cdb_v1.correspondents AS B
                WHERE E.correspondents_id = B.correspondents_id))
-       AND ELETA.letters_id NOT LIKE '%ck2'
        AND ELETA.source_loc_id NOT LIKE 'unknown%'
        AND ELETA.target_loc_id NOT LIKE 'unknown%')
   OR ELOC.locations_id IN
@@ -32,7 +31,6 @@ WHERE ELOC.locations_id IN
                FROM era_cdb_v3.correspondents AS E,
                     budé_cdb_v1.correspondents AS B
                WHERE E.correspondents_id = B.correspondents_id))
-       AND ELETB.letters_id NOT LIKE '%ck2'
        AND ELETB.source_loc_id NOT LIKE 'unknown%'
        AND ELETB.target_loc_id NOT LIKE 'unknown%')
 GROUP BY ELOC.locations_id

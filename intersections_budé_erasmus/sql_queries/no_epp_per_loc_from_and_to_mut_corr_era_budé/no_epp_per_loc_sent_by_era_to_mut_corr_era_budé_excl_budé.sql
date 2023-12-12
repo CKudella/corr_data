@@ -4,8 +4,7 @@ SELECT locations.locations_name_modern AS 'Location Name Modern',
        COUNT(letters.target_loc_id) AS 'Number of letters sent to this location by Erasmus to mutual correspondents of his and Budé (excl. Budé)'
 FROM era_cdb_v3.letters
 JOIN era_cdb_v3.locations ON locations.locations_id = letters.target_loc_id
-WHERE letters_id NOT LIKE '%ck2'
-  AND sender_id = '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf'
+WHERE sender_id = '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf'
   AND source_loc_id NOT LIKE 'unknown%'
   AND recipient_id IN
     (SELECT X.correspondents_id

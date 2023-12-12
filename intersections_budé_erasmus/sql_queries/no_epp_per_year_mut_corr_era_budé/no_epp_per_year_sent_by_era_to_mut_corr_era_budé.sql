@@ -1,8 +1,7 @@
 SELECT send_date_year1,
        COUNT(*) AS 'Total number of letters sent by Erasmus this year to mutual correspondents of his and Budé (excl. Budé)'
 FROM era_cdb_v3.letters
-WHERE letters_id NOT LIKE '%ck2'
-  AND sender_id = '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf'
+WHERE sender_id = '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf'
   AND recipient_id IN
     (SELECT E.correspondents_id
      FROM budé_cdb_v1.correspondents AS B,
