@@ -17,7 +17,7 @@ WHERE A.source_loc_id = B.locations_id
           AND D.source_loc_id NOT LIKE 'unknown%'
         GROUP BY D.source_loc_id
         ORDER BY COUNT(D.source_loc_id) DESC) AS C
-     WHERE C.NoEppToPirck > 8.5)
+     WHERE C.NoEppToPirck > 12)
 GROUP BY A.source_loc_id,
          A.send_date_year1
 ORDER BY A.source_loc_id,
