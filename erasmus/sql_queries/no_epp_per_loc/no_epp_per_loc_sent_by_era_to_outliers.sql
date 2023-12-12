@@ -17,7 +17,7 @@ WHERE A.target_loc_id = B.locations_id
           AND D.target_loc_id NOT LIKE 'unknown%'
         GROUP BY D.target_loc_id
         ORDER BY COUNT(D.target_loc_id) DESC) AS C
-     WHERE C.NoEppFromEra > 13.5)
+     WHERE C.NoEppFromEra > 17)
 GROUP BY A.target_loc_id,
          A.send_date_year1
 ORDER BY A.target_loc_id,
