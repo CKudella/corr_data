@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gexf xmlns="http://www.gexf.net/1.3" xmlns:viz="http://www.gexf.net/1.3/viz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.3 http://www.gexf.net/1.3/gexf.xsd" version="1.3">
-  <meta lastmodifieddate="2023-10-21">
+  <meta lastmodifieddate="2023-12-13">
     <creator>Christoph Kudella</creator>
     <description>A graph representing the intersection between Erasmus's and Budé's networks of correspondence in the year 1526</description>
     <keywords/>
@@ -19,7 +19,7 @@
           <attvalue for="att3" value="1"/>
         </attvalues>
         <viz:color r="195" g="22" b="31" a="1"/>
-        <viz:position x="-7.66280784486989" y="-100" z="0"/>
+        <viz:position x="64.005608310049" y="-100" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="2" label="Germain de BRIE">
@@ -29,7 +29,7 @@
           <attvalue for="att3" value="2"/>
         </attvalues>
         <viz:color r="195" g="22" b="31" a="1"/>
-        <viz:position x="11.8670891519006" y="94.5810375007202" z="0"/>
+        <viz:position x="55.7154939472356" y="-7.71360324593665" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="3" label="Guillaume COP">
@@ -39,7 +39,7 @@
           <attvalue for="att3" value="1"/>
         </attvalues>
         <viz:color r="195" g="22" b="31" a="1"/>
-        <viz:position x="65.2883633616546" y="-74.0293516195893" z="0"/>
+        <viz:position x="38.8500993765307" y="40.8459929941657" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="4" label="FRANCIS I">
@@ -49,7 +49,7 @@
           <attvalue for="att3" value="1"/>
         </attvalues>
         <viz:color r="195" g="22" b="31" a="1"/>
-        <viz:position x="77.5006216614719" y="100" z="0"/>
+        <viz:position x="-42.1564464490639" y="-96.8385202239864" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="5" label="Thomas MORE">
@@ -59,76 +59,89 @@
           <attvalue for="att3" value="1"/>
         </attvalues>
         <viz:color r="195" g="22" b="31" a="1"/>
-        <viz:position x="-100" y="35.903743954251" z="0"/>
+        <viz:position x="-65.2982205865661" y="-35.9321129337092" z="0"/>
         <viz:size value="10"/>
       </node>
-      <node id="6" label="Desiderius ERASMUS">
+      <node id="6" label="Guillaume BUDÉ">
+        <attvalues>
+          <attvalue for="att1" value="1"/>
+          <attvalue for="att2" value="#D5AB5B"/>
+          <attvalue for="att3" value="1"/>
+        </attvalues>
+        <viz:color r="213" g="171" b="91" a="1"/>
+        <viz:position x="-100" y="100" z="0"/>
+        <viz:size value="10"/>
+      </node>
+      <node id="7" label="Desiderius ERASMUS">
         <attvalues>
           <attvalue for="att1" value="9"/>
           <attvalue for="att2" value="#3C93AF"/>
           <attvalue for="att3" value="10"/>
         </attvalues>
         <viz:color r="60" g="147" b="175" a="1"/>
-        <viz:position x="2.4017633263189" y="15.0236300074096" z="0"/>
+        <viz:position x="12.5745598897251" y="-33.1599229617732" z="0"/>
         <viz:size value="10"/>
       </node>
-      <node id="7" label="Jacques TOUSSAIN">
+      <node id="8" label="Jacques TOUSSAIN">
         <attvalues>
-          <attvalue for="att1" value="1"/>
+          <attvalue for="att1" value="2"/>
           <attvalue for="att2" value="#C3161F"/>
-          <attvalue for="att3" value="1"/>
+          <attvalue for="att3" value="2"/>
         </attvalues>
         <viz:color r="195" g="22" b="31" a="1"/>
-        <viz:position x="100" y="7.19596735487251" z="0"/>
+        <viz:position x="-51.7809621339443" y="43.2393754550014" z="0"/>
         <viz:size value="10"/>
       </node>
-      <node id="8" label="Juan Luis VIVES">
+      <node id="9" label="Juan Luis VIVES">
         <attvalues>
           <attvalue for="att1" value="1"/>
           <attvalue for="att2" value="#C3161F"/>
           <attvalue for="att3" value="2"/>
         </attvalues>
         <viz:color r="195" g="22" b="31" a="1"/>
-        <viz:position x="-42.971849331504" y="74.597158849663" z="0"/>
+        <viz:position x="10.815721011069" y="-80.9483584713192" z="0"/>
         <viz:size value="10"/>
       </node>
-      <node id="9" label="Giambattista EGNAZIO">
+      <node id="10" label="Giambattista EGNAZIO">
         <attvalues>
           <attvalue for="att1" value="1"/>
           <attvalue for="att2" value="#C3161F"/>
           <attvalue for="att3" value="1"/>
         </attvalues>
         <viz:color r="195" g="22" b="31" a="1"/>
-        <viz:position x="-74.7094908275893" y="-56.3297613134636" z="0"/>
+        <viz:position x="100" y="-40.9924131262995" z="0"/>
         <viz:size value="10"/>
       </node>
     </nodes>
     <edges>
-      <edge id="0" source="2" target="6" weight="1">
+      <edge id="0" source="2" target="7" weight="1">
         <viz:color r="195" g="22" b="31" a="1"/>
       </edge>
-      <edge id="1" source="5" target="6" weight="1">
+      <edge id="1" source="5" target="7" weight="1">
         <viz:color r="195" g="22" b="31" a="1"/>
       </edge>
-      <edge id="2" source="6" target="1" weight="1">
+      <edge id="2" source="6" target="8" weight="1">
+        <viz:color r="213" g="171" b="91" a="1"/>
+      </edge>
+      <edge id="3" source="7" target="1" weight="1">
         <viz:color r="60" g="147" b="175" a="1"/>
       </edge>
-      <edge id="3" source="6" target="2" weight="1">
+      <edge id="4" source="7" target="2" weight="1">
         <viz:color r="60" g="147" b="175" a="1"/>
       </edge>
-      <edge id="4" source="6" target="3" weight="1">
+      <edge id="5" source="7" target="3" weight="1">
         <viz:color r="60" g="147" b="175" a="1"/>
       </edge>
-      <edge id="5" source="6" target="4" weight="1">
+      <edge id="6" source="7" target="4" weight="1">
         <viz:color r="60" g="147" b="175" a="1"/>
       </edge>
-      <edge id="6" source="6" target="7" weight="1">
+      <edge id="7" source="7" target="8" weight="1">
         <viz:color r="60" g="147" b="175" a="1"/>
       </edge>
-      <edge id="7" source="6" target="9" weight="1">
+      <edge id="8" source="7" target="10" weight="1">
         <viz:color r="60" g="147" b="175" a="1"/>
       </edge>
-      <edge id="8" source="8" target="6" weight="2">
+      <edge id="9" source="9" target="7" weight="2">
         <viz:color r="195" g="22" b="31" a="1"/>
       </edge>
     </edges>
