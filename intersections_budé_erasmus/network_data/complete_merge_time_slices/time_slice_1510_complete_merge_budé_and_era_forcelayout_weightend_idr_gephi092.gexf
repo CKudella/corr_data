@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gexf xmlns="http://www.gexf.net/1.3" version="1.3" xmlns:viz="http://www.gexf.net/1.3/viz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.3 http://www.gexf.net/1.3/gexf.xsd">
-  <meta lastmodifieddate="2019-11-13">
+  <meta lastmodifieddate="2023-12-16">
     <creator>Gephi 0.9</creator>
     <description></description>
   </meta>
@@ -22,15 +22,15 @@
     <nodes>
       <node id="1" label="Guillaume BUDÉ">
         <attvalues>
-          <attvalue for="att1" value="2.0"></attvalue>
+          <attvalue for="att1" value="3.0"></attvalue>
           <attvalue for="att2" value="#D5AB5B"></attvalue>
-          <attvalue for="att3" value="2.0"></attvalue>
+          <attvalue for="att3" value="3.0"></attvalue>
           <attvalue for="weighted indegree" value="1.0"></attvalue>
-          <attvalue for="weighted outdegree" value="1.0"></attvalue>
-          <attvalue for="weighted degree" value="2.0"></attvalue>
+          <attvalue for="weighted outdegree" value="2.0"></attvalue>
+          <attvalue for="weighted degree" value="3.0"></attvalue>
         </attvalues>
-        <viz:size value="25.0"></viz:size>
-        <viz:position x="59.55565" y="-0.37650254"></viz:position>
+        <viz:size value="30.0"></viz:size>
+        <viz:position x="0.19873826" y="0.19873826"></viz:position>
         <viz:color r="213" g="171" b="91"></viz:color>
       </node>
       <node id="2" label="Janus LASCARIS">
@@ -42,16 +42,32 @@
           <attvalue for="weighted outdegree" value="1.0"></attvalue>
           <attvalue for="weighted degree" value="2.0"></attvalue>
         </attvalues>
-        <viz:size value="25.0"></viz:size>
-        <viz:position x="-59.55565" y="0.37650254"></viz:position>
+        <viz:size value="20.0"></viz:size>
+        <viz:position x="-74.23472" y="-74.23472"></viz:position>
         <viz:color r="195" g="22" b="31"></viz:color>
+      </node>
+      <node id="3" label="Charles Fernand ">
+        <attvalues>
+          <attvalue for="att1" value="1.0"></attvalue>
+          <attvalue for="att2" value="#525252"></attvalue>
+          <attvalue for="att3" value="1.0"></attvalue>
+          <attvalue for="weighted indegree" value="1.0"></attvalue>
+          <attvalue for="weighted outdegree" value="0.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="74.03596" y="74.03596"></viz:position>
+        <viz:color r="82" g="82" b="82"></viz:color>
       </node>
     </nodes>
     <edges>
       <edge id="0" source="1" target="2">
         <viz:color r="213" g="171" b="91"></viz:color>
       </edge>
-      <edge id="1" source="2" target="1">
+      <edge id="1" source="1" target="3">
+        <viz:color r="213" g="171" b="91"></viz:color>
+      </edge>
+      <edge id="2" source="2" target="1">
         <viz:color r="195" g="22" b="31"></viz:color>
       </edge>
     </edges>
