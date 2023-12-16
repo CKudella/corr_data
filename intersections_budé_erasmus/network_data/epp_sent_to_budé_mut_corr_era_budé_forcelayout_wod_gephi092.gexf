@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gexf xmlns="http://www.gexf.net/1.3" version="1.3" xmlns:viz="http://www.gexf.net/1.3/viz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.3 http://www.gexf.net/1.3/gexf.xsd">
-  <meta lastmodifieddate="2019-11-13">
+  <meta lastmodifieddate="2023-12-16">
     <creator>Gephi 0.9</creator>
     <description></description>
   </meta>
@@ -22,20 +22,31 @@
       </attribute>
     </attributes>
     <nodes>
-      <node id="antwerpen_BE_gid_2803138" label="Antwerpen">
+      <node id="antwerpen_BE_gid_2803138" label="Antwerp">
         <attvalues>
           <attvalue for="locations_modern_state" value="Belgium"></attvalue>
-          <attvalue for="locations_modern_province" value="Flemish"></attvalue>
+          <attvalue for="locations_modern_province" value="Flanders"></attvalue>
           <attvalue for="locations_lat" value="51.21989"></attvalue>
           <attvalue for="locations_lng" value="4.40346"></attvalue>
-          <attvalue for="colour" value="#525252"></attvalue>
           <attvalue for="weighted indegree" value="0.0"></attvalue>
           <attvalue for="weighted outdegree" value="6.0"></attvalue>
           <attvalue for="weighted degree" value="6.0"></attvalue>
         </attvalues>
-        <viz:size value="19.0"></viz:size>
-        <viz:position x="-204.57065" y="-166.6921"></viz:position>
-        <viz:color r="82" g="82" b="82"></viz:color>
+        <viz:size value="20.909092"></viz:size>
+        <viz:position x="196.23239" y="88.11357"></viz:position>
+      </node>
+      <node id="avignon_FR_gid_3035681" label="Avignon">
+        <attvalues>
+          <attvalue for="locations_modern_state" value="France"></attvalue>
+          <attvalue for="locations_modern_province" value="Provence-Alpes-Côte d'Azur"></attvalue>
+          <attvalue for="locations_lat" value="43.94834"></attvalue>
+          <attvalue for="locations_lng" value="4.80892"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
+        </attvalues>
+        <viz:size value="11.818182"></viz:size>
+        <viz:position x="381.94214" y="262.82907"></viz:position>
       </node>
       <node id="basel_CH_gid_2661604" label="Basel">
         <attvalues>
@@ -43,44 +54,38 @@
           <attvalue for="locations_modern_province" value="Basel-City"></attvalue>
           <attvalue for="locations_lat" value="47.5584"></attvalue>
           <attvalue for="locations_lng" value="7.57327"></attvalue>
-          <attvalue for="colour" value="#525252"></attvalue>
           <attvalue for="weighted indegree" value="0.0"></attvalue>
           <attvalue for="weighted outdegree" value="4.0"></attvalue>
           <attvalue for="weighted degree" value="4.0"></attvalue>
         </attvalues>
-        <viz:size value="16.0"></viz:size>
-        <viz:position x="-260.0927" y="18.503397"></viz:position>
-        <viz:color r="82" g="82" b="82"></viz:color>
+        <viz:size value="17.272728"></viz:size>
+        <viz:position x="-20.537449" y="225.14236"></viz:position>
       </node>
       <node id="blois_FR_gid_3032213" label="Blois">
         <attvalues>
           <attvalue for="locations_modern_state" value="France"></attvalue>
-          <attvalue for="locations_modern_province" value="Centre"></attvalue>
+          <attvalue for="locations_modern_province" value="Centre-Val de Loire"></attvalue>
           <attvalue for="locations_lat" value="47.58333"></attvalue>
           <attvalue for="locations_lng" value="1.33333"></attvalue>
-          <attvalue for="colour" value="#525252"></attvalue>
           <attvalue for="weighted indegree" value="1.0"></attvalue>
           <attvalue for="weighted outdegree" value="0.0"></attvalue>
           <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="-222.46991" y="-344.59003"></viz:position>
-        <viz:color r="82" g="82" b="82"></viz:color>
+        <viz:position x="308.97775" y="-89.08802"></viz:position>
       </node>
-      <node id="brugge_BE_gid_2800931" label="Brugge">
+      <node id="brugge_BE_gid_2800931" label="Bruges">
         <attvalues>
           <attvalue for="locations_modern_state" value="Belgium"></attvalue>
-          <attvalue for="locations_modern_province" value="Flemish"></attvalue>
+          <attvalue for="locations_modern_province" value="Flanders"></attvalue>
           <attvalue for="locations_lat" value="51.20892"></attvalue>
           <attvalue for="locations_lng" value="3.22424"></attvalue>
-          <attvalue for="colour" value="#525252"></attvalue>
           <attvalue for="weighted indegree" value="0.0"></attvalue>
           <attvalue for="weighted outdegree" value="2.0"></attvalue>
           <attvalue for="weighted degree" value="2.0"></attvalue>
         </attvalues>
-        <viz:size value="13.0"></viz:size>
-        <viz:position x="-37.328323" y="-272.8749"></viz:position>
-        <viz:color r="82" g="82" b="82"></viz:color>
+        <viz:size value="13.636364"></viz:size>
+        <viz:position x="198.87975" y="279.28848"></viz:position>
       </node>
       <node id="brussels_BE_gid_2800866" label="Brussels">
         <attvalues>
@@ -88,44 +93,64 @@
           <attvalue for="locations_modern_province" value="Brussels Capital"></attvalue>
           <attvalue for="locations_lat" value="50.85045"></attvalue>
           <attvalue for="locations_lng" value="4.34878"></attvalue>
-          <attvalue for="colour" value="#525252"></attvalue>
           <attvalue for="weighted indegree" value="0.0"></attvalue>
           <attvalue for="weighted outdegree" value="1.0"></attvalue>
           <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="11.5"></viz:size>
-        <viz:position x="-421.34766" y="-128.7521"></viz:position>
-        <viz:color r="82" g="82" b="82"></viz:color>
+        <viz:size value="11.818182"></viz:size>
+        <viz:position x="227.1628" y="431.80963"></viz:position>
       </node>
-      <node id="fontenay_le_comte_FR_gid_3017921" label="Fontenay">
+      <node id="fontenay_le_comte_FR_gid_3017921" label="Fontenay-le-Comte">
         <attvalues>
           <attvalue for="locations_modern_state" value="France"></attvalue>
           <attvalue for="locations_modern_province" value="Pays de la Loire"></attvalue>
           <attvalue for="locations_lat" value="46.46667"></attvalue>
           <attvalue for="locations_lng" value="-0.81667"></attvalue>
-          <attvalue for="colour" value="#525252"></attvalue>
           <attvalue for="weighted indegree" value="0.0"></attvalue>
           <attvalue for="weighted outdegree" value="1.0"></attvalue>
           <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="11.5"></viz:size>
-        <viz:position x="539.38495" y="66.38074"></viz:position>
-        <viz:color r="82" g="82" b="82"></viz:color>
+        <viz:size value="11.818182"></viz:size>
+        <viz:position x="-565.9579" y="-72.97204"></viz:position>
+      </node>
+      <node id="freiburg_DE_gid_2925177" label="Freiburg im Breisgau">
+        <attvalues>
+          <attvalue for="locations_modern_state" value="Germany"></attvalue>
+          <attvalue for="locations_modern_province" value="Baden-Wurttemberg"></attvalue>
+          <attvalue for="locations_lat" value="47.9959"></attvalue>
+          <attvalue for="locations_lng" value="7.85222"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
+        </attvalues>
+        <viz:size value="11.818182"></viz:size>
+        <viz:position x="-42.31975" y="-649.8313"></viz:position>
       </node>
       <node id="leuven_BE_gid_2792482" label="Leuven">
         <attvalues>
           <attvalue for="locations_modern_state" value="Belgium"></attvalue>
-          <attvalue for="locations_modern_province" value="Flemish"></attvalue>
+          <attvalue for="locations_modern_province" value="Flanders"></attvalue>
           <attvalue for="locations_lat" value="50.87959"></attvalue>
           <attvalue for="locations_lng" value="4.70093"></attvalue>
-          <attvalue for="colour" value="#525252"></attvalue>
           <attvalue for="weighted indegree" value="0.0"></attvalue>
-          <attvalue for="weighted outdegree" value="10.0"></attvalue>
-          <attvalue for="weighted degree" value="10.0"></attvalue>
+          <attvalue for="weighted outdegree" value="11.0"></attvalue>
+          <attvalue for="weighted degree" value="11.0"></attvalue>
         </attvalues>
-        <viz:size value="25.0"></viz:size>
-        <viz:position x="33.568516" y="127.01644"></viz:position>
-        <viz:color r="82" g="82" b="82"></viz:color>
+        <viz:size value="30.0"></viz:size>
+        <viz:position x="-10.521954" y="-43.341305"></viz:position>
+      </node>
+      <node id="london_GB_gid_2643743" label="London">
+        <attvalues>
+          <attvalue for="locations_modern_state" value="United Kingdom"></attvalue>
+          <attvalue for="locations_modern_province" value="England"></attvalue>
+          <attvalue for="locations_lat" value="51.50853"></attvalue>
+          <attvalue for="locations_lng" value="-0.12574"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
+        </attvalues>
+        <viz:size value="11.818182"></viz:size>
+        <viz:position x="33.3952" y="444.78683"></viz:position>
       </node>
       <node id="marly_la_ville_FR_gid_2995653" label="Marly-la-Ville">
         <attvalues>
@@ -133,59 +158,51 @@
           <attvalue for="locations_modern_province" value="Île-de-France"></attvalue>
           <attvalue for="locations_lat" value="49.08201"></attvalue>
           <attvalue for="locations_lng" value="2.50347"></attvalue>
-          <attvalue for="colour" value="#525252"></attvalue>
-          <attvalue for="weighted indegree" value="1.0"></attvalue>
+          <attvalue for="weighted indegree" value="5.0"></attvalue>
           <attvalue for="weighted outdegree" value="0.0"></attvalue>
-          <attvalue for="weighted degree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="5.0"></attvalue>
         </attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="33.763905" y="378.48813"></viz:position>
-        <viz:color r="82" g="82" b="82"></viz:color>
+        <viz:position x="-32.854683" y="-432.30515"></viz:position>
       </node>
       <node id="mechelen_BE_gid_2791537" label="Mechelen">
         <attvalues>
           <attvalue for="locations_modern_state" value="Belgium"></attvalue>
-          <attvalue for="locations_modern_province" value="Flemish"></attvalue>
+          <attvalue for="locations_modern_province" value="Flanders"></attvalue>
           <attvalue for="locations_lat" value="51.02574"></attvalue>
           <attvalue for="locations_lng" value="4.47762"></attvalue>
-          <attvalue for="colour" value="#525252"></attvalue>
           <attvalue for="weighted indegree" value="0.0"></attvalue>
           <attvalue for="weighted outdegree" value="1.0"></attvalue>
           <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="11.5"></viz:size>
-        <viz:position x="150.68839" y="-261.92676"></viz:position>
-        <viz:color r="82" g="82" b="82"></viz:color>
+        <viz:size value="11.818182"></viz:size>
+        <viz:position x="-138.71178" y="358.64053"></viz:position>
       </node>
-      <node id="milano_IT_gid_3173435" label="Milano">
+      <node id="milano_IT_gid_3173435" label="Milan">
         <attvalues>
           <attvalue for="locations_modern_state" value="Italy"></attvalue>
           <attvalue for="locations_modern_province" value="Lombardy"></attvalue>
           <attvalue for="locations_lat" value="45.46427"></attvalue>
           <attvalue for="locations_lng" value="9.18951"></attvalue>
-          <attvalue for="colour" value="#525252"></attvalue>
           <attvalue for="weighted indegree" value="0.0"></attvalue>
           <attvalue for="weighted outdegree" value="1.0"></attvalue>
           <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="11.5"></viz:size>
-        <viz:position x="-320.75073" y="199.47003"></viz:position>
-        <viz:color r="82" g="82" b="82"></viz:color>
+        <viz:size value="11.818182"></viz:size>
+        <viz:position x="403.91324" y="77.08344"></viz:position>
       </node>
-      <node id="padova_IT_gid_3171728" label="Padova">
+      <node id="padova_IT_gid_3171728" label="Padua">
         <attvalues>
           <attvalue for="locations_modern_state" value="Italy"></attvalue>
           <attvalue for="locations_modern_province" value="Veneto"></attvalue>
           <attvalue for="locations_lat" value="45.40797"></attvalue>
           <attvalue for="locations_lng" value="11.88586"></attvalue>
-          <attvalue for="colour" value="#525252"></attvalue>
           <attvalue for="weighted indegree" value="0.0"></attvalue>
           <attvalue for="weighted outdegree" value="1.0"></attvalue>
           <attvalue for="weighted degree" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="11.5"></viz:size>
-        <viz:position x="475.13577" y="300.40533"></viz:position>
-        <viz:color r="82" g="82" b="82"></viz:color>
+        <viz:size value="11.818182"></viz:size>
+        <viz:position x="-571.8543" y="115.32005"></viz:position>
       </node>
       <node id="paris_FR_gid_2988507" label="Paris">
         <attvalues>
@@ -193,45 +210,73 @@
           <attvalue for="locations_modern_province" value="Île-de-France"></attvalue>
           <attvalue for="locations_lat" value="48.85341"></attvalue>
           <attvalue for="locations_lng" value="2.3488"></attvalue>
-          <attvalue for="colour" value="#525252"></attvalue>
-          <attvalue for="weighted indegree" value="23.0"></attvalue>
-          <attvalue for="weighted outdegree" value="2.0"></attvalue>
-          <attvalue for="weighted degree" value="25.0"></attvalue>
+          <attvalue for="weighted indegree" value="27.0"></attvalue>
+          <attvalue for="weighted outdegree" value="4.0"></attvalue>
+          <attvalue for="weighted degree" value="31.0"></attvalue>
         </attvalues>
-        <viz:size value="13.0"></viz:size>
-        <viz:position x="-95.30678" y="-50.68089"></viz:position>
-        <viz:color r="82" g="82" b="82"></viz:color>
+        <viz:size value="17.272728"></viz:size>
+        <viz:position x="81.15153" y="126.53401"></viz:position>
+      </node>
+      <node id="rome_IT_gid_3169070" label="Rome">
+        <attvalues>
+          <attvalue for="locations_modern_state" value="Italy"></attvalue>
+          <attvalue for="locations_modern_province" value="Lazio"></attvalue>
+          <attvalue for="locations_lat" value="41.89193"></attvalue>
+          <attvalue for="locations_lng" value="12.51133"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
+        </attvalues>
+        <viz:size value="11.818182"></viz:size>
+        <viz:position x="-194.77722" y="-564.906"></viz:position>
       </node>
       <node id="romorantin_lanthenay_FR_gid_2982967" label="Romorantin-Lanthenay">
         <attvalues>
           <attvalue for="locations_modern_state" value="France"></attvalue>
-          <attvalue for="locations_modern_province" value="Centre"></attvalue>
+          <attvalue for="locations_modern_province" value="Centre-Val de Loire"></attvalue>
           <attvalue for="locations_lat" value="47.36667"></attvalue>
           <attvalue for="locations_lng" value="1.75"></attvalue>
-          <attvalue for="colour" value="#525252"></attvalue>
           <attvalue for="weighted indegree" value="4.0"></attvalue>
           <attvalue for="weighted outdegree" value="0.0"></attvalue>
           <attvalue for="weighted degree" value="4.0"></attvalue>
         </attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="329.34332" y="135.26952"></viz:position>
-        <viz:color r="82" g="82" b="82"></viz:color>
+        <viz:position x="-371.66336" y="24.819052"></viz:position>
+      </node>
+      <node id="venice_IT_gid_3164603" label="Venice">
+        <attvalues>
+          <attvalue for="locations_modern_state" value="Italy"></attvalue>
+          <attvalue for="locations_modern_province" value="Veneto"></attvalue>
+          <attvalue for="locations_lat" value="45.43713"></attvalue>
+          <attvalue for="locations_lng" value="12.33265"></attvalue>
+          <attvalue for="weighted indegree" value="0.0"></attvalue>
+          <attvalue for="weighted outdegree" value="1.0"></attvalue>
+          <attvalue for="weighted degree" value="1.0"></attvalue>
+        </attvalues>
+        <viz:size value="11.818182"></viz:size>
+        <viz:position x="117.550514" y="-581.9259"></viz:position>
       </node>
     </nodes>
     <edges>
-      <edge id="6671" source="antwerpen_BE_gid_2803138" target="paris_FR_gid_2988507" weight="6.0"></edge>
-      <edge id="6673" source="leuven_BE_gid_2792482" target="marly_la_ville_FR_gid_2995653"></edge>
-      <edge id="6674" source="leuven_BE_gid_2792482" target="romorantin_lanthenay_FR_gid_2982967"></edge>
-      <edge id="6675" source="basel_CH_gid_2661604" target="paris_FR_gid_2988507" weight="4.0"></edge>
-      <edge id="6681" source="brussels_BE_gid_2800866" target="paris_FR_gid_2988507"></edge>
-      <edge id="6684" source="leuven_BE_gid_2792482" target="paris_FR_gid_2988507" weight="8.0"></edge>
-      <edge id="6691" source="mechelen_BE_gid_2791537" target="paris_FR_gid_2988507"></edge>
-      <edge id="6693" source="milano_IT_gid_3173435" target="paris_FR_gid_2988507"></edge>
-      <edge id="6694" source="padova_IT_gid_3171728" target="romorantin_lanthenay_FR_gid_2982967"></edge>
-      <edge id="6695" source="fontenay_le_comte_FR_gid_3017921" target="romorantin_lanthenay_FR_gid_2982967"></edge>
-      <edge id="6696" source="paris_FR_gid_2988507" target="blois_FR_gid_3032213"></edge>
-      <edge id="6697" source="paris_FR_gid_2988507" target="romorantin_lanthenay_FR_gid_2982967"></edge>
-      <edge id="6698" source="brugge_BE_gid_2800931" target="paris_FR_gid_2988507" weight="2.0"></edge>
+      <edge id="0" source="antwerpen_BE_gid_2803138" target="paris_FR_gid_2988507" weight="6.0"></edge>
+      <edge id="2" source="leuven_BE_gid_2792482" target="marly_la_ville_FR_gid_2995653" weight="2.0"></edge>
+      <edge id="3" source="leuven_BE_gid_2792482" target="romorantin_lanthenay_FR_gid_2982967"></edge>
+      <edge id="4" source="basel_CH_gid_2661604" target="paris_FR_gid_2988507" weight="4.0"></edge>
+      <edge id="10" source="brussels_BE_gid_2800866" target="paris_FR_gid_2988507"></edge>
+      <edge id="13" source="leuven_BE_gid_2792482" target="paris_FR_gid_2988507" weight="8.0"></edge>
+      <edge id="20" source="mechelen_BE_gid_2791537" target="paris_FR_gid_2988507"></edge>
+      <edge id="22" source="avignon_FR_gid_3035681" target="paris_FR_gid_2988507"></edge>
+      <edge id="23" source="paris_FR_gid_2988507" target="paris_FR_gid_2988507" weight="2.0"></edge>
+      <edge id="24" source="venice_IT_gid_3164603" target="marly_la_ville_FR_gid_2995653"></edge>
+      <edge id="26" source="london_GB_gid_2643743" target="paris_FR_gid_2988507"></edge>
+      <edge id="27" source="rome_IT_gid_3169070" target="marly_la_ville_FR_gid_2995653"></edge>
+      <edge id="28" source="freiburg_DE_gid_2925177" target="marly_la_ville_FR_gid_2995653"></edge>
+      <edge id="29" source="milano_IT_gid_3173435" target="paris_FR_gid_2988507"></edge>
+      <edge id="30" source="padova_IT_gid_3171728" target="romorantin_lanthenay_FR_gid_2982967"></edge>
+      <edge id="31" source="fontenay_le_comte_FR_gid_3017921" target="romorantin_lanthenay_FR_gid_2982967"></edge>
+      <edge id="32" source="paris_FR_gid_2988507" target="blois_FR_gid_3032213"></edge>
+      <edge id="33" source="paris_FR_gid_2988507" target="romorantin_lanthenay_FR_gid_2982967"></edge>
+      <edge id="35" source="brugge_BE_gid_2800931" target="paris_FR_gid_2988507" weight="2.0"></edge>
     </edges>
   </graph>
 </gexf>
