@@ -25,13 +25,15 @@ plot1 <- ggplot(data, aes(x= reorder(Location.Name.Modern, -Number.of.letters.se
   geom_text(aes(label=Number.of.letters.sent.from.this.location.to.Budé.from.mutual.correspondents.of.his.and.Erasmus..incl..Erasmus.), vjust=-0.5, color='black') +
   labs(x="Locations",y="Number of letters sent to Budé from this location (including letters by Erasmus)") +
   theme_bw() +
+  theme(axis.title.x=element_blank()) +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.35))
 plot1
-
 
 # create box plot
 plot2 <- ggplot(data, aes(x= ' ', y = Number.of.letters.sent.from.this.location.to.Budé.from.mutual.correspondents.of.his.and.Erasmus..incl..Erasmus.)) +
   geom_boxplot(outlier.size=2, notch = FALSE) +
+  geom_hline(aes(yintercept = mean(Number.of.letters.sent.from.this.location.to.Budé.from.mutual.correspondents.of.his.and.Erasmus..incl..Erasmus.), linetype = "mean"), size = 0.3) +
+  geom_hline(aes(yintercept = median(Number.of.letters.sent.from.this.location.to.Budé.from.mutual.correspondents.of.his.and.Erasmus..incl..Erasmus.), linetype = "median"), size = 0.3) +
   geom_text_repel(label=ifelse(data$Number.of.letters.sent.from.this.location.to.Budé.from.mutual.correspondents.of.his.and.Erasmus..incl..Erasmus.> upper_dots,as.character(data$Location.Name.Modern),'')) +
   theme_bw() +
   theme(axis.title.x=element_blank()) +

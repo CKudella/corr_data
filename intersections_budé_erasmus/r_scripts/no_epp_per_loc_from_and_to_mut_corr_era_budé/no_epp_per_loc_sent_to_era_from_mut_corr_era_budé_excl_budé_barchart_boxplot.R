@@ -17,24 +17,27 @@ quartiles <- as.numeric(quantile(data$Number.of.letters.sent.from.this.location.
 IQR <- diff(quartiles[c(1, 3)])
 
 # calculate outlier treshold
-upper_dots <- min(max(data$Number.of.letters.sent.from.this.location.to.Erasmus.from.mutual.correspondents.of.his.and.Budé..excl..Budé), quartiles[3] + 1.5 * IQR)
+upper_dots <- min(max(data$Number.of.letters.sent.from.this.location.to.Erasmus.from.mutual.correspondents.of.his.and.Budé..excl..Budé.), quartiles[3] + 1.5 * IQR)
 
 # create bar chart
 plot1 <- ggplot(data, aes(x= reorder(Location.Name.Modern, -Number.of.letters.sent.from.this.location.to.Erasmus.from.mutual.correspondents.of.his.and.Budé..excl..Budé.),y=Number.of.letters.sent.from.this.location.to.Erasmus.from.mutual.correspondents.of.his.and.Budé..excl..Budé.)) +
   geom_bar(stat = "identity") +
   geom_text(aes(label=Number.of.letters.sent.from.this.location.to.Erasmus.from.mutual.correspondents.of.his.and.Budé..excl..Budé.), vjust=-0.5, color='black') +
-  labs(x="Locations",y="Number of letters written to Erasmus by mutual correspondents (excl. Budé)") +
+  labs(x="Locations",y="Number of letters sent to Erasmus from this location (excluding letters to Budé)") +
   theme_bw() +
+  theme(axis.title.x=element_blank()) +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.35))
 plot1
 
 # create box plot
 plot2 <- ggplot(data, aes(x= ' ', y = Number.of.letters.sent.from.this.location.to.Erasmus.from.mutual.correspondents.of.his.and.Budé..excl..Budé.)) +
   geom_boxplot(outlier.size=2, notch = FALSE) +
+  geom_hline(aes(yintercept = mean(Number.of.letters.sent.from.this.location.to.Erasmus.from.mutual.correspondents.of.his.and.Budé..excl..Budé.), linetype = "mean"), size = 0.3) +
+  geom_hline(aes(yintercept = median(Number.of.letters.sent.from.this.location.to.Erasmus.from.mutual.correspondents.of.his.and.Budé..excl..Budé.), linetype = "median"), size = 0.3) +
   geom_text_repel(label=ifelse(data$Number.of.letters.sent.from.this.location.to.Erasmus.from.mutual.correspondents.of.his.and.Budé..excl..Budé.> upper_dots,as.character(data$Location.Name.Modern),'')) +
   theme_bw() +
   theme(axis.title.x=element_blank()) +
-  labs(y = "Number of letters written to Erasmus by mutual correspondents (excl. Budé)")
+  labs(y = "Number of letters sent to Erasmus from this location (excluding letters to Budé)")
 plot2
 
 # combine plots via patchwork

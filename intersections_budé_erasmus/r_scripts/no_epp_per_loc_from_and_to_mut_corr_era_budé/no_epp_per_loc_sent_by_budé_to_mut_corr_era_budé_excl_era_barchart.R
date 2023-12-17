@@ -12,7 +12,7 @@ data<-read.csv("no_epp_per_loc_from_and_to_mut_corr_era_budé/no_epp_per_loc_sen
 plot <- ggplot(data, aes(x= reorder(Location.Name.Modern, -Number.of.letters.sent.to.this.location.by.Budé.to.mutual.correspondents.of.his.and.Erasmus..excl..Erasmus.),y=Number.of.letters.sent.to.this.location.by.Budé.to.mutual.correspondents.of.his.and.Erasmus..excl..Erasmus.)) +
   geom_bar(stat = "identity") +
   geom_text(aes(label=Number.of.letters.sent.to.this.location.by.Budé.to.mutual.correspondents.of.his.and.Erasmus..excl..Erasmus.), vjust=-0.5, color='black') +
-  labs(x="Locations",y="Number of letters sent by Budé to this location (excluding letters to Erasmus") +
+  labs(x="Locations",y="Number of letters sent by Budé to this location (excluding letters to Erasmus)") +
   theme_bw() +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.35))
 plot
