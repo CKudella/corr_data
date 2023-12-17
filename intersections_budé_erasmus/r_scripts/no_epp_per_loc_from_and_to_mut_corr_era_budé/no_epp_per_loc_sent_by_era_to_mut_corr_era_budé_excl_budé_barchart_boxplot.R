@@ -10,6 +10,15 @@ setwd("../query_results/")
 # read data
 data<-read.csv("no_epp_per_loc_from_and_to_mut_corr_era_budé/no_epp_per_loc_sent_by_era_to_mut_corr_era_budé_excl_budé.csv", fileEncoding="UTF-8", na.strings=c("NULL"))
 
+# calculate quartiles
+quartiles <- as.numeric(quantile(data$Number.of.letters.sent.to.this.location.by.Erasmus.to.mutual.correspondents.of.his.and.Budé..excl..Budé., probs = c(0.25, 0.5, 0.75)))
+
+# calculate IQR
+IQR <- diff(quartiles[c(1, 3)])
+
+# calculate outlier treshold
+upper_dots <- min(max(data$Number.of.letters.sent.to.this.location.by.Erasmus.to.mutual.correspondents.of.his.and.Budé..excl..Budé.), quartiles[3] + 1.5 * IQR)
+
 # create bar chart
 plot1 <- ggplot(data, aes(x= reorder(Location.Name.Modern, -Number.of.letters.sent.to.this.location.by.Erasmus.to.mutual.correspondents.of.his.and.Budé..excl..Budé.),y=Number.of.letters.sent.to.this.location.by.Erasmus.to.mutual.correspondents.of.his.and.Budé..excl..Budé.)) +
   geom_bar(stat = "identity") +
@@ -22,7 +31,7 @@ plot1
 # create box plot
 plot2 <- ggplot(data, aes(x= ' ', y = Number.of.letters.sent.to.this.location.by.Erasmus.to.mutual.correspondents.of.his.and.Budé..excl..Budé.)) +
   geom_boxplot(outlier.size=2, notch = FALSE) +
-  geom_text_repel(label=ifelse(data$Number.of.letters.sent.to.this.location.by.Erasmus.to.mutual.correspondents.of.his.and.Budé..excl..Budé.>12.25,as.character(data$Location.Name.Modern),'')) +
+  geom_text_repel(label=ifelse(data$Number.of.letters.sent.to.this.location.by.Erasmus.to.mutual.correspondents.of.his.and.Budé..excl..Budé.>upper_dots,as.character(data$Location.Name.Modern),'')) +
   theme_bw() +
   theme(axis.title.x=element_blank()) +
   labs(y = "Number of letters written by Erasmus to mutual correspondents (excl. Budé)")
