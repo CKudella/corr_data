@@ -29,8 +29,11 @@ duration_of_correspondence_median <- median(duration_of_correspondence_all_corr$
 # create box plot
 plot1 <- ggplot(duration_of_correspondence_all_corr, aes(x = " ", y = duration_in_years)) +
   geom_boxplot(notch = FALSE) +
+  geom_hline(aes(yintercept = mean(duration_in_years), linetype="mean"), size = 0.3) +
+  geom_hline(aes(yintercept = median(duration_in_years), linetype="median"), size = 0.3) +
   labs(x = "Correspondent", y = "Duration of the correspondence with Budé in years") +
   theme_bw() +
+  theme(legend.position = "bottom") +
   theme(axis.title.x = element_text(), axis.text.x = element_blank(), axis.ticks.x = element_blank())
 plot1
 
