@@ -11,7 +11,7 @@ data <- read.csv("no_epp_per_modern_state_year/no_epp_from_era_to_modern_state_p
 # create facet grid with bar charts
 plot <- ggplot(data = data, aes(x = send_date_year1, y = Number.of.letters.Erasmus.sent.to.this.modern.state.this.year)) +
   geom_bar(stat = "identity") +
-  labs(x = "Year", y = "Number of letters sent to this modern state by Erasmus") +
+  labs(x = "Year", y = "Number of letters sent by Erasmus to this modern state") +
   scale_x_continuous(breaks = c(1484:1536)) +
   facet_grid(Modern.State ~ ., space = "free") +
   theme_bw() +

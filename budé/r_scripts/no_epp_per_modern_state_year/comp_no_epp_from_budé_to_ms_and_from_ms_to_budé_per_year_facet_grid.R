@@ -22,7 +22,7 @@ plot <- ggplot(data = data_long, aes(x = Year, y = value, colour = variable)) +
   theme(strip.text.y = element_text(angle = 0, hjust = 1)) +
   theme(legend.position = "bottom") +
   theme(legend.title = element_blank()) +
-  scale_colour_discrete(labels = c("Number of letters sent to this modern state by Budé", "Number of letters sent from this modern state to Budé"))
+  scale_colour_discrete(labels = c("Number of letters sent by Budé to this modern state per year", "Number of letters sent to Budé from this modern state per year"))
 plot
 
 # change working directory

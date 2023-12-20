@@ -12,7 +12,7 @@ data <- read.csv("no_epp_per_modern_state/no_epp_per_modern_state_written_by_bud
 plot <- ggplot(data, aes(x = reorder(Modern.State, -Number.of.letters.sent.from.this.modern.state.by.Budé), y = Number.of.letters.sent.from.this.modern.state.by.Budé)) +
   geom_bar(stat = "identity") +
   geom_text(aes(label = Number.of.letters.sent.from.this.modern.state.by.Budé), vjust = -0.5, color = "black") +
-  labs(x = "Modern State", y = "Number of letters written by Budé in this modern state") +
+  labs(x = "Modern State", y = "Number of letters written by Budé at this modern state") +
   theme_bw() +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.35))
 plot

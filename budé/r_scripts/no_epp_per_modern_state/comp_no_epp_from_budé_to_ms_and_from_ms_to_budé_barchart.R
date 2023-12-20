@@ -19,7 +19,7 @@ plot <- ggplot(data_long, aes(x = reorder(ModernState, -value), y = value, fill 
   theme(axis.text.x = element_text(angle = 90, vjust = 0.35)) +
   theme(legend.position = "bottom") +
   theme(legend.title = element_blank()) +
-  scale_fill_grey(labels = c("Number of letters sent by Budé to this modern state", "Number of letter sent from this modern state to Budé"))
+  scale_fill_grey(labels = c("Number of letters sent by Budé to this modern state", "Number of letter sent to Budé from this modern state"))
 plot
 
 # change working directory
