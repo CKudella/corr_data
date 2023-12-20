@@ -11,7 +11,7 @@ data <- read.csv("no_epp_per_loc/no_epp_per_loc_written_by_pirck_at_outliers.csv
 # create facet grid with bar charts
 plot <- ggplot(data = data, aes(x = YEAR, y = COUNT)) +
   geom_bar(stat = "identity") +
-  labs(x = "Year", y = " Number of letters written at this location by Pirckheimer") +
+  labs(x = "Year", y = " Number of letters written by Pirckheimer at this location") +
   scale_x_continuous(breaks = c(1484:1536)) +
   facet_grid(locations_name_modern ~ ., space = "free") +
   theme_bw() +

@@ -11,7 +11,7 @@ data <- read.csv("no_epp_per_loc/no_epp_per_loc_written_by_budé_at.csv", fileEn
 # create bar chart
 plot <- ggplot(data = data, aes(x = reorder(Location.Name, -Number.of.letters.sent.from.this.location.from.Budé), y = Number.of.letters.sent.from.this.location.from.Budé, label = Location.Name)) +
   geom_bar(stat = "identity") +
-  labs(x = "Location", y = "Number of letters written at this location by Budé") +
+  labs(x = "Location", y = "Number of letters written by Budé at this location") +
   geom_text(aes(label = Number.of.letters.sent.from.this.location.from.Budé), vjust = -0.5, color = "black") +
   theme_bw() +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.35))
