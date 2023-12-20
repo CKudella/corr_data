@@ -13,7 +13,7 @@ plot <- ggplot(data = data, aes(x = YEAR, y = NewCorrWritingToPirck)) +
   geom_bar(stat = "identity") +
   labs(x = "Year", y = "Number of new correspondents who wrote letters to Pirckheimer") +
   geom_text(aes(label = NewCorrWritingToPirck), vjust = -0.5, color = "black") +
-  scale_x_continuous(breaks = c(1484:1536)) +
+  scale_x_continuous(breaks = c(1491:1530)) +
   scale_y_continuous(breaks = seq(0, 30, 5)) +
   theme_bw() +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.35)) +

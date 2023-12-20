@@ -12,7 +12,7 @@ data <- read.csv("no_epp_per_modern_state_year/no_epp_to_pirck_from_modern_state
 plot <- ggplot(data = data, aes(x = send_date_year1, y = Number.of.letters.sent.from.this.modern.state.to.Pirckheimer.this.year)) +
   geom_bar(stat = "identity") +
   labs(x = "Year", y = "Number of letters sent to Pirckheimer from this modern state") +
-  scale_x_continuous(breaks = c(1484:1536)) +
+  scale_x_continuous(breaks = c(1491:1530)) +
   facet_grid(Modern.State ~ ., space = "free") +
   theme_bw() +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.35)) +

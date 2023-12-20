@@ -9,7 +9,7 @@ setwd("../query_results/")
 data <- read.csv("no_corr_per_year/avg_no_epp_per_corr_year_to_pirck.csv", fileEncoding = "UTF-8")
 
 # create data frame for years 1484-1536
-data2 <- tibble(Year = 1484:1536)
+data2 <- tibble(Year = 1491:1530)
 
 # merge data frames
 data3 <- left_join(data2, data, by = "Year")

@@ -15,7 +15,7 @@ plot <- ggplot(data, aes(x = Year, y = Average.number.of.letters.sent.from.Pirck
   geom_hline(aes(yintercept = mean(Average.number.of.letters.sent.from.Pirckheimer.per.correspondent.this.year), linetype = "mean"), size = 0.3) +
   geom_hline(aes(yintercept = median(Average.number.of.letters.sent.from.Pirckheimer.per.correspondent.this.year), linetype = "median"), size = 0.3) +
   labs(x = "Year", y = "Average number of letters sent by Pirckheimer per year and correspondent") +
-  scale_x_continuous(breaks = c(1484:1536)) +
+  scale_x_continuous(breaks = c(1491:1530)) +
   theme_bw() +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.35)) +
   theme(legend.position = "bottom")
