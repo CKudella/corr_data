@@ -38,7 +38,7 @@ plot1 <- ggplot(data3, aes(x = Year, y = Average.number.of.letters.sent.from.Pir
   geom_point(shape = 1, fill = "white", stroke = 1.25) +
   geom_hline(aes(yintercept = mean_value, linetype = "mean"), size = 0.3) +
   geom_hline(aes(yintercept = median_value, linetype = "median"), size = 0.3) +
-  labs(x = "Year", y = "Average number of letters by Erasmus per correspondent") +
+  labs(x = "Year", y = "Average number of letters sent by Pirckheimer per year and correspondent") +
   scale_x_continuous(breaks = seq(1484, 1536, by = 1)) +
   theme_bw() +
   theme(legend.position = "bottom") +
@@ -49,7 +49,7 @@ plot1
 plot2 <- ggplot(data3, aes(x = " ", y = Average.number.of.letters.sent.from.Pirckheimer.per.correspondent.this.year)) +
   geom_boxplot(notch = FALSE) +
   geom_text_repel(label = ifelse(data3$Average.number.of.letters.sent.from.Pirckheimer.per.correspondent.this.year >= upper_dots, as.character(data3$Year), "")) +
-  labs(x = "Year", y = "Average number of letters by Erasmus per correspondent") +
+  labs(x = "Year", y = "Average number of letters sent by Pirckheimer per year and correspondent") +
   theme_bw() +
   theme(axis.title.x = element_text(), axis.text.x = element_blank(), axis.ticks.x = element_blank())
 plot2

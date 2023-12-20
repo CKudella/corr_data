@@ -23,7 +23,7 @@ plot <- ggplot(data_long, aes(x = reorder(Modern.State, -value), y = value, fill
   theme(axis.text.x = element_text(angle = 90, vjust = 0.35)) +
   theme(legend.position = "bottom") +
   theme(legend.title = element_blank()) +
-  scale_fill_grey(labels = c("Number of correspondents Erasmus wrote letters to", "Number of correspondents who wrote letters to Erasmus"))
+  scale_fill_grey(labels = c("Number of correspondents to whom Erasmus wrote letters", "Number of correspondents who wrote letters to Erasmus"))
 plot
 
 # change working directory

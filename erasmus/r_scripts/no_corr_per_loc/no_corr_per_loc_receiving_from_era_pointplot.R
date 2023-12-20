@@ -13,7 +13,7 @@ plot <- ggplot(data = data, aes(x = reorder(Location.Name.Modern, -Number.of.cor
   geom_point(stat = "identity") +
   geom_hline(aes(yintercept = mean(Number.of.correspondents.who.received.at.this.location.letters.from.Erasmus), linetype = "mean"), size = 0.3) +
   geom_hline(aes(yintercept = median(Number.of.correspondents.who.received.at.this.location.letters.from.Erasmus), linetype = "median"), size = 0.3) +
-  labs(x = "Location", y = "Number of correspondents receiving letters from Erasmus") +
+  labs(x = "Location", y = "Number of correspondents at this location to whom Erasmus wrote") +
   theme_bw() +
   theme(legend.position = "bottom") +
   theme(axis.title.x = element_text(), axis.text.x = element_blank(), axis.ticks.x = element_blank())

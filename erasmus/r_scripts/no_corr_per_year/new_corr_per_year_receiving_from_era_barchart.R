@@ -11,7 +11,7 @@ data <- read.csv("no_corr_per_year/new_corr_per_year_receiving_from_era.csv", fi
 # create bar chart
 plot <- ggplot(data = data, aes(x = YEAR, y = NewCorrReceivingFromEra)) +
   geom_bar(stat = "identity") +
-  labs(x = "Year", y = "Number of new correspondents Erasmus writes to") +
+  labs(x = "Year", y = "Number of new correspondents to whom Erasmus wrote letters") +
   geom_text(aes(label = NewCorrReceivingFromEra), vjust = -0.5, color = "black", size = rel(2)) +
   scale_x_continuous(breaks = c(1484:1536)) +
   scale_y_continuous(breaks = seq(0, 50, 5)) +

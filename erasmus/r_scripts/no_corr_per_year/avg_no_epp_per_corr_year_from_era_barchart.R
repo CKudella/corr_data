@@ -14,7 +14,7 @@ plot <- ggplot(data, aes(x = Year, y = Average.number.of.letters.sent.from.Erasm
   geom_text(aes(label =  sprintf("%.2f", Average.number.of.letters.sent.from.Erasmus.per.correspondent.this.year)), vjust = -0.5, color = "black", size = 2.5) +
   geom_hline(aes(yintercept = mean(Average.number.of.letters.sent.from.Erasmus.per.correspondent.this.year), linetype = "mean"), size = 0.3) +
   geom_hline(aes(yintercept = median(Average.number.of.letters.sent.from.Erasmus.per.correspondent.this.year), linetype = "median"), size = 0.3) +
-  labs(x = "Year", y = "Average number of letters by Erasmus per correspondent") +
+  labs(x = "Year", y = "Average number of letters sent by Erasmus per year and correspondent") +
   scale_x_continuous(breaks = c(1484:1536)) +
   theme_bw() +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.35)) +

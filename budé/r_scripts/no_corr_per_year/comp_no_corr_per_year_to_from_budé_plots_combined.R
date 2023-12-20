@@ -30,7 +30,7 @@ plot1 <- ggplot(data = data_long, aes(x = Year, y = value, colour = variable)) +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.35)) +
   theme(legend.position = "bottom") +
   theme(legend.title = element_blank()) +
-  scale_color_grey(labels = c("Number of correspondents Budé writes to", "Number of correspondents writing to Budé"))
+  scale_color_grey(labels = c("Number of correspondents to whom Budé wrote letters", "Number of correspondents who wrote letters to Budé"))
 plot1
 
 # create scatter plot with a regression line
@@ -38,7 +38,7 @@ plot2 <- ggplot(data = data3, aes(x = Number.of.correspondents.Budé.writes.to.t
   geom_point() +
   geom_smooth(method = "lm", se = TRUE) +
   geom_text_repel(aes(label = Year), hjust = 0.5, vjust = -0.5,box.padding = 0.75, max.overlaps = Inf) +
-  labs(x = "Number of correspondents Budé writes to", y = "Number of correspondents writing to Budé") +
+  labs(x = "Number of correspondents to whom Budé wrote letters", y = "Number of correspondents who wrote letters to Budé") +
   theme_bw()
 plot2
 

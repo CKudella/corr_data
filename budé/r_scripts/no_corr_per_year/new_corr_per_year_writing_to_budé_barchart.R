@@ -11,7 +11,7 @@ data <- read.csv("no_corr_per_year/new_corr_per_year_writing_to_budé.csv", file
 # create bar chart
 plot <- ggplot(data = data, aes(x = YEAR, y = NewCorrWritingToBudé)) +
   geom_bar(stat = "identity") +
-  labs(x = "Year", y = "Number of new correspondents writing to Budé") +
+  labs(x = "Year", y = "Number of new correspondents who wrote letters to Budé") +
   geom_text(aes(label = NewCorrWritingToBudé), vjust = -0.5, color = "black") +
   scale_x_continuous(breaks = c(1484:1540)) +
   scale_y_continuous(breaks = seq(0, 5, 1)) +

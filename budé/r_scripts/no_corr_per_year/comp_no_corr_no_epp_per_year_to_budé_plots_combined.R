@@ -20,7 +20,7 @@ data3 <- left_join(data2, data, by = "Year")
 plot1 <- ggplot(data = data3, aes(x = Year, y = Number.of.correspondents.writing.letters.to.Budé.this.year)) +
   geom_line(stat = "identity", size = 0.9) +
   geom_point(shape = 1, fill = "white", stroke = 1.25) +
-  labs(x = "Year", y = "Number of correspondents writing to Budé") +
+  labs(x = "Year", y = "Number of correspondents who wrote letters to Budé") +
   scale_x_continuous(breaks = c(1484:1536)) +
   scale_y_continuous(breaks = seq(0, 5, 1)) +
   theme_bw() +
@@ -32,7 +32,7 @@ plot1
 plot2 <- ggplot(data = data3, aes(x = Year, y = Number.of.letters.sent.to.Budé.this.year)) +
   geom_line(stat = "identity", size = 0.9) +
   geom_point(shape = 1, fill = "white", stroke = 1.25) +
-  labs(x = "Year", y = "Number of letters written to Budé") +
+  labs(x = "Year", y = "Number of letters sent to Budé") +
   scale_x_continuous(breaks = c(1484:1536)) +
   scale_y_continuous(breaks = seq(0, 7, 1)) +
   theme_bw() +
@@ -46,7 +46,7 @@ plot3 <- ggplot(data = data3, aes(x = Number.of.correspondents.writing.letters.t
   geom_smooth(method = "lm", se = TRUE) +
   scale_y_continuous(breaks = seq(0, 7, 1)) +
   geom_text_repel(aes(label = Year), hjust = 0.5, vjust = -0.5,box.padding = 0.75, max.overlaps = Inf) +
-  labs(x = "Number of correspondents writing to Budé", y = "Number of letters written to Budé") +
+  labs(x = "Number of correspondents who wrote letters to Budé", y = "Number of letters sent to Budé") +
   theme_bw()
 plot3
 

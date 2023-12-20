@@ -24,7 +24,7 @@ plot1 <- ggplot(data = data, aes(x = reorder(Location.Name.Modern, -Number.of.co
   geom_point(stat = "identity") +
   geom_hline(aes(yintercept = mean(Number.of.correspondents.who.received.at.this.location.letters.from.Budé), linetype = "mean"), size = 0.3) +
   geom_hline(aes(yintercept = median(Number.of.correspondents.who.received.at.this.location.letters.from.Budé), linetype = "median"), size = 0.3) +
-  labs(x = "Location", y = "Number of correspondents receiving letters from Budé") +
+  labs(x = "Location", y = "Number of correspondents at this location to whom Budé wrote") +
   theme_bw() +
   theme(legend.position = "bottom") +
   theme(axis.title.x = element_text(), axis.text.x = element_blank(), axis.ticks.x = element_blank())
@@ -34,7 +34,7 @@ plot1
 plot2 <- ggplot(data, aes(x = " ", y = Number.of.correspondents.who.received.at.this.location.letters.from.Budé)) +
   geom_boxplot(outlier.size = 2, notch = FALSE) +
   geom_text_repel(label = ifelse(data$Number.of.correspondents.who.received.at.this.location.letters.from.Budé >= upper_dots, as.character(data$Location.Name.Modern), "")) +
-  labs(x = "Location", y = "Number of correspondents receiving letters from Budé") +
+  labs(x = "Location", y = "Number of correspondents at this location to whom Budé wrote") +
   theme_bw() +
   theme(axis.title.x = element_text(), axis.text.x = element_blank(), axis.ticks.x = element_blank())
 plot2
