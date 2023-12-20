@@ -15,7 +15,7 @@ data_long <- data %>% pivot_longer(cols = c(NoEppSentFromBudé, NoEppSentToBudé
 plot <- ggplot(data = data_long, aes(x = Year, y = value, colour = variable)) +
   geom_line(stat = "identity", size = 0.9) +
   labs(x = "Year", y = "Number of letters") +
-  scale_x_continuous(breaks = c(1484:1540)) +
+  scale_x_continuous(breaks = c(1503:1540)) +
   facet_grid(ModernState ~ ., space = "free") +
   theme_bw() +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.35)) +

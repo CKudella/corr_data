@@ -20,7 +20,7 @@ IQR <- diff(quartiles[c(1, 3)])
 upper_dots <- min(data$Average.number.of.letters.sent.per.correspondent.to.Budé.this.year[data$Average.number.of.letters.sent.per.correspondent.to.Budé.this.year > (quartiles[3] + 1.5*IQR)])
 
 # create data frame for years 1484-1536
-data2 <- tibble(Year = 1484:1536)
+data2 <- tibble(Year = 1503:1540)
 
 # merge data frames
 data3 <- left_join(data2, data, by = "Year")

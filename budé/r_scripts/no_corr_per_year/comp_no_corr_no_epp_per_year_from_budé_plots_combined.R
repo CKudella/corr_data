@@ -11,7 +11,7 @@ setwd("../query_results/")
 data <- read.csv("no_corr_per_year/comp_no_corr_no_epp_per_year_from_budé.csv", fileEncoding = "UTF-8", na.strings = c("NULL"))
 
 # create data frame for years 1484-1536
-data2 <- tibble(Year = 1484:1536)
+data2 <- tibble(Year = 1503:1540)
 
 # merge data frames
 data3 <- left_join(data2, data, by = "Year")
