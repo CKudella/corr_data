@@ -25,7 +25,7 @@ outliers_df <- data %>%
 plot <- ggplot(data, aes(x = " ", y = Number.of.letters.sent.to.Budé.from.this.correspondent)) +
   geom_boxplot(width = 0.1, color = "black", outlier.alpha = 0.5) +
   geom_text_repel(data = outliers_df, aes(label = name_in_edition), hjust = 1.2, vjust = 0, box.padding = 3, max.overlaps = Inf) +
-  labs(x = "Correspondent", y = "Number of letters sent to Budé by this correspondent") +
+  labs(x = "Correspondent", y = "Number of letters sent by this correspondent to Budé") +
   theme_bw() +
   theme(axis.title.x = element_text(), axis.text.x = element_blank(), axis.ticks.x = element_blank())
 plot
