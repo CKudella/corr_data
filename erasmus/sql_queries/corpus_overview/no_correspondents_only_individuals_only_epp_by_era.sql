@@ -1,4 +1,4 @@
-SELECT COUNT(correspondents_id) AS 'Total number of correspondents (type: individual) for whom the dataset contains only letters written to them from Erasmus but not vice versa'
+SELECT COUNT(correspondents_id) AS 'Total number of correspondents (type: individual) for whom the dataset contains only letters sent to them by Erasmus but not vice versa'
 FROM era_cdb_v3.correspondents
 WHERE correspondents_id IN
     (SELECT DISTINCT recipient_id

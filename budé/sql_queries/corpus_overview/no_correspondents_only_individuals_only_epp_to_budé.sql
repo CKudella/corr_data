@@ -1,4 +1,4 @@
-SELECT COUNT(correspondents_id) AS 'Total number of correspondents (type: individual) for whom the dataset contains only letters written from them to Budé but not vice versa'
+SELECT COUNT(correspondents_id) AS 'Total number of correspondents (type: individual) for whom the dataset contains only letters sent by them to Budé but not vice versa'
 FROM budé_cdb_v1.correspondents
 WHERE correspondents_id IN
     (SELECT DISTINCT sender_id

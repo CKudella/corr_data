@@ -1,4 +1,4 @@
-SELECT COUNT(correspondents_id) AS 'Total number of correspondents for whom the dataset contains only letters written to them from Pirckheimer but not vice versa'
+SELECT COUNT(correspondents_id) AS 'Total number of correspondents for whom the dataset contains only letters sent to them by Pirckheimer but not vice versa'
  FROM wpirck_cdb_v1.correspondents
  WHERE correspondents_id IN
      (SELECT DISTINCT recipient_id
