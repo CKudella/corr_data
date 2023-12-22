@@ -19,7 +19,7 @@ data_corr <-read.csv("no_corr_per_loc/no_corr_per_loc_receiving_from_era_with_ge
 data_avg_outlier <- subset(data_avg, data_avg$Average.Number.of.letters.per.correspondent > 5)
 
 # subset data_epp outliers
-data_epp_outlier <- subset(data_epp, data_epp$Number.of.letters.sent.to.this.location.from.Erasmus > 13.5)
+data_epp_outlier <- subset(data_epp, data_epp$Number.of.letters.sent.to.this.location.by.Erasmus > 13.5)
 
 # subset data_corr outliers
 data_corr_outlier <- subset(data_corr, data_corr$Number.of.correspondents.who.received.at.this.location.letters.from.Erasmus >= 6)

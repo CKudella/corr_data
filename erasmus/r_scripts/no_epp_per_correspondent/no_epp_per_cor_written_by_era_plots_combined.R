@@ -10,10 +10,10 @@ setwd("../query_results/")
 data <- read.csv("no_epp_per_correspondent/no_epp_per_cor_written_by_era.csv", fileEncoding = "UTF-8", na.strings = c("NULL"))
 
 # create pointplot
-plot1 <- ggplot(data = data, aes(x = reorder(recipient_id, -Number.of.letters.sent.from.Erasmus.to.this.correspondent), y = Number.of.letters.sent.from.Erasmus.to.this.correspondent, label = recipient_id)) +
+plot1 <- ggplot(data = data, aes(x = reorder(recipient_id, -Number.of.letters.sent.by.Erasmus.to.this.correspondent), y = Number.of.letters.sent.by.Erasmus.to.this.correspondent, label = recipient_id)) +
   geom_point(stat = "identity") +
-  geom_hline(aes(yintercept = mean(Number.of.letters.sent.from.Erasmus.to.this.correspondent), linetype = "mean"), size = 0.3) +
-  geom_hline(aes(yintercept = median(Number.of.letters.sent.from.Erasmus.to.this.correspondent), linetype = "median"), size = 0.3) +
+  geom_hline(aes(yintercept = mean(Number.of.letters.sent.by.Erasmus.to.this.correspondent), linetype = "mean"), size = 0.3) +
+  geom_hline(aes(yintercept = median(Number.of.letters.sent.by.Erasmus.to.this.correspondent), linetype = "median"), size = 0.3) +
   labs(x = "Correspondent", y = "Number of letters sent by Erasmus to this correspondent") +
   theme_bw() +
   theme(legend.position = "bottom") +
@@ -21,7 +21,7 @@ plot1 <- ggplot(data = data, aes(x = reorder(recipient_id, -Number.of.letters.se
 plot1
 
 # create box plot and violin plot combined
-plot2 <- ggplot(data, aes(x = " ", y = Number.of.letters.sent.from.Erasmus.to.this.correspondent)) +
+plot2 <- ggplot(data, aes(x = " ", y = Number.of.letters.sent.by.Erasmus.to.this.correspondent)) +
   geom_violin() +
   geom_boxplot(width = 0.1, color = "black", outlier.alpha = 0.25) +
   labs(x = "Correspondent", y = "Number of letters sent by Erasmus to this correspondent") +

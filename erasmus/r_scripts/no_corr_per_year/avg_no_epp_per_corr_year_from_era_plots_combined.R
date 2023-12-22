@@ -11,13 +11,13 @@ setwd("../query_results/")
 data <- read.csv("no_corr_per_year/avg_no_epp_per_corr_year_from_era.csv", fileEncoding = "UTF-8")
 
 # calculate quartiles
-quartiles <- as.numeric(quantile(data$Average.number.of.letters.sent.from.Erasmus.per.correspondent.this.year, probs = c(0.25, 0.5, 0.75)))
+quartiles <- as.numeric(quantile(data$Average.number.of.letters.sent.by.Erasmus.per.correspondent.this.year, probs = c(0.25, 0.5, 0.75)))
 
 # calculate IQR
 IQR <- diff(quartiles[c(1, 3)])
 
 # calculate outlier treshold
-upper_dots <- min(data$Average.number.of.letters.sent.from.Erasmus.per.correspondent.this.year[data$Average.number.of.letters.sent.from.Erasmus.per.correspondent.this.year > (quartiles[3] + 1.5*IQR)])
+upper_dots <- min(data$Average.number.of.letters.sent.by.Erasmus.per.correspondent.this.year[data$Average.number.of.letters.sent.by.Erasmus.per.correspondent.this.year > (quartiles[3] + 1.5*IQR)])
 
 # create data frame for years 1484-1536
 data2 <- tibble(Year = 1484:1536)
@@ -26,14 +26,14 @@ data2 <- tibble(Year = 1484:1536)
 data3 <- left_join(data2, data, by = "Year")
 
 # filter out NAs from the data
-filtered_data <- data3[!is.na(data3$Average.number.of.letters.sent.from.Erasmus.per.correspondent.this.year), ]
+filtered_data <- data3[!is.na(data3$Average.number.of.letters.sent.by.Erasmus.per.correspondent.this.year), ]
 
 # calculate mean and median from the filtered data
-mean_value <- mean(filtered_data$Average.number.of.letters.sent.from.Erasmus.per.correspondent.this.year)
-median_value <- median(filtered_data$Average.number.of.letters.sent.from.Erasmus.per.correspondent.this.year)
+mean_value <- mean(filtered_data$Average.number.of.letters.sent.by.Erasmus.per.correspondent.this.year)
+median_value <- median(filtered_data$Average.number.of.letters.sent.by.Erasmus.per.correspondent.this.year)
 
 # create line chart plot
-plot1 <- ggplot(data3, aes(x = Year, y = Average.number.of.letters.sent.from.Erasmus.per.correspondent.this.year)) +
+plot1 <- ggplot(data3, aes(x = Year, y = Average.number.of.letters.sent.by.Erasmus.per.correspondent.this.year)) +
   geom_line(stat = "identity", size = 0.9) +
   geom_point(shape = 1, fill = "white", stroke = 1.25) +
   geom_hline(aes(yintercept = mean_value, linetype = "mean"), size = 0.3) +
@@ -46,9 +46,9 @@ plot1 <- ggplot(data3, aes(x = Year, y = Average.number.of.letters.sent.from.Era
 plot1
 
 # create box plot
-plot2 <- ggplot(data3, aes(x = " ", y = Average.number.of.letters.sent.from.Erasmus.per.correspondent.this.year)) +
+plot2 <- ggplot(data3, aes(x = " ", y = Average.number.of.letters.sent.by.Erasmus.per.correspondent.this.year)) +
   geom_boxplot(notch = FALSE) +
-  geom_text_repel(label = ifelse(data3$Average.number.of.letters.sent.from.Erasmus.per.correspondent.this.year >= upper_dots, as.character(data3$Year), "")) +
+  geom_text_repel(label = ifelse(data3$Average.number.of.letters.sent.by.Erasmus.per.correspondent.this.year >= upper_dots, as.character(data3$Year), "")) +
   labs(x = "Year", y = "Average number of letters sent by Erasmus per year and correspondent") +
   theme_bw() +
   theme(axis.title.x = element_text(), axis.text.x = element_blank(), axis.ticks.x = element_blank())

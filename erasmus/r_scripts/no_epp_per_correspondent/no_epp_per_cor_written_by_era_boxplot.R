@@ -17,17 +17,17 @@ data$name_in_edition <- gsub("^\\[", "", data$name_in_edition)
 #identify outliers
 outliers_df <- data %>%
   mutate(
-    Q1 = quantile(Number.of.letters.sent.from.Erasmus.to.this.correspondent, 0.25),
-    Q3 = quantile(Number.of.letters.sent.from.Erasmus.to.this.correspondent, 0.75),
+    Q1 = quantile(Number.of.letters.sent.by.Erasmus.to.this.correspondent, 0.25),
+    Q3 = quantile(Number.of.letters.sent.by.Erasmus.to.this.correspondent, 0.75),
     IQR = Q3 - Q1,
     lower_bound = Q1 - 1.5 * IQR,
     upper_bound = Q3 + 1.5 * IQR,
-    is_outlier = Number.of.letters.sent.from.Erasmus.to.this.correspondent < lower_bound | Number.of.letters.sent.from.Erasmus.to.this.correspondent > upper_bound
+    is_outlier = Number.of.letters.sent.by.Erasmus.to.this.correspondent < lower_bound | Number.of.letters.sent.by.Erasmus.to.this.correspondent > upper_bound
   ) %>%
   filter(is_outlier)
 
 # create box plot
-plot <- ggplot(data, aes(x = " ", y = Number.of.letters.sent.from.Erasmus.to.this.correspondent)) +
+plot <- ggplot(data, aes(x = " ", y = Number.of.letters.sent.by.Erasmus.to.this.correspondent)) +
   geom_boxplot(width = 0.1, color = "black", outlier.alpha = 0.5) +
   geom_text_repel(data = outliers_df, aes(label = name_in_edition), hjust = 1.2, vjust = 0, box.padding = 3, max.overlaps = Inf, size = 2.5) +
   labs(x = "Correspondent", y = "Number of letters sent by Erasmus to this correspondent") +

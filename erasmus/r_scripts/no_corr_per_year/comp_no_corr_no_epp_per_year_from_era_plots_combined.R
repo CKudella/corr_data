@@ -17,7 +17,7 @@ data2 <- tibble(Year = 1484:1536)
 data3 <- left_join(data2, data, by = "Year")
 
 # create line chart for number of correspondents
-plot1 <- ggplot(data = data3, aes(x = Year, y = Number.of.correspondents.receiving.letters.from.Erasmus.this.year)) +
+plot1 <- ggplot(data = data3, aes(x = Year, y = Number.of.correspondents.to.whom.Erasmus.wrote.this.year)) +
   geom_line(stat = "identity", size = 0.9) +
   geom_point(shape = 1, fill = "white", stroke = 1.25) +
   labs(x = "Year", y = "Number of correspondents to whom Erasmus wrote letters") +
@@ -29,7 +29,7 @@ plot1 <- ggplot(data = data3, aes(x = Year, y = Number.of.correspondents.receivi
 plot1
 
 # create line chart for number of letters
-plot2 <- ggplot(data = data3, aes(x = Year, y = Number.of.letters.sent.from.Erasmus.this.year)) +
+plot2 <- ggplot(data = data3, aes(x = Year, y = Number.of.letters.sent.by.Erasmus.this.year)) +
   geom_line(stat = "identity", size = 0.9) +
   geom_point(shape = 1, fill = "white", stroke = 1.25) +
   labs(x = "Year", y = "Number of letters sent by Erasmus") +
@@ -41,7 +41,7 @@ plot2 <- ggplot(data = data3, aes(x = Year, y = Number.of.letters.sent.from.Eras
 plot2
 
 # create scatter plot with a regression line
-plot3 <- ggplot(data = data3, aes(x = Number.of.correspondents.receiving.letters.from.Erasmus.this.year, y = Number.of.letters.sent.from.Erasmus.this.year)) +
+plot3 <- ggplot(data = data3, aes(x = Number.of.correspondents.to.whom.Erasmus.wrote.this.year, y = Number.of.letters.sent.by.Erasmus.this.year)) +
   geom_point() +
   geom_smooth(method = "lm", se = TRUE) +
   geom_text_repel(aes(label = Year), hjust = 0.5, vjust = -0.5,box.padding = 0.75, max.overlaps = Inf) +

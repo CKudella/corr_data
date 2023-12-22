@@ -16,7 +16,7 @@ data_epp_sent_by_era_to <-read.csv("no_epp_per_loc/no_epp_per_loc_sent_by_era_to
 data_epp_sent_to_era_outlier <- subset(data_epp_sent_to_era, data_epp_sent_to_era$Number.of.letters.sent.from.this.location.to.Erasmus > 8.5)
 
 # subset epp_sent_by_era_to outliers
-data_epp_sent_by_era_to_outlier <- subset(data_epp_sent_by_era_to, data_epp_sent_by_era_to$Number.of.letters.sent.to.this.location.from.Erasmus > 13.5)
+data_epp_sent_by_era_to_outlier <- subset(data_epp_sent_by_era_to, data_epp_sent_by_era_to$Number.of.letters.sent.to.this.location.by.Erasmus > 13.5)
 
 
 # === Data Query ===
