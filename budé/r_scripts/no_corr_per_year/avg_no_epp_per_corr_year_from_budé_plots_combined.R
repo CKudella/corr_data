@@ -19,7 +19,7 @@ IQR <- diff(quartiles[c(1, 3)])
 # calculate outlier treshold
 upper_dots <- min(data$Average.number.of.letters.sent.by.Budé.per.correspondent.this.year[data$Average.number.of.letters.sent.by.Budé.per.correspondent.this.year > (quartiles[3] + 1.5*IQR)])
 
-# create data frame for years 1484-1536
+# create data frame for years 1503-1540
 data2 <- tibble(Year = 1503:1540)
 
 # merge data frames
@@ -39,7 +39,7 @@ plot1 <- ggplot(data3, aes(x = Year, y = Average.number.of.letters.sent.by.Budé
   geom_hline(aes(yintercept = mean_value, linetype = "mean"), size = 0.3) +
   geom_hline(aes(yintercept = median_value, linetype = "median"), size = 0.3) +
   labs(x = "Year", y = "Average number of letters sent by Budé per year and correspondent") +
-  scale_x_continuous(breaks = seq(1484, 1536, by = 1)) +
+  scale_x_continuous(breaks = seq(1503, 1540, by = 1)) +
   theme_bw() +
   theme(legend.position = "bottom") +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.35))

@@ -11,7 +11,7 @@ data <- read.csv("no_epp_per_year/comp_no_epp_per_year_sent_by_to_budé.csv", fi
 # rename a column
 colnames(data)[colnames(data) == "send_date_year1"] <- "Year"
 
-# create data frame for years 1484-1536
+# create data frame for years 1503-1540
 data2 <- tibble(Year = 1503:1540)
 
 # merge data frames

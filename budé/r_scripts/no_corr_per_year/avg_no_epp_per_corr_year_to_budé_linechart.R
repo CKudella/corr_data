@@ -8,7 +8,7 @@ setwd("../query_results/")
 # read data
 data <- read.csv("no_corr_per_year/avg_no_epp_per_corr_year_to_budé.csv", fileEncoding = "UTF-8")
 
-# create data frame for years 1484-1536
+# create data frame for years 1503-1540
 data2 <- tibble(Year = 1503:1540)
 
 # merge data frames
@@ -28,7 +28,7 @@ plot <- ggplot(data3, aes(x = Year, y = Average.number.of.letters.sent.per.corre
   geom_hline(aes(yintercept = mean_value, linetype = "mean"), size = 0.3) +
   geom_hline(aes(yintercept = median_value, linetype = "median"), size = 0.3) +
   labs(x = "Year", y = "Average number of letters sent to Budé per year and correspondent") +
-  scale_x_continuous(breaks = seq(1484, 1536, by = 1)) +
+  scale_x_continuous(breaks = seq(1503, 1540, by = 1)) +
   theme_bw() +
   theme(legend.position = "bottom") +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.35))

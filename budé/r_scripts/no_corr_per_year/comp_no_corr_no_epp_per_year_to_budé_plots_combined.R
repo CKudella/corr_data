@@ -10,7 +10,7 @@ setwd("../query_results/")
 # read data
 data <- read.csv("no_corr_per_year/comp_no_corr_no_epp_per_year_to_budé.csv", fileEncoding = "UTF-8", na.strings = c("NULL"))
 
-# create data frame for years 1484-1536
+# create data frame for years 1503-1540
 data2 <- tibble(Year = 1503:1540)
 
 # merge data frames
@@ -21,7 +21,7 @@ plot1 <- ggplot(data = data3, aes(x = Year, y = Number.of.correspondents.writing
   geom_line(stat = "identity", size = 0.9) +
   geom_point(shape = 1, fill = "white", stroke = 1.25) +
   labs(x = "Year", y = "Number of correspondents who wrote letters to Budé") +
-  scale_x_continuous(breaks = c(1484:1536)) +
+  scale_x_continuous(breaks = c(1503:1540)) +
   scale_y_continuous(breaks = seq(0, 5, 1)) +
   theme_bw() +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.35, size = 6)) +
@@ -33,7 +33,7 @@ plot2 <- ggplot(data = data3, aes(x = Year, y = Number.of.letters.sent.to.Budé.
   geom_line(stat = "identity", size = 0.9) +
   geom_point(shape = 1, fill = "white", stroke = 1.25) +
   labs(x = "Year", y = "Number of letters sent to Budé") +
-  scale_x_continuous(breaks = c(1484:1536)) +
+  scale_x_continuous(breaks = c(1503:1540)) +
   scale_y_continuous(breaks = seq(0, 7, 1)) +
   theme_bw() +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.35, size = 6)) +
