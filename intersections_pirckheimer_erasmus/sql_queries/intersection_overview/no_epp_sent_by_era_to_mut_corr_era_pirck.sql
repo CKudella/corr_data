@@ -1,4 +1,4 @@
-SELECT COUNT(*) AS 'Total number of letters sent from Erasmus to mutual correspondents of his and and Pirckheimer'
+SELECT COUNT(*) AS 'Total number of letters sent by Erasmus to mutual correspondents of his and and Pirckheimer'
 FROM
   (SELECT *
    FROM era_cdb_v3.letters) AS L
