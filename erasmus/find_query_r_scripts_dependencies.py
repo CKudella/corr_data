@@ -23,10 +23,10 @@ def find_consumers(csv_file, r_scripts_directory):
         for file in files:
             if file.endswith(".R"):
                 r_script_path = os.path.join(root, file)
-                with open(r_script_path, 'r') as r_script:
+                with open(r_script_path, 'r', encoding='utf-8') as r_script:
                     r_script_content = r_script.read()
                     if csv_filename in r_script_content:
-                        consumers.append(os.path.relpath(r_script_path, os.path.dirname(__file__)))
+                        consumers.append(os.fsdecode(os.path.relpath(os.fsencode(r_script_path), os.fsencode(os.path.dirname(__file__)))))
 
     return consumers
 
@@ -45,7 +45,7 @@ def main():
         if csv_file:
             consumers = find_consumers(csv_file, r_scripts_directory)
             if consumers:
-                results.append((os.path.relpath(sql_file, os.path.dirname(__file__)), consumers))
+                results.append((os.fsdecode(os.path.relpath(os.fsencode(sql_file), os.fsencode(os.path.dirname(__file__)))), os.fsdecode(os.path.relpath(os.fsencode(csv_file), os.fsencode(os.path.dirname(__file__)))), consumers))
 
     # Sort results by SQL file
     results.sort(key=lambda x: x[0])
@@ -53,7 +53,7 @@ def main():
     # Display results as a table
     headers = ["SQL File", "Consumed by R Scripts"]
     rows = []
-    for sql_file, consumers in results:
+    for sql_file, csv_file, consumers in results:
         consumers_str = ", ".join(consumers)
         rows.append([sql_file, consumers_str])
 
@@ -62,7 +62,7 @@ def main():
 
     # Write Markdown table to file
     markdown_filename = "query_r_scripts_dependencies.md"
-    with open(markdown_filename, "w") as md_file:
+    with open(markdown_filename, "w", encoding='utf-8') as md_file:
         md_file.write(markdown_table)
 
     print(f"Markdown table written to {markdown_filename}")
