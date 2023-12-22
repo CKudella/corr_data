@@ -1,5 +1,5 @@
 SELECT A.Year,
-       B.NoEppFromPirck/A.NoCorrFromPirck AS 'Average number of letters sent from Pirckheimer per correspondent this year'
+       B.NoEppFromPirck/A.NoCorrFromPirck AS 'Average number of letters sent by Pirckheimer per correspondent this year'
 FROM
   (SELECT send_date_year1 AS 'Year',
           COUNT(DISTINCT recipient_id) AS NoCorrFromPirck

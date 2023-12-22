@@ -1,7 +1,7 @@
-SELECT A.NoCorrOnlyEppFromPirck AS 'Total number of correspondents for whom the dataset contains only letters written to them from Pirckheimer but not vice versa',
-       ROUND(A.NoCorrOnlyEppFromPirck * 100.0 / D.TotalNoCorr, 1) AS 'Percentage of the total number of correspondents for whom the dataset contains only letters written to them from Pirck but not vice versa of the total number of correspondents',
-       B.NoCorrOnlyEpptoPirck AS 'Total number of correspondents for whom the dataset contains only letters written from them to Pirckheimer but not vice versa',
-       ROUND(B.NoCorrOnlyEpptoPirck * 100.0 / D.TotalNoCorr, 1) AS 'Percentage of the total number of correspondents for whom the dataset contains only letters written from them to Pirckheimer but not vice versa of the total number of correspondents',
+SELECT A.NoCorrOnlyEppFromPirck AS 'Total number of correspondents for whom the dataset contains only letters written to them by Pirckheimer but not vice versa',
+       ROUND(A.NoCorrOnlyEppFromPirck * 100.0 / D.TotalNoCorr, 1) AS 'Percentage of the total number of correspondents for whom the dataset contains only letters written to them by Pirck but not vice versa of the total number of correspondents',
+       B.NoCorrOnlyEpptoPirck AS 'Total number of correspondents for whom the dataset contains only letters written by them to Pirckheimer but not vice versa',
+       ROUND(B.NoCorrOnlyEpptoPirck * 100.0 / D.TotalNoCorr, 1) AS 'Percentage of the total number of correspondents for whom the dataset contains only letters written by them to Pirckheimer but not vice versa of the total number of correspondents',
        C.NoCorrReciproc AS 'Total number of correspondents for whom the dataset contains a reciprocal correspondence with Pirckheimer',
        ROUND(C.NoCorrReciproc * 100.0 / D.TotalNoCorr, 1) AS 'Percentage of the total number of correspondents for whom the dataset contains a reciprocal correspondence with Pirckheimer of the total number of correspondents'
 FROM
