@@ -10,18 +10,18 @@ setwd("../query_results/")
 data <- read.csv("no_epp_per_loc/no_epp_per_loc_written_by_pirck_at.csv", fileEncoding = "UTF-8")
 
 # calculate quartiles
-quartiles <- as.numeric(quantile(data$Number.of.letters.sent.from.this.location.from.Pirckheimer, probs = c(0.25, 0.5, 0.75)))
+quartiles <- as.numeric(quantile(data$Number.of.letters.sent.from.this.location.by.Pirckheimer, probs = c(0.25, 0.5, 0.75)))
 
 # calculate IQR
 IQR <- diff(quartiles[c(1, 3)])
 
 # calculate outlier treshold
-upper_dots <- min(data$Number.of.letters.sent.from.this.location.from.Pirckheimer[data$Number.of.letters.sent.from.this.location.from.Pirckheimer > (quartiles[3] + 1.5*IQR)])
+upper_dots <- min(data$Number.of.letters.sent.from.this.location.by.Pirckheimer[data$Number.of.letters.sent.from.this.location.by.Pirckheimer > (quartiles[3] + 1.5*IQR)])
 
 # create box plot
-plot <- ggplot(data, aes(x = " ", y = Number.of.letters.sent.from.this.location.from.Pirckheimer)) +
+plot <- ggplot(data, aes(x = " ", y = Number.of.letters.sent.from.this.location.by.Pirckheimer)) +
   geom_boxplot(outlier.size = 2, notch = FALSE, show.legend = TRUE) +
-  geom_text_repel(label = ifelse(data$Number.of.letters.sent.from.this.location.from.Pirckheimer >= upper_dots, as.character(data$Location.Name), "")) +
+  geom_text_repel(label = ifelse(data$Number.of.letters.sent.from.this.location.by.Pirckheimer >= upper_dots, as.character(data$Location.Name), "")) +
   labs(x = "Location", y = "Number of letters written by Pirckheimer at this location") +
   theme_bw() +
   theme(axis.title.x = element_text(), axis.text.x = element_blank(), axis.ticks.x = element_blank())
