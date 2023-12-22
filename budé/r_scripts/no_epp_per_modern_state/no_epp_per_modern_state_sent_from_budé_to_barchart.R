@@ -9,9 +9,9 @@ setwd("../query_results/")
 data <- read.csv("no_epp_per_modern_state/no_epp_per_modern_state_sent_from_budé_to.csv", fileEncoding = "UTF-8", na.strings = c("NULL"))
 
 # create bar chart
-plot <- ggplot(data, aes(x = reorder(Modern.State, -Number.of.letters.sent.from.Budé.to.this.modern.state), y = Number.of.letters.sent.from.Budé.to.this.modern.state)) +
+plot <- ggplot(data, aes(x = reorder(Modern.State, -Number.of.letters.sent.by.Budé.to.this.modern.state), y = Number.of.letters.sent.by.Budé.to.this.modern.state)) +
   geom_bar(stat = "identity") +
-  geom_text(aes(label = Number.of.letters.sent.from.Budé.to.this.modern.state), vjust = -0.5, color = "black") +
+  geom_text(aes(label = Number.of.letters.sent.by.Budé.to.this.modern.state), vjust = -0.5, color = "black") +
   labs(x = "Modern State", y = "Number of letters sent by Budé to this modern state") +
   theme_bw() +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.35))

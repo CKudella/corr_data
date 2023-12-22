@@ -9,10 +9,10 @@ setwd("../query_results/")
 data <- read.csv("no_epp_per_correspondent/no_epp_per_cor_written_by_budé.csv", fileEncoding = "UTF-8", na.strings = c("NULL"))
 
 # create pointplot
-plot <- ggplot(data = data, aes(x = reorder(recipient_id, -Number.of.letters.sent.from.Budé.to.this.correspondent), y = Number.of.letters.sent.from.Budé.to.this.correspondent, label = recipient_id)) +
+plot <- ggplot(data = data, aes(x = reorder(recipient_id, -Number.of.letters.sent.by.Budé.to.this.correspondent), y = Number.of.letters.sent.by.Budé.to.this.correspondent, label = recipient_id)) +
   geom_point(stat = "identity") +
-  geom_hline(aes(yintercept = mean(Number.of.letters.sent.from.Budé.to.this.correspondent), linetype = "mean"), size = 0.3) +
-  geom_hline(aes(yintercept = median(Number.of.letters.sent.from.Budé.to.this.correspondent), linetype = "median"), size = 0.3) +
+  geom_hline(aes(yintercept = mean(Number.of.letters.sent.by.Budé.to.this.correspondent), linetype = "mean"), size = 0.3) +
+  geom_hline(aes(yintercept = median(Number.of.letters.sent.by.Budé.to.this.correspondent), linetype = "median"), size = 0.3) +
   labs(x = "Correspondent", y = "Number of letters sent by Budé to this correspondent") +
   theme_bw() +
   theme(legend.position = "bottom") +

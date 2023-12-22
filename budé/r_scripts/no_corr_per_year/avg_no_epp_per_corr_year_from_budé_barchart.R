@@ -9,11 +9,11 @@ setwd("../query_results/")
 data <- read.csv("no_corr_per_year/avg_no_epp_per_corr_year_from_budé.csv", fileEncoding = "UTF-8")
 
 # create bar chart
-plot <- ggplot(data, aes(x = Year, y = Average.number.of.letters.sent.from.Budé.per.correspondent.this.year)) +
+plot <- ggplot(data, aes(x = Year, y = Average.number.of.letters.sent.by.Budé.per.correspondent.this.year)) +
   geom_bar(position = "dodge", stat = "identity") +
-  geom_text(aes(label =  sprintf("%.3f", Average.number.of.letters.sent.from.Budé.per.correspondent.this.year)), vjust = -0.5, color = "black", size = 2.5) +
-  geom_hline(aes(yintercept = mean(Average.number.of.letters.sent.from.Budé.per.correspondent.this.year), linetype = "mean"), size = 0.3) +
-  geom_hline(aes(yintercept = median(Average.number.of.letters.sent.from.Budé.per.correspondent.this.year), linetype = "median"), size = 0.3) +
+  geom_text(aes(label =  sprintf("%.3f", Average.number.of.letters.sent.by.Budé.per.correspondent.this.year)), vjust = -0.5, color = "black", size = 2.5) +
+  geom_hline(aes(yintercept = mean(Average.number.of.letters.sent.by.Budé.per.correspondent.this.year), linetype = "mean"), size = 0.3) +
+  geom_hline(aes(yintercept = median(Average.number.of.letters.sent.by.Budé.per.correspondent.this.year), linetype = "median"), size = 0.3) +
   labs(x = "Year", y = "Average number of letters sent by Budé per year and correspondent") +
   scale_x_continuous(breaks = c(1484:1536)) +
   theme_bw() +

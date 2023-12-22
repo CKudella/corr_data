@@ -15,14 +15,14 @@ data2 <- tibble(Year = 1503:1540)
 data3 <- left_join(data2, data, by = "Year")
 
 # filter out NAs from the data
-filtered_data <- data3[!is.na(data3$Average.number.of.letters.sent.from.Budé.per.correspondent.this.year), ]
+filtered_data <- data3[!is.na(data3$Average.number.of.letters.sent.by.Budé.per.correspondent.this.year), ]
 
 # calculate mean and median from the filtered data
-mean_value <- mean(filtered_data$Average.number.of.letters.sent.from.Budé.per.correspondent.this.year)
-median_value <- median(filtered_data$Average.number.of.letters.sent.from.Budé.per.correspondent.this.year)
+mean_value <- mean(filtered_data$Average.number.of.letters.sent.by.Budé.per.correspondent.this.year)
+median_value <- median(filtered_data$Average.number.of.letters.sent.by.Budé.per.correspondent.this.year)
 
 # create line chart plot
-plot <- ggplot(data3, aes(x = Year, y = Average.number.of.letters.sent.from.Budé.per.correspondent.this.year)) +
+plot <- ggplot(data3, aes(x = Year, y = Average.number.of.letters.sent.by.Budé.per.correspondent.this.year)) +
   geom_line(stat = "identity", size = 0.9) +
   geom_point(shape = 1, fill = "white", stroke = 1.25) +
   geom_hline(aes(yintercept = mean_value, linetype = "mean"), size = 0.3) +

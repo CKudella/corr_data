@@ -17,11 +17,11 @@ data2 <- tibble(Year = 1503:1540)
 data3 <- left_join(data2, data, by = "Year")
 
 # create line chart for number of correspondents
-plot1 <- ggplot(data = data3, aes(x = Year, y = Number.of.correspondents.receiving.letters.from.Budé.this.year)) +
+plot1 <- ggplot(data = data3, aes(x = Year, y = Number.of.correspondents.to.whom.Budé.wrote.this.year)) +
   geom_line(stat = "identity", size = 0.9) +
   geom_point(shape = 1, fill = "white", stroke = 1.25) +
   labs(x = "Year", y = "Number of correspondents to whom Budé wrote letters") +
-  scale_x_continuous(breaks = c(1484:1536)) +
+  scale_x_continuous(breaks = c(1503:1540)) +
   scale_y_continuous(breaks = seq(0, 30, 5)) +
   theme_bw() +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.35, size = 6)) +
@@ -29,11 +29,11 @@ plot1 <- ggplot(data = data3, aes(x = Year, y = Number.of.correspondents.receivi
 plot1
 
 # create line chart for number of letters
-plot2 <- ggplot(data = data3, aes(x = Year, y = Number.of.letters.sent.from.Budé.this.year)) +
+plot2 <- ggplot(data = data3, aes(x = Year, y = Number.of.letters.sent.by.Budé.this.year)) +
   geom_line(stat = "identity", size = 0.9) +
   geom_point(shape = 1, fill = "white", stroke = 1.25) +
   labs(x = "Year", y = "Number of letters sent by Budé") +
-  scale_x_continuous(breaks = c(1484:1536)) +
+  scale_x_continuous(breaks = c(1503:1540)) +
   scale_y_continuous(breaks = seq(0, 60, 10)) +
   theme_bw() +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.35, size = 6)) +
@@ -41,7 +41,7 @@ plot2 <- ggplot(data = data3, aes(x = Year, y = Number.of.letters.sent.from.Bud�
 plot2
 
 # create scatter plot with a regression line
-plot3 <- ggplot(data = data3, aes(x = Number.of.correspondents.receiving.letters.from.Budé.this.year, y = Number.of.letters.sent.from.Budé.this.year)) +
+plot3 <- ggplot(data = data3, aes(x = Number.of.correspondents.to.whom.Budé.wrote.this.year, y = Number.of.letters.sent.by.Budé.this.year)) +
   geom_point() +
   geom_smooth(method = "lm", se = TRUE) +
   geom_text_repel(aes(label = Year), hjust = 0.5, vjust = -0.5,box.padding = 0.75, max.overlaps = Inf) +

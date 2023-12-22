@@ -10,18 +10,18 @@ setwd("../query_results/")
 data <- read.csv("no_corr_per_year/avg_no_epp_per_corr_year_from_budé.csv", fileEncoding = "UTF-8")
 
 # calculate quartiles
-quartiles <- as.numeric(quantile(data$Average.number.of.letters.sent.from.Budé.per.correspondent.this.year, probs = c(0.25, 0.5, 0.75)))
+quartiles <- as.numeric(quantile(data$Average.number.of.letters.sent.by.Budé.per.correspondent.this.year, probs = c(0.25, 0.5, 0.75)))
 
 # calculate IQR
 IQR <- diff(quartiles[c(1, 3)])
 
 # calculate outlier treshold
-upper_dots <- min(data$Average.number.of.letters.sent.from.Budé.per.correspondent.this.year[data$Average.number.of.letters.sent.from.Budé.per.correspondent.this.year > (quartiles[3] + 1.5*IQR)])
+upper_dots <- min(data$Average.number.of.letters.sent.by.Budé.per.correspondent.this.year[data$Average.number.of.letters.sent.by.Budé.per.correspondent.this.year > (quartiles[3] + 1.5*IQR)])
 
 # create box plot
-plot <- ggplot(data, aes(x = " ", y = Average.number.of.letters.sent.from.Budé.per.correspondent.this.year)) +
+plot <- ggplot(data, aes(x = " ", y = Average.number.of.letters.sent.by.Budé.per.correspondent.this.year)) +
   geom_boxplot(notch = FALSE) +
-  geom_text_repel(label = ifelse(data$Average.number.of.letters.sent.from.Budé.per.correspondent.this.year >= upper_dots, as.character(data$Year), "")) +
+  geom_text_repel(label = ifelse(data$Average.number.of.letters.sent.by.Budé.per.correspondent.this.year >= upper_dots, as.character(data$Year), "")) +
   labs(x = "Year", y = "Average number of letters sent by Budé per year and correspondent") +
   theme_bw() +
   theme(axis.title.x = element_text(), axis.text.x = element_blank(), axis.ticks.x = element_blank())
