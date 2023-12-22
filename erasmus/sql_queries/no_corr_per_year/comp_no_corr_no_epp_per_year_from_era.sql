@@ -1,6 +1,6 @@
 SELECT A.Year,
-       A.NoCorrFromEra AS 'Number of correspondents receiving letters from Erasmus this year',
-       B.NoEppFromEra AS 'Number of letters sent from Erasmus this year'
+       A.NoCorrFromEra AS 'Number of correspondents to whom Erasmus wrote this year',
+       B.NoEppFromEra AS 'Number of letters sent by Erasmus this year'
 FROM
   (SELECT send_date_year1 AS 'Year',
           COUNT(DISTINCT recipient_id) AS NoCorrFromEra

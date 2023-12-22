@@ -1,7 +1,7 @@
-SELECT A.NoCorrOnlyEppFromEra AS 'Total number of correspondents for whom the dataset contains only letters written to them from Erasmus but not vice versa',
-       ROUND(A.NoCorrOnlyEppFromEra * 100.0 / D.TotalNoCorr, 1) AS 'Percentage of the total number of correspondents for whom the dataset contains only letters written to them from Erasmus but not vice versa of the total number of correspondents',
-       B.NoCorrOnlyEpptoEra AS 'Total number of correspondents for whom the dataset contains only letters written from them to Erasmus but not vice versa',
-       ROUND(B.NoCorrOnlyEpptoEra * 100.0 / D.TotalNoCorr, 1) AS 'Percentage of the total number of correspondents for whom the dataset contains only letters written from them to Erasmus but not vice versa of the total number of correspondents',
+SELECT A.NoCorrOnlyEppFromEra AS 'Total number of correspondents for whom the dataset contains only letters written to them by Erasmus but not vice versa',
+       ROUND(A.NoCorrOnlyEppFromEra * 100.0 / D.TotalNoCorr, 1) AS 'Percentage of the total number of correspondents for whom the dataset contains only letters written to them by Erasmus but not vice versa of the total number of correspondents',
+       B.NoCorrOnlyEpptoEra AS 'Total number of correspondents for whom the dataset contains only letters written by them to Erasmus but not vice versa',
+       ROUND(B.NoCorrOnlyEpptoEra * 100.0 / D.TotalNoCorr, 1) AS 'Percentage of the total number of correspondents for whom the dataset contains only letters written by them to Erasmus but not vice versa of the total number of correspondents',
        C.NoCorrReciproc AS 'Total number of correspondents for whom the dataset contains a reciprocal correspondence with Erasmus',
        ROUND(C.NoCorrReciproc * 100.0 / D.TotalNoCorr, 1) AS 'Percentage of the total number of correspondents for whom the dataset contains a reciprocal correspondence with Erasmus of the total number of correspondents'
 FROM

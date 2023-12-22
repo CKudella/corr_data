@@ -1,5 +1,5 @@
 SELECT A.Year,
-       B.NoEppFromEra/A.NoCorrFromEra AS 'Average number of letters sent from Erasmus per correspondent this year'
+       B.NoEppFromEra/A.NoCorrFromEra AS 'Average number of letters sent by Erasmus per correspondent this year'
 FROM
   (SELECT send_date_year1 AS 'Year',
           COUNT(DISTINCT recipient_id) AS NoCorrFromEra

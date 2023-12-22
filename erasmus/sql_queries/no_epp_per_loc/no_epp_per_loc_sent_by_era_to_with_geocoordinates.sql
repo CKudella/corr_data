@@ -1,7 +1,7 @@
 SELECT locations.locations_name_modern AS 'Location Name',
        locations.locations_lat AS 'Latitude',
        locations.locations_lng AS 'Longitude',
-       COUNT(letters.target_loc_id) AS 'Number of letters sent to this location from Erasmus'
+       COUNT(letters.target_loc_id) AS 'Number of letters sent to this location by Erasmus'
 FROM era_cdb_v3.letters
 JOIN locations ON locations.locations_id = letters.target_loc_id
 WHERE sender_id = '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf'
