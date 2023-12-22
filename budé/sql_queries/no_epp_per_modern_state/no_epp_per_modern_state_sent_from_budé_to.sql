@@ -1,5 +1,5 @@
 SELECT DISTINCT locations.locations_modern_state AS 'Modern State',
-                COUNT(*) AS 'Number of letters sent from Budé to this modern state'
+                COUNT(*) AS 'Number of letters sent by Budé to this modern state'
 FROM budé_cdb_v1.letters,
      budé_cdb_v1.locations
 WHERE locations.locations_id = letters.target_loc_id

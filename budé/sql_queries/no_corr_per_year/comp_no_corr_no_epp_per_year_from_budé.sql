@@ -1,6 +1,6 @@
 SELECT A.Year,
-       A.NoCorrFromBudé AS 'Number of correspondents receiving letters from Budé this year',
-       B.NoEppFromBudé AS 'Number of letters sent from Budé this year'
+       A.NoCorrFromBudé AS 'Number of correspondents to whom Budé wrote this year',
+       B.NoEppFromBudé AS 'Number of letters sent by Budé this year'
 FROM
   (SELECT send_date_year1 AS 'Year',
           COUNT(DISTINCT recipient_id) AS NoCorrFromBudé

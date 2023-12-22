@@ -1,7 +1,7 @@
-SELECT A.NoCorrOnlyEppFromBudé AS 'Total number of correspondents for whom the dataset contains only letters written to them from Budé but not vice versa',
-       ROUND(A.NoCorrOnlyEppFromBudé * 100.0 / D.TotalNoCorr, 1) AS 'Percentage of the total number of correspondents for whom the dataset contains only letters written to them from Budé but not vice versa of the total number of correspondents',
-       B.NoCorrOnlyEpptoBudé AS 'Total number of correspondents for whom the dataset contains only letters written from them to Budé but not vice versa',
-       ROUND(B.NoCorrOnlyEpptoBudé * 100.0 / D.TotalNoCorr, 1) AS 'Percentage of the total number of correspondents for whom the dataset contains only letters written from them to Budé but not vice versa of the total number of correspondents',
+SELECT A.NoCorrOnlyEppFromBudé AS 'Total number of correspondents for whom the dataset contains only letters written to them by Budé but not vice versa',
+       ROUND(A.NoCorrOnlyEppFromBudé * 100.0 / D.TotalNoCorr, 1) AS 'Percentage of the total number of correspondents for whom the dataset contains only letters written to them By Budé but not vice versa of the total number of correspondents',
+       B.NoCorrOnlyEpptoBudé AS 'Total number of correspondents for whom the dataset contains only letters written by them to Budé but not vice versa',
+       ROUND(B.NoCorrOnlyEpptoBudé * 100.0 / D.TotalNoCorr, 1) AS 'Percentage of the total number of correspondents for whom the dataset contains only letters written by them to Budé but not vice versa of the total number of correspondents',
        C.NoCorrReciproc AS 'Total number of correspondents for whom the dataset contains a reciprocal correspondence with Budé',
        ROUND(C.NoCorrReciproc * 100.0 / D.TotalNoCorr, 1) AS 'Percentage of the total number of correspondents for whom the dataset contains a reciprocal correspondence with Budé of the total number of correspondents'
 FROM
