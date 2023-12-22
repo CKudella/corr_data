@@ -1,4 +1,4 @@
-SELECT COUNT(*) AS 'Total number of letters sent from Erasmus to mutual correspondents of his and and Budé (only letters with source and target locations with geocoordinates)'
+SELECT COUNT(*) AS 'Total number of letters sent by Erasmus to mutual correspondents of his and and Budé (only letters with source and target locations with geocoordinates)'
 FROM
   (SELECT *
    FROM era_cdb_v3.letters) AS L
