@@ -3,3 +3,4 @@ SELECT DISTINCT send_date_year1,
 FROM era_cdb_v3.letters
 WHERE letters_id NOT LIKE '%ck2'
 GROUP BY send_date_year1
+ORDER BY send_date_year1 ASC

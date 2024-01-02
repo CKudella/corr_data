@@ -4,3 +4,4 @@ FROM era_cdb_v3.letters
 WHERE letters_id NOT LIKE '%ck2%'
   AND send_date_inferred = '1'
 GROUP BY send_date_year1
+ORDER BY send_date_year1 ASC
