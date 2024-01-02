@@ -27,7 +27,7 @@ outliers_df <- data %>%
 plot <- ggplot(data, aes(x = locations_name_modern, y = COUNT)) +
   geom_boxplot(notch = FALSE) +
   geom_text(data = outliers_df, aes(x = locations_name_modern, y = COUNT, label = outlier_years), size = 3, vjust = -1) +
-  labs(x = "Outlier Location", y = "Number of letters written by Erasmus at this location") +
+  labs(x = "Outlier Location", y = "Number of letters written by Erasmus at this location per year") +
   theme_bw()
 plot
 
