@@ -30,7 +30,8 @@ plot1 <- ggplot(data = data_long, aes(x = Year, y = value, colour = variable)) +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.35, size = 5)) +
   theme(legend.position = "bottom") +
   theme(legend.title = element_blank()) +
-  scale_color_grey(labels = c("Number of correspondents to whom Erasmus wrote letters", "Number of correspondents who wrote letters to Erasmus"))
+  scale_color_grey(labels = c("Number of correspondents to whom Erasmus wrote letters", "Number of correspondents who wrote letters to Erasmus")) +
+  guides(color = guide_legend(nrow = 2))
 plot1
 
 # create scatter plot with a regression line
