@@ -27,4 +27,4 @@ jobs:
         pip install pandas
 
     - name: Run consistency check
-      run: cross_check_correspondents.py
+      run: python cross_check_correspondents.py
