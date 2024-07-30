@@ -59,11 +59,10 @@ id_inconsistencies = check_id_consistency(combined_df)
 
 # Print the report
 def print_report(uuid_inconsistencies, id_inconsistencies):
-    if not uuid_inconsistencies and not id_inconsistencies:
-        print("No inconsistencies found.")
-        return
-    
+    has_inconsistencies = False
+
     if uuid_inconsistencies:
+        has_inconsistencies = True
         print("Inconsistencies in correspondents_id:")
         for inconsistency in uuid_inconsistencies:
             print(f'\ncorrespondents_id: {inconsistency[0]} has inconsistent values in {inconsistency[1]}:')
@@ -71,11 +70,20 @@ def print_report(uuid_inconsistencies, id_inconsistencies):
             print(f'  Affected datasets: {inconsistency[3]}')
 
     if id_inconsistencies:
+        has_inconsistencies = True
         print("\nInconsistencies in other IDs:")
         for inconsistency in id_inconsistencies:
             print(f'\n{inconsistency[1]}: {inconsistency[0]} has inconsistent correspondents_id values:')
             print(f'  UUIDs: {inconsistency[2]}')
             print(f'  Affected datasets: {inconsistency[3]}')
+    
+    if not has_inconsistencies:
+        print("No inconsistencies found.")
+    return has_inconsistencies
 
-# Print the report
-print_report(uuid_inconsistencies, id_inconsistencies)
+# Print the report and determine the exit status
+has_inconsistencies = print_report(uuid_inconsistencies, id_inconsistencies)
+if has_inconsistencies:
+    exit(1)  # Indicate failure
+else:
+    exit(0)  # Indicate success
