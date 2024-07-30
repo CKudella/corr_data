@@ -27,9 +27,11 @@ jobs:
         pip install pandas
 
     - name: Run consistency check
-      run: python cross_check_correspondents.py
-    
-   - name: Create badge
+      id: run-check
+      run: |
+        python cross_check_correspondents.py
+
+    - name: Create badge
       if: failure()
       run: |
         echo "![Data Consistency Check](https://img.shields.io/badge/consistency-failed-red)" > badge.md
