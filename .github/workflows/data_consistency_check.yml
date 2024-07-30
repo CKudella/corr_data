@@ -28,3 +28,16 @@ jobs:
 
     - name: Run consistency check
       run: python cross_check_correspondents.py
+    
+   - name: Create badge
+      if: failure()
+      run: |
+        echo "![Data Consistency Check](https://img.shields.io/badge/consistency-failed-red)" > badge.md
+
+    - name: Create badge
+      if: success()
+      run: |
+        echo "![Data Consistency Check](https://img.shields.io/badge/consistency-passed-brightgreen)" > badge.md
+
+    - name: Display result
+      run: cat badge.md
