@@ -2,7 +2,7 @@ import pandas as pd
 
 # Load datasets
 erasmus_df = pd.read_csv('erasmus/dataset/csv/era_correspondents.csv')
-bude_df = pd.read_csv('budé/dataset/csv/gbudé_correspondents.csv')
+bude_df = pd.read_csv('bud%C3%A9/dataset/csv/gbud%C3%A9_correspondents.csv')
 pirckheimer_df = pd.read_csv('pirckheimer/dataset/csv/wpirck_correspondents.csv')
 
 # Add a column to indicate the dataset name
