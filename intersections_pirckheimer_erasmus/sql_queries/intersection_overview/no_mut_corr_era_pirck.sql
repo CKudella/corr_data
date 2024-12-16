@@ -1,4 +1,4 @@
-SELECT COUNT(*) AS 'Number of mututual correspondents of Pirckheimer and Erasmus'
+SELECT COUNT(*) AS 'Number of mutual correspondents of Pirckheimer and Erasmus'
 FROM era_cdb_v3.correspondents AS X
 WHERE X.correspondents_id IN
     (SELECT P.correspondents_id
