@@ -36,7 +36,7 @@ min_lng <- min(data$Longitude, na.rm = TRUE)
 max_lng <- max(data$Longitude, na.rm = TRUE)
 
 # Make sure that the upper bound of the breaks still falls into the correct class
-data$class <- findInterval(data$Average.Number.of.Letters.written.by.Erasmus.from.this.location.per, breaks, rightmost.closed = TRUE)
+data$class <- findInterval(data$Average.Number.of.Letters.written.by.Erasmus.from.this.location.per.year, breaks, rightmost.closed = TRUE)
 
 # Create map
 m <- leaflet(data) %>%
