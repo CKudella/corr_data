@@ -52,18 +52,18 @@ m <- leaflet(data) %>%
   addCircleMarkers(
     lng = ~Longitude,
     lat = ~Latitude,
-    popup = paste("<b>",data$Location.Name.Modern, "</b><br>Number of correspondents at this <br/> location to whom Budé wrote letters: ", data$Number.of.correspondents.who.received.at.this.location.letters.from.Budé),
+    popup = paste("<b>", data$Location.Name.Modern, "</b><br>Number of correspondents at this <br/> location to whom Budé wrote letters: ", data$Number.of.correspondents.who.received.at.this.location.letters.from.Budé),
     group = "Locations",
     label = ~Location.Name.Modern,
     radius = data$class * 3,
-    fillColor  = "#C3161F",
+    fillColor = "#C3161F",
     fillOpacity = 0.7,
     weight = 1,
     opacity = 1,
     color = "#000000",
     stroke = TRUE
   ) %>%
-  fitBounds(min_lng, min_lat, max_lng, max_lat) %>%  # Set initial zoom
+  fitBounds(min_lng, min_lat, max_lng, max_lat) %>% # Set initial zoom
   addScaleBar(position = "bottomleft", options = scaleBarOptions(metric = TRUE, imperial = FALSE)) %>%
   addSearchFeatures(
     targetGroups = c("Locations"),
@@ -75,7 +75,7 @@ m <- leaflet(data) %>%
   ) %>%
   addEasyButton(
     easyButton(
-      icon = "fa-globe",  # Globe icon for reset
+      icon = "fa-globe", # Globe icon for reset
       title = "Reset Zoom",
       onClick = JS("function(btn, map){ map.fitBounds(map.initialBounds); }") # Reset zoom to initial bounds
     )
@@ -98,10 +98,10 @@ breaks_numeric <- as.numeric(breaks)
 
 # Detect if any number has decimal places
 if (any(breaks_numeric %% 1 != 0)) {
-  format_numbers <- function(x) sprintf("%.2f", x)  # Format to 2 decimal places
+  format_numbers <- function(x) sprintf("%.2f", x) # Format to 2 decimal places
   adjust_value <- 0.01
 } else {
-  format_numbers <- function(x) as.character(x)  # Keep whole numbers
+  format_numbers <- function(x) as.character(x) # Keep whole numbers
   adjust_value <- 1
 }
 
@@ -112,12 +112,12 @@ legend_html <- paste0(
     sapply(1:(length(breaks_numeric) - 1), function(i) {
       lower_bound <- breaks_numeric[i]
       upper_bound <- breaks_numeric[i + 1]
-      
+
       # Subtract adjust_value only if it's not the last class and the range is not identical
       if (i != (length(breaks_numeric) - 1) && lower_bound != upper_bound) {
         upper_bound <- upper_bound - adjust_value
       }
-      
+
       # Check if the class has an identical range
       if (lower_bound == upper_bound) {
         if (lower_bound == 1) {
@@ -128,10 +128,10 @@ legend_html <- paste0(
       } else {
         label_text <- paste0(format_numbers(lower_bound), " - ", format_numbers(upper_bound), " correspondents")
       }
-      
+
       paste0(
         "<div style='display: flex; align-items: center; margin-bottom: 5px;'>",
-        "<div style='width: ", (i * 5), "px; height: ", (i * 5), 
+        "<div style='width: ", (i * 5), "px; height: ", (i * 5),
         "px; background-color: #C3161F; border-radius: 50%; margin-right: 10px;'></div>",
         "<span>", label_text, "</span>",
         "</div>"

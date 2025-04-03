@@ -23,7 +23,7 @@ letter_counts <- data_for_breaks %>%
 # Merge letter_counts with nodes, adding only the 'degree' column
 nodes <- nodes %>%
   left_join(letter_counts, by = c("Label" = "Location.Name")) %>%
-  rename(degree = Number.of.letters.sent.to.this.location.by.Erasmus)  # Rename the column to 'degree'
+  rename(degree = Number.of.letters.sent.to.this.location.by.Erasmus) # Rename the column to 'degree'
 
 # Create initial map bounds
 min_lat <- min(nodes$locations_lat, na.rm = TRUE)
@@ -40,7 +40,7 @@ nodes$radius <- 3
 # Calculate edge weights by counting occurrences of each unique Source-Target pair
 edges_with_weights <- edges %>%
   group_by(Source, Target) %>%
-  tally(name = "weight")  # Create a new column 'weight' that holds the count of occurrences
+  tally(name = "weight") # Create a new column 'weight' that holds the count of occurrences
 
 # Determine breaks
 median_val <- median(data_for_breaks$Number.of.letters.sent.to.this.location.by.Erasmus, na.rm = TRUE)
@@ -51,8 +51,10 @@ upper_whisker <- box_stats$stats[5]
 outliers <- min(box_stats$out)
 
 # Define breaks including max value to ensure all data points are included
-breaks <- c(min(data_for_breaks$Number.of.letters.sent.to.this.location.by.Erasmus, na.rm = TRUE), 
-            median_val, q3, outliers, max(edges_with_weights$weight, na.rm = TRUE))
+breaks <- c(
+  min(data_for_breaks$Number.of.letters.sent.to.this.location.by.Erasmus, na.rm = TRUE),
+  median_val, q3, outliers, max(edges_with_weights$weight, na.rm = TRUE)
+)
 
 # Ensure breaks are treated as a numeric vector
 breaks_numeric <- as.numeric(breaks)
@@ -84,24 +86,24 @@ m <- leaflet() %>%
   )
 
 # Extract self-loops
-self_loops <- edges_with_weights %>% 
-  filter(Source == Target) %>% 
-  rename(Id = Source) %>% 
-  select(Id, weight)  # Keep only the node ID and weight
+self_loops <- edges_with_weights %>%
+  filter(Source == Target) %>%
+  rename(Id = Source) %>%
+  select(Id, weight) # Keep only the node ID and weight
 
 # Merge self-loops data with nodes to get locations
-nodes_self_loops <- nodes %>% 
+nodes_self_loops <- nodes %>%
   inner_join(self_loops, by = "Id")
 
 # Add pulse markers for self-loops with correct popup information
-m <- m %>% 
+m <- m %>%
   addPulseMarkers(
     data = nodes_self_loops,
     lng = ~locations_lng,
     lat = ~locations_lat,
     label = ~Label,
     icon = makePulseIcon(color = "#C3161F", heartbeat = 1, iconSize = c(6, 6)),
-    popup = ~paste0("<b>", Label, "</b><br>Number of letters sent by Erasmus within this city: ", weight),  # Use weight
+    popup = ~ paste0("<b>", Label, "</b><br>Number of letters sent by Erasmus within this city: ", weight), # Use weight
     group = "Inner-City Letters (Self-Loops)"
   )
 
@@ -113,7 +115,7 @@ for (i in 1:length(edges_by_class)) {
     rename(locations_lat_source = locations_lat, locations_lng_source = locations_lng) %>%
     left_join(nodes, by = c("Target" = "Id")) %>%
     rename(locations_lat_target = locations_lat, locations_lng_target = locations_lng)
-  
+
   # Add polylines with adjusted coordinate structure
   m <- m %>%
     addPolylines(
@@ -184,9 +186,9 @@ legend_html <- paste0(
   "<div style='background-color: white; padding: 10px; border-radius: 5px; box-shadow: 0px 0px 5px rgba(0,0,0,0.2);'>",
   paste0(
     sapply(1:(length(breaks) - 1), function(i) {
-      lower_bound <- round(breaks[i])  # Ensure rounded values
+      lower_bound <- round(breaks[i]) # Ensure rounded values
       upper_bound <- if (i == length(breaks) - 1) round(breaks[i + 1]) else round(breaks[i + 1] - 1)
-      
+
       paste0(
         "<div style='display: flex; align-items: center; margin-bottom: 5px;'>",
         "<div style='width: ", line_widths[i] * 2, "px; height: 5px; background-color: #C3161F; margin-right: 10px;'></div>",

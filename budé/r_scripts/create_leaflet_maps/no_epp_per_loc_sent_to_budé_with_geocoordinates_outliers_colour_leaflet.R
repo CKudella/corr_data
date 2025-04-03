@@ -21,8 +21,10 @@ upper_whisker <- box_stats$stats[5]
 outliers <- min(box_stats$out)
 
 # Define breaks including max value to ensure all data points are included
-breaks <- c(min(data$Number.of.letters.sent.from.this.location.to.Budé, na.rm = TRUE), 
-            q3, outliers, max(data$Number.of.letters.sent.from.this.location.to.Budé, na.rm = TRUE))
+breaks <- c(
+  min(data$Number.of.letters.sent.from.this.location.to.Budé, na.rm = TRUE),
+  q3, outliers, max(data$Number.of.letters.sent.from.this.location.to.Budé, na.rm = TRUE)
+)
 
 # Mapbox API Key
 mapbox_api_key <- "pk.eyJ1IjoiY2t1ZGVsbGEiLCJhIjoiY2locnN5ejZuMDAxandza3M4cGtzeXlqYSJ9.olxAQeWGTw_6slIVh4i6Cg"
@@ -48,18 +50,18 @@ m <- leaflet(data) %>%
   addCircleMarkers(
     lng = ~Longitude,
     lat = ~Latitude,
-    popup = paste("<b>",data$Location.Name, "</b><br>Number of letters sent from <br/> this location to Budé: ", data$Number.of.letters.sent.from.this.location.to.Budé),
+    popup = paste("<b>", data$Location.Name, "</b><br>Number of letters sent from <br/> this location to Budé: ", data$Number.of.letters.sent.from.this.location.to.Budé),
     group = "Locations",
     label = ~Location.Name,
     radius = data$class * 3,
-    fillColor  = "#C3161F",
+    fillColor = "#C3161F",
     fillOpacity = 0.7,
     weight = 1,
     opacity = 1,
     color = "#000000",
     stroke = TRUE
   ) %>%
-  fitBounds(min_lng, min_lat, max_lng, max_lat) %>%  # Set initial zoom
+  fitBounds(min_lng, min_lat, max_lng, max_lat) %>% # Set initial zoom
   addScaleBar(position = "bottomleft", options = scaleBarOptions(metric = TRUE, imperial = FALSE)) %>%
   addSearchFeatures(
     targetGroups = c("Locations"),
@@ -71,7 +73,7 @@ m <- leaflet(data) %>%
   ) %>%
   addEasyButton(
     easyButton(
-      icon = "fa-globe",  # Globe icon for reset
+      icon = "fa-globe", # Globe icon for reset
       title = "Reset Zoom",
       onClick = JS("function(btn, map){ map.fitBounds(map.initialBounds); }") # Reset zoom to initial bounds
     )
@@ -94,10 +96,10 @@ breaks_numeric <- as.numeric(breaks)
 
 # Detect if any number has decimal places
 if (any(breaks_numeric %% 1 != 0)) {
-  format_numbers <- function(x) sprintf("%.2f", x)  # Format to 2 decimal places
+  format_numbers <- function(x) sprintf("%.2f", x) # Format to 2 decimal places
   adjust_value <- 0.01
 } else {
-  format_numbers <- function(x) as.character(x)  # Keep whole numbers
+  format_numbers <- function(x) as.character(x) # Keep whole numbers
   adjust_value <- 1
 }
 
@@ -108,17 +110,17 @@ legend_html <- paste0(
     sapply(1:(length(breaks_numeric) - 1), function(i) {
       lower_bound <- breaks_numeric[i]
       upper_bound <- if (i == length(breaks_numeric) - 1) breaks_numeric[i + 1] else breaks_numeric[i + 1] - adjust_value
-      
+
       # Check if the first class has an identical range (e.g., 1 - 1)
       if (i == 1 && lower_bound == upper_bound) {
         label_text <- paste0(format_numbers(lower_bound), " letter")
       } else {
         label_text <- paste0(format_numbers(lower_bound), " - ", format_numbers(upper_bound), " letters")
       }
-      
+
       paste0(
         "<div style='display: flex; align-items: center; margin-bottom: 5px;'>",
-        "<div style='width: ", (i * 5), "px; height: ", (i * 5), 
+        "<div style='width: ", (i * 5), "px; height: ", (i * 5),
         "px; background-color: #C3161F; border-radius: 50%; margin-right: 10px;'></div>",
         "<span>", label_text, "</span>",
         "</div>"
