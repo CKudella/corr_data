@@ -16,6 +16,15 @@ edges <- read.csv("create_geolayout_files_for_gephi/nodes_edges_for_epp_sent_by_
 setwd("../query_results/")
 data_for_breaks <- read.csv("no_epp_per_loc/no_epp_per_loc_sent_by_era_to_with_geocoordinates.csv", fileEncoding = "UTF-8", na.strings = c("NULL"))
 
+# Select only the relevant columns from letter_counts
+letter_counts <- data_for_breaks %>%
+  select(Location.Name, Number.of.letters.sent.to.this.location.by.Erasmus)
+
+# Merge letter_counts with nodes, adding only the 'degree' column
+nodes <- nodes %>%
+  left_join(letter_counts, by = c("Label" = "Location.Name")) %>%
+  rename(degree = Number.of.letters.sent.to.this.location.by.Erasmus)  # Rename the column to 'degree'
+
 # Create initial map bounds
 min_lat <- min(nodes$locations_lat, na.rm = TRUE)
 max_lat <- max(nodes$locations_lat, na.rm = TRUE)
@@ -24,19 +33,6 @@ max_lng <- max(nodes$locations_lng, na.rm = TRUE)
 
 # Mapbox API Key
 mapbox_api_key <- "pk.eyJ1IjoiY2t1ZGVsbGEiLCJhIjoiY2locnN5ejZuMDAxandza3M4cGtzeXlqYSJ9.olxAQeWGTw_6slIVh4i6Cg"
-
-# Calculate degree for each node
-degree_counts <- edges %>%
-  gather(key = "type", value = "node", Source, Target) %>%
-  count(node) %>%
-  rename(degree = n)
-
-# Add the degree information to the nodes dataframe
-nodes <- nodes %>%
-  left_join(degree_counts, by = c("Id" = "node"))
-
-# If a node has no edges, assign a degree of 0
-nodes$degree[is.na(nodes$degree)] <- 0
 
 # Set a fixed radius for all circle markers (3)
 nodes$radius <- 3
