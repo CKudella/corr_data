@@ -138,7 +138,7 @@ m <- m %>%
 setwd("../leaflet_maps/")
 
 # Save map as HTML file
-saveWidget(m, file = "no_epp_per_loc_sent_by_era_to_with_geocoordinates_outliers_colour_.html", selfcontained = TRUE)
+saveWidget(m, file = "no_epp_per_loc_sent_by_era_to_with_geocoordinates_outliers_colour.html", selfcontained = TRUE)
 
 # Display map
 m

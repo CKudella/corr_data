@@ -13,6 +13,9 @@ setwd("../query_results/")
 nodes <- read.csv("create_geolayout_files_for_gephi/nodes_egdes_for_epp_sent_to_era/create_nodes_locations_for_epp_sent_to_era.csv", fileEncoding = "UTF-8", na.strings = c("NULL"))
 edges <- read.csv("create_geolayout_files_for_gephi/nodes_egdes_for_epp_sent_to_era/create_edges_epp_sent_to_era.csv", fileEncoding = "UTF-8", na.strings = c("NULL"))
 
+setwd("../query_results/")
+data_for_breaks <- read.csv("no_epp_per_loc/no_epp_per_loc_sent_to_era_with_geocoordinates.csv", fileEncoding = "UTF-8", na.strings = c("NULL"))
+
 # Create initial map bounds
 min_lat <- min(nodes$locations_lat, na.rm = TRUE)
 max_lat <- max(nodes$locations_lat, na.rm = TRUE)
@@ -43,11 +46,23 @@ edges_with_weights <- edges %>%
   group_by(Source, Target) %>%
   tally(name = "weight")  # Create a new column 'weight' that holds the count of occurrences
 
-# Apply Jenks Natural Breaks algorithm to classify edge weights into 4 classes **before** filtering self-loops
-jenks_breaks <- classInt::classIntervals(edges_with_weights$weight, n = 4, style = "jenks")
+# Determine breaks
+median_val <- median(data_for_breaks$Number.of.letters.sent.from.this.location.to.Erasmus, na.rm = TRUE)
+q1 <- quantile(data_for_breaks$Number.of.letters.sent.from.this.location.to.Erasmus, 0.25, na.rm = TRUE)
+q3 <- quantile(data_for_breaks$Number.of.letters.sent.from.this.location.to.Erasmus, 0.75, na.rm = TRUE)
+box_stats <- boxplot.stats(data_for_breaks$Number.of.letters.sent.from.this.location.to.Erasmus)
+upper_whisker <- box_stats$stats[5]
+outliers <- min(box_stats$out)
 
-# Assign Jenks classes
-edges_with_weights$jenks_class <- findInterval(edges_with_weights$weight, jenks_breaks$brks, all.inside = TRUE)
+# Define breaks including max value to ensure all data points are included
+breaks <- c(min(data_for_breaks$Number.of.letters.sent.from.this.location.to.Erasmus, na.rm = TRUE), 
+            median_val, q3, outliers, max(edges_with_weights$weight, na.rm = TRUE))
+
+# Ensure breaks are treated as a numeric vector
+breaks_numeric <- as.numeric(breaks)
+
+# Assign classes
+edges_with_weights$class <- findInterval(edges_with_weights$weight, breaks, all.inside = TRUE)
 
 # Identify self-loops
 edges_with_weights$self_loop <- edges_with_weights$Source == edges_with_weights$Target
@@ -56,11 +71,11 @@ edges_with_weights$self_loop <- edges_with_weights$Source == edges_with_weights$
 self_loops <- edges_with_weights %>% filter(self_loop)
 regular_edges <- edges_with_weights %>% filter(!self_loop)
 
-# Create a vector of line widths for each Jenks class
+# Create a vector of line widths for each class
 line_widths <- c(0.6, 2.4, 4.2, 6.0, 7.8)
 
-# Split regular edges by Jenks class
-edges_by_jenks <- split(regular_edges, regular_edges$jenks_class)
+# Split regular edges by class
+edges_by_class <- split(regular_edges, regular_edges$class)
 
 # Create the leaflet map
 m <- leaflet() %>%
@@ -94,10 +109,10 @@ m <- m %>%
     group = "Inner-City Letters (Self-Loops)"
   )
 
-# Add polylines for each Jenks class separately
-for (i in 1:length(edges_by_jenks)) {
+# Add polylines for each class separately
+for (i in 1:length(edges_by_class)) {
   # Join edges with node coordinates
-  combined_locations <- edges_by_jenks[[i]] %>%
+  combined_locations <- edges_by_class[[i]] %>%
     left_join(nodes, by = c("Source" = "Id")) %>%
     rename(locations_lat_source = locations_lat, locations_lng_source = locations_lng) %>%
     left_join(nodes, by = c("Target" = "Id")) %>%
@@ -112,7 +127,7 @@ for (i in 1:length(edges_by_jenks)) {
       color = "#C3161F",
       weight = line_widths[i],
       opacity = 0.7,
-      group = paste("Edges - Jenks Class", i)
+      group = paste("Edges - Class", i)
     )
 }
 
@@ -132,7 +147,7 @@ m <- m %>%
     weight = 1
   ) %>%
   addLayersControl(
-    overlayGroups = c("Nodes", paste("Edges - Jenks Class", 1:4), "Inner-City Letters (Self-Loops)"),
+    overlayGroups = c("Nodes", paste("Edges - Class", 1:4), "Inner-City Letters (Self-Loops)"),
     options = layersControlOptions(collapsed = FALSE)
   ) %>%
   fitBounds(min_lng, min_lat, max_lng, max_lat) %>%
@@ -165,20 +180,44 @@ m <- m %>%
     }
   "))
 
-# Format numbers for legend display
-format_numbers <- function(x) format(round(x, 2), nsmall = 0, big.mark = ",")
+# Detect if any number has decimal places
+if (any(breaks_numeric %% 1 != 0)) {
+  format_numbers <- function(x) sprintf("%.2f", x)  # Format to 2 decimal places
+  adjust_value <- 0.01
+} else {
+  format_numbers <- function(x) as.character(x)  # Keep whole numbers
+  adjust_value <- 1
+}
 
-# Build legend dynamically
+# Detect if any number has decimal places
+if (any(breaks_numeric %% 1 != 0)) {
+  format_numbers <- function(x) sprintf("%.2f", x)  # Format to 2 decimal places
+  adjust_value <- 0.01
+} else {
+  format_numbers <- function(x) as.character(x)  # Keep whole numbers
+  adjust_value <- 1
+}
+
+# Build legend
 legend_html <- paste0(
-  "<div style='background-color: white; padding: 10px; border-radius: 5px; box-shadow: 0px 0px 5px rgba(0,0,0,0.2);'>",
+  "<div style='display: flex; flex-direction: column;'>",
   paste0(
-    sapply(1:(length(jenks_breaks$brks) - 1), function(i) {
-      lower_bound <- round(jenks_breaks$brks[i])  # Ensure rounded values
-      upper_bound <- if (i == length(jenks_breaks$brks) - 1) round(jenks_breaks$brks[i + 1]) else round(jenks_breaks$brks[i + 1] - 1)
+    sapply(1:(length(breaks_numeric) - 1), function(i) {
+      lower_bound <- breaks_numeric[i]
+      upper_bound <- if (i == length(breaks_numeric) - 1) breaks_numeric[i + 1] else breaks_numeric[i + 1] - adjust_value
+      
+      # Check if the first class has an identical range (e.g., 1 - 1)
+      if (i == 1 && lower_bound == upper_bound) {
+        label_text <- paste0(format_numbers(lower_bound), " letter")
+      } else {
+        label_text <- paste0(format_numbers(lower_bound), " - ", format_numbers(upper_bound), " letters")
+      }
+      
       paste0(
         "<div style='display: flex; align-items: center; margin-bottom: 5px;'>",
-        "<div style='width: ", line_widths[i] * 2, "px; height: 5px; background-color: #C3161F; margin-right: 10px;'></div>",
-        "<span>", format_numbers(lower_bound), if (lower_bound == upper_bound) "" else paste0(" - ", format_numbers(upper_bound)), " letters</span>",
+        "<div style='width: ", (i * 5), "px; height: ", (i * 5), 
+        "px; background-color: #C3161F; border-radius: 50%; margin-right: 10px;'></div>",
+        "<span>", label_text, "</span>",
         "</div>"
       )
     }),
@@ -195,5 +234,4 @@ setwd("../leaflet_maps/")
 
 # Save the map and display it
 saveWidget(m, file = "nodes_edges_for_epp_sent_to_era_colour.html", selfcontained = TRUE)
-
 m
