@@ -20,15 +20,20 @@ def connect_db():
     return mysql.connector.connect(**DB_CONFIG)
 
 def run_query(cursor, sql_file):
-    """Execute a SQL query and return the results as a DataFrame."""
+    """Execute a SQL query and return the results as a DataFrame with all data as strings."""
     with open(sql_file, "r", encoding="utf-8") as file:
         query = file.read()
     cursor.execute(query)
     columns = [col[0] for col in cursor.description]  # Get column names
     results = cursor.fetchall()
-    
-    # Convert all data to strings to prevent Pandas' type inference
-    return pd.DataFrame(results, columns=columns).astype(str)
+
+    # Convert all values to strings
+    df = pd.DataFrame(results, columns=columns).astype(str)
+
+    # Remove trailing ".0" from integer-like floats **without affecting actual decimals**
+    df = df.applymap(lambda x: x[:-2] if x.endswith(".0") and x.count(".") == 1 and x.replace(".", "").isdigit() else x)
+
+    return df
 
 def save_results(df, output_path):
     """Save query results to a CSV file with all cells enclosed in double quotes."""
