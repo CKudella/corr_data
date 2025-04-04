@@ -6,6 +6,8 @@ on:
     types:
       - completed
 
+    workflow_dispatch:  # allows manual triggering
+    
 concurrency:
   group: committing-workflows
   cancel-in-progress: false  # Ensures jobs wait instead of canceling the running one
