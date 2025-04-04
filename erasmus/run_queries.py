@@ -27,11 +27,14 @@ def run_query(cursor, sql_file):
     columns = [col[0] for col in cursor.description]  # Get column names
     results = cursor.fetchall()
 
-    # Convert all values to strings
-    df = pd.DataFrame(results, columns=columns).astype(str)
+    # Convert all data to a DataFrame
+    df = pd.DataFrame(results, columns=columns)
 
     # Replace NaN values with "NULL"
     df = df.fillna("NULL")
+
+    # Convert everything to strings
+    df = df.astype(str)
 
     # Remove trailing ".0" from integer-like floats **without affecting actual decimals**
     df = df.map(lambda x: x[:-2] if isinstance(x, str) and x.endswith(".0") and x.count(".") == 1 and x.replace(".", "").isdigit() else x)
