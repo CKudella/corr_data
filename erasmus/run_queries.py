@@ -26,7 +26,9 @@ def run_query(cursor, sql_file):
     cursor.execute(query)
     columns = [col[0] for col in cursor.description]  # Get column names
     results = cursor.fetchall()
-    return pd.DataFrame(results, columns=columns)
+    
+    # Convert all data to strings to prevent Pandas' type inference
+    return pd.DataFrame(results, columns=columns).astype(str)
 
 def save_results(df, output_path):
     """Save query results to a CSV file with all cells enclosed in double quotes."""
