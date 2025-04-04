@@ -13,7 +13,7 @@ DB_CONFIG = {
 CSV_FILES = [
     ("locations", "erasmus/dataset/csv/era_locations.csv"),
     ("correspondents", "erasmus/dataset/csv/era_correspondents.csv"),
-    ("letters", "erasmus/dataset/csv/eras_letters.csv"),
+    ("letters", "erasmus/dataset/csv/era_letters.csv"),
 ]
 
 # SQL script to create tables
