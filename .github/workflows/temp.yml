@@ -1,16 +1,7 @@
 name: Erasmus - Run R Scripts and Save Outputs
 
 on:
-  workflow_run:
-    workflows: ["Erasmus - Setup MySQL, Import Data, Create DB Dump, and Run Queries"]
-    types:
-      - completed
-
   workflow_dispatch:  # allows manual triggering
-
-concurrency:
-  group: committing-workflows
-  cancel-in-progress: false  # Ensures jobs wait instead of canceling the running one
 
 jobs:
   run-r-scripts:
