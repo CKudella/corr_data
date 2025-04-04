@@ -2,7 +2,6 @@ import os
 import mysql.connector
 import pandas as pd
 import csv  # Import CSV module for quoting options
-import numpy as np  # Needed for handling NaN values
 
 # MySQL connection settings
 DB_CONFIG = {
@@ -32,7 +31,7 @@ def run_query(cursor, sql_file):
     df = pd.DataFrame(results, columns=columns).astype(str)
 
     # Replace NaN values with "NULL"
-    df = df.replace({np.nan: "NULL"})
+    df = df.fillna("NULL")
 
     # Remove trailing ".0" from integer-like floats **without affecting actual decimals**
     df = df.map(lambda x: x[:-2] if isinstance(x, str) and x.endswith(".0") and x.count(".") == 1 and x.replace(".", "").isdigit() else x)
