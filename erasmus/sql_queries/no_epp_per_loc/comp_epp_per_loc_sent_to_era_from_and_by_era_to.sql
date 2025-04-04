@@ -12,7 +12,7 @@ FROM (
          WHERE ZB.locations_id = ZA.target_loc_id
            AND ZA.sender_id = '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf'
            AND ZA.target_loc_id NOT LIKE 'unknown%'
-         GROUP BY ZB.locations_name_modern
+         GROUP BY ZB.locations_name_modern, ZB.locations_lat, ZB.locations_lng
          ORDER BY ZB.locations_name_modern DESC)
       UNION
         (SELECT DISTINCT ZB.locations_name_modern AS LocationName,
@@ -23,7 +23,7 @@ FROM (
          WHERE ZB.locations_id = ZA.source_loc_id
            AND ZA.recipient_id = '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf'
            AND ZA.source_loc_id NOT LIKE 'unknown%'
-         GROUP BY ZB.locations_name_modern
+         GROUP BY ZB.locations_name_modern, ZB.locations_lat, ZB.locations_lng
          ORDER BY ZB.locations_name_modern DESC)) AS Z
 LEFT OUTER JOIN
   (SELECT XB.locations_name_modern AS LocationName,
@@ -34,7 +34,7 @@ LEFT OUTER JOIN
    JOIN locations AS XB ON XB.locations_id = XA.source_loc_id
    WHERE XA.recipient_id = '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf'
      AND XA.source_loc_id NOT LIKE 'unknown%'
-   GROUP BY XA.source_loc_id
+   GROUP BY XA.source_loc_id, XB.locations_name_modern, XB.locations_lat, XB.locations_lng
    ORDER BY COUNT(XA.source_loc_id) DESC) AS X ON X.LocationName = Z.LocationName
 LEFT OUTER JOIN
   (SELECT YB.locations_name_modern AS LocationName,
@@ -45,5 +45,5 @@ LEFT OUTER JOIN
    JOIN locations AS YB ON YB.locations_id = YA.target_loc_id
    WHERE YA.recipient_id != '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf'
      AND YA.target_loc_id NOT LIKE 'unknown%'
-   GROUP BY YA.target_loc_id
+   GROUP BY YA.target_loc_id, YB.locations_name_modern, YB.locations_lat, YB.locations_lng
    ORDER BY COUNT(YA.target_loc_id) DESC) AS Y ON Y.LocationName = Z.LocationName
