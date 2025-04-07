@@ -15,7 +15,7 @@ LEFT JOIN era_cdb_v3.locations AS TargetLoc ON TargetLoc.locations_id = L.target
 WHERE recipient_id = '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf'
   AND sender_id IN
     (SELECT E.correspondents_id
-     FROM budé_cdb_v1.correspondents AS B,
+     FROM bude_cdb_v1.correspondents AS B,
           era_cdb_v3.correspondents AS E
      WHERE B.correspondents_id = E.correspondents_id
        AND B.correspondents_id NOT IN ('be1dcbc4-3987-472a-b4a0-c3305ead139f',

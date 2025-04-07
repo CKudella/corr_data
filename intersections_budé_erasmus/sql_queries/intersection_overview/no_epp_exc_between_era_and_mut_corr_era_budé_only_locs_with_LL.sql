@@ -7,7 +7,7 @@ WHERE L.sender_id IN
      FROM era_cdb_v3.correspondents AS X
      WHERE X.correspondents_id IN
          (SELECT B.correspondents_id
-          FROM budé_cdb_v1.correspondents AS B,
+          FROM bude_cdb_v1.correspondents AS B,
                era_cdb_v3.correspondents AS E
           WHERE B.correspondents_id = E.correspondents_id
             AND B.correspondents_id NOT LIKE 'be1dcbc4-3987-472a-b4a0-c3305ead139f'
@@ -18,7 +18,7 @@ WHERE L.sender_id IN
      FROM era_cdb_v3.correspondents AS X
      WHERE X.correspondents_id IN
          (SELECT B.correspondents_id
-          FROM budé_cdb_v1.correspondents AS B,
+          FROM bude_cdb_v1.correspondents AS B,
                era_cdb_v3.correspondents AS E
           WHERE B.correspondents_id = E.correspondents_id
             AND B.correspondents_id NOT LIKE 'be1dcbc4-3987-472a-b4a0-c3305ead139f'

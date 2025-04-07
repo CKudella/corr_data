@@ -11,7 +11,7 @@ WHERE sender_id = '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf'
      FROM era_cdb_v3.correspondents AS X
      WHERE X.correspondents_id IN
          (SELECT B.correspondents_id
-          FROM budé_cdb_v1.correspondents AS B,
+          FROM bude_cdb_v1.correspondents AS B,
                era_cdb_v3.correspondents AS E
           WHERE B.correspondents_id = E.correspondents_id))
   AND recipient_id != 'c0b89c75-45b8-4b04-bfd7-25bfe9ed040b'

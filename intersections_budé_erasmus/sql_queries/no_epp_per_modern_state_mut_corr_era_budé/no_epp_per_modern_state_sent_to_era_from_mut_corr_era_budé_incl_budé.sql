@@ -8,7 +8,7 @@ WHERE recipient_id = '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf'
      FROM era_cdb_v3.correspondents AS X
      WHERE X.correspondents_id IN
          (SELECT B.correspondents_id
-          FROM budé_cdb_v1.correspondents AS B,
+          FROM bude_cdb_v1.correspondents AS B,
                era_cdb_v3.correspondents AS E
           WHERE B.correspondents_id = E.correspondents_id))
 GROUP BY locations_modern_state

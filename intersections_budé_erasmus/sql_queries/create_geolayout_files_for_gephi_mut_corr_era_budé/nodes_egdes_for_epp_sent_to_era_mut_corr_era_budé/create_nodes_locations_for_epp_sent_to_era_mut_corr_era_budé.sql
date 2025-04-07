@@ -11,11 +11,11 @@ WHERE ELOC.locations_id IN
      WHERE ELETA.recipient_id = '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf'
        AND ELETA.sender_id IN
          (SELECT X.correspondents_id
-          FROM budé_cdb_v1.correspondents AS X
+          FROM bude_cdb_v1.correspondents AS X
           WHERE X.correspondents_id IN
               (SELECT E.correspondents_id
                FROM era_cdb_v3.correspondents AS E,
-                    budé_cdb_v1.correspondents AS B
+                    bude_cdb_v1.correspondents AS B
                WHERE E.correspondents_id = B.correspondents_id))
        AND ELETA.source_loc_id NOT LIKE 'unknown%'
        AND ELETA.target_loc_id NOT LIKE 'unknown%')
@@ -25,11 +25,11 @@ WHERE ELOC.locations_id IN
      WHERE ELETB.recipient_id = '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf'
       AND ELETB.sender_id IN
          (SELECT X.correspondents_id
-          FROM budé_cdb_v1.correspondents AS X
+          FROM bude_cdb_v1.correspondents AS X
           WHERE X.correspondents_id IN
               (SELECT E.correspondents_id
                FROM era_cdb_v3.correspondents AS E,
-                    budé_cdb_v1.correspondents AS B
+                    bude_cdb_v1.correspondents AS B
                WHERE E.correspondents_id = B.correspondents_id))
        AND ELETB.source_loc_id NOT LIKE 'unknown%'
        AND ELETB.target_loc_id NOT LIKE 'unknown%')

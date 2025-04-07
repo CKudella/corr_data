@@ -7,7 +7,7 @@ WHERE locations.locations_id = letters.target_loc_id
   AND sender_id = '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf'
   AND recipient_id IN
     (SELECT E.correspondents_id
-     FROM budé_cdb_v1.correspondents AS B,
+     FROM bude_cdb_v1.correspondents AS B,
           era_cdb_v3.correspondents AS E
      WHERE B.correspondents_id = E.correspondents_id
        AND B.correspondents_id NOT IN ('be1dcbc4-3987-472a-b4a0-c3305ead139f',

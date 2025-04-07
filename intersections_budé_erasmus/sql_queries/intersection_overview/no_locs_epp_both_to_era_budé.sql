@@ -1,8 +1,8 @@
 SELECT COUNT(BL.locations_id) AS 'Number of locations from which letters have been sent both to Budé and Erasmus'
-FROM budé_cdb_v1.locations AS BL
+FROM bude_cdb_v1.locations AS BL
 WHERE BL.locations_id IN
     (SELECT DISTINCT BLet.source_loc_id
-     FROM budé_cdb_v1.letters AS BLet
+     FROM bude_cdb_v1.letters AS BLet
      WHERE BLet.recipient_id = 'c0b89c75-45b8-4b04-bfd7-25bfe9ed040b'
        AND BLet.source_loc_id NOT LIKE 'unknown%'
      GROUP BY BLet.source_loc_id)
