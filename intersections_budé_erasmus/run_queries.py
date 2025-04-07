@@ -11,8 +11,8 @@ DB_CONFIG = {
 }
 
 # Paths
-QUERY_DIR = "intersections_budé_erasmus/sql_queries"
-RESULTS_DIR = "intersections_budé_erasmus/query_results"
+QUERY_DIR = "intersections_budé_erasmus/sql_queries"
+RESULTS_DIR = "intersections_budé_erasmus/query_results"
 
 def connect_db():
     """Establish a connection to the MySQL database."""

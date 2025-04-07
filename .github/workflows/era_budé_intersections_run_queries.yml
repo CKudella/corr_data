@@ -48,23 +48,14 @@ jobs:
       - name: Run Python Script to Setup Database and Import Data for Pirckheimer
         run: python budé/database/create_script/import_data.py
 
-      - name: Verify Query Directory Exists
-        run: |
-          if [ ! -d "intersections_budé_erasmus/sql_queries" ]; then
-            echo "❌ Query directory does not exist!"
-            exit 1
-          else
-            echo "✅ Query directory exists!"
-          fi      
-
       - name: Run SQL Queries and Save Results  
-        run: python intersections_budé_erasmus/run_queries.py  
+        run: python intersections_budé_erasmus/run_queries.py  
 
       - name: Upload Query Results as Artifact
         uses: actions/upload-artifact@v4  
         with:  
           name: query-results  
-          path: intersections_budé_erasmus/query_results/
+          path: intersections_budé_erasmus/query_results/
 
 #    - name: Configure Git
 #      run: |
