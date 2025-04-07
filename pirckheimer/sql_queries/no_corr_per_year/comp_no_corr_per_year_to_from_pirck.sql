@@ -18,5 +18,4 @@ LEFT OUTER JOIN
    WHERE recipient_id = 'd9233b24-a98c-4279-8065-e2ab70c0d080'
      AND sender_id != 'be1dcbc4-3987-472a-b4a0-c3305ead139f'
    GROUP BY send_date_year1) AS C ON C.Year = A.Year
-GROUP BY A.Year
 ORDER BY A.Year ASC

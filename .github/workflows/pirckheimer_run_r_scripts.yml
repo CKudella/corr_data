@@ -1,8 +1,8 @@
-name: Erasmus - Run R Scripts and Save Outputs
+name: Pirckheimer - Run R Scripts and Save Outputs
 
 on:
   workflow_run:
-    workflows: ["Erasmus - Setup MySQL, Import Data, Create DB Dump, and Run Queries"]
+    workflows: ["Pirkheimer - Setup MySQL, Import Data, Create DB Dump, and Run Queries"]
     types:
       - completed
   workflow_dispatch:
@@ -28,12 +28,12 @@ jobs:
     
     - name: Replace folder specification for setwd() in R Scripts
       run: |
-        find erasmus/r_scripts/ -type f -name "*.R" -exec sed -i 's|setwd("../query_results/")|setwd("erasmus/query_results/")|g' {} +
-        find erasmus/r_scripts/ -type f -name "*.R" -exec sed -i 's|setwd("../r_plots/")|setwd("/__w/corr_data_wip/corr_data_wip/erasmus/r_plots/")|g' {} +
+        find pirckheimer/r_scripts/ -type f -name "*.R" -exec sed -i 's|setwd("../query_results/")|setwd("pirckheimer/query_results/")|g' {} +
+        find pirckheimer/r_scripts/ -type f -name "*.R" -exec sed -i 's|setwd("../r_plots/")|setwd("/__w/corr_data_wip/corr_data_wip/pirckheimer/r_plots/")|g' {} +
     
     - name: Run R Scripts
       run: |
-        find erasmus/r_scripts/ -type f -name "*.R" | while read script; do
+        find pirckheimer/r_scripts/ -type f -name "*.R" | while read script; do
           echo "📥 Running script: $script"
           Rscript "$script"
         done
@@ -42,7 +42,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: r-plots
-        path: erasmus/r_plots/
+        path: pirckheimer/r_plots/
 
 #   - name: Configure Git
 #     run: |
