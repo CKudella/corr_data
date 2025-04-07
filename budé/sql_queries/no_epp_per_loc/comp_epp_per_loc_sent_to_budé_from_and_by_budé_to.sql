@@ -7,7 +7,7 @@ FROM (
         (SELECT DISTINCT ZB.locations_name_modern AS LocationName,
                          ZB.locations_lat AS Latitude,
                          ZB.locations_lng AS Longitude
-         FROM budé_cdb_v1.letters AS ZA,
+         FROM bude_cdb_v1.letters AS ZA,
               locations AS ZB
          WHERE ZB.locations_id = ZA.target_loc_id
            AND ZA.sender_id = 'c0b89c75-45b8-4b04-bfd7-25bfe9ed040b'
@@ -18,7 +18,7 @@ FROM (
         (SELECT DISTINCT ZB.locations_name_modern AS LocationName,
                          ZB.locations_lat AS Latitude,
                          ZB.locations_lng AS Longitude
-         FROM budé_cdb_v1.letters AS ZA,
+         FROM bude_cdb_v1.letters AS ZA,
               locations AS ZB
          WHERE ZB.locations_id = ZA.source_loc_id
            AND ZA.recipient_id = 'c0b89c75-45b8-4b04-bfd7-25bfe9ed040b'
@@ -30,7 +30,7 @@ LEFT OUTER JOIN
           XB.locations_lat AS 'Latitude',
           XB.locations_lng AS 'Longitude',
           COUNT(XA.source_loc_id) AS NoLettersWrittenTOBudé
-   FROM budé_cdb_v1.letters AS XA
+   FROM bude_cdb_v1.letters AS XA
    JOIN locations AS XB ON XB.locations_id = XA.source_loc_id
    WHERE XA.recipient_id = 'c0b89c75-45b8-4b04-bfd7-25bfe9ed040b'
      AND XA.source_loc_id NOT LIKE 'unknown%'
@@ -41,7 +41,7 @@ LEFT OUTER JOIN
           YB.locations_lat AS 'Latitude',
           YB.locations_lng AS 'Longitude',
           COUNT(YA.target_loc_id) AS NoLettersWrittenBYBudéTO
-   FROM budé_cdb_v1.letters AS YA
+   FROM bude_cdb_v1.letters AS YA
    JOIN locations AS YB ON YB.locations_id = YA.target_loc_id
    WHERE YA.recipient_id != 'c0b89c75-45b8-4b04-bfd7-25bfe9ed040b'
      AND YA.target_loc_id NOT LIKE 'unknown%'

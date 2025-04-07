@@ -18,12 +18,10 @@ jobs:
         image: mysql:8.0
         env:
           MYSQL_ROOT_PASSWORD: root
-          MYSQL_DATABASE: budé_cdb_v1
+          MYSQL_DATABASE: bude_cdb_v1
         ports:
           - 3306:3306
         options: >-
-          --character-set-server=utf8mb4 
-          --collation-server=utf8mb4_unicode_ci # Ensure that the mysql container uses utf8mb4 
           --health-cmd="mysqladmin ping --host=localhost --user=root --password=root"
           --health-interval=10s
           --health-timeout=5s
@@ -44,13 +42,13 @@ jobs:
 
       - name: Dump Database to SQL File
         run: |
-          mysqldump -h 127.0.0.1 -u root -proot budé_cdb_v1 > budé/database/dump/budé_cdb_v1_dump.sql
+          mysqldump -h 127.0.0.1 -u root -proot bude_cdb_v1 > budé/database/dump/bude_cdb_v1_dump.sql
 
       - name: Upload Database Dump as Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: budé_cdb_v1_dump
-          path: budé/database/dump/budé_cdb_v1_dump.sql
+          name: bude_cdb_v1_dump
+          path: budé/database/dump/bude_cdb_v1_dump.sql
 
       - name: Run SQL Queries and Save Results  
         run: python budé/run_queries.py  
