@@ -6,7 +6,7 @@ on:
       - 'pirckheimer/dataset/csv/**'  # Only trigger if files in this directory change
 
 concurrency:
-  group: committing-workflows
+  group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: false  # Ensures jobs wait instead of canceling the running one
 
 jobs:

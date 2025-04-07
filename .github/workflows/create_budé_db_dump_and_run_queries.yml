@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: committing-workflows
+  group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: false  # Ensures jobs wait instead of canceling the running one
 
 jobs:
