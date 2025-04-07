@@ -24,9 +24,9 @@ jobs:
 
     - name: Install Required R Packages
       run: |
-        R -e 'install.packages("leaflet", repos ="https://ftp.gwdg.de/pub/misc/cran/")'
-        R -e 'install.packages(c("svglite", "ggrepel", "patchwork", "lubridate", "classInt", "htmlwidgets", "htmltools", "igraph", "rgexf", "ndtv"), repos ="https://ftp.gwdg.de/pub/misc/cran/")'
-        R -e 'install.packages("leaflet.extras", repos ="https://ftp.gwdg.de/pub/misc/cran/")'
+        R -e 'install.packages("leaflet", repos ="https://packagemanager.posit.co/cran/latest")'
+        R -e 'install.packages(c("svglite", "ggrepel", "patchwork", "lubridate", "classInt", "htmlwidgets", "htmltools", "igraph", "rgexf", "ndtv"), repos ="https://packagemanager.posit.co/cran/latest")'
+        R -e 'install.packages("leaflet.extras", repos ="https://packagemanager.posit.co/cran/latest")'
       
     
     - name: Replace folder specification for setwd() in R Scripts
