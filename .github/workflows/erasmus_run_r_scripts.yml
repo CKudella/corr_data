@@ -32,7 +32,7 @@ jobs:
     - name: Replace folder specification for setwd() in R Scripts
       run: |
         find erasmus/r_scripts/ -type f -name "*.R" -exec sed -i 's|setwd("../query_results/")|setwd("erasmus/query_results/")|g' {} +
-        find erasmus/r_scripts/ -type f -name "*.R" -exec sed -i 's|setwd("../r_plots/")|setwd("/__w/corr_data_wip/corr_data_wip/erasmus/r_plots/")|g' {} +
+        find erasmus/r_scripts/ -type f -name "*.R" -exec sed -i 's|setwd("../r_plots/")|setwd("/__w/corr_data/corr_data/erasmus/r_plots/")|g' {} +
     
     - name: Run R Scripts
       run: |
