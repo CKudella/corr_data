@@ -2,7 +2,7 @@ SELECT Z.Year,
        X.NoInferred AS 'Number of letters with inferred send date',
        Y.NoNonInferred AS 'Number of letters with non-inferred send date'
 FROM
-  (SELECT send_date_year1 AS YEAR
+  (SELECT DISTINCT send_date_year1 AS YEAR
    FROM bude_cdb_v1.letters) AS Z
 LEFT OUTER JOIN
   (SELECT XA.send_date_year1 AS YEAR,
