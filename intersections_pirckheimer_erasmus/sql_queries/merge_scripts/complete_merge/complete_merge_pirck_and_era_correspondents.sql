@@ -17,10 +17,10 @@ SELECT X.correspondents_id AS 'Id',
        X.dod_year2
 FROM
 (SELECT *
-FROM era_cdb_v3.correspondents
+FROM era_cdb.correspondents
 UNION ALL
   (SELECT *
-   FROM wpirck_cdb_v1.correspondents AS P
+   FROM wpirck_cdb.correspondents AS P
    WHERE P.correspondents_id NOT IN
        (SELECT E.correspondents_id
-        FROM era_cdb_v3.correspondents AS E))) AS X
+        FROM era_cdb.correspondents AS E))) AS X

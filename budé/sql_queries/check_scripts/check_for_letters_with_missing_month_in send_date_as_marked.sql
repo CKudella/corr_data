@@ -1,5 +1,5 @@
 SELECT *
-FROM bude_cdb_v1.letters
+FROM bude_cdb.letters
 WHERE send_date_as_marked NOT LIKE '%Jan%'
   AND send_date_as_marked NOT LIKE '%Feb%'
   AND send_date_as_marked NOT LIKE '%février%'

@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.23, for osx10.15 (x86_64)
 --
--- Host: localhost    Database: wpirck_cdb_v1
+-- Host: localhost    Database: wpirck_cdb
 -- ------------------------------------------------------
 -- Server version	8.0.23
 

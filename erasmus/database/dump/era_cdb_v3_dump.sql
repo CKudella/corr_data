@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.23, for osx10.15 (x86_64)
 --
--- Host: localhost    Database: era_cdb_v3
+-- Host: localhost    Database: era_cdb
 -- ------------------------------------------------------
 -- Server version	8.0.23
 

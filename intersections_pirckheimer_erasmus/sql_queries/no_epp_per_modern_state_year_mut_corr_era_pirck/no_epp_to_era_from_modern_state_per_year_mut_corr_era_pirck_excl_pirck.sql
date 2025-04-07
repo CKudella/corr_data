@@ -1,14 +1,14 @@
 SELECT DISTINCT locations.locations_modern_state AS 'Modern State',
                 COUNT(*) AS 'Number of letters sent from this modern state to Erasmus this year from mutual correspondents of his and Pirckheimer (excl. Pirckheimer)',
                 send_date_year1
-FROM era_cdb_v3.letters,
-     era_cdb_v3.locations
+FROM era_cdb.letters,
+     era_cdb.locations
 WHERE locations.locations_id = letters.source_loc_id
   AND recipient_id = '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf'
   AND sender_id IN
     (SELECT E.correspondents_id
-     FROM wpirck_cdb_v1.correspondents AS P,
-          era_cdb_v3.correspondents AS E
+     FROM wpirck_cdb.correspondents AS P,
+          era_cdb.correspondents AS E
      WHERE P.correspondents_id = E.correspondents_id
        AND P.correspondents_id NOT IN ('be1dcbc4-3987-472a-b4a0-c3305ead139f',
                                        '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf',

@@ -8,6 +8,6 @@ SELECT letters_id,
        target_loc_id,
        TargetLoc.locations_lat AS TargetLAT,
        TargetLoc.locations_lng AS TargetLNG
-FROM bude_cdb_v1.letters
-LEFT JOIN bude_cdb_v1.locations AS SourceLoc ON SourceLoc.locations_id = letters.source_loc_id
-LEFT JOIN bude_cdb_v1.locations AS TargetLoc ON TargetLoc.locations_id = letters.target_loc_id
+FROM bude_cdb.letters
+LEFT JOIN bude_cdb.locations AS SourceLoc ON SourceLoc.locations_id = letters.source_loc_id
+LEFT JOIN bude_cdb.locations AS TargetLoc ON TargetLoc.locations_id = letters.target_loc_id

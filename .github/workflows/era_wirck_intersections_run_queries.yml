@@ -39,8 +39,8 @@ jobs:
 
       - name: Create Both Databases
         run: |
-          mysql -h 127.0.0.1 -u root -proot -e "CREATE DATABASE IF NOT EXISTS era_cdb_v3;"
-          mysql -h 127.0.0.1 -u root -proot -e "CREATE DATABASE IF NOT EXISTS wpirck_cdb_v1;"
+          mysql -h 127.0.0.1 -u root -proot -e "CREATE DATABASE IF NOT EXISTS era_cdb;"
+          mysql -h 127.0.0.1 -u root -proot -e "CREATE DATABASE IF NOT EXISTS wpirck_cdb;"
 
       - name: Run Python Script to Setup Database and Import Data for Erasmus
         run: python erasmus/database/create_script/import_data.py

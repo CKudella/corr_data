@@ -1,5 +1,5 @@
 SELECT *
-FROM era_cdb_v3.letters
+FROM era_cdb.letters
 WHERE send_date_as_marked NOT LIKE '%Jan%'
   AND send_date_as_marked NOT LIKE '%Feb%'
   AND send_date_as_marked NOT LIKE '%Mar%'

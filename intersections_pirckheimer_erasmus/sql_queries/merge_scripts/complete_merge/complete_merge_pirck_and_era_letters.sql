@@ -26,9 +26,9 @@ SELECT L.letters_id AS 'Id',
        L.letter_type_x_to_x
 FROM
   (SELECT *
-   FROM era_cdb_v3.letters
+   FROM era_cdb.letters
    UNION ALL
      (SELECT *
-      FROM wpirck_cdb_v1.letters
+      FROM wpirck_cdb.letters
       WHERE letters_id NOT LIKE '%_cwe_%'
         AND letters_id NOT LIKE '%_allen_%')) AS L

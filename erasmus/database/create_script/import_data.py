@@ -6,7 +6,7 @@ DB_CONFIG = {
     "host": "127.0.0.1",
     "user": "root",
     "password": "root",
-    "database": "era_cdb_v3",
+    "database": "era_cdb",
 }
 
 # Paths to CSV files (in correct loading order)
@@ -17,7 +17,7 @@ CSV_FILES = [
 ]
 
 # SQL script to create tables
-SQL_SCRIPT_PATH = "erasmus/database/create_script/era_cdb_v3_create_script.sql"
+SQL_SCRIPT_PATH = "erasmus/database/create_script/era_cdb_create_script.sql"
 
 def connect_db():
     """Establish a connection to the MySQL database."""

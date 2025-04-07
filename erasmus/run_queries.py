@@ -8,7 +8,7 @@ DB_CONFIG = {
     "host": "127.0.0.1",
     "user": "root",
     "password": "root",
-    "database": "era_cdb_v3",
+    "database": "era_cdb",
 }
 
 # Paths

@@ -1,7 +1,7 @@
 SELECT B.locations_name_modern,
        A.send_date_year1 AS YEAR,
        COUNT(*) AS COUNT
-FROM era_cdb_v3.letters AS A,
+FROM era_cdb.letters AS A,
      locations AS B
 WHERE A.target_loc_id = B.locations_id
   AND A.sender_id = '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf'
@@ -11,7 +11,7 @@ WHERE A.target_loc_id = B.locations_id
      FROM
        (SELECT DISTINCT D.target_loc_id,
                         COUNT(D.target_loc_id) AS NoEppFromEra
-        FROM era_cdb_v3.letters AS D
+        FROM era_cdb.letters AS D
         JOIN locations AS E ON E.locations_id = D.target_loc_id
         WHERE D.sender_id = '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf'
           AND D.target_loc_id NOT LIKE 'unknown%'

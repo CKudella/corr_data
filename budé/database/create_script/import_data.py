@@ -6,7 +6,7 @@ DB_CONFIG = {
     "host": "127.0.0.1",
     "user": "root",
     "password": "root",
-    "database": "bude_cdb_v1",
+    "database": "bude_cdb",
 }
 
 # Paths to CSV files (in correct loading order)
@@ -17,7 +17,7 @@ CSV_FILES = [
 ]
 
 # SQL script to create tables
-SQL_SCRIPT_PATH = "budé/database/create_script/bude_cdb_v1_create_script.sql"
+SQL_SCRIPT_PATH = "budé/database/create_script/bude_cdb_create_script.sql"
 
 def connect_db():
     """Establish a connection to the MySQL database."""

@@ -7,7 +7,7 @@ FROM (
         (SELECT DISTINCT ZB.locations_name_modern AS LocationName,
                          ZB.locations_lat AS Latitude,
                          ZB.locations_lng AS Longitude
-         FROM era_cdb_v3.letters AS ZA,
+         FROM era_cdb.letters AS ZA,
               locations AS ZB
          WHERE ZB.locations_id = ZA.target_loc_id
            AND ZA.sender_id = '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf'
@@ -18,7 +18,7 @@ FROM (
         (SELECT DISTINCT ZB.locations_name_modern AS LocationName,
                          ZB.locations_lat AS Latitude,
                          ZB.locations_lng AS Longitude
-         FROM era_cdb_v3.letters AS ZA,
+         FROM era_cdb.letters AS ZA,
               locations AS ZB
          WHERE ZB.locations_id = ZA.source_loc_id
            AND ZA.recipient_id = '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf'
@@ -30,7 +30,7 @@ LEFT OUTER JOIN
           XB.locations_lat AS 'Latitude',
           XB.locations_lng AS 'Longitude',
           COUNT(XA.source_loc_id) AS NoLettersWrittenTOErasmus
-   FROM era_cdb_v3.letters AS XA
+   FROM era_cdb.letters AS XA
    JOIN locations AS XB ON XB.locations_id = XA.source_loc_id
    WHERE XA.recipient_id = '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf'
      AND XA.source_loc_id NOT LIKE 'unknown%'
@@ -41,7 +41,7 @@ LEFT OUTER JOIN
           YB.locations_lat AS 'Latitude',
           YB.locations_lng AS 'Longitude',
           COUNT(YA.target_loc_id) AS NoLettersWrittenBYErasmusTO
-   FROM era_cdb_v3.letters AS YA
+   FROM era_cdb.letters AS YA
    JOIN locations AS YB ON YB.locations_id = YA.target_loc_id
    WHERE YA.recipient_id != '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf'
      AND YA.target_loc_id NOT LIKE 'unknown%'

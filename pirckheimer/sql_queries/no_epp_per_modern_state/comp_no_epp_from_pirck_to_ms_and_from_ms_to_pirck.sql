@@ -3,7 +3,7 @@ SELECT Z.ModernState,
        C.NoEppToPirck AS 'Number of letters sent from this modern state to Pirckheimer'
 FROM (
         (SELECT DISTINCT XB.locations_modern_state AS ModernState
-         FROM wpirck_cdb_v1.letters AS XA,
+         FROM wpirck_cdb.letters AS XA,
               locations AS XB
          WHERE XB.locations_id = XA.target_loc_id
            AND XA.sender_id = 'd9233b24-a98c-4279-8065-e2ab70c0d080'
@@ -11,7 +11,7 @@ FROM (
          ORDER BY COUNT(*) DESC)
       UNION
         (SELECT DISTINCT YB.locations_modern_state AS ModernState
-         FROM wpirck_cdb_v1.letters AS YA,
+         FROM wpirck_cdb.letters AS YA,
               locations AS YB
          WHERE YB.locations_id = YA.source_loc_id
            AND YA.recipient_id = 'd9233b24-a98c-4279-8065-e2ab70c0d080'
@@ -20,7 +20,7 @@ FROM (
 LEFT OUTER JOIN
   (SELECT DISTINCT locations.locations_modern_state AS ModernState,
                    COUNT(*) AS NoEppFromPirck
-   FROM wpirck_cdb_v1.letters,
+   FROM wpirck_cdb.letters,
         locations
    WHERE locations.locations_id = letters.target_loc_id
      AND sender_id = 'd9233b24-a98c-4279-8065-e2ab70c0d080'
@@ -29,7 +29,7 @@ LEFT OUTER JOIN
 LEFT OUTER JOIN
   (SELECT DISTINCT locations.locations_modern_state AS ModernState,
                    COUNT(*) AS NoEppToPirck
-   FROM wpirck_cdb_v1.letters,
+   FROM wpirck_cdb.letters,
         locations
    WHERE locations.locations_id = letters.source_loc_id
      AND recipient_id = 'd9233b24-a98c-4279-8065-e2ab70c0d080'

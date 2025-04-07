@@ -26,28 +26,28 @@ SELECT L.letters_id AS 'Id',
        L.letter_type_x_to_x
 FROM
   (SELECT *
-   FROM era_cdb_v3.letters
+   FROM era_cdb.letters
    UNION ALL
      (SELECT *
-      FROM wpirck_cdb_v1.letters AS PL
+      FROM wpirck_cdb.letters AS PL
       WHERE PL.letters_id NOT LIKE '%_cwe_%' AND PL.letters_id NOT LIKE '%_allen_%')) AS L
 WHERE L.sender_id IN
     (SELECT X.correspondents_id
-     FROM era_cdb_v3.correspondents AS X
+     FROM era_cdb.correspondents AS X
      WHERE X.correspondents_id IN
          (SELECT P.correspondents_id
-          FROM wpirck_cdb_v1.correspondents AS P,
-               era_cdb_v3.correspondents AS E
+          FROM wpirck_cdb.correspondents AS P,
+               era_cdb.correspondents AS E
           WHERE P.correspondents_id = E.correspondents_id
             AND P.correspondents_id NOT LIKE 'be1dcbc4-3987-472a-b4a0-c3305ead139f'
             AND E.correspondents_id NOT LIKE 'be1dcbc4-3987-472a-b4a0-c3305ead139f'))
   AND L.recipient_id IN
     (SELECT X.correspondents_id
-     FROM era_cdb_v3.correspondents AS X
+     FROM era_cdb.correspondents AS X
      WHERE X.correspondents_id IN
          (SELECT P.correspondents_id
-          FROM wpirck_cdb_v1.correspondents AS P,
-               era_cdb_v3.correspondents AS E
+          FROM wpirck_cdb.correspondents AS P,
+               era_cdb.correspondents AS E
           WHERE P.correspondents_id = E.correspondents_id
             AND P.correspondents_id NOT LIKE 'be1dcbc4-3987-472a-b4a0-c3305ead139f'
             AND E.correspondents_id NOT LIKE 'be1dcbc4-3987-472a-b4a0-c3305ead139f'))

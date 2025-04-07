@@ -5,21 +5,21 @@ SELECT A.ModernState,
 FROM
   (SELECT DISTINCT AA.locations_modern_state AS ModernState,
                    AL.send_date_year1 AS YEAR
-   FROM era_cdb_v3.locations AS AA,
+   FROM era_cdb.locations AS AA,
         letters AS AL
    WHERE AA.locations_id IN
        (SELECT DISTINCT AB.source_loc_id
-        FROM era_cdb_v3.letters AS AB)
+        FROM era_cdb.letters AS AB)
      OR AA.locations_id IN
        (SELECT DISTINCT AC.target_loc_id
-        FROM era_cdb_v3.letters AS AC)
+        FROM era_cdb.letters AS AC)
    GROUP BY AL.send_date_year1,
             AA.locations_modern_state) AS A
 LEFT OUTER JOIN
   (SELECT DISTINCT locations.locations_modern_state AS ModernState,
                    COUNT(*) AS NoEppSentFromEra,
                    send_date_year1
-   FROM era_cdb_v3.letters,
+   FROM era_cdb.letters,
         locations
    WHERE locations.locations_id = letters.target_loc_id
      AND sender_id = '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf'
@@ -31,7 +31,7 @@ LEFT OUTER JOIN
   (SELECT DISTINCT locations.locations_modern_state AS ModernState,
                    COUNT(*) AS NoEppSentToEra,
                    send_date_year1
-   FROM era_cdb_v3.letters,
+   FROM era_cdb.letters,
         locations
    WHERE locations.locations_id = letters.source_loc_id
      AND recipient_id = '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf'

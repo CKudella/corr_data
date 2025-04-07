@@ -7,10 +7,10 @@ SELECT LOC.locations_id AS 'Id',
        LOC.locations_ll_combined
 FROM
   (SELECT *
-   FROM era_cdb_v3.locations
+   FROM era_cdb.locations
    UNION ALL
      (SELECT *
-      FROM bude_cdb_v1.locations AS B
+      FROM bude_cdb.locations AS B
       WHERE B.locations_id NOT IN
           (SELECT E.locations_id
-           FROM era_cdb_v3.locations AS E))) AS LOC
+           FROM era_cdb.locations AS E))) AS LOC

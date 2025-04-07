@@ -17,7 +17,7 @@ jobs:
         image: mysql:8.0
         env:
           MYSQL_ROOT_PASSWORD: root
-          MYSQL_DATABASE: wpirck_cdb_v1
+          MYSQL_DATABASE: wpirck_cdb
         ports:
           - 3306:3306
         options: >-
@@ -41,13 +41,13 @@ jobs:
 
       - name: Dump Database to SQL File
         run: |
-          mysqldump -h 127.0.0.1 -u root -proot wpirck_cdb_v1 > pirckheimer/database/dump/wpirck_cdb_v1_dump.sql
+          mysqldump -h 127.0.0.1 -u root -proot wpirck_cdb > pirckheimer/database/dump/wpirck_cdb_dump.sql
 
       - name: Upload Database Dump as Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: wpirck_cdb_v1_dump
-          path: pirckheimer/database/dump/wpirck_cdb_v1_dump.sql
+          name: wpirck_cdb_dump
+          path: pirckheimer/database/dump/wpirck_cdb_dump.sql
 
       - name: Run SQL Queries and Save Results  
         run: python pirckheimer/run_queries.py  

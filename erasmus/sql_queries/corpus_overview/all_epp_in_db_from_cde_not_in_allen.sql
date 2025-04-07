@@ -1,4 +1,4 @@
 SELECT *
-FROM era_cdb_v3.letters
+FROM era_cdb.letters
 WHERE letter_no_in_edition LIKE '%[CDE]%'
   AND letter_no_in_edition NOT LIKE '%[ALLEN]%'

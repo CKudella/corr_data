@@ -8,7 +8,7 @@ DB_CONFIG = {
     "host": "127.0.0.1",
     "user": "root",
     "password": "root",
-    "database": "bude_cdb_v1",
+    "database": "bude_cdb",
 }
 
 # Paths

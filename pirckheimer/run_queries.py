@@ -8,7 +8,7 @@ DB_CONFIG = {
     "host": "127.0.0.1",
     "user": "root",
     "password": "root",
-    "database": "wpirck_cdb_v1",
+    "database": "wpirck_cdb",
 }
 
 # Paths
