@@ -22,6 +22,15 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v4
 
+    - name: Install system dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y \
+          libgdal-dev \
+          libgeos-dev \
+          libproj-dev \
+          libudunits2-dev
+    
     - name: Install Required R Packages
       run: |
         R -e 'install.packages("leaflet", repos ="https://packagemanager.posit.co/cran/latest")'
