@@ -8,12 +8,12 @@ DB_CONFIG = {
     "host": "127.0.0.1",
     "user": "root",
     "password": "root",
-    "database": "era_cdb_v3",
+    "database": "budé_cdb_v1",
 }
 
 # Paths
-QUERY_DIR = "erasmus/sql_queries"
-RESULTS_DIR = "erasmus/query_results"
+QUERY_DIR = "budé/sql_queries"
+RESULTS_DIR = "budé/query_results"
 
 def connect_db():
     """Establish a connection to the MySQL database."""

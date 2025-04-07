@@ -20,7 +20,7 @@ def connect_db():
     return mysql.connector.connect(**DB_CONFIG)
 
 def run_query(cursor, sql_file):
-    """Execute a SQL query and return the results as a DataFrame with all data as strings."""
+    """Execute a SQL query and return the results as a DataFrame."""
     with open(sql_file, "r", encoding="utf-8") as file:
         query = file.read()
     cursor.execute(query)
