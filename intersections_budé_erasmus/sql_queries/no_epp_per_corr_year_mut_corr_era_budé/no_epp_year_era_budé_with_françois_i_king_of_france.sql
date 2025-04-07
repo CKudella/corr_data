@@ -1,4 +1,4 @@
-﻿
+
 SELECT TE.Year,
        EtX.EPPEtX,
        XtE.EPPXtE,
