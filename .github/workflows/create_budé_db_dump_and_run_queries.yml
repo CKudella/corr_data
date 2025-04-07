@@ -22,6 +22,8 @@ jobs:
         ports:
           - 3306:3306
         options: >-
+          --character-set-server=utf8mb4 
+          --collation-server=utf8mb4_unicode_ci # Ensure that the mysql container uses utf8mb4 
           --health-cmd="mysqladmin ping --host=localhost --user=root --password=root"
           --health-interval=10s
           --health-timeout=5s
@@ -47,7 +49,7 @@ jobs:
       - name: Upload Database Dump as Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: budé_cdb_v1
+          name: budé_cdb_v1_dump
           path: budé/database/dump/budé_cdb_v1_dump.sql
 
       - name: Run SQL Queries and Save Results  
