@@ -50,7 +50,7 @@ jobs:
 
       - name: Verify Query Directory Exists
         run: |
-          if [ ! -d "intersections_budé_erasmus/sql_queries" ]; then
+          if [ ! -d "intersections_budé_erasmus/sql_queries" ]; then
             echo "❌ Query directory does not exist!"
             exit 1
           else

@@ -1,4 +1,4 @@
- In the gbudé_correspondents table, the following abbreviations are used to indicate the provenance of individual pieces of information
+# In the gbudé_correspondents table, the following abbreviations are used to indicate the provenance of individual pieces of information
 
 | Abbreviation                                        | Title                                                                                                                                                                                                     | URL                                                                                                         |
 |:----------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------|
