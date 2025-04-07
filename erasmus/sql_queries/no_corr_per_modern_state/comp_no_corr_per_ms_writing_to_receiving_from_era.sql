@@ -3,17 +3,17 @@ SELECT X.ModernState AS 'Modern State',
        B.NoCorrWritingToEra AS 'Number of correspondents who wrote letters to Erasmus'
 FROM
   (SELECT DISTINCT locations.locations_modern_state AS ModernState
-   FROM era_cdb_v3.locations
+   FROM era_cdb.locations
    WHERE locations.locations_id IN
        (SELECT DISTINCT source_loc_id
-        FROM era_cdb_v3.letters)
+        FROM era_cdb.letters)
      OR locations.locations_id IN
        (SELECT DISTINCT target_loc_id
-        FROM era_cdb_v3.letters)) AS X
+        FROM era_cdb.letters)) AS X
 LEFT OUTER JOIN
   (SELECT DISTINCT locations.locations_modern_state AS ModernState,
                    COUNT(DISTINCT recipient_id) AS NoCorrReceivingFromEra
-   FROM era_cdb_v3.letters,
+   FROM era_cdb.letters,
         locations
    WHERE locations.locations_id = letters.target_loc_id
      AND sender_id LIKE '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf'
@@ -22,7 +22,7 @@ LEFT OUTER JOIN
 LEFT OUTER JOIN
   (SELECT DISTINCT locations.locations_modern_state AS ModernState,
                    COUNT(DISTINCT sender_id) AS NoCorrWritingToEra
-   FROM era_cdb_v3.letters,
+   FROM era_cdb.letters,
         locations
    WHERE locations.locations_id = letters.source_loc_id
      AND recipient_id LIKE '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf'

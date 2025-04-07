@@ -1,7 +1,7 @@
 SELECT locations_name_modern,
        send_date_year1 AS YEAR,
        COUNT(*) AS COUNT
-FROM budé_cdb_v1.letters,
+FROM bude_cdb.letters,
      locations
 WHERE source_loc_id = locations_id
   AND sender_id = 'c0b89c75-45b8-4b04-bfd7-25bfe9ed040b'

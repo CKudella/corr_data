@@ -4,17 +4,18 @@ SELECT locations_id AS 'Id',
        locations_modern_province,
        locations_lat,
        locations_lng
-FROM era_cdb_v3.locations
+FROM era_cdb.locations
 WHERE locations_id IN
     (SELECT DISTINCT source_loc_id
-     FROM era_cdb_v3.letters
+     FROM era_cdb.letters
      WHERE sender_id = '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf'
        AND source_loc_id NOT LIKE 'unknown%'
        AND target_loc_id NOT LIKE 'unknown%')
   OR locations_id IN
     (SELECT DISTINCT target_loc_id
-     FROM era_cdb_v3.letters
+     FROM era_cdb.letters
      WHERE sender_id = '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf'
        AND source_loc_id NOT LIKE 'unknown%'
        AND target_loc_id NOT LIKE 'unknown%')
-GROUP BY locations_id
+GROUP BY locations_id, locations_name_modern, locations_modern_state, 
+         locations_modern_province, locations_lat, locations_lng

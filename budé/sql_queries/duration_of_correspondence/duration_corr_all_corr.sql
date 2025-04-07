@@ -5,19 +5,19 @@ SELECT C.correspondents_id,
 FROM
   (SELECT DISTINCT CA.correspondents_id,
                    CA.name_in_edition
-   FROM budé_cdb_v1.correspondents AS CA) AS C
+   FROM bude_cdb.correspondents AS CA) AS C
 LEFT OUTER JOIN
   (SELECT DISTINCT XA.recipient_id,
                    MIN(XA.send_date_computable1) AS FLFB,
                    MAX(XA.send_date_computable1) AS LLFB
-   FROM budé_cdb_v1.letters AS XA
+   FROM bude_cdb.letters AS XA
    WHERE XA.sender_id = 'c0b89c75-45b8-4b04-bfd7-25bfe9ed040b'
    GROUP BY XA.recipient_id) AS X ON C.correspondents_id = X.recipient_id
 LEFT OUTER JOIN
   (SELECT DISTINCT YA.sender_id,
                    MIN(YA.send_date_computable1) AS FLTB,
                    MAX(YA.send_date_computable1) AS LLTB
-   FROM budé_cdb_v1.letters AS YA
+   FROM bude_cdb.letters AS YA
    WHERE YA.recipient_id = 'c0b89c75-45b8-4b04-bfd7-25bfe9ed040b'
    GROUP BY YA.sender_id) AS Y ON C.correspondents_id = Y.sender_id
 WHERE correspondents_id != 'c0b89c75-45b8-4b04-bfd7-25bfe9ed040b'

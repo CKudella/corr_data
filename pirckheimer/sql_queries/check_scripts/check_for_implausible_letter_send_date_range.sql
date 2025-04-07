@@ -1,4 +1,4 @@
 SELECT *
-FROM wpirck_cdb_v1.letters
+FROM wpirck_cdb.letters
 WHERE send_date_year1 > send_date_year2
   OR send_date_computable1 > send_date_computable2

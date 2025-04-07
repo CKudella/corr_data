@@ -1,5 +1,5 @@
 SELECT *
-FROM wpirck_cdb_v1.letters
+FROM wpirck_cdb.letters
 WHERE send_date_as_marked NOT LIKE '%.1.%'
   AND send_date_as_marked NOT LIKE '%Jan%'
   AND send_date_as_marked NOT LIKE '%.2.%'

@@ -1,0 +1,71 @@
+name: Erasmus - Setup MySQL, Import Data, Create DB Dump, and Run Queries
+
+on:
+  push:
+    paths:
+      - 'erasmus/dataset/csv/**'  # Only trigger if files in this directory change
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false  # Ensures jobs wait instead of canceling the running one
+
+jobs:
+  setup-mysql:
+    runs-on: ubuntu-latest
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_ROOT_PASSWORD: root
+          MYSQL_DATABASE: era_cdb
+        ports:
+          - 3306:3306
+        options: >-
+          --health-cmd="mysqladmin ping --host=localhost --user=root --password=root"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=3
+
+    steps:
+    
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Install Python and Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pandas mysql-connector-python
+
+      - name: Run Python Script to Setup Database and Import Data
+        run: python erasmus/database/create_script/import_data.py
+
+      - name: Dump Database to SQL File
+        run: |
+          mysqldump -h 127.0.0.1 -u root -proot era_cdb > erasmus/database/dump/era_cdb_dump.sql
+
+      - name: Upload Database Dump as Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: era_cdb_dump
+          path: erasmus/database/dump/era_cdb_dump.sql
+
+      - name: Run SQL Queries and Save Results  
+        run: python erasmus/run_queries.py  
+
+      - name: Upload Query Results as Artifact
+        uses: actions/upload-artifact@v4  
+        with:  
+          name: query-results  
+          path: erasmus/query_results/
+
+#    - name: Configure Git
+#      run: |
+#        git config --global user.name "CKudella"
+#        git config --global user.email "CKudella@users.noreply.github.com"
+#
+#    - name: Commit and push changes
+#      run: |
+#        git add -A
+#        git commit -m "Auto-update db dump and query_results" || echo "No changes to commit"
+#        git push https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/ckudella/corr_data.git HEAD:main

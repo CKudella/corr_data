@@ -1,4 +1,4 @@
 SELECT *
-FROM budé_cdb_v1.correspondents
+FROM bude_cdb.correspondents
 WHERE dod_year1 > dod_year2
   OR dod_computable1 > dod_computable2

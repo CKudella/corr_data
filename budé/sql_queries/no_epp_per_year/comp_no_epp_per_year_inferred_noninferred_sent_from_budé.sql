@@ -3,11 +3,11 @@ SELECT Z.Year,
        Y.NoNonInferred AS 'Number of letters with non-inferred send date'
 FROM
   (SELECT DISTINCT send_date_year1 AS YEAR
-   FROM budé_cdb_v1.letters) AS Z
+   FROM bude_cdb.letters) AS Z
 LEFT OUTER JOIN
   (SELECT DISTINCT XA.send_date_year1 AS YEAR,
                    COUNT(*) AS NoInferred
-   FROM budé_cdb_v1.letters AS XA
+   FROM bude_cdb.letters AS XA
    WHERE XA.letters_id NOT LIKE '%ck2%'
      AND XA.send_date_inferred = '1'
      AND XA.sender_id = 'c0b89c75-45b8-4b04-bfd7-25bfe9ed040b'
@@ -15,7 +15,7 @@ LEFT OUTER JOIN
 LEFT OUTER JOIN
   (SELECT DISTINCT YA.send_date_year1 AS YEAR,
                    COUNT(*) AS NoNonInferred
-   FROM budé_cdb_v1.letters YA
+   FROM bude_cdb.letters YA
    WHERE YA.letters_id NOT LIKE '%ck2%'
      AND YA.send_date_inferred = '0'
      AND YA.sender_id = 'c0b89c75-45b8-4b04-bfd7-25bfe9ed040b'

@@ -9,8 +9,8 @@ FROM
           locations_lat,
           locations_lng,
           COUNT(DISTINCT sender_id) AS COUNT
-   FROM wpirck_cdb_v1.letters
-   JOIN wpirck_cdb_v1.locations ON locations.locations_id = letters.source_loc_id
+   FROM wpirck_cdb.letters
+   JOIN wpirck_cdb.locations ON locations.locations_id = letters.source_loc_id
    WHERE recipient_id = 'd9233b24-a98c-4279-8065-e2ab70c0d080'
      AND source_loc_id NOT LIKE 'unknown%'
    GROUP BY source_loc_id
@@ -18,7 +18,7 @@ FROM
 INNER JOIN
   (SELECT locations.locations_name_modern,
           COUNT(letters.target_loc_id) AS COUNT
-   FROM wpirck_cdb_v1.letters
+   FROM wpirck_cdb.letters
    JOIN locations ON locations.locations_id = letters.source_loc_id
    WHERE recipient_id = 'd9233b24-a98c-4279-8065-e2ab70c0d080'
      AND source_loc_id NOT LIKE 'unknown%'

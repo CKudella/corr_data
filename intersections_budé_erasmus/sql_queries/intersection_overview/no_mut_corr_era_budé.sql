@@ -1,6 +1,6 @@
 SELECT COUNT(*) AS 'Number of mutual correspondents of Budé and Erasmus'
-FROM budé_cdb_v1.correspondents AS B,
-     era_cdb_v3.correspondents AS E
+FROM bude_cdb.correspondents AS B,
+     era_cdb.correspondents AS E
 WHERE B.correspondents_id = E.correspondents_id
   AND B.correspondents_id NOT IN ('be1dcbc4-3987-472a-b4a0-c3305ead139f',
                                   '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf',

@@ -9,17 +9,17 @@ FROM
           ZA.locations_name_modern LocationName,
           ZA.locations_lat AS Latitude,
           ZA.locations_lng AS Longitude
-   FROM era_cdb_v3.locations AS ZA
+   FROM era_cdb.locations AS ZA
    WHERE ZA.locations_id IN
        (SELECT DISTINCT source_loc_id
-        FROM era_cdb_v3.letters)
+        FROM era_cdb.letters)
      OR ZA.locations_id IN
        (SELECT DISTINCT target_loc_id
-        FROM era_cdb_v3.letters)) AS Z
+        FROM era_cdb.letters)) AS Z
 LEFT OUTER JOIN
   (SELECT XB.locations_id,
           COUNT(DISTINCT XA.sender_id) AS NoCorrToEra
-   FROM era_cdb_v3.letters AS XA
+   FROM era_cdb.letters AS XA
    JOIN locations AS XB ON XB.locations_id = XA.source_loc_id
    WHERE XA.sender_id != '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf'
      AND XA.source_loc_id NOT LIKE 'unknown%'
@@ -28,7 +28,7 @@ LEFT OUTER JOIN
 LEFT OUTER JOIN
   (SELECT YB.locations_id,
           COUNT(DISTINCT YA.recipient_id) AS NoCorrFromEra
-   FROM era_cdb_v3.letters AS YA
+   FROM era_cdb.letters AS YA
    JOIN locations AS YB ON YB.locations_id = YA.target_loc_id
    WHERE YA.sender_id = '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf'
      AND YA.target_loc_id NOT LIKE 'unknown%'

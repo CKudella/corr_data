@@ -26,10 +26,10 @@ SELECT L.letters_id AS 'Id',
        L.letter_type_x_to_x
 FROM
   (SELECT *
-   FROM era_cdb_v3.letters
+   FROM era_cdb.letters
    UNION ALL
      (SELECT *
-      FROM budé_cdb_v1.letters
+      FROM bude_cdb.letters
       WHERE letters_id NOT LIKE '%_cwe_%'
         OR (letters_id LIKE 'gbudé_%'
             OR letters_id LIKE 'era_cwealien%'))) AS L

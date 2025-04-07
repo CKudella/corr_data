@@ -8,19 +8,19 @@ SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 
 -- -----------------------------------------------------
--- Schema wpirck_cdb_v1
+-- Schema wpirck_cdb
 -- -----------------------------------------------------
 
 -- -----------------------------------------------------
--- Schema wpirck_cdb_v1
+-- Schema wpirck_cdb
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `wpirck_cdb_v1` DEFAULT CHARACTER SET utf8 ;
-USE `wpirck_cdb_v1` ;
+CREATE SCHEMA IF NOT EXISTS `wpirck_cdb` DEFAULT CHARACTER SET utf8 ;
+USE `wpirck_cdb` ;
 
 -- -----------------------------------------------------
--- Table `wpirck_cdb_v1`.`locations`
+-- Table `wpirck_cdb`.`locations`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `wpirck_cdb_v1`.`locations` (
+CREATE TABLE IF NOT EXISTS `wpirck_cdb`.`locations` (
   `locations_id` VARCHAR(90) NOT NULL COMMENT 'This column carries the primary key for the table that is also being used as a foreign key for ‘source_loc_id’ and target_loc_id’ in the ‘letters’ table as well as ‘pob_loc_id’ and ‘pod_loc_id’ in the ‘correspondents’ table. ',
   `geonames_id` VARCHAR(90) NULL COMMENT 'This column carries the numeric Geonames ID. For locations for which no Geonames ID is available, the value should be set to “unknown”.',
   `wikidata_id` VARCHAR(45) NULL COMMENT 'This column carries the alphanumeric identifier provided by Wikidata.',
@@ -38,9 +38,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `wpirck_cdb_v1`.`correspondents`
+-- Table `wpirck_cdb`.`correspondents`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `wpirck_cdb_v1`.`correspondents` (
+CREATE TABLE IF NOT EXISTS `wpirck_cdb`.`correspondents` (
   `correspondents_id` VARCHAR(200) NOT NULL COMMENT 'This column carries the primary key for the table',
   `type` VARCHAR(45) NULL COMMENT 'This column classifies the correspondent by the following taxonomy: (1) individual (2) corporate body (3) group.',
   `gender` VARCHAR(45) NULL COMMENT 'This column classifies the gender of the correspondent if applicable. For corporate bodies and groups, this column contains the value ‘not applicable’.',
@@ -86,21 +86,21 @@ CREATE TABLE IF NOT EXISTS `wpirck_cdb_v1`.`correspondents` (
   INDEX `fk_persons_groups_bodies_locations2_idx` (`pod_loc_id` ASC),
   CONSTRAINT `fk_persons_groups_bodies_locations1`
     FOREIGN KEY (`pob_loc_id`)
-    REFERENCES `wpirck_cdb_v1`.`locations` (`locations_id`)
+    REFERENCES `wpirck_cdb`.`locations` (`locations_id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_persons_groups_bodies_locations2`
     FOREIGN KEY (`pod_loc_id`)
-    REFERENCES `wpirck_cdb_v1`.`locations` (`locations_id`)
+    REFERENCES `wpirck_cdb`.`locations` (`locations_id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `wpirck_cdb_v1`.`letters`
+-- Table `wpirck_cdb`.`letters`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `wpirck_cdb_v1`.`letters` (
+CREATE TABLE IF NOT EXISTS `wpirck_cdb`.`letters` (
   `letters_id` VARCHAR(45) NOT NULL COMMENT 'This column carries the primary key for the table.',
   `letter_no_in_edition` VARCHAR(200) NULL COMMENT 'This column carries the sequential alphanumerical identifier(s) of a letter in the edition(s) followed by an abbreviation of the edition the identifiers refers to.',
   `sender_id` VARCHAR(200) NULL COMMENT 'This column carries the primary key of the ‘correspondents’ table as a foreign key for the sender of the letter. This does not only enable the identification of correspondents independently of the spelling in/between edition(s) but also allows for que' /* comment truncated */ /*ries that aim at attributes stored in the ‘correspondents’ table.*/,
@@ -144,22 +144,22 @@ CREATE TABLE IF NOT EXISTS `wpirck_cdb_v1`.`letters` (
   INDEX `fk_letters_locations2_idx` (`target_loc_id` ASC),
   CONSTRAINT `fk_letters_correspondents1`
     FOREIGN KEY (`sender_id`)
-    REFERENCES `wpirck_cdb_v1`.`correspondents` (`correspondents_id`)
+    REFERENCES `wpirck_cdb`.`correspondents` (`correspondents_id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_letters_correspondents2`
     FOREIGN KEY (`recipient_id`)
-    REFERENCES `wpirck_cdb_v1`.`correspondents` (`correspondents_id`)
+    REFERENCES `wpirck_cdb`.`correspondents` (`correspondents_id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_letters_locations1`
     FOREIGN KEY (`source_loc_id`)
-    REFERENCES `wpirck_cdb_v1`.`locations` (`locations_id`)
+    REFERENCES `wpirck_cdb`.`locations` (`locations_id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_letters_locations2`
     FOREIGN KEY (`target_loc_id`)
-    REFERENCES `wpirck_cdb_v1`.`locations` (`locations_id`)
+    REFERENCES `wpirck_cdb`.`locations` (`locations_id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
