@@ -33,9 +33,9 @@ jobs:
         find intersections_pirckheimer_erasmus/r_scripts/ -type f -name "*.R" -exec sed -i 's|setwd("../query_results/")|setwd("intersections_pirckheimer_erasmus/query_results/")|g' {} +
         find intersections_pirckheimer_erasmus/r_scripts/ -type f -name "*.R" -exec sed -i 's|setwd("../r_plots/")|setwd("/__w/corr_data/corr_data/intersections_pirckheimer_erasmus/r_plots/")|g' {} +
     
-    - name: Run R Scripts
+    - name: Run R Scripts (exclude network_animations)
       run: |
-        find intersections_pirckheimer_erasmus/r_scripts/ -type f -name "*.R" | while read script; do
+        find intersections_pirckheimer_erasmus/r_scripts/ -type f -name "*.R" ! -path "*/create_network_animations/*" | while read script; do
           echo "📥 Running script: $script"
           Rscript "$script"
         done
