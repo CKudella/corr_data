@@ -38,7 +38,7 @@ jobs:
 
       - name: Check Foreign Keys
         run: |
-          python pirckheimer/check_for_missing_db_keys.py
+          python pirckheimer/check_for_missing_db_keys.py pirckheimer
 
       - name: Run Python Script to Setup Database and Import Data
         run: python pirckheimer/database/create_script/import_data.py

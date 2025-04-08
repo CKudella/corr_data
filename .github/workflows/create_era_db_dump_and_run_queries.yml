@@ -39,10 +39,10 @@ jobs:
 
       - name: Check Foreign Keys
         run: |
-          python erasmus/check_for_missing_db_keys.py
+          python erasmus/check_for_missing_db_keys.py erasmus
 
       - name: Run Python Script to Setup Database and Import Data
-        run: python erasmus/database/create_script/import_data.py erasmus
+        run: python erasmus/database/create_script/import_data.py
 
       - name: Dump Database to SQL File
         run: |

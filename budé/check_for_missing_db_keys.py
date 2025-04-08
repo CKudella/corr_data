@@ -1,10 +1,14 @@
 import pandas as pd
 import sys
+import os
+
+# Get base path from CLI argument, default to current directory
+base_path = sys.argv[1] if len(sys.argv) > 1 else "."
 
 # Step 1: Load the CSV files
-correspondents_df = pd.read_csv('dataset/csv/gbudé_correspondents.csv')
-letters_df = pd.read_csv('dataset/csv/gbudé_letters.csv')
-locations_df = pd.read_csv('dataset/csv/gbudé_locations.csv')
+correspondents_df = pd.read_csv(os.path.join(base_path, 'dataset/csv/gbudé_correspondents.csv'))
+letters_df = pd.read_csv(os.path.join(base_path, 'dataset/csv/gbudé_letters.csv'))
+locations_df = pd.read_csv(os.path.join(base_path, 'dataset/csv/gbudé_locations.csv'))
 
 # Step 2: Extract the necessary columns
 source_loc_id = letters_df['source_loc_id']
