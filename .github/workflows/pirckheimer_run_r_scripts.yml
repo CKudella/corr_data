@@ -2,7 +2,7 @@ name: Pirckheimer - Run R Scripts and Save Outputs
 
 on:
   workflow_run:
-    workflows: ["Pirkheimer - Setup MySQL, Import Data, Create DB Dump, and Run Queries"]
+    workflows: ["Pirckheimer - Setup MySQL, Import Data, Create DB Dump, and Run Queries"]
     types:
       - completed
   workflow_dispatch:
@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
 
     container:
-      image: rocker/verse:4.3.1
+      image: rocker/geospatial:4.3.1
 
     steps:
     - name: Checkout Repository
@@ -24,12 +24,14 @@ jobs:
 
     - name: Install Required R Packages
       run: |
-        R -e 'install.packages(c("svglite", "ggrepel", "patchwork", "lubridate", "leaflet", "classInt", "htmlwidgets", "leaflet.extras", "htmltools", "igraph", "rgexf", "ndtv"), repos ="https://ftp.gwdg.de/pub/misc/cran/")'
+        R -e 'install.packages("leaflet", repos ="https://packagemanager.posit.co/cran/latest")'
+        R -e 'install.packages(c("svglite", "ggrepel", "patchwork", "lubridate", "classInt", "htmlwidgets", "htmltools", "igraph", "rgexf", "ndtv"), repos ="https://packagemanager.posit.co/cran/latest")'
+        R -e 'install.packages("leaflet.extras", repos ="https://packagemanager.posit.co/cran/latest")'
     
     - name: Replace folder specification for setwd() in R Scripts
       run: |
         find pirckheimer/r_scripts/ -type f -name "*.R" -exec sed -i 's|setwd("../query_results/")|setwd("pirckheimer/query_results/")|g' {} +
-        find pirckheimer/r_scripts/ -type f -name "*.R" -exec sed -i 's|setwd("../r_plots/")|setwd("/__w/corr_data_wip/corr_data_wip/pirckheimer/r_plots/")|g' {} +
+        find pirckheimer/r_scripts/ -type f -name "*.R" -exec sed -i 's|setwd("../r_plots/")|setwd("/__w/corr_data/corr_data/pirckheimer/r_plots/")|g' {} +
     
     - name: Run R Scripts
       run: |
@@ -43,15 +45,21 @@ jobs:
       with:
         name: r-plots
         path: pirckheimer/r_plots/
+    
+    - name: Upload Leaflet Maps
+      uses: actions/upload-artifact@v4
+      with:
+        name: leaflet-maps
+        path: pirckheimer/leaflet_maps/
 
 #   - name: Configure Git
 #     run: |
 #       git config --global user.name "CKudella"
 #       git config --global user.email "CKudella@users.noreply.github.com"
-#       git config --global --add safe.directory /__w/corr_data_wip/corr_data_wip
+#       git config --global --add safe.directory /__w/corr_data/corr_data
 #
 #   - name: Commit and push changes
 #     run: |
 #       git add -A
 #       git commit -m "Auto-update r_plots" || echo "No changes to commit"
-#       git push https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/ckudella/corr_data_wip.git HEAD:main
+#       git push https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/ckudella/corr_data.git HEAD:main
