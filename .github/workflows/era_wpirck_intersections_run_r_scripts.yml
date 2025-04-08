@@ -1,0 +1,65 @@
+name: Erasmus Pirckheimer Intersections - Run R Scripts and Save Outputs
+
+on:
+  workflow_run:
+    workflows: ["rasmus Pirckheimer Intersections - Setup MySQL, Import Data, and Run Queries"]
+    types:
+      - completed
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false  # Ensures jobs wait instead of canceling the running one
+
+jobs:
+  run-r-scripts:
+    runs-on: ubuntu-latest
+
+    container:
+      image: rocker/geospatial:4.3.1
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+  
+    - name: Install Required R Packages
+      run: |
+        R -e 'install.packages("leaflet", repos ="https://packagemanager.posit.co/cran/latest")'
+        R -e 'install.packages(c("svglite", "ggrepel", "patchwork", "lubridate", "classInt", "htmlwidgets", "htmltools", "igraph", "rgexf", "ndtv"), repos ="https://packagemanager.posit.co/cran/latest")'
+        R -e 'install.packages("leaflet.extras", repos ="https://packagemanager.posit.co/cran/latest")'
+          
+    - name: Replace folder specification for setwd() in R Scripts
+      run: |
+        find intersections_pirckheimer_erasmus/r_scripts/ -type f -name "*.R" -exec sed -i 's|setwd("../query_results/")|setwd("intersections_pirckheimer_erasmus/query_results/")|g' {} +
+        find intersections_pirckheimer_erasmus/r_scripts/ -type f -name "*.R" -exec sed -i 's|setwd("../r_plots/")|setwd("/__w/corr_data/corr_data/intersections_pirckheimer_erasmus/r_plots/")|g' {} +
+    
+    - name: Run R Scripts
+      run: |
+        find intersections_pirckheimer_erasmus/r_scripts/ -type f -name "*.R" | while read script; do
+          echo "📥 Running script: $script"
+          Rscript "$script"
+        done
+
+    - name: Upload R Plots
+      uses: actions/upload-artifact@v4
+      with:
+        name: r-plots
+        path: intersections_pirckheimer_erasmus/r_plots/
+
+#   - name: Upload Leaflet Maps
+#     uses: actions/upload-artifact@v4
+#     with:
+#       name: leaflet-maps
+#       path: intersections_pirckheimer_erasmus/leaflet_maps/
+#
+#   - name: Configure Git
+#     run: |
+#       git config --global user.name "CKudella"
+#       git config --global user.email "CKudella@users.noreply.github.com"
+#       git config --global --add safe.directory /__w/corr_data/corr_data
+#
+#   - name: Commit and push changes
+#     run: |
+#       git add -A
+#       git commit -m "Auto-update r_plots" || echo "No changes to commit"
+#       git push https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/ckudella/corr_data.git HEAD:main
