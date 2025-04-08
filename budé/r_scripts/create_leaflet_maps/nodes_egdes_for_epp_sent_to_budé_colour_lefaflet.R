@@ -10,9 +10,9 @@ getwd()
 setwd("../query_results/")
 
 # Read data
-nodes <- read.csv("create_geolayout_files_for_gephi/nodes_egdes_for_epp_sent_to_budé/create_nodes_locations_for_epp_sent_to_budé.csv", fileEncoding = "UTF-8", na.strings = c("NULL"))
-edges <- read.csv("create_geolayout_files_for_gephi/nodes_egdes_for_epp_sent_to_budé/create_edges_epp_sent_to_budé.csv", fileEncoding = "UTF-8", na.strings = c("NULL"))
-letter_counts <- read.csv("no_epp_per_loc/no_epp_per_loc_sent_to_budé_with_geocoordinates.csv", fileEncoding = "UTF-8", na.strings = c("NULL"))
+nodes <- read.csv("create_geolayout_files_for_gephi/nodes_egdes_for_epp_sent_to_budé/create_nodes_locations_for_epp_sent_to_budé.csv", fileEncoding = "UTF-8", na.strings = c("NULL"))
+edges <- read.csv("create_geolayout_files_for_gephi/nodes_egdes_for_epp_sent_to_budé/create_edges_epp_sent_to_budé.csv", fileEncoding = "UTF-8", na.strings = c("NULL"))
+letter_counts <- read.csv("no_epp_per_loc/no_epp_per_loc_sent_to_budé_with_geocoordinates.csv", fileEncoding = "UTF-8", na.strings = c("NULL"))
 
 # Select only the relevant columns from letter_counts
 letter_counts <- letter_counts %>%
