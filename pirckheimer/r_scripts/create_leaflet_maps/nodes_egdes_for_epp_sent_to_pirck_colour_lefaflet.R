@@ -12,8 +12,6 @@ setwd("../query_results/")
 # Read data
 nodes <- read.csv("create_geolayout_files_for_gephi/nodes_egdes_for_epp_sent_to_pirck/create_nodes_locations_for_epp_sent_to_pirck.csv", fileEncoding = "UTF-8", na.strings = c("NULL"))
 edges <- read.csv("create_geolayout_files_for_gephi/nodes_egdes_for_epp_sent_to_pirck/create_edges_epp_sent_to_pirck.csv", fileEncoding = "UTF-8", na.strings = c("NULL"))
-
-setwd("../query_results/")
 data_for_breaks <- read.csv("no_epp_per_loc/no_epp_per_loc_sent_to_pirck_with_geocoordinates.csv", fileEncoding = "UTF-8", na.strings = c("NULL"))
 
 # Select only the relevant columns from letter_counts
