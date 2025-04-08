@@ -45,7 +45,7 @@ jobs:
       - name: Run Python Script to Setup Database and Import Data for Erasmus
         run: python erasmus/database/create_script/import_data.py
 
-      - name: Run Python Script to Setup Database and Import Data for Pirckheimer
+      - name: Run Python Script to Setup Database and Import Data for Budé
         run: python budé/database/create_script/import_data.py
 
       - name: Run SQL Queries and Save Results  

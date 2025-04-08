@@ -30,12 +30,12 @@ jobs:
           
     - name: Replace folder specification for setwd() in R Scripts
       run: |
-        find intersections_budé_erasmus/r_scripts/ -type f -name "*.R" -exec sed -i 's|setwd("../query_results/")|setwd("intersections_budé_erasmus/query_results/")|g' {} +
-        find intersections_budé_erasmus/r_scripts/ -type f -name "*.R" -exec sed -i 's|setwd("../r_plots/")|setwd("/__w/corr_data/corr_data/intersections_budé_erasmus/r_plots/")|g' {} +
+        find intersections_budé_erasmus/r_scripts/ -type f -name "*.R" -exec sed -i 's|setwd("../query_results/")|setwd("intersections_budé_erasmus/query_results/")|g' {} +
+        find intersections_budé_erasmus/r_scripts/ -type f -name "*.R" -exec sed -i 's|setwd("../r_plots/")|setwd("/__w/corr_data/corr_data/intersections_budé_erasmus/r_plots/")|g' {} +
     
     - name: Run R Scripts (exclude network_animations)
       run: |
-        find intersections_budé_erasmus/r_scripts/ -type f -name "*.R" ! -path "*/create_network_animations/*" | while read script; do
+        find intersections_budé_erasmus/r_scripts/ -type f -name "*.R" ! -path "*/create_network_animations/*" | while read script; do
           echo "📥 Running script: $script"
           Rscript "$script"
         done
@@ -44,13 +44,13 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: r-plots
-        path: intersections_budé_erasmus/r_plots/
+        path: intersections_budé_erasmus/r_plots/
 
 #   - name: Upload Leaflet Maps
 #     uses: actions/upload-artifact@v4
 #     with:
 #       name: leaflet-maps
-#       path: intersections_budé_erasmus/leaflet_maps/
+#       path: intersections_budé_erasmus/leaflet_maps/
 #
 #   - name: Configure Git
 #     run: |
