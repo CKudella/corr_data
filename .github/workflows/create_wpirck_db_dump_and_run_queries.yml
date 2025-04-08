@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'pirckheimer/dataset/csv/**'  # Only trigger if files in this directory change
+  workflow_dispatch:
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
