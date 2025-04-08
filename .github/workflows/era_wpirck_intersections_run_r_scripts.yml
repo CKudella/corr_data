@@ -2,7 +2,7 @@ name: Erasmus Pirckheimer Intersections - Run R Scripts and Save Outputs
 
 on:
   workflow_run:
-    workflows: ["rasmus Pirckheimer Intersections - Setup MySQL, Import Data, and Run Queries"]
+    workflows: ["Erasmus Pirckheimer Intersections - Setup MySQL, Import Data, and Run Queries"]
     types:
       - completed
   workflow_dispatch:
