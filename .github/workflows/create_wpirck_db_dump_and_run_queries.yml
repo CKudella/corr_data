@@ -30,15 +30,15 @@ jobs:
     
       - name: Checkout Repository
         uses: actions/checkout@v4
-      
-      - name: Check Foreign Keys
-        run: |
-          python pirckheimer/check_for_missing_db_keys.py
 
       - name: Install Python and Dependencies
         run: |
           python -m pip install --upgrade pip
           pip install pandas mysql-connector-python
+
+      - name: Check Foreign Keys
+        run: |
+          python pirckheimer/check_for_missing_db_keys.py
 
       - name: Run Python Script to Setup Database and Import Data
         run: python pirckheimer/database/create_script/import_data.py
