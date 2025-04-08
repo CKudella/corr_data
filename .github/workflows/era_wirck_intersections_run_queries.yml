@@ -42,8 +42,16 @@ jobs:
           mysql -h 127.0.0.1 -u root -proot -e "CREATE DATABASE IF NOT EXISTS era_cdb;"
           mysql -h 127.0.0.1 -u root -proot -e "CREATE DATABASE IF NOT EXISTS wpirck_cdb;"
 
+      - name: Check Foreign Keys for Erasmus dataset
+        run: |
+          python erasmus/check_for_missing_db_keys.py erasmus
+
       - name: Run Python Script to Setup Database and Import Data for Erasmus
         run: python erasmus/database/create_script/import_data.py
+
+      - name: Check Foreign Keys for Pirckheimer dataset
+        run: |
+          python pirckheimer/check_for_missing_db_keys.py pirckheimer
 
       - name: Run Python Script to Setup Database and Import Data for Pirckheimer
         run: python pirckheimer/database/create_script/import_data.py
