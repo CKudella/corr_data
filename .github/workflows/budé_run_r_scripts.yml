@@ -40,6 +40,11 @@ jobs:
           Rscript "$script"
         done
 
+    - name: Revert folder specification for setwd() in R Scripts
+      run: |
+        find budé/r_scripts/ -type f -name "*.R" -exec sed -i 's|setwd("budé/query_results/")|setwd("../query_results/")|g' {} +
+        find budé/r_scripts/ -type f -name "*.R" -exec sed -i 's|setwd("/__w/corr_data/corr_data/budé/r_plots/")|setwd("../r_plots/")|g' {} +
+      
     - name: Upload R Plots
       uses: actions/upload-artifact@v4
       with:
