@@ -45,11 +45,11 @@ jobs:
         find intersections_budé_erasmus/r_scripts/ -type f -name "*.R" -exec sed -i 's|setwd("intersections_budé_erasmus/query_results/")|setwd("../query_results/")|g' {} +
         find intersections_budé_erasmus/r_scripts/ -type f -name "*.R" -exec sed -i 's|setwd("/__w/corr_data/corr_data/intersections_budé_erasmus/r_plots/")|setwd("../r_plots/")|g' {} +
       
-    - name: Upload R Plots
-      uses: actions/upload-artifact@v4
-      with:
-        name: r-plots
-        path: intersections_budé_erasmus/r_plots/
+#   - name: Upload R Plots
+#     uses: actions/upload-artifact@v4
+#     with:
+#       name: r-plots
+#       path: intersections_budé_erasmus/r_plots/
 
 #   - name: Upload Leaflet Maps
 #     uses: actions/upload-artifact@v4
@@ -57,14 +57,14 @@ jobs:
 #       name: leaflet-maps
 #       path: intersections_budé_erasmus/leaflet_maps/
 #
-#   - name: Configure Git
-#     run: |
-#       git config --global user.name "CKudella"
-#       git config --global user.email "CKudella@users.noreply.github.com"
-#       git config --global --add safe.directory /__w/corr_data/corr_data
-#
-#   - name: Commit and push changes
-#     run: |
-#       git add -A
-#       git commit -m "Auto-update r_plots" || echo "No changes to commit"
-#       git push https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/ckudella/corr_data.git HEAD:main
+    - name: Configure Git
+      run: |
+        git config --global user.name "CKudella"
+        git config --global user.email "CKudella@users.noreply.github.com"
+        git config --global --add safe.directory /__w/corr_data/corr_data
+ 
+    - name: Commit and push changes
+      run: |
+        git add -A
+        git commit -m "Auto-update r_plots" || echo "No changes to commit"
+        git push https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/ckudella/corr_data.git HEAD:master

@@ -59,19 +59,19 @@ jobs:
       - name: Run SQL Queries and Save Results  
         run: python intersections_budé_erasmus/run_queries.py  
 
-      - name: Upload Query Results as Artifact
-        uses: actions/upload-artifact@v4  
-        with:  
-          name: query-results  
-          path: intersections_budé_erasmus/query_results/
-
-#    - name: Configure Git
-#      run: |
-#        git config --global user.name "CKudella"
-#        git config --global user.email "CKudella@users.noreply.github.com"
+#     - name: Upload Query Results as Artifact
+#       uses: actions/upload-artifact@v4  
+#       with:  
+#         name: query-results  
+#         path: intersections_budé_erasmus/query_results/
 #
-#    - name: Commit and push changes
-#      run: |
-#        git add -A
-#        git commit -m "Auto-update db dump and query_results" || echo "No changes to commit"
-#        git push https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/ckudella/corr_data.git HEAD:main
+      - name: Configure Git
+        run: |
+          git config --global user.name "CKudella"
+          git config --global user.email "CKudella@users.noreply.github.com"
+  
+      - name: Commit and push changes
+        run: |
+          git add -A
+          git commit -m "Auto-update db dump and query_results" || echo "No changes to commit"
+          git push https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/ckudella/corr_data.git HEAD:master
