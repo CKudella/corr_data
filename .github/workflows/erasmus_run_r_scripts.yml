@@ -67,4 +67,4 @@ jobs:
       run: |
         git add -A
         git commit -m "Auto-update r_plots" || echo "No changes to commit"
-        git push https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/ckudella/corr_data.git HEAD:main
+        git push https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/ckudella/corr_data.git HEAD:master
