@@ -48,28 +48,28 @@ jobs:
         run: |
           mysqldump -h 127.0.0.1 -u root -proot wpirck_cdb > pirckheimer/database/dump/wpirck_cdb_dump.sql
 
-      - name: Upload Database Dump as Artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: wpirck_cdb_dump
-          path: pirckheimer/database/dump/wpirck_cdb_dump.sql
+#     - name: Upload Database Dump as Artifact
+#       uses: actions/upload-artifact@v4
+#       with:
+#         name: wpirck_cdb_dump
+#         path: pirckheimer/database/dump/wpirck_cdb_dump.sql
 
       - name: Run SQL Queries and Save Results  
         run: python pirckheimer/run_queries.py  
 
-      - name: Upload Query Results as Artifact
-        uses: actions/upload-artifact@v4  
-        with:  
-          name: query-results  
-          path: pirckheimer/query_results/
+#     - name: Upload Query Results as Artifact
+#       uses: actions/upload-artifact@v4  
+#       with:  
+#         name: query-results  
+#         path: pirckheimer/query_results/
 
-#    - name: Configure Git
-#      run: |
-#        git config --global user.name "CKudella"
-#        git config --global user.email "CKudella@users.noreply.github.com"
-#
-#    - name: Commit and push changes
-#      run: |
-#        git add -A
-#        git commit -m "Auto-update db dump and query_results" || echo "No changes to commit"
-#        git push https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/ckudella/corr_data.git HEAD:main
+      - name: Configure Git
+        run: |
+          git config --global user.name "CKudella"
+          git config --global user.email "CKudella@users.noreply.github.com"
+  
+      - name: Commit and push changes
+        run: |
+          git add -A
+          git commit -m "Auto-update db dump and query_results" || echo "No changes to commit"
+          git push https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/ckudella/corr_data.git HEAD:master
