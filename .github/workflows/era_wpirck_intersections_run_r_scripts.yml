@@ -32,6 +32,7 @@ jobs:
       run: |
         find intersections_pirckheimer_erasmus/r_scripts/ -type f -name "*.R" -exec sed -i 's|setwd("../query_results/")|setwd("intersections_pirckheimer_erasmus/query_results/")|g' {} +
         find intersections_pirckheimer_erasmus/r_scripts/ -type f -name "*.R" -exec sed -i 's|setwd("../r_plots/")|setwd("/__w/corr_data/corr_data/intersections_pirckheimer_erasmus/r_plots/")|g' {} +
+        find intersections_pirckheimer_erasmus/r_scripts/ -type f -name "*.R" -exec sed -i 's|setwd("../..")|setwd("/__w/corr_data/corr_data")|g' {} +
     
     - name: Run R Scripts (exclude network_animations)
       run: |
@@ -44,6 +45,8 @@ jobs:
       run: |
         find intersections_pirckheimer_erasmus/r_scripts/ -type f -name "*.R" -exec sed -i 's|setwd("intersections_pirckheimer_erasmus/query_results/")|setwd("../query_results/")|g' {} +
         find intersections_pirckheimer_erasmus/r_scripts/ -type f -name "*.R" -exec sed -i 's|setwd("/__w/corr_data/corr_data/intersections_pirckheimer_erasmus/r_plots/")|setwd("../r_plots/")|g' {} +
+        find intersections_pirckheimer_erasmus/r_scripts/ -type f -name "*.R" -exec sed -i 's|setwd("/__w/corr_data/corr_data")|setwd("../..")|g' {} +
+
 
 #   - name: Upload R Plots
 #     uses: actions/upload-artifact@v4
