@@ -1,15 +1,17 @@
 name: Erasmus Budé Intersections - Setup MySQL, Import Data, and Run Queries
 
 on:
-  push:
-    paths:
-      - 'erasmus/dataset/csv/**'  # Only trigger if files in this directory change
-      - 'budé/dataset/csv/**'  # Only trigger if files in this directory change
+  workflow_run:
+    workflows:
+      - "Erasmus - Setup MySQL, Import Data, Create DB Dump, and Run Queries"
+      - "Budé - Setup MySQL, Import Data, Create DB Dump, and Run Queries"
+    types:
+      - completed
   workflow_dispatch:
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: false  # Ensures jobs wait instead of canceling the running one
+  group: dataset-pipeline-${{ github.ref }}  # Shared group to prevent concurrent commits
+  cancel-in-progress: false
 
 jobs:
   setup-mysql:

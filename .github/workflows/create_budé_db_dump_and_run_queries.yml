@@ -7,8 +7,8 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: false  # Ensures jobs wait instead of canceling the running one
+  group: dataset-pipeline-${{ github.ref }}  # Shared group for dataset pipelines to prevent write conflicts
+  cancel-in-progress: false  # Ensures jobs queue instead of canceling
 
 jobs:
   setup-mysql:

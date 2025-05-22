@@ -8,8 +8,8 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: false  # Ensures jobs wait instead of canceling the running one
+  group: dataset-pipeline-${{ github.ref }}
+  cancel-in-progress: false
 
 jobs:
   run-r-scripts:
