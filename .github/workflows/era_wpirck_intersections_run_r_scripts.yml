@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
 
     container:
-      image: rocker/geospatial:4.3.1
+      image: rocker/geospatial:4.5.1
 
     steps:
     - name: Checkout Repository
