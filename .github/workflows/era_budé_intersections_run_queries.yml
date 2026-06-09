@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: dataset-pipeline-${{ github.ref }}
+  group: era-bude-queries-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:

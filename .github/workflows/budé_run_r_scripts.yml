@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: dataset-pipeline-${{ github.ref }}
+  group: bude-r-scripts-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:
