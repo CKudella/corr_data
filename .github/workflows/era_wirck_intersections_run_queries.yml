@@ -14,7 +14,64 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # AND-Gate: only proceed when BOTH base workflows have completed successfully.
+  # When triggered by workflow_run, one of the two workflows just finished.
+  # This job queries the GitHub API to confirm the *other* one also succeeded
+  # recently. On workflow_dispatch both checks are skipped (always passes).
+  # ─────────────────────────────────────────────────────────────────────────────
+  check-prerequisites:
+    runs-on: ubuntu-latest
+    outputs:
+      both-ready: ${{ steps.gate.outputs.both-ready }}
+
+    steps:
+      - name: Check that both base workflows completed successfully
+        id: gate
+        env:
+          GH_TOKEN: ${{ secrets.PAT_TOKEN }}
+          REPO: ${{ github.repository }}
+        run: |
+          # On manual dispatch we always proceed
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "both-ready=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          ERA_NAME="Erasmus - Setup MySQL, Import Data, Create DB Dump, and Run Queries"
+          PIRCK_NAME="Pirckheimer - Setup MySQL, Import Data, Create DB Dump, and Run Queries"
+
+          check_workflow() {
+            local workflow_name="$1"
+            # Fetch the most recent run of the given workflow on master
+            local result
+            result=$(gh api \
+              "repos/${REPO}/actions/runs?branch=master&status=success&per_page=5" \
+              --jq ".workflow_runs[] | select(.name == \"${workflow_name}\") | .conclusion" \
+              | head -1)
+            echo "$result"
+          }
+
+          ERA_STATUS=$(check_workflow "$ERA_NAME")
+          PIRCK_STATUS=$(check_workflow "$PIRCK_NAME")
+
+          echo "Erasmus last conclusion : ${ERA_STATUS}"
+          echo "Pirckheimer last conclusion: ${PIRCK_STATUS}"
+
+          if [ "$ERA_STATUS" = "success" ] && [ "$PIRCK_STATUS" = "success" ]; then
+            echo "both-ready=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "both-ready=false" >> "$GITHUB_OUTPUT"
+            echo "⏳ Waiting for both base workflows – skipping intersection run."
+          fi
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # Main job: runs only when the AND-gate above gives the green light.
+  # ─────────────────────────────────────────────────────────────────────────────
   setup-mysql:
+    needs: check-prerequisites
+    if: needs.check-prerequisites.outputs.both-ready == 'true'
     runs-on: ubuntu-latest
     services:
       mysql:
@@ -30,7 +87,7 @@ jobs:
           --health-retries=3
 
     steps:
-    
+
       - name: Checkout Repository
         uses: actions/checkout@v4
 
@@ -58,22 +115,23 @@ jobs:
       - name: Run Python Script to Setup Database and Import Data for Pirckheimer
         run: python pirckheimer/database/create_script/import_data.py
 
-      - name: Run SQL Queries and Save Results  
-        run: python intersections_pirckheimer_erasmus/run_queries.py  
+      - name: Run SQL Queries and Save Results
+        run: python intersections_pirckheimer_erasmus/run_queries.py
 
 #     - name: Upload Query Results as Artifact
-#       uses: actions/upload-artifact@v4  
-#       with:  
-#         name: query-results  
+#       uses: actions/upload-artifact@v4
+#       with:
+#         name: query-results
 #         path: intersections_pirckheimer_erasmus/query_results/
 
       - name: Configure Git
         run: |
           git config --global user.name "CKudella"
           git config --global user.email "CKudella@users.noreply.github.com"
-  
+
       - name: Commit and push changes
         run: |
+          git pull --rebase https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/ckudella/corr_data.git master
           git add -A
           git commit -m "Auto-update db dump and query_results" || echo "No changes to commit"
           git push https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/ckudella/corr_data.git HEAD:master
