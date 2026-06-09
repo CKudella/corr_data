@@ -16,18 +16,15 @@ jobs:
     runs-on: ubuntu-latest
 
     container:
-      image: rocker/geospatial:4.5.1
+      image: ghcr.io/ckudella/corr_data-r-env:r4.5.1
+      credentials:
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
 
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v4
-  
-    - name: Install Required R Packages
-      run: |
-        R -e 'install.packages("leaflet", repos ="https://packagemanager.posit.co/cran/latest")'
-        R -e 'install.packages(c("svglite", "ggrepel", "patchwork", "lubridate", "classInt", "htmlwidgets", "htmltools", "igraph", "rgexf", "ndtv"), repos ="https://packagemanager.posit.co/cran/latest")'
-        R -e 'install.packages("leaflet.extras", repos ="https://packagemanager.posit.co/cran/latest")'
-          
+           
     - name: Replace folder specification for setwd() in R Scripts
       run: |
         find intersections_pirckheimer_erasmus/r_scripts/ -type f -name "*.R" -exec sed -i 's|setwd("../query_results/")|setwd("intersections_pirckheimer_erasmus/query_results/")|g' {} +
