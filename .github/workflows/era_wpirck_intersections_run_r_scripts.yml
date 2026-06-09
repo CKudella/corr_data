@@ -52,10 +52,10 @@ jobs:
 
     - name: Configure Git
       run: |
-        git checkout -- .
         git config --global user.name "CKudella"
         git config --global user.email "CKudella@users.noreply.github.com"
         git config --global --add safe.directory /__w/corr_data/corr_data
+        git checkout -- .
  
     - name: Commit and push changes
       run: |
