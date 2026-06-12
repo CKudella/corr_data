@@ -3,8 +3,8 @@ SELECT letter_type_x_to_x,
        ROUND(COUNT(*) * 100.0 /
                (SELECT COUNT(*)
                 FROM wpirck_cdb.letters
-                WHERE letters_id NOT REGEXP '[0-7]ck2|ck3|ck4|ck5|ck6|ck7|ck8'), 1) AS 'Percentage'
+                WHERE letters_id NOT REGEXP 'ck[2-8]$'), 1) AS 'Percentage'
 FROM wpirck_cdb.letters
-WHERE letters_id NOT REGEXP '[0-7]ck2|ck3|ck4|ck5|ck6|ck7|ck8'
+WHERE letters_id NOT REGEXP 'ck[2-8]$'
 GROUP BY letter_type_x_to_x
 ORDER BY 'Percentage' DESC
