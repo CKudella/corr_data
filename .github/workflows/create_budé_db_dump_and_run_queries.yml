@@ -35,7 +35,7 @@ jobs:
       - name: Install Python and Dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install pandas mysql-connector-python
+          pip install "pandas<3.0" mysql-connector-python
       
       - name: Check Foreign Keys
         run: |
