@@ -13,9 +13,9 @@ data$name_in_edition <- gsub("\\b(\\W+COE+.*)", "", data$name_in_edition)
 data$name_in_edition <- gsub("^(\\W+E)", "E", data$name_in_edition)
 
 # create bar chart
-plot <- ggplot(data, aes(x= reorder(name_in_edition, -Number.of.letters.sent.by.Erasmus.per.mututal.correspondent),y=Number.of.letters.sent.by.Erasmus.per.mututal.correspondent)) +
+plot <- ggplot(data, aes(x= reorder(name_in_edition, -Number.of.letters.sent.by.Erasmus.per.mutual.correspondent),y=Number.of.letters.sent.by.Erasmus.per.mutual.correspondent)) +
   geom_bar(stat = "identity") +
-  geom_text(aes(label=Number.of.letters.sent.by.Erasmus.per.mututal.correspondent), vjust=-0.5, color='black') +
+  geom_text(aes(label=Number.of.letters.sent.by.Erasmus.per.mutual.correspondent), vjust=-0.5, color='black') +
   labs(x="Mutual correspondents",y="Number of letter sent by Erasmus") +
   theme_bw() +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.35))

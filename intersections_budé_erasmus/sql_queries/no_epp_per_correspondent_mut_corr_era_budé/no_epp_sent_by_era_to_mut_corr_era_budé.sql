@@ -1,5 +1,5 @@
 SELECT DISTINCT EL.recipient_id, EC.name_in_edition,
-                COUNT(*) AS 'Number of letters sent by Erasmus per mututal correspondent'
+                COUNT(*) AS 'Number of letters sent by Erasmus per mutual correspondent'
 FROM era_cdb.letters AS EL, era_cdb.correspondents AS EC,
 
   (SELECT *
