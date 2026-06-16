@@ -1,5 +1,5 @@
 SELECT send_date_year1,
-       COUNT(*) AS 'Total number of letters sent to Erasmus this year to mutual correspondents of his and Pirckheimer (excl. Pirckheimer)'
+       COUNT(*) AS 'Total number of letters sent to Erasmus this year by mutual correspondents of his and Pirckheimer (excl. Pirckheimer)'
 FROM era_cdb.letters
 WHERE recipient_id = '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf'
   AND sender_id IN

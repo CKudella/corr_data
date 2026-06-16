@@ -1,5 +1,5 @@
 SELECT send_date_year1,
-       COUNT(*) AS 'Total number of letters sent to Pirckheimer this year to mutual correspondents of his and Erasmus (excl. Erasmus)'
+       COUNT(*) AS 'Total number of letters sent to Pirckheimer this year by mutual correspondents of his and Erasmus (excl. Erasmus)'
 FROM wpirck_cdb.letters
 WHERE recipient_id = 'd9233b24-a98c-4279-8065-e2ab70c0d080'
   AND sender_id IN
