@@ -92,7 +92,7 @@ nodes_att <- data.frame(Degree = V(net2)$degree, colour = as.character(allcorr$c
 gexf_file <- file.path("..", "network_data", "complete_merge_retrospective_gexf_created_by_r", "complete_merge_pirck_and_era.gexf")
 
 # create the description for the gexf metadata
-description <- "A graph representing the complete merge of Erasmus's and Pirckheimres's networks of correspondence."
+description <- "A graph representing the complete merge of Erasmus's and Pirckheimer's networks of correspondence."
 
 # write gexf
 write.gexf(nodes = nodes_df, edges = edges_df, edgesWeight = E(net2)$weight, nodesAtt = nodes_att, nodesVizAtt = nodes_att_viz, edgesVizAtt = edges_att_viz, defaultedgetype = "directed", meta = list(creator = "Christoph Kudella", description = description), output = gexf_file)
