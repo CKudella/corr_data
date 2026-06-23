@@ -39,10 +39,10 @@ jobs:
 
       - name: Check Foreign Keys
         run: |
-          python pirckheimer/check_for_missing_db_keys.py pirckheimer
+          python pirckheimer/check_for_missing_db_keys.py pirckheimer || exit 1
 
       - name: Run Python Script to Setup Database and Import Data
-        run: python pirckheimer/database/create_script/import_data.py
+        run: python pirckheimer/database/create_script/import_data.py || exit 1
 
       - name: Dump Database to SQL File
         run: |
@@ -55,7 +55,7 @@ jobs:
 #         path: pirckheimer/database/dump/wpirck_cdb_dump.sql
 
       - name: Run SQL Queries and Save Results  
-        run: python pirckheimer/run_queries.py  
+        run: python pirckheimer/run_queries.py || exit 1
 
 #     - name: Upload Query Results as Artifact
 #       uses: actions/upload-artifact@v4  
