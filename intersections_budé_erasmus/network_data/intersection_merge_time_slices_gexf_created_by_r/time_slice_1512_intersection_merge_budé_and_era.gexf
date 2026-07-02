@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gexf xmlns="http://www.gexf.net/1.3" xmlns:viz="http://www.gexf.net/1.3/viz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.3 http://www.gexf.net/1.3/gexf.xsd" version="1.3">
-  <meta lastmodifieddate="2026-06-24">
+  <meta lastmodifieddate="2026-07-02">
     <creator>Christoph Kudella</creator>
     <description>A graph representing the intersection between Erasmus's and Budé's networks of correspondence in the year 1512</description>
     <keywords/>
@@ -12,44 +12,44 @@
       <attribute id="att3" title="Weighted.Degree" type="float"/>
     </attributes>
     <nodes>
-      <node id="1" label="Josse BADE">
+      <node id="1" label="Josse Bade">
         <attvalues>
           <attvalue for="att1" value="1"/>
           <attvalue for="att2" value="#C3161F"/>
           <attvalue for="att3" value="1"/>
         </attvalues>
         <viz:color r="195" g="22" b="31" a="1"/>
-        <viz:position x="-250" y="-100.317847422719" z="0"/>
+        <viz:position x="250" y="240.477268904692" z="0"/>
         <viz:size value="125"/>
       </node>
-      <node id="2" label="Guillaume COP">
+      <node id="2" label="Guillaume Cop">
         <attvalues>
           <attvalue for="att1" value="1"/>
           <attvalue for="att2" value="#C3161F"/>
           <attvalue for="att3" value="1"/>
         </attvalues>
         <viz:color r="195" g="22" b="31" a="1"/>
-        <viz:position x="64.005421265654" y="250" z="0"/>
+        <viz:position x="-247.307460987041" y="250" z="0"/>
         <viz:size value="125"/>
       </node>
-      <node id="3" label="Guillaume BUDÉ">
+      <node id="3" label="Guillaume Budé">
         <attvalues>
           <attvalue for="att1" value="1"/>
           <attvalue for="att2" value="#D5AB5B"/>
           <attvalue for="att3" value="1"/>
         </attvalues>
         <viz:color r="213" g="171" b="91" a="1"/>
-        <viz:position x="250" y="100.402167880964" z="0"/>
+        <viz:position x="-250" y="-238.315772486171" z="0"/>
         <viz:size value="125"/>
       </node>
-      <node id="4" label="Desiderius ERASMUS">
+      <node id="4" label="Desiderius Erasmus">
         <attvalues>
           <attvalue for="att1" value="1"/>
           <attvalue for="att2" value="#3C93AF"/>
           <attvalue for="att3" value="1"/>
         </attvalues>
         <viz:color r="60" g="147" b="175" a="1"/>
-        <viz:position x="-63.9005859752943" y="-250" z="0"/>
+        <viz:position x="247.295542207667" y="-250" z="0"/>
         <viz:size value="125"/>
       </node>
     </nodes>

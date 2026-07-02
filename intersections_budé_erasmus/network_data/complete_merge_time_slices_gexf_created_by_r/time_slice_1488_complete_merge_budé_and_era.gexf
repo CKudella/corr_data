@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gexf xmlns="http://www.gexf.net/1.3" xmlns:viz="http://www.gexf.net/1.3/viz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.3 http://www.gexf.net/1.3/gexf.xsd" version="1.3">
-  <meta lastmodifieddate="2026-06-24">
+  <meta lastmodifieddate="2026-07-02">
     <creator>Christoph Kudella</creator>
     <description>A graph representing the intersection between Erasmus's and Budé's networks of correspondence in the year 1488</description>
     <keywords/>
@@ -12,17 +12,17 @@
       <attribute id="att3" title="Weighted.Degree" type="float"/>
     </attributes>
     <nodes>
-      <node id="1" label="Desiderius ERASMUS">
+      <node id="1" label="Desiderius Erasmus">
         <attvalues>
           <attvalue for="att1" value="3"/>
           <attvalue for="att2" value="#3C93AF"/>
           <attvalue for="att3" value="6"/>
         </attvalues>
         <viz:color r="60" g="147" b="175" a="1"/>
-        <viz:position x="33.3689065452493" y="-30.9320508131996" z="0"/>
+        <viz:position x="18.9727065652029" y="-10.1386112947498" z="0"/>
         <viz:size value="125"/>
       </node>
-      <node id="2" label="SASBOUDUS">
+      <node id="2" label="Sasboudus">
         <attvalues>
           <attvalue for="att1" value="1"/>
           <attvalue for="att2" value="#525252"/>
@@ -30,27 +30,27 @@
         </attvalues>
         <viz:color r="82" g="82" b="82" a="1"/>
         <viz:position x="-250" y="-250" z="0"/>
-        <viz:size value="125"/>
+        <viz:size value="12.5"/>
       </node>
-      <node id="3" label="Franciscus THEODERICUS">
+      <node id="3" label="Franciscus Theodericus">
         <attvalues>
           <attvalue for="att1" value="1"/>
           <attvalue for="att2" value="#525252"/>
           <attvalue for="att3" value="2"/>
         </attvalues>
         <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="250" y="-194.584279589966" z="0"/>
-        <viz:size value="125"/>
+        <viz:position x="250" y="-135.334723802049" z="0"/>
+        <viz:size value="87.7332843098475"/>
       </node>
-      <node id="4" label="Servatius ROGERUS">
+      <node id="4" label="Servatius Rogerus">
         <attvalues>
           <attvalue for="att1" value="1"/>
           <attvalue for="att2" value="#525252"/>
           <attvalue for="att3" value="3"/>
         </attvalues>
         <viz:color r="82" g="82" b="82" a="1"/>
-        <viz:position x="28.2902441855229" y="250" z="0"/>
-        <viz:size value="125"/>
+        <viz:position x="-8.59561357087216" y="250" z="0"/>
+        <viz:size value="101.967956986293"/>
       </node>
     </nodes>
     <edges>
