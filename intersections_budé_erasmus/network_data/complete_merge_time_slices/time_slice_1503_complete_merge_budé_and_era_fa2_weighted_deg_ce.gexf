@@ -1,0 +1,143 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<gexf xmlns="http://gexf.net/1.3" version="1.3" xmlns:viz="http://gexf.net/1.3/viz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://gexf.net/1.3 http://gexf.net/1.3/gexf.xsd">
+  <meta lastmodifieddate="2026-07-03">
+    <creator>Gephi 0.11.2</creator>
+    <title></title>
+    <description>A graph representing the intersection between Erasmus's and Budé's networks of correspondence in the year 1503</description>
+  </meta>
+  <graph defaultedgetype="directed" mode="static">
+    <attributes class="node" mode="static">
+      <attribute id="att1" title="Degree" type="float"/>
+      <attribute id="att2" title="colour" type="string"/>
+      <attribute id="att3" title="Weighted.Degree" type="float"/>
+    </attributes>
+    <nodes>
+      <node id="2" label="Desiderius Erasmus">
+        <attvalues>
+          <attvalue for="att1" value="6.0"/>
+          <attvalue for="att2" value="#3C93AF"/>
+          <attvalue for="att3" value="6.0"/>
+        </attvalues>
+        <viz:size value="100.00001"/>
+        <viz:position x="-234.91295" y="-2.6896245"/>
+        <viz:color r="60" g="147" b="175"/>
+      </node>
+      <node id="7" label="Guillaume Budé">
+        <attvalues>
+          <attvalue for="att1" value="2.0"/>
+          <attvalue for="att2" value="#D5AB5B"/>
+          <attvalue for="att3" value="2.0"/>
+        </attvalues>
+        <viz:size value="68.19907"/>
+        <viz:position x="355.0312" y="4.065922"/>
+        <viz:color r="213" g="171" b="91"/>
+      </node>
+      <node id="1" label="Willem Hermans">
+        <attvalues>
+          <attvalue for="att1" value="1.0"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="1.0"/>
+        </attvalues>
+        <viz:size value="4.0"/>
+        <viz:position x="-141.15393" y="278.4452"/>
+        <viz:color r="82" g="82" b="82"/>
+      </node>
+      <node id="3" label="Jacobus Faber">
+        <attvalues>
+          <attvalue for="att1" value="1.0"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="1.0"/>
+        </attvalues>
+        <viz:size value="4.0"/>
+        <viz:position x="-134.74252" y="-281.6042"/>
+        <viz:color r="82" g="82" b="82"/>
+      </node>
+      <node id="4" label="Nicolas Ruistre">
+        <attvalues>
+          <attvalue for="att1" value="1.0"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="1.0"/>
+        </attvalues>
+        <viz:size value="4.0"/>
+        <viz:position x="-4.6475635" y="223.17192"/>
+        <viz:color r="82" g="82" b="82"/>
+      </node>
+      <node id="5" label="Jacob Mauritszoon">
+        <attvalues>
+          <attvalue for="att1" value="1.0"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="1.0"/>
+        </attvalues>
+        <viz:size value="4.0"/>
+        <viz:position x="52.101818" y="-83.183174"/>
+        <viz:color r="82" g="82" b="82"/>
+      </node>
+      <node id="6" label="Jacob Anthoniszoon">
+        <attvalues>
+          <attvalue for="att1" value="1.0"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="1.0"/>
+        </attvalues>
+        <viz:size value="4.0"/>
+        <viz:position x="0.46307588" y="-223.22083"/>
+        <viz:color r="82" g="82" b="82"/>
+      </node>
+      <node id="8" label="Robert de Keysere">
+        <attvalues>
+          <attvalue for="att1" value="1.0"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="1.0"/>
+        </attvalues>
+        <viz:size value="4.0"/>
+        <viz:position x="50.18387" y="84.35232"/>
+        <viz:color r="82" g="82" b="82"/>
+      </node>
+      <node id="9" label="Germain de Ganay">
+        <attvalues>
+          <attvalue for="att1" value="1.0"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="1.0"/>
+        </attvalues>
+        <viz:size value="4.0"/>
+        <viz:position x="235.76259" y="-175.51068"/>
+        <viz:color r="82" g="82" b="82"/>
+      </node>
+      <node id="10" label="Pierre de Courthardy">
+        <attvalues>
+          <attvalue for="att1" value="1.0"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="1.0"/>
+        </attvalues>
+        <viz:size value="4.0"/>
+        <viz:position x="231.68129" y="180.86389"/>
+        <viz:color r="82" g="82" b="82"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="0" source="2" target="1">
+        <viz:color r="60" g="147" b="175"/>
+      </edge>
+      <edge id="1" source="2" target="4">
+        <viz:color r="60" g="147" b="175"/>
+      </edge>
+      <edge id="2" source="2" target="5">
+        <viz:color r="60" g="147" b="175"/>
+      </edge>
+      <edge id="3" source="2" target="6">
+        <viz:color r="60" g="147" b="175"/>
+      </edge>
+      <edge id="4" source="2" target="8">
+        <viz:color r="60" g="147" b="175"/>
+      </edge>
+      <edge id="5" source="3" target="2">
+        <viz:color r="82" g="82" b="82"/>
+      </edge>
+      <edge id="6" source="7" target="9">
+        <viz:color r="213" g="171" b="91"/>
+      </edge>
+      <edge id="7" source="7" target="10">
+        <viz:color r="213" g="171" b="91"/>
+      </edge>
+    </edges>
+  </graph>
+</gexf>

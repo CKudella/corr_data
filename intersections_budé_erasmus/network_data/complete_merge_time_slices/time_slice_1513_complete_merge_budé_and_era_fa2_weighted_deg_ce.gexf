@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<gexf xmlns="http://gexf.net/1.3" version="1.3" xmlns:viz="http://gexf.net/1.3/viz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://gexf.net/1.3 http://gexf.net/1.3/gexf.xsd">
+  <meta lastmodifieddate="2026-07-03">
+    <creator>Gephi 0.11.2</creator>
+    <title></title>
+    <description>A graph representing the intersection between Erasmus's and Budé's networks of correspondence in the year 1513</description>
+  </meta>
+  <graph defaultedgetype="directed" mode="static">
+    <attributes class="node" mode="static">
+      <attribute id="att1" title="Degree" type="float"/>
+      <attribute id="att2" title="colour" type="string"/>
+      <attribute id="att3" title="Weighted.Degree" type="float"/>
+    </attributes>
+    <nodes>
+      <node id="1" label="Desiderius Erasmus">
+        <attvalues>
+          <attvalue for="att1" value="9.0"/>
+          <attvalue for="att2" value="#3C93AF"/>
+          <attvalue for="att3" value="16.0"/>
+        </attvalues>
+        <viz:size value="100.0"/>
+        <viz:position x="0.18147354" y="-3.4598317"/>
+        <viz:color r="60" g="147" b="175"/>
+      </node>
+      <node id="8" label="Andrea Ammonio">
+        <attvalues>
+          <attvalue for="att1" value="2.0"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="5.0"/>
+        </attvalues>
+        <viz:size value="72.98639"/>
+        <viz:position x="318.93213" y="-70.75628"/>
+        <viz:color r="82" g="82" b="82"/>
+      </node>
+      <node id="2" label="William Gonnell">
+        <attvalues>
+          <attvalue for="att1" value="1.0"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="4.0"/>
+        </attvalues>
+        <viz:size value="68.19906"/>
+        <viz:position x="-272.9531" y="-154.75974"/>
+        <viz:color r="82" g="82" b="82"/>
+      </node>
+      <node id="5" label="John Colet">
+        <attvalues>
+          <attvalue for="att1" value="1.0"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="2.0"/>
+        </attvalues>
+        <viz:size value="52.780743"/>
+        <viz:position x="24.752378" y="334.2175"/>
+        <viz:color r="82" g="82" b="82"/>
+      </node>
+      <node id="3" label="Roger Wentford">
+        <attvalues>
+          <attvalue for="att1" value="1.0"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="1.0"/>
+        </attvalues>
+        <viz:size value="4.0"/>
+        <viz:position x="234.944" y="219.00691"/>
+        <viz:color r="82" g="82" b="82"/>
+      </node>
+      <node id="4" label="Thomas More">
+        <attvalues>
+          <attvalue for="att1" value="1.0"/>
+          <attvalue for="att2" value="#C3161F"/>
+          <attvalue for="att3" value="1.0"/>
+        </attvalues>
+        <viz:size value="4.0"/>
+        <viz:position x="-307.1467" y="97.46828"/>
+        <viz:color r="195" g="22" b="31"/>
+      </node>
+      <node id="6" label="Humphrey Walkden">
+        <attvalues>
+          <attvalue for="att1" value="1.0"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="1.0"/>
+        </attvalues>
+        <viz:size value="4.0"/>
+        <viz:position x="-200.27739" y="247.97311"/>
+        <viz:color r="82" g="82" b="82"/>
+      </node>
+      <node id="7" label="Henry VIII">
+        <attvalues>
+          <attvalue for="att1" value="1.0"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="1.0"/>
+        </attvalues>
+        <viz:size value="4.0"/>
+        <viz:position x="-75.045135" y="-317.03534"/>
+        <viz:color r="82" g="82" b="82"/>
+      </node>
+      <node id="9" label="John Yonge">
+        <attvalues>
+          <attvalue for="att1" value="1.0"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="1.0"/>
+        </attvalues>
+        <viz:size value="4.0"/>
+        <viz:position x="116.42031" y="-303.43713"/>
+        <viz:color r="82" g="82" b="82"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="0" source="1" target="2" weight="4.0">
+        <viz:color r="60" g="147" b="175"/>
+      </edge>
+      <edge id="1" source="1" target="3">
+        <viz:color r="60" g="147" b="175"/>
+      </edge>
+      <edge id="2" source="1" target="4">
+        <viz:color r="60" g="147" b="175"/>
+      </edge>
+      <edge id="3" source="1" target="5" weight="2.0">
+        <viz:color r="60" g="147" b="175"/>
+      </edge>
+      <edge id="4" source="1" target="6">
+        <viz:color r="60" g="147" b="175"/>
+      </edge>
+      <edge id="5" source="1" target="7">
+        <viz:color r="60" g="147" b="175"/>
+      </edge>
+      <edge id="6" source="1" target="8" weight="4.0">
+        <viz:color r="60" g="147" b="175"/>
+      </edge>
+      <edge id="7" source="1" target="9">
+        <viz:color r="60" g="147" b="175"/>
+      </edge>
+      <edge id="8" source="8" target="1">
+        <viz:color r="82" g="82" b="82"/>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
