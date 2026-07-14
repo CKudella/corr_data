@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<gexf xmlns="http://gexf.net/1.3" version="1.3" xmlns:viz="http://gexf.net/1.3/viz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://gexf.net/1.3 http://gexf.net/1.3/gexf.xsd">
+  <meta lastmodifieddate="2026-07-14">
+    <creator>Gephi 0.11.2</creator>
+    <title></title>
+    <description>A graph representing Erasmus's and Pirckheimer's networks of correspondence in the year 1504</description>
+  </meta>
+  <graph defaultedgetype="directed" mode="static">
+    <attributes class="node" mode="static">
+      <attribute id="att1" title="Degree" type="float"/>
+      <attribute id="att2" title="colour" type="string"/>
+      <attribute id="att3" title="Weighted.Degree" type="float"/>
+    </attributes>
+    <nodes>
+      <node id="5" label="Willibald Pirckheimer">
+        <attvalues>
+          <attvalue for="att1" value="6.0"/>
+          <attvalue for="att2" value="#D5AB5B"/>
+          <attvalue for="att3" value="6.0"/>
+        </attvalues>
+        <viz:size value="100.0"/>
+        <viz:position x="329.52835" y="27.803875"/>
+        <viz:color r="213" g="171" b="91"/>
+      </node>
+      <node id="1" label="Desiderius Erasmus">
+        <attvalues>
+          <attvalue for="att1" value="3.0"/>
+          <attvalue for="att2" value="#3C93AF"/>
+          <attvalue for="att3" value="3.0"/>
+        </attvalues>
+        <viz:size value="80.34599"/>
+        <viz:position x="-432.4855" y="14.014629"/>
+        <viz:color r="60" g="147" b="175"/>
+      </node>
+      <node id="2" label="Nicolas Ruistre">
+        <attvalues>
+          <attvalue for="att1" value="1.0"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="1.0"/>
+        </attvalues>
+        <viz:size value="4.0"/>
+        <viz:position x="-190.31322" y="-109.44836"/>
+        <viz:color r="82" g="82" b="82"/>
+      </node>
+      <node id="3" label="Jean Desmarez">
+        <attvalues>
+          <attvalue for="att1" value="1.0"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="1.0"/>
+        </attvalues>
+        <viz:size value="4.0"/>
+        <viz:position x="-280.22714" y="-264.24155"/>
+        <viz:color r="82" g="82" b="82"/>
+      </node>
+      <node id="4" label="John Colet">
+        <attvalues>
+          <attvalue for="att1" value="1.0"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="1.0"/>
+        </attvalues>
+        <viz:size value="4.0"/>
+        <viz:position x="-252.79228" y="251.90308"/>
+        <viz:color r="82" g="82" b="82"/>
+      </node>
+      <node id="6" label="Thomas Schweicker">
+        <attvalues>
+          <attvalue for="att1" value="1.0"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="1.0"/>
+        </attvalues>
+        <viz:size value="4.0"/>
+        <viz:position x="-17.97633" y="107.01612"/>
+        <viz:color r="82" g="82" b="82"/>
+      </node>
+      <node id="7" label="Anton Kreß">
+        <attvalues>
+          <attvalue for="att1" value="1.0"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="1.0"/>
+        </attvalues>
+        <viz:size value="4.0"/>
+        <viz:position x="13.136244" y="-123.95671"/>
+        <viz:color r="82" g="82" b="82"/>
+      </node>
+      <node id="8" label="Konrad Celtis">
+        <attvalues>
+          <attvalue for="att1" value="1.0"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="1.0"/>
+        </attvalues>
+        <viz:size value="4.0"/>
+        <viz:position x="28.57516" y="278.9901"/>
+        <viz:color r="82" g="82" b="82"/>
+      </node>
+      <node id="9" label="Anwälte zweier Grafen von Hohenlohe">
+        <attvalues>
+          <attvalue for="att1" value="1.0"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="1.0"/>
+        </attvalues>
+        <viz:size value="4.0"/>
+        <viz:position x="72.83273" y="-284.3089"/>
+        <viz:color r="82" g="82" b="82"/>
+      </node>
+      <node id="10" label="Gabriel von Eyb">
+        <attvalues>
+          <attvalue for="att1" value="1.0"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="1.0"/>
+        </attvalues>
+        <viz:size value="4.0"/>
+        <viz:position x="180.10185" y="356.5892"/>
+        <viz:color r="82" g="82" b="82"/>
+      </node>
+      <node id="11" label="Ulrich Varnbüler">
+        <attvalues>
+          <attvalue for="att1" value="1.0"/>
+          <attvalue for="att2" value="#525252"/>
+          <attvalue for="att3" value="1.0"/>
+        </attvalues>
+        <viz:size value="4.0"/>
+        <viz:position x="239.93074" y="-320.45987"/>
+        <viz:color r="82" g="82" b="82"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="0" source="1" target="2">
+        <viz:color r="60" g="147" b="175"/>
+      </edge>
+      <edge id="1" source="1" target="3">
+        <viz:color r="60" g="147" b="175"/>
+      </edge>
+      <edge id="2" source="1" target="4">
+        <viz:color r="60" g="147" b="175"/>
+      </edge>
+      <edge id="3" source="5" target="7">
+        <viz:color r="213" g="171" b="91"/>
+      </edge>
+      <edge id="4" source="5" target="8">
+        <viz:color r="213" g="171" b="91"/>
+      </edge>
+      <edge id="5" source="5" target="9">
+        <viz:color r="213" g="171" b="91"/>
+      </edge>
+      <edge id="6" source="5" target="10">
+        <viz:color r="213" g="171" b="91"/>
+      </edge>
+      <edge id="7" source="5" target="11">
+        <viz:color r="213" g="171" b="91"/>
+      </edge>
+      <edge id="8" source="6" target="5">
+        <viz:color r="82" g="82" b="82"/>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
