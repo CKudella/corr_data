@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gexf xmlns="http://www.gexf.net/1.3" xmlns:viz="http://www.gexf.net/1.3/viz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.3 http://www.gexf.net/1.3/gexf.xsd" version="1.3">
-  <meta lastmodifieddate="2026-06-24">
+  <meta lastmodifieddate="2026-07-14">
     <creator>Christoph Kudella</creator>
     <description>A graph representing the intersection between Erasmus's and Pirckheimer's networks of correspondence in the year 1513</description>
     <keywords/>
@@ -12,55 +12,55 @@
       <attribute id="att3" title="Weighted.Degree" type="float"/>
     </attributes>
     <nodes>
-      <node id="1" label="Willibald PIRCKHEIMER">
+      <node id="1" label="Willibald Pirckheimer">
         <attvalues>
           <attvalue for="att1" value="5"/>
           <attvalue for="att2" value="#D5AB5B"/>
           <attvalue for="att3" value="6"/>
         </attvalues>
         <viz:color r="213" g="171" b="91" a="1"/>
-        <viz:position x="0.949032613281872" y="0.597374381373356" z="0"/>
+        <viz:position x="36.5095910339819" y="-35.8685083738961" z="0"/>
         <viz:size value="100"/>
       </node>
-      <node id="2" label="BEATUS Rhenanus">
+      <node id="2" label="Beatus Rhenanus">
         <attvalues>
           <attvalue for="att1" value="1"/>
           <attvalue for="att2" value="#C3161F"/>
           <attvalue for="att3" value="2"/>
         </attvalues>
         <viz:color r="195" g="22" b="31" a="1"/>
-        <viz:position x="-228.424677910053" y="-143.783322444449" z="0"/>
-        <viz:size value="100"/>
+        <viz:position x="-96.0609317929064" y="-250" z="0"/>
+        <viz:size value="70.186627447878"/>
       </node>
-      <node id="3" label="Georgius SPALATINUS">
+      <node id="3" label="Georgius Spalatinus">
         <attvalues>
           <attvalue for="att1" value="1"/>
           <attvalue for="att2" value="#C3161F"/>
           <attvalue for="att3" value="1"/>
         </attvalues>
         <viz:color r="195" g="22" b="31" a="1"/>
-        <viz:position x="250" y="-250" z="0"/>
-        <viz:size value="100"/>
+        <viz:position x="-250" y="137.821223449988" z="0"/>
+        <viz:size value="10"/>
       </node>
-      <node id="4" label="Hermann von NEUENAHR">
+      <node id="4" label="Hermann von Neuenahr">
         <attvalues>
           <attvalue for="att1" value="1"/>
           <attvalue for="att2" value="#C3161F"/>
           <attvalue for="att3" value="1"/>
         </attvalues>
         <viz:color r="195" g="22" b="31" a="1"/>
-        <viz:position x="-250" y="250" z="0"/>
-        <viz:size value="100"/>
+        <viz:position x="215.15805413268" y="250" z="0"/>
+        <viz:size value="10"/>
       </node>
-      <node id="5" label="Johannes COCHLAEUS">
+      <node id="5" label="Johannes Cochlaeus">
         <attvalues>
           <attvalue for="att1" value="2"/>
           <attvalue for="att2" value="#C3161F"/>
           <attvalue for="att3" value="2"/>
         </attvalues>
         <viz:color r="195" g="22" b="31" a="1"/>
-        <viz:position x="231.175463019654" y="145.514820865772" z="0"/>
-        <viz:size value="100"/>
+        <viz:position x="250" y="-167.128849491251" z="0"/>
+        <viz:size value="70.186627447878"/>
       </node>
     </nodes>
     <edges>
