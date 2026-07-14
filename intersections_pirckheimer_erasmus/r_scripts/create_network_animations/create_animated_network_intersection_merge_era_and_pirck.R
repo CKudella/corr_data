@@ -16,10 +16,39 @@ mutepp <- read.csv("merge_scripts/intersection_merge/intersection_merge_era_and_
 mutcorr$Label <- gsub("\\b(\\W+COE+.*)", "", mutcorr$Label)
 mutcorr$Label <- gsub("^(\\W+E)", "E", mutcorr$Label)
 mutcorr$Label <- gsub("^\\[", "", mutcorr$Label)
+mutcorr$Label <- stringr::str_replace_all(mutcorr$Label, "\\b\\p{Lu}{2,}\\b", function(m) {
+  ifelse(stringr::str_detect(m, "^[IVXLCDM]+$"), m, stringr::str_to_title(m))
+})
 
-# modify the label for Erasmus
+# override the programmatically derived labels
 erasmus_index <- which(mutcorr$Id == "17c580aa-3ba7-4851-8f26-9b3a0ebeadbf")
-mutcorr$Label[erasmus_index] <- "Desiderius ERASMUS"
+mutcorr$Label[erasmus_index] <- "Desiderius Erasmus"
+unnamed_person_index <- which(mutcorr$Id == "be1dcbc4-3987-472a-b4a0-c3305ead139f")
+mutcorr$Label[unnamed_person_index] <- "[?]"
+martinus_of_ep_76_person_index <- which(mutcorr$Id == "ecbf6eb8-e2e8-48f8-a46a-2e34c0cd604c")
+mutcorr$Label[martinus_of_ep_76_person_index] <- "Martinus [of Ep 76]"
+ludovicus_bruges_index <- which(mutcorr$Id == "fb407a51-6dfa-48d4-9eb1-5c6b8ed756a5")
+mutcorr$Label[ludovicus_bruges_index] <- "Ludovicus [documented at Bruges 1517-18]"
+ludovicus_of_ep_167_index <- which(mutcorr$Id == "d26ad69b-74c9-4213-97fe-e4bccc9bbe33")
+mutcorr$Label[ludovicus_of_ep_167_index] <- "Ludovicus [of Ep 167]"
+cornelis_of_bergen_of_ep_1562_index <- which(mutcorr$Id == "de457db2-5ab6-4928-ad83-954d7c89876a")
+mutcorr$Label[cornelis_of_bergen_of_ep_1562_index] <- "Cornelis of Bergen [of Ep 1562]"
+margaretha_rauch_index <- which(mutcorr$Id == "3d8ecfd2-0603-4419-9f51-347e05b99d1c")
+mutcorr$Label[margaretha_rauch_index] <- "Margaretha Rauch"
+hans_scharpff_index <- which(mutcorr$Id == "4cabf5c0-2b3c-4bb7-9837-8e29e814d814")
+mutcorr$Label[hans_scharpff_index] <- "Hans Scharpff"
+katharina_herden_index <- which(mutcorr$Id == "6edb3723-07a3-427b-aadf-910221d1c0b3")
+mutcorr$Label[katharina_herden_index] <- "Katharina Herden"
+georg_schenk_von_limpurg_index <- which(mutcorr$Id == "801483b2-c423-4b08-957b-fc245b201c87")
+mutcorr$Label[georg_schenk_von_limpurg_index] <- "Georg (III), Schenk von Limpurg"
+georg_sauermann_index <- which(mutcorr$Id == "9f4f356c-c07c-43fc-b13f-0d90fbe23da1")
+mutcorr$Label[georg_sauermann_index] <- "Georg Sauermann"
+katharina_habermayerin_index <- which(mutcorr$Id == "cd68e0d6-f6e2-4d89-bea9-7bc9c74d9f87")
+mutcorr$Label[katharina_habermayerin_index] <- "Katharina Habermayerin"
+katharina__von_stetten_index <- which(mutcorr$Id == "e089bd69-f9b2-4bd5-b9c4-57b52f3a7145")
+mutcorr$Label[katharina__von_stetten_index] <- "Katharina von Stetten"
+ulrich_varnbüler_index <- which(mutcorr$Id == "ed930b47-2327-461d-8784-59d26a9694dd")
+mutcorr$Label[ulrich_varnbüler_index] <- "Ulrich Varnbüler"
 
 # add colour column for mutual correspondents
 mutcorr$colour <- "#C3161F"

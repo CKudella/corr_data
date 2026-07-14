@@ -16,10 +16,23 @@ mutepp <- read.csv("merge_scripts/intersection_merge/intersection_merge_era_and_
 mutcorr$Label <- gsub("\\b(\\W+COE+.*)", "", mutcorr$Label)
 mutcorr$Label <- gsub("^(\\W+E)", "E", mutcorr$Label)
 mutcorr$Label <- gsub("^\\[", "", mutcorr$Label)
+mutcorr$Label <- stringr::str_replace_all(mutcorr$Label, "\\b\\p{Lu}{2,}\\b", function(m) {
+  ifelse(stringr::str_detect(m, "^[IVXLCDM]+$"), m, stringr::str_to_title(m))
+})
 
-# modify the label for Erasmus
+# override the programmatically derived labels
 erasmus_index <- which(mutcorr$Id == "17c580aa-3ba7-4851-8f26-9b3a0ebeadbf")
-mutcorr$Label[erasmus_index] <- "Desiderius ERASMUS"
+mutcorr$Label[erasmus_index] <- "Desiderius Erasmus"
+unnamed_person_index <- which(mutcorr$Id == "be1dcbc4-3987-472a-b4a0-c3305ead139f")
+mutcorr$Label[unnamed_person_index] <- "[?]"
+martinus_of_ep_76_person_index <- which(mutcorr$Id == "ecbf6eb8-e2e8-48f8-a46a-2e34c0cd604c")
+mutcorr$Label[martinus_of_ep_76_person_index] <- "Martinus [of Ep 76]"
+ludovicus_bruges_index <- which(mutcorr$Id == "fb407a51-6dfa-48d4-9eb1-5c6b8ed756a5")
+mutcorr$Label[ludovicus_bruges_index] <- "Ludovicus [documented at Bruges 1517-18]"
+ludovicus_of_ep_167_index <- which(mutcorr$Id == "d26ad69b-74c9-4213-97fe-e4bccc9bbe33")
+mutcorr$Label[ludovicus_of_ep_167_index] <- "Ludovicus [of Ep 167]"
+cornelis_of_bergen_of_ep_1562_index <- which(mutcorr$Id == "de457db2-5ab6-4928-ad83-954d7c89876a")
+mutcorr$Label[cornelis_of_bergen_of_ep_1562_index] <- "Cornelis of Bergen [of Ep 1562]"
 
 # add colour column for mutual correspondents
 mutcorr$colour <- "#C3161F"
