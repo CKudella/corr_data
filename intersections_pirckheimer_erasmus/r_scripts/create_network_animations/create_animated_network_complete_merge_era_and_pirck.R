@@ -126,39 +126,60 @@ set.edge.attribute(network, "edge.col", as.vector(allepp$colour))
 # copy weight column to edges
 set.edge.attribute(network, "edge.weight", as.vector(allepp$weight))
 
-# Combine unique sender and receiver nodes
-unique_nodes <- unique(union(allepp$tail, allepp$head))
+# calculate for each node per year (if active) the weighted degree
+node_year_wd <- bind_rows(
+  allepp %>% transmute(node_id = tail, active_year = onset, weight),
+  allepp %>% transmute(node_id = head, active_year = onset, weight)
+) %>%
+  group_by(node_id, active_year) %>%
+  summarise(weighted_degree = sum(weight), .groups = "drop") %>%
+  arrange(node_id, active_year)
 
-# initialize an empty data frame to store onset and terminus information
-node_info <- data.frame(node_id = character(),
-                        onset = as.Date(character()),
-                        terminus = as.Date(character()),
-                        stringsAsFactors = FALSE)
+# min-max normalize across all weighted-degree values
+wd_all <- node_year_wd$weighted_degree
+wd_min <- min(wd_all)
+wd_max <- max(wd_all)
 
-# iterate through unique nodes
-for (node_id in unique_nodes) {
-  # select edges where the node is either the sender or receiver
-  node_edges <- allepp[allepp$tail == node_id | allepp$head == node_id, ]
-  
-  # determine the overall onset and terminus based on the aggregated time ranges of connected edges
-  onset <- min(node_edges$onset, na.rm = TRUE)
-  terminus <- max(node_edges$terminus, na.rm = TRUE)
-  
-  # append to the node_info data frame
-  node_info <- rbind(node_info, data.frame(node_id = node_id, onset = onset, terminus = terminus))
+min_size <- 0.5
+max_size <- 3
+
+node_year_wd <- node_year_wd %>%
+  mutate(
+    wd_norm = if (wd_max == wd_min) 0.5 else (weighted_degree - wd_min) / (wd_max - wd_min),
+    vertex_cex = min_size + (wd_norm^0.25) * (max_size - min_size)
+  )
+
+# static fallback size
+set.vertex.attribute(network, "vertex.cex", rep(min_size, nrow(allcorr)))
+
+# activate one vertex.cex value per node per active year
+for (i in seq_len(nrow(node_year_wd))) {
+  activate.vertex.attribute(
+    network,
+    prefix = "vertex.cex",
+    value = node_year_wd$vertex_cex[i],
+    onset = node_year_wd$active_year[i],
+    terminus = node_year_wd$active_year[i] + 1,
+    v = node_year_wd$node_id[i]
+  )
 }
 
-# loop for adding onset and terminus to the vertices
-for (i in 1:nrow(node_info)) {
-  vertex_id <- node_info$node_id[i]
-  onset <- min(allepp$onset[allepp$tail == vertex_id | allepp$head == vertex_id], na.rm = TRUE)
-  terminus <- max(allepp$terminus[allepp$tail == vertex_id | allepp$head == vertex_id], na.rm = TRUE) + 1
-  
-  # check if onset and terminus are not NA before activating vertices
-  if (!is.na(onset) && !is.na(terminus)) {
-    # activate vertices using the determined onset and terminus
-    activate.vertices(network, onset = onset, terminus = terminus, v = vertex_id)
-  }
+# collapse consecutive active years into contiguous spells per node
+node_spells <- node_year_wd %>%
+  distinct(node_id, active_year) %>%
+  group_by(node_id) %>%
+  mutate(new_spell = active_year - lag(active_year, default = first(active_year)) > 1,
+         spell_id = cumsum(new_spell)) %>%
+  group_by(node_id, spell_id) %>%
+  summarise(onset = min(active_year), terminus = max(active_year) + 1, .groups = "drop") %>%
+  select(node_id, onset, terminus)
+
+# unique nodes that have at least one letter
+unique_nodes <- unique(node_spells$node_id)
+
+# activate each vertex only for the spell(s) during which it actually was active
+for (i in seq_len(nrow(node_spells))) {
+  activate.vertices(network, onset = node_spells$onset[i], terminus = node_spells$terminus[i], v = node_spells$node_id[i])
 }
 
 # find nodes to remove
@@ -178,7 +199,7 @@ getwd()
 setwd("../network_data/complete_merge_animation/")
 
 # render d3movie and export to a HTML file
-render.d3movie(network, slice.par = slice.par, displaylabels = FALSE, animation.mode = "kamadakawai", bg = "#f7f7f7", vertex.col = "vertex.col", vertex.lwd = 2, edge.col = "edge.col", edge.lwd = 2 + get.edge.attribute(network, "edge.weight"), output.mode = "HTML", script.type = "embedded", filename = "animated_network_complete_era_pirck.html")
+render.d3movie(network, slice.par = slice.par, displaylabels = FALSE, animation.mode = "kamadakawai", bg = "#f7f7f7", vertex.col = "vertex.col", vertex.cex = "vertex.cex", vertex.lwd = 2, vertex.tooltip = function(slice){paste0(slice %v% 'vertex.names')}, edge.col = "edge.col", edge.lwd = 2 + get.edge.attribute(network, "edge.weight"), output.mode = "HTML", script.type = "embedded", filename = "animated_network_complete_era_pirck.html")
 
 # render animation and export to an animated GIF file
-saveGIF(render.animation(network, slice.par = slice.par, displaylabels = FALSE, animation.mode = "kamadakawai", bg = "#f7f7f7", vertex.col = "vertex.col", vertex.lwd = 2, edge.col = "edge.col", edge.lwd = 2 + get.edge.attribute(network, "edge.weight")), movie.name = "animated_network_complete_era_pirck.gif", ani.width = 1280, ani.height = 720)
+saveGIF(render.animation(network, slice.par = slice.par, displaylabels = FALSE, animation.mode = "kamadakawai", bg = "#f7f7f7", vertex.col = "vertex.col", vertex.cex = "vertex.cex", vertex.lwd = 2, edge.col = "edge.col", edge.lwd = 2 + get.edge.attribute(network, "edge.weight")), movie.name = "animated_network_complete_era_pirck.gif", ani.width = 1280, ani.height = 720)
