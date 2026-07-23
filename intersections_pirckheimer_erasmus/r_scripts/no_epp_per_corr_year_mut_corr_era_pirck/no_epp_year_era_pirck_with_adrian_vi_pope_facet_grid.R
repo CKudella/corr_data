@@ -63,7 +63,7 @@ plot <- ggplot(data_complete, aes(x = Year, y = signed_value, fill = direction))
                      labels = abs) +
   labs(
     x = "Year",
-    y = "Number of letters (sent above / received below zero line)",
+    y = "Number of letters",
     title = "Correspondence with Pope Adrian VI",
     subtitle = "Grey bands mark years in which Erasmus and Pirckheimer were both corresponding with Adrian VI"
   ) +
