@@ -8,23 +8,73 @@ setwd("../query_results/")
 # read data
 data<-read.csv("no_epp_per_corr_year_mut_corr_era_pirck/no_epp_year_era_pirck_with_auerbach_heinrich.csv", fileEncoding="UTF-8", na.strings=c("NULL"))
 
-# set labels
-labels <- c(EPPEtX = "Erasmus to Heinrich STROMER", EPPXtE = "Heinrich STROMER to Erasmus", EPPPtX = "Pirckheimer to Heinrich STROMER", EPPXtP = "Heinrich STROMER to Pirckheimer")
+# pivot data to longer format and set labels
+data_long <- data %>%
+  pivot_longer(cols = starts_with("EPP"), names_to = "variable", values_to = "value") %>%
+  mutate(value = replace_na(value, 0)) %>%
+  mutate(
+    correspondent = case_when(
+      variable %in% c("EPPEtX", "EPPXtE") ~ "Erasmus",
+      variable %in% c("EPPPtX", "EPPXtP") ~ "Pirckheimer"
+    ),
+    direction = case_when(
+      variable %in% c("EPPEtX", "EPPPtX") ~ "sent to Stromer",
+      variable %in% c("EPPXtE", "EPPXtP") ~ "received from Stromer"
+    )
+  )
 
-# pivot data to longer format
-data_long <- data %>% pivot_longer(cols = starts_with("EPP"), names_to = "variable", values_to = "value")
+# make the year sequence complete (turn absence into zeros)
 
-# plot facet grid
-plot <- ggplot(data=data_long, aes(x= Year,y=value, factor = variable)) +
-    geom_point(stat = "identity", size = 1.75) +
-    labs(x="Year",y="Number of letters") +
-    scale_x_continuous(breaks = c(1484:1536)) +
-    scale_y_continuous(limits = c(0,4)) +
-    facet_grid(variable ~ ., labeller=labeller(variable = labels)) +
-    theme_bw() +
-    theme(axis.text.x = element_text(angle = 90, vjust = 0.35)) +
-    theme(strip.text.y = element_text(angle = 0, hjust = 1)) +
-    theme(legend.position="bottom")
+full_years <- full_seq(range(data_long$Year, na.rm = TRUE), 1)
+
+data_complete <- data_long %>%
+  complete(Year = full_years, nesting(correspondent, direction), fill = list(value = 0)) %>%
+  mutate(signed_value = if_else(direction == "sent to Stromer", value, -value))
+
+# identify years of overlap between the two correspondences
+overlap_years <- data_complete %>%
+  group_by(Year, correspondent) %>%
+  summarise(total = sum(value), .groups = "drop") %>%
+  pivot_wider(names_from = correspondent, values_from = total) %>%
+  filter(Erasmus > 0 & Pirckheimer > 0) %>%
+  pull(Year)
+
+shade_df <- tibble(
+  xmin = overlap_years - 0.5,
+  xmax = overlap_years + 0.5,
+  ymin = -Inf, ymax = Inf
+)
+
+# create faceted bar chart plot
+max_val <- max(abs(data_complete$signed_value))
+
+plot <- ggplot(data_complete, aes(x = Year, y = signed_value, fill = direction)) +
+  geom_rect(data = shade_df, aes(xmin = xmin, xmax = xmax, ymin = ymin, ymax = ymax),
+            inherit.aes = FALSE, fill = "grey90", alpha = 0.4) +
+  geom_col(width = 0.8, colour = "white", linewidth = 0.1) +
+  geom_hline(yintercept = 0, colour = "grey30", linewidth = 0.3) +
+  facet_grid(correspondent ~ .) +
+  scale_fill_manual(values = c("sent to Stromer" = "grey20",
+                               "received from Stromer" = "grey65"),
+                    name = NULL) +
+  scale_x_continuous(breaks = full_years, expand = expansion(add = 0.6)) +
+  scale_y_continuous(limits = c(-max_val, max_val),
+                     breaks = seq(-max_val, max_val, by = 1),
+                     labels = abs) +
+  labs(
+    x = "Year",
+    y = "Number of letters (sent above / received below zero line)",
+    title = "Correspondence with Heinrich Stromer",
+    subtitle = "Grey bands mark years in which Erasmus and Pirckheimer were both corresponding with Stromer"
+  ) +
+  theme_bw(base_size = 11) +
+  theme(
+    axis.text.x = element_text(angle = 90, vjust = 0.5),
+    strip.text.y = element_text(angle = 0, hjust = 0.5),
+    legend.position = "bottom",
+    panel.grid.minor.x = element_line(colour = "grey92")
+  )
+
 plot
 
 # change working directory
