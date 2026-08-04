@@ -1,5 +1,5 @@
 SELECT B.locations_name_modern,
-       A.send_date_year1 AS YEAR,
+       YEAR(A.send_date_computable1) AS 'Year',
        COUNT(*) AS COUNT
 FROM bude_cdb.letters AS A,
      locations AS B
@@ -19,6 +19,6 @@ WHERE A.source_loc_id = B.locations_id
         ORDER BY COUNT(D.source_loc_id) DESC) AS C
      WHERE C.NoEppToBudé > 7)
 GROUP BY A.source_loc_id,
-         A.send_date_year1
+         YEAR(A.send_date_computable1)
 ORDER BY A.source_loc_id,
-         A.send_date_year1 ASC
+         YEAR(A.send_date_computable1) ASC

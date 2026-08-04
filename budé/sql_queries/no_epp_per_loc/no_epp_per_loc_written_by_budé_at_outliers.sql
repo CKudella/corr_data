@@ -1,5 +1,5 @@
 SELECT locations_name_modern,
-       send_date_year1 AS YEAR,
+       YEAR(send_date_computable1) AS 'Year',
        COUNT(*) AS COUNT
 FROM bude_cdb.letters,
      locations
@@ -11,4 +11,4 @@ WHERE source_loc_id = locations_id
                                           'Dijon',
                                           'Lyon')
 GROUP BY locations_name_modern,
-         send_date_year1
+         YEAR(send_date_computable1)

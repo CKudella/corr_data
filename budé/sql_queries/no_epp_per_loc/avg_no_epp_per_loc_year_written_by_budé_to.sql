@@ -8,12 +8,12 @@ FROM
   (SELECT locations_name_modern,
           locations_lat,
           locations_lng,
-          COUNT(DISTINCT COALESCE(send_date_year1, 'unknown')) AS COUNT
+          COUNT(DISTINCT COALESCE(YEAR(send_date_computable1), 'unknown')) AS COUNT
    FROM bude_cdb.letters
    JOIN bude_cdb.locations ON locations.locations_id = letters.target_loc_id
    WHERE sender_id = 'c0b89c75-45b8-4b04-bfd7-25bfe9ed040b'
      AND target_loc_id NOT LIKE 'unknown%'
-     AND send_date_year1 IS NOT NULL
+     AND YEAR(send_date_computable1) IS NOT NULL
    GROUP BY target_loc_id
    ORDER BY COUNT DESC) AS X
 INNER JOIN
@@ -23,6 +23,6 @@ INNER JOIN
    JOIN bude_cdb.locations ON locations.locations_id = letters.target_loc_id
    WHERE sender_id = 'c0b89c75-45b8-4b04-bfd7-25bfe9ed040b'
      AND target_loc_id NOT LIKE 'unknown%'
-     AND send_date_year1 IS NOT NULL
+     AND YEAR(send_date_computable1) IS NOT NULL
    GROUP BY target_loc_id
    ORDER BY COUNT DESC) AS Y ON X.locations_name_modern = Y.locations_name_modern

@@ -1,27 +1,27 @@
-SELECT DISTINCT A.send_date_year1,
+SELECT DISTINCT A.Year,
                 B.NoEppSentFromBudé,
                 C.NoEppSentToBudé
 FROM
-  (SELECT DISTINCT send_date_year1
+  (SELECT DISTINCT YEAR(send_date_computable1) AS 'Year'
    FROM bude_cdb.letters
    WHERE letters_id NOT LIKE '%ck2'
      AND sender_id = 'c0b89c75-45b8-4b04-bfd7-25bfe9ed040b'
-   UNION ALL SELECT DISTINCT send_date_year1
+   UNION ALL SELECT DISTINCT YEAR(send_date_computable1)
    FROM bude_cdb.letters
    WHERE letters_id NOT LIKE '%ck2'
      AND recipient_id = 'c0b89c75-45b8-4b04-bfd7-25bfe9ed040b') AS A
 LEFT OUTER JOIN
-  (SELECT send_date_year1,
+  (SELECT YEAR(send_date_computable1) AS 'Year',
           COUNT(*) AS NoEppSentFromBudé
    FROM bude_cdb.letters
    WHERE letters_id NOT LIKE '%ck2'
      AND sender_id = 'c0b89c75-45b8-4b04-bfd7-25bfe9ed040b'
-   GROUP BY send_date_year1) AS B ON B.send_date_year1 = A.send_date_year1
+   GROUP BY YEAR(send_date_computable1)) AS B ON B.Year = A.Year
 LEFT OUTER JOIN
-  (SELECT send_date_year1,
+  (SELECT YEAR(send_date_computable1) AS 'Year',
           COUNT(*) AS NoEppSentToBudé
    FROM bude_cdb.letters
    WHERE letters_id NOT LIKE '%ck2'
      AND recipient_id = 'c0b89c75-45b8-4b04-bfd7-25bfe9ed040b'
-   GROUP BY send_date_year1) AS C ON C.send_date_year1 = A.send_date_year1
-ORDER BY A.send_date_year1 ASC
+   GROUP BY YEAR(send_date_computable1)) AS C ON C.Year = A.Year
+ORDER BY A.Year ASC
