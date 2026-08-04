@@ -8,7 +8,7 @@ FROM
   (SELECT locations_name_modern,
           locations_lat,
           locations_lng,
-          COUNT(DISTINCT COALESCE(send_date_year1, 'unknown')) AS COUNT
+          COUNT(DISTINCT COALESCE(YEAR(send_date_computable1), 'unknown')) AS COUNT
    FROM era_cdb.letters
    JOIN era_cdb.locations ON locations.locations_id = letters.target_loc_id
    WHERE sender_id = '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf'

@@ -1,7 +1,7 @@
-SELECT send_date_year1,
+SELECT YEAR(send_date_computable1),
        COUNT(*) AS 'Total number of letters sent by Erasmus this year'
 FROM era_cdb.letters
 WHERE letters_id NOT LIKE '%ck2'
   AND sender_id = '17c580aa-3ba7-4851-8f26-9b3a0ebeadbf'
-GROUP BY send_date_year1
-ORDER BY send_date_year1 ASC
+GROUP BY YEAR(send_date_computable1)
+ORDER BY YEAR(send_date_computable1) ASC
