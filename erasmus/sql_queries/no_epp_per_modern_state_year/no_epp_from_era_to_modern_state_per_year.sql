@@ -1,6 +1,6 @@
 SELECT DISTINCT locations.locations_modern_state AS 'Modern State',
                 COUNT(*) AS 'Number of letters Erasmus sent to this modern state this year',
-                YEAR(send_date_computable1)
+                YEAR(send_date_computable1) AS 'Year'
 FROM era_cdb.letters,
      locations
 WHERE locations.locations_id = letters.target_loc_id
