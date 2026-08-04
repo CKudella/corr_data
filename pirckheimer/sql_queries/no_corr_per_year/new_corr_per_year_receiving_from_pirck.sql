@@ -10,7 +10,7 @@ WHERE sender_id = 'd9233b24-a98c-4279-8065-e2ab70c0d080'
     FROM wpirck_cdb.letters AS B
     WHERE B.recipient_id = A.recipient_id
       AND B.sender_id = 'd9233b24-a98c-4279-8065-e2ab70c0d080'
-      AND B.YEAR(send_date_computable1) < A.YEAR(send_date_computable1)
+      AND YEAR(B.send_date_computable1) < YEAR(A.send_date_computable1)
   )
 GROUP BY YEAR(send_date_computable1)
 ORDER BY YEAR(send_date_computable1)
