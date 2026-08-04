@@ -9,7 +9,7 @@ setwd("../query_results/")
 data <- read.csv("no_corr_per_year/new_corr_per_year_receiving_from_budé.csv", fileEncoding = "UTF-8", na.strings = c("NULL"))
 
 # create bar chart
-plot <- ggplot(data = data, aes(x = YEAR, y = NewCorrReceivingFromBudé)) +
+plot <- ggplot(data = data, aes(x = Year, y = NewCorrReceivingFromBudé)) +
   geom_bar(stat = "identity") +
   labs(x = "Year", y = "Number of new correspondents to whom Budé wrote letters") +
   geom_text(aes(label = NewCorrReceivingFromBudé), vjust = -0.5, color = "black") +
