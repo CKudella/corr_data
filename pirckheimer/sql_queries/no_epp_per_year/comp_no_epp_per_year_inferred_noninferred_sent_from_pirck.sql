@@ -11,7 +11,7 @@ LEFT OUTER JOIN
    WHERE XA.letters_id NOT REGEXP 'ck[2-8]$'
      AND XA.send_date_inferred = '1'
      AND XA.sender_id = 'd9233b24-a98c-4279-8065-e2ab70c0d080'
-   GROUP BY YEAR(XA.send_date_computable1) AS X ON X.Year = Z.Year
+   GROUP BY YEAR(XA.send_date_computable1)) AS X ON X.Year = Z.Year
 LEFT OUTER JOIN
   (SELECT DISTINCT YEAR(YA.send_date_computable1) AS Year,
                    COUNT(*) AS NoNonInferred
