@@ -18,7 +18,7 @@ outliers_df <- data %>%
     lower_bound = Q1 - 1.5 * IQR,
     upper_bound = Q3 + 1.5 * IQR,
     is_outlier = COUNT < lower_bound | COUNT > upper_bound,
-    outlier_years = ifelse(is_outlier, as.character(YEAR), "")
+    outlier_years = ifelse(is_outlier, as.character(Year), "")
   ) %>%
   filter(is_outlier) %>%
   ungroup()
