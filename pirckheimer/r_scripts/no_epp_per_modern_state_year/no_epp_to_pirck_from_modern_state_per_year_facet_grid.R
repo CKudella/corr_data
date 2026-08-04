@@ -9,7 +9,7 @@ setwd("../query_results/")
 data <- read.csv("no_epp_per_modern_state_year/no_epp_to_pirck_from_modern_state_per_year.csv", fileEncoding = "UTF-8", na.strings = c("NULL"))
 
 # create facet grid with bar charts
-plot <- ggplot(data = data, aes(x = send_date_year1, y = Number.of.letters.sent.from.this.modern.state.to.Pirckheimer.this.year)) +
+plot <- ggplot(data = data, aes(x = Year, y = Number.of.letters.sent.from.this.modern.state.to.Pirckheimer.this.year)) +
   geom_bar(stat = "identity") +
   labs(x = "Year", y = "Number of letters sent to Pirckheimer from this modern state") +
   scale_x_continuous(breaks = c(1491:1530)) +

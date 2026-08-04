@@ -2,18 +2,18 @@ SELECT A.Year,
        A.NoCorrFromPirck AS 'Number of correspondents to whom Pirckheimer wrote this year',
        B.NoEppFromPirck AS 'Number of letters sent by Pirckheimer this year'
 FROM
-  (SELECT send_date_year1 AS 'Year',
+  (SELECT YEAR(send_date_computable1) AS 'Year',
           COUNT(DISTINCT recipient_id) AS NoCorrFromPirck
    FROM wpirck_cdb.letters
    WHERE sender_id = 'd9233b24-a98c-4279-8065-e2ab70c0d080'
      AND recipient_id != 'be1dcbc4-3987-472a-b4a0-c3305ead139f'
-   GROUP BY send_date_year1) AS A
+   GROUP BY YEAR(send_date_computable1)) AS A
 INNER JOIN
-  (SELECT DISTINCT send_date_year1 AS 'Year',
+  (SELECT DISTINCT YEAR(send_date_computable1) AS 'Year',
                    COUNT(letters_id) AS NoEppFromPirck
    FROM wpirck_cdb.letters
    WHERE sender_id = 'd9233b24-a98c-4279-8065-e2ab70c0d080'
      AND recipient_id != 'be1dcbc4-3987-472a-b4a0-c3305ead139f'
-   GROUP BY send_date_year1) AS B ON B.Year = A.year
+   GROUP BY YEAR(send_date_computable1)) AS B ON B.Year = A.year
 GROUP BY A.Year
 ORDER BY A.Year ASC

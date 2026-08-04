@@ -1,5 +1,5 @@
 SELECT locations_name_modern,
-       send_date_year1 AS YEAR,
+       YEAR(send_date_computable1) AS YEAR,
        COUNT(*) AS COUNT
 FROM wpirck_cdb.letters,
      locations
@@ -8,4 +8,4 @@ WHERE source_loc_id = locations_id
   AND source_loc_id NOT LIKE 'unknown%'
   AND locations.locations_name_modern LIKE 'Nuremberg'
 GROUP BY locations_name_modern,
-         send_date_year1
+         YEAR(send_date_computable1)

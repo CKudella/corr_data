@@ -1,5 +1,5 @@
 SELECT B.locations_name_modern,
-       A.send_date_year1 AS YEAR,
+       YEAR(A.send_date_computable1) AS YEAR,
        COUNT(*) AS COUNT
 FROM wpirck_cdb.letters AS A,
      locations AS B
@@ -19,6 +19,6 @@ WHERE A.target_loc_id = B.locations_id
         ORDER BY COUNT(D.target_loc_id) DESC) AS C
      WHERE C.NoEppFromPirck > 18)
 GROUP BY A.target_loc_id,
-         A.send_date_year1
+         YEAR(A.send_date_computable1)
 ORDER BY A.target_loc_id,
-         A.send_date_year1 ASC
+         YEAR(A.send_date_computable1) ASC
