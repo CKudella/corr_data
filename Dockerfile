@@ -21,12 +21,12 @@ RUN R -e 'install.packages( \
       "htmlwidgets", \
       "htmltools", \
       "igraph", \
-      "ndtv"), \
-      "scales"), \
-      "broom"), \
+      "ndtv", \
+      "scales", \
+      "broom", \
       "changepoint", \
-      "zoo"), \
-      "trend"), \
+      "zoo", \
+      "trend", \
       "Kendall"), \
     repos = "https://packagemanager.posit.co/cran/2025-06-01")'
 
