@@ -24,7 +24,7 @@ RUN R -e 'install.packages( \
       "ndtv"), \
       "scales"), \
       "broom"), \
-      "changepoint"), \
+      "changepoint", \
       "zoo"), \
       "trend"), \
       "Kendall"), \
