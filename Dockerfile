@@ -22,6 +22,12 @@ RUN R -e 'install.packages( \
       "htmltools", \
       "igraph", \
       "ndtv"), \
+      "scales"), \
+      "broom"), \
+      "changepoint"), \
+      "zoo"), \
+      "trend"), \
+      "Kendall"), \
     repos = "https://packagemanager.posit.co/cran/2025-06-01")'
 
 RUN R -e 'remotes::install_version( \

@@ -1,42 +1,76 @@
-require(tidyverse)
-require(svglite)
+library(tidyverse)
+library(scales)
 
-# set working directory
-getwd()
-setwd("../query_results/")
+# settings
 
-# read data
-data <- read.csv("no_epp_per_year/comp_no_epp_per_year_inferred_noninferred.csv", fileEncoding = "UTF-8", na.strings = c("NULL"))
+subject_name <- "Erasmus"
 
-# create data frame for years 1484-1536
-data2 <- tibble(Year = 1484:1536)
+data_path <- "../query_results/no_epp_per_year/comp_no_epp_per_year_inferred_noninferred.csv"
+output_path <- "../r_plots/no_epp_per_year/comp_no_epp_per_year_inferred_noninferred_linechart"
 
-# merge data frames
-data3 <- left_join(data2, data, by = "Year")
+inferred_col     <- "Number of letters with inferred send date"
+non_inferred_col <- "Number of letters with non-inferred send date"
+year_col         <- "Year"
 
-# pivot data from wide to long format
-data_long <- data3 %>%  pivot_longer(cols = c("Number.of.letters.with.inferred.send.date", "Number.of.letters.with.non.inferred.send.date"), names_to = "variable", values_to = "value")
+# data preparation
 
-# create linechart
-plot <- ggplot(data = data_long, aes(x = Year, y = value, colour = variable)) +
-  geom_line(stat = "identity", size = 0.9) +
-  geom_point(shape = 1, fill = "white", stroke = 1.25) +
-  labs(x = "Year", y = "Number of letters") +
-  scale_x_continuous(breaks = c(1484:1536)) +
-  scale_y_continuous(breaks = seq(0, 160, 10)) +
-  theme_bw() +
-  theme(axis.text.x = element_text(angle = 90, vjust = 0.35)) +
-  theme(legend.position = "bottom") +
-  theme(legend.title = element_blank()) +
-  scale_color_grey(labels = c("Letters with inferred send dates", "Letters with non-inferred send dates"))
-plot
+data <- read_csv(
+  data_path,
+  na = c("NULL", ""),
+  show_col_types = FALSE
+) |>
+  rename(
+    n_inferred     = all_of(inferred_col),
+    n_non_inferred = all_of(non_inferred_col),
+    year           = all_of(year_col)
+  )
 
-# change working directory
-getwd()
-setwd("../r_plots/")
+full_years <- tibble(year = 1484:1536)
+data <- full_years |> left_join(data, by = "year")
 
-# save plot in multiple formats
-ggsave("comp_no_epp_per_year_inferred_noninferred_linechart.pdf", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
-ggsave("comp_no_epp_per_year_inferred_noninferred_linechart.png", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
-ggsave("comp_no_epp_per_year_inferred_noninferred_linechart.eps", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
-ggsave("comp_no_epp_per_year_inferred_noninferred_linechart.svg", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
+data_long <- data |>
+  pivot_longer(cols = c(n_inferred, n_non_inferred), names_to = "variable", values_to = "value") |>
+  mutate(
+    variable = factor(variable, levels = c("n_non_inferred", "n_inferred"),
+                       labels = c("Non-inferred send date", "Inferred send date"))
+  )
+
+# statistics
+
+n_years <- n_distinct(data$year)
+
+cat(str_glue("years in range: {n_years}"), "\n")
+
+# plot
+
+plot_linechart <- data_long |>
+  ggplot(aes(x = year, y = value, linetype = variable, shape = variable)) +
+  geom_line(color = "black", linewidth = 0.7) +
+  geom_point(color = "black", size = 1.8) +
+  scale_linetype_manual(name = NULL, values = c("solid", "dashed")) +
+  scale_shape_manual(name = NULL, values = c(16, 1)) +
+  scale_x_continuous(breaks = seq(1484, 1536, by = 2)) +
+  scale_y_continuous(labels = comma, breaks = pretty_breaks(n = 8)) +
+  labs(
+    title = "Letters with inferred vs. non-inferred send dates, by year (all correspondence)",
+    x = "Year",
+    y = "Number of letters"
+  ) +
+  theme_bw(base_size = 11) +
+  theme(
+    axis.text.x = element_text(angle = 90, vjust = 0.35, size = 7),
+    legend.position = "bottom"
+  )
+
+plot_linechart
+
+# save
+
+c("pdf", "png", "eps", "svg") |>
+  walk(function(fmt) {
+    ggsave(
+      filename = str_glue("{output_path}.{fmt}"),
+      plot = plot_linechart, scale = 1, width = 11.7, height = 8.3,
+      units = "in", dpi = 600, limitsize = TRUE
+    )
+  })

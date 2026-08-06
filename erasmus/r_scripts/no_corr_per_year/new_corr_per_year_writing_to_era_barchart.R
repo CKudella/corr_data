@@ -1,31 +1,66 @@
-require(tidyverse)
-require(svglite)
+library(tidyverse)
+library(scales)
 
-# set working directory
-getwd()
-setwd("../query_results/")
+# settings
 
-# read data
-data <- read.csv("no_corr_per_year/new_corr_per_year_writing_to_era.csv", fileEncoding = "UTF-8", na.strings = c("NULL"))
+subject_name <- "Erasmus"
 
-# create bar chart
-plot <- ggplot(data = data, aes(x = YEAR, y = NewCorrWritingToEra)) +
-  geom_bar(stat = "identity") +
-  labs(x = "Year", y = "Number of new correspondents who wrote letters to Erasmus") +
-  geom_text(aes(label = NewCorrWritingToEra), vjust = -0.5, color = "black", size = rel(2)) +
-  scale_x_continuous(breaks = c(1484:1536)) +
-  scale_y_continuous(breaks = seq(0, 50, 5)) +
-  theme_bw() +
-  theme(axis.text.x = element_text(angle = 90, vjust = 0.35)) +
-  theme(legend.position = "bottom")
-plot
+data_path <- "../query_results/no_corr_per_year/new_corr_per_year_writing_to_era.csv"
+output_path <- "../r_plots/no_corr_per_year/new_corr_per_year_writing_to_era_barchart"
 
-# change working directory
-getwd()
-setwd("../r_plots/")
+measure_col <- "NewCorrWritingToEra"
+year_col    <- "YEAR"
 
-# save plot in multiple formats
-ggsave("new_corr_per_year_writing_to_era_barchart.pdf", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
-ggsave("new_corr_per_year_writing_to_era_barchart.png", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
-ggsave("new_corr_per_year_writing_to_era_barchart.eps", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
-ggsave("new_corr_per_year_writing_to_era_barchart.svg", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
+# data preparation
+
+data <- read_csv(
+  data_path,
+  na = c("NULL", ""),
+  show_col_types = FALSE
+) |>
+  rename(
+    n_new_correspondents = all_of(measure_col),
+    year                 = all_of(year_col)
+  )
+
+full_years <- tibble(year = 1484:1536)
+data <- full_years |>
+  left_join(data, by = "year") |>
+  mutate(n_new_correspondents = replace_na(n_new_correspondents, 0))
+
+# statistics
+
+n_total <- sum(data$n_new_correspondents)
+
+cat(str_glue("total new correspondents (writing): {n_total}"), "\n")
+
+# plot
+
+plot_barchart <- data |>
+  ggplot(aes(x = year, y = n_new_correspondents)) +
+  geom_bar(stat = "identity", fill = "grey40") +
+  geom_text(aes(label = n_new_correspondents), vjust = -0.5, size = 2.5) +
+  scale_x_continuous(breaks = seq(1484, 1536, by = 1)) +
+  scale_y_continuous(labels = comma, breaks = pretty_breaks(n = 8),
+                      expand = expansion(mult = c(0, 0.1))) +
+  labs(
+    title = str_glue("Number of new correspondents who wrote letters to {subject_name}, by year"),
+    subtitle = str_glue("\"New\" refers to correspondents writing a letter to {subject_name} for the first time in that year"),
+    x = "Year",
+    y = "Number of new correspondents"
+  ) +
+  theme_bw(base_size = 11) +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.35, size = 7))
+
+plot_barchart
+
+# save
+
+c("pdf", "png", "eps", "svg") |>
+  walk(function(fmt) {
+    ggsave(
+      filename = str_glue("{output_path}.{fmt}"),
+      plot = plot_barchart, scale = 1, width = 11.7, height = 8.3,
+      units = "in", dpi = 600, limitsize = TRUE
+    )
+  })

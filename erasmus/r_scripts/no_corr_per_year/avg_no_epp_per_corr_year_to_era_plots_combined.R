@@ -1,68 +1,115 @@
-require(tidyverse)
-require(ggrepel)
-require(patchwork)
-require(svglite)
+library(tidyverse)
+library(ggrepel)
+library(patchwork)
+library(scales)
 
-# set working directory
-getwd()
-setwd("../query_results/")
+# settings
 
-# read data
-data <- read.csv("no_corr_per_year/avg_no_epp_per_corr_year_to_era.csv", fileEncoding = "UTF-8")
+subject_name <- "Erasmus"
 
-# calculate quartiles
-quartiles <- as.numeric(quantile(data$Average.number.of.letters.sent.per.correspondent.to.Erasmus.this.year, probs = c(0.25, 0.5, 0.75)))
+data_path <- "../query_results/no_corr_per_year/avg_no_epp_per_corr_year_to_era.csv"
+output_path <- "../r_plots/no_corr_per_year/avg_no_epp_per_corr_year_to_era_plots_combined"
 
-# calculate IQR
-IQR <- diff(quartiles[c(1, 3)])
+measure_col <- str_glue("Average number of letters sent per correspondent to {subject_name} this year")
+year_col    <- "Year"
 
-# calculate outlier treshold
-upper_dots <- min(data$Average.number.of.letters.sent.per.correspondent.to.Erasmus.this.year[data$Average.number.of.letters.sent.per.correspondent.to.Erasmus.this.year > (quartiles[3] + 1.5*IQR)])
+# data preparation
 
-# create data frame for years 1484-1536
-data2 <- tibble(Year = 1484:1536)
+data <- read_csv(
+  data_path,
+  na = c("NULL", ""),
+  show_col_types = FALSE
+) |>
+  rename(
+    n_letters = all_of(measure_col),
+    year      = all_of(year_col)
+  ) |>
+  arrange(desc(n_letters))
 
-# merge data frames
-data3 <- left_join(data2, data, by = "Year")
+quartiles   <- quantile(data$n_letters, probs = c(0.25, 0.5, 0.75))
+iqr_val     <- IQR(data$n_letters)
+upper_fence <- quartiles[3] + 1.5 * iqr_val
 
-# filter out NAs from the data
-filtered_data <- data3[!is.na(data3$Average.number.of.letters.sent.per.correspondent.to.Erasmus.this.year), ]
+data <- data |>
+  mutate(is_outlier = n_letters > upper_fence)
 
-# calculate mean and median from the filtered data
-mean_value <- mean(filtered_data$Average.number.of.letters.sent.per.correspondent.to.Erasmus.this.year)
-median_value <- median(filtered_data$Average.number.of.letters.sent.per.correspondent.to.Erasmus.this.year)
+outliers <- data |> filter(is_outlier) |> arrange(desc(n_letters))
 
-# create line chart plot
-plot1 <- ggplot(data3, aes(x = Year, y = Average.number.of.letters.sent.per.correspondent.to.Erasmus.this.year)) +
-  geom_line(stat = "identity", size = 0.9) +
-  geom_point(shape = 1, fill = "white", stroke = 1.25) +
-  geom_hline(aes(yintercept = mean_value, linetype = "mean"), size = 0.3) +
-  geom_hline(aes(yintercept = median_value, linetype = "median"), size = 0.3) +
-  labs(x = "Year", y = "Average number of letters sent to Erasmus per year and correspondent") +
-  scale_x_continuous(breaks = seq(1484, 1536, by = 1)) +
-  theme_bw() +
-  theme(legend.position = "bottom") +
-  theme(axis.text.x = element_text(angle = 90, vjust = 0.35))
-plot1
+# statistics
 
-# create box plot
-plot2 <- ggplot(data, aes(x = " ", y = Average.number.of.letters.sent.per.correspondent.to.Erasmus.this.year)) +
-  geom_boxplot(notch = FALSE) +
-  geom_text_repel(label = ifelse(data$Average.number.of.letters.sent.per.correspondent.to.Erasmus.this.year >= upper_dots, as.character(data$Year), "")) +
-  labs(x = "Year", y = "Average number of letters sent to Erasmus per year and correspondent") +
-  theme_bw() +
-  theme(axis.title.x = element_text(), axis.text.x = element_blank(), axis.ticks.x = element_blank())
-plot2
+n_years    <- nrow(data)
+n_outliers <- nrow(outliers)
 
-# create combined plot via patchwork
-plot1 + plot2 + plot_layout(widths = c(2, 1))
+mean_letters   <- mean(data$n_letters)
+median_letters <- median(data$n_letters)
 
-# change working directory
-getwd()
-setwd("../r_plots/")
+cat(str_glue("years: {n_years}"), "\n")
+cat(str_glue("mean: {round(mean_letters, 1)} \u00b7 median: {round(median_letters, 1)}"), "\n")
+cat(str_glue("outliers (> {round(upper_fence, 1)}): {n_outliers}"), "\n")
 
-# save plot in multiple formats
-ggsave("avg_no_epp_per_corr_year_to_era_plots_combined.pdf", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
-ggsave("avg_no_epp_per_corr_year_to_era_plots_combined.png", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
-ggsave("avg_no_epp_per_corr_year_to_era_plots_combined.eps", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
-ggsave("avg_no_epp_per_corr_year_to_era_plots_combined.svg", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
+# plot
+
+plot_histogram <- data |>
+  ggplot(aes(x = n_letters)) +
+  geom_histogram(bins = 30, fill = "grey60", color = "white") +
+  geom_vline(aes(xintercept = mean_letters, linetype = "Mean"), color = "black", linewidth = 0.6) +
+  geom_vline(aes(xintercept = median_letters, linetype = "Median"), color = "black", linewidth = 0.6) +
+  scale_linetype_manual(name = NULL, values = c("Mean" = "dashed", "Median" = "dotted")) +
+  scale_x_log10(labels = comma) +
+  labs(
+    title = str_glue("Distribution of the average number of letters sent to {subject_name} per correspondent, by year"),
+    subtitle = str_glue("Mean = {round(mean_letters, 1)} \u00b7 Median = {round(median_letters, 1)}"),
+    x = "Average number of letters per correspondent (log-scale)",
+    y = "Number of years"
+  ) +
+  theme_bw(base_size = 12) +
+  theme(panel.grid.minor = element_blank(), legend.position = "bottom")
+
+plot_boxplot <- data |>
+  ggplot(aes(x = "", y = n_letters)) +
+  geom_boxplot(outlier.shape = NA, width = 0.3, fill = "grey90") +
+  geom_point(aes(color = is_outlier, shape = is_outlier), alpha = 0.6, size = 1.8) +
+  geom_text_repel(
+    data = outliers,
+    aes(x = "", y = n_letters, label = year),
+    size = 3, max.overlaps = Inf, box.padding = 0.6, seed = 42
+  ) +
+  scale_color_manual(values = c("FALSE" = "grey60", "TRUE" = "black"), guide = "none") +
+  scale_shape_manual(values = c("FALSE" = 16, "TRUE" = 17), guide = "none") +
+  scale_y_continuous(labels = comma) +
+  labs(
+    title = "Years with an outlying average number of letters sent per correspondent",
+    x = NULL,
+    y = str_glue("Average number of letters sent to {subject_name} per correspondent")
+  ) +
+  theme_bw(base_size = 12) +
+  theme(axis.text.x = element_blank(), axis.ticks.x = element_blank())
+
+plot_barchart <- outliers |>
+  ggplot(aes(x = reorder(year, -n_letters), y = n_letters)) +
+  geom_col(fill = "grey40") +
+  geom_text(aes(label = round(n_letters, 1)), vjust = -0.4, size = 3.2) +
+  scale_y_continuous(expand = expansion(mult = c(0, 0.15))) +
+  labs(
+    title = str_glue("All {n_outliers} outlier years (> {round(upper_fence, 1)} average letters sent per correspondent)"),
+    x = "Year",
+    y = str_glue("Average number of letters sent to {subject_name} per correspondent")
+  ) +
+  theme_bw(base_size = 12) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1), panel.grid.major.x = element_blank())
+
+final_plot <- (plot_histogram / plot_barchart | plot_boxplot) +
+  plot_layout(widths = c(1.3, 1))
+
+final_plot
+
+# save
+
+c("pdf", "png", "eps", "svg") |>
+  walk(function(fmt) {
+    ggsave(
+      filename = str_glue("{output_path}.{fmt}"),
+      plot = final_plot, scale = 1, width = 11.7, height = 8.3,
+      units = "in", dpi = 600, limitsize = TRUE
+    )
+  })

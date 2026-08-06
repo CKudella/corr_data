@@ -1,37 +1,90 @@
-require(tidyverse)
-require(svglite)
+library(tidyverse)
+library(scales)
 
-# set working directory
-getwd()
-setwd("../query_results/")
+# settings
 
-# read data
-data <- read.csv("no_corr_per_modern_state/comp_no_corr_per_ms_writing_to_receiving_from_era.csv", fileEncoding = "UTF-8", na.strings = c("NULL"), colClasses = c("Number.of.correspondents.who.received.letters.from.Erasmus" = "character", "Number.of.correspondents.who.wrote.letters.to.Erasmus" = "character"))
+subject_name <- "Erasmus"
 
-# set number columns to numeric
-data$Number.of.correspondents.who.received.letters.from.Erasmus <- as.numeric(as.character(data$Number.of.correspondents.who.received.letters.from.Erasmus))
-data$Number.of.correspondents.who.wrote.letters.to.Erasmus <- as.numeric(as.character(data$Number.of.correspondents.who.wrote.letters.to.Erasmus))
+data_path <- "../query_results/no_corr_per_modern_state/comp_no_corr_per_ms_writing_to_receiving_from_era.csv"
+output_path <- "../r_plots/no_corr_per_modern_state/comp_no_corr_per_ms_writing_to_receiving_from_era_barchart"
 
-# pivot data from wide to long format
-data_long <- data %>% pivot_longer(cols = c("Number.of.correspondents.who.received.letters.from.Erasmus", "Number.of.correspondents.who.wrote.letters.to.Erasmus"), names_to = "variable", values_to = "value")
+received_col <- str_glue("Number of correspondents who received letters from {subject_name}")
+wrote_col    <- str_glue("Number of correspondents who wrote letters to {subject_name}")
+state_col    <- "Modern State"
 
-# create bar chart
-plot <- ggplot(data_long, aes(x = reorder(Modern.State, -value), y = value, fill = variable)) +
-  geom_bar(position = "dodge", stat = "identity") +
-  labs(x = "Modern State", y = "Number of correspondents") +
-  theme_bw() +
-  theme(axis.text.x = element_text(angle = 90, vjust = 0.35)) +
-  theme(legend.position = "bottom") +
-  theme(legend.title = element_blank()) +
-  scale_fill_grey(labels = c("Number of correspondents to whom Erasmus wrote letters", "Number of correspondents who wrote letters to Erasmus"))
-plot
+# data preparation
 
-# change working directory
-getwd()
-setwd("../r_plots/")
+data <- read_csv(
+  data_path,
+  na = c("NULL", ""),
+  show_col_types = FALSE
+) |>
+  rename(
+    n_received = all_of(received_col),
+    n_wrote    = all_of(wrote_col),
+    state      = all_of(state_col)
+  ) |>
+  mutate(
+    n_received = as.numeric(n_received),
+    n_wrote    = as.numeric(n_wrote),
+    total      = n_received + n_wrote
+  ) |>
+  filter(!is.na(total)) |>
+  arrange(desc(total)) |>
+  mutate(state = factor(state, levels = state))
 
-# save plot in multiple formats
-ggsave("comp_no_corr_per_ms_writing_to_receiving_from_era_barchart.pdf", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
-ggsave("comp_no_corr_per_ms_writing_to_receiving_from_era_barchart.png", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
-ggsave("comp_no_corr_per_ms_writing_to_receiving_from_era_barchart.eps", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
-ggsave("comp_no_corr_per_ms_writing_to_receiving_from_era_barchart.svg", plot = last_plot(), scale = 1, width = 11.7, height = 8.3, units = "in", dpi = 600, limitsize = TRUE)
+data_long <- data |>
+  pivot_longer(cols = c(n_received, n_wrote), names_to = "variable", values_to = "value") |>
+  mutate(
+    variable = factor(
+      variable,
+      levels = c("n_received", "n_wrote"),
+      labels = c(
+        str_glue("Correspondents who received letters from {subject_name}"),
+        str_glue("Correspondents who wrote letters to {subject_name}")
+      )
+    )
+  )
+
+# statistics
+
+n_states <- nrow(data)
+
+cat(str_glue("states: {n_states}"), "\n")
+cat(str_glue("total correspondents (both directions): {sum(data$total)}"), "\n")
+
+# plot
+
+dodge_width <- position_dodge(width = 0.9)
+
+plot_barchart <- data_long |>
+  ggplot(aes(x = state, y = value, fill = variable)) +
+  geom_bar(position = dodge_width, stat = "identity") +
+  geom_text(aes(label = value), position = dodge_width, vjust = -0.4, size = 2.8) +
+  scale_y_continuous(labels = comma, expand = expansion(mult = c(0, 0.1))) +
+  scale_fill_grey(start = 0.3, end = 0.7) +
+  labs(
+    title = "Number of correspondents per modern state, by direction of correspondence",
+    subtitle = "states ordered by total number of correspondents (both directions combined)",
+    x = "Modern State",
+    y = "Number of correspondents"
+  ) +
+  theme_bw(base_size = 11) +
+  theme(
+    axis.text.x = element_text(angle = 90, vjust = 0.35),
+    legend.position = "bottom",
+    legend.title = element_blank()
+  )
+
+plot_barchart
+
+# save
+
+c("pdf", "png", "eps", "svg") |>
+  walk(function(fmt) {
+    ggsave(
+      filename = str_glue("{output_path}.{fmt}"),
+      plot = plot_barchart, scale = 1, width = 11.7, height = 8.3,
+      units = "in", dpi = 600, limitsize = TRUE
+    )
+  })
