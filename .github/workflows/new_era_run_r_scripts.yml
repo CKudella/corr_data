@@ -1,15 +1,6 @@
-name: Test (Artefacts)
-
+name: Test Refactor Era R
 on:
-  workflow_run:
-    workflows: ["Erasmus - Setup MySQL, Import Data, Create DB Dump, and Run Queries"]
-    types:
-      - completed
   workflow_dispatch:
-
-concurrency:
-  group: erasmus-r-scripts-${{ github.ref }}
-  cancel-in-progress: false
 
 jobs:
   run-r-scripts:
